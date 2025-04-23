@@ -1,0 +1,31 @@
+version: '3'
+
+services:
+  jellyfin:
+    image: jellyfin/jellyfin:latest
+    container_name: jellyfin
+    user: 1000:1000
+    ports:
+      - "8096:8096"
+      - "8920:8920" # Optional HTTPS port
+      - "7359:7359/udp" # Optional discovery port
+      - "1900:1900/udp" # Optional DLNA port
+    volumes:
+      - jellyfin_config:/config
+      - jellyfin_cache:/cache
+      - ./media:/media # Mount your media directory
+      - ./media/movies:/media/movies # Optional: separate movies directory
+      - ./media/tvshows:/media/tvshows # Optional: separate TV shows directory
+    environment:
+      - JELLYFIN_PublishedServerUrl=${JELLYFIN_SERVER_URL:-http://localhost:8096} # Set to your server's IP or domain
+    restart: unless-stopped
+    networks:
+      - jellyfin_network
+
+volumes:
+  jellyfin_config:
+  jellyfin_cache:
+
+networks:
+  jellyfin_network:
+    driver: bridge

@@ -1,0 +1,19 @@
+do_token           = "your_digitalocean_api_token"
+region             = "nyc1"  # or your preferred region
+ssh_key_name       = "community-box-key"
+ssh_pub_key        = "ssh-rsa AAAA..."  # Your SSH public key content
+
+# Optional: customize droplet sizes
+yunohost_droplet_size = "s-1vcpu-1gb"
+casaos_droplet_size   = "s-1vcpu-1gb"
+caprover_droplet_size = "s-1vcpu-2gb"  # CapRover needs more resources
+
+# Optional: customize hostnames
+yunohost_hostname = "yunohost-community-box"
+casaos_hostname   = "casaos-community-box"
+caprover_hostname = "caprover-community-box"
+
+# Optional: choose which platforms to deploy
+create_yunohost = true
+create_casaos   = true
+create_caprover = true

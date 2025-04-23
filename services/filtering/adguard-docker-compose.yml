@@ -1,0 +1,29 @@
+version: '3'
+
+services:
+  adguardhome:
+    image: adguard/adguardhome:latest
+    container_name: adguardhome
+    ports:
+      - "53:53/tcp"
+      - "53:53/udp"
+      - "67:67/udp" # DHCP server
+      - "68:68/udp" # DHCP client
+      - "80:80/tcp" # HTTP web interface
+      - "443:443/tcp" # HTTPS web interface
+      - "853:853/tcp" # DNS over TLS
+      - "3000:3000/tcp" # Initial setup port
+    volumes:
+      - adguard_work:/opt/adguardhome/work
+      - adguard_conf:/opt/adguardhome/conf
+    restart: unless-stopped
+    networks:
+      - filtering_network
+
+volumes:
+  adguard_work:
+  adguard_conf:
+
+networks:
+  filtering_network:
+    driver: bridge

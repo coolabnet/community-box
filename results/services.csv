@@ -1,0 +1,8 @@
+Service,Available on CasaOS,Available on CapRover,Available on Yunohost,Available on ZimaOS,Available on Balena,Install Difficulty (1-5),Update Frequency,Usability (1-5),Performance Notes,Known Issues
+Portal (Tina/WordPress), , , , , , , , , 
+Web Radio (AzuraCast), , , , , , , , , 
+Movies (Jellyfin), , , , , , , , , 
+Traffic Monitoring (Speedtest), , , , , , , , , 
+Traffic Filtering (PiHole/AdGuard), , , , , , , , , 
+Education (Kolibri), , , , , , , , , 
+File Storage (FileBrowser), , , , , , , , ,

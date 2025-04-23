@@ -1,0 +1,53 @@
+version: '3'
+
+services:
+  tinacms:
+    image: node:16
+    container_name: tinacms
+    working_dir: /app
+    volumes:
+      - ./tinacms:/app
+    ports:
+      - "3000:3000"
+    environment:
+      - NODE_ENV=production
+      - TINA_PUBLIC_CLIENT_ID=${TINA_PUBLIC_CLIENT_ID}
+      - TINA_TOKEN=${TINA_TOKEN}
+      - NEXT_PUBLIC_TINA_BRANCH=${NEXT_PUBLIC_TINA_BRANCH:-main}
+    command: >
+      bash -c "
+        if [ ! -d /app/node_modules ]; then
+          echo 'Installing dependencies...'
+          npm install
+        fi
+        
+        if [ ! -f /app/package.json ]; then
+          echo 'Initializing new TinaCMS project...'
+          npx create-tina-app@latest . --framework=next
+        fi
+        
+        npm run dev
+      "
+    restart: unless-stopped
+    networks:
+      - portal_network
+
+  # Optional database for TinaCMS (if not using Tina Cloud)
+  mongodb:
+    image: mongo:latest
+    container_name: tinacms_mongodb
+    volumes:
+      - mongodb_data:/data/db
+    environment:
+      - MONGO_INITDB_ROOT_USERNAME=${MONGO_USERNAME:-admin}
+      - MONGO_INITDB_ROOT_PASSWORD=${MONGO_PASSWORD:-password}
+    restart: unless-stopped
+    networks:
+      - portal_network
+
+volumes:
+  mongodb_data:
+
+networks:
+  portal_network:
+    driver: bridge

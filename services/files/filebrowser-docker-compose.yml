@@ -1,0 +1,47 @@
+version: '3'
+
+services:
+  filebrowser:
+    image: filebrowser/filebrowser:latest
+    container_name: filebrowser
+    user: 1000:1000
+    ports:
+      - "8080:80"
+    volumes:
+      - ./data:/srv # The directory you want to browse/manage
+      - filebrowser_config:/config
+      - filebrowser_database:/database
+    environment:
+      - FB_BASEURL=${FB_BASEURL:-/}
+      - FB_NOAUTH=${FB_NOAUTH:-false} # Set to true to disable authentication
+      - FB_USERNAME=${FB_USERNAME:-admin} # Default username
+      - FB_PASSWORD=${FB_PASSWORD:-admin} # Default password
+    restart: unless-stopped
+    networks:
+      - files_network
+
+  # Optional: Syncthing for file synchronization
+  syncthing:
+    image: syncthing/syncthing:latest
+    container_name: syncthing
+    hostname: syncthing
+    ports:
+      - "8384:8384" # Web UI
+      - "22000:22000/tcp" # TCP file transfer
+      - "22000:22000/udp" # QUIC file transfer
+      - "21027:21027/udp" # Discovery broadcast
+    volumes:
+      - syncthing_config:/var/syncthing/config
+      - ./data:/var/syncthing/data # Same directory as filebrowser
+    restart: unless-stopped
+    networks:
+      - files_network
+
+volumes:
+  filebrowser_config:
+  filebrowser_database:
+  syncthing_config:
+
+networks:
+  files_network:
+    driver: bridge

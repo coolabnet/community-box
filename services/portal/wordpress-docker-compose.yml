@@ -1,0 +1,57 @@
+version: '3'
+
+services:
+  wordpress:
+    image: wordpress:latest
+    container_name: wordpress
+    ports:
+      - "8080:80"
+    environment:
+      - WORDPRESS_DB_HOST=db
+      - WORDPRESS_DB_USER=${WORDPRESS_DB_USER:-wordpress}
+      - WORDPRESS_DB_PASSWORD=${WORDPRESS_DB_PASSWORD:-wordpress}
+      - WORDPRESS_DB_NAME=${WORDPRESS_DB_NAME:-wordpress}
+    volumes:
+      - wordpress_data:/var/www/html
+    depends_on:
+      - db
+    restart: unless-stopped
+    networks:
+      - wordpress_network
+
+  db:
+    image: mariadb:10.6
+    container_name: wordpress_db
+    volumes:
+      - db_data:/var/lib/mysql
+    environment:
+      - MYSQL_ROOT_PASSWORD=${MYSQL_ROOT_PASSWORD:-rootpassword}
+      - MYSQL_DATABASE=${WORDPRESS_DB_NAME:-wordpress}
+      - MYSQL_USER=${WORDPRESS_DB_USER:-wordpress}
+      - MYSQL_PASSWORD=${WORDPRESS_DB_PASSWORD:-wordpress}
+    restart: unless-stopped
+    networks:
+      - wordpress_network
+
+  phpmyadmin:
+    image: phpmyadmin/phpmyadmin
+    container_name: phpmyadmin
+    environment:
+      - PMA_HOST=db
+      - PMA_PORT=3306
+      - MYSQL_ROOT_PASSWORD=${MYSQL_ROOT_PASSWORD:-rootpassword}
+    ports:
+      - "8081:80"
+    depends_on:
+      - db
+    restart: unless-stopped
+    networks:
+      - wordpress_network
+
+volumes:
+  wordpress_data:
+  db_data:
+
+networks:
+  wordpress_network:
+    driver: bridge

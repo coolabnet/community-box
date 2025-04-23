@@ -1,0 +1,40 @@
+version: '3'
+
+services:
+  azuracast:
+    image: ghcr.io/azuracast/azuracast:latest
+    container_name: azuracast
+    ports:
+      - "80:80"
+      - "8443:443"
+      - "8000-8099:8000-8099"
+    environment:
+      - PUID=1000
+      - PGID=1000
+      - AZURACAST_HTTP_PORT=80
+      - AZURACAST_HTTPS_PORT=443
+      - AZURACAST_SFTP_PORT=2022
+      - AZURACAST_STATION_PORTS=8000-8099
+      - AZURACAST_SETUP_ADMIN_EMAIL=${AZURACAST_ADMIN_EMAIL:-admin@example.com}
+      - AZURACAST_SETUP_ADMIN_USERNAME=${AZURACAST_ADMIN_USERNAME:-admin}
+      - AZURACAST_SETUP_ADMIN_PASSWORD=${AZURACAST_ADMIN_PASSWORD:-password}
+    volumes:
+      - azuracast_data:/var/azuracast
+      - azuracast_config:/var/azuracast/www_tmp
+      - azuracast_stations:/var/azuracast/stations
+      - azuracast_backups:/var/azuracast/backups
+      - azuracast_shoutcast:/var/azuracast/servers/shoutcast2
+    restart: unless-stopped
+    networks:
+      - azuracast_network
+
+volumes:
+  azuracast_data:
+  azuracast_config:
+  azuracast_stations:
+  azuracast_backups:
+  azuracast_shoutcast:
+
+networks:
+  azuracast_network:
+    driver: bridge
