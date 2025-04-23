@@ -30,9 +30,7 @@ To provide a practical, open, evidence-based comparison of small server hardware
 - **hardware/**: Installation logs, issues, and results for each physical platform.
 - **software/**: Detailed guides, issues and observations for each OS/platform.
 - **services/**: Notes on app deployment experience, config file samples, troubleshooting, per service.
-- **tests/**:
-    - `hardware_matrix.md` – Full comparison matrix for hardware/software
-    - `service_matrix.md` – Detailed application install/test records 
+- **tests/**: Comparison for hardware/software, detailed application install/test records.
 - **results/**: Compiled comparison tables, power/usage spreadsheets, benchmarks, summary findings.
 - **scripts/**: (if applicable) Automation, benchmarks, or test scripts.
 - **presentation/**: Prepared slides for final webinar/presentation.
