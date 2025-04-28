@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="200" height="200" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="200" height="200" rx="20" fill="#F3F4F6"/>
+  <rect x="40" y="40" width="120" height="120" rx="10" fill="#6366F1"/>
+  <rect x="60" y="60" width="80" height="80" rx="5" fill="#4F46E5"/>
+  <rect x="80" y="80" width="40" height="40" rx="3" fill="#FFFFFF"/>
+  <path d="M95 95H105V105H95V95Z" fill="#4F46E5"/>
+  <path d="M40 140L60 120L80 140H40Z" fill="#4F46E5"/>
+  <path d="M120 140L140 120L160 140H120Z" fill="#4F46E5"/>
+  <path d="M80 40L100 20L120 40H80Z" fill="#4F46E5"/>
+</svg>

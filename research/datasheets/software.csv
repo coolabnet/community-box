@@ -1,0 +1,93 @@
+Section,Feature/Dimension,CasaOS,CapRover,Yunohost,ZimaOS,Balena (openBalena)
+
+Overall Suitability Scores,Feature,CasaOS,CapRover,Yunohost,ZimaOS,Balena (openBalena)
+, Ease of Setup,5,3,4,5,2
+, Ease of Maintenance,4,3,4,4,3
+, Low-Resource HW Suitability,5,3,4,5,4
+, Resilience (Updates/Recovery),2,3,3,4,5
+, Scalability (Stateless HA),1,4,1,1,1
+, Scalability (Stateful HA),1,1,1,1,1
+, Service Variety (CCCI),4,4,5,4,3
+, Community/Support Access,4,3,5,3,4
+, Overall CCCI Suitability,4,2.5,4,4,2.5
+
+Suitability Matrix,Dimension,CasaOS,CapRover,Yunohost,ZimaOS,Balena (openBalena)
+, Ease of Setup,High,Medium,High,High,Low
+, Ease of Maintenance,Medium,Medium,High,Medium,Medium
+, Low-Resource HW Suitability,High,Medium,High,High,Medium
+, Resilience (Updates/Recovery),Low,Medium,Medium,High,High
+, Scalability (Stateless HA),Low,High,Low,Low,Low
+, Scalability (Stateful HA),Low,Low,Low,Low,Low
+, Relevant App Access (CCCI),Medium,Medium,High,Medium,Medium
+, Multi-User Support,Low,Low,High,Low,Low
+, Community/Docs Access,High,Medium,High,Medium,High
+
+Installation and Setup,Platform,Min HW,CPU Arch,Install Method,Required Skill,Setup Time
+,,400MB+ RAM,amd64/arm64/armv7,Script (curl),Beginner,Fast (<30min)
+,,1GB+ RAM,amd64/arm64/armv7,Docker/UI,Familiar,Moderate
+,,512MB+ RAM,x86_64/ARM,Image/Script,Familiar,Moderate
+,,400MB+ RAM (est),x86_64,Pre-installed/Image,Beginner,Fast (<30min)
+,,512MB+ RAM,x86_64/ARM,Image,Familiar,Moderate
+
+Service/App Availability,Platform,Official Store,Community Stores,Key Apps,Custom App Method,Isolation Tech
+,,Yes,Yes (Multiple),"JF, FB, PiH, SpT (Comm.); WP, Kol, AzC (?)",UI (Compose/Run),Docker
+,,Yes (Official+Comm),Yes (CaproverHub),"WP, JF, PiH, AzC (Comm.); FB, Kol, SpT (Img)",UI (Image), CLI,Docker Swarm
+,,Yes (Official+Comm),No,"WP, JF, FB, Kol, AzC, PiH, LS; SpT (No)",Packaging, Manual,Systemd/User
+,,Yes (via CasaOS),Yes (via CasaOS),Mirrors CasaOS,UI (Compose/Run),Docker
+,,No (balenaHub),No,"PiH (Comm.); WP, JF, FB, Kol, AzC, SpT (Img)",CLI/Git (Compose),Docker
+
+Usability/Docs,Platform,UI Style/Focus,Admin UI Features,User Mgmt,Doc Quality/Access,UI Languages
+,,Simple, Home Cloud,App Install, Widgets, File Mgmt,No (Community Workarounds),Wiki (EN, Comm.),Multi (EN, ZH, Comm.)
+,,PaaS, Developer Focus,App Deploy, Domain/SSL, Basic Docker,No,Website (EN),EN only
+,,Integrated Admin,Full Server Mgmt, Apps, Users, Backup,Yes (LDAP/SSO, Groups, Perms),Wiki (Multi-lang),Multi (EN, FR, ES+)
+,,Simple, Home Cloud,App Install, Widgets, File/Share Mgmt,Limited (Samba Members),Website (EN, Comm.),Multi (EN, ZH, JP+)
+,,Fleet Mgmt (IoT/Edge),Device Mgmt, Deploy, Monitor (Cloud),Cloud: Yes; openBalena: No,Website (EN),EN only
+
+Perf./Resource Use,Platform,Baseline RAM (Est.),Baseline CPU (Est.),Min RAM (Practical),SBC Perf. (RPi),Built-in Monitoring
+,,Low (<100MB?),Low,512MB - 1GB,Good,Basic Widgets
+,,Moderate (100MB+?),Low-Moderate,1GB+,Okay (Needs Swap),Netdata (Detailed)
+,,Low-Moderate,Low,512MB - 1GB,Okay,Basic OS Tools
+,,Low (<100MB?),Low,512MB - 1GB,Good (Optimized),btop Widget
+,,Moderate (OS+Agent),Low-Moderate,1GB+,Good (Optimized),Cloud Dash / Custom
+
+Networking,Platform,Local DNS/mDNS,Custom Domain,Integrated SSL (LE),App Network Isolation,Built-in Firewall
+,,IP /.local,Via Proxy,Via Proxy,Docker Network,No (Host OS)
+,,Service Name,Yes (Built-in),Yes (Built-in),Docker Swarm Network,No (Host OS)
+,,.local (mDNS),Yes (Built-in),Yes (Built-in),Host Network + FW,Yes (yunohost firewall)
+,,IP /.local,Via Proxy,Via Proxy,Docker Network,No (Host OS)
+,,Via Container,Via Proxy,Via Proxy,Docker Network,No (Host OS)
+
+Update/Backup/Recovery,Platform,System Update,App Update,Backup Method,Backup Scope,Restore Process,Resilience Features
+,,UI/CLI Script,App Store / Manual,Manual,Config?, Data (Manual),Manual,Host OS Dependent
+,,CLI (serverupdate),Redeploy / UI,Built-in (Partial),Config, SSL (No Data),Manual Steps,Docker Swarm (Apps)
+,,UI/CLI (upgrade),UI/CLI (upgrade),Built-in,Config, Data, Apps,UI/CLI,Backup System
+,,OTA / Offline,App Store / Manual,Manual,Config?, Data (Manual),Manual,Dual-Partition Rollback
+,,Remote OTA (Delta),Remote Push (Delta),Manual (App Data),OS/App Code,Redeploy,Atomic Updates, Rollback
+
+Security/Permissions,Platform,Default Firewall,Access Control (User Model),Permissions Granularity,Patching Method,Key Security Features
+,,Host OS (Manual),Single Admin (Default),Low (App/Share Level),Host OS + CasaOS Updates,Docker Isolation
+,,Host OS (Manual),Single Admin,Low (Admin Only),CapRover Updates,Integrated HTTPS, Swarm Net
+,,Integrated Mgmt,Multi-User (LDAP/Groups),High (Apps, SSH, SFTP),System + App Updates,Fail2ban, Firewall Mgmt, SSO
+,,Host OS (Manual),Single Admin (Likely),Low (Samba Level),ZimaOS OTA Updates,Docker Isolation, Dual-Boot
+,,Host OS / Docker,Multi-User (Cloud); Single (Open),High (Cloud Roles),Balena OTA Updates,Minimal OS, Container Isolation
+
+Clustering/Scaling,Platform,Native Clustering,Clustering Tech,HA (Stateless),HA (Stateful),HA Manager,Load Balancing,Setup Ease
+,,No,Manual Swarm?,No (Manual),No (Manual),No,No (Manual),Very Hard
+,,Yes,Docker Swarm,Yes (Built-in),No (Manual),No (Manual),Yes (Built-in),Moderate
+,,No,N/A,No,No,No,No,N/A
+,,No,N/A,No,No,No,No,N/A
+,,No (Fleet Mgmt),N/A,No (Manual/App),No (Manual/App),N/A,No (Manual/App),N/A
+
+Community/Sustainability,Platform,Primary Maintainer(s),GitHub Activity (Core),Forum/Chat Activity,Doc Quality/Access,CCCI/GS Reports
+,,Community / IceWhale,High / Active,High (Discord/GH),Good Wiki (EN+),No
+,,Individual / Small Team,Moderate / Less Recent,Moderate (GH Only),Good Website (EN),No
+,,Community (Volunteer),High / Active,High (Forum/Chat),Excellent (Multi),No
+,,IceWhale Technology,Moderate / Active,Moderate (Forum/Discord),Good Website (EN+),No
+,,Balena (Company),High / Active,High (Forum),Excellent (EN),No
+
+Licensing,Platform,Core License,FOSS Compliance (OSI),Copyleft,Proprietary Modules/Concerns,Vendor Lock-in Risk
+,,Apache 2.0,Yes,No,None identified,Low
+,,Apache 2.0 + Appendix,No (Modified),Partial,License appendix restrictions,Low-Moderate
+,,AGPL v3,Yes,Yes (Strong),None identified,Low
+,,Apache 2.0? +?,Unclear (Potential Mix),Unclear,Potential (Hardware/Services),Moderate-High
+,,AGPLv3 (openBalena) / Apache 2.0 (OS) / Proprietary (Cloud),Yes (Open Components),Yes (AGPL),BalenaCloud is proprietary,High (Cloud) / Low (Open)

@@ -1,0 +1,255 @@
+{
+  "questionnaire": {
+    "questions": {
+      "electricity": {
+        "question": "Você tem acesso confiável à eletricidade?",
+        "options": {
+          "yes": "Sim, energia confiável",
+          "sometimes": "Às vezes instável",
+          "no": "Frequentes quedas de energia"
+        }
+      },
+      "users": {
+        "question": "Quantos usuários irão compartilhar este computador?",
+        "options": {
+          "1-2": "1-2 usuários",
+          "3-5": "3-5 usuários",
+          "6+": "6+ usuários"
+        }
+      },
+      "growth": {
+        "question": "Crescimento esperado da comunidade nos próximos 2 anos?",
+        "options": {
+          "low": "Crescimento mínimo",
+          "medium": "Crescimento moderado",
+          "high": "Crescimento rápido"
+        }
+      },
+      "reuse": {
+        "question": "Você tem um computador disponível para reutilização?",
+        "options": {
+          "yes": "Sim",
+          "no": "Não"
+        }
+      },
+      "format": {
+        "question": "Você consegue formatar e configurar um computador?",
+        "options": {
+          "yes": "Sim, com confiança",
+          "maybe": "Com orientação",
+          "no": "Não"
+        }
+      },
+      "price": {
+        "question": "Qual é sua faixa de orçamento?",
+        "options": {
+          "low": "$0-100",
+          "medium": "$100-300",
+          "high": "$300+"
+        }
+      },
+      "points": {
+        "question": "Atribua 5 pontos de importância",
+        "description": "Distribua 5 pontos entre estas prioridades de acordo com sua importância para você",
+        "options": {
+          "skip": "Continuar"
+        },
+        "priorities": {
+          "easyToUse": {
+            "title": "Fácil de usar",
+            "description": "Interface e operação simples"
+          },
+          "lowPower": {
+            "title": "Usa pouca eletricidade",
+            "description": "Operação energeticamente eficiente"
+          },
+          "language": {
+            "title": "Funciona no seu idioma",
+            "description": "Interface e conteúdo no seu idioma preferido"
+          },
+          "scalable": {
+            "title": "Pode crescer se necessário",
+            "description": "Expansível para futuras necessidades"
+          },
+          "lowCost": {
+            "title": "Custo muito baixo",
+            "description": "Custos iniciais e de manutenção acessíveis"
+          }
+        },
+        "pointsRemaining": "Pontos restantes: {{count}}",
+        "pointsRemaining_one": "Ponto restante: {{count}}",
+        "pointsRemaining_other": "Pontos restantes: {{count}}",
+        "maxPointsReached": "Número máximo de pontos atingido",
+        "continue": "Continuar"
+      },
+      "mainUse": {
+        "question": "Qual é o uso principal pretendido?",
+        "options": {
+          "education": "Educação",
+          "business": "Negócios",
+          "personal": "Pessoal"
+        }
+      },
+      "usage": {
+        "question": "Para que sua comunidade usará isso em primeiro lugar?",
+        "description": "Selecione tudo o que se aplica",
+        "options": {
+          "news": {
+            "title": "Compartilhar notícias ou informações",
+            "description": "Disseminar notícias locais e atualizações importantes"
+          },
+          "files": {
+            "title": "Armazenar arquivos importantes",
+            "description": "Salvar e compartilhar documentos com segurança"
+          },
+          "education": {
+            "title": "Serviços escolares ou educacionais",
+            "description": "Apoiar aprendizagem e recursos educativos"
+          },
+          "media": {
+            "title": "Mídia comunitária",
+            "description": "Filmes, música, rádio na web, podcasts, etc."
+          },
+          "other": {
+            "title": "Outro",
+            "description": "Diga-nos para que mais você usará",
+            "placeholder": "Por favor, especifique..."
+          }
+        },
+        "continue": "Continuar",
+        "selectAtLeastOne": "Por favor, selecione pelo menos uma opção"
+      },
+      "results": {
+        "title": "Sua Recomendação de Caixa Comunitária",
+        "subtitle": "Com base em suas respostas, recomendamos:",
+        "matchScore": "Pontuação de Correspondência",
+        "perfectMatch": "Correspondência Perfeita!",
+        "excellentMatch": "Correspondência Excelente",
+        "goodMatch": "Bom correspondência",
+        "fairMatch": "Correspondência razoável",
+        "viewAlternatives": "Ver Alternativas",
+        "hideAlternatives": "Esconder Alternativas",
+        "whyThisRecommendation": "Por que esta recomendação?",
+        "attributes": {
+          "energy": "Eficiência energética",
+          "concurrency": "Vários usuários",
+          "growth": "Potencial de crescimento",
+          "reusable": "Reusabilidade",
+          "formatEase": "Facilidade de configuração",
+          "cost": "Eficiência de custo"
+        },
+        "devices": {
+          "raspberryPi": {
+            "name": "Raspberry Pi",
+            "description": "Computador de placa única de baixo consumo, acessível, ideal para necessidades básicas da comunidade",
+            "pros": [
+              "Consumo de energia muito baixo",
+              "Custo inicial acessível",
+              "Compacto e portátil"
+            ],
+            "cons": [
+              "Capacidade de processamento limitada",
+              "Não ideal para muitos usuários simultâneos",
+              "Opções limitadas de expansão"
+            ],
+            "idealFor": "Comunidades com eletricidade e orçamento limitados, atendendo necessidades básicas de informação"
+          },
+          "zimaBoard": {
+            "name": "ZimaBoard",
+            "description": "Servidor de placa única com bom equilíbrio entre eficiência energética e desempenho",
+            "pros": [
+              "Boa eficiência energética",
+              "Desempenho melhor do que Raspberry Pi",
+              "Opções de armazenamento expansíveis"
+            ],
+            "cons": [
+              "Custo mais elevado que Raspberry Pi",
+              "Suporte moderado para múltiplos usuários",
+              "Pode exigir conhecimento técnico para configuração"
+            ],
+            "idealFor": "Comunidades pequenas a médias com necessidades técnicas moderadas e energia estável"
+          },
+          "intelNUC": {
+            "name": "Intel NUC",
+            "description": "Mini PC compacto e potente com desempenho excelente para diversas necessidades da comunidade",
+            "pros": [
+              "Capacidades de processamento poderosas",
+              "Suporta muitos usuários simultâneos",
+              "Ótimo para crescimento e expansão"
+            ],
+            "cons": [
+              "Consumo de energia mais alto",
+              "Investimento inicial mais caro",
+              "Necessita de eletricidade estável"
+            ],
+            "idealFor": "Comunidades em crescimento com eletricidade confiável e necessidades digitais diversas"
+          },
+          "reusedPC": {
+            "name": "PC Reutilizado",
+            "description": "Computador de mesa reaproveitado, equilibrando economia e desempenho razoável",
+            "pros": [
+              "Sem custo adicional de hardware",
+              "Muitas vezes bom desempenho",
+              "Componentes facilmente atualizáveis"
+            ],
+            "cons": [
+              "Maior consumo de energia",
+              "Confiabilidade variável dependendo da idade",
+              "Pode precisar de manutenção"
+            ],
+            "idealFor": "Comunidades com hardware existente e habilidades técnicas para manutenção"
+          }
+        },
+        "reasonings": {
+          "energy": "Atende às suas restrições de energia",
+          "concurrency": "Suporta o necessidade de seu número de usuários",
+          "growth": "Alinha-se com suas expectativas de crescimento",
+          "reusable": "Utiliza hardware existente de forma eficaz",
+          "formatEase": "Corresponde às suas capacidades de configuração técnica",
+          "cost": "Encaixa no seu orçamento"
+        },
+        "startOver": "Recomeçar",
+        "exportResults": "Exportar Resultados",
+        "calculating": "Calculando a melhor correspondência...",
+        "pros": "Prós",
+        "cons": "Contras",
+        "idealFor": "Ideal para",
+        "generating": "Gerando...",
+        "shareMyAnswers": "Compartilhar Minhas Respostas",
+        "exportAsPDF": "Exportar como PDF",
+        "downloadPDF": "Baixar PDF",
+        "sharePDF": "Compartilhar PDF",
+        "shareViaWhatsApp": "Compartilhar via WhatsApp",
+        "shareViaEmail": "Compartilhar por E-mail",
+        "exportAsText": "Exportar como Texto",
+        "linkCopied": "Link copiado para a área de transferência! Qualquer um com esse link pode ver essas recomendações.",
+        "linkCopyFailed": "Falha ao copiar o link. Por favor, tente novamente.",
+        "shareTitle": "Recomendação de Caixa Comunitária",
+        "shareText": "Veja minha recomendação de Caixa Comunitária",
+        "emailSubject": "Minha Recomendação de Caixa Comunitária",
+        "emailBody": "Recebi uma recomendação para um {{device}} para as minhas necessidades de caixa comunitária!"
+      }
+    },
+    "buttons": {
+      "next": "Próximo"
+    }
+  },
+  "notFound": {
+    "title": "404",
+    "message": "Ops! Página não encontrada",
+    "returnHome": "Voltar à Página Inicial"
+  },
+  "errors": {
+    "contextError": "useQuestionnaire deve ser usado dentro de um QuestionnaireProvider"
+  },
+  "language": {
+    "select": "Idioma"
+  },
+  "landing": {
+    "title": "Localizador de Plataformas Digitais Comunitárias",
+    "description": "Descubra a melhor configuração tecnológica para as necessidades da sua comunidade. Responda algumas perguntas simples e obtenha um guia personalizado.",
+    "startButton": "Iniciar",
+    "altHeroImage": "Colaboração comunitária",
+    "footer": "Projeto Caixa Comunitária"
+  }
+}
