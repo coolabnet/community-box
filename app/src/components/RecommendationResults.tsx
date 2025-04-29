@@ -39,7 +39,7 @@ import { copyUrlToClipboard, shareUrl } from '@/utils/statePersistence';
 import raspberryPiImage from '../assets/pi.png';
 import zimaImage from '../assets/zima.png';
 import nucImage from '../assets/nuc.png';
-import reusedPCImage from '../assets/banner.png'; // Using banner as placeholder for reused PC
+import reusedPCImage from '../assets/laptop.jpg'; // Using banner as placeholder for reused PC
 
 // Define device types and attributes
 type DeviceKey = 'raspberryPi' | 'zimaBoard' | 'intelNUC' | 'reusedPC';
@@ -121,7 +121,7 @@ const devices: DeviceAttributes[] = [
     reusable: 5, // Excellent reusability (existing hardware)
     formatEase: 2, // More difficult to set up
     cost: 4, // Low cost (reused)
-    icon: <Recycle className="h-full w-full object-contain p-1 text-green-400" />
+    icon: <img src={reusedPCImage} alt="Recycled laptop" className="h-full w-full object-cover" />
   }
 ];
 
@@ -565,10 +565,10 @@ const RecommendationResults = ({
                           {topRecommendation.device.icon}
                         </div>
                         <div>
-                          <h2 className="text-2xl font-bold">
+                          <h2 className="text-2xl font-bold md:pl-12">
                             {t(`questionnaire.questions.results.devices.${topRecommendation.device.key}.name`)}
                           </h2>
-                          <p className="text-muted-foreground">
+                          <p className="text-muted-foreground md:pl-12">
                             {t(`questionnaire.questions.results.devices.${topRecommendation.device.key}.description`)}
                           </p>
                         </div>
