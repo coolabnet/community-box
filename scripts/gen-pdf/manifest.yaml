@@ -1,0 +1,61 @@
+title: "Community Digital Infrastructure: Hardware and Software Analysis for Local Server Implementation"
+author: "CCCI Research Team"
+version: "1.0.0"
+date: "2025"
+output:
+  filename: "CCCI_Research_Report_2025.pdf"
+  pageSize: "A4"
+  margins:
+    top: "2cm"
+    bottom: "2cm"
+    left: "2.5cm"
+    right: "2.5cm"
+
+structure:
+  - title: "Abstract"
+    file: "presentation/abstract.md"
+
+  - title: "1. Introduction"
+    file: "presentation/introduction.md"
+
+  - title: "2. Key Challenges Identified"
+    sections:
+      - title: "2.1 Conceptual Barriers"
+        file: "presentation/conceptual-barriers.md"
+      - title: "2.2 Local vs. Remote Solutions"
+        file: "presentation/local-vs-remote-solutions.md"
+
+  - title: "3. Hardware Analysis"
+    sections:
+      - title: "3.1 Intel NUC"
+        file: "hardware/intel_nuc/README.md"
+      - title: "3.2 Raspberry Pi"
+        file: "hardware/raspberry_pi_5/README.md"
+      - title: "3.3 ZimaBoard"
+        file: "hardware/zimaboard/README.md"
+
+  - title: "4. Software Platform Analysis"
+    sections:
+      - title: "4.1 CasaOS"
+        file: "software/casaos/README.md"
+      - title: "4.2 YunoHost"
+        file: "software/yunohost/README.md"
+      - title: "4.3 CapRover"
+        file: "software/caprover/README.md"
+      - title: "4.4 Special Focus: Balena"
+        file: "presentation/balena-focus.md"
+
+  - title: "5. Community AI Considerations"
+    sections:
+      - title: "5.1 Accessibility Benefits"
+        file: "presentation/ai-accessibility-benefits.md"
+      - title: "5.2 Use Cases"
+        file: "presentation/ai-use-cases.md"
+      - title: "5.3 Concerns"
+        file: "presentation/ai-concerns.md"
+
+  - title: "6. Conclusion: Community Box"
+    file: "presentation/conclusion-community-box.md"
+
+  - title: "7. Recommendations"
+    file: "presentation/recommendations.md"
