@@ -1,0 +1,3 @@
+# 2.1 Conceptual Barriers
+
+Through experience, we acknowledge that the biggest challenge has not been the technical barrier of implementation, but rather understanding the concept of a local network. Community members typically perceive digital technology and connectivity as something remote and global, not local. This conceptual gap makes it difficult for communities to envision the possibility of their own digital territory.

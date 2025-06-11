@@ -1,0 +1,3 @@
+# Abstract
+
+This research investigates methods to lower technical barriers for communities implementing local digital infrastructure. Through comprehensive analysis of hardware options (Intel NUC, Raspberry Pi, ZimaBoard) and software platforms (CasaOS, YunoHost, CapRover, Balena), combined with real-world testing and deployment experiences, we provide guidance for community-centered communication infrastructure projects. The study addresses both technical considerations and conceptual challenges in establishing local networks, culminating in the development of Community Box, an interactive web application for hardware and software selection.

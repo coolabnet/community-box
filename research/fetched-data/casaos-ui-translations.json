@@ -1,0 +1,27 @@
+{
+  "timestamp": "2025-06-11T21:41:03.644Z",
+  "script": "run-all.js",
+  "source": "CasaOS App UI Repository",
+  "url": "https://github.com/IceWhaleTech/CasaOS-App-UI",
+  "locales_path": "src/assets/lang",
+  "note": "Documentation is only available in English, Chinese, and Brazilian Portuguese",
+  "count": 16,
+  "data": [
+    "de_DE",
+    "el_GR",
+    "en_GB",
+    "en_US",
+    "fr_FR",
+    "hr_HR",
+    "it_IT",
+    "ja_JP",
+    "ko_KR",
+    "nb_NO",
+    "pt_PT",
+    "ru_RU",
+    "sv_SE",
+    "tr_TR",
+    "zh_CN",
+    "zh_TW"
+  ]
+}
