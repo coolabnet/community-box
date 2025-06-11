@@ -1,0 +1,99 @@
+name: Generate PDF for Release
+
+on:
+  release:
+    types: [published]
+  workflow_dispatch:  # Allow manual triggering for testing
+    inputs:
+      tag_name:
+        description: 'Tag name for the release (leave empty for latest)'
+        required: false
+        type: string
+
+permissions:
+  contents: write
+
+jobs:
+  generate-pdf:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: 'npm'
+          cache-dependency-path: './scripts/gen-pdf/package-lock.json'
+
+      - name: Install dependencies
+        run: npm install --frozen-lockfile
+        working-directory: ./scripts/gen-pdf
+
+      - name: Generate PDF
+        run: npm run generate
+        working-directory: ./scripts/gen-pdf
+
+      - name: Find generated PDF
+        id: find-pdf
+        run: |
+          PDF_FILE=$(find ./scripts/gen-pdf -name "*.pdf" -type f | head -1)
+          if [ -z "$PDF_FILE" ]; then
+            echo "No PDF file found!"
+            exit 1
+          fi
+          echo "pdf_path=$PDF_FILE" >> $GITHUB_OUTPUT
+          echo "pdf_name=$(basename $PDF_FILE)" >> $GITHUB_OUTPUT
+          echo "Found PDF: $PDF_FILE"
+
+      - name: Get release info
+        id: release-info
+        run: |
+          if [ "${{ github.event_name }}" = "release" ]; then
+            echo "tag_name=${{ github.event.release.tag_name }}" >> $GITHUB_OUTPUT
+            echo "release_id=${{ github.event.release.id }}" >> $GITHUB_OUTPUT
+          elif [ "${{ github.event_name }}" = "workflow_dispatch" ] && [ -n "${{ inputs.tag_name }}" ]; then
+            # Get release by tag name
+            RELEASE_INFO=$(gh release view "${{ inputs.tag_name }}" --json id,tagName)
+            echo "tag_name=$(echo $RELEASE_INFO | jq -r '.tagName')" >> $GITHUB_OUTPUT
+            echo "release_id=$(echo $RELEASE_INFO | jq -r '.id')" >> $GITHUB_OUTPUT
+          else
+            # Get latest release
+            RELEASE_INFO=$(gh release view --json id,tagName)
+            echo "tag_name=$(echo $RELEASE_INFO | jq -r '.tagName')" >> $GITHUB_OUTPUT
+            echo "release_id=$(echo $RELEASE_INFO | jq -r '.id')" >> $GITHUB_OUTPUT
+          fi
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Upload PDF to release
+        run: |
+          gh release upload "${{ steps.release-info.outputs.tag_name }}" \
+            "${{ steps.find-pdf.outputs.pdf_path }}" \
+            --clobber
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Update release description
+        run: |
+          CURRENT_BODY=$(gh release view "${{ steps.release-info.outputs.tag_name }}" --json body -q '.body')
+
+          # Check if PDF link already exists in the description
+          if ! echo "$CURRENT_BODY" | grep -q "📄.*PDF"; then
+            NEW_BODY="$CURRENT_BODY"$'\n\n'"## 📄 Documentation"$'\n\n'"- [Community Box Research Report PDF](${{ github.server_url }}/${{ github.repository }}/releases/download/${{ steps.release-info.outputs.tag_name }}/${{ steps.find-pdf.outputs.pdf_name }})"
+
+            gh release edit "${{ steps.release-info.outputs.tag_name }}" --notes "$NEW_BODY"
+          fi
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Create summary
+        run: |
+          echo "## 📄 PDF Generation Summary" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "**Release:** ${{ steps.release-info.outputs.tag_name }}" >> $GITHUB_STEP_SUMMARY
+          echo "**PDF File:** ${{ steps.find-pdf.outputs.pdf_name }}" >> $GITHUB_STEP_SUMMARY
+          echo "**Download URL:** [${{ steps.find-pdf.outputs.pdf_name }}](${{ github.server_url }}/${{ github.repository }}/releases/download/${{ steps.release-info.outputs.tag_name }}/${{ steps.find-pdf.outputs.pdf_name }})" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "✅ PDF successfully generated and attached to release!" >> $GITHUB_STEP_SUMMARY

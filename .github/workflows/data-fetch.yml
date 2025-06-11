@@ -1,0 +1,74 @@
+name: Fetch Latest Data
+
+on:
+  schedule:
+    # Run daily at 6 AM UTC to keep data fresh
+    - cron: '0 6 * * *'
+  workflow_dispatch:  # Allow manual triggering
+
+permissions:
+  contents: write
+
+jobs:
+  fetch-data:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: 'npm'
+          cache-dependency-path: './scripts/fetch-data/package-lock.json'
+
+      - name: Install dependencies
+        run: npm install --frozen-lockfile
+        working-directory: ./scripts/fetch-data
+
+      - name: Run data fetching scripts
+        run: npm run fetch-all
+        working-directory: ./scripts/fetch-data
+
+      - name: Run tests to verify data integrity
+        run: npm test
+        working-directory: ./scripts/fetch-data
+
+      - name: Commit and push changes
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add research/fetched-data/
+          if git diff --staged --quiet; then
+            echo "No data changes to commit"
+          else
+            git commit -m "chore: update fetched data [skip ci]"
+            git push
+          fi
+
+      - name: Create summary comment (on manual trigger)
+        if: github.event_name == 'workflow_dispatch'
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const fs = require('fs');
+            const path = './research/fetched-data/_execution_summary.json';
+            
+            if (fs.existsSync(path)) {
+              const summary = JSON.parse(fs.readFileSync(path, 'utf8'));
+              const comment = `## 📊 Data Fetch Summary
+              
+              **Execution Time:** ${summary.execution_time}
+              **Total Scripts:** ${summary.total_scripts}
+              **Successful:** ${summary.successful}
+              **Failed:** ${summary.failed}
+              **Duration:** ${summary.total_duration_ms}ms
+              
+              ${summary.errors ? '### ❌ Errors:\n' + summary.errors.map(e => `- ${e.name}: ${e.error}`).join('\n') : '### ✅ All scripts completed successfully!'}
+              `;
+              
+              console.log(comment);
+            }

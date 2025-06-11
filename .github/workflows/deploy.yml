@@ -7,7 +7,7 @@ on:
   workflow_dispatch:  # Allow manual triggering
 
 permissions:
-  contents: read
+  contents: write  # Changed from read to write to allow committing data changes
   pages: write
   id-token: write
 
@@ -22,20 +22,47 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Setup Node.js
+      - name: Setup Node.js for data fetching
         uses: actions/setup-node@v4
         with:
           node-version: 20
           cache: 'npm'
-          cache-dependency-path: './app/package-lock.json'
+          cache-dependency-path: './scripts/fetch-data/package-lock.json'
 
-      - name: Install dependencies
-        run: npm ci
+      - name: Install data fetching dependencies
+        run: npm install --frozen-lockfile
+        working-directory: ./scripts/fetch-data
+
+      - name: Run data fetching scripts
+        run: npm run fetch-all
+        working-directory: ./scripts/fetch-data
+
+      - name: Commit and push data changes
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add research/fetched-data/
+          if git diff --staged --quiet; then
+            echo "No data changes to commit"
+          else
+            git commit -m "chore: update fetched data [skip ci]"
+            git push
+          fi
+
+      - name: Setup Bun for app build
+        uses: oven-sh/setup-bun@v2
+        with:
+          bun-version: latest
+
+      - name: Install app dependencies
+        run: bun install --frozen-lockfile
         working-directory: ./app
 
-      - name: Build
-        run: npm run build
+      - name: Build app
+        run: bun run build
         working-directory: ./app
         env:
           NODE_ENV: production
