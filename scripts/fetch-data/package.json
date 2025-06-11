@@ -1,0 +1,23 @@
+{
+  "name": "community-box-scripts",
+  "version": "1.0.0",
+  "description": "Scripts for Community Box project",
+  "main": "run-all.js",
+  "scripts": {
+    "fetch-all": "node run-all.js",
+    "test": "node test/scripts.test.js",
+    "get-shipping-areas": "node get-zimaboard-shipping-areas.js",
+    "get-caprover-translations": "node get-caprover-ui-translations.js",
+    "get-casaos-translations": "node get-casaos-ui-translations.js",
+    "get-yunohost-apps": "node get-yunohost-apps.js",
+    "get-yunohost-docs": "node get-yunohost-docs-translations.js",
+    "get-yunohost-ui": "node get-yunohost-ui-translations.js"
+  },
+  "dependencies": {
+    "axios": "^1.6.0",
+    "cheerio": "^1.0.0-rc.12"
+  },
+  "devDependencies": {},
+  "author": "",
+  "license": "ISC"
+}
