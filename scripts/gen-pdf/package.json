@@ -9,7 +9,8 @@
     "generate:watch": "ts-node index.ts --watch",
     "clean": "rm -rf dist *.pdf .pdf-cache.json",
     "test": "ts-node test.ts",
-    "test:ci": "npm run generate && ls *.pdf > /dev/null && echo 'PDF generation test passed'"
+    "test:ci": "npm run generate && ls *.pdf > /dev/null && echo 'PDF generation test passed'",
+    "postinstall": "npx puppeteer browsers install chrome"
   },
   "dependencies": {
     "@types/node": "^24.0.1",
