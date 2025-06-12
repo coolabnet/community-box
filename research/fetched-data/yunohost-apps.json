@@ -1,6 +1,6 @@
 {
-  "timestamp": "2025-06-11T21:33:18.461Z",
-  "script": "scripts.test.js",
+  "timestamp": "2025-06-12T18:08:56.891Z",
+  "script": "run-all.js",
   "source": "YunoHost-Apps GitHub Organization",
   "url": "https://github.com/YunoHost-Apps",
   "api_url": "https://api.github.com/orgs/YunoHost-Apps/repos",
@@ -104,7 +104,7 @@
       "url": "https://github.com/YunoHost-Apps/actual_ynh",
       "stars": 5,
       "forks": 5,
-      "updated_at": "2025-05-14T16:37:32Z",
+      "updated_at": "2025-06-12T08:35:09Z",
       "language": "Shell",
       "archived": false
     },
@@ -300,9 +300,9 @@
       "name": "anubis",
       "description": "Anubis package for YunoHost",
       "url": "https://github.com/YunoHost-Apps/anubis_ynh",
-      "stars": 4,
+      "stars": 5,
       "forks": 0,
-      "updated_at": "2025-05-10T17:54:12Z",
+      "updated_at": "2025-06-12T03:56:20Z",
       "language": "Shell",
       "archived": false
     },
@@ -1236,7 +1236,7 @@
       "description": "CryptPad package for YunoHost",
       "url": "https://github.com/YunoHost-Apps/cryptpad_ynh",
       "stars": 30,
-      "forks": 23,
+      "forks": 22,
       "updated_at": "2025-06-07T05:47:19Z",
       "language": "JavaScript",
       "archived": false
@@ -2348,7 +2348,7 @@
       "url": "https://github.com/YunoHost-Apps/firefly-iii_ynh",
       "stars": 22,
       "forks": 12,
-      "updated_at": "2025-06-07T08:54:13Z",
+      "updated_at": "2025-06-12T09:30:25Z",
       "language": "Shell",
       "archived": false
     },
@@ -3316,7 +3316,7 @@
       "url": "https://github.com/YunoHost-Apps/homeassistant_ynh",
       "stars": 21,
       "forks": 16,
-      "updated_at": "2025-05-24T05:50:32Z",
+      "updated_at": "2025-06-12T05:42:14Z",
       "language": "Shell",
       "archived": false
     },
@@ -4504,7 +4504,7 @@
       "url": "https://github.com/YunoHost-Apps/lychee_ynh",
       "stars": 10,
       "forks": 7,
-      "updated_at": "2025-05-28T08:47:17Z",
+      "updated_at": "2025-06-11T23:22:16Z",
       "language": "Shell",
       "archived": false
     },
@@ -5428,7 +5428,7 @@
       "url": "https://github.com/YunoHost-Apps/nextcloud_ynh",
       "stars": 161,
       "forks": 68,
-      "updated_at": "2025-06-05T05:10:31Z",
+      "updated_at": "2025-06-12T14:13:41Z",
       "language": "Shell",
       "archived": false
     },
@@ -5659,7 +5659,7 @@
       "url": "https://github.com/YunoHost-Apps/ollama_ynh",
       "stars": 0,
       "forks": 0,
-      "updated_at": "2025-06-11T17:43:05Z",
+      "updated_at": "2025-06-12T11:07:20Z",
       "language": "Shell",
       "archived": false
     },
@@ -6660,7 +6660,7 @@
       "url": "https://github.com/YunoHost-Apps/prose_ynh",
       "stars": 0,
       "forks": 1,
-      "updated_at": "2025-05-19T20:15:04Z",
+      "updated_at": "2025-06-12T09:28:39Z",
       "language": "Shell",
       "archived": false
     },
@@ -6858,7 +6858,7 @@
       "url": "https://github.com/YunoHost-Apps/radarr_ynh",
       "stars": 4,
       "forks": 4,
-      "updated_at": "2025-05-28T20:14:03Z",
+      "updated_at": "2025-06-12T09:28:02Z",
       "language": "Shell",
       "archived": false
     },
@@ -8057,7 +8057,7 @@
       "url": "https://github.com/YunoHost-Apps/synapse-admin_ynh",
       "stars": 6,
       "forks": 3,
-      "updated_at": "2025-06-03T07:49:52Z",
+      "updated_at": "2025-06-12T09:26:20Z",
       "language": "Shell",
       "archived": false
     },
