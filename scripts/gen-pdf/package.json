@@ -8,19 +8,20 @@
     "generate": "ts-node index.ts",
     "generate:watch": "ts-node index.ts --watch",
     "clean": "rm -rf dist *.pdf .pdf-cache.json",
-    "test": "ts-node test.ts"
+    "test": "ts-node test.ts",
+    "test:ci": "npm run generate && ls *.pdf > /dev/null && echo 'PDF generation test passed'"
   },
   "dependencies": {
-    "@types/node": "^20.0.0",
-    "chokidar": "^3.5.3",
-    "date-fns": "^2.30.0",
+    "@types/node": "^24.0.1",
+    "chokidar": "^4.0.3",
+    "date-fns": "^4.1.0",
     "gray-matter": "^4.0.3",
-    "marked": "^9.0.0",
-    "puppeteer": "^21.0.0",
-    "typescript": "^5.0.0",
-    "yaml": "^2.3.0"
+    "marked": "^15.0.12",
+    "puppeteer": "^24.10.1",
+    "typescript": "^5.8.3",
+    "yaml": "^2.8.0"
   },
   "devDependencies": {
-    "ts-node": "^10.9.0"
+    "ts-node": "^10.9.2"
   }
 }

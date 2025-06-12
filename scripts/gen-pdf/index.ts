@@ -70,7 +70,7 @@ export class MarkdownProcessor {
     return createHash('md5').update(content).digest('hex');
   }
 
-  processMarkdown(filePath: string): { content: string; metadata: any } {
+  async processMarkdown(filePath: string): Promise<{ content: string; metadata: any }> {
     const fullPath = join(this.baseDir, filePath);
     
     if (!existsSync(fullPath)) {
@@ -98,7 +98,8 @@ export class MarkdownProcessor {
     const renderer = new marked.Renderer();
     
     // Handle internal links
-    renderer.link = (href, title, text) => {
+    renderer.link = ({ href, title, tokens }) => {
+      const text = this.extractTextFromTokens(tokens);
       if (href.startsWith('./') || href.startsWith('../')) {
         // Convert relative MD links to PDF internal links
         const linkText = title ? `title="${title}"` : '';
@@ -108,33 +109,54 @@ export class MarkdownProcessor {
     };
 
     // Add IDs to headers for navigation
-    renderer.heading = (text, level) => {
+    renderer.heading = ({ tokens, depth }) => {
+      const text = this.extractTextFromTokens(tokens);
       const id = this.generateAnchorId(text);
-      return `<h${level} id="${id}">${text}</h${level}>`;
+      return `<h${depth} id="${id}">${text}</h${depth}>`;
     };
 
     // Better table rendering
-    renderer.table = (header, body) => {
+    renderer.table = (token) => {
+      const header = token.header.map(cell => {
+        const cellText = this.extractTextFromTokens(cell.tokens);
+        return `<th>${cellText}</th>`;
+      }).join('');
+      const body = token.rows.map(row =>
+        `<tr>${row.map(cell => {
+          const cellText = this.extractTextFromTokens(cell.tokens);
+          return `<td>${cellText}</td>`;
+        }).join('')}</tr>`
+      ).join('');
+
       return `<table class="pdf-table">
-        <thead>${header}</thead>
+        <thead><tr>${header}</tr></thead>
         <tbody>${body}</tbody>
       </table>`;
     };
 
     // Process code blocks with syntax highlighting placeholder
-    renderer.code = (code, language) => {
-      return `<pre class="code-block" data-language="${language || 'text'}"><code>${this.escapeHtml(code)}</code></pre>`;
+    renderer.code = ({ text, lang }) => {
+      return `<pre class="code-block" data-language="${lang || 'text'}"><code>${this.escapeHtml(text)}</code></pre>`;
     };
 
     marked.use({ renderer });
-    
-    const processedContent = marked.parse(content);
-    
+
+    const processedContent = await marked.parse(content);
+
     // Cache the processed content
     this.cache.set(filePath, { hash: currentHash, content: processedContent });
     this.saveCache();
 
     return { content: processedContent, metadata };
+  }
+
+  private extractTextFromTokens(tokens: any[]): string {
+    return tokens.map(token => {
+      if (token.raw) return token.raw;
+      if ((token as any).text) return (token as any).text;
+      if (token.type === 'text') return token.raw || '';
+      return '';
+    }).join('');
   }
 
   private generateAnchorId(text: string): string {
@@ -171,15 +193,30 @@ export class PDFBuilder {
 
   async buildPDF(outputPath: string) {
     console.log('🚀 Starting PDF generation...');
-    
-    const htmlContent = this.buildHTMLDocument();
+
+    const htmlContent = await this.buildHTMLDocument();
     const htmlPath = join(dirname(outputPath), 'temp.html');
     writeFileSync(htmlPath, htmlContent);
 
     console.log('📄 Generating PDF with Puppeteer...');
     const browser = await puppeteer.launch({
-      headless: 'new',
-      args: ['--no-sandbox', '--disable-setuid-sandbox'],
+      headless: true,
+      args: [
+        '--no-sandbox',
+        '--disable-setuid-sandbox',
+        '--disable-dev-shm-usage',
+        '--disable-accelerated-2d-canvas',
+        '--no-first-run',
+        '--no-zygote',
+        '--single-process',
+        '--disable-gpu',
+        '--disable-background-timer-throttling',
+        '--disable-backgrounding-occluded-windows',
+        '--disable-renderer-backgrounding',
+        '--disable-features=TranslateUI',
+        '--disable-ipc-flooding-protection',
+      ],
+      timeout: 60000,
     });
 
     try {
@@ -224,8 +261,8 @@ export class PDFBuilder {
     }
   }
 
-  private buildHTMLDocument(): string {
-    const processedSections = this.processSections(this.config.structure, 0);
+  private async buildHTMLDocument(): Promise<string> {
+    const processedSections = await this.processSections(this.config.structure, 0);
     const tocHTML = this.generateTOC();
     const contentHTML = processedSections.map(section => this.renderSection(section)).join('\n');
 
@@ -267,12 +304,12 @@ export class PDFBuilder {
     `;
   }
 
-  private processSections(sections: Section[], level: number): ProcessedContent[] {
+  private async processSections(sections: Section[], level: number): Promise<ProcessedContent[]> {
     const processed: ProcessedContent[] = [];
 
-    sections.forEach((section, index) => {
+    for (const [index, section] of sections.entries()) {
       if (section.file) {
-        const { content } = this.processor.processMarkdown(section.file);
+        const { content } = await this.processor.processMarkdown(section.file);
         processed.push({
           title: section.title,
           content,
@@ -291,9 +328,10 @@ export class PDFBuilder {
       }
 
       if (section.sections) {
-        processed.push(...this.processSections(section.sections, level + 1));
+        const subSections = await this.processSections(section.sections, level + 1);
+        processed.push(...subSections);
       }
-    });
+    }
 
     return processed;
   }

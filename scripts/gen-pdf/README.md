@@ -146,11 +146,29 @@ npx tsc --noEmit  # Check for type errors
 
 ## Dependencies
 
-- **puppeteer**: PDF generation via headless Chrome
+- **puppeteer**: PDF generation via headless Chrome (v23.0.0+)
 - **marked**: Markdown to HTML conversion
 - **yaml**: YAML configuration parsing
 - **gray-matter**: Frontmatter parsing
 - **date-fns**: Date formatting utilities
+
+## GitHub Actions
+
+The PDF generator is integrated with GitHub Actions to automatically generate PDFs when releases are created. The workflow:
+
+1. **Installs Chrome dependencies** for headless browser operation
+2. **Uses updated Puppeteer** (v23.0.0+) to avoid deprecated version warnings
+3. **Generates PDF** with robust browser configuration for CI environments
+4. **Uploads PDF** as a release asset
+5. **Updates release description** with download link
+
+### CI Configuration
+
+The workflow includes specific optimizations for GitHub Actions:
+- Chrome/Chromium dependencies installation
+- Puppeteer browser args optimized for containerized environments
+- Memory and timeout configurations
+- Verification steps to ensure PDF generation succeeds
 
 ## License
 

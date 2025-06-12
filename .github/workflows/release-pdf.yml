@@ -27,12 +27,66 @@ jobs:
           cache: 'npm'
           cache-dependency-path: './scripts/gen-pdf/package-lock.json'
 
+      - name: Install Chrome dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y \
+            ca-certificates \
+            fonts-liberation \
+            libasound2 \
+            libatk-bridge2.0-0 \
+            libatk1.0-0 \
+            libc6 \
+            libcairo2 \
+            libcups2 \
+            libdbus-1-3 \
+            libexpat1 \
+            libfontconfig1 \
+            libgbm1 \
+            libgcc1 \
+            libglib2.0-0 \
+            libgtk-3-0 \
+            libnspr4 \
+            libnss3 \
+            libpango-1.0-0 \
+            libpangocairo-1.0-0 \
+            libstdc++6 \
+            libx11-6 \
+            libx11-xcb1 \
+            libxcb1 \
+            libxcomposite1 \
+            libxcursor1 \
+            libxdamage1 \
+            libxext6 \
+            libxfixes3 \
+            libxi6 \
+            libxrandr2 \
+            libxrender1 \
+            libxss1 \
+            libxtst6 \
+            lsb-release \
+            wget \
+            xdg-utils
+
       - name: Install dependencies
         run: npm install --frozen-lockfile
         working-directory: ./scripts/gen-pdf
 
       - name: Generate PDF
         run: npm run generate
+        working-directory: ./scripts/gen-pdf
+        env:
+          # Ensure puppeteer doesn't hang on warnings
+          NODE_OPTIONS: "--max-old-space-size=4096"
+
+      - name: Verify PDF generation
+        run: |
+          if [ ! -f *.pdf ]; then
+            echo "❌ No PDF file was generated!"
+            exit 1
+          fi
+          echo "✅ PDF file generated successfully"
+          ls -la *.pdf
         working-directory: ./scripts/gen-pdf
 
       - name: Find generated PDF
