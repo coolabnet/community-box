@@ -1,6 +1,6 @@
 {
-  "timestamp": "2025-06-12T20:56:37.338Z",
-  "script": "run-all.js",
+  "timestamp": "2025-06-13T06:34:31.078Z",
+  "script": "scripts.test.js",
   "source": "YunoHost-Apps GitHub Organization",
   "url": "https://github.com/YunoHost-Apps",
   "api_url": "https://api.github.com/orgs/YunoHost-Apps/repos",
@@ -6165,7 +6165,7 @@
       "url": "https://github.com/YunoHost-Apps/phanpy_ynh",
       "stars": 2,
       "forks": 1,
-      "updated_at": "2025-06-11T02:52:38Z",
+      "updated_at": "2025-06-13T05:04:27Z",
       "language": "Shell",
       "archived": false
     },
@@ -8541,7 +8541,7 @@
       "url": "https://github.com/YunoHost-Apps/ums_ynh",
       "stars": 1,
       "forks": 4,
-      "updated_at": "2025-05-01T08:05:53Z",
+      "updated_at": "2025-06-13T06:32:53Z",
       "language": "Shell",
       "archived": false
     },

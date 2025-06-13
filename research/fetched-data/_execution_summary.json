@@ -1,18 +1,18 @@
 {
-  "timestamp": "2025-06-12T20:56:39.719Z",
+  "timestamp": "2025-06-13T06:34:30.570Z",
   "script": "run-all.js",
   "note": "Summary of all data fetching script executions",
   "data": {
-    "execution_time": "2025-06-12T20:56:39.719Z",
+    "execution_time": "2025-06-13T06:34:30.570Z",
     "total_scripts": 6,
     "successful": 6,
     "failed": 0,
-    "total_duration_ms": 16376,
+    "total_duration_ms": 14042,
     "results": [
       {
         "name": "CapRover UI Translations",
         "success": true,
-        "duration": 252,
+        "duration": 123,
         "result": [
           "ar-EG",
           "de-DE",
@@ -32,7 +32,7 @@
       {
         "name": "CasaOS UI Translations",
         "success": true,
-        "duration": 162,
+        "duration": 61,
         "result": [
           "de_DE",
           "el_GR",
@@ -55,7 +55,7 @@
       {
         "name": "YunoHost Apps",
         "success": true,
-        "duration": 13585,
+        "duration": 12146,
         "result": {
           "count": 860,
           "apps": [
@@ -6204,7 +6204,7 @@
               "url": "https://github.com/YunoHost-Apps/phanpy_ynh",
               "stars": 2,
               "forks": 1,
-              "updated_at": "2025-06-11T02:52:38Z",
+              "updated_at": "2025-06-13T05:04:27Z",
               "language": "Shell",
               "archived": false
             },
@@ -8580,7 +8580,7 @@
               "url": "https://github.com/YunoHost-Apps/ums_ynh",
               "stars": 1,
               "forks": 4,
-              "updated_at": "2025-05-01T08:05:53Z",
+              "updated_at": "2025-06-13T06:32:53Z",
               "language": "Shell",
               "archived": false
             },
@@ -9538,7 +9538,7 @@
       {
         "name": "YunoHost Docs Translations",
         "success": true,
-        "duration": 155,
+        "duration": 73,
         "result": [
           "ar",
           "ca",
@@ -9554,7 +9554,7 @@
       {
         "name": "YunoHost UI Translations",
         "success": true,
-        "duration": 1867,
+        "duration": 1386,
         "result": [
           {
             "language": "German",
@@ -9961,7 +9961,7 @@
       {
         "name": "Zimaboard Shipping Areas",
         "success": true,
-        "duration": 355,
+        "duration": 253,
         "result": [
           "Argentina",
           "Australia",
