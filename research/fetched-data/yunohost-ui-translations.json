@@ -1,6 +1,6 @@
 {
-  "timestamp": "2025-06-13T06:34:32.481Z",
-  "script": "scripts.test.js",
+  "timestamp": "2025-06-13T18:04:53.794Z",
+  "script": "run-all.js",
   "source": "YunoHost Translation Platform",
   "url": "https://translate.yunohost.org/",
   "api_url": "https://translate.yunohost.org/api/translations/?format=json",
@@ -199,7 +199,7 @@
       "translated_percent": 91.5,
       "translated_words": 3212,
       "total_words": 3627,
-      "last_change": "2025-06-12T12:21:21.210503Z"
+      "last_change": "2025-06-13T13:12:56.235394Z"
     },
     {
       "language": "Esperanto",
@@ -263,7 +263,7 @@
       "translated_percent": 65.2,
       "translated_words": 6363,
       "total_words": 10255,
-      "last_change": "2025-05-18T16:20:52.255203Z"
+      "last_change": "2025-06-13T16:48:04.696389Z"
     },
     {
       "language": "Portuguese",
