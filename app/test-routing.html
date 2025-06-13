@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Test GitHub Pages Routing</title>
+</head>
+<body>
+    <h1>Testing GitHub Pages Routing Setup</h1>
+
+    <h2>Test Cases:</h2>
+    <ul>
+        <li><strong>Base URL:</strong> Should load the landing page</li>
+        <li><strong>/questionnaire:</strong> Should redirect and load questionnaire page</li>
+        <li><strong>Direct navigation:</strong> Should work via 404.html redirect</li>
+    </ul>
+
+    <h2>Configuration Summary:</h2>
+    <ul>
+        <li>✅ 404.html created with pathSegmentsToKeep = 1</li>
+        <li>✅ index.html has redirect handling script</li>
+        <li>✅ BrowserRouter uses basename="/community-box" in production</li>
+        <li>✅ Vite config sets base="/community-box/" in production</li>
+    </ul>
+
+    <h2>How it works:</h2>
+    <ol>
+        <li>User navigates to https://username.github.io/community-box/questionnaire</li>
+        <li>GitHub Pages returns 404.html (no physical file exists)</li>
+        <li>404.html script converts URL to https://username.github.io/community-box/?/questionnaire</li>
+        <li>GitHub Pages serves index.html (query string ignored)</li>
+        <li>index.html script converts back to /community-box/questionnaire</li>
+        <li>React Router handles the route with basename="/community-box"</li>
+    </ol>
+
+    <p><strong>Status:</strong> ✅ Ready for deployment!</p>
+</body>
+</html>

@@ -16,13 +16,13 @@ export interface SurveyState {
  */
 export const encodeStateToUrl = (state: SurveyState): string => {
   const { currentStep, answers } = state;
-  
+
   // Create a new URLSearchParams object
   const params = new URLSearchParams();
-  
+
   // Add current step
   params.append('step', currentStep.toString());
-  
+
   // Add answers
   Object.entries(answers).forEach(([key, value]) => {
     // Handle different value types
@@ -34,7 +34,7 @@ export const encodeStateToUrl = (state: SurveyState): string => {
       params.append(key, String(value));
     }
   });
-  
+
   return params.toString();
 };
 
@@ -45,21 +45,21 @@ export const decodeStateFromUrl = (): SurveyState | null => {
   try {
     // Get URL search params
     const params = new URLSearchParams(window.location.search);
-    
+
     // Get current step
     const stepParam = params.get('step');
     if (!stepParam) return null;
-    
+
     const currentStep = parseInt(stepParam, 10);
     if (isNaN(currentStep)) return null;
-    
+
     // Get answers
     const answers: Record<string, any> = {};
-    
+
     // Iterate through all params except 'step'
     params.forEach((value, key) => {
       if (key === 'step') return;
-      
+
       // Try to parse as JSON for object values
       try {
         answers[key] = JSON.parse(value);
@@ -68,7 +68,7 @@ export const decodeStateFromUrl = (): SurveyState | null => {
         answers[key] = value;
       }
     });
-    
+
     return { currentStep, answers };
   } catch (error) {
     console.error('Error decoding state from URL:', error);
@@ -94,7 +94,7 @@ export const loadStateFromStorage = (): SurveyState | null => {
   try {
     const storedState = localStorage.getItem(STORAGE_KEY);
     if (!storedState) return null;
-    
+
     return JSON.parse(storedState) as SurveyState;
   } catch (error) {
     console.error('Error loading state from localStorage:', error);

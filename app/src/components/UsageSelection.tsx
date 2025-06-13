@@ -4,11 +4,11 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { cn } from '@/lib/utils';
-import { 
-  Newspaper, 
-  FileText, 
-  GraduationCap, 
-  Radio, 
+import {
+  Newspaper,
+  FileText,
+  GraduationCap,
+  Radio,
   MoreHorizontal,
   Check,
   AlertCircle
@@ -34,7 +34,7 @@ const UsageSelection = ({ onNext }: { onNext: (values: Record<string, any>) => v
     { key: 'media', icon: <Radio className="h-8 w-8" />, selected: false },
     { key: 'other', icon: <MoreHorizontal className="h-8 w-8" />, selected: false, otherText: '' },
   ]);
-  
+
   const [error, setError] = useState<string | null>(null);
   const [showSuccessAnimation, setShowSuccessAnimation] = useState(false);
 
@@ -45,7 +45,7 @@ const UsageSelection = ({ onNext }: { onNext: (values: Record<string, any>) => v
       updated[index] = { ...updated[index], selected: !updated[index].selected };
       return updated;
     });
-    
+
     // Clear error if any option is selected
     if (error) {
       setError(null);
@@ -57,8 +57,8 @@ const UsageSelection = ({ onNext }: { onNext: (values: Record<string, any>) => v
     setUsageOptions(prev => {
       const updated = [...prev];
       const otherIndex = updated.findIndex(option => option.key === 'other');
-      updated[otherIndex] = { 
-        ...updated[otherIndex], 
+      updated[otherIndex] = {
+        ...updated[otherIndex],
         otherText: text,
         // Auto-select the "Other" option when text is entered
         selected: text.trim() !== '' ? true : updated[otherIndex].selected
@@ -71,7 +71,7 @@ const UsageSelection = ({ onNext }: { onNext: (values: Record<string, any>) => v
   const handleContinue = () => {
     // Check if at least one option is selected
     const hasSelection = usageOptions.some(option => option.selected);
-    
+
     if (!hasSelection) {
       setError(t('questionnaire.questions.usage.selectAtLeastOne'));
       return;
@@ -79,7 +79,7 @@ const UsageSelection = ({ onNext }: { onNext: (values: Record<string, any>) => v
 
     // Show success animation
     setShowSuccessAnimation(true);
-    
+
     // Prepare data for submission
     setTimeout(() => {
       const values = usageOptions.reduce((acc, option) => {
@@ -88,7 +88,7 @@ const UsageSelection = ({ onNext }: { onNext: (values: Record<string, any>) => v
         }
         return acc;
       }, {} as Record<string, any>);
-      
+
       onNext(values);
     }, 600);
   };
@@ -127,8 +127,8 @@ const UsageSelection = ({ onNext }: { onNext: (values: Record<string, any>) => v
               whileTap={{ scale: 0.98 }}
               className={cn(
                 "relative p-6 rounded-xl border-2 cursor-pointer transition-all",
-                option.selected 
-                  ? "border-primary bg-primary/5 shadow-md" 
+                option.selected
+                  ? "border-primary bg-primary/5 shadow-md"
                   : "border-border bg-card hover:border-primary/30"
               )}
               onClick={() => toggleOption(index)}
@@ -140,7 +140,7 @@ const UsageSelection = ({ onNext }: { onNext: (values: Record<string, any>) => v
                 )}>
                   {option.icon}
                 </div>
-                
+
                 <div className="flex-1">
                   <h3 className="text-xl font-medium mb-1">
                     {t(`questionnaire.questions.usage.options.${option.key}.title`)}
@@ -148,7 +148,7 @@ const UsageSelection = ({ onNext }: { onNext: (values: Record<string, any>) => v
                   <p className="text-sm text-muted-foreground">
                     {t(`questionnaire.questions.usage.options.${option.key}.description`)}
                   </p>
-                  
+
                   {/* Text input for "Other" option */}
                   {option.key === 'other' && option.selected && (
                     <motion.div
@@ -167,12 +167,12 @@ const UsageSelection = ({ onNext }: { onNext: (values: Record<string, any>) => v
                     </motion.div>
                   )}
                 </div>
-                
+
                 {/* Selection indicator */}
                 <div className={cn(
                   "absolute top-4 right-4 h-6 w-6 rounded-full flex items-center justify-center transition-all",
-                  option.selected 
-                    ? "bg-primary text-primary-foreground" 
+                  option.selected
+                    ? "bg-primary text-primary-foreground"
                     : "bg-muted text-muted-foreground"
                 )}>
                   {option.selected && <Check className="h-4 w-4" />}
