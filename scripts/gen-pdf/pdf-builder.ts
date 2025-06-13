@@ -114,7 +114,7 @@ class PDFBuilder {
           title: section.title,
           content,
           level,
-          pageBreak: level <= 1 && index > 0,
+          pageBreak: level === 0 && index > 0,
         });
         this.toc.push({ title: section.title, level });
       } else if (section.title) {
@@ -122,7 +122,7 @@ class PDFBuilder {
           title: section.title,
           content: '',
           level,
-          pageBreak: level <= 1 && index > 0,
+          pageBreak: level === 0 && index > 0,
         });
         this.toc.push({ title: section.title, level });
       }

@@ -314,7 +314,7 @@ export class PDFBuilder {
           title: section.title,
           content,
           level,
-          pageBreak: level <= 1 && index > 0,
+          pageBreak: level === 0 && index > 0,
         });
         this.toc.push({ title: section.title, level });
       } else if (section.title) {
@@ -322,7 +322,7 @@ export class PDFBuilder {
           title: section.title,
           content: '',
           level,
-          pageBreak: level <= 1 && index > 0,
+          pageBreak: level === 0 && index > 0,
         });
         this.toc.push({ title: section.title, level });
       }
@@ -620,7 +620,7 @@ export async function generatePDF() {
     const config: PDFConfig = parse(manifestContent);
 
     // Initialize processor and builder
-    const processor = new MarkdownProcessor('../research');
+    const processor = new MarkdownProcessor('../../research');
     const builder = new PDFBuilder(config, processor);
 
     // Generate PDF
