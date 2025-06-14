@@ -1,18 +1,18 @@
 {
-  "timestamp": "2025-06-13T18:33:16.079Z",
+  "timestamp": "2025-06-14T06:31:07.190Z",
   "script": "run-all.js",
   "note": "Summary of all data fetching script executions",
   "data": {
-    "execution_time": "2025-06-13T18:33:16.079Z",
+    "execution_time": "2025-06-14T06:31:07.190Z",
     "total_scripts": 6,
     "successful": 6,
     "failed": 0,
-    "total_duration_ms": 14964,
+    "total_duration_ms": 14577,
     "results": [
       {
         "name": "CapRover UI Translations",
         "success": true,
-        "duration": 137,
+        "duration": 252,
         "result": [
           "ar-EG",
           "de-DE",
@@ -32,7 +32,7 @@
       {
         "name": "CasaOS UI Translations",
         "success": true,
-        "duration": 88,
+        "duration": 159,
         "result": [
           "de_DE",
           "el_GR",
@@ -55,7 +55,7 @@
       {
         "name": "YunoHost Apps",
         "success": true,
-        "duration": 13063,
+        "duration": 11770,
         "result": {
           "count": 860,
           "apps": [
@@ -153,7 +153,7 @@
               "description": "AdGuard Home package for YunoHost: Network-wide ads & trackers blocking DNS server",
               "url": "https://github.com/YunoHost-Apps/adguardhome_ynh",
               "stars": 16,
-              "forks": 16,
+              "forks": 17,
               "updated_at": "2025-05-30T23:00:25Z",
               "language": "Shell",
               "archived": false
@@ -504,9 +504,9 @@
               "name": "baikal",
               "description": "Baïkal package for YunoHost",
               "url": "https://github.com/YunoHost-Apps/baikal_ynh",
-              "stars": 9,
+              "stars": 10,
               "forks": 16,
-              "updated_at": "2025-05-18T19:43:31Z",
+              "updated_at": "2025-06-13T21:05:23Z",
               "language": "Shell",
               "archived": false
             },
@@ -2442,7 +2442,7 @@
               "url": "https://github.com/YunoHost-Apps/flohmarkt_ynh",
               "stars": 1,
               "forks": 2,
-              "updated_at": "2025-06-11T09:08:40Z",
+              "updated_at": "2025-06-13T19:31:57Z",
               "language": "Shell",
               "archived": false
             },
@@ -3100,9 +3100,9 @@
               "name": "gotosocial",
               "description": "GoToSocial package for YunoHost: an ActivityPub social network server, written in Golang.",
               "url": "https://github.com/YunoHost-Apps/gotosocial_ynh",
-              "stars": 16,
+              "stars": 17,
               "forks": 8,
-              "updated_at": "2025-05-29T21:07:09Z",
+              "updated_at": "2025-06-13T20:42:58Z",
               "language": "Shell",
               "archived": false
             },
@@ -3355,7 +3355,7 @@
               "url": "https://github.com/YunoHost-Apps/homeassistant_ynh",
               "stars": 21,
               "forks": 16,
-              "updated_at": "2025-06-12T05:42:14Z",
+              "updated_at": "2025-06-14T06:23:39Z",
               "language": "Shell",
               "archived": false
             },
@@ -4543,7 +4543,7 @@
               "url": "https://github.com/YunoHost-Apps/lychee_ynh",
               "stars": 10,
               "forks": 7,
-              "updated_at": "2025-06-11T23:22:16Z",
+              "updated_at": "2025-06-14T06:12:50Z",
               "language": "Shell",
               "archived": false
             },
@@ -5697,7 +5697,7 @@
               "description": "",
               "url": "https://github.com/YunoHost-Apps/ollama_ynh",
               "stars": 0,
-              "forks": 0,
+              "forks": 1,
               "updated_at": "2025-06-12T11:07:20Z",
               "language": "Shell",
               "archived": false
@@ -9538,7 +9538,7 @@
       {
         "name": "YunoHost Docs Translations",
         "success": true,
-        "duration": 66,
+        "duration": 152,
         "result": [
           "ar",
           "ca",
@@ -9554,7 +9554,7 @@
       {
         "name": "YunoHost UI Translations",
         "success": true,
-        "duration": 1278,
+        "duration": 1952,
         "result": [
           {
             "language": "German",
@@ -9961,7 +9961,7 @@
       {
         "name": "Zimaboard Shipping Areas",
         "success": true,
-        "duration": 332,
+        "duration": 292,
         "result": [
           "Argentina",
           "Australia",

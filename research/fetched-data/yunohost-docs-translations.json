@@ -1,6 +1,6 @@
 {
-  "timestamp": "2025-06-13T18:33:14.468Z",
-  "script": "run-all.js",
+  "timestamp": "2025-06-14T06:31:07.961Z",
+  "script": "scripts.test.js",
   "source": "YunoHost Documentation Repository",
   "url": "https://github.com/YunoHost/doc",
   "locales_path": "i18n",
