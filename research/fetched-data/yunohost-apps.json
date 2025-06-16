@@ -1,11 +1,11 @@
 {
-  "timestamp": "2025-06-16T06:36:28.498Z",
-  "script": "scripts.test.js",
+  "timestamp": "2025-06-16T22:07:40.476Z",
+  "script": "run-all.js",
   "source": "YunoHost-Apps GitHub Organization",
   "url": "https://github.com/YunoHost-Apps",
   "api_url": "https://api.github.com/orgs/YunoHost-Apps/repos",
-  "total_apps": 860,
-  "total_repos_checked": 878,
+  "total_apps": 861,
+  "total_repos_checked": 879,
   "languages": [
     "CSS",
     "HTML",
@@ -390,7 +390,7 @@
       "url": "https://github.com/YunoHost-Apps/audiobookshelf_ynh",
       "stars": 5,
       "forks": 6,
-      "updated_at": "2025-06-02T07:31:40Z",
+      "updated_at": "2025-06-16T17:40:32Z",
       "language": "Shell",
       "archived": false
     },
@@ -5719,6 +5719,17 @@
       "archived": false
     },
     {
+      "id": "open-webui_ynh",
+      "name": "open-webui",
+      "description": "User-friendly AI Interface (Supports Ollama, OpenAI API, ...)",
+      "url": "https://github.com/YunoHost-Apps/open-webui_ynh",
+      "stars": 0,
+      "forks": 0,
+      "updated_at": "2025-06-16T08:35:43Z",
+      "language": "Shell",
+      "archived": false
+    },
+    {
       "id": "opencast_ynh",
       "name": "opencast",
       "description": "OpenCast package for YunoHost",
@@ -6374,7 +6385,7 @@
       "url": "https://github.com/YunoHost-Apps/piped_ynh",
       "stars": 2,
       "forks": 2,
-      "updated_at": "2025-05-26T09:37:01Z",
+      "updated_at": "2025-06-16T11:46:09Z",
       "language": "Shell",
       "archived": false
     },
@@ -7364,7 +7375,7 @@
       "url": "https://github.com/YunoHost-Apps/searxng_ynh",
       "stars": 13,
       "forks": 4,
-      "updated_at": "2025-06-02T06:10:58Z",
+      "updated_at": "2025-06-16T07:15:26Z",
       "language": "Shell",
       "archived": false
     },
