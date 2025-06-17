@@ -1,6 +1,6 @@
 {
-  "timestamp": "2025-06-17T06:34:49.356Z",
-  "script": "scripts.test.js",
+  "timestamp": "2025-06-17T22:30:28.968Z",
+  "script": "run-all.js",
   "source": "YunoHost-Apps GitHub Organization",
   "url": "https://github.com/YunoHost-Apps",
   "api_url": "https://api.github.com/orgs/YunoHost-Apps/repos",
@@ -621,7 +621,7 @@
       "url": "https://github.com/YunoHost-Apps/bookstack_ynh",
       "stars": 12,
       "forks": 6,
-      "updated_at": "2025-05-31T17:17:05Z",
+      "updated_at": "2025-06-17T20:29:06Z",
       "language": "Shell",
       "archived": false
     },
@@ -1974,7 +1974,7 @@
       "url": "https://github.com/YunoHost-Apps/element_ynh",
       "stars": 23,
       "forks": 8,
-      "updated_at": "2025-06-11T09:58:40Z",
+      "updated_at": "2025-06-17T20:29:19Z",
       "language": "Shell",
       "archived": false
     },
@@ -3679,7 +3679,7 @@
       "url": "https://github.com/YunoHost-Apps/jackett_ynh",
       "stars": 0,
       "forks": 4,
-      "updated_at": "2025-06-15T17:11:40Z",
+      "updated_at": "2025-06-17T20:58:56Z",
       "language": "Shell",
       "archived": false
     },
@@ -5010,7 +5010,7 @@
       "url": "https://github.com/YunoHost-Apps/misskey_ynh",
       "stars": 31,
       "forks": 15,
-      "updated_at": "2025-06-03T07:53:22Z",
+      "updated_at": "2025-06-17T20:56:26Z",
       "language": "Shell",
       "archived": false
     },
@@ -5295,7 +5295,7 @@
       "description": "Custom Web app with SFTP access",
       "url": "https://github.com/YunoHost-Apps/my_webapp_ynh",
       "stars": 49,
-      "forks": 51,
+      "forks": 52,
       "updated_at": "2025-05-02T07:11:50Z",
       "language": "Shell",
       "archived": false
@@ -5395,7 +5395,7 @@
       "url": "https://github.com/YunoHost-Apps/n8n_ynh",
       "stars": 15,
       "forks": 21,
-      "updated_at": "2025-06-13T12:55:49Z",
+      "updated_at": "2025-06-17T21:02:36Z",
       "language": "Shell",
       "archived": false
     },
@@ -5659,7 +5659,7 @@
       "url": "https://github.com/YunoHost-Apps/ollama_ynh",
       "stars": 0,
       "forks": 1,
-      "updated_at": "2025-06-12T11:07:20Z",
+      "updated_at": "2025-06-17T13:46:44Z",
       "language": "Shell",
       "archived": false
     },
@@ -5725,7 +5725,7 @@
       "url": "https://github.com/YunoHost-Apps/open-webui_ynh",
       "stars": 0,
       "forks": 0,
-      "updated_at": "2025-06-16T08:35:43Z",
+      "updated_at": "2025-06-17T07:23:35Z",
       "language": "Shell",
       "archived": false
     },
@@ -6791,7 +6791,7 @@
       "description": "YunoHost app package for: https://github.com/jedie/PyInventory",
       "url": "https://github.com/YunoHost-Apps/pyinventory_ynh",
       "stars": 6,
-      "forks": 1,
+      "forks": 2,
       "updated_at": "2025-03-23T17:50:40Z",
       "language": "Python",
       "archived": false
@@ -7683,7 +7683,7 @@
       "url": "https://github.com/YunoHost-Apps/snipeit_ynh",
       "stars": 2,
       "forks": 2,
-      "updated_at": "2025-06-07T08:48:33Z",
+      "updated_at": "2025-06-17T21:00:21Z",
       "language": "Shell",
       "archived": false
     },
