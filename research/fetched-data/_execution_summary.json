@@ -1,18 +1,18 @@
 {
-  "timestamp": "2025-06-16T22:07:42.387Z",
+  "timestamp": "2025-06-17T06:34:48.607Z",
   "script": "run-all.js",
   "note": "Summary of all data fetching script executions",
   "data": {
-    "execution_time": "2025-06-16T22:07:42.387Z",
+    "execution_time": "2025-06-17T06:34:48.607Z",
     "total_scripts": 6,
     "successful": 6,
     "failed": 0,
-    "total_duration_ms": 14209,
+    "total_duration_ms": 15849,
     "results": [
       {
         "name": "CapRover UI Translations",
         "success": true,
-        "duration": 136,
+        "duration": 271,
         "result": [
           "ar-EG",
           "de-DE",
@@ -32,7 +32,7 @@
       {
         "name": "CasaOS UI Translations",
         "success": true,
-        "duration": 94,
+        "duration": 178,
         "result": [
           "de_DE",
           "el_GR",
@@ -55,7 +55,7 @@
       {
         "name": "YunoHost Apps",
         "success": true,
-        "duration": 12071,
+        "duration": 13218,
         "result": {
           "count": 861,
           "apps": [
@@ -8844,7 +8844,7 @@
               "url": "https://github.com/YunoHost-Apps/weblate_ynh",
               "stars": 13,
               "forks": 11,
-              "updated_at": "2025-05-12T19:38:17Z",
+              "updated_at": "2025-06-17T06:03:56Z",
               "language": "Python",
               "archived": false
             },
@@ -9549,7 +9549,7 @@
       {
         "name": "YunoHost Docs Translations",
         "success": true,
-        "duration": 107,
+        "duration": 145,
         "result": [
           "ar",
           "ca",
@@ -9565,7 +9565,7 @@
       {
         "name": "YunoHost UI Translations",
         "success": true,
-        "duration": 1514,
+        "duration": 1753,
         "result": [
           {
             "language": "German",
@@ -9972,7 +9972,7 @@
       {
         "name": "Zimaboard Shipping Areas",
         "success": true,
-        "duration": 287,
+        "duration": 284,
         "result": [
           "Argentina",
           "Australia",
