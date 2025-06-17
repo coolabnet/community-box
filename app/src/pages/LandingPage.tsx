@@ -78,21 +78,39 @@ const LandingPage = () => {
             {t('landing.description')}
           </motion.p>
 
-          {/* Start Button */}
+          {/* Action Buttons */}
           <motion.div
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.5, delay: 0.5 }}
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
+            className="flex flex-col sm:flex-row gap-4 items-center"
           >
-            <Button
-              size="lg"
-              className="px-12 py-6 text-xl rounded-full shadow-lg bg-gradient-to-r from-primary to-primary/80 hover:from-primary/90 hover:to-primary"
-              onClick={handleStart}
+            <motion.div
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
             >
-              {t('landing.startButton')}
-            </Button>
+              <Button
+                size="lg"
+                className="px-12 py-6 text-xl rounded-full shadow-lg bg-gradient-to-r from-primary to-primary/80 hover:from-primary/90 hover:to-primary"
+                onClick={handleStart}
+              >
+                {t('landing.startButton')}
+              </Button>
+            </motion.div>
+
+            <motion.div
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+            >
+              <Button
+                size="lg"
+                variant="outline"
+                className="px-12 py-6 text-xl rounded-full shadow-lg border-2"
+                onClick={() => navigate('/docs')}
+              >
+                📚 Browse Guides
+              </Button>
+            </motion.div>
           </motion.div>
         </motion.div>
       </div>
