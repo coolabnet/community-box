@@ -1,18 +1,18 @@
 {
-  "timestamp": "2025-06-19T06:34:35.689Z",
+  "timestamp": "2025-06-20T06:34:32.963Z",
   "script": "run-all.js",
   "note": "Summary of all data fetching script executions",
   "data": {
-    "execution_time": "2025-06-19T06:34:35.689Z",
+    "execution_time": "2025-06-20T06:34:32.963Z",
     "total_scripts": 6,
     "successful": 6,
     "failed": 0,
-    "total_duration_ms": 13313,
+    "total_duration_ms": 15090,
     "results": [
       {
         "name": "CapRover UI Translations",
         "success": true,
-        "duration": 164,
+        "duration": 235,
         "result": [
           "ar-EG",
           "de-DE",
@@ -32,7 +32,7 @@
       {
         "name": "CasaOS UI Translations",
         "success": true,
-        "duration": 98,
+        "duration": 145,
         "result": [
           "de_DE",
           "el_GR",
@@ -55,9 +55,9 @@
       {
         "name": "YunoHost Apps",
         "success": true,
-        "duration": 10894,
+        "duration": 12312,
         "result": {
-          "count": 861,
+          "count": 862,
           "apps": [
             {
               "id": "13ft_ynh",
@@ -1716,7 +1716,7 @@
               "url": "https://github.com/YunoHost-Apps/docs_ynh",
               "stars": 1,
               "forks": 1,
-              "updated_at": "2025-06-15T17:11:35Z",
+              "updated_at": "2025-06-19T07:37:45Z",
               "language": "Shell",
               "archived": false
             },
@@ -3564,7 +3564,7 @@
               "url": "https://github.com/YunoHost-Apps/immich_ynh",
               "stars": 13,
               "forks": 8,
-              "updated_at": "2025-05-28T17:04:05Z",
+              "updated_at": "2025-06-19T19:18:38Z",
               "language": "Shell",
               "archived": false
             },
@@ -4301,7 +4301,7 @@
               "url": "https://github.com/YunoHost-Apps/libretranslate_ynh",
               "stars": 3,
               "forks": 5,
-              "updated_at": "2025-03-27T06:33:18Z",
+              "updated_at": "2025-06-19T10:42:41Z",
               "language": "Shell",
               "archived": false
             },
@@ -5390,7 +5390,7 @@
               "url": "https://github.com/YunoHost-Apps/mydrive_ynh",
               "stars": 0,
               "forks": 0,
-              "updated_at": "2025-03-19T22:14:31Z",
+              "updated_at": "2025-06-19T20:45:58Z",
               "language": "Shell",
               "archived": false
             },
@@ -5434,7 +5434,7 @@
               "url": "https://github.com/YunoHost-Apps/n8n_ynh",
               "stars": 15,
               "forks": 21,
-              "updated_at": "2025-06-17T21:02:36Z",
+              "updated_at": "2025-06-19T14:14:00Z",
               "language": "Shell",
               "archived": false
             },
@@ -5764,7 +5764,7 @@
               "url": "https://github.com/YunoHost-Apps/open-webui_ynh",
               "stars": 0,
               "forks": 0,
-              "updated_at": "2025-06-17T07:23:35Z",
+              "updated_at": "2025-06-19T10:03:43Z",
               "language": "Shell",
               "archived": false
             },
@@ -5985,6 +5985,17 @@
               "stars": 13,
               "forks": 4,
               "updated_at": "2025-01-17T17:17:26Z",
+              "language": "Shell",
+              "archived": false
+            },
+            {
+              "id": "p5_ynh",
+              "name": "p5",
+              "description": "",
+              "url": "https://github.com/YunoHost-Apps/p5_ynh",
+              "stars": 0,
+              "forks": 0,
+              "updated_at": "2025-06-19T15:33:37Z",
               "language": "Shell",
               "archived": false
             },
@@ -8074,7 +8085,7 @@
               "url": "https://github.com/YunoHost-Apps/swingmusic_ynh",
               "stars": 0,
               "forks": 0,
-              "updated_at": "2025-05-29T06:39:02Z",
+              "updated_at": "2025-06-19T07:06:33Z",
               "language": "Shell",
               "archived": false
             },
@@ -8645,7 +8656,7 @@
               "description": "Open source password management solutions for YunoHost",
               "url": "https://github.com/YunoHost-Apps/vaultwarden_ynh",
               "stars": 59,
-              "forks": 20,
+              "forks": 21,
               "updated_at": "2025-06-13T15:39:14Z",
               "language": "Shell",
               "archived": false
@@ -9549,7 +9560,7 @@
       {
         "name": "YunoHost Docs Translations",
         "success": true,
-        "duration": 80,
+        "duration": 176,
         "result": [
           "ar",
           "ca",
@@ -9565,7 +9576,7 @@
       {
         "name": "YunoHost UI Translations",
         "success": true,
-        "duration": 1848,
+        "duration": 2002,
         "result": [
           {
             "language": "German",
@@ -9576,12 +9587,28 @@
             "last_change": "2025-05-18T23:45:39.700075Z"
           },
           {
+            "language": "Spanish",
+            "language_code": "es",
+            "translated_percent": 100,
+            "translated_words": 3627,
+            "total_words": 3627,
+            "last_change": "2025-06-19T16:11:18.508077Z"
+          },
+          {
             "language": "Basque",
             "language_code": "eu",
             "translated_percent": 100,
             "translated_words": 3627,
             "total_words": 3627,
             "last_change": "2025-04-18T23:43:53.772637Z"
+          },
+          {
+            "language": "French",
+            "language_code": "fr",
+            "translated_percent": 100,
+            "translated_words": 3627,
+            "total_words": 3627,
+            "last_change": "2025-06-19T16:11:18.776047Z"
           },
           {
             "language": "Dutch",
@@ -9666,14 +9693,6 @@
           {
             "language": "French",
             "language_code": "fr",
-            "translated_percent": 99.7,
-            "translated_words": 3623,
-            "total_words": 3627,
-            "last_change": "2025-05-27T13:18:13.376507Z"
-          },
-          {
-            "language": "French",
-            "language_code": "fr",
             "translated_percent": 99.3,
             "translated_words": 10236,
             "total_words": 10292,
@@ -9750,14 +9769,6 @@
             "translated_words": 3271,
             "total_words": 3627,
             "last_change": "2025-04-15T20:18:15.818258Z"
-          },
-          {
-            "language": "Spanish",
-            "language_code": "es",
-            "translated_percent": 91.5,
-            "translated_words": 3212,
-            "total_words": 3627,
-            "last_change": "2025-06-13T13:12:56.235394Z"
           },
           {
             "language": "Esperanto",
@@ -9972,7 +9983,7 @@
       {
         "name": "Zimaboard Shipping Areas",
         "success": true,
-        "duration": 229,
+        "duration": 220,
         "result": [
           "Argentina",
           "Australia",

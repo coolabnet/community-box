@@ -1,12 +1,12 @@
 {
-  "timestamp": "2025-06-19T06:34:38.130Z",
+  "timestamp": "2025-06-20T06:34:35.615Z",
   "script": "scripts.test.js",
   "source": "YunoHost Translation Platform",
   "url": "https://translate.yunohost.org/",
   "api_url": "https://translate.yunohost.org/api/translations/?format=json",
   "total_languages": 50,
-  "fully_translated": 12,
-  "partially_translated": 35,
+  "fully_translated": 14,
+  "partially_translated": 33,
   "not_started": 3,
   "data": [
     {
@@ -18,12 +18,28 @@
       "last_change": "2025-05-18T23:45:39.700075Z"
     },
     {
+      "language": "Spanish",
+      "language_code": "es",
+      "translated_percent": 100,
+      "translated_words": 3627,
+      "total_words": 3627,
+      "last_change": "2025-06-19T16:11:18.508077Z"
+    },
+    {
       "language": "Basque",
       "language_code": "eu",
       "translated_percent": 100,
       "translated_words": 3627,
       "total_words": 3627,
       "last_change": "2025-04-18T23:43:53.772637Z"
+    },
+    {
+      "language": "French",
+      "language_code": "fr",
+      "translated_percent": 100,
+      "translated_words": 3627,
+      "total_words": 3627,
+      "last_change": "2025-06-19T16:11:18.776047Z"
     },
     {
       "language": "Dutch",
@@ -108,14 +124,6 @@
     {
       "language": "French",
       "language_code": "fr",
-      "translated_percent": 99.7,
-      "translated_words": 3623,
-      "total_words": 3627,
-      "last_change": "2025-05-27T13:18:13.376507Z"
-    },
-    {
-      "language": "French",
-      "language_code": "fr",
       "translated_percent": 99.3,
       "translated_words": 10236,
       "total_words": 10292,
@@ -192,14 +200,6 @@
       "translated_words": 3271,
       "total_words": 3627,
       "last_change": "2025-04-15T20:18:15.818258Z"
-    },
-    {
-      "language": "Spanish",
-      "language_code": "es",
-      "translated_percent": 91.5,
-      "translated_words": 3212,
-      "total_words": 3627,
-      "last_change": "2025-06-13T13:12:56.235394Z"
     },
     {
       "language": "Esperanto",
