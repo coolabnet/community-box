@@ -1,11 +1,11 @@
 {
-  "timestamp": "2025-06-23T06:36:44.366Z",
+  "timestamp": "2025-06-24T06:35:31.849Z",
   "script": "scripts.test.js",
   "source": "YunoHost-Apps GitHub Organization",
   "url": "https://github.com/YunoHost-Apps",
   "api_url": "https://api.github.com/orgs/YunoHost-Apps/repos",
-  "total_apps": 863,
-  "total_repos_checked": 881,
+  "total_apps": 864,
+  "total_repos_checked": 882,
   "languages": [
     "CSS",
     "HTML",
@@ -1061,7 +1061,7 @@
       "url": "https://github.com/YunoHost-Apps/commafeed_ynh",
       "stars": 0,
       "forks": 0,
-      "updated_at": "2025-05-29T06:46:03Z",
+      "updated_at": "2025-06-23T07:49:32Z",
       "language": "Shell",
       "archived": false
     },
@@ -1677,7 +1677,7 @@
       "url": "https://github.com/YunoHost-Apps/docs_ynh",
       "stars": 1,
       "forks": 1,
-      "updated_at": "2025-06-20T19:00:30Z",
+      "updated_at": "2025-06-23T12:13:44Z",
       "language": "Shell",
       "archived": false
     },
@@ -2051,7 +2051,7 @@
       "url": "https://github.com/YunoHost-Apps/encryptor-decryptor_ynh",
       "stars": 0,
       "forks": 1,
-      "updated_at": "2024-09-11T14:32:42Z",
+      "updated_at": "2025-06-23T08:38:53Z",
       "language": "Shell",
       "archived": false
     },
@@ -2546,7 +2546,7 @@
       "url": "https://github.com/YunoHost-Apps/forte_ynh",
       "stars": 1,
       "forks": 0,
-      "updated_at": "2025-06-18T03:01:09Z",
+      "updated_at": "2025-06-24T06:06:26Z",
       "language": "Shell",
       "archived": false
     },
@@ -3327,7 +3327,7 @@
       "url": "https://github.com/YunoHost-Apps/homeassistant_ynh",
       "stars": 21,
       "forks": 15,
-      "updated_at": "2025-06-14T06:23:39Z",
+      "updated_at": "2025-06-24T05:44:24Z",
       "language": "Shell",
       "archived": false
     },
@@ -3436,7 +3436,7 @@
       "description": "Static site generator, packaged for YunoHost",
       "url": "https://github.com/YunoHost-Apps/hugo_ynh",
       "stars": 0,
-      "forks": 1,
+      "forks": 2,
       "updated_at": "2025-05-02T10:11:51Z",
       "language": "Shell",
       "archived": false
@@ -3897,9 +3897,9 @@
       "name": "karakeep",
       "description": "Karakeep package for YunoHost",
       "url": "https://github.com/YunoHost-Apps/karakeep_ynh",
-      "stars": 0,
-      "forks": 0,
-      "updated_at": "2025-05-23T15:17:35Z",
+      "stars": 1,
+      "forks": 1,
+      "updated_at": "2025-06-23T23:20:50Z",
       "language": "Shell",
       "archived": false
     },
@@ -5033,6 +5033,17 @@
       "stars": 1,
       "forks": 2,
       "updated_at": "2025-06-19T05:41:40Z",
+      "language": "Shell",
+      "archived": false
+    },
+    {
+      "id": "mixpost_ynh",
+      "name": "mixpost",
+      "description": "Mixpost package for YunoHost",
+      "url": "https://github.com/YunoHost-Apps/mixpost_ynh",
+      "stars": 0,
+      "forks": 0,
+      "updated_at": "2025-06-23T19:24:29Z",
       "language": "Shell",
       "archived": false
     },
@@ -6407,7 +6418,7 @@
       "url": "https://github.com/YunoHost-Apps/piped_ynh",
       "stars": 2,
       "forks": 2,
-      "updated_at": "2025-06-16T11:46:09Z",
+      "updated_at": "2025-06-23T09:37:50Z",
       "language": "Shell",
       "archived": false
     },
@@ -7947,7 +7958,7 @@
       "url": "https://github.com/YunoHost-Apps/streams_ynh",
       "stars": 1,
       "forks": 2,
-      "updated_at": "2025-06-18T02:59:24Z",
+      "updated_at": "2025-06-24T06:04:55Z",
       "language": "Shell",
       "archived": false
     },
