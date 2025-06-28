@@ -1,5 +1,5 @@
 {
-  "timestamp": "2025-06-27T06:35:13.746Z",
+  "timestamp": "2025-06-28T06:31:38.320Z",
   "script": "scripts.test.js",
   "source": "YunoHost-Apps GitHub Organization",
   "url": "https://github.com/YunoHost-Apps",
@@ -1125,9 +1125,9 @@
       "name": "conduwuit",
       "description": "Conduwuit package for YunoHost",
       "url": "https://github.com/YunoHost-Apps/conduwuit_ynh",
-      "stars": 4,
+      "stars": 5,
       "forks": 1,
-      "updated_at": "2025-04-26T03:44:34Z",
+      "updated_at": "2025-06-27T13:41:21Z",
       "language": "Shell",
       "archived": true
     },
@@ -2292,7 +2292,7 @@
       "description": "FileBrowser package for YunoHost",
       "url": "https://github.com/YunoHost-Apps/filebrowser_ynh",
       "stars": 5,
-      "forks": 1,
+      "forks": 2,
       "updated_at": "2025-06-26T06:14:10Z",
       "language": "Shell",
       "archived": false
@@ -3612,7 +3612,7 @@
       "description": "Invidious package for YunoHost",
       "url": "https://github.com/YunoHost-Apps/invidious_ynh",
       "stars": 19,
-      "forks": 8,
+      "forks": 9,
       "updated_at": "2025-05-24T06:24:32Z",
       "language": "Shell",
       "archived": false
@@ -4383,7 +4383,7 @@
       "url": "https://github.com/YunoHost-Apps/lionwiki-t2t_ynh",
       "stars": 1,
       "forks": 3,
-      "updated_at": "2025-05-02T20:13:15Z",
+      "updated_at": "2025-06-27T12:54:50Z",
       "language": "PHP",
       "archived": false
     },
@@ -7914,7 +7914,7 @@
       "url": "https://github.com/YunoHost-Apps/sshwifty_ynh",
       "stars": 0,
       "forks": 0,
-      "updated_at": "2025-06-07T05:51:51Z",
+      "updated_at": "2025-06-27T12:19:57Z",
       "language": "Shell",
       "archived": false
     },
@@ -8783,7 +8783,7 @@
       "url": "https://github.com/YunoHost-Apps/wanderer_ynh",
       "stars": 0,
       "forks": 0,
-      "updated_at": "2025-04-27T07:47:31Z",
+      "updated_at": "2025-06-28T05:16:55Z",
       "language": "Shell",
       "archived": false
     },

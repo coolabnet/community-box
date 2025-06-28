@@ -1,18 +1,18 @@
 {
-  "timestamp": "2025-06-27T06:35:13.011Z",
+  "timestamp": "2025-06-28T06:31:37.826Z",
   "script": "run-all.js",
   "note": "Summary of all data fetching script executions",
   "data": {
-    "execution_time": "2025-06-27T06:35:13.011Z",
+    "execution_time": "2025-06-28T06:31:37.825Z",
     "total_scripts": 6,
     "successful": 6,
     "failed": 0,
-    "total_duration_ms": 16304,
+    "total_duration_ms": 12530,
     "results": [
       {
         "name": "CapRover UI Translations",
         "success": true,
-        "duration": 226,
+        "duration": 139,
         "result": [
           "ar-EG",
           "de-DE",
@@ -32,7 +32,7 @@
       {
         "name": "CasaOS UI Translations",
         "success": true,
-        "duration": 156,
+        "duration": 63,
         "result": [
           "de_DE",
           "el_GR",
@@ -55,7 +55,7 @@
       {
         "name": "YunoHost Apps",
         "success": true,
-        "duration": 13160,
+        "duration": 10608,
         "result": {
           "count": 865,
           "apps": [
@@ -1164,9 +1164,9 @@
               "name": "conduwuit",
               "description": "Conduwuit package for YunoHost",
               "url": "https://github.com/YunoHost-Apps/conduwuit_ynh",
-              "stars": 4,
+              "stars": 5,
               "forks": 1,
-              "updated_at": "2025-04-26T03:44:34Z",
+              "updated_at": "2025-06-27T13:41:21Z",
               "language": "Shell",
               "archived": true
             },
@@ -2331,7 +2331,7 @@
               "description": "FileBrowser package for YunoHost",
               "url": "https://github.com/YunoHost-Apps/filebrowser_ynh",
               "stars": 5,
-              "forks": 1,
+              "forks": 2,
               "updated_at": "2025-06-26T06:14:10Z",
               "language": "Shell",
               "archived": false
@@ -3651,7 +3651,7 @@
               "description": "Invidious package for YunoHost",
               "url": "https://github.com/YunoHost-Apps/invidious_ynh",
               "stars": 19,
-              "forks": 8,
+              "forks": 9,
               "updated_at": "2025-05-24T06:24:32Z",
               "language": "Shell",
               "archived": false
@@ -4422,7 +4422,7 @@
               "url": "https://github.com/YunoHost-Apps/lionwiki-t2t_ynh",
               "stars": 1,
               "forks": 3,
-              "updated_at": "2025-05-02T20:13:15Z",
+              "updated_at": "2025-06-27T12:54:50Z",
               "language": "PHP",
               "archived": false
             },
@@ -7953,7 +7953,7 @@
               "url": "https://github.com/YunoHost-Apps/sshwifty_ynh",
               "stars": 0,
               "forks": 0,
-              "updated_at": "2025-06-07T05:51:51Z",
+              "updated_at": "2025-06-27T12:19:57Z",
               "language": "Shell",
               "archived": false
             },
@@ -8822,7 +8822,7 @@
               "url": "https://github.com/YunoHost-Apps/wanderer_ynh",
               "stars": 0,
               "forks": 0,
-              "updated_at": "2025-04-27T07:47:31Z",
+              "updated_at": "2025-06-28T05:16:55Z",
               "language": "Shell",
               "archived": false
             },
@@ -9593,7 +9593,7 @@
       {
         "name": "YunoHost Docs Translations",
         "success": true,
-        "duration": 143,
+        "duration": 91,
         "result": [
           "ar",
           "ca",
@@ -9609,7 +9609,7 @@
       {
         "name": "YunoHost UI Translations",
         "success": true,
-        "duration": 2321,
+        "duration": 1305,
         "result": [
           {
             "language": "German",
@@ -9886,10 +9886,10 @@
           {
             "language": "Esperanto",
             "language_code": "eo",
-            "translated_percent": 42,
-            "translated_words": 964,
+            "translated_percent": 42.2,
+            "translated_words": 968,
             "total_words": 3627,
-            "last_change": "2025-04-15T20:18:19.396025Z"
+            "last_change": "2025-06-28T05:22:07.066298Z"
           },
           {
             "language": "Hindi",
@@ -10016,7 +10016,7 @@
       {
         "name": "Zimaboard Shipping Areas",
         "success": true,
-        "duration": 298,
+        "duration": 324,
         "result": [
           "Argentina",
           "Australia",

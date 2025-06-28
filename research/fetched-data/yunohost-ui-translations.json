@@ -1,5 +1,5 @@
 {
-  "timestamp": "2025-06-27T06:35:15.717Z",
+  "timestamp": "2025-06-28T06:31:39.622Z",
   "script": "scripts.test.js",
   "source": "YunoHost Translation Platform",
   "url": "https://translate.yunohost.org/",
@@ -284,10 +284,10 @@
     {
       "language": "Esperanto",
       "language_code": "eo",
-      "translated_percent": 42,
-      "translated_words": 964,
+      "translated_percent": 42.2,
+      "translated_words": 968,
       "total_words": 3627,
-      "last_change": "2025-04-15T20:18:19.396025Z"
+      "last_change": "2025-06-28T05:22:07.066298Z"
     },
     {
       "language": "Hindi",
