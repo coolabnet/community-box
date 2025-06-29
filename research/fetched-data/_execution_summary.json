@@ -1,18 +1,18 @@
 {
-  "timestamp": "2025-06-28T06:31:37.826Z",
+  "timestamp": "2025-06-29T06:33:18.237Z",
   "script": "run-all.js",
   "note": "Summary of all data fetching script executions",
   "data": {
-    "execution_time": "2025-06-28T06:31:37.825Z",
+    "execution_time": "2025-06-29T06:33:18.237Z",
     "total_scripts": 6,
     "successful": 6,
     "failed": 0,
-    "total_duration_ms": 12530,
+    "total_duration_ms": 10536,
     "results": [
       {
         "name": "CapRover UI Translations",
         "success": true,
-        "duration": 139,
+        "duration": 182,
         "result": [
           "ar-EG",
           "de-DE",
@@ -32,7 +32,7 @@
       {
         "name": "CasaOS UI Translations",
         "success": true,
-        "duration": 63,
+        "duration": 89,
         "result": [
           "de_DE",
           "el_GR",
@@ -55,7 +55,7 @@
       {
         "name": "YunoHost Apps",
         "success": true,
-        "duration": 10608,
+        "duration": 8322,
         "result": {
           "count": 865,
           "apps": [
@@ -1032,9 +1032,9 @@
               "name": "code-server",
               "description": "Code-server packaged for YunoHost",
               "url": "https://github.com/YunoHost-Apps/code-server_ynh",
-              "stars": 6,
+              "stars": 5,
               "forks": 2,
-              "updated_at": "2025-06-07T08:56:02Z",
+              "updated_at": "2025-06-28T21:08:31Z",
               "language": "Shell",
               "archived": false
             },
@@ -2782,7 +2782,7 @@
               "description": "Galette package for YunoHost",
               "url": "https://github.com/YunoHost-Apps/galette_ynh",
               "stars": 7,
-              "forks": 7,
+              "forks": 8,
               "updated_at": "2025-05-18T20:09:13Z",
               "language": "Shell",
               "archived": false
@@ -6996,7 +6996,7 @@
               "url": "https://github.com/YunoHost-Apps/rclone_ynh",
               "stars": 6,
               "forks": 2,
-              "updated_at": "2025-05-22T06:58:23Z",
+              "updated_at": "2025-06-28T14:43:02Z",
               "language": "Shell",
               "archived": false
             },
@@ -8404,7 +8404,7 @@
               "url": "https://github.com/YunoHost-Apps/tinyfilemanager_ynh",
               "stars": 2,
               "forks": 2,
-              "updated_at": "2025-05-18T20:31:40Z",
+              "updated_at": "2025-06-28T13:30:22Z",
               "language": "Shell",
               "archived": false
             },
@@ -8666,9 +8666,9 @@
               "name": "uptime-kuma",
               "description": "Uptime Kuma package for YunoHost",
               "url": "https://github.com/YunoHost-Apps/uptime-kuma_ynh",
-              "stars": 13,
+              "stars": 12,
               "forks": 5,
-              "updated_at": "2025-01-31T00:49:39Z",
+              "updated_at": "2025-06-28T21:08:23Z",
               "language": "Shell",
               "archived": false
             },
@@ -9106,9 +9106,9 @@
               "name": "workout-tracker",
               "description": "workout-tracker package for YunoHost",
               "url": "https://github.com/YunoHost-Apps/workout-tracker_ynh",
-              "stars": 0,
+              "stars": 1,
               "forks": 2,
-              "updated_at": "2025-06-26T06:09:43Z",
+              "updated_at": "2025-06-28T12:16:51Z",
               "language": "Shell",
               "archived": false
             },
@@ -9593,7 +9593,7 @@
       {
         "name": "YunoHost Docs Translations",
         "success": true,
-        "duration": 91,
+        "duration": 104,
         "result": [
           "ar",
           "ca",
@@ -9609,7 +9609,7 @@
       {
         "name": "YunoHost UI Translations",
         "success": true,
-        "duration": 1305,
+        "duration": 1590,
         "result": [
           {
             "language": "German",
@@ -10016,7 +10016,7 @@
       {
         "name": "Zimaboard Shipping Areas",
         "success": true,
-        "duration": 324,
+        "duration": 249,
         "result": [
           "Argentina",
           "Australia",

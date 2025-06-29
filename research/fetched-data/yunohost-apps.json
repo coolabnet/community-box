@@ -1,5 +1,5 @@
 {
-  "timestamp": "2025-06-28T06:31:38.320Z",
+  "timestamp": "2025-06-29T06:33:19.051Z",
   "script": "scripts.test.js",
   "source": "YunoHost-Apps GitHub Organization",
   "url": "https://github.com/YunoHost-Apps",
@@ -993,9 +993,9 @@
       "name": "code-server",
       "description": "Code-server packaged for YunoHost",
       "url": "https://github.com/YunoHost-Apps/code-server_ynh",
-      "stars": 6,
+      "stars": 5,
       "forks": 2,
-      "updated_at": "2025-06-07T08:56:02Z",
+      "updated_at": "2025-06-28T21:08:31Z",
       "language": "Shell",
       "archived": false
     },
@@ -2743,7 +2743,7 @@
       "description": "Galette package for YunoHost",
       "url": "https://github.com/YunoHost-Apps/galette_ynh",
       "stars": 7,
-      "forks": 7,
+      "forks": 8,
       "updated_at": "2025-05-18T20:09:13Z",
       "language": "Shell",
       "archived": false
@@ -6957,7 +6957,7 @@
       "url": "https://github.com/YunoHost-Apps/rclone_ynh",
       "stars": 6,
       "forks": 2,
-      "updated_at": "2025-05-22T06:58:23Z",
+      "updated_at": "2025-06-28T14:43:02Z",
       "language": "Shell",
       "archived": false
     },
@@ -8365,7 +8365,7 @@
       "url": "https://github.com/YunoHost-Apps/tinyfilemanager_ynh",
       "stars": 2,
       "forks": 2,
-      "updated_at": "2025-05-18T20:31:40Z",
+      "updated_at": "2025-06-28T13:30:22Z",
       "language": "Shell",
       "archived": false
     },
@@ -8627,9 +8627,9 @@
       "name": "uptime-kuma",
       "description": "Uptime Kuma package for YunoHost",
       "url": "https://github.com/YunoHost-Apps/uptime-kuma_ynh",
-      "stars": 13,
+      "stars": 12,
       "forks": 5,
-      "updated_at": "2025-01-31T00:49:39Z",
+      "updated_at": "2025-06-28T21:08:23Z",
       "language": "Shell",
       "archived": false
     },
@@ -9067,9 +9067,9 @@
       "name": "workout-tracker",
       "description": "workout-tracker package for YunoHost",
       "url": "https://github.com/YunoHost-Apps/workout-tracker_ynh",
-      "stars": 0,
+      "stars": 1,
       "forks": 2,
-      "updated_at": "2025-06-26T06:09:43Z",
+      "updated_at": "2025-06-28T12:16:51Z",
       "language": "Shell",
       "archived": false
     },
