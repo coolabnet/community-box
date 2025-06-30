@@ -1,5 +1,5 @@
 {
-  "timestamp": "2025-06-29T06:33:19.051Z",
+  "timestamp": "2025-06-30T06:36:20.299Z",
   "script": "scripts.test.js",
   "source": "YunoHost-Apps GitHub Organization",
   "url": "https://github.com/YunoHost-Apps",
@@ -2557,7 +2557,7 @@
       "url": "https://github.com/YunoHost-Apps/forte_ynh",
       "stars": 1,
       "forks": 0,
-      "updated_at": "2025-06-24T06:06:26Z",
+      "updated_at": "2025-06-30T05:34:26Z",
       "language": "Shell",
       "archived": false
     },
@@ -3612,7 +3612,7 @@
       "description": "Invidious package for YunoHost",
       "url": "https://github.com/YunoHost-Apps/invidious_ynh",
       "stars": 19,
-      "forks": 9,
+      "forks": 8,
       "updated_at": "2025-05-24T06:24:32Z",
       "language": "Shell",
       "archived": false
@@ -4042,7 +4042,7 @@
       "url": "https://github.com/YunoHost-Apps/koel_ynh",
       "stars": 1,
       "forks": 2,
-      "updated_at": "2025-06-26T11:44:37Z",
+      "updated_at": "2025-06-29T09:22:46Z",
       "language": "Shell",
       "archived": false
     },
@@ -4328,7 +4328,7 @@
       "url": "https://github.com/YunoHost-Apps/limesurvey_ynh",
       "stars": 5,
       "forks": 13,
-      "updated_at": "2025-06-18T06:30:37Z",
+      "updated_at": "2025-06-29T09:22:17Z",
       "language": "Shell",
       "archived": false
     },
@@ -4526,7 +4526,7 @@
       "url": "https://github.com/YunoHost-Apps/lychee_ynh",
       "stars": 10,
       "forks": 7,
-      "updated_at": "2025-06-27T03:53:06Z",
+      "updated_at": "2025-06-29T18:29:48Z",
       "language": "Shell",
       "archived": false
     },
@@ -4756,7 +4756,7 @@
       "description": "Matrix Telegram pupetting bridge for YunoHost",
       "url": "https://github.com/YunoHost-Apps/mautrix_telegram_ynh",
       "stars": 16,
-      "forks": 5,
+      "forks": 7,
       "updated_at": "2025-04-09T10:18:00Z",
       "language": "Shell",
       "archived": false
@@ -6660,7 +6660,7 @@
       "url": "https://github.com/YunoHost-Apps/privatebin_ynh",
       "stars": 1,
       "forks": 4,
-      "updated_at": "2025-02-01T19:54:44Z",
+      "updated_at": "2025-06-29T16:27:03Z",
       "language": "PHP",
       "archived": false
     },
@@ -7969,7 +7969,7 @@
       "url": "https://github.com/YunoHost-Apps/streams_ynh",
       "stars": 1,
       "forks": 2,
-      "updated_at": "2025-06-26T11:41:50Z",
+      "updated_at": "2025-06-30T05:33:26Z",
       "language": "Shell",
       "archived": false
     },
@@ -9399,7 +9399,7 @@
       "url": "https://github.com/YunoHost-Apps/zerobin_ynh",
       "stars": 11,
       "forks": 12,
-      "updated_at": "2025-02-19T21:48:21Z",
+      "updated_at": "2025-06-29T09:09:09Z",
       "language": "Shell",
       "archived": false
     },
