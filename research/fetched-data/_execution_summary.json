@@ -1,18 +1,18 @@
 {
-  "timestamp": "2025-07-02T06:35:35.607Z",
+  "timestamp": "2025-07-03T06:35:44.731Z",
   "script": "run-all.js",
   "note": "Summary of all data fetching script executions",
   "data": {
-    "execution_time": "2025-07-02T06:35:35.607Z",
+    "execution_time": "2025-07-03T06:35:44.731Z",
     "total_scripts": 6,
     "successful": 6,
     "failed": 0,
-    "total_duration_ms": 11879,
+    "total_duration_ms": 13812,
     "results": [
       {
         "name": "CapRover UI Translations",
         "success": true,
-        "duration": 161,
+        "duration": 165,
         "result": [
           "ar-EG",
           "de-DE",
@@ -32,7 +32,7 @@
       {
         "name": "CasaOS UI Translations",
         "success": true,
-        "duration": 132,
+        "duration": 95,
         "result": [
           "de_DE",
           "el_GR",
@@ -55,7 +55,7 @@
       {
         "name": "YunoHost Apps",
         "success": true,
-        "duration": 9503,
+        "duration": 11690,
         "result": {
           "count": 866,
           "apps": [
@@ -141,9 +141,9 @@
               "name": "actual",
               "description": "Actual package for YunoHost",
               "url": "https://github.com/YunoHost-Apps/actual_ynh",
-              "stars": 5,
+              "stars": 6,
               "forks": 5,
-              "updated_at": "2025-07-02T06:03:05Z",
+              "updated_at": "2025-07-02T12:47:15Z",
               "language": "Shell",
               "archived": false
             },
@@ -1375,7 +1375,7 @@
               "url": "https://github.com/YunoHost-Apps/dagu_ynh",
               "stars": 0,
               "forks": 1,
-              "updated_at": "2025-06-26T11:39:55Z",
+              "updated_at": "2025-07-02T06:35:48Z",
               "language": "Shell",
               "archived": false
             },
@@ -1637,9 +1637,9 @@
               "name": "django-fmd",
               "description": "Find My Device Server -> https://gitlab.com/jedie/django-find-my-device",
               "url": "https://github.com/YunoHost-Apps/django-fmd_ynh",
-              "stars": 1,
+              "stars": 2,
               "forks": 0,
-              "updated_at": "2024-09-07T11:14:31Z",
+              "updated_at": "2025-07-02T22:52:24Z",
               "language": "Python",
               "archived": false
             },
@@ -2365,7 +2365,7 @@
               "url": "https://github.com/YunoHost-Apps/findmydevice_ynh",
               "stars": 0,
               "forks": 1,
-              "updated_at": "2025-05-15T07:10:56Z",
+              "updated_at": "2025-07-02T17:31:20Z",
               "language": "Shell",
               "archived": false
             },
@@ -4565,7 +4565,7 @@
               "url": "https://github.com/YunoHost-Apps/lychee_ynh",
               "stars": 10,
               "forks": 7,
-              "updated_at": "2025-06-29T18:29:48Z",
+              "updated_at": "2025-07-02T16:57:06Z",
               "language": "Shell",
               "archived": false
             },
@@ -4719,7 +4719,7 @@
               "url": "https://github.com/YunoHost-Apps/mautic_ynh",
               "stars": 0,
               "forks": 3,
-              "updated_at": "2025-05-29T06:40:46Z",
+              "updated_at": "2025-07-02T07:32:54Z",
               "language": "Shell",
               "archived": false
             },
@@ -4862,7 +4862,7 @@
               "url": "https://github.com/YunoHost-Apps/mediawiki_ynh",
               "stars": 8,
               "forks": 17,
-              "updated_at": "2025-04-12T13:22:49Z",
+              "updated_at": "2025-07-02T07:33:33Z",
               "language": "Shell",
               "archived": false
             },
@@ -5588,7 +5588,7 @@
               "url": "https://github.com/YunoHost-Apps/nodebb_ynh",
               "stars": 7,
               "forks": 6,
-              "updated_at": "2025-06-10T07:44:12Z",
+              "updated_at": "2025-07-02T11:15:29Z",
               "language": "Shell",
               "archived": false
             },
@@ -5753,7 +5753,7 @@
               "url": "https://github.com/YunoHost-Apps/omeka-s_ynh",
               "stars": 5,
               "forks": 2,
-              "updated_at": "2024-08-31T13:03:24Z",
+              "updated_at": "2025-07-02T09:04:18Z",
               "language": "Shell",
               "archived": false
             },
@@ -9604,7 +9604,7 @@
       {
         "name": "YunoHost Docs Translations",
         "success": true,
-        "duration": 74,
+        "duration": 85,
         "result": [
           "ar",
           "ca",
@@ -9620,7 +9620,7 @@
       {
         "name": "YunoHost UI Translations",
         "success": true,
-        "duration": 1815,
+        "duration": 1553,
         "result": [
           {
             "language": "German",
@@ -10027,7 +10027,7 @@
       {
         "name": "Zimaboard Shipping Areas",
         "success": true,
-        "duration": 194,
+        "duration": 224,
         "result": [
           "Argentina",
           "Australia",
