@@ -1,18 +1,18 @@
 {
-  "timestamp": "2025-07-04T06:35:41.301Z",
+  "timestamp": "2025-07-05T06:32:16.404Z",
   "script": "run-all.js",
   "note": "Summary of all data fetching script executions",
   "data": {
-    "execution_time": "2025-07-04T06:35:41.301Z",
+    "execution_time": "2025-07-05T06:32:16.404Z",
     "total_scripts": 6,
     "successful": 6,
     "failed": 0,
-    "total_duration_ms": 12276,
+    "total_duration_ms": 12362,
     "results": [
       {
         "name": "CapRover UI Translations",
         "success": true,
-        "duration": 359,
+        "duration": 238,
         "result": [
           "ar-EG",
           "de-DE",
@@ -32,7 +32,7 @@
       {
         "name": "CasaOS UI Translations",
         "success": true,
-        "duration": 140,
+        "duration": 168,
         "result": [
           "de_DE",
           "el_GR",
@@ -55,7 +55,7 @@
       {
         "name": "YunoHost Apps",
         "success": true,
-        "duration": 9481,
+        "duration": 9615,
         "result": {
           "count": 867,
           "apps": [
@@ -2607,7 +2607,7 @@
               "url": "https://github.com/YunoHost-Apps/fossflow_ynh",
               "stars": 0,
               "forks": 0,
-              "updated_at": "2025-07-03T18:04:31Z",
+              "updated_at": "2025-07-04T15:59:00Z",
               "language": "Shell",
               "archived": false
             },
@@ -4235,7 +4235,7 @@
               "url": "https://github.com/YunoHost-Apps/liberaforms_ynh",
               "stars": 1,
               "forks": 1,
-              "updated_at": "2025-03-21T13:28:31Z",
+              "updated_at": "2025-07-04T16:03:03Z",
               "language": "Shell",
               "archived": false
             },
@@ -5378,7 +5378,7 @@
               "description": "Custom Web app with SFTP access",
               "url": "https://github.com/YunoHost-Apps/my_webapp_ynh",
               "stars": 49,
-              "forks": 52,
+              "forks": 53,
               "updated_at": "2025-05-02T07:11:50Z",
               "language": "Shell",
               "archived": false
@@ -7038,9 +7038,9 @@
               "name": "readarr",
               "description": "Readarr package for YunoHost",
               "url": "https://github.com/YunoHost-Apps/readarr_ynh",
-              "stars": 0,
+              "stars": 1,
               "forks": 1,
-              "updated_at": "2024-11-15T21:50:40Z",
+              "updated_at": "2025-07-04T09:35:17Z",
               "language": "Shell",
               "archived": false
             },
@@ -8844,7 +8844,7 @@
               "url": "https://github.com/YunoHost-Apps/wanderer_ynh",
               "stars": 0,
               "forks": 0,
-              "updated_at": "2025-06-28T05:16:55Z",
+              "updated_at": "2025-07-04T21:21:29Z",
               "language": "Shell",
               "archived": false
             },
@@ -9404,7 +9404,7 @@
               "description": "YunoRunner package  for YunoHost",
               "url": "https://github.com/YunoHost-Apps/yunorunner_ynh",
               "stars": 6,
-              "forks": 5,
+              "forks": 6,
               "updated_at": "2025-01-31T08:40:32Z",
               "language": "Shell",
               "archived": false
@@ -9615,7 +9615,7 @@
       {
         "name": "YunoHost Docs Translations",
         "success": true,
-        "duration": 112,
+        "duration": 147,
         "result": [
           "ar",
           "ca",
@@ -9631,7 +9631,7 @@
       {
         "name": "YunoHost UI Translations",
         "success": true,
-        "duration": 1824,
+        "duration": 1940,
         "result": [
           {
             "language": "German",
@@ -10038,7 +10038,7 @@
       {
         "name": "Zimaboard Shipping Areas",
         "success": true,
-        "duration": 360,
+        "duration": 254,
         "result": [
           "Argentina",
           "Australia",

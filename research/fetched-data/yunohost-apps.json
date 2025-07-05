@@ -1,5 +1,5 @@
 {
-  "timestamp": "2025-07-04T06:35:42.508Z",
+  "timestamp": "2025-07-05T06:32:17.166Z",
   "script": "scripts.test.js",
   "source": "YunoHost-Apps GitHub Organization",
   "url": "https://github.com/YunoHost-Apps",
@@ -2568,7 +2568,7 @@
       "url": "https://github.com/YunoHost-Apps/fossflow_ynh",
       "stars": 0,
       "forks": 0,
-      "updated_at": "2025-07-03T18:04:31Z",
+      "updated_at": "2025-07-04T15:59:00Z",
       "language": "Shell",
       "archived": false
     },
@@ -4196,7 +4196,7 @@
       "url": "https://github.com/YunoHost-Apps/liberaforms_ynh",
       "stars": 1,
       "forks": 1,
-      "updated_at": "2025-03-21T13:28:31Z",
+      "updated_at": "2025-07-04T16:03:03Z",
       "language": "Shell",
       "archived": false
     },
@@ -5339,7 +5339,7 @@
       "description": "Custom Web app with SFTP access",
       "url": "https://github.com/YunoHost-Apps/my_webapp_ynh",
       "stars": 49,
-      "forks": 52,
+      "forks": 53,
       "updated_at": "2025-05-02T07:11:50Z",
       "language": "Shell",
       "archived": false
@@ -6999,9 +6999,9 @@
       "name": "readarr",
       "description": "Readarr package for YunoHost",
       "url": "https://github.com/YunoHost-Apps/readarr_ynh",
-      "stars": 0,
+      "stars": 1,
       "forks": 1,
-      "updated_at": "2024-11-15T21:50:40Z",
+      "updated_at": "2025-07-04T09:35:17Z",
       "language": "Shell",
       "archived": false
     },
@@ -8805,7 +8805,7 @@
       "url": "https://github.com/YunoHost-Apps/wanderer_ynh",
       "stars": 0,
       "forks": 0,
-      "updated_at": "2025-06-28T05:16:55Z",
+      "updated_at": "2025-07-04T21:21:29Z",
       "language": "Shell",
       "archived": false
     },
@@ -9365,7 +9365,7 @@
       "description": "YunoRunner package  for YunoHost",
       "url": "https://github.com/YunoHost-Apps/yunorunner_ynh",
       "stars": 6,
-      "forks": 5,
+      "forks": 6,
       "updated_at": "2025-01-31T08:40:32Z",
       "language": "Shell",
       "archived": false
