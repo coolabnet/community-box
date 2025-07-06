@@ -1,11 +1,11 @@
 {
-  "timestamp": "2025-07-05T06:32:17.166Z",
+  "timestamp": "2025-07-06T06:33:10.219Z",
   "script": "scripts.test.js",
   "source": "YunoHost-Apps GitHub Organization",
   "url": "https://github.com/YunoHost-Apps",
   "api_url": "https://api.github.com/orgs/YunoHost-Apps/repos",
-  "total_apps": 867,
-  "total_repos_checked": 885,
+  "total_apps": 868,
+  "total_repos_checked": 886,
   "languages": [
     "CSS",
     "HTML",
@@ -181,7 +181,7 @@
       "url": "https://github.com/YunoHost-Apps/agora_ynh",
       "stars": 2,
       "forks": 2,
-      "updated_at": "2025-06-26T11:40:28Z",
+      "updated_at": "2025-07-06T06:09:55Z",
       "language": "Shell",
       "archived": false
     },
@@ -1242,6 +1242,17 @@
       "archived": false
     },
     {
+      "id": "cryptroot-unlock_ynh",
+      "name": "cryptroot-unlock",
+      "description": "Unlock through SSH your partitions encrypted with LUKS",
+      "url": "https://github.com/YunoHost-Apps/cryptroot-unlock_ynh",
+      "stars": 0,
+      "forks": 0,
+      "updated_at": "2025-07-05T18:00:42Z",
+      "language": "Shell",
+      "archived": false
+    },
+    {
       "id": "cubby_ynh",
       "name": "cubby",
       "description": "Cubby package for YunoHost",
@@ -1380,7 +1391,7 @@
       "url": "https://github.com/YunoHost-Apps/deluge_ynh",
       "stars": 0,
       "forks": 1,
-      "updated_at": "2025-06-06T06:48:01Z",
+      "updated_at": "2025-07-06T05:57:53Z",
       "language": "Shell",
       "archived": false
     },
@@ -2964,7 +2975,7 @@
       "url": "https://github.com/YunoHost-Apps/glitchsoc_ynh",
       "stars": 17,
       "forks": 10,
-      "updated_at": "2025-07-03T08:22:02Z",
+      "updated_at": "2025-07-06T06:32:50Z",
       "language": "Shell",
       "archived": false
     },
@@ -3030,7 +3041,7 @@
       "url": "https://github.com/YunoHost-Apps/gokapi_ynh",
       "stars": 0,
       "forks": 0,
-      "updated_at": "2025-01-19T20:41:53Z",
+      "updated_at": "2025-07-05T18:22:50Z",
       "language": "Shell",
       "archived": false
     },
@@ -6978,7 +6989,7 @@
       "description": "RClone GUI package for YunoHost",
       "url": "https://github.com/YunoHost-Apps/rclone_ynh",
       "stars": 6,
-      "forks": 2,
+      "forks": 3,
       "updated_at": "2025-06-28T14:43:02Z",
       "language": "Shell",
       "archived": false

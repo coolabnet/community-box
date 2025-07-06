@@ -1,18 +1,18 @@
 {
-  "timestamp": "2025-07-05T06:32:16.404Z",
+  "timestamp": "2025-07-06T06:33:09.724Z",
   "script": "run-all.js",
   "note": "Summary of all data fetching script executions",
   "data": {
-    "execution_time": "2025-07-05T06:32:16.404Z",
+    "execution_time": "2025-07-06T06:33:09.723Z",
     "total_scripts": 6,
     "successful": 6,
     "failed": 0,
-    "total_duration_ms": 12362,
+    "total_duration_ms": 11616,
     "results": [
       {
         "name": "CapRover UI Translations",
         "success": true,
-        "duration": 238,
+        "duration": 105,
         "result": [
           "ar-EG",
           "de-DE",
@@ -32,7 +32,7 @@
       {
         "name": "CasaOS UI Translations",
         "success": true,
-        "duration": 168,
+        "duration": 70,
         "result": [
           "de_DE",
           "el_GR",
@@ -55,9 +55,9 @@
       {
         "name": "YunoHost Apps",
         "success": true,
-        "duration": 9615,
+        "duration": 9736,
         "result": {
-          "count": 867,
+          "count": 868,
           "apps": [
             {
               "id": "13ft_ynh",
@@ -220,7 +220,7 @@
               "url": "https://github.com/YunoHost-Apps/agora_ynh",
               "stars": 2,
               "forks": 2,
-              "updated_at": "2025-06-26T11:40:28Z",
+              "updated_at": "2025-07-06T06:09:55Z",
               "language": "Shell",
               "archived": false
             },
@@ -1281,6 +1281,17 @@
               "archived": false
             },
             {
+              "id": "cryptroot-unlock_ynh",
+              "name": "cryptroot-unlock",
+              "description": "Unlock through SSH your partitions encrypted with LUKS",
+              "url": "https://github.com/YunoHost-Apps/cryptroot-unlock_ynh",
+              "stars": 0,
+              "forks": 0,
+              "updated_at": "2025-07-05T18:00:42Z",
+              "language": "Shell",
+              "archived": false
+            },
+            {
               "id": "cubby_ynh",
               "name": "cubby",
               "description": "Cubby package for YunoHost",
@@ -1419,7 +1430,7 @@
               "url": "https://github.com/YunoHost-Apps/deluge_ynh",
               "stars": 0,
               "forks": 1,
-              "updated_at": "2025-06-06T06:48:01Z",
+              "updated_at": "2025-07-06T05:57:53Z",
               "language": "Shell",
               "archived": false
             },
@@ -3003,7 +3014,7 @@
               "url": "https://github.com/YunoHost-Apps/glitchsoc_ynh",
               "stars": 17,
               "forks": 10,
-              "updated_at": "2025-07-03T08:22:02Z",
+              "updated_at": "2025-07-06T06:32:50Z",
               "language": "Shell",
               "archived": false
             },
@@ -3069,7 +3080,7 @@
               "url": "https://github.com/YunoHost-Apps/gokapi_ynh",
               "stars": 0,
               "forks": 0,
-              "updated_at": "2025-01-19T20:41:53Z",
+              "updated_at": "2025-07-05T18:22:50Z",
               "language": "Shell",
               "archived": false
             },
@@ -7017,7 +7028,7 @@
               "description": "RClone GUI package for YunoHost",
               "url": "https://github.com/YunoHost-Apps/rclone_ynh",
               "stars": 6,
-              "forks": 2,
+              "forks": 3,
               "updated_at": "2025-06-28T14:43:02Z",
               "language": "Shell",
               "archived": false
@@ -9615,7 +9626,7 @@
       {
         "name": "YunoHost Docs Translations",
         "success": true,
-        "duration": 147,
+        "duration": 122,
         "result": [
           "ar",
           "ca",
@@ -9631,7 +9642,7 @@
       {
         "name": "YunoHost UI Translations",
         "success": true,
-        "duration": 1940,
+        "duration": 1366,
         "result": [
           {
             "language": "German",
@@ -10038,7 +10049,7 @@
       {
         "name": "Zimaboard Shipping Areas",
         "success": true,
-        "duration": 254,
+        "duration": 217,
         "result": [
           "Argentina",
           "Australia",
