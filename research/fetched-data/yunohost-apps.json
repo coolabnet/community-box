@@ -1,5 +1,5 @@
 {
-  "timestamp": "2025-07-06T06:33:10.219Z",
+  "timestamp": "2025-07-07T06:36:58.856Z",
   "script": "scripts.test.js",
   "source": "YunoHost-Apps GitHub Organization",
   "url": "https://github.com/YunoHost-Apps",
@@ -1192,7 +1192,7 @@
       "description": "Couchdb package for YunoHost",
       "url": "https://github.com/YunoHost-Apps/couchdb_ynh",
       "stars": 4,
-      "forks": 2,
+      "forks": 3,
       "updated_at": "2024-06-08T19:59:42Z",
       "language": "Shell",
       "archived": false
@@ -1248,7 +1248,7 @@
       "url": "https://github.com/YunoHost-Apps/cryptroot-unlock_ynh",
       "stars": 0,
       "forks": 0,
-      "updated_at": "2025-07-05T18:00:42Z",
+      "updated_at": "2025-07-06T16:22:19Z",
       "language": "Shell",
       "archived": false
     },
@@ -2094,8 +2094,8 @@
       "description": "Unofficial ESPHome package for YunoHost",
       "url": "https://github.com/YunoHost-Apps/esphome_ynh",
       "stars": 0,
-      "forks": 0,
-      "updated_at": "2025-06-10T16:04:59Z",
+      "forks": 1,
+      "updated_at": "2025-07-07T02:49:58Z",
       "language": "Shell",
       "archived": false
     },
@@ -2425,7 +2425,7 @@
       "url": "https://github.com/YunoHost-Apps/flohmarkt_ynh",
       "stars": 1,
       "forks": 2,
-      "updated_at": "2025-06-13T19:31:57Z",
+      "updated_at": "2025-07-06T10:14:29Z",
       "language": "Shell",
       "archived": false
     },
@@ -2579,7 +2579,7 @@
       "url": "https://github.com/YunoHost-Apps/fossflow_ynh",
       "stars": 0,
       "forks": 0,
-      "updated_at": "2025-07-04T15:59:00Z",
+      "updated_at": "2025-07-06T21:07:03Z",
       "language": "Shell",
       "archived": false
     },
@@ -3193,9 +3193,9 @@
       "name": "guacamole",
       "description": "Apache Guacamole package for YunoHost",
       "url": "https://github.com/YunoHost-Apps/guacamole_ynh",
-      "stars": 11,
+      "stars": 12,
       "forks": 16,
-      "updated_at": "2025-03-03T14:14:04Z",
+      "updated_at": "2025-07-07T04:48:20Z",
       "language": "Shell",
       "archived": false
     },
@@ -3360,7 +3360,7 @@
       "url": "https://github.com/YunoHost-Apps/homeassistant_ynh",
       "stars": 21,
       "forks": 16,
-      "updated_at": "2025-07-03T16:58:05Z",
+      "updated_at": "2025-07-06T18:26:34Z",
       "language": "Shell",
       "archived": false
     },
@@ -4636,7 +4636,7 @@
       "url": "https://github.com/YunoHost-Apps/mastodon_ynh",
       "stars": 86,
       "forks": 39,
-      "updated_at": "2025-06-03T07:34:53Z",
+      "updated_at": "2025-07-06T06:33:16Z",
       "language": "Shell",
       "archived": false
     },
@@ -5714,7 +5714,7 @@
       "url": "https://github.com/YunoHost-Apps/ollama_ynh",
       "stars": 0,
       "forks": 1,
-      "updated_at": "2025-07-02T06:00:45Z",
+      "updated_at": "2025-07-06T19:49:56Z",
       "language": "Shell",
       "archived": false
     },
@@ -7506,7 +7506,7 @@
       "description": "🌎 A Sharkish microblogging platform 🦈🚀",
       "url": "https://github.com/YunoHost-Apps/sharkey_ynh",
       "stars": 4,
-      "forks": 6,
+      "forks": 7,
       "updated_at": "2025-05-31T12:56:30Z",
       "language": "Shell",
       "archived": false
@@ -8134,7 +8134,7 @@
       "url": "https://github.com/YunoHost-Apps/synapse_ynh",
       "stars": 82,
       "forks": 43,
-      "updated_at": "2025-06-24T10:50:45Z",
+      "updated_at": "2025-07-06T20:57:38Z",
       "language": "Shell",
       "archived": false
     },
@@ -9091,7 +9091,7 @@
       "url": "https://github.com/YunoHost-Apps/wordpress_ynh",
       "stars": 27,
       "forks": 30,
-      "updated_at": "2025-05-19T06:53:24Z",
+      "updated_at": "2025-07-06T07:38:49Z",
       "language": "Shell",
       "archived": false
     },
@@ -9102,7 +9102,7 @@
       "url": "https://github.com/YunoHost-Apps/workout-tracker_ynh",
       "stars": 1,
       "forks": 2,
-      "updated_at": "2025-06-28T12:16:51Z",
+      "updated_at": "2025-07-06T19:42:50Z",
       "language": "Shell",
       "archived": false
     },
@@ -9157,7 +9157,7 @@
       "url": "https://github.com/YunoHost-Apps/xwiki_ynh",
       "stars": 0,
       "forks": 1,
-      "updated_at": "2025-06-03T19:48:39Z",
+      "updated_at": "2025-07-06T20:57:54Z",
       "language": "Shell",
       "archived": false
     },
