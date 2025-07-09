@@ -1,18 +1,18 @@
 {
-  "timestamp": "2025-07-08T06:36:00.716Z",
+  "timestamp": "2025-07-09T06:35:49.629Z",
   "script": "run-all.js",
   "note": "Summary of all data fetching script executions",
   "data": {
-    "execution_time": "2025-07-08T06:36:00.716Z",
+    "execution_time": "2025-07-09T06:35:49.629Z",
     "total_scripts": 6,
     "successful": 6,
     "failed": 0,
-    "total_duration_ms": 13766,
+    "total_duration_ms": 14150,
     "results": [
       {
         "name": "CapRover UI Translations",
         "success": true,
-        "duration": 193,
+        "duration": 189,
         "result": [
           "ar-EG",
           "de-DE",
@@ -32,7 +32,7 @@
       {
         "name": "CasaOS UI Translations",
         "success": true,
-        "duration": 102,
+        "duration": 85,
         "result": [
           "de_DE",
           "el_GR",
@@ -55,7 +55,7 @@
       {
         "name": "YunoHost Apps",
         "success": true,
-        "duration": 11313,
+        "duration": 12032,
         "result": {
           "count": 869,
           "apps": [
@@ -187,7 +187,7 @@
               "url": "https://github.com/YunoHost-Apps/adventurelog_ynh",
               "stars": 0,
               "forks": 0,
-              "updated_at": "2025-07-07T10:58:12Z",
+              "updated_at": "2025-07-08T17:17:16Z",
               "language": "Shell",
               "archived": false
             },
@@ -671,7 +671,7 @@
               "url": "https://github.com/YunoHost-Apps/bookstack_ynh",
               "stars": 12,
               "forks": 6,
-              "updated_at": "2025-06-17T20:29:06Z",
+              "updated_at": "2025-07-08T11:02:45Z",
               "language": "Shell",
               "archived": false
             },
@@ -2629,7 +2629,7 @@
               "url": "https://github.com/YunoHost-Apps/fossflow_ynh",
               "stars": 0,
               "forks": 0,
-              "updated_at": "2025-07-08T01:12:22Z",
+              "updated_at": "2025-07-09T01:23:58Z",
               "language": "Shell",
               "archived": false
             },
@@ -3773,7 +3773,7 @@
               "url": "https://github.com/YunoHost-Apps/jackett_ynh",
               "stars": 0,
               "forks": 4,
-              "updated_at": "2025-07-07T09:24:59Z",
+              "updated_at": "2025-07-08T07:09:06Z",
               "language": "Shell",
               "archived": false
             },
@@ -3905,7 +3905,7 @@
               "url": "https://github.com/YunoHost-Apps/joomla_ynh",
               "stars": 2,
               "forks": 6,
-              "updated_at": "2025-07-08T00:26:10Z",
+              "updated_at": "2025-07-09T06:34:46Z",
               "language": "Shell",
               "archived": false
             },
@@ -3927,7 +3927,7 @@
               "url": "https://github.com/YunoHost-Apps/jsoncrack_ynh",
               "stars": 2,
               "forks": 0,
-              "updated_at": "2025-07-08T00:19:38Z",
+              "updated_at": "2025-07-09T01:30:48Z",
               "language": "Shell",
               "archived": false
             },
@@ -6325,7 +6325,7 @@
               "url": "https://github.com/YunoHost-Apps/photoprism_ynh",
               "stars": 7,
               "forks": 6,
-              "updated_at": "2025-05-10T05:48:11Z",
+              "updated_at": "2025-07-08T08:05:08Z",
               "language": "Shell",
               "archived": false
             },
@@ -7117,7 +7117,7 @@
               "url": "https://github.com/YunoHost-Apps/redmine_ynh",
               "stars": 4,
               "forks": 6,
-              "updated_at": "2025-05-02T20:15:01Z",
+              "updated_at": "2025-07-08T08:47:56Z",
               "language": "Shell",
               "archived": false
             },
@@ -7931,7 +7931,7 @@
               "url": "https://github.com/YunoHost-Apps/spip_ynh",
               "stars": 5,
               "forks": 8,
-              "updated_at": "2025-04-14T15:21:25Z",
+              "updated_at": "2025-07-09T06:03:34Z",
               "language": "Shell",
               "archived": false
             },
@@ -8030,7 +8030,7 @@
               "url": "https://github.com/YunoHost-Apps/stirling-pdf_ynh",
               "stars": 2,
               "forks": 3,
-              "updated_at": "2025-05-11T09:47:37Z",
+              "updated_at": "2025-07-08T07:08:33Z",
               "language": "Shell",
               "archived": false
             },
@@ -8404,7 +8404,7 @@
               "url": "https://github.com/YunoHost-Apps/tiddlywiki_ynh",
               "stars": 6,
               "forks": 4,
-              "updated_at": "2025-05-29T10:54:49Z",
+              "updated_at": "2025-07-08T08:46:47Z",
               "language": "Shell",
               "archived": false
             },
@@ -8492,7 +8492,7 @@
               "url": "https://github.com/YunoHost-Apps/traccar_ynh",
               "stars": 0,
               "forks": 3,
-              "updated_at": "2025-06-16T06:24:43Z",
+              "updated_at": "2025-07-08T08:58:23Z",
               "language": "Shell",
               "archived": false
             },
@@ -8656,7 +8656,7 @@
               "description": "Umami package for YunoHost",
               "url": "https://github.com/YunoHost-Apps/umami_ynh",
               "stars": 3,
-              "forks": 3,
+              "forks": 4,
               "updated_at": "2025-05-13T10:11:18Z",
               "language": "Shell",
               "archived": false
@@ -9637,7 +9637,7 @@
       {
         "name": "YunoHost Docs Translations",
         "success": true,
-        "duration": 129,
+        "duration": 86,
         "result": [
           "ar",
           "ca",
@@ -9653,8 +9653,24 @@
       {
         "name": "YunoHost UI Translations",
         "success": true,
-        "duration": 1778,
+        "duration": 1535,
         "result": [
+          {
+            "language": "Spanish",
+            "language_code": "es",
+            "translated_percent": 100,
+            "translated_words": 10292,
+            "total_words": 10292,
+            "last_change": "2025-07-09T02:22:36.329488Z"
+          },
+          {
+            "language": "French",
+            "language_code": "fr",
+            "translated_percent": 100,
+            "translated_words": 10292,
+            "total_words": 10292,
+            "last_change": "2025-07-09T02:41:05.497882Z"
+          },
           {
             "language": "German",
             "language_code": "de",
@@ -9768,14 +9784,6 @@
             "last_change": "2025-03-04T01:55:22.085380Z"
           },
           {
-            "language": "French",
-            "language_code": "fr",
-            "translated_percent": 99.3,
-            "translated_words": 10236,
-            "total_words": 10292,
-            "last_change": "2025-06-16T09:39:23.789103Z"
-          },
-          {
             "language": "Basque",
             "language_code": "eu",
             "translated_percent": 98.8,
@@ -9798,14 +9806,6 @@
             "translated_words": 266,
             "total_words": 268,
             "last_change": "2025-01-20T11:40:55.044404Z"
-          },
-          {
-            "language": "Spanish",
-            "language_code": "es",
-            "translated_percent": 95.5,
-            "translated_words": 9905,
-            "total_words": 10292,
-            "last_change": "2025-06-16T09:39:19.538323Z"
           },
           {
             "language": "German",
@@ -10060,7 +10060,7 @@
       {
         "name": "Zimaboard Shipping Areas",
         "success": true,
-        "duration": 251,
+        "duration": 223,
         "result": [
           "Argentina",
           "Australia",
