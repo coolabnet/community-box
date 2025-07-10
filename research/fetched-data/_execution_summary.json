@@ -1,18 +1,18 @@
 {
-  "timestamp": "2025-07-09T06:35:49.629Z",
+  "timestamp": "2025-07-10T06:36:28.374Z",
   "script": "run-all.js",
   "note": "Summary of all data fetching script executions",
   "data": {
-    "execution_time": "2025-07-09T06:35:49.629Z",
+    "execution_time": "2025-07-10T06:36:28.374Z",
     "total_scripts": 6,
     "successful": 6,
     "failed": 0,
-    "total_duration_ms": 14150,
+    "total_duration_ms": 13141,
     "results": [
       {
         "name": "CapRover UI Translations",
         "success": true,
-        "duration": 189,
+        "duration": 181,
         "result": [
           "ar-EG",
           "de-DE",
@@ -32,7 +32,7 @@
       {
         "name": "CasaOS UI Translations",
         "success": true,
-        "duration": 85,
+        "duration": 97,
         "result": [
           "de_DE",
           "el_GR",
@@ -55,7 +55,7 @@
       {
         "name": "YunoHost Apps",
         "success": true,
-        "duration": 12032,
+        "duration": 11130,
         "result": {
           "count": 869,
           "apps": [
@@ -714,7 +714,7 @@
               "description": "BorgWarHouse package for YunoHost",
               "url": "https://github.com/YunoHost-Apps/borgwarehouse_ynh",
               "stars": 1,
-              "forks": 2,
+              "forks": 3,
               "updated_at": "2025-07-07T17:35:27Z",
               "language": "Shell",
               "archived": false
@@ -1287,7 +1287,7 @@
               "url": "https://github.com/YunoHost-Apps/cryptpad_ynh",
               "stars": 30,
               "forks": 23,
-              "updated_at": "2025-06-07T05:47:19Z",
+              "updated_at": "2025-07-09T19:10:19Z",
               "language": "JavaScript",
               "archived": false
             },
@@ -1473,7 +1473,7 @@
               "description": "Federated OpenID Connect Provider package for YunoHost",
               "url": "https://github.com/YunoHost-Apps/dex_ynh",
               "stars": 9,
-              "forks": 6,
+              "forks": 7,
               "updated_at": "2025-07-07T11:02:29Z",
               "language": "Shell",
               "archived": false
@@ -3419,9 +3419,9 @@
               "name": "homebox",
               "description": "HomeBox package for YunoHost",
               "url": "https://github.com/YunoHost-Apps/homebox_ynh",
-              "stars": 0,
+              "stars": 1,
               "forks": 0,
-              "updated_at": "2025-04-15T19:52:07Z",
+              "updated_at": "2025-07-09T17:21:34Z",
               "language": "Shell",
               "archived": false
             },
@@ -4400,7 +4400,7 @@
               "url": "https://github.com/YunoHost-Apps/limesurvey_ynh",
               "stars": 5,
               "forks": 13,
-              "updated_at": "2025-06-29T09:22:17Z",
+              "updated_at": "2025-07-09T20:41:43Z",
               "language": "Shell",
               "archived": false
             },
@@ -4686,7 +4686,7 @@
               "url": "https://github.com/YunoHost-Apps/mastodon_ynh",
               "stars": 86,
               "forks": 39,
-              "updated_at": "2025-07-06T06:33:16Z",
+              "updated_at": "2025-07-09T20:08:16Z",
               "language": "Shell",
               "archived": false
             },
@@ -4840,7 +4840,7 @@
               "url": "https://github.com/YunoHost-Apps/mautrix_whatsapp_ynh",
               "stars": 27,
               "forks": 14,
-              "updated_at": "2025-06-05T12:21:56Z",
+              "updated_at": "2025-07-09T20:12:00Z",
               "language": "Shell",
               "archived": false
             },
@@ -5819,7 +5819,7 @@
               "url": "https://github.com/YunoHost-Apps/open-web-calendar_ynh",
               "stars": 0,
               "forks": 2,
-              "updated_at": "2025-04-03T20:48:32Z",
+              "updated_at": "2025-07-10T06:34:32Z",
               "language": "Shell",
               "archived": false
             },
@@ -5863,7 +5863,7 @@
               "url": "https://github.com/YunoHost-Apps/openemr_ynh",
               "stars": 0,
               "forks": 0,
-              "updated_at": "2025-07-03T09:13:39Z",
+              "updated_at": "2025-07-09T23:15:50Z",
               "language": "Shell",
               "archived": false
             },
@@ -6874,8 +6874,8 @@
               "description": "Pterodactyl package for YunoHost",
               "url": "https://github.com/YunoHost-Apps/pterodactyl_ynh",
               "stars": 5,
-              "forks": 7,
-              "updated_at": "2024-10-21T18:02:08Z",
+              "forks": 8,
+              "updated_at": "2025-07-10T06:21:37Z",
               "language": "Shell",
               "archived": false
             },
@@ -7040,7 +7040,7 @@
               "url": "https://github.com/YunoHost-Apps/rclone_ynh",
               "stars": 6,
               "forks": 3,
-              "updated_at": "2025-06-28T14:43:02Z",
+              "updated_at": "2025-07-10T06:33:57Z",
               "language": "Shell",
               "archived": false
             },
@@ -7810,7 +7810,7 @@
               "url": "https://github.com/YunoHost-Apps/snipeit_ynh",
               "stars": 2,
               "forks": 2,
-              "updated_at": "2025-07-02T06:29:15Z",
+              "updated_at": "2025-07-09T20:40:07Z",
               "language": "Shell",
               "archived": false
             },
@@ -8030,7 +8030,7 @@
               "url": "https://github.com/YunoHost-Apps/stirling-pdf_ynh",
               "stars": 2,
               "forks": 3,
-              "updated_at": "2025-07-08T07:08:33Z",
+              "updated_at": "2025-07-09T20:40:40Z",
               "language": "Shell",
               "archived": false
             },
@@ -9637,7 +9637,7 @@
       {
         "name": "YunoHost Docs Translations",
         "success": true,
-        "duration": 86,
+        "duration": 82,
         "result": [
           "ar",
           "ca",
@@ -9653,7 +9653,7 @@
       {
         "name": "YunoHost UI Translations",
         "success": true,
-        "duration": 1535,
+        "duration": 1445,
         "result": [
           {
             "language": "Spanish",
@@ -9669,7 +9669,7 @@
             "translated_percent": 100,
             "translated_words": 10292,
             "total_words": 10292,
-            "last_change": "2025-07-09T02:41:05.497882Z"
+            "last_change": "2025-07-09T21:30:55.505750Z"
           },
           {
             "language": "German",
@@ -10060,7 +10060,7 @@
       {
         "name": "Zimaboard Shipping Areas",
         "success": true,
-        "duration": 223,
+        "duration": 206,
         "result": [
           "Argentina",
           "Australia",
