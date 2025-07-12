@@ -1,5 +1,5 @@
 {
-  "timestamp": "2025-07-11T06:36:16.765Z",
+  "timestamp": "2025-07-12T06:33:37.147Z",
   "script": "scripts.test.js",
   "source": "YunoHost-Apps GitHub Organization",
   "url": "https://github.com/YunoHost-Apps",
@@ -18,7 +18,7 @@
     "Shell",
     "TSQL"
   ],
-  "archived_count": 128,
+  "archived_count": 127,
   "data": [
     {
       "id": "13ft_ynh",
@@ -148,7 +148,7 @@
       "url": "https://github.com/YunoHost-Apps/adventurelog_ynh",
       "stars": 0,
       "forks": 0,
-      "updated_at": "2025-07-10T17:37:11Z",
+      "updated_at": "2025-07-11T09:47:56Z",
       "language": "Shell",
       "archived": false
     },
@@ -2040,9 +2040,9 @@
       "url": "https://github.com/YunoHost-Apps/emby_ynh",
       "stars": 3,
       "forks": 10,
-      "updated_at": "2024-05-15T17:55:28Z",
+      "updated_at": "2025-07-11T06:46:59Z",
       "language": "Shell",
-      "archived": true
+      "archived": false
     },
     {
       "id": "emoncms_ynh",
@@ -2314,8 +2314,8 @@
       "description": "FileBrowser package for YunoHost",
       "url": "https://github.com/YunoHost-Apps/filebrowser_ynh",
       "stars": 5,
-      "forks": 2,
-      "updated_at": "2025-06-26T06:14:10Z",
+      "forks": 3,
+      "updated_at": "2025-07-11T20:55:39Z",
       "language": "Shell",
       "archived": false
     },
@@ -2535,7 +2535,7 @@
       "url": "https://github.com/YunoHost-Apps/forgejo_ynh",
       "stars": 18,
       "forks": 5,
-      "updated_at": "2025-06-19T06:09:42Z",
+      "updated_at": "2025-07-11T07:49:24Z",
       "language": "Shell",
       "archived": false
     },
@@ -4317,7 +4317,7 @@
       "url": "https://github.com/YunoHost-Apps/libretranslate_ynh",
       "stars": 3,
       "forks": 5,
-      "updated_at": "2025-06-19T10:42:41Z",
+      "updated_at": "2025-07-11T15:29:05Z",
       "language": "Shell",
       "archived": false
     },
@@ -5725,7 +5725,7 @@
       "url": "https://github.com/YunoHost-Apps/ollama_ynh",
       "stars": 0,
       "forks": 1,
-      "updated_at": "2025-07-06T19:49:56Z",
+      "updated_at": "2025-07-11T08:01:49Z",
       "language": "Shell",
       "archived": false
     },
@@ -7077,7 +7077,7 @@
       "description": "Redmine package for YunoHost",
       "url": "https://github.com/YunoHost-Apps/redmine_ynh",
       "stars": 4,
-      "forks": 6,
+      "forks": 7,
       "updated_at": "2025-07-08T08:47:56Z",
       "language": "Shell",
       "archived": false
@@ -8288,7 +8288,7 @@
       "url": "https://github.com/YunoHost-Apps/terraforming-mars_ynh",
       "stars": 1,
       "forks": 2,
-      "updated_at": "2025-06-02T07:39:17Z",
+      "updated_at": "2025-07-11T07:13:39Z",
       "language": "Shell",
       "archived": false
     },
@@ -8827,7 +8827,7 @@
       "url": "https://github.com/YunoHost-Apps/wanderer_ynh",
       "stars": 1,
       "forks": 0,
-      "updated_at": "2025-07-08T06:35:23Z",
+      "updated_at": "2025-07-11T06:46:34Z",
       "language": "Shell",
       "archived": false
     },

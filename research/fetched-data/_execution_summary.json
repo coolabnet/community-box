@@ -1,18 +1,18 @@
 {
-  "timestamp": "2025-07-11T06:36:16.176Z",
+  "timestamp": "2025-07-12T06:33:36.406Z",
   "script": "run-all.js",
   "note": "Summary of all data fetching script executions",
   "data": {
-    "execution_time": "2025-07-11T06:36:16.176Z",
+    "execution_time": "2025-07-12T06:33:36.406Z",
     "total_scripts": 6,
     "successful": 6,
     "failed": 0,
-    "total_duration_ms": 14475,
+    "total_duration_ms": 14318,
     "results": [
       {
         "name": "CapRover UI Translations",
         "success": true,
-        "duration": 140,
+        "duration": 163,
         "result": [
           "ar-EG",
           "de-DE",
@@ -20,6 +20,7 @@
           "es-ES",
           "fa-IR",
           "fr-FR",
+          "hr-HR",
           "id-ID",
           "nl-NL",
           "pt-BR",
@@ -32,7 +33,7 @@
       {
         "name": "CasaOS UI Translations",
         "success": true,
-        "duration": 97,
+        "duration": 88,
         "result": [
           "de_DE",
           "el_GR",
@@ -55,7 +56,7 @@
       {
         "name": "YunoHost Apps",
         "success": true,
-        "duration": 12657,
+        "duration": 12335,
         "result": {
           "count": 869,
           "apps": [
@@ -187,7 +188,7 @@
               "url": "https://github.com/YunoHost-Apps/adventurelog_ynh",
               "stars": 0,
               "forks": 0,
-              "updated_at": "2025-07-10T17:37:11Z",
+              "updated_at": "2025-07-11T09:47:56Z",
               "language": "Shell",
               "archived": false
             },
@@ -2079,9 +2080,9 @@
               "url": "https://github.com/YunoHost-Apps/emby_ynh",
               "stars": 3,
               "forks": 10,
-              "updated_at": "2024-05-15T17:55:28Z",
+              "updated_at": "2025-07-11T06:46:59Z",
               "language": "Shell",
-              "archived": true
+              "archived": false
             },
             {
               "id": "emoncms_ynh",
@@ -2353,8 +2354,8 @@
               "description": "FileBrowser package for YunoHost",
               "url": "https://github.com/YunoHost-Apps/filebrowser_ynh",
               "stars": 5,
-              "forks": 2,
-              "updated_at": "2025-06-26T06:14:10Z",
+              "forks": 3,
+              "updated_at": "2025-07-11T20:55:39Z",
               "language": "Shell",
               "archived": false
             },
@@ -2574,7 +2575,7 @@
               "url": "https://github.com/YunoHost-Apps/forgejo_ynh",
               "stars": 18,
               "forks": 5,
-              "updated_at": "2025-06-19T06:09:42Z",
+              "updated_at": "2025-07-11T07:49:24Z",
               "language": "Shell",
               "archived": false
             },
@@ -4356,7 +4357,7 @@
               "url": "https://github.com/YunoHost-Apps/libretranslate_ynh",
               "stars": 3,
               "forks": 5,
-              "updated_at": "2025-06-19T10:42:41Z",
+              "updated_at": "2025-07-11T15:29:05Z",
               "language": "Shell",
               "archived": false
             },
@@ -5764,7 +5765,7 @@
               "url": "https://github.com/YunoHost-Apps/ollama_ynh",
               "stars": 0,
               "forks": 1,
-              "updated_at": "2025-07-06T19:49:56Z",
+              "updated_at": "2025-07-11T08:01:49Z",
               "language": "Shell",
               "archived": false
             },
@@ -7116,7 +7117,7 @@
               "description": "Redmine package for YunoHost",
               "url": "https://github.com/YunoHost-Apps/redmine_ynh",
               "stars": 4,
-              "forks": 6,
+              "forks": 7,
               "updated_at": "2025-07-08T08:47:56Z",
               "language": "Shell",
               "archived": false
@@ -8327,7 +8328,7 @@
               "url": "https://github.com/YunoHost-Apps/terraforming-mars_ynh",
               "stars": 1,
               "forks": 2,
-              "updated_at": "2025-06-02T07:39:17Z",
+              "updated_at": "2025-07-11T07:13:39Z",
               "language": "Shell",
               "archived": false
             },
@@ -8866,7 +8867,7 @@
               "url": "https://github.com/YunoHost-Apps/wanderer_ynh",
               "stars": 1,
               "forks": 0,
-              "updated_at": "2025-07-08T06:35:23Z",
+              "updated_at": "2025-07-11T06:46:34Z",
               "language": "Shell",
               "archived": false
             },
@@ -9631,13 +9632,13 @@
             "Shell",
             "TSQL"
           ],
-          "archived_count": 128
+          "archived_count": 127
         }
       },
       {
         "name": "YunoHost Docs Translations",
         "success": true,
-        "duration": 94,
+        "duration": 92,
         "result": [
           "ar",
           "ca",
@@ -9653,7 +9654,7 @@
       {
         "name": "YunoHost UI Translations",
         "success": true,
-        "duration": 1229,
+        "duration": 1430,
         "result": [
           {
             "language": "Spanish",
@@ -10060,7 +10061,7 @@
       {
         "name": "Zimaboard Shipping Areas",
         "success": true,
-        "duration": 258,
+        "duration": 210,
         "result": [
           "Argentina",
           "Australia",
