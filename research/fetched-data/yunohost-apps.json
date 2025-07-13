@@ -1,11 +1,11 @@
 {
-  "timestamp": "2025-07-12T06:33:37.147Z",
+  "timestamp": "2025-07-13T06:34:25.389Z",
   "script": "scripts.test.js",
   "source": "YunoHost-Apps GitHub Organization",
   "url": "https://github.com/YunoHost-Apps",
   "api_url": "https://api.github.com/orgs/YunoHost-Apps/repos",
-  "total_apps": 869,
-  "total_repos_checked": 887,
+  "total_apps": 870,
+  "total_repos_checked": 888,
   "languages": [
     "CSS",
     "HTML",
@@ -148,7 +148,7 @@
       "url": "https://github.com/YunoHost-Apps/adventurelog_ynh",
       "stars": 0,
       "forks": 0,
-      "updated_at": "2025-07-11T09:47:56Z",
+      "updated_at": "2025-07-13T06:34:04Z",
       "language": "Shell",
       "archived": false
     },
@@ -237,6 +237,17 @@
       "stars": 15,
       "forks": 7,
       "updated_at": "2025-04-09T10:23:27Z",
+      "language": "Shell",
+      "archived": false
+    },
+    {
+      "id": "alist_ynh",
+      "name": "alist",
+      "description": "AList package for YunoHost",
+      "url": "https://github.com/YunoHost-Apps/alist_ynh",
+      "stars": 0,
+      "forks": 0,
+      "updated_at": "2025-07-12T11:36:46Z",
       "language": "Shell",
       "archived": false
     },
@@ -368,7 +379,7 @@
       "url": "https://github.com/YunoHost-Apps/armadietto_ynh",
       "stars": 2,
       "forks": 2,
-      "updated_at": "2025-03-24T20:28:58Z",
+      "updated_at": "2025-07-12T19:12:49Z",
       "language": "Shell",
       "archived": false
     },
@@ -1699,7 +1710,7 @@
       "url": "https://github.com/YunoHost-Apps/docs_ynh",
       "stars": 1,
       "forks": 1,
-      "updated_at": "2025-06-23T12:13:44Z",
+      "updated_at": "2025-07-12T10:42:37Z",
       "language": "Shell",
       "archived": false
     },
@@ -2577,9 +2588,9 @@
       "name": "forte",
       "description": "Forte package for YunoHost",
       "url": "https://github.com/YunoHost-Apps/forte_ynh",
-      "stars": 1,
+      "stars": 2,
       "forks": 0,
-      "updated_at": "2025-07-07T09:06:55Z",
+      "updated_at": "2025-07-13T00:50:31Z",
       "language": "Shell",
       "archived": false
     },
@@ -2887,7 +2898,7 @@
       "url": "https://github.com/YunoHost-Apps/ghost_ynh",
       "stars": 20,
       "forks": 30,
-      "updated_at": "2025-07-03T18:38:16Z",
+      "updated_at": "2025-07-12T06:45:36Z",
       "language": "Shell",
       "archived": false
     },
@@ -3833,7 +3844,7 @@
       "url": "https://github.com/YunoHost-Apps/jenkins_ynh",
       "stars": 6,
       "forks": 10,
-      "updated_at": "2025-07-03T08:20:01Z",
+      "updated_at": "2025-07-12T06:46:26Z",
       "language": "Shell",
       "archived": false
     },
@@ -3965,7 +3976,7 @@
       "url": "https://github.com/YunoHost-Apps/kavita_ynh",
       "stars": 3,
       "forks": 4,
-      "updated_at": "2025-07-07T09:30:55Z",
+      "updated_at": "2025-07-12T18:31:49Z",
       "language": "Shell",
       "archived": false
     },
@@ -5175,7 +5186,7 @@
       "url": "https://github.com/YunoHost-Apps/monica_ynh",
       "stars": 18,
       "forks": 13,
-      "updated_at": "2025-03-24T16:29:19Z",
+      "updated_at": "2025-07-12T21:20:01Z",
       "language": "Shell",
       "archived": false
     },
@@ -5723,9 +5734,9 @@
       "name": "ollama",
       "description": "",
       "url": "https://github.com/YunoHost-Apps/ollama_ynh",
-      "stars": 0,
+      "stars": 1,
       "forks": 1,
-      "updated_at": "2025-07-11T08:01:49Z",
+      "updated_at": "2025-07-12T16:15:38Z",
       "language": "Shell",
       "archived": false
     },
@@ -5820,11 +5831,11 @@
     {
       "id": "openemr_ynh",
       "name": "openemr",
-      "description": "",
+      "description": "The most popular open source electronic health records and medical practice management solution.",
       "url": "https://github.com/YunoHost-Apps/openemr_ynh",
       "stars": 0,
       "forks": 0,
-      "updated_at": "2025-07-10T14:14:53Z",
+      "updated_at": "2025-07-12T09:50:55Z",
       "language": "Shell",
       "archived": false
     },
@@ -7143,7 +7154,7 @@
       "description": "Restic package for YunoHost",
       "url": "https://github.com/YunoHost-Apps/restic_ynh",
       "stars": 6,
-      "forks": 11,
+      "forks": 12,
       "updated_at": "2025-05-02T20:17:16Z",
       "language": "Shell",
       "archived": false
@@ -7727,7 +7738,7 @@
       "url": "https://github.com/YunoHost-Apps/SitemagicCMS_ynh",
       "stars": 1,
       "forks": 2,
-      "updated_at": "2024-06-23T12:36:10Z",
+      "updated_at": "2025-07-12T09:37:58Z",
       "language": "Shell",
       "archived": false
     },
@@ -8013,7 +8024,7 @@
       "url": "https://github.com/YunoHost-Apps/streams_ynh",
       "stars": 1,
       "forks": 2,
-      "updated_at": "2025-07-02T06:29:44Z",
+      "updated_at": "2025-07-12T06:47:01Z",
       "language": "Shell",
       "archived": false
     },
@@ -8518,7 +8529,7 @@
       "description": "Trilium package for YunoHost",
       "url": "https://github.com/YunoHost-Apps/trilium_ynh",
       "stars": 12,
-      "forks": 9,
+      "forks": 10,
       "updated_at": "2025-04-26T07:49:39Z",
       "language": "Shell",
       "archived": false
@@ -9564,7 +9575,7 @@
       "url": "https://github.com/YunoHost-Apps/zwave-js-ui_ynh",
       "stars": 0,
       "forks": 1,
-      "updated_at": "2025-06-26T11:40:58Z",
+      "updated_at": "2025-07-12T06:47:39Z",
       "language": "Shell",
       "archived": false
     },
