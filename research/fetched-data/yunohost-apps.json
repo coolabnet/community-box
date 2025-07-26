@@ -1,11 +1,11 @@
 {
-  "timestamp": "2025-07-25T06:38:06.151Z",
+  "timestamp": "2025-07-26T06:35:23.025Z",
   "script": "scripts.test.js",
   "source": "YunoHost-Apps GitHub Organization",
   "url": "https://github.com/YunoHost-Apps",
   "api_url": "https://api.github.com/orgs/YunoHost-Apps/repos",
-  "total_apps": 871,
-  "total_repos_checked": 889,
+  "total_apps": 872,
+  "total_repos_checked": 890,
   "languages": [
     "CSS",
     "HTML",
@@ -146,9 +146,9 @@
       "name": "adventurelog",
       "description": "AdventureLog package for YunoHost",
       "url": "https://github.com/YunoHost-Apps/adventurelog_ynh",
-      "stars": 0,
+      "stars": 1,
       "forks": 0,
-      "updated_at": "2025-07-13T18:46:47Z",
+      "updated_at": "2025-07-26T03:13:44Z",
       "language": "Shell",
       "archived": false
     },
@@ -412,7 +412,7 @@
       "url": "https://github.com/YunoHost-Apps/audiobookshelf_ynh",
       "stars": 5,
       "forks": 6,
-      "updated_at": "2025-07-24T07:21:09Z",
+      "updated_at": "2025-07-25T07:20:28Z",
       "language": "Shell",
       "archived": false
     },
@@ -807,7 +807,7 @@
       "description": "Castopod package for YunoHost",
       "url": "https://github.com/YunoHost-Apps/castopod_ynh",
       "stars": 24,
-      "forks": 7,
+      "forks": 6,
       "updated_at": "2025-05-22T22:34:22Z",
       "language": "Shell",
       "archived": false
@@ -1479,7 +1479,7 @@
       "url": "https://github.com/YunoHost-Apps/diagramsnet_ynh",
       "stars": 6,
       "forks": 4,
-      "updated_at": "2025-07-17T12:00:49Z",
+      "updated_at": "2025-07-25T06:59:09Z",
       "language": "Shell",
       "archived": false
     },
@@ -2534,7 +2534,7 @@
       "description": "Forgejo package for YunoHost",
       "url": "https://github.com/YunoHost-Apps/forgejo_ynh",
       "stars": 18,
-      "forks": 5,
+      "forks": 4,
       "updated_at": "2025-07-18T06:50:03Z",
       "language": "Shell",
       "archived": false
@@ -2885,9 +2885,9 @@
       "name": "ghost",
       "description": "Ghost package for YunoHost",
       "url": "https://github.com/YunoHost-Apps/ghost_ynh",
-      "stars": 20,
+      "stars": 21,
       "forks": 30,
-      "updated_at": "2025-07-16T09:36:23Z",
+      "updated_at": "2025-07-25T07:03:51Z",
       "language": "Shell",
       "archived": false
     },
@@ -4141,7 +4141,7 @@
       "url": "https://github.com/YunoHost-Apps/lasuite-docs_ynh",
       "stars": 1,
       "forks": 1,
-      "updated_at": "2025-07-24T07:30:43Z",
+      "updated_at": "2025-07-25T06:48:09Z",
       "language": "Shell",
       "archived": false
     },
@@ -4206,7 +4206,7 @@
       "description": "A link aggregator for the fediverse.",
       "url": "https://github.com/YunoHost-Apps/lemmy_ynh",
       "stars": 20,
-      "forks": 12,
+      "forks": 11,
       "updated_at": "2025-05-26T05:56:55Z",
       "language": "Shell",
       "archived": false
@@ -4450,6 +4450,17 @@
       "stars": 0,
       "forks": 0,
       "updated_at": "2024-11-12T00:42:08Z",
+      "language": "Shell",
+      "archived": false
+    },
+    {
+      "id": "litechat_ynh",
+      "name": "litechat",
+      "description": "LiteChat package for YunoHost",
+      "url": "https://github.com/YunoHost-Apps/litechat_ynh",
+      "stars": 0,
+      "forks": 0,
+      "updated_at": "2025-07-25T13:21:38Z",
       "language": "Shell",
       "archived": false
     },
@@ -5274,7 +5285,7 @@
       "url": "https://github.com/YunoHost-Apps/movim_ynh",
       "stars": 7,
       "forks": 13,
-      "updated_at": "2025-04-24T07:38:23Z",
+      "updated_at": "2025-07-25T06:55:40Z",
       "language": "Shell",
       "archived": false
     },
@@ -7408,7 +7419,7 @@
       "url": "https://github.com/YunoHost-Apps/scratch_ynh",
       "stars": 3,
       "forks": 1,
-      "updated_at": "2025-07-22T07:17:57Z",
+      "updated_at": "2025-07-25T06:56:24Z",
       "language": "Shell",
       "archived": false
     },
@@ -8013,7 +8024,7 @@
       "url": "https://github.com/YunoHost-Apps/stirling-pdf_ynh",
       "stars": 2,
       "forks": 3,
-      "updated_at": "2025-07-24T09:23:22Z",
+      "updated_at": "2025-07-25T06:57:27Z",
       "language": "Shell",
       "archived": false
     },
@@ -9586,7 +9597,7 @@
       "url": "https://github.com/YunoHost-Apps/zwave-js-ui_ynh",
       "stars": 0,
       "forks": 1,
-      "updated_at": "2025-07-12T06:47:39Z",
+      "updated_at": "2025-07-25T21:50:19Z",
       "language": "Shell",
       "archived": false
     },
