@@ -1,5 +1,5 @@
 {
-  "timestamp": "2025-07-26T06:35:23.025Z",
+  "timestamp": "2025-07-27T06:36:04.916Z",
   "script": "scripts.test.js",
   "source": "YunoHost-Apps GitHub Organization",
   "url": "https://github.com/YunoHost-Apps",
@@ -1479,7 +1479,7 @@
       "url": "https://github.com/YunoHost-Apps/diagramsnet_ynh",
       "stars": 6,
       "forks": 4,
-      "updated_at": "2025-07-25T06:59:09Z",
+      "updated_at": "2025-07-26T11:54:50Z",
       "language": "Shell",
       "archived": false
     },
@@ -1776,7 +1776,7 @@
       "url": "https://github.com/YunoHost-Apps/dolibarr_ynh",
       "stars": 14,
       "forks": 21,
-      "updated_at": "2025-07-10T08:21:14Z",
+      "updated_at": "2025-07-26T10:35:13Z",
       "language": "Shell",
       "archived": false
     },
@@ -2534,7 +2534,7 @@
       "description": "Forgejo package for YunoHost",
       "url": "https://github.com/YunoHost-Apps/forgejo_ynh",
       "stars": 18,
-      "forks": 4,
+      "forks": 5,
       "updated_at": "2025-07-18T06:50:03Z",
       "language": "Shell",
       "archived": false
@@ -3578,9 +3578,9 @@
       "name": "immich",
       "description": "Self-hosted photo and video backup solution directly from your mobile phone.",
       "url": "https://github.com/YunoHost-Apps/immich_ynh",
-      "stars": 13,
+      "stars": 14,
       "forks": 8,
-      "updated_at": "2025-06-21T07:52:05Z",
+      "updated_at": "2025-07-26T11:39:44Z",
       "language": "Shell",
       "archived": false
     },
@@ -5505,7 +5505,7 @@
       "url": "https://github.com/YunoHost-Apps/netdata_ynh",
       "stars": 9,
       "forks": 5,
-      "updated_at": "2025-07-18T06:48:49Z",
+      "updated_at": "2025-07-26T08:05:51Z",
       "language": "Shell",
       "archived": false
     },
@@ -5811,9 +5811,9 @@
       "name": "open-webui",
       "description": "User-friendly AI Interface (Supports Ollama, OpenAI API, ...)",
       "url": "https://github.com/YunoHost-Apps/open-webui_ynh",
-      "stars": 1,
+      "stars": 2,
       "forks": 0,
-      "updated_at": "2025-07-20T15:35:57Z",
+      "updated_at": "2025-07-26T13:53:28Z",
       "language": "Shell",
       "archived": false
     },
@@ -8552,7 +8552,7 @@
       "url": "https://github.com/YunoHost-Apps/trilium_ynh",
       "stars": 12,
       "forks": 10,
-      "updated_at": "2025-07-17T21:07:31Z",
+      "updated_at": "2025-07-26T12:33:16Z",
       "language": "Shell",
       "archived": false
     },
