@@ -1,11 +1,11 @@
 {
-  "timestamp": "2025-07-28T06:40:11.572Z",
+  "timestamp": "2025-07-29T06:38:39.227Z",
   "script": "scripts.test.js",
   "source": "YunoHost-Apps GitHub Organization",
   "url": "https://github.com/YunoHost-Apps",
   "api_url": "https://api.github.com/orgs/YunoHost-Apps/repos",
-  "total_apps": 873,
-  "total_repos_checked": 891,
+  "total_apps": 874,
+  "total_repos_checked": 892,
   "languages": [
     "CSS",
     "HTML",
@@ -1183,6 +1183,17 @@
       "stars": 1,
       "forks": 5,
       "updated_at": "2025-05-18T20:08:46Z",
+      "language": "Shell",
+      "archived": false
+    },
+    {
+      "id": "copyparty_ynh",
+      "name": "copyparty",
+      "description": "CopyParty package for YunoHost",
+      "url": "https://github.com/YunoHost-Apps/copyparty_ynh",
+      "stars": 0,
+      "forks": 0,
+      "updated_at": "2025-07-28T16:47:38Z",
       "language": "Shell",
       "archived": false
     },
@@ -2810,7 +2821,7 @@
       "url": "https://github.com/YunoHost-Apps/garage_ynh",
       "stars": 1,
       "forks": 5,
-      "updated_at": "2025-06-02T14:01:18Z",
+      "updated_at": "2025-07-29T06:27:45Z",
       "language": "Shell",
       "archived": false
     },
@@ -3371,7 +3382,7 @@
       "url": "https://github.com/YunoHost-Apps/homeassistant_ynh",
       "stars": 21,
       "forks": 16,
-      "updated_at": "2025-07-24T05:24:49Z",
+      "updated_at": "2025-07-29T05:50:40Z",
       "language": "Shell",
       "archived": false
     },
@@ -4350,7 +4361,7 @@
       "url": "https://github.com/YunoHost-Apps/lichenmarkdown_ynh",
       "stars": 0,
       "forks": 0,
-      "updated_at": "2025-06-24T19:37:39Z",
+      "updated_at": "2025-07-28T19:15:06Z",
       "language": "Shell",
       "archived": false
     },
@@ -4942,9 +4953,9 @@
       "name": "metabase",
       "description": "Metabase package for YunoHost",
       "url": "https://github.com/YunoHost-Apps/metabase_ynh",
-      "stars": 11,
+      "stars": 12,
       "forks": 5,
-      "updated_at": "2025-05-06T23:55:30Z",
+      "updated_at": "2025-07-28T11:45:49Z",
       "language": "Shell",
       "archived": false
     },
@@ -5075,7 +5086,7 @@
       "description": "MiroTalk package for YunoHost",
       "url": "https://github.com/YunoHost-Apps/mirotalk_ynh",
       "stars": 0,
-      "forks": 0,
+      "forks": 1,
       "updated_at": "2025-07-28T06:27:06Z",
       "language": "Shell",
       "archived": false
@@ -5336,11 +5347,11 @@
     {
       "id": "munin_ynh",
       "name": "munin",
-      "description": "Munin for YunoHost",
+      "description": "Munin package for YunoHost",
       "url": "https://github.com/YunoHost-Apps/munin_ynh",
       "stars": 2,
       "forks": 1,
-      "updated_at": "2025-06-22T09:46:04Z",
+      "updated_at": "2025-07-28T16:59:51Z",
       "language": "Shell",
       "archived": false
     },
@@ -5382,9 +5393,9 @@
       "name": "my_webapp",
       "description": "Custom Web app with SFTP access",
       "url": "https://github.com/YunoHost-Apps/my_webapp_ynh",
-      "stars": 49,
+      "stars": 50,
       "forks": 53,
-      "updated_at": "2025-05-02T07:11:50Z",
+      "updated_at": "2025-07-28T09:28:30Z",
       "language": "Shell",
       "archived": false
     },
@@ -6550,7 +6561,7 @@
       "url": "https://github.com/YunoHost-Apps/plakar_ynh",
       "stars": 0,
       "forks": 0,
-      "updated_at": "2025-07-20T14:02:53Z",
+      "updated_at": "2025-07-28T15:48:31Z",
       "language": "Shell",
       "archived": false
     },
@@ -6737,7 +6748,7 @@
       "url": "https://github.com/YunoHost-Apps/privatebin_ynh",
       "stars": 1,
       "forks": 4,
-      "updated_at": "2025-07-07T06:47:29Z",
+      "updated_at": "2025-07-28T10:01:36Z",
       "language": "PHP",
       "archived": false
     },
@@ -8321,7 +8332,7 @@
       "url": "https://github.com/YunoHost-Apps/terraforming-mars_ynh",
       "stars": 1,
       "forks": 2,
-      "updated_at": "2025-07-21T11:30:47Z",
+      "updated_at": "2025-07-28T06:45:00Z",
       "language": "Shell",
       "archived": false
     },

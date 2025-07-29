@@ -1,18 +1,18 @@
 {
-  "timestamp": "2025-07-28T06:40:10.307Z",
+  "timestamp": "2025-07-29T06:38:38.512Z",
   "script": "run-all.js",
   "note": "Summary of all data fetching script executions",
   "data": {
-    "execution_time": "2025-07-28T06:40:10.307Z",
+    "execution_time": "2025-07-29T06:38:38.512Z",
     "total_scripts": 6,
     "successful": 6,
     "failed": 0,
-    "total_duration_ms": 14107,
+    "total_duration_ms": 16242,
     "results": [
       {
         "name": "CapRover UI Translations",
         "success": true,
-        "duration": 280,
+        "duration": 171,
         "result": [
           "ar-EG",
           "de-DE",
@@ -33,7 +33,7 @@
       {
         "name": "CasaOS UI Translations",
         "success": true,
-        "duration": 147,
+        "duration": 87,
         "result": [
           "ca_ES",
           "cs_CZ",
@@ -68,9 +68,9 @@
       {
         "name": "YunoHost Apps",
         "success": true,
-        "duration": 11474,
+        "duration": 13918,
         "result": {
-          "count": 873,
+          "count": 874,
           "apps": [
             {
               "id": "13ft_ynh",
@@ -1235,6 +1235,17 @@
               "stars": 1,
               "forks": 5,
               "updated_at": "2025-05-18T20:08:46Z",
+              "language": "Shell",
+              "archived": false
+            },
+            {
+              "id": "copyparty_ynh",
+              "name": "copyparty",
+              "description": "CopyParty package for YunoHost",
+              "url": "https://github.com/YunoHost-Apps/copyparty_ynh",
+              "stars": 0,
+              "forks": 0,
+              "updated_at": "2025-07-28T16:47:38Z",
               "language": "Shell",
               "archived": false
             },
@@ -2862,7 +2873,7 @@
               "url": "https://github.com/YunoHost-Apps/garage_ynh",
               "stars": 1,
               "forks": 5,
-              "updated_at": "2025-06-02T14:01:18Z",
+              "updated_at": "2025-07-29T06:27:45Z",
               "language": "Shell",
               "archived": false
             },
@@ -3423,7 +3434,7 @@
               "url": "https://github.com/YunoHost-Apps/homeassistant_ynh",
               "stars": 21,
               "forks": 16,
-              "updated_at": "2025-07-24T05:24:49Z",
+              "updated_at": "2025-07-29T05:50:40Z",
               "language": "Shell",
               "archived": false
             },
@@ -4402,7 +4413,7 @@
               "url": "https://github.com/YunoHost-Apps/lichenmarkdown_ynh",
               "stars": 0,
               "forks": 0,
-              "updated_at": "2025-06-24T19:37:39Z",
+              "updated_at": "2025-07-28T19:15:06Z",
               "language": "Shell",
               "archived": false
             },
@@ -4994,9 +5005,9 @@
               "name": "metabase",
               "description": "Metabase package for YunoHost",
               "url": "https://github.com/YunoHost-Apps/metabase_ynh",
-              "stars": 11,
+              "stars": 12,
               "forks": 5,
-              "updated_at": "2025-05-06T23:55:30Z",
+              "updated_at": "2025-07-28T11:45:49Z",
               "language": "Shell",
               "archived": false
             },
@@ -5127,7 +5138,7 @@
               "description": "MiroTalk package for YunoHost",
               "url": "https://github.com/YunoHost-Apps/mirotalk_ynh",
               "stars": 0,
-              "forks": 0,
+              "forks": 1,
               "updated_at": "2025-07-28T06:27:06Z",
               "language": "Shell",
               "archived": false
@@ -5388,11 +5399,11 @@
             {
               "id": "munin_ynh",
               "name": "munin",
-              "description": "Munin for YunoHost",
+              "description": "Munin package for YunoHost",
               "url": "https://github.com/YunoHost-Apps/munin_ynh",
               "stars": 2,
               "forks": 1,
-              "updated_at": "2025-06-22T09:46:04Z",
+              "updated_at": "2025-07-28T16:59:51Z",
               "language": "Shell",
               "archived": false
             },
@@ -5434,9 +5445,9 @@
               "name": "my_webapp",
               "description": "Custom Web app with SFTP access",
               "url": "https://github.com/YunoHost-Apps/my_webapp_ynh",
-              "stars": 49,
+              "stars": 50,
               "forks": 53,
-              "updated_at": "2025-05-02T07:11:50Z",
+              "updated_at": "2025-07-28T09:28:30Z",
               "language": "Shell",
               "archived": false
             },
@@ -6602,7 +6613,7 @@
               "url": "https://github.com/YunoHost-Apps/plakar_ynh",
               "stars": 0,
               "forks": 0,
-              "updated_at": "2025-07-20T14:02:53Z",
+              "updated_at": "2025-07-28T15:48:31Z",
               "language": "Shell",
               "archived": false
             },
@@ -6789,7 +6800,7 @@
               "url": "https://github.com/YunoHost-Apps/privatebin_ynh",
               "stars": 1,
               "forks": 4,
-              "updated_at": "2025-07-07T06:47:29Z",
+              "updated_at": "2025-07-28T10:01:36Z",
               "language": "PHP",
               "archived": false
             },
@@ -8373,7 +8384,7 @@
               "url": "https://github.com/YunoHost-Apps/terraforming-mars_ynh",
               "stars": 1,
               "forks": 2,
-              "updated_at": "2025-07-21T11:30:47Z",
+              "updated_at": "2025-07-28T06:45:00Z",
               "language": "Shell",
               "archived": false
             },
@@ -9694,7 +9705,7 @@
       {
         "name": "YunoHost Docs Translations",
         "success": true,
-        "duration": 119,
+        "duration": 107,
         "result": [
           "ar",
           "ca",
@@ -9710,7 +9721,7 @@
       {
         "name": "YunoHost UI Translations",
         "success": true,
-        "duration": 1781,
+        "duration": 1682,
         "result": [
           {
             "language": "Spanish",
@@ -10117,7 +10128,7 @@
       {
         "name": "Zimaboard Shipping Areas",
         "success": true,
-        "duration": 306,
+        "duration": 277,
         "result": [
           "Argentina",
           "Australia",
