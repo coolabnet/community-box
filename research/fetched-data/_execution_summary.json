@@ -1,18 +1,18 @@
 {
-  "timestamp": "2025-07-30T06:39:47.497Z",
+  "timestamp": "2025-07-31T06:38:35.700Z",
   "script": "run-all.js",
   "note": "Summary of all data fetching script executions",
   "data": {
-    "execution_time": "2025-07-30T06:39:47.497Z",
+    "execution_time": "2025-07-31T06:38:35.700Z",
     "total_scripts": 6,
     "successful": 6,
     "failed": 0,
-    "total_duration_ms": 14784,
+    "total_duration_ms": 14466,
     "results": [
       {
         "name": "CapRover UI Translations",
         "success": true,
-        "duration": 144,
+        "duration": 225,
         "result": [
           "ar-EG",
           "de-DE",
@@ -33,7 +33,7 @@
       {
         "name": "CasaOS UI Translations",
         "success": true,
-        "duration": 112,
+        "duration": 158,
         "result": [
           "ca_ES",
           "cs_CZ",
@@ -68,9 +68,9 @@
       {
         "name": "YunoHost Apps",
         "success": true,
-        "duration": 12797,
+        "duration": 11862,
         "result": {
-          "count": 874,
+          "count": 876,
           "apps": [
             {
               "id": "13ft_ynh",
@@ -1839,7 +1839,7 @@
               "url": "https://github.com/YunoHost-Apps/dolibarr_ynh",
               "stars": 14,
               "forks": 21,
-              "updated_at": "2025-07-26T10:35:13Z",
+              "updated_at": "2025-07-30T19:24:54Z",
               "language": "Shell",
               "archived": false
             },
@@ -2466,7 +2466,7 @@
               "url": "https://github.com/YunoHost-Apps/fittrackee_ynh",
               "stars": 6,
               "forks": 1,
-              "updated_at": "2025-07-24T08:57:54Z",
+              "updated_at": "2025-07-30T19:55:39Z",
               "language": "Shell",
               "archived": false
             },
@@ -3179,9 +3179,9 @@
               "name": "gotosocial",
               "description": "GoToSocial package for YunoHost: an ActivityPub social network server, written in Golang.",
               "url": "https://github.com/YunoHost-Apps/gotosocial_ynh",
-              "stars": 17,
+              "stars": 18,
               "forks": 8,
-              "updated_at": "2025-06-13T20:42:58Z",
+              "updated_at": "2025-07-30T14:27:58Z",
               "language": "Shell",
               "archived": false
             },
@@ -3643,7 +3643,7 @@
               "url": "https://github.com/YunoHost-Apps/immich_ynh",
               "stars": 16,
               "forks": 8,
-              "updated_at": "2025-07-29T19:58:06Z",
+              "updated_at": "2025-07-30T20:35:25Z",
               "language": "Shell",
               "archived": false
             },
@@ -4202,9 +4202,9 @@
               "name": "lasuite-docs",
               "description": "Collaborate and write in real time, with no layout constraints",
               "url": "https://github.com/YunoHost-Apps/lasuite-docs_ynh",
-              "stars": 1,
+              "stars": 2,
               "forks": 1,
-              "updated_at": "2025-07-25T06:48:09Z",
+              "updated_at": "2025-07-30T13:28:39Z",
               "language": "Shell",
               "archived": false
             },
@@ -5314,7 +5314,7 @@
               "description": "Mosquitto package for YunoHost ",
               "url": "https://github.com/YunoHost-Apps/mosquitto_ynh",
               "stars": 4,
-              "forks": 3,
+              "forks": 4,
               "updated_at": "2025-03-23T15:14:24Z",
               "language": "Shell",
               "archived": false
@@ -5810,7 +5810,7 @@
               "url": "https://github.com/YunoHost-Apps/ollama_ynh",
               "stars": 2,
               "forks": 1,
-              "updated_at": "2025-07-14T11:00:32Z",
+              "updated_at": "2025-07-31T06:24:48Z",
               "language": "Shell",
               "archived": false
             },
@@ -6226,9 +6226,9 @@
               "name": "peertube",
               "description": "Federated (ActivityPub) video streaming platform using P2P for YunoHost",
               "url": "https://github.com/YunoHost-Apps/peertube_ynh",
-              "stars": 90,
+              "stars": 91,
               "forks": 28,
-              "updated_at": "2025-07-17T11:58:14Z",
+              "updated_at": "2025-07-30T14:26:58Z",
               "language": "Shell",
               "archived": false
             },
@@ -6613,7 +6613,7 @@
               "url": "https://github.com/YunoHost-Apps/plakar_ynh",
               "stars": 0,
               "forks": 0,
-              "updated_at": "2025-07-29T07:29:27Z",
+              "updated_at": "2025-07-30T16:47:40Z",
               "language": "Shell",
               "archived": false
             },
@@ -7612,9 +7612,20 @@
               "name": "sharkey",
               "description": "🌎 A Sharkish microblogging platform 🦈🚀",
               "url": "https://github.com/YunoHost-Apps/sharkey_ynh",
-              "stars": 4,
+              "stars": 5,
               "forks": 7,
-              "updated_at": "2025-07-27T18:16:07Z",
+              "updated_at": "2025-07-30T14:24:56Z",
+              "language": "Shell",
+              "archived": false
+            },
+            {
+              "id": "sheetable_ynh",
+              "name": "sheetable",
+              "description": "",
+              "url": "https://github.com/YunoHost-Apps/sheetable_ynh",
+              "stars": 0,
+              "forks": 0,
+              "updated_at": "2025-07-30T18:16:03Z",
               "language": "Shell",
               "archived": false
             },
@@ -7956,6 +7967,17 @@
               "stars": 5,
               "forks": 1,
               "updated_at": "2025-03-24T22:28:54Z",
+              "language": "Shell",
+              "archived": false
+            },
+            {
+              "id": "sparkyfitness_ynh",
+              "name": "sparkyfitness",
+              "description": "SparkyFitness package for YunoHost",
+              "url": "https://github.com/YunoHost-Apps/sparkyfitness_ynh",
+              "stars": 0,
+              "forks": 0,
+              "updated_at": "2025-07-30T19:36:57Z",
               "language": "Shell",
               "archived": false
             },
@@ -8791,7 +8813,7 @@
               "url": "https://github.com/YunoHost-Apps/vaultwarden_ynh",
               "stars": 59,
               "forks": 22,
-              "updated_at": "2025-07-27T20:14:40Z",
+              "updated_at": "2025-07-30T18:17:14Z",
               "language": "Shell",
               "archived": false
             },
@@ -9705,7 +9727,7 @@
       {
         "name": "YunoHost Docs Translations",
         "success": true,
-        "duration": 71,
+        "duration": 144,
         "result": [
           "ar",
           "ca",
@@ -9721,7 +9743,7 @@
       {
         "name": "YunoHost UI Translations",
         "success": true,
-        "duration": 1315,
+        "duration": 1809,
         "result": [
           {
             "language": "Spanish",
@@ -10128,7 +10150,7 @@
       {
         "name": "Zimaboard Shipping Areas",
         "success": true,
-        "duration": 345,
+        "duration": 268,
         "result": [
           "Argentina",
           "Australia",
