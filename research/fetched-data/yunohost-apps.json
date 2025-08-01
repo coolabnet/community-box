@@ -1,11 +1,11 @@
 {
-  "timestamp": "2025-07-31T06:38:36.470Z",
+  "timestamp": "2025-08-01T06:39:55.329Z",
   "script": "scripts.test.js",
   "source": "YunoHost-Apps GitHub Organization",
   "url": "https://github.com/YunoHost-Apps",
   "api_url": "https://api.github.com/orgs/YunoHost-Apps/repos",
-  "total_apps": 876,
-  "total_repos_checked": 894,
+  "total_apps": 877,
+  "total_repos_checked": 895,
   "languages": [
     "CSS",
     "HTML",
@@ -192,7 +192,7 @@
       "url": "https://github.com/YunoHost-Apps/agora_ynh",
       "stars": 2,
       "forks": 2,
-      "updated_at": "2025-07-20T07:11:49Z",
+      "updated_at": "2025-08-01T05:15:18Z",
       "language": "Shell",
       "archived": false
     },
@@ -643,7 +643,7 @@
       "url": "https://github.com/YunoHost-Apps/bookstack_ynh",
       "stars": 12,
       "forks": 6,
-      "updated_at": "2025-07-08T11:02:45Z",
+      "updated_at": "2025-07-31T07:02:32Z",
       "language": "Shell",
       "archived": false
     },
@@ -995,7 +995,7 @@
       "url": "https://github.com/YunoHost-Apps/cloudlog_ynh",
       "stars": 1,
       "forks": 1,
-      "updated_at": "2025-07-18T06:51:36Z",
+      "updated_at": "2025-08-01T05:12:32Z",
       "language": "Shell",
       "archived": false
     },
@@ -1380,7 +1380,7 @@
       "url": "https://github.com/YunoHost-Apps/dagu_ynh",
       "stars": 0,
       "forks": 1,
-      "updated_at": "2025-07-30T06:17:25Z",
+      "updated_at": "2025-08-01T05:15:55Z",
       "language": "Shell",
       "archived": false
     },
@@ -1403,6 +1403,17 @@
       "stars": 0,
       "forks": 1,
       "updated_at": "2025-06-14T17:13:48Z",
+      "language": "Shell",
+      "archived": false
+    },
+    {
+      "id": "dawarich_ynh",
+      "name": "dawarich",
+      "description": "Dawarich package for YunoHost",
+      "url": "https://github.com/YunoHost-Apps/dawarich_ynh",
+      "stars": 0,
+      "forks": 0,
+      "updated_at": "2025-07-31T17:11:39Z",
       "language": "Shell",
       "archived": false
     },
@@ -2007,7 +2018,7 @@
       "url": "https://github.com/YunoHost-Apps/element_ynh",
       "stars": 23,
       "forks": 8,
-      "updated_at": "2025-07-30T06:16:48Z",
+      "updated_at": "2025-08-01T05:02:00Z",
       "language": "Shell",
       "archived": false
     },
@@ -2326,7 +2337,7 @@
       "url": "https://github.com/YunoHost-Apps/filebrowser_ynh",
       "stars": 5,
       "forks": 3,
-      "updated_at": "2025-07-28T06:23:12Z",
+      "updated_at": "2025-08-01T04:45:10Z",
       "language": "Shell",
       "archived": false
     },
@@ -2403,7 +2414,7 @@
       "url": "https://github.com/YunoHost-Apps/firefly-iii-di_ynh",
       "stars": 3,
       "forks": 9,
-      "updated_at": "2025-07-21T08:48:52Z",
+      "updated_at": "2025-07-31T08:28:37Z",
       "language": "Shell",
       "archived": false
     },
@@ -2898,7 +2909,7 @@
       "url": "https://github.com/YunoHost-Apps/ghost_ynh",
       "stars": 21,
       "forks": 30,
-      "updated_at": "2025-07-25T07:03:51Z",
+      "updated_at": "2025-07-31T08:30:01Z",
       "language": "Shell",
       "archived": false
     },
@@ -3470,7 +3481,7 @@
       "url": "https://github.com/YunoHost-Apps/hubzilla_ynh",
       "stars": 16,
       "forks": 9,
-      "updated_at": "2025-04-12T14:31:55Z",
+      "updated_at": "2025-08-01T05:08:06Z",
       "language": "Shell",
       "archived": false
     },
@@ -3745,7 +3756,7 @@
       "url": "https://github.com/YunoHost-Apps/jackett_ynh",
       "stars": 0,
       "forks": 4,
-      "updated_at": "2025-07-18T06:50:35Z",
+      "updated_at": "2025-08-01T04:55:43Z",
       "language": "Shell",
       "archived": false
     },
@@ -3844,7 +3855,7 @@
       "url": "https://github.com/YunoHost-Apps/jenkins_ynh",
       "stars": 6,
       "forks": 10,
-      "updated_at": "2025-07-24T07:14:50Z",
+      "updated_at": "2025-08-01T05:11:05Z",
       "language": "Shell",
       "archived": false
     },
@@ -4383,7 +4394,7 @@
       "url": "https://github.com/YunoHost-Apps/limesurvey_ynh",
       "stars": 5,
       "forks": 13,
-      "updated_at": "2025-07-09T20:41:43Z",
+      "updated_at": "2025-08-01T05:04:13Z",
       "language": "Shell",
       "archived": false
     },
@@ -4471,7 +4482,7 @@
       "url": "https://github.com/YunoHost-Apps/litechat_ynh",
       "stars": 0,
       "forks": 0,
-      "updated_at": "2025-07-27T15:19:20Z",
+      "updated_at": "2025-07-31T20:15:23Z",
       "language": "Shell",
       "archived": false
     },
@@ -4493,7 +4504,7 @@
       "url": "https://github.com/YunoHost-Apps/localai_ynh",
       "stars": 0,
       "forks": 0,
-      "updated_at": "2025-07-02T05:57:27Z",
+      "updated_at": "2025-08-01T05:02:34Z",
       "language": "Shell",
       "archived": false
     },
@@ -5626,7 +5637,7 @@
       "url": "https://github.com/YunoHost-Apps/nodered_ynh",
       "stars": 5,
       "forks": 6,
-      "updated_at": "2025-05-29T10:03:52Z",
+      "updated_at": "2025-08-01T05:04:46Z",
       "language": "JavaScript",
       "archived": false
     },
@@ -5747,7 +5758,7 @@
       "url": "https://github.com/YunoHost-Apps/olivetin_ynh",
       "stars": 1,
       "forks": 2,
-      "updated_at": "2025-07-14T09:53:39Z",
+      "updated_at": "2025-08-01T05:12:00Z",
       "language": "Shell",
       "archived": false
     },
@@ -5846,7 +5857,7 @@
       "url": "https://github.com/YunoHost-Apps/opencloud_ynh",
       "stars": 2,
       "forks": 1,
-      "updated_at": "2025-07-21T20:44:02Z",
+      "updated_at": "2025-07-31T08:32:10Z",
       "language": "Shell",
       "archived": false
     },
@@ -6011,7 +6022,7 @@
       "url": "https://github.com/YunoHost-Apps/overleaf_ynh",
       "stars": 2,
       "forks": 5,
-      "updated_at": "2025-07-21T11:30:10Z",
+      "updated_at": "2025-07-31T07:43:45Z",
       "language": "Shell",
       "archived": false
     },
@@ -6220,7 +6231,7 @@
       "url": "https://github.com/YunoHost-Apps/penpot_ynh",
       "stars": 6,
       "forks": 5,
-      "updated_at": "2025-07-14T11:01:34Z",
+      "updated_at": "2025-07-31T22:17:33Z",
       "language": "Shell",
       "archived": false
     },
@@ -6561,7 +6572,7 @@
       "url": "https://github.com/YunoHost-Apps/plakar_ynh",
       "stars": 0,
       "forks": 0,
-      "updated_at": "2025-07-30T16:47:40Z",
+      "updated_at": "2025-07-31T21:20:58Z",
       "language": "Shell",
       "archived": false
     },
@@ -7430,7 +7441,7 @@
       "url": "https://github.com/YunoHost-Apps/scratch_ynh",
       "stars": 3,
       "forks": 1,
-      "updated_at": "2025-07-28T06:27:37Z",
+      "updated_at": "2025-07-31T08:33:22Z",
       "language": "Shell",
       "archived": false
     },
@@ -7561,7 +7572,7 @@
       "description": "🌎 A Sharkish microblogging platform 🦈🚀",
       "url": "https://github.com/YunoHost-Apps/sharkey_ynh",
       "stars": 5,
-      "forks": 7,
+      "forks": 6,
       "updated_at": "2025-07-30T14:24:56Z",
       "language": "Shell",
       "archived": false
@@ -7569,11 +7580,11 @@
     {
       "id": "sheetable_ynh",
       "name": "sheetable",
-      "description": "",
+      "description": "SheertAble package for YunoHost",
       "url": "https://github.com/YunoHost-Apps/sheetable_ynh",
       "stars": 0,
-      "forks": 0,
-      "updated_at": "2025-07-30T18:16:03Z",
+      "forks": 1,
+      "updated_at": "2025-08-01T04:54:53Z",
       "language": "Shell",
       "archived": false
     },
@@ -7826,7 +7837,7 @@
       "url": "https://github.com/YunoHost-Apps/snipeit_ynh",
       "stars": 2,
       "forks": 2,
-      "updated_at": "2025-07-24T07:58:58Z",
+      "updated_at": "2025-08-01T05:14:02Z",
       "language": "Shell",
       "archived": false
     },
@@ -7925,7 +7936,7 @@
       "url": "https://github.com/YunoHost-Apps/sparkyfitness_ynh",
       "stars": 0,
       "forks": 0,
-      "updated_at": "2025-07-30T19:36:57Z",
+      "updated_at": "2025-08-01T06:32:22Z",
       "language": "Shell",
       "archived": false
     },
@@ -8992,7 +9003,7 @@
       "url": "https://github.com/YunoHost-Apps/webtrees_ynh",
       "stars": 7,
       "forks": 5,
-      "updated_at": "2025-01-03T14:31:46Z",
+      "updated_at": "2025-07-31T11:59:53Z",
       "language": "Shell",
       "archived": false
     },
@@ -9355,7 +9366,7 @@
       "url": "https://github.com/YunoHost-Apps/yuno-archive_ynh",
       "stars": 0,
       "forks": 0,
-      "updated_at": "2025-06-07T08:45:26Z",
+      "updated_at": "2025-07-31T10:16:31Z",
       "language": "Shell",
       "archived": false
     },
@@ -9641,7 +9652,7 @@
       "url": "https://github.com/YunoHost-Apps/zwave-js-ui_ynh",
       "stars": 0,
       "forks": 1,
-      "updated_at": "2025-07-25T21:50:19Z",
+      "updated_at": "2025-08-01T05:14:33Z",
       "language": "Shell",
       "archived": false
     },
