@@ -1,5 +1,5 @@
 {
-  "timestamp": "2025-08-01T06:39:55.329Z",
+  "timestamp": "2025-08-02T06:34:51.869Z",
   "script": "scripts.test.js",
   "source": "YunoHost-Apps GitHub Organization",
   "url": "https://github.com/YunoHost-Apps",
@@ -2601,7 +2601,7 @@
       "url": "https://github.com/YunoHost-Apps/forte_ynh",
       "stars": 2,
       "forks": 0,
-      "updated_at": "2025-07-23T23:45:34Z",
+      "updated_at": "2025-08-01T14:25:39Z",
       "language": "Shell",
       "archived": false
     },
@@ -3734,7 +3734,7 @@
       "url": "https://github.com/YunoHost-Apps/it-tools_ynh",
       "stars": 0,
       "forks": 0,
-      "updated_at": "2025-07-28T06:25:09Z",
+      "updated_at": "2025-08-01T09:58:12Z",
       "language": "Shell",
       "archived": false
     },
@@ -3910,7 +3910,7 @@
       "url": "https://github.com/YunoHost-Apps/jsoncrack_ynh",
       "stars": 2,
       "forks": 0,
-      "updated_at": "2025-07-09T01:30:48Z",
+      "updated_at": "2025-08-01T09:57:24Z",
       "language": "Shell",
       "archived": false
     },
@@ -5769,7 +5769,7 @@
       "url": "https://github.com/YunoHost-Apps/ollama_ynh",
       "stars": 2,
       "forks": 1,
-      "updated_at": "2025-07-31T06:24:48Z",
+      "updated_at": "2025-08-01T07:52:28Z",
       "language": "Shell",
       "archived": false
     },
@@ -6572,7 +6572,7 @@
       "url": "https://github.com/YunoHost-Apps/plakar_ynh",
       "stars": 0,
       "forks": 0,
-      "updated_at": "2025-07-31T21:20:58Z",
+      "updated_at": "2025-08-02T06:12:22Z",
       "language": "Shell",
       "archived": false
     },
@@ -6792,7 +6792,7 @@
       "url": "https://github.com/YunoHost-Apps/projectsend_ynh",
       "stars": 0,
       "forks": 0,
-      "updated_at": "2025-05-24T14:19:12Z",
+      "updated_at": "2025-08-01T09:28:45Z",
       "language": "Shell",
       "archived": false
     },
@@ -7936,7 +7936,7 @@
       "url": "https://github.com/YunoHost-Apps/sparkyfitness_ynh",
       "stars": 0,
       "forks": 0,
-      "updated_at": "2025-08-01T06:32:22Z",
+      "updated_at": "2025-08-01T07:39:58Z",
       "language": "Shell",
       "archived": false
     },
@@ -8090,7 +8090,7 @@
       "url": "https://github.com/YunoHost-Apps/streams_ynh",
       "stars": 1,
       "forks": 2,
-      "updated_at": "2025-07-22T17:19:16Z",
+      "updated_at": "2025-08-01T14:26:20Z",
       "language": "Shell",
       "archived": false
     },
