@@ -1,5 +1,5 @@
 {
-  "timestamp": "2025-08-02T06:34:51.869Z",
+  "timestamp": "2025-08-03T06:35:32.233Z",
   "script": "scripts.test.js",
   "source": "YunoHost-Apps GitHub Organization",
   "url": "https://github.com/YunoHost-Apps",
@@ -104,7 +104,7 @@
       "url": "https://github.com/YunoHost-Apps/actual_ynh",
       "stars": 6,
       "forks": 5,
-      "updated_at": "2025-07-07T07:24:39Z",
+      "updated_at": "2025-08-03T00:05:13Z",
       "language": "Shell",
       "archived": false
     },
@@ -115,7 +115,7 @@
       "url": "https://github.com/YunoHost-Apps/adguardhome_ynh",
       "stars": 16,
       "forks": 17,
-      "updated_at": "2025-07-03T18:37:35Z",
+      "updated_at": "2025-08-02T14:11:55Z",
       "language": "Shell",
       "archived": false
     },
@@ -2161,7 +2161,7 @@
       "url": "https://github.com/YunoHost-Apps/etherpad_ynh",
       "stars": 2,
       "forks": 2,
-      "updated_at": "2025-06-26T06:23:43Z",
+      "updated_at": "2025-08-03T06:19:49Z",
       "language": "Shell",
       "archived": false
     },
@@ -2249,7 +2249,7 @@
       "url": "https://github.com/YunoHost-Apps/faircamp_ynh",
       "stars": 1,
       "forks": 1,
-      "updated_at": "2025-05-25T00:35:26Z",
+      "updated_at": "2025-08-02T14:00:23Z",
       "language": "Shell",
       "archived": false
     },
@@ -2601,7 +2601,7 @@
       "url": "https://github.com/YunoHost-Apps/forte_ynh",
       "stars": 2,
       "forks": 0,
-      "updated_at": "2025-08-01T14:25:39Z",
+      "updated_at": "2025-08-02T14:54:23Z",
       "language": "Shell",
       "archived": false
     },
@@ -3195,7 +3195,7 @@
       "url": "https://github.com/YunoHost-Apps/grist_ynh",
       "stars": 11,
       "forks": 4,
-      "updated_at": "2025-06-26T05:00:02Z",
+      "updated_at": "2025-08-02T09:38:43Z",
       "language": "Shell",
       "archived": false
     },
@@ -4163,7 +4163,7 @@
       "url": "https://github.com/YunoHost-Apps/lasuite-docs_ynh",
       "stars": 2,
       "forks": 1,
-      "updated_at": "2025-07-30T13:28:39Z",
+      "updated_at": "2025-08-02T20:02:56Z",
       "language": "Shell",
       "archived": false
     },
@@ -4196,7 +4196,7 @@
       "url": "https://github.com/YunoHost-Apps/leantime_ynh",
       "stars": 1,
       "forks": 5,
-      "updated_at": "2025-07-15T19:16:21Z",
+      "updated_at": "2025-08-02T07:35:26Z",
       "language": "Shell",
       "archived": false
     },
@@ -4603,7 +4603,7 @@
       "url": "https://github.com/YunoHost-Apps/lychee_ynh",
       "stars": 10,
       "forks": 7,
-      "updated_at": "2025-07-02T16:57:06Z",
+      "updated_at": "2025-08-02T08:17:14Z",
       "language": "Shell",
       "archived": false
     },
@@ -5120,7 +5120,7 @@
       "url": "https://github.com/YunoHost-Apps/mitra_ynh",
       "stars": 1,
       "forks": 2,
-      "updated_at": "2025-07-17T16:42:35Z",
+      "updated_at": "2025-08-02T11:14:28Z",
       "language": "Shell",
       "archived": false
     },
@@ -5604,7 +5604,7 @@
       "url": "https://github.com/YunoHost-Apps/nocodb_ynh",
       "stars": 11,
       "forks": 5,
-      "updated_at": "2025-06-18T06:32:26Z",
+      "updated_at": "2025-08-02T07:34:52Z",
       "language": "Shell",
       "archived": false
     },
@@ -7770,7 +7770,7 @@
       "description": "SimpleX Chat package for YunoHost",
       "url": "https://github.com/YunoHost-Apps/simplex_ynh",
       "stars": 3,
-      "forks": 5,
+      "forks": 6,
       "updated_at": "2025-07-29T20:57:13Z",
       "language": "Shell",
       "archived": false
@@ -8068,7 +8068,7 @@
       "url": "https://github.com/YunoHost-Apps/stirling-pdf_ynh",
       "stars": 2,
       "forks": 3,
-      "updated_at": "2025-07-25T06:57:27Z",
+      "updated_at": "2025-08-02T07:33:58Z",
       "language": "Shell",
       "archived": false
     },
@@ -8090,7 +8090,7 @@
       "url": "https://github.com/YunoHost-Apps/streams_ynh",
       "stars": 1,
       "forks": 2,
-      "updated_at": "2025-08-01T14:26:20Z",
+      "updated_at": "2025-08-02T14:55:06Z",
       "language": "Shell",
       "archived": false
     },
@@ -9333,7 +9333,7 @@
       "url": "https://github.com/YunoHost-Apps/yourls_ynh",
       "stars": 8,
       "forks": 5,
-      "updated_at": "2025-04-26T12:01:58Z",
+      "updated_at": "2025-08-02T07:36:09Z",
       "language": "Shell",
       "archived": false
     },
