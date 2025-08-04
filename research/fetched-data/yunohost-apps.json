@@ -1,5 +1,5 @@
 {
-  "timestamp": "2025-08-03T06:35:32.233Z",
+  "timestamp": "2025-08-04T06:45:11.153Z",
   "script": "scripts.test.js",
   "source": "YunoHost-Apps GitHub Organization",
   "url": "https://github.com/YunoHost-Apps",
@@ -412,7 +412,7 @@
       "url": "https://github.com/YunoHost-Apps/audiobookshelf_ynh",
       "stars": 5,
       "forks": 6,
-      "updated_at": "2025-07-25T07:20:28Z",
+      "updated_at": "2025-08-04T05:26:11Z",
       "language": "Shell",
       "archived": false
     },
@@ -995,7 +995,7 @@
       "url": "https://github.com/YunoHost-Apps/cloudlog_ynh",
       "stars": 1,
       "forks": 1,
-      "updated_at": "2025-08-01T05:12:32Z",
+      "updated_at": "2025-08-03T08:19:56Z",
       "language": "Shell",
       "archived": false
     },
@@ -2161,7 +2161,7 @@
       "url": "https://github.com/YunoHost-Apps/etherpad_ynh",
       "stars": 2,
       "forks": 2,
-      "updated_at": "2025-08-03T06:19:49Z",
+      "updated_at": "2025-08-03T15:38:24Z",
       "language": "Shell",
       "archived": false
     },
@@ -4372,7 +4372,7 @@
       "url": "https://github.com/YunoHost-Apps/lichenmarkdown_ynh",
       "stars": 0,
       "forks": 0,
-      "updated_at": "2025-07-28T19:15:06Z",
+      "updated_at": "2025-08-03T19:51:30Z",
       "language": "Shell",
       "archived": false
     },
@@ -5516,7 +5516,7 @@
       "url": "https://github.com/YunoHost-Apps/navidrome_ynh",
       "stars": 17,
       "forks": 7,
-      "updated_at": "2025-07-02T05:58:45Z",
+      "updated_at": "2025-08-03T15:40:33Z",
       "language": "Shell",
       "archived": false
     },
@@ -6572,7 +6572,7 @@
       "url": "https://github.com/YunoHost-Apps/plakar_ynh",
       "stars": 0,
       "forks": 0,
-      "updated_at": "2025-08-02T06:12:22Z",
+      "updated_at": "2025-08-04T06:02:10Z",
       "language": "Shell",
       "archived": false
     },
@@ -7573,7 +7573,7 @@
       "url": "https://github.com/YunoHost-Apps/sharkey_ynh",
       "stars": 5,
       "forks": 6,
-      "updated_at": "2025-07-30T14:24:56Z",
+      "updated_at": "2025-08-03T12:27:28Z",
       "language": "Shell",
       "archived": false
     },
@@ -8266,7 +8266,7 @@
       "url": "https://github.com/YunoHost-Apps/tableaunoir_ynh",
       "stars": 0,
       "forks": 0,
-      "updated_at": "2025-05-03T17:37:47Z",
+      "updated_at": "2025-08-03T11:17:53Z",
       "language": "Shell",
       "archived": false
     },
@@ -8365,7 +8365,7 @@
       "url": "https://github.com/YunoHost-Apps/terraforming-mars_ynh",
       "stars": 1,
       "forks": 2,
-      "updated_at": "2025-07-28T06:45:00Z",
+      "updated_at": "2025-08-04T06:20:00Z",
       "language": "Shell",
       "archived": false
     },
@@ -8596,7 +8596,7 @@
       "url": "https://github.com/YunoHost-Apps/trilium_ynh",
       "stars": 12,
       "forks": 10,
-      "updated_at": "2025-07-26T12:33:16Z",
+      "updated_at": "2025-08-03T11:18:36Z",
       "language": "Shell",
       "archived": false
     },
