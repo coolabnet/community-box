@@ -1,5 +1,5 @@
 {
-  "timestamp": "2025-08-04T06:45:11.153Z",
+  "timestamp": "2025-08-05T06:40:05.790Z",
   "script": "scripts.test.js",
   "source": "YunoHost-Apps GitHub Organization",
   "url": "https://github.com/YunoHost-Apps",
@@ -478,7 +478,7 @@
       "url": "https://github.com/YunoHost-Apps/backrest_ynh",
       "stars": 0,
       "forks": 0,
-      "updated_at": "2025-07-10T08:48:11Z",
+      "updated_at": "2025-08-04T23:50:02Z",
       "language": "Shell",
       "archived": false
     },
@@ -1413,7 +1413,7 @@
       "url": "https://github.com/YunoHost-Apps/dawarich_ynh",
       "stars": 0,
       "forks": 0,
-      "updated_at": "2025-07-31T17:11:39Z",
+      "updated_at": "2025-08-05T06:31:33Z",
       "language": "Shell",
       "archived": false
     },
@@ -1775,7 +1775,7 @@
       "description": "Dokos is a 100% open-source management software that is based on ERPNext",
       "url": "https://github.com/YunoHost-Apps/Dokos_ynh",
       "stars": 1,
-      "forks": 1,
+      "forks": 2,
       "updated_at": "2025-05-14T14:44:18Z",
       "language": "Shell",
       "archived": false
@@ -3008,7 +3008,7 @@
       "url": "https://github.com/YunoHost-Apps/glitchsoc_ynh",
       "stars": 17,
       "forks": 10,
-      "updated_at": "2025-07-28T06:23:56Z",
+      "updated_at": "2025-08-04T09:04:25Z",
       "language": "Shell",
       "archived": false
     },
@@ -4372,7 +4372,7 @@
       "url": "https://github.com/YunoHost-Apps/lichenmarkdown_ynh",
       "stars": 0,
       "forks": 0,
-      "updated_at": "2025-08-03T19:51:30Z",
+      "updated_at": "2025-08-04T17:46:56Z",
       "language": "Shell",
       "archived": false
     },
@@ -6231,7 +6231,7 @@
       "url": "https://github.com/YunoHost-Apps/penpot_ynh",
       "stars": 6,
       "forks": 5,
-      "updated_at": "2025-07-31T22:17:33Z",
+      "updated_at": "2025-08-04T14:26:51Z",
       "language": "Shell",
       "archived": false
     },
@@ -6572,7 +6572,7 @@
       "url": "https://github.com/YunoHost-Apps/plakar_ynh",
       "stars": 0,
       "forks": 0,
-      "updated_at": "2025-08-04T06:02:10Z",
+      "updated_at": "2025-08-04T21:48:51Z",
       "language": "Shell",
       "archived": false
     },
@@ -7572,7 +7572,7 @@
       "description": "🌎 A Sharkish microblogging platform 🦈🚀",
       "url": "https://github.com/YunoHost-Apps/sharkey_ynh",
       "stars": 5,
-      "forks": 6,
+      "forks": 7,
       "updated_at": "2025-08-03T12:27:28Z",
       "language": "Shell",
       "archived": false
@@ -8287,7 +8287,7 @@
       "description": "Tandoor package for YunoHost",
       "url": "https://github.com/YunoHost-Apps/tandoor_ynh",
       "stars": 3,
-      "forks": 7,
+      "forks": 8,
       "updated_at": "2025-05-18T20:31:25Z",
       "language": "Shell",
       "archived": false
@@ -8519,7 +8519,7 @@
       "url": "https://github.com/YunoHost-Apps/torrelay_ynh",
       "stars": 1,
       "forks": 2,
-      "updated_at": "2025-02-13T22:50:02Z",
+      "updated_at": "2025-08-04T21:43:47Z",
       "language": "Shell",
       "archived": false
     },
@@ -8618,7 +8618,7 @@
       "url": "https://github.com/YunoHost-Apps/ttrss_ynh",
       "stars": 17,
       "forks": 14,
-      "updated_at": "2025-07-28T06:29:12Z",
+      "updated_at": "2025-08-04T09:02:24Z",
       "language": "Shell",
       "archived": false
     },
