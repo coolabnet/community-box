@@ -1,5 +1,5 @@
 {
-  "timestamp": "2025-08-06T06:40:13.729Z",
+  "timestamp": "2025-08-07T06:40:14.085Z",
   "script": "scripts.test.js",
   "source": "YunoHost-Apps GitHub Organization",
   "url": "https://github.com/YunoHost-Apps",
@@ -412,7 +412,7 @@
       "url": "https://github.com/YunoHost-Apps/audiobookshelf_ynh",
       "stars": 5,
       "forks": 6,
-      "updated_at": "2025-08-04T05:26:11Z",
+      "updated_at": "2025-08-06T08:50:39Z",
       "language": "Shell",
       "archived": false
     },
@@ -478,7 +478,7 @@
       "url": "https://github.com/YunoHost-Apps/backrest_ynh",
       "stars": 0,
       "forks": 0,
-      "updated_at": "2025-08-04T23:50:02Z",
+      "updated_at": "2025-08-07T06:23:58Z",
       "language": "Shell",
       "archived": false
     },
@@ -1413,7 +1413,7 @@
       "url": "https://github.com/YunoHost-Apps/dawarich_ynh",
       "stars": 0,
       "forks": 0,
-      "updated_at": "2025-08-05T06:31:33Z",
+      "updated_at": "2025-08-06T18:36:11Z",
       "language": "Shell",
       "archived": false
     },
@@ -2348,7 +2348,7 @@
       "url": "https://github.com/YunoHost-Apps/filegator_ynh",
       "stars": 0,
       "forks": 0,
-      "updated_at": "2025-08-06T06:11:12Z",
+      "updated_at": "2025-08-06T07:47:09Z",
       "language": "Shell",
       "archived": false
     },
@@ -5416,7 +5416,7 @@
       "description": "Custom Web app with SFTP access",
       "url": "https://github.com/YunoHost-Apps/my_webapp_ynh",
       "stars": 50,
-      "forks": 54,
+      "forks": 55,
       "updated_at": "2025-07-28T09:28:30Z",
       "language": "Shell",
       "archived": false
@@ -5780,7 +5780,7 @@
       "url": "https://github.com/YunoHost-Apps/ollama_ynh",
       "stars": 2,
       "forks": 1,
-      "updated_at": "2025-08-06T05:29:18Z",
+      "updated_at": "2025-08-07T05:31:57Z",
       "language": "Shell",
       "archived": false
     },
@@ -6033,7 +6033,7 @@
       "url": "https://github.com/YunoHost-Apps/overleaf_ynh",
       "stars": 2,
       "forks": 5,
-      "updated_at": "2025-07-31T07:43:45Z",
+      "updated_at": "2025-08-06T16:15:57Z",
       "language": "Shell",
       "archived": false
     },
@@ -6583,7 +6583,7 @@
       "url": "https://github.com/YunoHost-Apps/plakar_ynh",
       "stars": 0,
       "forks": 0,
-      "updated_at": "2025-08-05T22:08:16Z",
+      "updated_at": "2025-08-06T22:32:44Z",
       "language": "Shell",
       "archived": false
     },
@@ -7055,7 +7055,7 @@
       "description": "Rallly package for YunoHost",
       "url": "https://github.com/YunoHost-Apps/rallly_ynh",
       "stars": 7,
-      "forks": 1,
+      "forks": 2,
       "updated_at": "2025-05-05T01:35:09Z",
       "language": "Shell",
       "archived": false
@@ -8299,7 +8299,7 @@
       "url": "https://github.com/YunoHost-Apps/tandoor_ynh",
       "stars": 3,
       "forks": 8,
-      "updated_at": "2025-05-18T20:31:25Z",
+      "updated_at": "2025-08-06T07:43:34Z",
       "language": "Shell",
       "archived": false
     },
@@ -9212,7 +9212,7 @@
       "url": "https://github.com/YunoHost-Apps/workout-tracker_ynh",
       "stars": 1,
       "forks": 2,
-      "updated_at": "2025-07-06T19:42:50Z",
+      "updated_at": "2025-08-06T06:57:19Z",
       "language": "Shell",
       "archived": false
     },
