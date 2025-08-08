@@ -1,18 +1,18 @@
 {
-  "timestamp": "2025-08-07T06:40:13.566Z",
+  "timestamp": "2025-08-08T06:39:50.714Z",
   "script": "run-all.js",
   "note": "Summary of all data fetching script executions",
   "data": {
-    "execution_time": "2025-08-07T06:40:13.566Z",
+    "execution_time": "2025-08-08T06:39:50.714Z",
     "total_scripts": 6,
     "successful": 6,
     "failed": 0,
-    "total_duration_ms": 15897,
+    "total_duration_ms": 13356,
     "results": [
       {
         "name": "CapRover UI Translations",
         "success": true,
-        "duration": 157,
+        "duration": 136,
         "result": [
           "ar-EG",
           "de-DE",
@@ -33,7 +33,7 @@
       {
         "name": "CasaOS UI Translations",
         "success": true,
-        "duration": 93,
+        "duration": 98,
         "result": [
           "ca_ES",
           "cs_CZ",
@@ -68,9 +68,9 @@
       {
         "name": "YunoHost Apps",
         "success": true,
-        "duration": 13849,
+        "duration": 11229,
         "result": {
-          "count": 878,
+          "count": 879,
           "apps": [
             {
               "id": "13ft_ynh",
@@ -1245,7 +1245,7 @@
               "url": "https://github.com/YunoHost-Apps/copyparty_ynh",
               "stars": 1,
               "forks": 0,
-              "updated_at": "2025-08-05T21:45:01Z",
+              "updated_at": "2025-08-07T13:08:24Z",
               "language": "Shell",
               "archived": false
             },
@@ -3456,7 +3456,7 @@
               "url": "https://github.com/YunoHost-Apps/homeassistant_ynh",
               "stars": 21,
               "forks": 16,
-              "updated_at": "2025-07-29T05:50:40Z",
+              "updated_at": "2025-08-07T06:58:53Z",
               "language": "Shell",
               "archived": false
             },
@@ -5336,7 +5336,7 @@
               "description": "Mosquitto package for YunoHost ",
               "url": "https://github.com/YunoHost-Apps/mosquitto_ynh",
               "stars": 4,
-              "forks": 4,
+              "forks": 5,
               "updated_at": "2025-03-23T15:14:24Z",
               "language": "Shell",
               "archived": false
@@ -5865,7 +5865,7 @@
               "url": "https://github.com/YunoHost-Apps/onlyoffice_ynh",
               "stars": 19,
               "forks": 19,
-              "updated_at": "2025-07-10T13:38:47Z",
+              "updated_at": "2025-08-07T14:49:51Z",
               "language": "Shell",
               "archived": false
             },
@@ -6635,7 +6635,7 @@
               "url": "https://github.com/YunoHost-Apps/plakar_ynh",
               "stars": 0,
               "forks": 0,
-              "updated_at": "2025-08-06T22:32:44Z",
+              "updated_at": "2025-08-08T05:50:30Z",
               "language": "Shell",
               "archived": false
             },
@@ -6877,7 +6877,7 @@
               "url": "https://github.com/YunoHost-Apps/prose_ynh",
               "stars": 0,
               "forks": 1,
-              "updated_at": "2025-06-26T11:42:18Z",
+              "updated_at": "2025-08-08T05:38:05Z",
               "language": "Shell",
               "archived": false
             },
@@ -7999,7 +7999,7 @@
               "url": "https://github.com/YunoHost-Apps/sparkyfitness_ynh",
               "stars": 0,
               "forks": 0,
-              "updated_at": "2025-08-01T07:39:58Z",
+              "updated_at": "2025-08-08T06:25:49Z",
               "language": "Shell",
               "archived": false
             },
@@ -8297,6 +8297,17 @@
               "stars": 6,
               "forks": 3,
               "updated_at": "2025-07-17T10:21:13Z",
+              "language": "Shell",
+              "archived": false
+            },
+            {
+              "id": "sync-in_ynh",
+              "name": "sync-in",
+              "description": "",
+              "url": "https://github.com/YunoHost-Apps/sync-in_ynh",
+              "stars": 0,
+              "forks": 0,
+              "updated_at": "2025-08-07T12:02:05Z",
               "language": "Shell",
               "archived": false
             },
@@ -9174,9 +9185,9 @@
               "name": "wireguard",
               "description": "WireGuard VPN software with a web UI configuration companion, packaged for YunoHost.",
               "url": "https://github.com/YunoHost-Apps/wireguard_ynh",
-              "stars": 37,
+              "stars": 36,
               "forks": 14,
-              "updated_at": "2025-05-12T13:20:58Z",
+              "updated_at": "2025-08-07T07:46:59Z",
               "language": "Shell",
               "archived": false
             },
@@ -9749,7 +9760,7 @@
       {
         "name": "YunoHost Docs Translations",
         "success": true,
-        "duration": 80,
+        "duration": 70,
         "result": [
           "ar",
           "ca",
@@ -9765,7 +9776,7 @@
       {
         "name": "YunoHost UI Translations",
         "success": true,
-        "duration": 1491,
+        "duration": 1573,
         "result": [
           {
             "language": "Basque",
@@ -10172,7 +10183,7 @@
       {
         "name": "Zimaboard Shipping Areas",
         "success": true,
-        "duration": 227,
+        "duration": 250,
         "result": [
           "Argentina",
           "Australia",
