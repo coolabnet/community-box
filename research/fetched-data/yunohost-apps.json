@@ -1,11 +1,11 @@
 {
-  "timestamp": "2025-08-08T06:39:51.279Z",
+  "timestamp": "2025-08-09T06:34:54.557Z",
   "script": "scripts.test.js",
   "source": "YunoHost-Apps GitHub Organization",
   "url": "https://github.com/YunoHost-Apps",
   "api_url": "https://api.github.com/orgs/YunoHost-Apps/repos",
-  "total_apps": 879,
-  "total_repos_checked": 897,
+  "total_apps": 880,
+  "total_repos_checked": 898,
   "languages": [
     "CSS",
     "HTML",
@@ -148,7 +148,7 @@
       "url": "https://github.com/YunoHost-Apps/adventurelog_ynh",
       "stars": 1,
       "forks": 0,
-      "updated_at": "2025-07-26T03:13:44Z",
+      "updated_at": "2025-08-08T15:50:58Z",
       "language": "Shell",
       "archived": false
     },
@@ -2348,7 +2348,7 @@
       "url": "https://github.com/YunoHost-Apps/filegator_ynh",
       "stars": 0,
       "forks": 0,
-      "updated_at": "2025-08-06T07:47:09Z",
+      "updated_at": "2025-08-08T11:18:56Z",
       "language": "Shell",
       "archived": false
     },
@@ -4899,7 +4899,7 @@
       "description": "MediaTracker package for YunoHost",
       "url": "https://github.com/YunoHost-Apps/mediatracker_ynh",
       "stars": 0,
-      "forks": 0,
+      "forks": 1,
       "updated_at": "2025-05-18T20:34:46Z",
       "language": "Shell",
       "archived": false
@@ -5780,7 +5780,7 @@
       "url": "https://github.com/YunoHost-Apps/ollama_ynh",
       "stars": 2,
       "forks": 1,
-      "updated_at": "2025-08-07T05:31:57Z",
+      "updated_at": "2025-08-09T06:09:47Z",
       "language": "Shell",
       "archived": false
     },
@@ -7947,7 +7947,7 @@
       "url": "https://github.com/YunoHost-Apps/sparkyfitness_ynh",
       "stars": 0,
       "forks": 0,
-      "updated_at": "2025-08-08T06:25:49Z",
+      "updated_at": "2025-08-08T08:13:52Z",
       "language": "Shell",
       "archived": false
     },
@@ -8251,11 +8251,11 @@
     {
       "id": "sync-in_ynh",
       "name": "sync-in",
-      "description": "",
+      "description": "Sync-in package for YunoHost",
       "url": "https://github.com/YunoHost-Apps/sync-in_ynh",
       "stars": 0,
       "forks": 0,
-      "updated_at": "2025-08-07T12:02:05Z",
+      "updated_at": "2025-08-08T20:33:43Z",
       "language": "Shell",
       "archived": false
     },
@@ -8464,7 +8464,7 @@
       "url": "https://github.com/YunoHost-Apps/tiddlywiki_ynh",
       "stars": 6,
       "forks": 4,
-      "updated_at": "2025-07-08T08:46:47Z",
+      "updated_at": "2025-08-08T11:20:22Z",
       "language": "Shell",
       "archived": false
     },
@@ -9217,6 +9217,17 @@
       "archived": false
     },
     {
+      "id": "workout-cool_ynh",
+      "name": "workout-cool",
+      "description": "Workout.cool package for YunoHost",
+      "url": "https://github.com/YunoHost-Apps/workout-cool_ynh",
+      "stars": 0,
+      "forks": 0,
+      "updated_at": "2025-08-09T06:12:17Z",
+      "language": "Shell",
+      "archived": false
+    },
+    {
       "id": "workout-tracker_ynh",
       "name": "workout-tracker",
       "description": "workout-tracker package for YunoHost",
@@ -9333,7 +9344,7 @@
       "url": "https://github.com/YunoHost-Apps/yeswiki_ynh",
       "stars": 6,
       "forks": 6,
-      "updated_at": "2025-05-21T17:48:24Z",
+      "updated_at": "2025-08-08T20:23:16Z",
       "language": "Shell",
       "archived": false
     },

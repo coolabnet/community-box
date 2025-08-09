@@ -1,18 +1,18 @@
 {
-  "timestamp": "2025-08-08T06:39:50.714Z",
+  "timestamp": "2025-08-09T06:34:53.856Z",
   "script": "run-all.js",
   "note": "Summary of all data fetching script executions",
   "data": {
-    "execution_time": "2025-08-08T06:39:50.714Z",
+    "execution_time": "2025-08-09T06:34:53.856Z",
     "total_scripts": 6,
     "successful": 6,
     "failed": 0,
-    "total_duration_ms": 13356,
+    "total_duration_ms": 13884,
     "results": [
       {
         "name": "CapRover UI Translations",
         "success": true,
-        "duration": 136,
+        "duration": 160,
         "result": [
           "ar-EG",
           "de-DE",
@@ -33,7 +33,7 @@
       {
         "name": "CasaOS UI Translations",
         "success": true,
-        "duration": 98,
+        "duration": 118,
         "result": [
           "ca_ES",
           "cs_CZ",
@@ -68,9 +68,9 @@
       {
         "name": "YunoHost Apps",
         "success": true,
-        "duration": 11229,
+        "duration": 11693,
         "result": {
-          "count": 879,
+          "count": 880,
           "apps": [
             {
               "id": "13ft_ynh",
@@ -200,7 +200,7 @@
               "url": "https://github.com/YunoHost-Apps/adventurelog_ynh",
               "stars": 1,
               "forks": 0,
-              "updated_at": "2025-07-26T03:13:44Z",
+              "updated_at": "2025-08-08T15:50:58Z",
               "language": "Shell",
               "archived": false
             },
@@ -2400,7 +2400,7 @@
               "url": "https://github.com/YunoHost-Apps/filegator_ynh",
               "stars": 0,
               "forks": 0,
-              "updated_at": "2025-08-06T07:47:09Z",
+              "updated_at": "2025-08-08T11:18:56Z",
               "language": "Shell",
               "archived": false
             },
@@ -4951,7 +4951,7 @@
               "description": "MediaTracker package for YunoHost",
               "url": "https://github.com/YunoHost-Apps/mediatracker_ynh",
               "stars": 0,
-              "forks": 0,
+              "forks": 1,
               "updated_at": "2025-05-18T20:34:46Z",
               "language": "Shell",
               "archived": false
@@ -5832,7 +5832,7 @@
               "url": "https://github.com/YunoHost-Apps/ollama_ynh",
               "stars": 2,
               "forks": 1,
-              "updated_at": "2025-08-07T05:31:57Z",
+              "updated_at": "2025-08-09T06:09:47Z",
               "language": "Shell",
               "archived": false
             },
@@ -7999,7 +7999,7 @@
               "url": "https://github.com/YunoHost-Apps/sparkyfitness_ynh",
               "stars": 0,
               "forks": 0,
-              "updated_at": "2025-08-08T06:25:49Z",
+              "updated_at": "2025-08-08T08:13:52Z",
               "language": "Shell",
               "archived": false
             },
@@ -8303,11 +8303,11 @@
             {
               "id": "sync-in_ynh",
               "name": "sync-in",
-              "description": "",
+              "description": "Sync-in package for YunoHost",
               "url": "https://github.com/YunoHost-Apps/sync-in_ynh",
               "stars": 0,
               "forks": 0,
-              "updated_at": "2025-08-07T12:02:05Z",
+              "updated_at": "2025-08-08T20:33:43Z",
               "language": "Shell",
               "archived": false
             },
@@ -8516,7 +8516,7 @@
               "url": "https://github.com/YunoHost-Apps/tiddlywiki_ynh",
               "stars": 6,
               "forks": 4,
-              "updated_at": "2025-07-08T08:46:47Z",
+              "updated_at": "2025-08-08T11:20:22Z",
               "language": "Shell",
               "archived": false
             },
@@ -9269,6 +9269,17 @@
               "archived": false
             },
             {
+              "id": "workout-cool_ynh",
+              "name": "workout-cool",
+              "description": "Workout.cool package for YunoHost",
+              "url": "https://github.com/YunoHost-Apps/workout-cool_ynh",
+              "stars": 0,
+              "forks": 0,
+              "updated_at": "2025-08-09T06:12:17Z",
+              "language": "Shell",
+              "archived": false
+            },
+            {
               "id": "workout-tracker_ynh",
               "name": "workout-tracker",
               "description": "workout-tracker package for YunoHost",
@@ -9385,7 +9396,7 @@
               "url": "https://github.com/YunoHost-Apps/yeswiki_ynh",
               "stars": 6,
               "forks": 6,
-              "updated_at": "2025-05-21T17:48:24Z",
+              "updated_at": "2025-08-08T20:23:16Z",
               "language": "Shell",
               "archived": false
             },
@@ -9760,7 +9771,7 @@
       {
         "name": "YunoHost Docs Translations",
         "success": true,
-        "duration": 70,
+        "duration": 74,
         "result": [
           "ar",
           "ca",
@@ -9776,7 +9787,7 @@
       {
         "name": "YunoHost UI Translations",
         "success": true,
-        "duration": 1573,
+        "duration": 1609,
         "result": [
           {
             "language": "Basque",
@@ -9979,6 +9990,14 @@
             "last_change": "2025-08-04T01:53:29.737805Z"
           },
           {
+            "language": "Russian",
+            "language_code": "ru",
+            "translated_percent": 84.3,
+            "translated_words": 3021,
+            "total_words": 3794,
+            "last_change": "2025-08-08T11:47:40.751543Z"
+          },
+          {
             "language": "Turkish",
             "language_code": "tr",
             "translated_percent": 84.3,
@@ -9987,20 +10006,12 @@
             "last_change": "2025-08-03T01:54:23.669908Z"
           },
           {
-            "language": "Russian",
-            "language_code": "ru",
-            "translated_percent": 84.1,
-            "translated_words": 3014,
-            "total_words": 3794,
-            "last_change": "2025-08-03T01:54:18.262740Z"
-          },
-          {
             "language": "Polish",
             "language_code": "pl",
-            "translated_percent": 82.7,
-            "translated_words": 2659,
+            "translated_percent": 83.3,
+            "translated_words": 2688,
             "total_words": 3794,
-            "last_change": "2025-08-03T01:54:14.971440Z"
+            "last_change": "2025-08-08T11:47:40.440408Z"
           },
           {
             "language": "Occitan",
@@ -10183,7 +10194,7 @@
       {
         "name": "Zimaboard Shipping Areas",
         "success": true,
-        "duration": 250,
+        "duration": 230,
         "result": [
           "Argentina",
           "Australia",
