@@ -1,5 +1,5 @@
 {
-  "timestamp": "2025-08-09T06:34:54.557Z",
+  "timestamp": "2025-08-10T06:34:38.637Z",
   "script": "scripts.test.js",
   "source": "YunoHost-Apps GitHub Organization",
   "url": "https://github.com/YunoHost-Apps",
@@ -2721,7 +2721,7 @@
       "description": "FreshRSS package for YunoHost",
       "url": "https://github.com/YunoHost-Apps/freshrss_ynh",
       "stars": 31,
-      "forks": 21,
+      "forks": 22,
       "updated_at": "2025-06-07T09:01:31Z",
       "language": "Shell",
       "archived": false
@@ -2799,7 +2799,7 @@
       "url": "https://github.com/YunoHost-Apps/galene_ynh",
       "stars": 11,
       "forks": 4,
-      "updated_at": "2025-03-08T18:51:39Z",
+      "updated_at": "2025-08-09T15:12:51Z",
       "language": "Shell",
       "archived": false
     },
@@ -3701,7 +3701,7 @@
       "url": "https://github.com/YunoHost-Apps/invoiceninja5_ynh",
       "stars": 11,
       "forks": 6,
-      "updated_at": "2025-06-06T05:12:16Z",
+      "updated_at": "2025-08-09T12:44:27Z",
       "language": "Shell",
       "archived": false
     },
@@ -5263,7 +5263,7 @@
       "url": "https://github.com/YunoHost-Apps/moodle_ynh",
       "stars": 4,
       "forks": 7,
-      "updated_at": "2025-05-22T18:38:29Z",
+      "updated_at": "2025-08-09T10:51:12Z",
       "language": "Shell",
       "archived": false
     },
@@ -5527,7 +5527,7 @@
       "url": "https://github.com/YunoHost-Apps/navidrome_ynh",
       "stars": 17,
       "forks": 7,
-      "updated_at": "2025-08-03T15:40:33Z",
+      "updated_at": "2025-08-09T17:45:20Z",
       "language": "Shell",
       "archived": false
     },
@@ -5813,7 +5813,7 @@
       "url": "https://github.com/YunoHost-Apps/onlyoffice_ynh",
       "stars": 19,
       "forks": 19,
-      "updated_at": "2025-08-07T14:49:51Z",
+      "updated_at": "2025-08-09T23:44:27Z",
       "language": "Shell",
       "archived": false
     },
@@ -5846,7 +5846,7 @@
       "url": "https://github.com/YunoHost-Apps/open-webui_ynh",
       "stars": 2,
       "forks": 0,
-      "updated_at": "2025-08-05T14:42:07Z",
+      "updated_at": "2025-08-09T06:40:23Z",
       "language": "Shell",
       "archived": false
     },
@@ -8739,7 +8739,7 @@
       "url": "https://github.com/YunoHost-Apps/ums_ynh",
       "stars": 1,
       "forks": 4,
-      "updated_at": "2025-06-13T06:32:53Z",
+      "updated_at": "2025-08-09T08:17:07Z",
       "language": "Shell",
       "archived": false
     },
@@ -9685,7 +9685,7 @@
       "url": "https://github.com/YunoHost-Apps/zwave-js-ui_ynh",
       "stars": 0,
       "forks": 1,
-      "updated_at": "2025-08-01T05:14:33Z",
+      "updated_at": "2025-08-09T08:02:30Z",
       "language": "Shell",
       "archived": false
     },
