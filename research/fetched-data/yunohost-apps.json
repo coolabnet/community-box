@@ -1,5 +1,5 @@
 {
-  "timestamp": "2025-08-13T06:37:00.910Z",
+  "timestamp": "2025-08-14T06:37:16.776Z",
   "script": "scripts.test.js",
   "source": "YunoHost-Apps GitHub Organization",
   "url": "https://github.com/YunoHost-Apps",
@@ -951,7 +951,7 @@
       "url": "https://github.com/YunoHost-Apps/cinny_ynh",
       "stars": 3,
       "forks": 2,
-      "updated_at": "2025-06-15T17:08:48Z",
+      "updated_at": "2025-08-13T08:37:59Z",
       "language": "Shell",
       "archived": false
     },
@@ -1468,7 +1468,7 @@
       "url": "https://github.com/YunoHost-Apps/dendrite_ynh",
       "stars": 16,
       "forks": 8,
-      "updated_at": "2025-04-29T14:36:47Z",
+      "updated_at": "2025-08-13T23:46:48Z",
       "language": "Shell",
       "archived": false
     },
@@ -3974,9 +3974,9 @@
       "name": "kanboard",
       "description": "Kanboard package for YunoHost",
       "url": "https://github.com/YunoHost-Apps/kanboard_ynh",
-      "stars": 16,
+      "stars": 17,
       "forks": 17,
-      "updated_at": "2025-08-11T20:09:01Z",
+      "updated_at": "2025-08-14T05:57:41Z",
       "language": "PHP",
       "archived": false
     },
@@ -4876,9 +4876,9 @@
       "name": "mautrix_whatsapp",
       "description": "Matrix Whatsapp pupetting bridge for YunoHost",
       "url": "https://github.com/YunoHost-Apps/mautrix_whatsapp_ynh",
-      "stars": 28,
+      "stars": 27,
       "forks": 15,
-      "updated_at": "2025-07-27T18:02:43Z",
+      "updated_at": "2025-08-13T08:21:56Z",
       "language": "Shell",
       "archived": false
     },
@@ -8264,9 +8264,9 @@
       "name": "synapse",
       "description": "Matrix server (synapse) package for YunoHost",
       "url": "https://github.com/YunoHost-Apps/synapse_ynh",
-      "stars": 82,
+      "stars": 83,
       "forks": 43,
-      "updated_at": "2025-08-11T20:22:07Z",
+      "updated_at": "2025-08-13T15:30:42Z",
       "language": "Shell",
       "archived": false
     },
@@ -9388,7 +9388,7 @@
       "url": "https://github.com/YunoHost-Apps/yeswiki_ynh",
       "stars": 6,
       "forks": 6,
-      "updated_at": "2025-08-08T20:23:16Z",
+      "updated_at": "2025-08-13T19:02:33Z",
       "language": "Shell",
       "archived": false
     },

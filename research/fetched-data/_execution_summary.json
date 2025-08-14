@@ -1,18 +1,18 @@
 {
-  "timestamp": "2025-08-13T06:37:00.150Z",
+  "timestamp": "2025-08-14T06:37:16.225Z",
   "script": "run-all.js",
   "note": "Summary of all data fetching script executions",
   "data": {
-    "execution_time": "2025-08-13T06:37:00.150Z",
+    "execution_time": "2025-08-14T06:37:16.225Z",
     "total_scripts": 6,
     "successful": 6,
     "failed": 0,
-    "total_duration_ms": 17219,
+    "total_duration_ms": 17210,
     "results": [
       {
         "name": "CapRover UI Translations",
         "success": true,
-        "duration": 254,
+        "duration": 194,
         "result": [
           "ar-EG",
           "de-DE",
@@ -33,7 +33,7 @@
       {
         "name": "CasaOS UI Translations",
         "success": true,
-        "duration": 148,
+        "duration": 82,
         "result": [
           "ca_ES",
           "cs_CZ",
@@ -68,7 +68,7 @@
       {
         "name": "YunoHost Apps",
         "success": true,
-        "duration": 14406,
+        "duration": 15278,
         "result": {
           "count": 884,
           "apps": [
@@ -1003,7 +1003,7 @@
               "url": "https://github.com/YunoHost-Apps/cinny_ynh",
               "stars": 3,
               "forks": 2,
-              "updated_at": "2025-06-15T17:08:48Z",
+              "updated_at": "2025-08-13T08:37:59Z",
               "language": "Shell",
               "archived": false
             },
@@ -1520,7 +1520,7 @@
               "url": "https://github.com/YunoHost-Apps/dendrite_ynh",
               "stars": 16,
               "forks": 8,
-              "updated_at": "2025-04-29T14:36:47Z",
+              "updated_at": "2025-08-13T23:46:48Z",
               "language": "Shell",
               "archived": false
             },
@@ -4026,9 +4026,9 @@
               "name": "kanboard",
               "description": "Kanboard package for YunoHost",
               "url": "https://github.com/YunoHost-Apps/kanboard_ynh",
-              "stars": 16,
+              "stars": 17,
               "forks": 17,
-              "updated_at": "2025-08-11T20:09:01Z",
+              "updated_at": "2025-08-14T05:57:41Z",
               "language": "PHP",
               "archived": false
             },
@@ -4928,9 +4928,9 @@
               "name": "mautrix_whatsapp",
               "description": "Matrix Whatsapp pupetting bridge for YunoHost",
               "url": "https://github.com/YunoHost-Apps/mautrix_whatsapp_ynh",
-              "stars": 28,
+              "stars": 27,
               "forks": 15,
-              "updated_at": "2025-07-27T18:02:43Z",
+              "updated_at": "2025-08-13T08:21:56Z",
               "language": "Shell",
               "archived": false
             },
@@ -8316,9 +8316,9 @@
               "name": "synapse",
               "description": "Matrix server (synapse) package for YunoHost",
               "url": "https://github.com/YunoHost-Apps/synapse_ynh",
-              "stars": 82,
+              "stars": 83,
               "forks": 43,
-              "updated_at": "2025-08-11T20:22:07Z",
+              "updated_at": "2025-08-13T15:30:42Z",
               "language": "Shell",
               "archived": false
             },
@@ -9440,7 +9440,7 @@
               "url": "https://github.com/YunoHost-Apps/yeswiki_ynh",
               "stars": 6,
               "forks": 6,
-              "updated_at": "2025-08-08T20:23:16Z",
+              "updated_at": "2025-08-13T19:02:33Z",
               "language": "Shell",
               "archived": false
             },
@@ -9815,7 +9815,7 @@
       {
         "name": "YunoHost Docs Translations",
         "success": true,
-        "duration": 144,
+        "duration": 71,
         "result": [
           "ar",
           "ca",
@@ -9831,7 +9831,7 @@
       {
         "name": "YunoHost UI Translations",
         "success": true,
-        "duration": 2041,
+        "duration": 1323,
         "result": [
           {
             "language": "Basque",
@@ -10238,7 +10238,7 @@
       {
         "name": "Zimaboard Shipping Areas",
         "success": true,
-        "duration": 226,
+        "duration": 262,
         "result": [
           "Argentina",
           "Australia",
