@@ -1,5 +1,5 @@
 {
-  "timestamp": "2025-08-15T06:36:21.061Z",
+  "timestamp": "2025-08-16T06:33:22.559Z",
   "script": "scripts.test.js",
   "source": "YunoHost-Apps GitHub Organization",
   "url": "https://github.com/YunoHost-Apps",
@@ -786,7 +786,7 @@
       "url": "https://github.com/YunoHost-Apps/calibreweb_ynh",
       "stars": 19,
       "forks": 7,
-      "updated_at": "2025-05-15T19:48:48Z",
+      "updated_at": "2025-08-15T22:00:17Z",
       "language": "Shell",
       "archived": false
     },
@@ -852,7 +852,7 @@
       "url": "https://github.com/YunoHost-Apps/changedetection_ynh",
       "stars": 1,
       "forks": 0,
-      "updated_at": "2025-06-08T12:57:13Z",
+      "updated_at": "2025-08-15T12:07:23Z",
       "language": "Shell",
       "archived": false
     },
@@ -2491,7 +2491,7 @@
       "url": "https://github.com/YunoHost-Apps/flood_ynh",
       "stars": 2,
       "forks": 2,
-      "updated_at": "2025-06-15T17:10:00Z",
+      "updated_at": "2025-08-15T14:38:11Z",
       "language": "Shell",
       "archived": false
     },
@@ -3228,7 +3228,7 @@
       "url": "https://github.com/YunoHost-Apps/grist_ynh",
       "stars": 11,
       "forks": 4,
-      "updated_at": "2025-08-02T09:38:43Z",
+      "updated_at": "2025-08-15T07:50:58Z",
       "language": "Shell",
       "archived": false
     },
@@ -3426,7 +3426,7 @@
       "url": "https://github.com/YunoHost-Apps/homeassistant_ynh",
       "stars": 21,
       "forks": 16,
-      "updated_at": "2025-08-12T12:18:08Z",
+      "updated_at": "2025-08-15T21:44:34Z",
       "language": "Shell",
       "archived": false
     },
@@ -6165,7 +6165,7 @@
       "url": "https://github.com/YunoHost-Apps/paperless-ngx_ynh",
       "stars": 13,
       "forks": 13,
-      "updated_at": "2025-06-20T13:53:49Z",
+      "updated_at": "2025-08-15T20:38:51Z",
       "language": "Shell",
       "archived": false
     },
@@ -6647,9 +6647,9 @@
       "name": "pleroma",
       "description": "Pleroma package for YunoHost: A free, federated social networking server built on open protocols.",
       "url": "https://github.com/YunoHost-Apps/pleroma_ynh",
-      "stars": 29,
+      "stars": 28,
       "forks": 16,
-      "updated_at": "2025-03-23T16:16:21Z",
+      "updated_at": "2025-08-16T02:01:15Z",
       "language": "Shell",
       "archived": false
     },
@@ -7166,7 +7166,7 @@
       "url": "https://github.com/YunoHost-Apps/redlib_ynh",
       "stars": 8,
       "forks": 5,
-      "updated_at": "2025-07-22T07:40:42Z",
+      "updated_at": "2025-08-15T17:39:41Z",
       "language": "Shell",
       "archived": false
     },
@@ -9047,7 +9047,7 @@
       "url": "https://github.com/YunoHost-Apps/weblate_ynh",
       "stars": 13,
       "forks": 11,
-      "updated_at": "2025-06-17T06:03:56Z",
+      "updated_at": "2025-08-15T10:38:32Z",
       "language": "Python",
       "archived": false
     },
@@ -9311,7 +9311,7 @@
       "url": "https://github.com/YunoHost-Apps/X-prober_ynh",
       "stars": 2,
       "forks": 1,
-      "updated_at": "2025-05-09T20:53:35Z",
+      "updated_at": "2025-08-15T12:12:17Z",
       "language": "Shell",
       "archived": false
     },
