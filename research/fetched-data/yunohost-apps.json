@@ -1,5 +1,5 @@
 {
-  "timestamp": "2025-08-16T06:33:22.559Z",
+  "timestamp": "2025-08-17T06:34:11.458Z",
   "script": "scripts.test.js",
   "source": "YunoHost-Apps GitHub Organization",
   "url": "https://github.com/YunoHost-Apps",
@@ -995,7 +995,7 @@
       "url": "https://github.com/YunoHost-Apps/cloudlog_ynh",
       "stars": 1,
       "forks": 1,
-      "updated_at": "2025-08-03T08:19:56Z",
+      "updated_at": "2025-08-16T06:51:57Z",
       "language": "Shell",
       "archived": false
     },
@@ -1281,7 +1281,7 @@
       "url": "https://github.com/YunoHost-Apps/cryptpad_ynh",
       "stars": 30,
       "forks": 24,
-      "updated_at": "2025-07-09T19:10:19Z",
+      "updated_at": "2025-08-16T13:53:29Z",
       "language": "JavaScript",
       "archived": false
     },
@@ -1468,7 +1468,7 @@
       "url": "https://github.com/YunoHost-Apps/dendrite_ynh",
       "stars": 16,
       "forks": 8,
-      "updated_at": "2025-08-13T23:46:48Z",
+      "updated_at": "2025-08-16T10:26:23Z",
       "language": "Shell",
       "archived": false
     },
@@ -1611,7 +1611,7 @@
       "url": "https://github.com/YunoHost-Apps/discourse_ynh",
       "stars": 25,
       "forks": 12,
-      "updated_at": "2025-05-27T21:14:21Z",
+      "updated_at": "2025-08-16T16:10:23Z",
       "language": "Shell",
       "archived": false
     },
@@ -2348,7 +2348,7 @@
       "url": "https://github.com/YunoHost-Apps/filebrowser_ynh",
       "stars": 5,
       "forks": 3,
-      "updated_at": "2025-08-10T13:44:47Z",
+      "updated_at": "2025-08-17T05:01:40Z",
       "language": "Shell",
       "archived": false
     },
@@ -3426,7 +3426,7 @@
       "url": "https://github.com/YunoHost-Apps/homeassistant_ynh",
       "stars": 21,
       "forks": 16,
-      "updated_at": "2025-08-15T21:44:34Z",
+      "updated_at": "2025-08-16T16:14:22Z",
       "language": "Shell",
       "archived": false
     },
@@ -3634,7 +3634,7 @@
       "description": "Self-hosted photo and video backup solution directly from your mobile phone.",
       "url": "https://github.com/YunoHost-Apps/immich_ynh",
       "stars": 17,
-      "forks": 8,
+      "forks": 9,
       "updated_at": "2025-08-10T22:58:44Z",
       "language": "Shell",
       "archived": false
@@ -4130,7 +4130,7 @@
       "url": "https://github.com/YunoHost-Apps/koel_ynh",
       "stars": 1,
       "forks": 2,
-      "updated_at": "2025-08-11T06:51:57Z",
+      "updated_at": "2025-08-16T06:54:31Z",
       "language": "Shell",
       "archived": false
     },
@@ -4152,7 +4152,7 @@
       "url": "https://github.com/YunoHost-Apps/kresus_ynh",
       "stars": 20,
       "forks": 21,
-      "updated_at": "2025-06-04T16:40:50Z",
+      "updated_at": "2025-08-16T08:34:34Z",
       "language": "Shell",
       "archived": false
     },
@@ -4383,7 +4383,7 @@
       "url": "https://github.com/YunoHost-Apps/libretranslate_ynh",
       "stars": 3,
       "forks": 5,
-      "updated_at": "2025-07-27T18:55:07Z",
+      "updated_at": "2025-08-16T17:06:00Z",
       "language": "Shell",
       "archived": false
     },
@@ -5580,9 +5580,9 @@
       "name": "nextcloud-signaling",
       "description": "Standalone signaling server for Nextcloud Talk.",
       "url": "https://github.com/YunoHost-Apps/nextcloud-signaling_ynh",
-      "stars": 0,
+      "stars": 1,
       "forks": 3,
-      "updated_at": "2024-10-16T20:01:56Z",
+      "updated_at": "2025-08-16T21:29:33Z",
       "language": "Shell",
       "archived": false
     },
@@ -6858,7 +6858,7 @@
       "url": "https://github.com/YunoHost-Apps/prose_ynh",
       "stars": 0,
       "forks": 1,
-      "updated_at": "2025-08-08T05:38:05Z",
+      "updated_at": "2025-08-16T06:42:29Z",
       "language": "Shell",
       "archived": false
     },
@@ -8354,7 +8354,7 @@
       "url": "https://github.com/YunoHost-Apps/tandoor_ynh",
       "stars": 3,
       "forks": 8,
-      "updated_at": "2025-08-06T07:43:34Z",
+      "updated_at": "2025-08-16T18:18:05Z",
       "language": "Shell",
       "archived": false
     },
@@ -8914,7 +8914,7 @@
       "description": "VPN Client app for YunoHost",
       "url": "https://github.com/YunoHost-Apps/vpnclient_ynh",
       "stars": 43,
-      "forks": 27,
+      "forks": 28,
       "updated_at": "2025-06-02T07:39:10Z",
       "language": "Shell",
       "archived": false
@@ -9596,7 +9596,7 @@
       "description": "Web-based, open source user support/ticketing solution.",
       "url": "https://github.com/YunoHost-Apps/zammad_ynh",
       "stars": 1,
-      "forks": 0,
+      "forks": 1,
       "updated_at": "2024-05-15T18:04:11Z",
       "language": "Shell",
       "archived": false

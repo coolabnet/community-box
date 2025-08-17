@@ -1,18 +1,18 @@
 {
-  "timestamp": "2025-08-16T06:33:22.060Z",
+  "timestamp": "2025-08-17T06:34:10.725Z",
   "script": "run-all.js",
   "note": "Summary of all data fetching script executions",
   "data": {
-    "execution_time": "2025-08-16T06:33:22.060Z",
+    "execution_time": "2025-08-17T06:34:10.725Z",
     "total_scripts": 6,
     "successful": 6,
     "failed": 0,
-    "total_duration_ms": 12962,
+    "total_duration_ms": 13050,
     "results": [
       {
         "name": "CapRover UI Translations",
         "success": true,
-        "duration": 154,
+        "duration": 164,
         "result": [
           "ar-EG",
           "de-DE",
@@ -33,7 +33,7 @@
       {
         "name": "CasaOS UI Translations",
         "success": true,
-        "duration": 95,
+        "duration": 94,
         "result": [
           "ca_ES",
           "cs_CZ",
@@ -68,7 +68,7 @@
       {
         "name": "YunoHost Apps",
         "success": true,
-        "duration": 11001,
+        "duration": 10728,
         "result": {
           "count": 885,
           "apps": [
@@ -1047,7 +1047,7 @@
               "url": "https://github.com/YunoHost-Apps/cloudlog_ynh",
               "stars": 1,
               "forks": 1,
-              "updated_at": "2025-08-03T08:19:56Z",
+              "updated_at": "2025-08-16T06:51:57Z",
               "language": "Shell",
               "archived": false
             },
@@ -1333,7 +1333,7 @@
               "url": "https://github.com/YunoHost-Apps/cryptpad_ynh",
               "stars": 30,
               "forks": 24,
-              "updated_at": "2025-07-09T19:10:19Z",
+              "updated_at": "2025-08-16T13:53:29Z",
               "language": "JavaScript",
               "archived": false
             },
@@ -1520,7 +1520,7 @@
               "url": "https://github.com/YunoHost-Apps/dendrite_ynh",
               "stars": 16,
               "forks": 8,
-              "updated_at": "2025-08-13T23:46:48Z",
+              "updated_at": "2025-08-16T10:26:23Z",
               "language": "Shell",
               "archived": false
             },
@@ -1663,7 +1663,7 @@
               "url": "https://github.com/YunoHost-Apps/discourse_ynh",
               "stars": 25,
               "forks": 12,
-              "updated_at": "2025-05-27T21:14:21Z",
+              "updated_at": "2025-08-16T16:10:23Z",
               "language": "Shell",
               "archived": false
             },
@@ -2400,7 +2400,7 @@
               "url": "https://github.com/YunoHost-Apps/filebrowser_ynh",
               "stars": 5,
               "forks": 3,
-              "updated_at": "2025-08-10T13:44:47Z",
+              "updated_at": "2025-08-17T05:01:40Z",
               "language": "Shell",
               "archived": false
             },
@@ -3478,7 +3478,7 @@
               "url": "https://github.com/YunoHost-Apps/homeassistant_ynh",
               "stars": 21,
               "forks": 16,
-              "updated_at": "2025-08-15T21:44:34Z",
+              "updated_at": "2025-08-16T16:14:22Z",
               "language": "Shell",
               "archived": false
             },
@@ -3686,7 +3686,7 @@
               "description": "Self-hosted photo and video backup solution directly from your mobile phone.",
               "url": "https://github.com/YunoHost-Apps/immich_ynh",
               "stars": 17,
-              "forks": 8,
+              "forks": 9,
               "updated_at": "2025-08-10T22:58:44Z",
               "language": "Shell",
               "archived": false
@@ -4182,7 +4182,7 @@
               "url": "https://github.com/YunoHost-Apps/koel_ynh",
               "stars": 1,
               "forks": 2,
-              "updated_at": "2025-08-11T06:51:57Z",
+              "updated_at": "2025-08-16T06:54:31Z",
               "language": "Shell",
               "archived": false
             },
@@ -4204,7 +4204,7 @@
               "url": "https://github.com/YunoHost-Apps/kresus_ynh",
               "stars": 20,
               "forks": 21,
-              "updated_at": "2025-06-04T16:40:50Z",
+              "updated_at": "2025-08-16T08:34:34Z",
               "language": "Shell",
               "archived": false
             },
@@ -4435,7 +4435,7 @@
               "url": "https://github.com/YunoHost-Apps/libretranslate_ynh",
               "stars": 3,
               "forks": 5,
-              "updated_at": "2025-07-27T18:55:07Z",
+              "updated_at": "2025-08-16T17:06:00Z",
               "language": "Shell",
               "archived": false
             },
@@ -5632,9 +5632,9 @@
               "name": "nextcloud-signaling",
               "description": "Standalone signaling server for Nextcloud Talk.",
               "url": "https://github.com/YunoHost-Apps/nextcloud-signaling_ynh",
-              "stars": 0,
+              "stars": 1,
               "forks": 3,
-              "updated_at": "2024-10-16T20:01:56Z",
+              "updated_at": "2025-08-16T21:29:33Z",
               "language": "Shell",
               "archived": false
             },
@@ -6910,7 +6910,7 @@
               "url": "https://github.com/YunoHost-Apps/prose_ynh",
               "stars": 0,
               "forks": 1,
-              "updated_at": "2025-08-08T05:38:05Z",
+              "updated_at": "2025-08-16T06:42:29Z",
               "language": "Shell",
               "archived": false
             },
@@ -8406,7 +8406,7 @@
               "url": "https://github.com/YunoHost-Apps/tandoor_ynh",
               "stars": 3,
               "forks": 8,
-              "updated_at": "2025-08-06T07:43:34Z",
+              "updated_at": "2025-08-16T18:18:05Z",
               "language": "Shell",
               "archived": false
             },
@@ -8966,7 +8966,7 @@
               "description": "VPN Client app for YunoHost",
               "url": "https://github.com/YunoHost-Apps/vpnclient_ynh",
               "stars": 43,
-              "forks": 27,
+              "forks": 28,
               "updated_at": "2025-06-02T07:39:10Z",
               "language": "Shell",
               "archived": false
@@ -9648,7 +9648,7 @@
               "description": "Web-based, open source user support/ticketing solution.",
               "url": "https://github.com/YunoHost-Apps/zammad_ynh",
               "stars": 1,
-              "forks": 0,
+              "forks": 1,
               "updated_at": "2024-05-15T18:04:11Z",
               "language": "Shell",
               "archived": false
@@ -9826,7 +9826,7 @@
       {
         "name": "YunoHost Docs Translations",
         "success": true,
-        "duration": 79,
+        "duration": 109,
         "result": [
           "ar",
           "ca",
@@ -9842,7 +9842,7 @@
       {
         "name": "YunoHost UI Translations",
         "success": true,
-        "duration": 1443,
+        "duration": 1742,
         "result": [
           {
             "language": "Basque",
@@ -9851,6 +9851,14 @@
             "translated_words": 10442,
             "total_words": 10442,
             "last_change": "2025-08-12T17:15:15.537024Z"
+          },
+          {
+            "language": "French",
+            "language_code": "fr",
+            "translated_percent": 100,
+            "translated_words": 10442,
+            "total_words": 10442,
+            "last_change": "2025-08-16T22:31:19.590481Z"
           },
           {
             "language": "Basque",
@@ -9939,14 +9947,6 @@
             "translated_words": 139,
             "total_words": 139,
             "last_change": "2025-08-04T01:53:30.990748Z"
-          },
-          {
-            "language": "French",
-            "language_code": "fr",
-            "translated_percent": 99.7,
-            "translated_words": 10421,
-            "total_words": 10442,
-            "last_change": "2025-08-11T23:39:39.239451Z"
           },
           {
             "language": "Spanish",
@@ -10249,7 +10249,7 @@
       {
         "name": "Zimaboard Shipping Areas",
         "success": true,
-        "duration": 190,
+        "duration": 213,
         "result": [
           "Argentina",
           "Australia",
