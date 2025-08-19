@@ -1,5 +1,5 @@
 {
-  "timestamp": "2025-08-18T06:39:30.752Z",
+  "timestamp": "2025-08-19T06:35:19.499Z",
   "script": "scripts.test.js",
   "source": "YunoHost-Apps GitHub Organization",
   "url": "https://github.com/YunoHost-Apps",
@@ -951,7 +951,7 @@
       "url": "https://github.com/YunoHost-Apps/cinny_ynh",
       "stars": 3,
       "forks": 2,
-      "updated_at": "2025-08-13T08:37:59Z",
+      "updated_at": "2025-08-18T08:24:38Z",
       "language": "Shell",
       "archived": false
     },
@@ -1490,7 +1490,7 @@
       "url": "https://github.com/YunoHost-Apps/diacamma_ynh",
       "stars": 0,
       "forks": 1,
-      "updated_at": "2024-07-26T19:09:44Z",
+      "updated_at": "2025-08-18T16:58:28Z",
       "language": "Shell",
       "archived": false
     },
@@ -3347,9 +3347,9 @@
       "name": "headscale",
       "description": "FOSS implementation of the Tailscale control server, packaged for YunoHost",
       "url": "https://github.com/YunoHost-Apps/headscale_ynh",
-      "stars": 12,
+      "stars": 13,
       "forks": 6,
-      "updated_at": "2025-07-16T20:50:11Z",
+      "updated_at": "2025-08-19T01:16:03Z",
       "language": "Shell",
       "archived": false
     },
@@ -3634,7 +3634,7 @@
       "description": "Self-hosted photo and video backup solution directly from your mobile phone.",
       "url": "https://github.com/YunoHost-Apps/immich_ynh",
       "stars": 17,
-      "forks": 9,
+      "forks": 10,
       "updated_at": "2025-08-10T22:58:44Z",
       "language": "Shell",
       "archived": false
@@ -3787,9 +3787,9 @@
       "name": "jackett",
       "description": "Jackett package for YunoHost",
       "url": "https://github.com/YunoHost-Apps/jackett_ynh",
-      "stars": 0,
+      "stars": 1,
       "forks": 4,
-      "updated_at": "2025-08-11T06:55:06Z",
+      "updated_at": "2025-08-18T08:16:59Z",
       "language": "Shell",
       "archived": false
     },
@@ -3909,7 +3909,7 @@
       "description": "Video conference for YunoHost",
       "url": "https://github.com/YunoHost-Apps/jitsi_ynh",
       "stars": 21,
-      "forks": 19,
+      "forks": 20,
       "updated_at": "2025-03-18T19:40:03Z",
       "language": "JavaScript",
       "archived": false
@@ -5328,7 +5328,7 @@
       "description": "MotionEye package for YunoHost",
       "url": "https://github.com/YunoHost-Apps/motioneye_ynh",
       "stars": 0,
-      "forks": 3,
+      "forks": 4,
       "updated_at": "2024-11-22T17:39:08Z",
       "language": "Shell",
       "archived": false
@@ -5857,7 +5857,7 @@
       "url": "https://github.com/YunoHost-Apps/open-web-calendar_ynh",
       "stars": 0,
       "forks": 2,
-      "updated_at": "2025-07-10T06:34:32Z",
+      "updated_at": "2025-08-18T08:25:31Z",
       "language": "Shell",
       "archived": false
     },
@@ -7562,7 +7562,7 @@
       "url": "https://github.com/YunoHost-Apps/searxng_ynh",
       "stars": 13,
       "forks": 4,
-      "updated_at": "2025-08-11T06:38:28Z",
+      "updated_at": "2025-08-18T07:16:55Z",
       "language": "Shell",
       "archived": false
     },
@@ -8255,7 +8255,7 @@
       "url": "https://github.com/YunoHost-Apps/swingmusic_ynh",
       "stars": 0,
       "forks": 0,
-      "updated_at": "2025-08-15T05:00:03Z",
+      "updated_at": "2025-08-18T18:27:17Z",
       "language": "Shell",
       "archived": false
     },
@@ -8321,7 +8321,7 @@
       "url": "https://github.com/YunoHost-Apps/syncthing_ynh",
       "stars": 24,
       "forks": 6,
-      "updated_at": "2025-06-07T08:35:39Z",
+      "updated_at": "2025-08-18T09:06:44Z",
       "language": "Shell",
       "archived": false
     },
@@ -8684,7 +8684,7 @@
       "url": "https://github.com/YunoHost-Apps/ttrss_ynh",
       "stars": 17,
       "forks": 14,
-      "updated_at": "2025-08-11T06:42:44Z",
+      "updated_at": "2025-08-18T08:23:54Z",
       "language": "Shell",
       "archived": false
     },
@@ -8981,7 +8981,7 @@
       "url": "https://github.com/YunoHost-Apps/wanderer_ynh",
       "stars": 2,
       "forks": 0,
-      "updated_at": "2025-08-14T08:21:01Z",
+      "updated_at": "2025-08-19T06:12:21Z",
       "language": "Shell",
       "archived": false
     },
@@ -9388,7 +9388,7 @@
       "url": "https://github.com/YunoHost-Apps/yellow_ynh",
       "stars": 2,
       "forks": 1,
-      "updated_at": "2025-04-09T14:55:45Z",
+      "updated_at": "2025-08-18T08:25:07Z",
       "language": "Shell",
       "archived": false
     },
