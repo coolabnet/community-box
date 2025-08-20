@@ -1,5 +1,5 @@
 {
-  "timestamp": "2025-08-19T06:35:19.499Z",
+  "timestamp": "2025-08-20T06:35:24.272Z",
   "script": "scripts.test.js",
   "source": "YunoHost-Apps GitHub Organization",
   "url": "https://github.com/YunoHost-Apps",
@@ -148,7 +148,7 @@
       "url": "https://github.com/YunoHost-Apps/adventurelog_ynh",
       "stars": 1,
       "forks": 0,
-      "updated_at": "2025-08-08T15:50:58Z",
+      "updated_at": "2025-08-19T17:10:08Z",
       "language": "Shell",
       "archived": false
     },
@@ -3633,9 +3633,9 @@
       "name": "immich",
       "description": "Self-hosted photo and video backup solution directly from your mobile phone.",
       "url": "https://github.com/YunoHost-Apps/immich_ynh",
-      "stars": 17,
+      "stars": 18,
       "forks": 10,
-      "updated_at": "2025-08-10T22:58:44Z",
+      "updated_at": "2025-08-19T08:22:19Z",
       "language": "Shell",
       "archived": false
     },
@@ -4184,7 +4184,7 @@
       "description": "LanguageTool server package for YunoHost",
       "url": "https://github.com/YunoHost-Apps/languagetool_ynh",
       "stars": 4,
-      "forks": 5,
+      "forks": 6,
       "updated_at": "2025-03-23T13:57:07Z",
       "language": "Shell",
       "archived": false
@@ -4194,9 +4194,9 @@
       "name": "lasuite-docs",
       "description": "Collaborate and write in real time, with no layout constraints",
       "url": "https://github.com/YunoHost-Apps/lasuite-docs_ynh",
-      "stars": 2,
+      "stars": 3,
       "forks": 1,
-      "updated_at": "2025-08-02T20:02:56Z",
+      "updated_at": "2025-08-19T14:23:13Z",
       "language": "Shell",
       "archived": false
     },
@@ -4492,7 +4492,7 @@
       "description": "Listmonk package for YunoHost",
       "url": "https://github.com/YunoHost-Apps/listmonk_ynh",
       "stars": 5,
-      "forks": 3,
+      "forks": 4,
       "updated_at": "2025-07-07T06:49:08Z",
       "language": "Shell",
       "archived": false
@@ -4723,7 +4723,7 @@
       "description": "Free, open-source social network for YunoHost",
       "url": "https://github.com/YunoHost-Apps/mastodon_ynh",
       "stars": 86,
-      "forks": 39,
+      "forks": 40,
       "updated_at": "2025-07-09T20:08:16Z",
       "language": "Shell",
       "archived": false
@@ -5063,9 +5063,9 @@
       "name": "minecraft",
       "description": "Minecraft Server package for YunoHost",
       "url": "https://github.com/YunoHost-Apps/minecraft_ynh",
-      "stars": 12,
+      "stars": 13,
       "forks": 15,
-      "updated_at": "2025-03-01T20:28:04Z",
+      "updated_at": "2025-08-20T03:55:52Z",
       "language": "Shell",
       "archived": false
     },
@@ -5153,7 +5153,7 @@
       "url": "https://github.com/YunoHost-Apps/mitra_ynh",
       "stars": 1,
       "forks": 2,
-      "updated_at": "2025-08-02T11:14:28Z",
+      "updated_at": "2025-08-19T14:46:30Z",
       "language": "Shell",
       "archived": false
     },
@@ -5439,7 +5439,7 @@
       "url": "https://github.com/YunoHost-Apps/my_webapp_ynh",
       "stars": 51,
       "forks": 55,
-      "updated_at": "2025-08-12T23:22:52Z",
+      "updated_at": "2025-08-19T20:12:50Z",
       "language": "Shell",
       "archived": false
     },
@@ -5802,7 +5802,7 @@
       "url": "https://github.com/YunoHost-Apps/ollama_ynh",
       "stars": 2,
       "forks": 1,
-      "updated_at": "2025-08-09T06:09:47Z",
+      "updated_at": "2025-08-20T05:49:28Z",
       "language": "Shell",
       "archived": false
     },
@@ -5835,7 +5835,7 @@
       "url": "https://github.com/YunoHost-Apps/onlyoffice_ynh",
       "stars": 19,
       "forks": 19,
-      "updated_at": "2025-08-09T23:44:27Z",
+      "updated_at": "2025-08-19T07:06:39Z",
       "language": "Shell",
       "archived": false
     },
@@ -6614,9 +6614,9 @@
       "name": "plakar",
       "description": "Backup solution powered by Kloset and ptar",
       "url": "https://github.com/YunoHost-Apps/plakar_ynh",
-      "stars": 0,
+      "stars": 1,
       "forks": 0,
-      "updated_at": "2025-08-11T06:36:56Z",
+      "updated_at": "2025-08-20T06:27:22Z",
       "language": "Shell",
       "archived": false
     },
@@ -8827,7 +8827,7 @@
       "url": "https://github.com/YunoHost-Apps/uptime-kuma_ynh",
       "stars": 12,
       "forks": 5,
-      "updated_at": "2025-06-28T21:08:23Z",
+      "updated_at": "2025-08-19T18:34:45Z",
       "language": "Shell",
       "archived": false
     },
@@ -8914,7 +8914,7 @@
       "description": "VPN Client app for YunoHost",
       "url": "https://github.com/YunoHost-Apps/vpnclient_ynh",
       "stars": 43,
-      "forks": 28,
+      "forks": 29,
       "updated_at": "2025-06-02T07:39:10Z",
       "language": "Shell",
       "archived": false
@@ -8968,9 +8968,9 @@
       "name": "wallos",
       "description": "Wallos package for YunoHost",
       "url": "https://github.com/YunoHost-Apps/wallos_ynh",
-      "stars": 1,
+      "stars": 2,
       "forks": 0,
-      "updated_at": "2025-08-14T07:21:05Z",
+      "updated_at": "2025-08-19T16:30:50Z",
       "language": "Shell",
       "archived": false
     },

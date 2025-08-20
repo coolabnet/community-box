@@ -1,18 +1,18 @@
 {
-  "timestamp": "2025-08-19T06:35:18.775Z",
+  "timestamp": "2025-08-20T06:35:23.718Z",
   "script": "run-all.js",
   "note": "Summary of all data fetching script executions",
   "data": {
-    "execution_time": "2025-08-19T06:35:18.775Z",
+    "execution_time": "2025-08-20T06:35:23.718Z",
     "total_scripts": 6,
     "successful": 6,
     "failed": 0,
-    "total_duration_ms": 15740,
+    "total_duration_ms": 15107,
     "results": [
       {
         "name": "CapRover UI Translations",
         "success": true,
-        "duration": 256,
+        "duration": 152,
         "result": [
           "ar-EG",
           "de-DE",
@@ -33,7 +33,7 @@
       {
         "name": "CasaOS UI Translations",
         "success": true,
-        "duration": 106,
+        "duration": 137,
         "result": [
           "ca_ES",
           "cs_CZ",
@@ -68,7 +68,7 @@
       {
         "name": "YunoHost Apps",
         "success": true,
-        "duration": 13643,
+        "duration": 13046,
         "result": {
           "count": 885,
           "apps": [
@@ -200,7 +200,7 @@
               "url": "https://github.com/YunoHost-Apps/adventurelog_ynh",
               "stars": 1,
               "forks": 0,
-              "updated_at": "2025-08-08T15:50:58Z",
+              "updated_at": "2025-08-19T17:10:08Z",
               "language": "Shell",
               "archived": false
             },
@@ -3685,9 +3685,9 @@
               "name": "immich",
               "description": "Self-hosted photo and video backup solution directly from your mobile phone.",
               "url": "https://github.com/YunoHost-Apps/immich_ynh",
-              "stars": 17,
+              "stars": 18,
               "forks": 10,
-              "updated_at": "2025-08-10T22:58:44Z",
+              "updated_at": "2025-08-19T08:22:19Z",
               "language": "Shell",
               "archived": false
             },
@@ -4236,7 +4236,7 @@
               "description": "LanguageTool server package for YunoHost",
               "url": "https://github.com/YunoHost-Apps/languagetool_ynh",
               "stars": 4,
-              "forks": 5,
+              "forks": 6,
               "updated_at": "2025-03-23T13:57:07Z",
               "language": "Shell",
               "archived": false
@@ -4246,9 +4246,9 @@
               "name": "lasuite-docs",
               "description": "Collaborate and write in real time, with no layout constraints",
               "url": "https://github.com/YunoHost-Apps/lasuite-docs_ynh",
-              "stars": 2,
+              "stars": 3,
               "forks": 1,
-              "updated_at": "2025-08-02T20:02:56Z",
+              "updated_at": "2025-08-19T14:23:13Z",
               "language": "Shell",
               "archived": false
             },
@@ -4544,7 +4544,7 @@
               "description": "Listmonk package for YunoHost",
               "url": "https://github.com/YunoHost-Apps/listmonk_ynh",
               "stars": 5,
-              "forks": 3,
+              "forks": 4,
               "updated_at": "2025-07-07T06:49:08Z",
               "language": "Shell",
               "archived": false
@@ -4775,7 +4775,7 @@
               "description": "Free, open-source social network for YunoHost",
               "url": "https://github.com/YunoHost-Apps/mastodon_ynh",
               "stars": 86,
-              "forks": 39,
+              "forks": 40,
               "updated_at": "2025-07-09T20:08:16Z",
               "language": "Shell",
               "archived": false
@@ -5115,9 +5115,9 @@
               "name": "minecraft",
               "description": "Minecraft Server package for YunoHost",
               "url": "https://github.com/YunoHost-Apps/minecraft_ynh",
-              "stars": 12,
+              "stars": 13,
               "forks": 15,
-              "updated_at": "2025-03-01T20:28:04Z",
+              "updated_at": "2025-08-20T03:55:52Z",
               "language": "Shell",
               "archived": false
             },
@@ -5205,7 +5205,7 @@
               "url": "https://github.com/YunoHost-Apps/mitra_ynh",
               "stars": 1,
               "forks": 2,
-              "updated_at": "2025-08-02T11:14:28Z",
+              "updated_at": "2025-08-19T14:46:30Z",
               "language": "Shell",
               "archived": false
             },
@@ -5491,7 +5491,7 @@
               "url": "https://github.com/YunoHost-Apps/my_webapp_ynh",
               "stars": 51,
               "forks": 55,
-              "updated_at": "2025-08-12T23:22:52Z",
+              "updated_at": "2025-08-19T20:12:50Z",
               "language": "Shell",
               "archived": false
             },
@@ -5854,7 +5854,7 @@
               "url": "https://github.com/YunoHost-Apps/ollama_ynh",
               "stars": 2,
               "forks": 1,
-              "updated_at": "2025-08-09T06:09:47Z",
+              "updated_at": "2025-08-20T05:49:28Z",
               "language": "Shell",
               "archived": false
             },
@@ -5887,7 +5887,7 @@
               "url": "https://github.com/YunoHost-Apps/onlyoffice_ynh",
               "stars": 19,
               "forks": 19,
-              "updated_at": "2025-08-09T23:44:27Z",
+              "updated_at": "2025-08-19T07:06:39Z",
               "language": "Shell",
               "archived": false
             },
@@ -6666,9 +6666,9 @@
               "name": "plakar",
               "description": "Backup solution powered by Kloset and ptar",
               "url": "https://github.com/YunoHost-Apps/plakar_ynh",
-              "stars": 0,
+              "stars": 1,
               "forks": 0,
-              "updated_at": "2025-08-11T06:36:56Z",
+              "updated_at": "2025-08-20T06:27:22Z",
               "language": "Shell",
               "archived": false
             },
@@ -8879,7 +8879,7 @@
               "url": "https://github.com/YunoHost-Apps/uptime-kuma_ynh",
               "stars": 12,
               "forks": 5,
-              "updated_at": "2025-06-28T21:08:23Z",
+              "updated_at": "2025-08-19T18:34:45Z",
               "language": "Shell",
               "archived": false
             },
@@ -8966,7 +8966,7 @@
               "description": "VPN Client app for YunoHost",
               "url": "https://github.com/YunoHost-Apps/vpnclient_ynh",
               "stars": 43,
-              "forks": 28,
+              "forks": 29,
               "updated_at": "2025-06-02T07:39:10Z",
               "language": "Shell",
               "archived": false
@@ -9020,9 +9020,9 @@
               "name": "wallos",
               "description": "Wallos package for YunoHost",
               "url": "https://github.com/YunoHost-Apps/wallos_ynh",
-              "stars": 1,
+              "stars": 2,
               "forks": 0,
-              "updated_at": "2025-08-14T07:21:05Z",
+              "updated_at": "2025-08-19T16:30:50Z",
               "language": "Shell",
               "archived": false
             },
@@ -9826,7 +9826,7 @@
       {
         "name": "YunoHost Docs Translations",
         "success": true,
-        "duration": 82,
+        "duration": 80,
         "result": [
           "ar",
           "ca",
@@ -9842,7 +9842,7 @@
       {
         "name": "YunoHost UI Translations",
         "success": true,
-        "duration": 1453,
+        "duration": 1425,
         "result": [
           {
             "language": "Basque",
@@ -9933,6 +9933,14 @@
             "last_change": "2025-08-04T01:53:30.990748Z"
           },
           {
+            "language": "Basque",
+            "language_code": "eu",
+            "translated_percent": 99.8,
+            "translated_words": 10442,
+            "total_words": 10449,
+            "last_change": "2025-08-19T13:18:43.514104Z"
+          },
+          {
             "language": "French",
             "language_code": "fr",
             "translated_percent": 99.8,
@@ -9941,20 +9949,12 @@
             "last_change": "2025-08-18T21:57:46.346711Z"
           },
           {
-            "language": "Basque",
-            "language_code": "eu",
-            "translated_percent": 99.6,
-            "translated_words": 10405,
-            "total_words": 10449,
-            "last_change": "2025-08-18T21:34:17.702179Z"
-          },
-          {
             "language": "Spanish",
             "language_code": "es",
-            "translated_percent": 96.8,
-            "translated_words": 10014,
+            "translated_percent": 97,
+            "translated_words": 10051,
             "total_words": 10449,
-            "last_change": "2025-08-18T21:34:17.211295Z"
+            "last_change": "2025-08-19T13:18:42.768188Z"
           },
           {
             "language": "German",
@@ -10007,10 +10007,10 @@
           {
             "language": "Catalan",
             "language_code": "ca",
-            "translated_percent": 93,
-            "translated_words": 9727,
+            "translated_percent": 93.2,
+            "translated_words": 9764,
             "total_words": 10449,
-            "last_change": "2025-08-18T21:34:13.281369Z"
+            "last_change": "2025-08-19T13:18:40.998315Z"
           },
           {
             "language": "Portuguese",
@@ -10079,10 +10079,10 @@
           {
             "language": "German",
             "language_code": "de",
-            "translated_percent": 80.5,
-            "translated_words": 7756,
+            "translated_percent": 80.7,
+            "translated_words": 7793,
             "total_words": 10449,
-            "last_change": "2025-08-18T21:34:15.367170Z"
+            "last_change": "2025-08-19T13:18:41.560831Z"
           },
           {
             "language": "Arabic",
@@ -10095,10 +10095,10 @@
           {
             "language": "Italian",
             "language_code": "it",
-            "translated_percent": 64.2,
-            "translated_words": 6251,
+            "translated_percent": 64.4,
+            "translated_words": 6288,
             "total_words": 10449,
-            "last_change": "2025-08-18T21:34:22.970563Z"
+            "last_change": "2025-08-19T13:18:44.959904Z"
           },
           {
             "language": "Portuguese",
@@ -10119,10 +10119,10 @@
           {
             "language": "Esperanto",
             "language_code": "eo",
-            "translated_percent": 48.2,
-            "translated_words": 4126,
+            "translated_percent": 48.4,
+            "translated_words": 4163,
             "total_words": 10449,
-            "last_change": "2025-08-18T21:34:16.501029Z"
+            "last_change": "2025-08-19T13:18:42.326315Z"
           },
           {
             "language": "Esperanto",
@@ -10143,10 +10143,10 @@
           {
             "language": "Occitan",
             "language_code": "oc",
-            "translated_percent": 33.7,
-            "translated_words": 2362,
+            "translated_percent": 33.9,
+            "translated_words": 2399,
             "total_words": 10449,
-            "last_change": "2025-08-18T21:34:27.639283Z"
+            "last_change": "2025-08-19T13:18:46.073376Z"
           },
           {
             "language": "Arabic",
@@ -10249,7 +10249,7 @@
       {
         "name": "Zimaboard Shipping Areas",
         "success": true,
-        "duration": 200,
+        "duration": 267,
         "result": [
           "Argentina",
           "Australia",
