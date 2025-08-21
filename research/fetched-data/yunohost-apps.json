@@ -1,5 +1,5 @@
 {
-  "timestamp": "2025-08-20T06:35:24.272Z",
+  "timestamp": "2025-08-21T06:43:55.083Z",
   "script": "scripts.test.js",
   "source": "YunoHost-Apps GitHub Organization",
   "url": "https://github.com/YunoHost-Apps",
@@ -2171,7 +2171,7 @@
       "description": "Etherpad-Lite package for YunoHost",
       "url": "https://github.com/YunoHost-Apps/etherpad_ynh",
       "stars": 2,
-      "forks": 2,
+      "forks": 1,
       "updated_at": "2025-08-03T15:38:24Z",
       "language": "Shell",
       "archived": false
@@ -2425,7 +2425,7 @@
       "url": "https://github.com/YunoHost-Apps/firefly-iii_ynh",
       "stars": 22,
       "forks": 12,
-      "updated_at": "2025-07-18T06:49:34Z",
+      "updated_at": "2025-08-20T19:13:04Z",
       "language": "Shell",
       "archived": false
     },
@@ -3635,7 +3635,7 @@
       "url": "https://github.com/YunoHost-Apps/immich_ynh",
       "stars": 18,
       "forks": 10,
-      "updated_at": "2025-08-19T08:22:19Z",
+      "updated_at": "2025-08-21T06:20:28Z",
       "language": "Shell",
       "archived": false
     },
@@ -4678,9 +4678,9 @@
       "name": "mailman3",
       "description": "Mailman - The GNU Mailing List Management System packaged for YunoHost.",
       "url": "https://github.com/YunoHost-Apps/mailman3_ynh",
-      "stars": 7,
+      "stars": 8,
       "forks": 4,
-      "updated_at": "2025-01-02T00:17:52Z",
+      "updated_at": "2025-08-20T09:12:24Z",
       "language": "Shell",
       "archived": false
     },
@@ -5834,8 +5834,8 @@
       "description": "OnlyOffice package for YunoHost",
       "url": "https://github.com/YunoHost-Apps/onlyoffice_ynh",
       "stars": 19,
-      "forks": 19,
-      "updated_at": "2025-08-19T07:06:39Z",
+      "forks": 20,
+      "updated_at": "2025-08-20T14:33:36Z",
       "language": "Shell",
       "archived": false
     },
@@ -7485,7 +7485,7 @@
       "url": "https://github.com/YunoHost-Apps/scratch_ynh",
       "stars": 3,
       "forks": 1,
-      "updated_at": "2025-08-05T19:45:02Z",
+      "updated_at": "2025-08-20T19:08:29Z",
       "language": "Shell",
       "archived": false
     },
@@ -8596,7 +8596,7 @@
       "url": "https://github.com/YunoHost-Apps/traccar_ynh",
       "stars": 0,
       "forks": 3,
-      "updated_at": "2025-07-08T08:58:23Z",
+      "updated_at": "2025-08-20T19:10:17Z",
       "language": "Shell",
       "archived": false
     },
