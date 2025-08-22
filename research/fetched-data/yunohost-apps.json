@@ -1,5 +1,5 @@
 {
-  "timestamp": "2025-08-21T06:43:55.083Z",
+  "timestamp": "2025-08-22T06:34:43.889Z",
   "script": "scripts.test.js",
   "source": "YunoHost-Apps GitHub Organization",
   "url": "https://github.com/YunoHost-Apps",
@@ -115,7 +115,7 @@
       "url": "https://github.com/YunoHost-Apps/adguardhome_ynh",
       "stars": 16,
       "forks": 17,
-      "updated_at": "2025-08-02T14:11:55Z",
+      "updated_at": "2025-08-22T03:25:47Z",
       "language": "Shell",
       "archived": false
     },
@@ -213,7 +213,7 @@
       "description": "Web-based media streamer",
       "url": "https://github.com/YunoHost-Apps/airsonic_ynh",
       "stars": 10,
-      "forks": 8,
+      "forks": 9,
       "updated_at": "2025-01-13T17:59:18Z",
       "language": "Shell",
       "archived": false
@@ -1807,9 +1807,9 @@
       "name": "dolibarr",
       "description": "Dolibarr ERP & CRM is a modern software to manage your organization's activity. This is an integration of Dolibarr in YunoHost",
       "url": "https://github.com/YunoHost-Apps/dolibarr_ynh",
-      "stars": 14,
+      "stars": 15,
       "forks": 21,
-      "updated_at": "2025-08-11T08:20:03Z",
+      "updated_at": "2025-08-22T04:00:26Z",
       "language": "Shell",
       "archived": false
     },
@@ -2623,7 +2623,7 @@
       "url": "https://github.com/YunoHost-Apps/forte_ynh",
       "stars": 2,
       "forks": 0,
-      "updated_at": "2025-08-05T08:13:47Z",
+      "updated_at": "2025-08-21T22:29:40Z",
       "language": "Shell",
       "archived": false
     },
@@ -3921,7 +3921,7 @@
       "url": "https://github.com/YunoHost-Apps/joomla_ynh",
       "stars": 2,
       "forks": 6,
-      "updated_at": "2025-07-09T06:34:46Z",
+      "updated_at": "2025-08-22T03:57:04Z",
       "language": "Shell",
       "archived": false
     },
@@ -4636,7 +4636,7 @@
       "url": "https://github.com/YunoHost-Apps/lychee_ynh",
       "stars": 10,
       "forks": 7,
-      "updated_at": "2025-08-17T23:17:33Z",
+      "updated_at": "2025-08-22T03:51:05Z",
       "language": "Shell",
       "archived": false
     },
@@ -4723,7 +4723,7 @@
       "description": "Free, open-source social network for YunoHost",
       "url": "https://github.com/YunoHost-Apps/mastodon_ynh",
       "stars": 86,
-      "forks": 40,
+      "forks": 41,
       "updated_at": "2025-07-09T20:08:16Z",
       "language": "Shell",
       "archived": false
@@ -4975,9 +4975,9 @@
       "name": "memos",
       "description": "Memos package for YunoHost",
       "url": "https://github.com/YunoHost-Apps/memos_ynh",
-      "stars": 1,
+      "stars": 2,
       "forks": 2,
-      "updated_at": "2025-07-17T11:59:02Z",
+      "updated_at": "2025-08-21T16:27:24Z",
       "language": "Shell",
       "archived": false
     },
@@ -5802,7 +5802,7 @@
       "url": "https://github.com/YunoHost-Apps/ollama_ynh",
       "stars": 2,
       "forks": 1,
-      "updated_at": "2025-08-20T05:49:28Z",
+      "updated_at": "2025-08-22T05:20:37Z",
       "language": "Shell",
       "archived": false
     },
@@ -5868,7 +5868,7 @@
       "url": "https://github.com/YunoHost-Apps/open-webui_ynh",
       "stars": 2,
       "forks": 0,
-      "updated_at": "2025-08-09T06:40:23Z",
+      "updated_at": "2025-08-22T03:55:29Z",
       "language": "Shell",
       "archived": false
     },
@@ -8277,7 +8277,7 @@
       "url": "https://github.com/YunoHost-Apps/synapse_ynh",
       "stars": 83,
       "forks": 43,
-      "updated_at": "2025-08-13T15:30:42Z",
+      "updated_at": "2025-08-21T20:05:13Z",
       "language": "Shell",
       "archived": false
     },
@@ -9344,7 +9344,7 @@
       "url": "https://github.com/YunoHost-Apps/xwiki_ynh",
       "stars": 0,
       "forks": 1,
-      "updated_at": "2025-08-05T07:50:09Z",
+      "updated_at": "2025-08-21T20:04:53Z",
       "language": "Shell",
       "archived": false
     },
