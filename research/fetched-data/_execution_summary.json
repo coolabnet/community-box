@@ -1,18 +1,18 @@
 {
-  "timestamp": "2025-08-22T06:34:43.390Z",
+  "timestamp": "2025-08-23T06:31:17.368Z",
   "script": "run-all.js",
   "note": "Summary of all data fetching script executions",
   "data": {
-    "execution_time": "2025-08-22T06:34:43.390Z",
+    "execution_time": "2025-08-23T06:31:17.368Z",
     "total_scripts": 6,
     "successful": 6,
     "failed": 0,
-    "total_duration_ms": 15693,
+    "total_duration_ms": 14877,
     "results": [
       {
         "name": "CapRover UI Translations",
         "success": true,
-        "duration": 126,
+        "duration": 294,
         "result": [
           "ar-EG",
           "de-DE",
@@ -33,7 +33,7 @@
       {
         "name": "CasaOS UI Translations",
         "success": true,
-        "duration": 87,
+        "duration": 146,
         "result": [
           "ca_ES",
           "cs_CZ",
@@ -68,7 +68,7 @@
       {
         "name": "YunoHost Apps",
         "success": true,
-        "duration": 13456,
+        "duration": 12051,
         "result": {
           "count": 885,
           "apps": [
@@ -2080,7 +2080,7 @@
               "description": "Element package for YunoHost",
               "url": "https://github.com/YunoHost-Apps/element_ynh",
               "stars": 23,
-              "forks": 8,
+              "forks": 9,
               "updated_at": "2025-08-12T06:32:26Z",
               "language": "Shell",
               "archived": false
@@ -2795,7 +2795,7 @@
               "description": "Friendica package for YunoHost",
               "url": "https://github.com/YunoHost-Apps/friendica_ynh",
               "stars": 12,
-              "forks": 14,
+              "forks": 15,
               "updated_at": "2025-05-18T20:09:04Z",
               "language": "Shell",
               "archived": false
@@ -3478,7 +3478,7 @@
               "url": "https://github.com/YunoHost-Apps/homeassistant_ynh",
               "stars": 21,
               "forks": 16,
-              "updated_at": "2025-08-16T16:14:22Z",
+              "updated_at": "2025-08-22T08:16:35Z",
               "language": "Shell",
               "archived": false
             },
@@ -3687,7 +3687,7 @@
               "url": "https://github.com/YunoHost-Apps/immich_ynh",
               "stars": 18,
               "forks": 10,
-              "updated_at": "2025-08-21T06:20:28Z",
+              "updated_at": "2025-08-22T09:37:12Z",
               "language": "Shell",
               "archived": false
             },
@@ -4180,9 +4180,9 @@
               "name": "koel",
               "description": "A personal music streaming server, packaged for YunoHost",
               "url": "https://github.com/YunoHost-Apps/koel_ynh",
-              "stars": 1,
+              "stars": 2,
               "forks": 2,
-              "updated_at": "2025-08-16T06:54:31Z",
+              "updated_at": "2025-08-23T05:08:31Z",
               "language": "Shell",
               "archived": false
             },
@@ -5061,7 +5061,7 @@
               "description": "Metronome package for YunoHost",
               "url": "https://github.com/YunoHost-Apps/metronome_ynh",
               "stars": 1,
-              "forks": 1,
+              "forks": 2,
               "updated_at": "2025-03-26T23:19:47Z",
               "language": "Lua",
               "archived": false
@@ -5161,7 +5161,7 @@
               "url": "https://github.com/YunoHost-Apps/miniflux_ynh",
               "stars": 8,
               "forks": 2,
-              "updated_at": "2025-08-14T09:42:12Z",
+              "updated_at": "2025-08-22T06:46:05Z",
               "language": "Shell",
               "archived": false
             },
@@ -6578,9 +6578,9 @@
               "name": "pihole",
               "description": "Pi-hole package for YunoHost",
               "url": "https://github.com/YunoHost-Apps/pihole_ynh",
-              "stars": 19,
+              "stars": 20,
               "forks": 18,
-              "updated_at": "2025-03-14T04:56:43Z",
+              "updated_at": "2025-08-22T21:03:21Z",
               "language": "Shell",
               "archived": false
             },
@@ -9826,7 +9826,7 @@
       {
         "name": "YunoHost Docs Translations",
         "success": true,
-        "duration": 70,
+        "duration": 129,
         "result": [
           "ar",
           "ca",
@@ -9842,7 +9842,7 @@
       {
         "name": "YunoHost UI Translations",
         "success": true,
-        "duration": 1653,
+        "duration": 1923,
         "result": [
           {
             "language": "French",
@@ -9951,10 +9951,18 @@
           {
             "language": "Spanish",
             "language_code": "es",
-            "translated_percent": 97,
-            "translated_words": 10051,
+            "translated_percent": 99.2,
+            "translated_words": 10338,
             "total_words": 10449,
-            "last_change": "2025-08-19T13:18:42.768188Z"
+            "last_change": "2025-08-23T03:45:35.237801Z"
+          },
+          {
+            "language": "Spanish",
+            "language_code": "es",
+            "translated_percent": 99.1,
+            "translated_words": 3697,
+            "total_words": 3794,
+            "last_change": "2025-08-23T03:24:06.706846Z"
           },
           {
             "language": "German",
@@ -9963,14 +9971,6 @@
             "translated_words": 3609,
             "total_words": 3794,
             "last_change": "2025-08-03T01:53:44.332158Z"
-          },
-          {
-            "language": "Spanish",
-            "language_code": "es",
-            "translated_percent": 96.2,
-            "translated_words": 3609,
-            "total_words": 3794,
-            "last_change": "2025-08-03T01:53:49.603971Z"
           },
           {
             "language": "Dutch",
@@ -10249,7 +10249,7 @@
       {
         "name": "Zimaboard Shipping Areas",
         "success": true,
-        "duration": 301,
+        "duration": 334,
         "result": [
           "Argentina",
           "Australia",
