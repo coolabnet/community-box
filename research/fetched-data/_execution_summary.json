@@ -1,18 +1,18 @@
 {
-  "timestamp": "2025-08-23T06:31:17.368Z",
+  "timestamp": "2025-08-24T06:32:48.025Z",
   "script": "run-all.js",
   "note": "Summary of all data fetching script executions",
   "data": {
-    "execution_time": "2025-08-23T06:31:17.368Z",
+    "execution_time": "2025-08-24T06:32:48.025Z",
     "total_scripts": 6,
     "successful": 6,
     "failed": 0,
-    "total_duration_ms": 14877,
+    "total_duration_ms": 15877,
     "results": [
       {
         "name": "CapRover UI Translations",
         "success": true,
-        "duration": 294,
+        "duration": 227,
         "result": [
           "ar-EG",
           "de-DE",
@@ -33,7 +33,7 @@
       {
         "name": "CasaOS UI Translations",
         "success": true,
-        "duration": 146,
+        "duration": 185,
         "result": [
           "ca_ES",
           "cs_CZ",
@@ -68,7 +68,7 @@
       {
         "name": "YunoHost Apps",
         "success": true,
-        "duration": 12051,
+        "duration": 13066,
         "result": {
           "count": 885,
           "apps": [
@@ -4279,9 +4279,9 @@
               "name": "leantime",
               "description": "Leantime package for YunoHost",
               "url": "https://github.com/YunoHost-Apps/leantime_ynh",
-              "stars": 1,
-              "forks": 5,
-              "updated_at": "2025-08-02T07:35:26Z",
+              "stars": 2,
+              "forks": 6,
+              "updated_at": "2025-08-23T10:47:45Z",
               "language": "Shell",
               "archived": false
             },
@@ -5490,7 +5490,7 @@
               "description": "Custom Web app with SFTP access",
               "url": "https://github.com/YunoHost-Apps/my_webapp_ynh",
               "stars": 51,
-              "forks": 55,
+              "forks": 56,
               "updated_at": "2025-08-19T20:12:50Z",
               "language": "Shell",
               "archived": false
@@ -6271,7 +6271,7 @@
               "description": "Federated (ActivityPub) video streaming platform using P2P for YunoHost",
               "url": "https://github.com/YunoHost-Apps/peertube_ynh",
               "stars": 91,
-              "forks": 28,
+              "forks": 27,
               "updated_at": "2025-07-30T14:26:58Z",
               "language": "Shell",
               "archived": false
@@ -8406,7 +8406,7 @@
               "url": "https://github.com/YunoHost-Apps/tandoor_ynh",
               "stars": 3,
               "forks": 8,
-              "updated_at": "2025-08-18T05:17:44Z",
+              "updated_at": "2025-08-24T05:03:09Z",
               "language": "Shell",
               "archived": false
             },
@@ -9826,7 +9826,7 @@
       {
         "name": "YunoHost Docs Translations",
         "success": true,
-        "duration": 129,
+        "duration": 142,
         "result": [
           "ar",
           "ca",
@@ -9842,7 +9842,7 @@
       {
         "name": "YunoHost UI Translations",
         "success": true,
-        "duration": 1923,
+        "duration": 2049,
         "result": [
           {
             "language": "French",
@@ -9951,18 +9951,18 @@
           {
             "language": "Spanish",
             "language_code": "es",
-            "translated_percent": 99.2,
-            "translated_words": 10338,
-            "total_words": 10449,
-            "last_change": "2025-08-23T03:45:35.237801Z"
+            "translated_percent": 99.5,
+            "translated_words": 3749,
+            "total_words": 3794,
+            "last_change": "2025-08-23T23:13:04.228367Z"
           },
           {
             "language": "Spanish",
             "language_code": "es",
-            "translated_percent": 99.1,
-            "translated_words": 3697,
-            "total_words": 3794,
-            "last_change": "2025-08-23T03:24:06.706846Z"
+            "translated_percent": 99.2,
+            "translated_words": 10338,
+            "total_words": 10449,
+            "last_change": "2025-08-23T07:44:20.090785Z"
           },
           {
             "language": "German",
@@ -10249,7 +10249,7 @@
       {
         "name": "Zimaboard Shipping Areas",
         "success": true,
-        "duration": 334,
+        "duration": 208,
         "result": [
           "Argentina",
           "Australia",

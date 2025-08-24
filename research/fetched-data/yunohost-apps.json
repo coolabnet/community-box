@@ -1,5 +1,5 @@
 {
-  "timestamp": "2025-08-23T06:31:18.734Z",
+  "timestamp": "2025-08-24T06:32:48.789Z",
   "script": "scripts.test.js",
   "source": "YunoHost-Apps GitHub Organization",
   "url": "https://github.com/YunoHost-Apps",
@@ -4227,9 +4227,9 @@
       "name": "leantime",
       "description": "Leantime package for YunoHost",
       "url": "https://github.com/YunoHost-Apps/leantime_ynh",
-      "stars": 1,
-      "forks": 5,
-      "updated_at": "2025-08-02T07:35:26Z",
+      "stars": 2,
+      "forks": 6,
+      "updated_at": "2025-08-23T10:47:45Z",
       "language": "Shell",
       "archived": false
     },
@@ -5438,7 +5438,7 @@
       "description": "Custom Web app with SFTP access",
       "url": "https://github.com/YunoHost-Apps/my_webapp_ynh",
       "stars": 51,
-      "forks": 55,
+      "forks": 56,
       "updated_at": "2025-08-19T20:12:50Z",
       "language": "Shell",
       "archived": false
@@ -6219,7 +6219,7 @@
       "description": "Federated (ActivityPub) video streaming platform using P2P for YunoHost",
       "url": "https://github.com/YunoHost-Apps/peertube_ynh",
       "stars": 91,
-      "forks": 28,
+      "forks": 27,
       "updated_at": "2025-07-30T14:26:58Z",
       "language": "Shell",
       "archived": false
@@ -8354,7 +8354,7 @@
       "url": "https://github.com/YunoHost-Apps/tandoor_ynh",
       "stars": 3,
       "forks": 8,
-      "updated_at": "2025-08-18T05:17:44Z",
+      "updated_at": "2025-08-24T05:03:09Z",
       "language": "Shell",
       "archived": false
     },
