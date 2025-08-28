@@ -1,5 +1,5 @@
 {
-  "timestamp": "2025-08-27T06:33:05.832Z",
+  "timestamp": "2025-08-28T06:34:40.309Z",
   "script": "scripts.test.js",
   "source": "YunoHost-Apps GitHub Organization",
   "url": "https://github.com/YunoHost-Apps",
@@ -18,7 +18,7 @@
     "Shell",
     "TSQL"
   ],
-  "archived_count": 127,
+  "archived_count": 128,
   "data": [
     {
       "id": "13ft_ynh",
@@ -159,9 +159,9 @@
       "url": "https://github.com/YunoHost-Apps/aeneria_ynh",
       "stars": 11,
       "forks": 2,
-      "updated_at": "2024-08-16T12:09:49Z",
+      "updated_at": "2025-08-27T13:33:34Z",
       "language": "Shell",
-      "archived": false
+      "archived": true
     },
     {
       "id": "agendav_ynh",
@@ -434,7 +434,7 @@
       "url": "https://github.com/YunoHost-Apps/autobrr_ynh",
       "stars": 2,
       "forks": 1,
-      "updated_at": "2025-08-11T06:54:10Z",
+      "updated_at": "2025-08-27T10:17:28Z",
       "language": "Shell",
       "archived": false
     },
@@ -2843,7 +2843,7 @@
       "url": "https://github.com/YunoHost-Apps/gancio_ynh",
       "stars": 1,
       "forks": 5,
-      "updated_at": "2025-06-22T06:43:17Z",
+      "updated_at": "2025-08-27T10:50:42Z",
       "language": "Shell",
       "archived": false
     },
@@ -2942,7 +2942,7 @@
       "url": "https://github.com/YunoHost-Apps/ghost_ynh",
       "stars": 21,
       "forks": 30,
-      "updated_at": "2025-07-31T08:30:01Z",
+      "updated_at": "2025-08-27T15:30:54Z",
       "language": "Shell",
       "archived": false
     },
@@ -3535,7 +3535,7 @@
       "description": "Static site generator, packaged for YunoHost",
       "url": "https://github.com/YunoHost-Apps/hugo_ynh",
       "stars": 1,
-      "forks": 3,
+      "forks": 4,
       "updated_at": "2025-06-26T05:53:56Z",
       "language": "Shell",
       "archived": false
@@ -3633,9 +3633,9 @@
       "name": "immich",
       "description": "Self-hosted photo and video backup solution directly from your mobile phone.",
       "url": "https://github.com/YunoHost-Apps/immich_ynh",
-      "stars": 18,
+      "stars": 19,
       "forks": 10,
-      "updated_at": "2025-08-27T06:11:49Z",
+      "updated_at": "2025-08-27T16:53:05Z",
       "language": "Shell",
       "archived": false
     },
@@ -3767,7 +3767,7 @@
       "url": "https://github.com/YunoHost-Apps/it-tools_ynh",
       "stars": 0,
       "forks": 0,
-      "updated_at": "2025-08-26T17:02:20Z",
+      "updated_at": "2025-08-27T08:13:22Z",
       "language": "Shell",
       "archived": false
     },
@@ -3789,7 +3789,7 @@
       "url": "https://github.com/YunoHost-Apps/jackett_ynh",
       "stars": 1,
       "forks": 4,
-      "updated_at": "2025-08-18T08:16:59Z",
+      "updated_at": "2025-08-27T23:01:42Z",
       "language": "Shell",
       "archived": false
     },
@@ -5868,7 +5868,7 @@
       "url": "https://github.com/YunoHost-Apps/open-webui_ynh",
       "stars": 2,
       "forks": 0,
-      "updated_at": "2025-08-26T09:53:19Z",
+      "updated_at": "2025-08-27T21:42:50Z",
       "language": "Shell",
       "archived": false
     },
@@ -7485,7 +7485,7 @@
       "url": "https://github.com/YunoHost-Apps/scratch_ynh",
       "stars": 3,
       "forks": 1,
-      "updated_at": "2025-08-20T19:08:29Z",
+      "updated_at": "2025-08-27T09:42:44Z",
       "language": "Shell",
       "archived": false
     },
