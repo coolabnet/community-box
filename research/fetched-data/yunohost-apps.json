@@ -1,5 +1,5 @@
 {
-  "timestamp": "2025-08-29T06:33:18.711Z",
+  "timestamp": "2025-08-30T06:29:46.627Z",
   "script": "scripts.test.js",
   "source": "YunoHost-Apps GitHub Organization",
   "url": "https://github.com/YunoHost-Apps",
@@ -1809,7 +1809,7 @@
       "url": "https://github.com/YunoHost-Apps/dolibarr_ynh",
       "stars": 15,
       "forks": 21,
-      "updated_at": "2025-08-22T04:00:26Z",
+      "updated_at": "2025-08-29T12:57:20Z",
       "language": "Shell",
       "archived": false
     },
@@ -2951,9 +2951,9 @@
       "name": "gitea",
       "description": "Gitea is a fork of Gogs. A git platform, Mirror of https://framagit.org/YunoHost-Apps/gitea_ynh",
       "url": "https://github.com/YunoHost-Apps/gitea_ynh",
-      "stars": 26,
+      "stars": 27,
       "forks": 18,
-      "updated_at": "2025-06-26T10:31:09Z",
+      "updated_at": "2025-08-29T13:29:00Z",
       "language": "Shell",
       "archived": false
     },
@@ -3217,7 +3217,7 @@
       "url": "https://github.com/YunoHost-Apps/grav_ynh",
       "stars": 18,
       "forks": 13,
-      "updated_at": "2025-08-26T17:07:12Z",
+      "updated_at": "2025-08-29T14:37:04Z",
       "language": "Shell",
       "archived": false
     },
@@ -3228,7 +3228,7 @@
       "url": "https://github.com/YunoHost-Apps/grist_ynh",
       "stars": 11,
       "forks": 4,
-      "updated_at": "2025-08-15T07:50:58Z",
+      "updated_at": "2025-08-29T07:51:17Z",
       "language": "Shell",
       "archived": false
     },
@@ -3635,7 +3635,7 @@
       "url": "https://github.com/YunoHost-Apps/immich_ynh",
       "stars": 20,
       "forks": 11,
-      "updated_at": "2025-08-28T17:46:27Z",
+      "updated_at": "2025-08-29T14:53:57Z",
       "language": "Shell",
       "archived": false
     },
@@ -3723,7 +3723,7 @@
       "url": "https://github.com/YunoHost-Apps/invoiceninja5_ynh",
       "stars": 11,
       "forks": 6,
-      "updated_at": "2025-08-26T17:04:06Z",
+      "updated_at": "2025-08-29T07:42:29Z",
       "language": "Shell",
       "archived": false
     },
@@ -4953,9 +4953,9 @@
       "name": "meet",
       "description": "Simple and Secure Video Conferencing. Powered by LiveKit.",
       "url": "https://github.com/YunoHost-Apps/meet_ynh",
-      "stars": 1,
+      "stars": 0,
       "forks": 0,
-      "updated_at": "2025-06-06T12:19:17Z",
+      "updated_at": "2025-08-29T23:45:16Z",
       "language": "Shell",
       "archived": false
     },
@@ -5802,7 +5802,7 @@
       "url": "https://github.com/YunoHost-Apps/ollama_ynh",
       "stars": 2,
       "forks": 1,
-      "updated_at": "2025-08-26T05:23:02Z",
+      "updated_at": "2025-08-30T06:18:52Z",
       "language": "Shell",
       "archived": false
     },
@@ -6042,9 +6042,9 @@
       "name": "outline",
       "description": "An open, extensible, wiki for your team built using React and Node.js",
       "url": "https://github.com/YunoHost-Apps/outline_ynh",
-      "stars": 18,
+      "stars": 19,
       "forks": 11,
-      "updated_at": "2025-05-27T21:29:56Z",
+      "updated_at": "2025-08-29T09:10:21Z",
       "language": "Shell",
       "archived": false
     },
@@ -6439,7 +6439,7 @@
       "description": "phpLDAPadmin package for YunoHost",
       "url": "https://github.com/YunoHost-Apps/phpldapadmin_ynh",
       "stars": 3,
-      "forks": 7,
+      "forks": 8,
       "updated_at": "2025-07-07T09:27:43Z",
       "language": "Shell",
       "archived": false
@@ -7485,7 +7485,7 @@
       "url": "https://github.com/YunoHost-Apps/scratch_ynh",
       "stars": 3,
       "forks": 1,
-      "updated_at": "2025-08-27T09:42:44Z",
+      "updated_at": "2025-08-29T08:08:50Z",
       "language": "Shell",
       "archived": false
     },
@@ -7935,7 +7935,7 @@
       "description": "SOGo Groupware for YunoHost.",
       "url": "https://github.com/YunoHost-Apps/sogo_ynh",
       "stars": 7,
-      "forks": 7,
+      "forks": 8,
       "updated_at": "2025-05-18T20:31:23Z",
       "language": "Shell",
       "archived": false
@@ -8277,7 +8277,7 @@
       "url": "https://github.com/YunoHost-Apps/synapse_ynh",
       "stars": 83,
       "forks": 43,
-      "updated_at": "2025-08-21T20:05:13Z",
+      "updated_at": "2025-08-29T23:04:14Z",
       "language": "Shell",
       "archived": false
     },
@@ -8981,7 +8981,7 @@
       "url": "https://github.com/YunoHost-Apps/wanderer_ynh",
       "stars": 2,
       "forks": 0,
-      "updated_at": "2025-08-25T05:53:00Z",
+      "updated_at": "2025-08-29T08:36:52Z",
       "language": "Shell",
       "archived": false
     },
