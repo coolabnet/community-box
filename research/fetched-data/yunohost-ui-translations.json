@@ -1,14 +1,22 @@
 {
-  "timestamp": "2025-09-02T06:34:59.906Z",
+  "timestamp": "2025-09-03T06:31:55.433Z",
   "script": "scripts.test.js",
   "source": "YunoHost Translation Platform",
   "url": "https://translate.yunohost.org/",
   "api_url": "https://translate.yunohost.org/api/translations/?format=json",
   "total_languages": 50,
-  "fully_translated": 11,
-  "partially_translated": 36,
+  "fully_translated": 13,
+  "partially_translated": 34,
   "not_started": 3,
   "data": [
+    {
+      "language": "Basque",
+      "language_code": "eu",
+      "translated_percent": 100,
+      "translated_words": 10449,
+      "total_words": 10449,
+      "last_change": "2025-09-02T20:37:21.534947Z"
+    },
     {
       "language": "French",
       "language_code": "fr",
@@ -16,6 +24,14 @@
       "translated_words": 10449,
       "total_words": 10449,
       "last_change": "2025-08-21T00:44:10.299754Z"
+    },
+    {
+      "language": "Basque",
+      "language_code": "eu",
+      "translated_percent": 100,
+      "translated_words": 3819,
+      "total_words": 3819,
+      "last_change": "2025-09-02T20:45:40.546522Z"
     },
     {
       "language": "French",
@@ -96,22 +112,6 @@
       "translated_words": 139,
       "total_words": 139,
       "last_change": "2025-08-04T01:53:30.990748Z"
-    },
-    {
-      "language": "Basque",
-      "language_code": "eu",
-      "translated_percent": 99.8,
-      "translated_words": 10442,
-      "total_words": 10449,
-      "last_change": "2025-08-19T13:18:43.514104Z"
-    },
-    {
-      "language": "Basque",
-      "language_code": "eu",
-      "translated_percent": 99.5,
-      "translated_words": 3794,
-      "total_words": 3819,
-      "last_change": "2025-08-31T13:15:11.596809Z"
     },
     {
       "language": "Spanish",
