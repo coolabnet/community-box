@@ -1,5 +1,5 @@
 {
-  "timestamp": "2025-09-05T06:33:27.961Z",
+  "timestamp": "2025-09-06T06:29:15.489Z",
   "script": "scripts.test.js",
   "source": "YunoHost-Apps GitHub Organization",
   "url": "https://github.com/YunoHost-Apps",
@@ -104,7 +104,7 @@
       "url": "https://github.com/YunoHost-Apps/actual_ynh",
       "stars": 6,
       "forks": 5,
-      "updated_at": "2025-08-03T00:05:13Z",
+      "updated_at": "2025-09-05T08:24:53Z",
       "language": "Shell",
       "archived": false
     },
@@ -1178,11 +1178,11 @@
     {
       "id": "convos_ynh",
       "name": "convos",
-      "description": "",
+      "description": "Convos package for YunoHost",
       "url": "https://github.com/YunoHost-Apps/convos_ynh",
       "stars": 0,
       "forks": 1,
-      "updated_at": "2025-08-30T17:15:09Z",
+      "updated_at": "2025-09-05T15:12:49Z",
       "language": "Shell",
       "archived": false
     },
@@ -1391,7 +1391,7 @@
       "url": "https://github.com/YunoHost-Apps/dagu_ynh",
       "stars": 0,
       "forks": 2,
-      "updated_at": "2025-08-30T17:16:34Z",
+      "updated_at": "2025-09-05T09:05:55Z",
       "language": "Shell",
       "archived": false
     },
@@ -1908,7 +1908,7 @@
       "url": "https://github.com/YunoHost-Apps/dumbdrop_ynh",
       "stars": 1,
       "forks": 2,
-      "updated_at": "2025-08-30T17:18:02Z",
+      "updated_at": "2025-09-05T09:05:40Z",
       "language": "Shell",
       "archived": false
     },
@@ -2029,7 +2029,7 @@
       "url": "https://github.com/YunoHost-Apps/element_ynh",
       "stars": 23,
       "forks": 9,
-      "updated_at": "2025-08-12T06:32:26Z",
+      "updated_at": "2025-09-05T06:48:04Z",
       "language": "Shell",
       "archived": false
     },
@@ -2787,7 +2787,7 @@
       "description": "A modern, convivial and free music server on YunoHost",
       "url": "https://github.com/YunoHost-Apps/funkwhale_ynh",
       "stars": 79,
-      "forks": 24,
+      "forks": 25,
       "updated_at": "2025-09-03T05:16:19Z",
       "language": "Shell",
       "archived": false
@@ -3228,7 +3228,7 @@
       "url": "https://github.com/YunoHost-Apps/grist_ynh",
       "stars": 11,
       "forks": 4,
-      "updated_at": "2025-08-30T17:13:55Z",
+      "updated_at": "2025-09-05T08:38:02Z",
       "language": "Shell",
       "archived": false
     },
@@ -3371,7 +3371,7 @@
       "url": "https://github.com/YunoHost-Apps/hedgedoc_ynh",
       "stars": 13,
       "forks": 8,
-      "updated_at": "2025-09-03T07:22:23Z",
+      "updated_at": "2025-09-05T19:00:47Z",
       "language": "Shell",
       "archived": false
     },
@@ -3734,7 +3734,7 @@
       "url": "https://github.com/YunoHost-Apps/invoiceshelf_ynh",
       "stars": 0,
       "forks": 1,
-      "updated_at": "2025-08-30T17:17:09Z",
+      "updated_at": "2025-09-05T22:48:10Z",
       "language": "Shell",
       "archived": false
     },
@@ -4877,7 +4877,7 @@
       "description": "Matrix Whatsapp pupetting bridge for YunoHost",
       "url": "https://github.com/YunoHost-Apps/mautrix_whatsapp_ynh",
       "stars": 28,
-      "forks": 15,
+      "forks": 16,
       "updated_at": "2025-08-30T17:06:04Z",
       "language": "Shell",
       "archived": false
@@ -5570,7 +5570,7 @@
       "description": "Nextcloud package for YunoHost",
       "url": "https://github.com/YunoHost-Apps/nextcloud_ynh",
       "stars": 163,
-      "forks": 67,
+      "forks": 68,
       "updated_at": "2025-08-31T19:48:43Z",
       "language": "Shell",
       "archived": false
@@ -5802,7 +5802,7 @@
       "url": "https://github.com/YunoHost-Apps/ollama_ynh",
       "stars": 2,
       "forks": 2,
-      "updated_at": "2025-09-03T05:18:40Z",
+      "updated_at": "2025-09-06T05:07:18Z",
       "language": "Shell",
       "archived": false
     },
@@ -7133,7 +7133,7 @@
       "url": "https://github.com/YunoHost-Apps/readeck_ynh",
       "stars": 3,
       "forks": 4,
-      "updated_at": "2025-09-02T18:37:01Z",
+      "updated_at": "2025-09-05T22:49:02Z",
       "language": "Shell",
       "archived": false
     },
@@ -7309,7 +7309,7 @@
       "url": "https://github.com/YunoHost-Apps/rocketchat_ynh",
       "stars": 16,
       "forks": 22,
-      "updated_at": "2025-09-04T19:58:34Z",
+      "updated_at": "2025-09-05T19:03:23Z",
       "language": "Shell",
       "archived": false
     },
@@ -8332,7 +8332,7 @@
       "url": "https://github.com/YunoHost-Apps/tableaunoir_ynh",
       "stars": 0,
       "forks": 1,
-      "updated_at": "2025-08-30T17:16:03Z",
+      "updated_at": "2025-09-05T15:31:30Z",
       "language": "Shell",
       "archived": false
     },
@@ -8354,7 +8354,7 @@
       "url": "https://github.com/YunoHost-Apps/tandoor_ynh",
       "stars": 3,
       "forks": 8,
-      "updated_at": "2025-09-03T20:17:34Z",
+      "updated_at": "2025-09-06T06:22:16Z",
       "language": "Shell",
       "archived": false
     },
