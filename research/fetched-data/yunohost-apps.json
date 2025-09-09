@@ -1,5 +1,5 @@
 {
-  "timestamp": "2025-09-08T06:35:07.864Z",
+  "timestamp": "2025-09-09T06:34:29.547Z",
   "script": "scripts.test.js",
   "source": "YunoHost-Apps GitHub Organization",
   "url": "https://github.com/YunoHost-Apps",
@@ -1402,7 +1402,7 @@
       "url": "https://github.com/YunoHost-Apps/dato_ynh",
       "stars": 6,
       "forks": 1,
-      "updated_at": "2025-08-30T17:07:24Z",
+      "updated_at": "2025-09-08T12:35:38Z",
       "language": "Shell",
       "archived": false
     },
@@ -1610,7 +1610,7 @@
       "description": "Discourse package for YunoHost",
       "url": "https://github.com/YunoHost-Apps/discourse_ynh",
       "stars": 25,
-      "forks": 13,
+      "forks": 14,
       "updated_at": "2025-08-16T16:10:23Z",
       "language": "Shell",
       "archived": false
@@ -2247,9 +2247,9 @@
       "name": "fail2ban-web",
       "description": "Monitoring fail2ban and manually ban / release IP's",
       "url": "https://github.com/YunoHost-Apps/fail2ban-web_ynh",
-      "stars": 1,
+      "stars": 2,
       "forks": 0,
-      "updated_at": "2025-01-26T08:07:51Z",
+      "updated_at": "2025-09-08T13:52:37Z",
       "language": "Shell",
       "archived": false
     },
@@ -2390,9 +2390,9 @@
       "name": "findmydevice",
       "description": "Find My Device Server package for YunoHost",
       "url": "https://github.com/YunoHost-Apps/findmydevice_ynh",
-      "stars": 1,
+      "stars": 2,
       "forks": 2,
-      "updated_at": "2025-08-30T17:14:09Z",
+      "updated_at": "2025-09-08T13:53:38Z",
       "language": "Shell",
       "archived": false
     },
@@ -2733,7 +2733,7 @@
       "url": "https://github.com/YunoHost-Apps/freshrss_ynh",
       "stars": 31,
       "forks": 22,
-      "updated_at": "2025-08-11T06:38:44Z",
+      "updated_at": "2025-09-09T05:40:17Z",
       "language": "Shell",
       "archived": false
     },
@@ -3173,7 +3173,7 @@
       "url": "https://github.com/YunoHost-Apps/gotosocial_ynh",
       "stars": 20,
       "forks": 8,
-      "updated_at": "2025-09-07T18:33:29Z",
+      "updated_at": "2025-09-09T05:47:38Z",
       "language": "Shell",
       "archived": false
     },
@@ -3424,9 +3424,9 @@
       "name": "homeassistant",
       "description": "Home automation platform package for YunoHost",
       "url": "https://github.com/YunoHost-Apps/homeassistant_ynh",
-      "stars": 21,
+      "stars": 22,
       "forks": 16,
-      "updated_at": "2025-09-06T11:56:19Z",
+      "updated_at": "2025-09-08T13:51:56Z",
       "language": "Shell",
       "archived": false
     },
@@ -3635,7 +3635,7 @@
       "url": "https://github.com/YunoHost-Apps/immich_ynh",
       "stars": 20,
       "forks": 11,
-      "updated_at": "2025-09-06T11:58:14Z",
+      "updated_at": "2025-09-08T11:00:39Z",
       "language": "Shell",
       "archived": false
     },
@@ -3866,7 +3866,7 @@
       "url": "https://github.com/YunoHost-Apps/jellyfin-vue_ynh",
       "stars": 0,
       "forks": 3,
-      "updated_at": "2025-08-30T17:13:26Z",
+      "updated_at": "2025-09-08T08:45:17Z",
       "language": "Shell",
       "archived": false
     },
@@ -6561,7 +6561,7 @@
       "url": "https://github.com/YunoHost-Apps/piped_ynh",
       "stars": 2,
       "forks": 2,
-      "updated_at": "2025-09-07T19:34:25Z",
+      "updated_at": "2025-09-08T09:12:34Z",
       "language": "Shell",
       "archived": false
     },
@@ -7527,9 +7527,9 @@
       "name": "scrutiny",
       "description": "WebUI for smartd S.M.A.R.T monitoring",
       "url": "https://github.com/YunoHost-Apps/scrutiny_ynh",
-      "stars": 0,
+      "stars": 1,
       "forks": 1,
-      "updated_at": "2024-11-19T09:45:55Z",
+      "updated_at": "2025-09-08T13:52:15Z",
       "language": "Shell",
       "archived": false
     },
@@ -7562,7 +7562,7 @@
       "url": "https://github.com/YunoHost-Apps/searxng_ynh",
       "stars": 13,
       "forks": 4,
-      "updated_at": "2025-09-01T06:20:33Z",
+      "updated_at": "2025-09-08T08:32:36Z",
       "language": "Shell",
       "archived": false
     },
@@ -8354,7 +8354,7 @@
       "url": "https://github.com/YunoHost-Apps/tandoor_ynh",
       "stars": 3,
       "forks": 8,
-      "updated_at": "2025-09-06T06:22:16Z",
+      "updated_at": "2025-09-09T05:14:43Z",
       "language": "Shell",
       "archived": false
     },
@@ -8684,7 +8684,7 @@
       "url": "https://github.com/YunoHost-Apps/ttrss_ynh",
       "stars": 17,
       "forks": 14,
-      "updated_at": "2025-09-03T07:21:56Z",
+      "updated_at": "2025-09-08T12:36:57Z",
       "language": "Shell",
       "archived": false
     },
@@ -9749,9 +9749,9 @@
       "name": "zwiicms",
       "description": "Zwii - le CMS simple, léger, sans base de données (Flat-File), modulable et responsive !",
       "url": "https://github.com/YunoHost-Apps/zwiicms_ynh",
-      "stars": 0,
+      "stars": 1,
       "forks": 1,
-      "updated_at": "2025-08-30T17:12:29Z",
+      "updated_at": "2025-09-08T13:52:40Z",
       "language": "Shell",
       "archived": false
     }
