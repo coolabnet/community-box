@@ -1,5 +1,5 @@
 {
-  "timestamp": "2025-09-09T06:34:29.547Z",
+  "timestamp": "2025-09-10T06:33:11.931Z",
   "script": "scripts.test.js",
   "source": "YunoHost-Apps GitHub Organization",
   "url": "https://github.com/YunoHost-Apps",
@@ -1292,7 +1292,7 @@
       "url": "https://github.com/YunoHost-Apps/cryptroot-unlock_ynh",
       "stars": 1,
       "forks": 0,
-      "updated_at": "2025-08-17T13:57:27Z",
+      "updated_at": "2025-09-09T15:28:40Z",
       "language": "Shell",
       "archived": false
     },
@@ -2216,7 +2216,7 @@
       "url": "https://github.com/YunoHost-Apps/faceprivacy_ynh",
       "stars": 1,
       "forks": 1,
-      "updated_at": "2025-08-30T17:18:22Z",
+      "updated_at": "2025-09-09T12:17:00Z",
       "language": "Shell",
       "archived": false
     },
@@ -2821,7 +2821,7 @@
       "url": "https://github.com/YunoHost-Apps/galette_ynh",
       "stars": 7,
       "forks": 8,
-      "updated_at": "2025-08-30T17:01:07Z",
+      "updated_at": "2025-09-09T19:33:20Z",
       "language": "Shell",
       "archived": false
     },
@@ -3635,7 +3635,7 @@
       "url": "https://github.com/YunoHost-Apps/immich_ynh",
       "stars": 20,
       "forks": 11,
-      "updated_at": "2025-09-08T11:00:39Z",
+      "updated_at": "2025-09-09T19:56:28Z",
       "language": "Shell",
       "archived": false
     },
@@ -4349,7 +4349,7 @@
       "description": "librespeed package for YunoHost",
       "url": "https://github.com/YunoHost-Apps/librespeed_ynh",
       "stars": 2,
-      "forks": 1,
+      "forks": 2,
       "updated_at": "2025-08-30T17:07:53Z",
       "language": "HTML",
       "archived": false
@@ -5812,7 +5812,7 @@
       "description": "Ombi package for YunoHost",
       "url": "https://github.com/YunoHost-Apps/ombi_ynh",
       "stars": 0,
-      "forks": 2,
+      "forks": 3,
       "updated_at": "2025-08-30T17:13:42Z",
       "language": "Shell",
       "archived": false
@@ -6647,9 +6647,9 @@
       "name": "pleroma",
       "description": "Pleroma package for YunoHost: A free, federated social networking server built on open protocols.",
       "url": "https://github.com/YunoHost-Apps/pleroma_ynh",
-      "stars": 28,
+      "stars": 29,
       "forks": 16,
-      "updated_at": "2025-08-16T02:01:15Z",
+      "updated_at": "2025-09-09T12:33:27Z",
       "language": "Shell",
       "archived": false
     },
@@ -7010,9 +7010,9 @@
       "name": "qbittorrent",
       "description": "qBittorrent package for YunoHost",
       "url": "https://github.com/YunoHost-Apps/qbittorrent_ynh",
-      "stars": 2,
+      "stars": 3,
       "forks": 2,
-      "updated_at": "2025-08-30T17:12:21Z",
+      "updated_at": "2025-09-09T20:35:09Z",
       "language": "Shell",
       "archived": false
     },
@@ -8024,7 +8024,7 @@
       "url": "https://github.com/YunoHost-Apps/spip_ynh",
       "stars": 5,
       "forks": 8,
-      "updated_at": "2025-07-09T06:03:34Z",
+      "updated_at": "2025-09-09T19:33:17Z",
       "language": "Shell",
       "archived": false
     },
@@ -8354,7 +8354,7 @@
       "url": "https://github.com/YunoHost-Apps/tandoor_ynh",
       "stars": 3,
       "forks": 8,
-      "updated_at": "2025-09-09T05:14:43Z",
+      "updated_at": "2025-09-10T05:20:35Z",
       "language": "Shell",
       "archived": false
     },
@@ -8958,7 +8958,7 @@
       "description": "Wallabag v2 package for YunoHost",
       "url": "https://github.com/YunoHost-Apps/wallabag2_ynh",
       "stars": 63,
-      "forks": 15,
+      "forks": 16,
       "updated_at": "2025-09-07T18:35:33Z",
       "language": "Shell",
       "archived": false
@@ -9047,7 +9047,7 @@
       "url": "https://github.com/YunoHost-Apps/weblate_ynh",
       "stars": 13,
       "forks": 11,
-      "updated_at": "2025-09-04T17:54:13Z",
+      "updated_at": "2025-09-09T20:22:17Z",
       "language": "Python",
       "archived": false
     },
