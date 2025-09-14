@@ -1,5 +1,5 @@
 {
-  "timestamp": "2025-09-13T06:29:41.805Z",
+  "timestamp": "2025-09-14T06:30:00.599Z",
   "script": "scripts.test.js",
   "source": "YunoHost-Apps GitHub Organization",
   "url": "https://github.com/YunoHost-Apps",
@@ -762,9 +762,9 @@
       "name": "calckey",
       "description": "Calcket package for YunoHost",
       "url": "https://github.com/YunoHost-Apps/calckey_ynh",
-      "stars": 9,
+      "stars": 10,
       "forks": 8,
-      "updated_at": "2025-08-30T17:39:10Z",
+      "updated_at": "2025-09-13T08:22:51Z",
       "language": "Shell",
       "archived": true
     },
@@ -786,7 +786,7 @@
       "url": "https://github.com/YunoHost-Apps/calibreweb_ynh",
       "stars": 20,
       "forks": 7,
-      "updated_at": "2025-09-12T11:54:51Z",
+      "updated_at": "2025-09-13T14:46:04Z",
       "language": "Shell",
       "archived": false
     },
@@ -2478,9 +2478,9 @@
       "name": "flohmarkt",
       "description": "integration of flohmarkt - a federated decentral classified ad software using activitypub - into YunoHost",
       "url": "https://github.com/YunoHost-Apps/flohmarkt_ynh",
-      "stars": 1,
+      "stars": 2,
       "forks": 2,
-      "updated_at": "2025-07-06T10:14:29Z",
+      "updated_at": "2025-09-13T17:23:27Z",
       "language": "Shell",
       "archived": false
     },
@@ -2963,7 +2963,7 @@
       "description": "Gitea is a fork of Gogs. A git platform, Mirror of https://framagit.org/YunoHost-Apps/gitea_ynh",
       "url": "https://github.com/YunoHost-Apps/gitea_ynh",
       "stars": 27,
-      "forks": 18,
+      "forks": 19,
       "updated_at": "2025-09-04T20:34:11Z",
       "language": "Shell",
       "archived": false
@@ -3436,7 +3436,7 @@
       "description": "Homarr package for YunoHost",
       "url": "https://github.com/YunoHost-Apps/homarr_ynh",
       "stars": 7,
-      "forks": 6,
+      "forks": 7,
       "updated_at": "2025-09-10T20:40:25Z",
       "language": "Shell",
       "archived": false
@@ -3448,7 +3448,7 @@
       "url": "https://github.com/YunoHost-Apps/homeassistant_ynh",
       "stars": 23,
       "forks": 16,
-      "updated_at": "2025-09-13T04:59:56Z",
+      "updated_at": "2025-09-14T05:45:51Z",
       "language": "Shell",
       "archived": false
     },
@@ -6077,7 +6077,7 @@
       "url": "https://github.com/YunoHost-Apps/outline_ynh",
       "stars": 19,
       "forks": 11,
-      "updated_at": "2025-08-30T17:08:44Z",
+      "updated_at": "2025-09-13T21:42:14Z",
       "language": "Shell",
       "archived": false
     },
@@ -6902,7 +6902,7 @@
       "url": "https://github.com/YunoHost-Apps/prosody_ynh",
       "stars": 6,
       "forks": 9,
-      "updated_at": "2025-09-07T18:34:27Z",
+      "updated_at": "2025-09-13T10:43:03Z",
       "language": "Shell",
       "archived": false
     },
@@ -6966,9 +6966,9 @@
       "name": "pterodactyl",
       "description": "Pterodactyl package for YunoHost",
       "url": "https://github.com/YunoHost-Apps/pterodactyl_ynh",
-      "stars": 6,
+      "stars": 7,
       "forks": 9,
-      "updated_at": "2025-09-11T06:44:24Z",
+      "updated_at": "2025-09-13T21:05:30Z",
       "language": "Shell",
       "archived": false
     },
@@ -8759,9 +8759,9 @@
       "name": "tuwunel",
       "description": "Tuwunel packaged for YunoHost",
       "url": "https://github.com/YunoHost-Apps/tuwunel_ynh",
-      "stars": 1,
+      "stars": 2,
       "forks": 0,
-      "updated_at": "2025-09-12T09:48:14Z",
+      "updated_at": "2025-09-13T17:23:37Z",
       "language": "Shell",
       "archived": false
     },
@@ -9014,7 +9014,7 @@
       "url": "https://github.com/YunoHost-Apps/wanderer_ynh",
       "stars": 3,
       "forks": 1,
-      "updated_at": "2025-09-10T18:03:31Z",
+      "updated_at": "2025-09-14T06:04:58Z",
       "language": "Shell",
       "archived": false
     },
@@ -9674,7 +9674,7 @@
       "url": "https://github.com/YunoHost-Apps/zerotier_ynh",
       "stars": 7,
       "forks": 2,
-      "updated_at": "2025-08-30T17:05:46Z",
+      "updated_at": "2025-09-13T21:28:59Z",
       "language": "Shell",
       "archived": false
     },

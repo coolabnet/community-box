@@ -1,18 +1,18 @@
 {
-  "timestamp": "2025-09-13T06:29:27.468Z",
+  "timestamp": "2025-09-14T06:30:00.049Z",
   "script": "run-all.js",
   "note": "Summary of all data fetching script executions",
   "data": {
-    "execution_time": "2025-09-13T06:29:27.468Z",
+    "execution_time": "2025-09-14T06:30:00.049Z",
     "total_scripts": 6,
     "successful": 6,
     "failed": 0,
-    "total_duration_ms": 16712,
+    "total_duration_ms": 15025,
     "results": [
       {
         "name": "CapRover UI Translations",
         "success": true,
-        "duration": 205,
+        "duration": 157,
         "result": [
           "ar-EG",
           "de-DE",
@@ -33,7 +33,7 @@
       {
         "name": "CasaOS UI Translations",
         "success": true,
-        "duration": 111,
+        "duration": 97,
         "result": [
           "ca_ES",
           "cs_CZ",
@@ -68,7 +68,7 @@
       {
         "name": "YunoHost Apps",
         "success": true,
-        "duration": 13371,
+        "duration": 12921,
         "result": {
           "count": 888,
           "apps": [
@@ -814,9 +814,9 @@
               "name": "calckey",
               "description": "Calcket package for YunoHost",
               "url": "https://github.com/YunoHost-Apps/calckey_ynh",
-              "stars": 9,
+              "stars": 10,
               "forks": 8,
-              "updated_at": "2025-08-30T17:39:10Z",
+              "updated_at": "2025-09-13T08:22:51Z",
               "language": "Shell",
               "archived": true
             },
@@ -838,7 +838,7 @@
               "url": "https://github.com/YunoHost-Apps/calibreweb_ynh",
               "stars": 20,
               "forks": 7,
-              "updated_at": "2025-09-12T11:54:51Z",
+              "updated_at": "2025-09-13T14:46:04Z",
               "language": "Shell",
               "archived": false
             },
@@ -2530,9 +2530,9 @@
               "name": "flohmarkt",
               "description": "integration of flohmarkt - a federated decentral classified ad software using activitypub - into YunoHost",
               "url": "https://github.com/YunoHost-Apps/flohmarkt_ynh",
-              "stars": 1,
+              "stars": 2,
               "forks": 2,
-              "updated_at": "2025-07-06T10:14:29Z",
+              "updated_at": "2025-09-13T17:23:27Z",
               "language": "Shell",
               "archived": false
             },
@@ -3015,7 +3015,7 @@
               "description": "Gitea is a fork of Gogs. A git platform, Mirror of https://framagit.org/YunoHost-Apps/gitea_ynh",
               "url": "https://github.com/YunoHost-Apps/gitea_ynh",
               "stars": 27,
-              "forks": 18,
+              "forks": 19,
               "updated_at": "2025-09-04T20:34:11Z",
               "language": "Shell",
               "archived": false
@@ -3488,7 +3488,7 @@
               "description": "Homarr package for YunoHost",
               "url": "https://github.com/YunoHost-Apps/homarr_ynh",
               "stars": 7,
-              "forks": 6,
+              "forks": 7,
               "updated_at": "2025-09-10T20:40:25Z",
               "language": "Shell",
               "archived": false
@@ -3500,7 +3500,7 @@
               "url": "https://github.com/YunoHost-Apps/homeassistant_ynh",
               "stars": 23,
               "forks": 16,
-              "updated_at": "2025-09-13T04:59:56Z",
+              "updated_at": "2025-09-14T05:45:51Z",
               "language": "Shell",
               "archived": false
             },
@@ -6129,7 +6129,7 @@
               "url": "https://github.com/YunoHost-Apps/outline_ynh",
               "stars": 19,
               "forks": 11,
-              "updated_at": "2025-08-30T17:08:44Z",
+              "updated_at": "2025-09-13T21:42:14Z",
               "language": "Shell",
               "archived": false
             },
@@ -6954,7 +6954,7 @@
               "url": "https://github.com/YunoHost-Apps/prosody_ynh",
               "stars": 6,
               "forks": 9,
-              "updated_at": "2025-09-07T18:34:27Z",
+              "updated_at": "2025-09-13T10:43:03Z",
               "language": "Shell",
               "archived": false
             },
@@ -7018,9 +7018,9 @@
               "name": "pterodactyl",
               "description": "Pterodactyl package for YunoHost",
               "url": "https://github.com/YunoHost-Apps/pterodactyl_ynh",
-              "stars": 6,
+              "stars": 7,
               "forks": 9,
-              "updated_at": "2025-09-11T06:44:24Z",
+              "updated_at": "2025-09-13T21:05:30Z",
               "language": "Shell",
               "archived": false
             },
@@ -8811,9 +8811,9 @@
               "name": "tuwunel",
               "description": "Tuwunel packaged for YunoHost",
               "url": "https://github.com/YunoHost-Apps/tuwunel_ynh",
-              "stars": 1,
+              "stars": 2,
               "forks": 0,
-              "updated_at": "2025-09-12T09:48:14Z",
+              "updated_at": "2025-09-13T17:23:37Z",
               "language": "Shell",
               "archived": false
             },
@@ -9066,7 +9066,7 @@
               "url": "https://github.com/YunoHost-Apps/wanderer_ynh",
               "stars": 3,
               "forks": 1,
-              "updated_at": "2025-09-10T18:03:31Z",
+              "updated_at": "2025-09-14T06:04:58Z",
               "language": "Shell",
               "archived": false
             },
@@ -9726,7 +9726,7 @@
               "url": "https://github.com/YunoHost-Apps/zerotier_ynh",
               "stars": 7,
               "forks": 2,
-              "updated_at": "2025-08-30T17:05:46Z",
+              "updated_at": "2025-09-13T21:28:59Z",
               "language": "Shell",
               "archived": false
             },
@@ -9859,7 +9859,7 @@
       {
         "name": "YunoHost Docs Translations",
         "success": true,
-        "duration": 83,
+        "duration": 84,
         "result": [
           "ar",
           "ca",
@@ -9875,7 +9875,7 @@
       {
         "name": "YunoHost UI Translations",
         "success": true,
-        "duration": 2545,
+        "duration": 1575,
         "result": [
           {
             "language": "Basque",
@@ -10282,7 +10282,7 @@
       {
         "name": "Zimaboard Shipping Areas",
         "success": true,
-        "duration": 397,
+        "duration": 191,
         "result": [
           "Argentina",
           "Australia",
