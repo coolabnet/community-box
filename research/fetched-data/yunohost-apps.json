@@ -1,5 +1,5 @@
 {
-  "timestamp": "2025-09-14T06:30:00.599Z",
+  "timestamp": "2025-09-15T06:35:14.266Z",
   "script": "scripts.test.js",
   "source": "YunoHost-Apps GitHub Organization",
   "url": "https://github.com/YunoHost-Apps",
@@ -18,7 +18,7 @@
     "Shell",
     "TSQL"
   ],
-  "archived_count": 211,
+  "archived_count": 210,
   "data": [
     {
       "id": "13ft_ynh",
@@ -1026,9 +1026,9 @@
       "name": "code-server",
       "description": "Code-server packaged for YunoHost",
       "url": "https://github.com/YunoHost-Apps/code-server_ynh",
-      "stars": 7,
+      "stars": 8,
       "forks": 1,
-      "updated_at": "2025-09-10T14:20:38Z",
+      "updated_at": "2025-09-14T13:25:33Z",
       "language": "Shell",
       "archived": false
     },
@@ -2348,7 +2348,7 @@
       "url": "https://github.com/YunoHost-Apps/filebrowser_ynh",
       "stars": 5,
       "forks": 3,
-      "updated_at": "2025-08-30T17:09:23Z",
+      "updated_at": "2025-09-14T08:35:08Z",
       "language": "Shell",
       "archived": false
     },
@@ -3371,9 +3371,9 @@
       "url": "https://github.com/YunoHost-Apps/healthchecks_ynh",
       "stars": 1,
       "forks": 0,
-      "updated_at": "2025-09-10T20:31:30Z",
+      "updated_at": "2025-09-15T06:11:15Z",
       "language": "Shell",
-      "archived": true
+      "archived": false
     },
     {
       "id": "hedgedoc_ynh",
@@ -3458,7 +3458,7 @@
       "description": "HomeBox package for YunoHost",
       "url": "https://github.com/YunoHost-Apps/homebox_ynh",
       "stars": 2,
-      "forks": 0,
+      "forks": 1,
       "updated_at": "2025-09-10T16:15:26Z",
       "language": "Shell",
       "archived": false
@@ -4020,7 +4020,7 @@
       "url": "https://github.com/YunoHost-Apps/karakeep_ynh",
       "stars": 1,
       "forks": 2,
-      "updated_at": "2025-09-12T06:38:56Z",
+      "updated_at": "2025-09-14T08:33:22Z",
       "language": "Shell",
       "archived": false
     },
@@ -4569,7 +4569,7 @@
       "description": "Free, Open Source OpenAI alternative",
       "url": "https://github.com/YunoHost-Apps/localai_ynh",
       "stars": 1,
-      "forks": 1,
+      "forks": 2,
       "updated_at": "2025-09-10T14:00:34Z",
       "language": "Shell",
       "archived": false
@@ -5604,7 +5604,7 @@
       "url": "https://github.com/YunoHost-Apps/nextcloud_ynh",
       "stars": 164,
       "forks": 68,
-      "updated_at": "2025-09-11T16:06:31Z",
+      "updated_at": "2025-09-14T18:53:30Z",
       "language": "Shell",
       "archived": false
     },
@@ -6088,7 +6088,7 @@
       "url": "https://github.com/YunoHost-Apps/overleaf_ynh",
       "stars": 2,
       "forks": 5,
-      "updated_at": "2025-09-08T05:20:32Z",
+      "updated_at": "2025-09-15T06:28:33Z",
       "language": "Shell",
       "archived": false
     },
@@ -8464,7 +8464,7 @@
       "url": "https://github.com/YunoHost-Apps/terraforming-mars_ynh",
       "stars": 1,
       "forks": 2,
-      "updated_at": "2025-09-08T05:21:13Z",
+      "updated_at": "2025-09-15T05:36:28Z",
       "language": "Shell",
       "archived": false
     },
