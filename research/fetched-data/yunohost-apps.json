@@ -1,5 +1,5 @@
 {
-  "timestamp": "2025-09-16T06:33:44.880Z",
+  "timestamp": "2025-09-17T06:33:41.830Z",
   "script": "scripts.test.js",
   "source": "YunoHost-Apps GitHub Organization",
   "url": "https://github.com/YunoHost-Apps",
@@ -4218,7 +4218,7 @@
       "url": "https://github.com/YunoHost-Apps/lasuite-docs_ynh",
       "stars": 4,
       "forks": 2,
-      "updated_at": "2025-09-10T14:04:07Z",
+      "updated_at": "2025-09-16T11:11:54Z",
       "language": "Shell",
       "archived": false
     },
@@ -4416,7 +4416,7 @@
       "url": "https://github.com/YunoHost-Apps/libretranslate_ynh",
       "stars": 3,
       "forks": 5,
-      "updated_at": "2025-09-03T05:17:39Z",
+      "updated_at": "2025-09-16T09:46:01Z",
       "language": "Shell",
       "archived": false
     },
@@ -5163,7 +5163,7 @@
       "description": "MiroTalk package for YunoHost",
       "url": "https://github.com/YunoHost-Apps/mirotalk_ynh",
       "stars": 1,
-      "forks": 2,
+      "forks": 3,
       "updated_at": "2025-09-11T06:35:00Z",
       "language": "Shell",
       "archived": false
@@ -5362,7 +5362,7 @@
       "url": "https://github.com/YunoHost-Apps/motioneye_ynh",
       "stars": 1,
       "forks": 4,
-      "updated_at": "2025-09-10T14:17:01Z",
+      "updated_at": "2025-09-17T02:40:01Z",
       "language": "Shell",
       "archived": false
     },
@@ -5954,9 +5954,9 @@
       "name": "openproject",
       "description": "OpenProject instanciation for YunoHost",
       "url": "https://github.com/YunoHost-Apps/openproject_ynh",
-      "stars": 7,
+      "stars": 8,
       "forks": 3,
-      "updated_at": "2025-09-11T07:06:31Z",
+      "updated_at": "2025-09-16T13:43:20Z",
       "language": "Shell",
       "archived": false
     },
@@ -7166,7 +7166,7 @@
       "url": "https://github.com/YunoHost-Apps/readeck_ynh",
       "stars": 3,
       "forks": 4,
-      "updated_at": "2025-09-15T19:16:23Z",
+      "updated_at": "2025-09-17T00:14:33Z",
       "language": "Shell",
       "archived": false
     },
@@ -8343,7 +8343,7 @@
       "url": "https://github.com/YunoHost-Apps/syncserver-rs_ynh",
       "stars": 5,
       "forks": 2,
-      "updated_at": "2025-09-12T07:37:14Z",
+      "updated_at": "2025-09-16T21:21:10Z",
       "language": "Shell",
       "archived": false
     },

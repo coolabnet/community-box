@@ -1,18 +1,18 @@
 {
-  "timestamp": "2025-09-16T06:33:44.361Z",
+  "timestamp": "2025-09-17T06:33:40.757Z",
   "script": "run-all.js",
   "note": "Summary of all data fetching script executions",
   "data": {
-    "execution_time": "2025-09-16T06:33:44.361Z",
+    "execution_time": "2025-09-17T06:33:40.757Z",
     "total_scripts": 6,
     "successful": 6,
     "failed": 0,
-    "total_duration_ms": 16046,
+    "total_duration_ms": 21180,
     "results": [
       {
         "name": "CapRover UI Translations",
         "success": true,
-        "duration": 131,
+        "duration": 279,
         "result": [
           "ar-EG",
           "de-DE",
@@ -33,7 +33,7 @@
       {
         "name": "CasaOS UI Translations",
         "success": true,
-        "duration": 93,
+        "duration": 194,
         "result": [
           "ca_ES",
           "cs_CZ",
@@ -68,7 +68,7 @@
       {
         "name": "YunoHost Apps",
         "success": true,
-        "duration": 13827,
+        "duration": 18040,
         "result": {
           "count": 888,
           "apps": [
@@ -4270,7 +4270,7 @@
               "url": "https://github.com/YunoHost-Apps/lasuite-docs_ynh",
               "stars": 4,
               "forks": 2,
-              "updated_at": "2025-09-10T14:04:07Z",
+              "updated_at": "2025-09-16T11:11:54Z",
               "language": "Shell",
               "archived": false
             },
@@ -4468,7 +4468,7 @@
               "url": "https://github.com/YunoHost-Apps/libretranslate_ynh",
               "stars": 3,
               "forks": 5,
-              "updated_at": "2025-09-03T05:17:39Z",
+              "updated_at": "2025-09-16T09:46:01Z",
               "language": "Shell",
               "archived": false
             },
@@ -5215,7 +5215,7 @@
               "description": "MiroTalk package for YunoHost",
               "url": "https://github.com/YunoHost-Apps/mirotalk_ynh",
               "stars": 1,
-              "forks": 2,
+              "forks": 3,
               "updated_at": "2025-09-11T06:35:00Z",
               "language": "Shell",
               "archived": false
@@ -5414,7 +5414,7 @@
               "url": "https://github.com/YunoHost-Apps/motioneye_ynh",
               "stars": 1,
               "forks": 4,
-              "updated_at": "2025-09-10T14:17:01Z",
+              "updated_at": "2025-09-17T02:40:01Z",
               "language": "Shell",
               "archived": false
             },
@@ -6006,9 +6006,9 @@
               "name": "openproject",
               "description": "OpenProject instanciation for YunoHost",
               "url": "https://github.com/YunoHost-Apps/openproject_ynh",
-              "stars": 7,
+              "stars": 8,
               "forks": 3,
-              "updated_at": "2025-09-11T07:06:31Z",
+              "updated_at": "2025-09-16T13:43:20Z",
               "language": "Shell",
               "archived": false
             },
@@ -7218,7 +7218,7 @@
               "url": "https://github.com/YunoHost-Apps/readeck_ynh",
               "stars": 3,
               "forks": 4,
-              "updated_at": "2025-09-15T19:16:23Z",
+              "updated_at": "2025-09-17T00:14:33Z",
               "language": "Shell",
               "archived": false
             },
@@ -8395,7 +8395,7 @@
               "url": "https://github.com/YunoHost-Apps/syncserver-rs_ynh",
               "stars": 5,
               "forks": 2,
-              "updated_at": "2025-09-12T07:37:14Z",
+              "updated_at": "2025-09-16T21:21:10Z",
               "language": "Shell",
               "archived": false
             },
@@ -9859,7 +9859,7 @@
       {
         "name": "YunoHost Docs Translations",
         "success": true,
-        "duration": 85,
+        "duration": 174,
         "result": [
           "ar",
           "ca",
@@ -9875,7 +9875,7 @@
       {
         "name": "YunoHost UI Translations",
         "success": true,
-        "duration": 1738,
+        "duration": 1959,
         "result": [
           {
             "language": "Basque",
@@ -10282,7 +10282,7 @@
       {
         "name": "Zimaboard Shipping Areas",
         "success": true,
-        "duration": 172,
+        "duration": 534,
         "result": [
           "Argentina",
           "Australia",
