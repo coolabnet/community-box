@@ -1,18 +1,18 @@
 {
-  "timestamp": "2025-09-18T06:33:30.013Z",
+  "timestamp": "2025-09-19T06:33:14.338Z",
   "script": "run-all.js",
   "note": "Summary of all data fetching script executions",
   "data": {
-    "execution_time": "2025-09-18T06:33:30.013Z",
+    "execution_time": "2025-09-19T06:33:14.338Z",
     "total_scripts": 6,
     "successful": 6,
     "failed": 0,
-    "total_duration_ms": 21134,
+    "total_duration_ms": 17087,
     "results": [
       {
         "name": "CapRover UI Translations",
         "success": true,
-        "duration": 265,
+        "duration": 136,
         "result": [
           "ar-EG",
           "de-DE",
@@ -33,7 +33,7 @@
       {
         "name": "CasaOS UI Translations",
         "success": true,
-        "duration": 168,
+        "duration": 105,
         "result": [
           "ca_ES",
           "cs_CZ",
@@ -68,7 +68,7 @@
       {
         "name": "YunoHost Apps",
         "success": true,
-        "duration": 18262,
+        "duration": 14664,
         "result": {
           "count": 890,
           "apps": [
@@ -244,7 +244,7 @@
               "url": "https://github.com/YunoHost-Apps/agora_ynh",
               "stars": 2,
               "forks": 2,
-              "updated_at": "2025-08-30T17:02:22Z",
+              "updated_at": "2025-09-18T20:28:12Z",
               "language": "Shell",
               "archived": false
             },
@@ -782,8 +782,8 @@
               "description": "Enable deployment of Cookie Aware Cors Proxy to YunoHost",
               "url": "https://github.com/YunoHost-Apps/cac-proxy_ynh",
               "stars": 3,
-              "forks": 1,
-              "updated_at": "2025-08-30T17:11:54Z",
+              "forks": 2,
+              "updated_at": "2025-09-18T16:36:29Z",
               "language": "Shell",
               "archived": false
             },
@@ -1310,7 +1310,7 @@
               "description": "Cowyo package for YunoHost",
               "url": "https://github.com/YunoHost-Apps/cowyo_ynh",
               "stars": 3,
-              "forks": 2,
+              "forks": 3,
               "updated_at": "2025-08-30T17:04:10Z",
               "language": "Shell",
               "archived": false
@@ -2136,7 +2136,7 @@
               "url": "https://github.com/YunoHost-Apps/emoncms_ynh",
               "stars": 0,
               "forks": 1,
-              "updated_at": "2025-09-17T19:34:51Z",
+              "updated_at": "2025-09-18T06:37:54Z",
               "language": "Shell",
               "archived": false
             },
@@ -4346,7 +4346,7 @@
               "description": "A link aggregator for the fediverse.",
               "url": "https://github.com/YunoHost-Apps/lemmy_ynh",
               "stars": 20,
-              "forks": 11,
+              "forks": 10,
               "updated_at": "2025-08-30T17:07:01Z",
               "language": "Shell",
               "archived": false
@@ -4633,7 +4633,7 @@
               "url": "https://github.com/YunoHost-Apps/localai_ynh",
               "stars": 1,
               "forks": 2,
-              "updated_at": "2025-09-10T14:00:34Z",
+              "updated_at": "2025-09-18T19:01:15Z",
               "language": "Shell",
               "archived": false
             },
@@ -4666,7 +4666,7 @@
               "url": "https://github.com/YunoHost-Apps/loops_ynh",
               "stars": 0,
               "forks": 1,
-              "updated_at": "2025-09-17T23:41:01Z",
+              "updated_at": "2025-09-18T22:02:48Z",
               "language": "Shell",
               "archived": false
             },
@@ -4886,7 +4886,7 @@
               "url": "https://github.com/YunoHost-Apps/mattermost_ynh",
               "stars": 35,
               "forks": 19,
-              "updated_at": "2025-08-30T17:01:09Z",
+              "updated_at": "2025-09-18T15:36:52Z",
               "language": "Shell",
               "archived": false
             },
@@ -4972,9 +4972,9 @@
               "name": "mautrix_telegram",
               "description": "Matrix Telegram pupetting bridge for YunoHost",
               "url": "https://github.com/YunoHost-Apps/mautrix_telegram_ynh",
-              "stars": 16,
+              "stars": 17,
               "forks": 7,
-              "updated_at": "2025-08-30T17:07:19Z",
+              "updated_at": "2025-09-18T21:19:09Z",
               "language": "Shell",
               "archived": false
             },
@@ -5216,7 +5216,7 @@
               "url": "https://github.com/YunoHost-Apps/miniflux_ynh",
               "stars": 8,
               "forks": 2,
-              "updated_at": "2025-08-30T17:07:57Z",
+              "updated_at": "2025-09-19T06:05:09Z",
               "language": "Shell",
               "archived": false
             },
@@ -5348,7 +5348,7 @@
               "url": "https://github.com/YunoHost-Apps/mongo-express_ynh",
               "stars": 0,
               "forks": 4,
-              "updated_at": "2025-09-17T17:26:51Z",
+              "updated_at": "2025-09-18T15:54:27Z",
               "language": "Shell",
               "archived": false
             },
@@ -7592,7 +7592,7 @@
               "url": "https://github.com/YunoHost-Apps/scratch_ynh",
               "stars": 4,
               "forks": 1,
-              "updated_at": "2025-09-17T07:33:53Z",
+              "updated_at": "2025-09-19T06:13:30Z",
               "language": "Shell",
               "archived": false
             },
@@ -8130,7 +8130,7 @@
               "description": "SPIP package for YunoHost",
               "url": "https://github.com/YunoHost-Apps/spip_ynh",
               "stars": 5,
-              "forks": 8,
+              "forks": 9,
               "updated_at": "2025-09-09T19:33:17Z",
               "language": "Shell",
               "archived": false
@@ -8417,7 +8417,7 @@
               "url": "https://github.com/YunoHost-Apps/syncserver-rs_ynh",
               "stars": 5,
               "forks": 2,
-              "updated_at": "2025-09-16T21:21:10Z",
+              "updated_at": "2025-09-18T14:06:31Z",
               "language": "Shell",
               "archived": false
             },
@@ -9165,7 +9165,7 @@
               "url": "https://github.com/YunoHost-Apps/webmin_ynh",
               "stars": 5,
               "forks": 5,
-              "updated_at": "2025-09-11T12:00:11Z",
+              "updated_at": "2025-09-18T19:01:41Z",
               "language": "Shell",
               "archived": false
             },
@@ -9858,7 +9858,7 @@
               "url": "https://github.com/YunoHost-Apps/zwiicms_ynh",
               "stars": 1,
               "forks": 1,
-              "updated_at": "2025-09-08T13:52:40Z",
+              "updated_at": "2025-09-19T05:36:14Z",
               "language": "Shell",
               "archived": false
             }
@@ -9881,7 +9881,7 @@
       {
         "name": "YunoHost Docs Translations",
         "success": true,
-        "duration": 150,
+        "duration": 100,
         "result": [
           "ar",
           "ca",
@@ -9897,7 +9897,7 @@
       {
         "name": "YunoHost UI Translations",
         "success": true,
-        "duration": 1922,
+        "duration": 1661,
         "result": [
           {
             "language": "Basque",
@@ -10304,7 +10304,7 @@
       {
         "name": "Zimaboard Shipping Areas",
         "success": true,
-        "duration": 367,
+        "duration": 421,
         "result": [
           "Argentina",
           "Australia",
