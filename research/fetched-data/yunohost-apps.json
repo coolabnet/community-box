@@ -1,5 +1,5 @@
 {
-  "timestamp": "2025-09-20T06:30:41.233Z",
+  "timestamp": "2025-09-21T06:31:53.811Z",
   "script": "scripts.test.js",
   "source": "YunoHost-Apps GitHub Organization",
   "url": "https://github.com/YunoHost-Apps",
@@ -709,7 +709,7 @@
       "url": "https://github.com/YunoHost-Apps/breezewiki_ynh",
       "stars": 0,
       "forks": 1,
-      "updated_at": "2025-08-30T17:16:00Z",
+      "updated_at": "2025-09-20T14:36:11Z",
       "language": "Shell",
       "archived": false
     },
@@ -1754,7 +1754,7 @@
       "url": "https://github.com/YunoHost-Apps/documize_ynh",
       "stars": 3,
       "forks": 2,
-      "updated_at": "2025-08-30T17:10:39Z",
+      "updated_at": "2025-09-20T21:34:33Z",
       "language": "Shell",
       "archived": false
     },
@@ -2601,7 +2601,7 @@
       "url": "https://github.com/YunoHost-Apps/forgejo-runner_ynh",
       "stars": 1,
       "forks": 3,
-      "updated_at": "2025-09-10T20:14:26Z",
+      "updated_at": "2025-09-20T21:05:51Z",
       "language": "Shell",
       "archived": false
     },
@@ -3789,7 +3789,7 @@
       "url": "https://github.com/YunoHost-Apps/isso_ynh",
       "stars": 4,
       "forks": 1,
-      "updated_at": "2025-08-30T17:11:00Z",
+      "updated_at": "2025-09-20T14:37:41Z",
       "language": "Shell",
       "archived": false
     },
@@ -4162,7 +4162,7 @@
       "description": "A personal music streaming server, packaged for YunoHost",
       "url": "https://github.com/YunoHost-Apps/koel_ynh",
       "stars": 2,
-      "forks": 2,
+      "forks": 3,
       "updated_at": "2025-09-17T07:37:49Z",
       "language": "Shell",
       "archived": false
@@ -4335,11 +4335,11 @@
     {
       "id": "librebooking_ynh",
       "name": "librebooking",
-      "description": "resource scheduling solution",
+      "description": "Resource scheduling solution",
       "url": "https://github.com/YunoHost-Apps/librebooking_ynh",
       "stars": 0,
       "forks": 0,
-      "updated_at": "2025-09-19T09:41:04Z",
+      "updated_at": "2025-09-20T07:57:20Z",
       "language": "PHP",
       "archived": false
     },
@@ -7529,7 +7529,7 @@
       "url": "https://github.com/YunoHost-Apps/satdress_ynh",
       "stars": 5,
       "forks": 3,
-      "updated_at": "2025-09-04T11:40:28Z",
+      "updated_at": "2025-09-20T14:34:51Z",
       "language": "Shell",
       "archived": false
     },
@@ -8563,7 +8563,7 @@
       "url": "https://github.com/YunoHost-Apps/thelounge_ynh",
       "stars": 10,
       "forks": 8,
-      "updated_at": "2025-03-27T02:00:49Z",
+      "updated_at": "2025-09-20T17:28:21Z",
       "language": "JavaScript",
       "archived": false
     },
@@ -8596,7 +8596,7 @@
       "url": "https://github.com/YunoHost-Apps/timemachine_ynh",
       "stars": 6,
       "forks": 3,
-      "updated_at": "2025-09-11T07:30:14Z",
+      "updated_at": "2025-09-20T14:33:21Z",
       "language": "Shell",
       "archived": false
     },
@@ -8893,7 +8893,7 @@
       "url": "https://github.com/YunoHost-Apps/uptime-kuma_ynh",
       "stars": 12,
       "forks": 5,
-      "updated_at": "2025-08-30T17:08:50Z",
+      "updated_at": "2025-09-20T14:50:37Z",
       "language": "Shell",
       "archived": false
     },
@@ -9377,7 +9377,7 @@
       "url": "https://github.com/YunoHost-Apps/X-prober_ynh",
       "stars": 2,
       "forks": 1,
-      "updated_at": "2025-09-04T00:05:42Z",
+      "updated_at": "2025-09-20T09:53:24Z",
       "language": "Shell",
       "archived": false
     },
