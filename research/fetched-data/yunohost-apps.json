@@ -1,5 +1,5 @@
 {
-  "timestamp": "2025-09-22T06:35:30.291Z",
+  "timestamp": "2025-09-23T06:34:16.257Z",
   "script": "scripts.test.js",
   "source": "YunoHost-Apps GitHub Organization",
   "url": "https://github.com/YunoHost-Apps",
@@ -3182,9 +3182,9 @@
       "name": "gotosocial",
       "description": "GoToSocial package for YunoHost: an ActivityPub social network server, written in Golang.",
       "url": "https://github.com/YunoHost-Apps/gotosocial_ynh",
-      "stars": 20,
+      "stars": 21,
       "forks": 8,
-      "updated_at": "2025-09-09T05:47:38Z",
+      "updated_at": "2025-09-22T11:17:49Z",
       "language": "Shell",
       "archived": false
     },
@@ -3668,7 +3668,7 @@
       "url": "https://github.com/YunoHost-Apps/immich_ynh",
       "stars": 20,
       "forks": 12,
-      "updated_at": "2025-09-21T18:56:54Z",
+      "updated_at": "2025-09-22T10:53:18Z",
       "language": "Shell",
       "archived": false
     },
@@ -3943,7 +3943,7 @@
       "url": "https://github.com/YunoHost-Apps/jitsi_ynh",
       "stars": 21,
       "forks": 21,
-      "updated_at": "2025-03-18T19:40:03Z",
+      "updated_at": "2025-09-22T09:02:13Z",
       "language": "JavaScript",
       "archived": false
     },
@@ -4185,7 +4185,7 @@
       "url": "https://github.com/YunoHost-Apps/kresus_ynh",
       "stars": 20,
       "forks": 21,
-      "updated_at": "2025-09-12T07:41:56Z",
+      "updated_at": "2025-09-22T06:54:31Z",
       "language": "Shell",
       "archived": false
     },
@@ -6935,7 +6935,7 @@
       "url": "https://github.com/YunoHost-Apps/prosody_ynh",
       "stars": 6,
       "forks": 9,
-      "updated_at": "2025-09-13T10:43:03Z",
+      "updated_at": "2025-09-22T06:43:53Z",
       "language": "Shell",
       "archived": false
     },
@@ -7221,7 +7221,7 @@
       "url": "https://github.com/YunoHost-Apps/redirect_ynh",
       "stars": 49,
       "forks": 24,
-      "updated_at": "2025-09-10T11:57:55Z",
+      "updated_at": "2025-09-22T19:51:13Z",
       "language": "Shell",
       "archived": false
     },
@@ -7628,7 +7628,7 @@
       "url": "https://github.com/YunoHost-Apps/searxng_ynh",
       "stars": 13,
       "forks": 4,
-      "updated_at": "2025-09-15T08:52:46Z",
+      "updated_at": "2025-09-22T16:45:53Z",
       "language": "Shell",
       "archived": false
     },
@@ -7671,7 +7671,7 @@
       "description": "Shaarli package for YunoHost",
       "url": "https://github.com/YunoHost-Apps/shaarli_ynh",
       "stars": 20,
-      "forks": 14,
+      "forks": 15,
       "updated_at": "2025-08-30T16:59:55Z",
       "language": "Shell",
       "archived": false
@@ -8980,7 +8980,7 @@
       "description": "VPN Client app for YunoHost",
       "url": "https://github.com/YunoHost-Apps/vpnclient_ynh",
       "stars": 43,
-      "forks": 29,
+      "forks": 30,
       "updated_at": "2025-06-02T07:39:10Z",
       "language": "Shell",
       "archived": false
