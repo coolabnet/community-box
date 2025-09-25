@@ -1,18 +1,18 @@
 {
-  "timestamp": "2025-09-24T06:33:49.126Z",
+  "timestamp": "2025-09-25T06:34:46.010Z",
   "script": "run-all.js",
   "note": "Summary of all data fetching script executions",
   "data": {
-    "execution_time": "2025-09-24T06:33:49.126Z",
+    "execution_time": "2025-09-25T06:34:46.010Z",
     "total_scripts": 6,
     "successful": 6,
     "failed": 0,
-    "total_duration_ms": 18131,
+    "total_duration_ms": 19632,
     "results": [
       {
         "name": "CapRover UI Translations",
         "success": true,
-        "duration": 143,
+        "duration": 179,
         "result": [
           "ar-EG",
           "de-DE",
@@ -33,7 +33,7 @@
       {
         "name": "CasaOS UI Translations",
         "success": true,
-        "duration": 97,
+        "duration": 109,
         "result": [
           "ca_ES",
           "cs_CZ",
@@ -68,7 +68,7 @@
       {
         "name": "YunoHost Apps",
         "success": true,
-        "duration": 15979,
+        "duration": 17149,
         "result": {
           "count": 891,
           "apps": [
@@ -585,7 +585,7 @@
               "url": "https://github.com/YunoHost-Apps/benevalibre_ynh",
               "stars": 0,
               "forks": 1,
-              "updated_at": "2025-08-30T17:17:35Z",
+              "updated_at": "2025-09-24T07:42:48Z",
               "language": "Shell",
               "archived": false
             },
@@ -1333,7 +1333,7 @@
               "url": "https://github.com/YunoHost-Apps/cryptpad_ynh",
               "stars": 30,
               "forks": 24,
-              "updated_at": "2025-08-16T13:53:29Z",
+              "updated_at": "2025-09-24T20:55:41Z",
               "language": "JavaScript",
               "archived": false
             },
@@ -2081,7 +2081,7 @@
               "url": "https://github.com/YunoHost-Apps/element_ynh",
               "stars": 23,
               "forks": 9,
-              "updated_at": "2025-09-17T08:00:44Z",
+              "updated_at": "2025-09-24T10:37:31Z",
               "language": "Shell",
               "archived": false
             },
@@ -3038,7 +3038,7 @@
               "url": "https://github.com/YunoHost-Apps/gitlab_ynh",
               "stars": 21,
               "forks": 9,
-              "updated_at": "2025-09-10T11:59:41Z",
+              "updated_at": "2025-09-25T05:40:47Z",
               "language": "Ruby",
               "archived": false
             },
@@ -4523,7 +4523,7 @@
               "url": "https://github.com/YunoHost-Apps/limesurvey_ynh",
               "stars": 5,
               "forks": 13,
-              "updated_at": "2025-09-17T07:18:36Z",
+              "updated_at": "2025-09-24T12:56:47Z",
               "language": "Shell",
               "archived": false
             },
@@ -5050,7 +5050,7 @@
               "description": "MediaWiki package for YunoHost",
               "url": "https://github.com/YunoHost-Apps/mediawiki_ynh",
               "stars": 8,
-              "forks": 17,
+              "forks": 16,
               "updated_at": "2025-07-02T07:33:33Z",
               "language": "Shell",
               "archived": false
@@ -7603,7 +7603,7 @@
               "url": "https://github.com/YunoHost-Apps/scratch_ynh",
               "stars": 4,
               "forks": 1,
-              "updated_at": "2025-09-19T06:13:30Z",
+              "updated_at": "2025-09-24T07:41:10Z",
               "language": "Shell",
               "archived": false
             },
@@ -8109,7 +8109,7 @@
               "url": "https://github.com/YunoHost-Apps/sparkyfitness_ynh",
               "stars": 0,
               "forks": 0,
-              "updated_at": "2025-09-21T19:31:25Z",
+              "updated_at": "2025-09-25T05:36:18Z",
               "language": "Shell",
               "archived": false
             },
@@ -9892,7 +9892,7 @@
       {
         "name": "YunoHost Docs Translations",
         "success": true,
-        "duration": 74,
+        "duration": 127,
         "result": [
           "ar",
           "ca",
@@ -9908,7 +9908,7 @@
       {
         "name": "YunoHost UI Translations",
         "success": true,
-        "duration": 1466,
+        "duration": 1525,
         "result": [
           {
             "language": "Basque",
@@ -10315,7 +10315,7 @@
       {
         "name": "Zimaboard Shipping Areas",
         "success": true,
-        "duration": 372,
+        "duration": 543,
         "result": [
           "Argentina",
           "Australia",
