@@ -1,5 +1,5 @@
 {
-  "timestamp": "2025-09-28T06:31:21.087Z",
+  "timestamp": "2025-09-29T06:35:39.870Z",
   "script": "scripts.test.js",
   "source": "YunoHost-Apps GitHub Organization",
   "url": "https://github.com/YunoHost-Apps",
@@ -1028,7 +1028,7 @@
       "url": "https://github.com/YunoHost-Apps/code-server_ynh",
       "stars": 8,
       "forks": 1,
-      "updated_at": "2025-09-17T09:50:30Z",
+      "updated_at": "2025-09-28T10:41:33Z",
       "language": "Shell",
       "archived": false
     },
@@ -1512,7 +1512,7 @@
       "url": "https://github.com/YunoHost-Apps/diagramsnet_ynh",
       "stars": 6,
       "forks": 4,
-      "updated_at": "2025-09-17T08:00:13Z",
+      "updated_at": "2025-09-28T10:41:07Z",
       "language": "Shell",
       "archived": false
     },
@@ -1809,7 +1809,7 @@
       "url": "https://github.com/YunoHost-Apps/dolibarr_ynh",
       "stars": 15,
       "forks": 21,
-      "updated_at": "2025-09-17T08:00:29Z",
+      "updated_at": "2025-09-28T10:40:34Z",
       "language": "Shell",
       "archived": false
     },
@@ -2920,7 +2920,7 @@
       "url": "https://github.com/YunoHost-Apps/gemserv_ynh",
       "stars": 10,
       "forks": 2,
-      "updated_at": "2024-12-13T18:35:02Z",
+      "updated_at": "2025-09-28T13:11:36Z",
       "language": "Shell",
       "archived": false
     },
@@ -3667,7 +3667,7 @@
       "description": "Self-hosted photo and video backup solution directly from your mobile phone.",
       "url": "https://github.com/YunoHost-Apps/immich_ynh",
       "stars": 20,
-      "forks": 12,
+      "forks": 13,
       "updated_at": "2025-09-24T05:47:05Z",
       "language": "Shell",
       "archived": false
@@ -4108,7 +4108,7 @@
       "url": "https://github.com/YunoHost-Apps/kimai2_ynh",
       "stars": 13,
       "forks": 9,
-      "updated_at": "2025-08-30T17:04:09Z",
+      "updated_at": "2025-09-28T12:20:24Z",
       "language": "Shell",
       "archived": false
     },
@@ -7628,7 +7628,7 @@
       "url": "https://github.com/YunoHost-Apps/searxng_ynh",
       "stars": 13,
       "forks": 4,
-      "updated_at": "2025-09-22T16:45:53Z",
+      "updated_at": "2025-09-29T05:32:05Z",
       "language": "Shell",
       "archived": false
     },
@@ -7837,7 +7837,7 @@
       "url": "https://github.com/YunoHost-Apps/silverbullet_ynh",
       "stars": 4,
       "forks": 2,
-      "updated_at": "2025-09-27T14:07:27Z",
+      "updated_at": "2025-09-28T10:34:59Z",
       "language": "Shell",
       "archived": false
     },
@@ -8497,7 +8497,7 @@
       "url": "https://github.com/YunoHost-Apps/terraforming-mars_ynh",
       "stars": 1,
       "forks": 2,
-      "updated_at": "2025-09-22T05:16:16Z",
+      "updated_at": "2025-09-29T05:19:32Z",
       "language": "Shell",
       "archived": false
     },
