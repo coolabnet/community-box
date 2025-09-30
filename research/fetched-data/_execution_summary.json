@@ -1,18 +1,18 @@
 {
-  "timestamp": "2025-09-29T06:35:39.358Z",
+  "timestamp": "2025-09-30T06:34:57.256Z",
   "script": "run-all.js",
   "note": "Summary of all data fetching script executions",
   "data": {
-    "execution_time": "2025-09-29T06:35:39.358Z",
+    "execution_time": "2025-09-30T06:34:57.256Z",
     "total_scripts": 6,
     "successful": 6,
     "failed": 0,
-    "total_duration_ms": 16302,
+    "total_duration_ms": 17753,
     "results": [
       {
         "name": "CapRover UI Translations",
         "success": true,
-        "duration": 131,
+        "duration": 210,
         "result": [
           "ar-EG",
           "de-DE",
@@ -33,7 +33,7 @@
       {
         "name": "CasaOS UI Translations",
         "success": true,
-        "duration": 98,
+        "duration": 114,
         "result": [
           "ca_ES",
           "cs_CZ",
@@ -68,9 +68,9 @@
       {
         "name": "YunoHost Apps",
         "success": true,
-        "duration": 14404,
+        "duration": 15588,
         "result": {
-          "count": 892,
+          "count": 893,
           "apps": [
             {
               "id": "13ft_ynh",
@@ -1861,7 +1861,7 @@
               "url": "https://github.com/YunoHost-Apps/dolibarr_ynh",
               "stars": 15,
               "forks": 21,
-              "updated_at": "2025-09-28T10:40:34Z",
+              "updated_at": "2025-09-29T22:01:26Z",
               "language": "Shell",
               "archived": false
             },
@@ -2201,7 +2201,7 @@
               "description": "EspoCRM package for YunoHost",
               "url": "https://github.com/YunoHost-Apps/espocrm_ynh",
               "stars": 1,
-              "forks": 2,
+              "forks": 1,
               "updated_at": "2025-09-27T16:53:59Z",
               "language": "Shell",
               "archived": false
@@ -4664,9 +4664,9 @@
               "name": "loops",
               "description": "Loops package for YunoHost",
               "url": "https://github.com/YunoHost-Apps/loops_ynh",
-              "stars": 0,
+              "stars": 1,
               "forks": 1,
-              "updated_at": "2025-09-26T21:04:02Z",
+              "updated_at": "2025-09-30T05:43:22Z",
               "language": "Shell",
               "archived": false
             },
@@ -7432,6 +7432,17 @@
               "archived": false
             },
             {
+              "id": "rosariosis_ynh",
+              "name": "rosariosis",
+              "description": "RosarioSIS package for YunoHost",
+              "url": "https://github.com/YunoHost-Apps/rosariosis_ynh",
+              "stars": 0,
+              "forks": 0,
+              "updated_at": "2025-09-29T18:00:05Z",
+              "language": "Shell",
+              "archived": false
+            },
+            {
               "id": "roundcube_ynh",
               "name": "roundcube",
               "description": "Roundcube package for YunoHost",
@@ -8109,7 +8120,7 @@
               "url": "https://github.com/YunoHost-Apps/sparkyfitness_ynh",
               "stars": 0,
               "forks": 0,
-              "updated_at": "2025-09-25T05:36:18Z",
+              "updated_at": "2025-09-30T05:25:34Z",
               "language": "Shell",
               "archived": false
             },
@@ -8802,7 +8813,7 @@
               "url": "https://github.com/YunoHost-Apps/ttrss_ynh",
               "stars": 17,
               "forks": 14,
-              "updated_at": "2025-09-08T12:36:57Z",
+              "updated_at": "2025-09-29T17:06:56Z",
               "language": "Shell",
               "archived": false
             },
@@ -9318,7 +9329,7 @@
               "description": "WireGuard VPN software with a web UI configuration companion, packaged for YunoHost.",
               "url": "https://github.com/YunoHost-Apps/wireguard_ynh",
               "stars": 37,
-              "forks": 14,
+              "forks": 13,
               "updated_at": "2025-08-26T17:03:32Z",
               "language": "Shell",
               "archived": false
@@ -9903,7 +9914,7 @@
       {
         "name": "YunoHost Docs Translations",
         "success": true,
-        "duration": 78,
+        "duration": 96,
         "result": [
           "ar",
           "ca",
@@ -9919,7 +9930,7 @@
       {
         "name": "YunoHost UI Translations",
         "success": true,
-        "duration": 1321,
+        "duration": 1465,
         "result": [
           {
             "language": "Basque",
@@ -10326,7 +10337,7 @@
       {
         "name": "Zimaboard Shipping Areas",
         "success": true,
-        "duration": 270,
+        "duration": 280,
         "result": [
           "Argentina",
           "Australia",
