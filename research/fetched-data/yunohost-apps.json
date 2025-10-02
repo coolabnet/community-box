@@ -1,5 +1,5 @@
 {
-  "timestamp": "2025-10-01T06:34:37.582Z",
+  "timestamp": "2025-10-02T06:33:05.748Z",
   "script": "scripts.test.js",
   "source": "YunoHost-Apps GitHub Organization",
   "url": "https://github.com/YunoHost-Apps",
@@ -1050,7 +1050,7 @@
       "url": "https://github.com/YunoHost-Apps/codimd_ynh",
       "stars": 11,
       "forks": 12,
-      "updated_at": "2025-09-03T12:40:17Z",
+      "updated_at": "2025-10-01T12:38:38Z",
       "language": "Shell",
       "archived": false
     },
@@ -1204,7 +1204,7 @@
       "url": "https://github.com/YunoHost-Apps/copyparty_ynh",
       "stars": 3,
       "forks": 0,
-      "updated_at": "2025-09-23T20:07:29Z",
+      "updated_at": "2025-10-01T07:54:37Z",
       "language": "Shell",
       "archived": false
     },
@@ -1466,9 +1466,9 @@
       "name": "dendrite",
       "description": "Matrix homeserver of second-generation, packaged for YunoHost",
       "url": "https://github.com/YunoHost-Apps/dendrite_ynh",
-      "stars": 16,
+      "stars": 15,
       "forks": 8,
-      "updated_at": "2025-08-16T10:26:23Z",
+      "updated_at": "2025-10-01T11:36:52Z",
       "language": "Shell",
       "archived": false
     },
@@ -2138,7 +2138,7 @@
       "description": "Unofficial ESPHome package for YunoHost",
       "url": "https://github.com/YunoHost-Apps/esphome_ynh",
       "stars": 1,
-      "forks": 2,
+      "forks": 1,
       "updated_at": "2025-09-15T14:09:04Z",
       "language": "Shell",
       "archived": false
@@ -3668,7 +3668,7 @@
       "url": "https://github.com/YunoHost-Apps/immich_ynh",
       "stars": 20,
       "forks": 13,
-      "updated_at": "2025-09-24T05:47:05Z",
+      "updated_at": "2025-10-01T19:07:05Z",
       "language": "Shell",
       "archived": false
     },
@@ -4316,7 +4316,7 @@
       "description": "LiberaForms package for YunoHost",
       "url": "https://github.com/YunoHost-Apps/liberaforms_ynh",
       "stars": 1,
-      "forks": 1,
+      "forks": 2,
       "updated_at": "2025-08-30T17:18:27Z",
       "language": "Shell",
       "archived": false
@@ -5373,7 +5373,7 @@
       "url": "https://github.com/YunoHost-Apps/mosquitto_ynh",
       "stars": 5,
       "forks": 5,
-      "updated_at": "2025-09-10T14:25:19Z",
+      "updated_at": "2025-10-01T17:04:12Z",
       "language": "Shell",
       "archived": false
     },
@@ -5646,9 +5646,9 @@
       "name": "nextcloud-signaling",
       "description": "Standalone signaling server for Nextcloud Talk.",
       "url": "https://github.com/YunoHost-Apps/nextcloud-signaling_ynh",
-      "stars": 1,
+      "stars": 2,
       "forks": 3,
-      "updated_at": "2025-08-30T17:16:07Z",
+      "updated_at": "2025-10-01T20:50:08Z",
       "language": "Shell",
       "archived": false
     },
@@ -7077,7 +7077,7 @@
       "description": "qBittorrent package for YunoHost",
       "url": "https://github.com/YunoHost-Apps/qbittorrent_ynh",
       "stars": 3,
-      "forks": 2,
+      "forks": 3,
       "updated_at": "2025-09-09T20:35:09Z",
       "language": "Shell",
       "archived": false
@@ -8650,7 +8650,7 @@
       "description": "Open-source low-code framework for building React-based web applications and internal tools",
       "url": "https://github.com/YunoHost-Apps/tooljet_ynh",
       "stars": 6,
-      "forks": 4,
+      "forks": 3,
       "updated_at": "2025-09-25T22:29:49Z",
       "language": "Shell",
       "archived": false
