@@ -1,5 +1,5 @@
 {
-  "timestamp": "2025-10-03T06:32:51.450Z",
+  "timestamp": "2025-10-04T06:30:31.205Z",
   "script": "scripts.test.js",
   "source": "YunoHost-Apps GitHub Organization",
   "url": "https://github.com/YunoHost-Apps",
@@ -104,7 +104,7 @@
       "url": "https://github.com/YunoHost-Apps/actual_ynh",
       "stars": 7,
       "forks": 5,
-      "updated_at": "2025-09-11T06:16:42Z",
+      "updated_at": "2025-10-03T06:44:07Z",
       "language": "Shell",
       "archived": false
     },
@@ -234,9 +234,9 @@
       "name": "akkoma",
       "description": "Social media based on ActivityPub, fork of Pleroma",
       "url": "https://github.com/YunoHost-Apps/akkoma_ynh",
-      "stars": 15,
+      "stars": 14,
       "forks": 7,
-      "updated_at": "2025-08-30T17:11:35Z",
+      "updated_at": "2025-10-03T23:23:58Z",
       "language": "Shell",
       "archived": false
     },
@@ -632,7 +632,7 @@
       "url": "https://github.com/YunoHost-Apps/bonfire_ynh",
       "stars": 1,
       "forks": 3,
-      "updated_at": "2025-08-30T17:12:02Z",
+      "updated_at": "2025-10-03T20:06:04Z",
       "language": "Shell",
       "archived": false
     },
@@ -661,11 +661,11 @@
     {
       "id": "borg_ynh",
       "name": "borg",
-      "description": "An experimental Borg implementation for YunoHost",
+      "description": "Backup your Yunohost apps and data remotely using Borg",
       "url": "https://github.com/YunoHost-Apps/borg_ynh",
       "stars": 20,
       "forks": 26,
-      "updated_at": "2025-09-19T07:58:25Z",
+      "updated_at": "2025-10-03T20:38:07Z",
       "language": "Shell",
       "archived": false
     },
@@ -1072,7 +1072,7 @@
       "url": "https://github.com/YunoHost-Apps/collabora_ynh",
       "stars": 16,
       "forks": 13,
-      "updated_at": "2025-10-02T07:21:09Z",
+      "updated_at": "2025-10-03T21:13:24Z",
       "language": "Shell",
       "archived": false
     },
@@ -1809,7 +1809,7 @@
       "url": "https://github.com/YunoHost-Apps/dolibarr_ynh",
       "stars": 15,
       "forks": 21,
-      "updated_at": "2025-09-29T22:01:26Z",
+      "updated_at": "2025-10-03T19:10:37Z",
       "language": "Shell",
       "archived": false
     },
@@ -2821,7 +2821,7 @@
       "url": "https://github.com/YunoHost-Apps/galette_ynh",
       "stars": 7,
       "forks": 8,
-      "updated_at": "2025-09-09T19:33:20Z",
+      "updated_at": "2025-10-03T23:04:17Z",
       "language": "Shell",
       "archived": false
     },
@@ -3182,9 +3182,9 @@
       "name": "gotosocial",
       "description": "GoToSocial package for YunoHost: an ActivityPub social network server, written in Golang.",
       "url": "https://github.com/YunoHost-Apps/gotosocial_ynh",
-      "stars": 21,
+      "stars": 20,
       "forks": 8,
-      "updated_at": "2025-09-22T11:17:49Z",
+      "updated_at": "2025-10-03T23:19:36Z",
       "language": "Shell",
       "archived": false
     },
@@ -4007,9 +4007,9 @@
       "name": "kanboard",
       "description": "Kanboard package for YunoHost",
       "url": "https://github.com/YunoHost-Apps/kanboard_ynh",
-      "stars": 17,
+      "stars": 16,
       "forks": 17,
-      "updated_at": "2025-08-14T05:57:41Z",
+      "updated_at": "2025-10-03T23:09:41Z",
       "language": "PHP",
       "archived": false
     },
@@ -4856,7 +4856,7 @@
       "url": "https://github.com/YunoHost-Apps/mautic_ynh",
       "stars": 0,
       "forks": 3,
-      "updated_at": "2025-08-30T17:07:27Z",
+      "updated_at": "2025-10-03T18:13:12Z",
       "language": "Shell",
       "archived": false
     },
@@ -4931,9 +4931,9 @@
       "name": "mautrix_telegram",
       "description": "Matrix Telegram pupetting bridge for YunoHost",
       "url": "https://github.com/YunoHost-Apps/mautrix_telegram_ynh",
-      "stars": 17,
+      "stars": 16,
       "forks": 7,
-      "updated_at": "2025-09-18T21:19:09Z",
+      "updated_at": "2025-10-03T23:18:15Z",
       "language": "Shell",
       "archived": false
     },
@@ -5130,7 +5130,7 @@
       "description": "Minecraft Server package for YunoHost",
       "url": "https://github.com/YunoHost-Apps/minecraft_ynh",
       "stars": 13,
-      "forks": 15,
+      "forks": 16,
       "updated_at": "2025-08-30T17:04:53Z",
       "language": "Shell",
       "archived": false
@@ -6746,9 +6746,9 @@
       "name": "plume",
       "description": "Federated blogging application for YunoHost",
       "url": "https://github.com/YunoHost-Apps/plume_ynh",
-      "stars": 16,
+      "stars": 15,
       "forks": 2,
-      "updated_at": "2025-04-09T10:13:20Z",
+      "updated_at": "2025-10-03T23:13:09Z",
       "language": "Shell",
       "archived": false
     },
@@ -7386,7 +7386,7 @@
       "url": "https://github.com/YunoHost-Apps/rosariosis_ynh",
       "stars": 0,
       "forks": 0,
-      "updated_at": "2025-09-29T18:00:05Z",
+      "updated_at": "2025-10-03T06:41:19Z",
       "language": "Shell",
       "archived": false
     },
@@ -7450,9 +7450,9 @@
       "name": "rss-bridge",
       "description": "RSS-Bridge package for YunoHost",
       "url": "https://github.com/YunoHost-Apps/rss-bridge_ynh",
-      "stars": 17,
+      "stars": 16,
       "forks": 8,
-      "updated_at": "2025-09-25T17:22:45Z",
+      "updated_at": "2025-10-03T23:11:32Z",
       "language": "Shell",
       "archived": false
     },
@@ -7738,7 +7738,7 @@
       "url": "https://github.com/YunoHost-Apps/shields_ynh",
       "stars": 0,
       "forks": 1,
-      "updated_at": "2025-09-16T05:28:59Z",
+      "updated_at": "2025-10-03T06:43:02Z",
       "language": "Shell",
       "archived": false
     },
@@ -8068,7 +8068,7 @@
       "url": "https://github.com/YunoHost-Apps/sparkyfitness_ynh",
       "stars": 0,
       "forks": 0,
-      "updated_at": "2025-10-03T05:05:26Z",
+      "updated_at": "2025-10-04T00:29:43Z",
       "language": "Shell",
       "archived": false
     },
@@ -8365,7 +8365,7 @@
       "url": "https://github.com/YunoHost-Apps/synapse-admin_ynh",
       "stars": 6,
       "forks": 3,
-      "updated_at": "2025-09-15T10:46:59Z",
+      "updated_at": "2025-10-03T14:32:41Z",
       "language": "Shell",
       "archived": false
     },
@@ -8409,7 +8409,7 @@
       "url": "https://github.com/YunoHost-Apps/tableaunoir_ynh",
       "stars": 1,
       "forks": 1,
-      "updated_at": "2025-09-10T14:05:18Z",
+      "updated_at": "2025-10-03T08:03:29Z",
       "language": "Shell",
       "archived": false
     },
@@ -9839,7 +9839,7 @@
       "url": "https://github.com/YunoHost-Apps/zwiicms_ynh",
       "stars": 1,
       "forks": 1,
-      "updated_at": "2025-09-19T05:36:14Z",
+      "updated_at": "2025-10-03T07:50:43Z",
       "language": "Shell",
       "archived": false
     }
