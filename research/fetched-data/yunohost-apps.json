@@ -1,5 +1,5 @@
 {
-  "timestamp": "2025-10-04T06:30:31.205Z",
+  "timestamp": "2025-10-05T06:30:09.006Z",
   "script": "scripts.test.js",
   "source": "YunoHost-Apps GitHub Organization",
   "url": "https://github.com/YunoHost-Apps",
@@ -335,7 +335,7 @@
       "url": "https://github.com/YunoHost-Apps/appflowy_ynh",
       "stars": 4,
       "forks": 4,
-      "updated_at": "2025-08-30T17:17:26Z",
+      "updated_at": "2025-10-04T13:09:49Z",
       "language": "Shell",
       "archived": false
     },
@@ -2392,7 +2392,7 @@
       "url": "https://github.com/YunoHost-Apps/findmydevice_ynh",
       "stars": 3,
       "forks": 2,
-      "updated_at": "2025-09-10T14:07:03Z",
+      "updated_at": "2025-10-04T13:11:20Z",
       "language": "Shell",
       "archived": false
     },
@@ -2953,7 +2953,7 @@
       "url": "https://github.com/YunoHost-Apps/ghost_ynh",
       "stars": 21,
       "forks": 30,
-      "updated_at": "2025-09-23T20:58:28Z",
+      "updated_at": "2025-10-04T14:09:43Z",
       "language": "Shell",
       "archived": false
     },
@@ -2964,7 +2964,7 @@
       "url": "https://github.com/YunoHost-Apps/gitea_ynh",
       "stars": 27,
       "forks": 19,
-      "updated_at": "2025-09-04T20:34:11Z",
+      "updated_at": "2025-10-04T18:55:25Z",
       "language": "Shell",
       "archived": false
     },
@@ -3239,7 +3239,7 @@
       "url": "https://github.com/YunoHost-Apps/grist_ynh",
       "stars": 12,
       "forks": 4,
-      "updated_at": "2025-09-10T14:03:11Z",
+      "updated_at": "2025-10-04T08:16:02Z",
       "language": "Shell",
       "archived": false
     },
@@ -3448,7 +3448,7 @@
       "url": "https://github.com/YunoHost-Apps/homeassistant_ynh",
       "stars": 23,
       "forks": 16,
-      "updated_at": "2025-09-20T06:08:07Z",
+      "updated_at": "2025-10-04T07:01:55Z",
       "language": "Shell",
       "archived": false
     },
@@ -3664,11 +3664,11 @@
     {
       "id": "immich_ynh",
       "name": "immich",
-      "description": "Self-hosted photo and video backup solution directly from your mobile phone.",
+      "description": "Photo and video backup solution directly from your mobile phone.",
       "url": "https://github.com/YunoHost-Apps/immich_ynh",
-      "stars": 20,
+      "stars": 19,
       "forks": 13,
-      "updated_at": "2025-10-02T07:20:06Z",
+      "updated_at": "2025-10-04T16:37:25Z",
       "language": "Shell",
       "archived": false
     },
@@ -3887,7 +3887,7 @@
       "description": "Jellyfin package for YunoHost",
       "url": "https://github.com/YunoHost-Apps/jellyfin_ynh",
       "stars": 30,
-      "forks": 22,
+      "forks": 24,
       "updated_at": "2025-09-25T17:20:32Z",
       "language": "Shell",
       "archived": false
@@ -4581,7 +4581,7 @@
       "url": "https://github.com/YunoHost-Apps/localai_ynh",
       "stars": 1,
       "forks": 2,
-      "updated_at": "2025-09-18T19:01:15Z",
+      "updated_at": "2025-10-04T12:06:58Z",
       "language": "Shell",
       "archived": false
     },
@@ -4777,9 +4777,9 @@
       "name": "mastodon",
       "description": "Free, open-source social network for YunoHost",
       "url": "https://github.com/YunoHost-Apps/mastodon_ynh",
-      "stars": 87,
-      "forks": 41,
-      "updated_at": "2025-09-25T07:01:14Z",
+      "stars": 86,
+      "forks": 42,
+      "updated_at": "2025-10-04T14:03:00Z",
       "language": "Shell",
       "archived": false
     },
@@ -4942,9 +4942,9 @@
       "name": "mautrix_whatsapp",
       "description": "Matrix Whatsapp pupetting bridge for YunoHost",
       "url": "https://github.com/YunoHost-Apps/mautrix_whatsapp_ynh",
-      "stars": 28,
+      "stars": 27,
       "forks": 16,
-      "updated_at": "2025-09-17T09:50:52Z",
+      "updated_at": "2025-10-04T13:57:52Z",
       "language": "Shell",
       "archived": false
     },
@@ -4999,7 +4999,7 @@
       "url": "https://github.com/YunoHost-Apps/mediawiki_ynh",
       "stars": 8,
       "forks": 16,
-      "updated_at": "2025-07-02T07:33:33Z",
+      "updated_at": "2025-10-04T09:39:17Z",
       "language": "Shell",
       "archived": false
     },
@@ -5703,7 +5703,7 @@
       "url": "https://github.com/YunoHost-Apps/nocodb_ynh",
       "stars": 11,
       "forks": 5,
-      "updated_at": "2025-09-23T08:44:14Z",
+      "updated_at": "2025-10-04T11:53:47Z",
       "language": "Shell",
       "archived": false
     },
@@ -7186,9 +7186,9 @@
       "name": "readarr",
       "description": "Readarr package for YunoHost",
       "url": "https://github.com/YunoHost-Apps/readarr_ynh",
-      "stars": 1,
+      "stars": 0,
       "forks": 1,
-      "updated_at": "2025-09-17T07:38:22Z",
+      "updated_at": "2025-10-04T15:43:53Z",
       "language": "Shell",
       "archived": false
     },
@@ -7384,9 +7384,9 @@
       "name": "rosariosis",
       "description": "RosarioSIS package for YunoHost",
       "url": "https://github.com/YunoHost-Apps/rosariosis_ynh",
-      "stars": 0,
-      "forks": 0,
-      "updated_at": "2025-10-03T06:41:19Z",
+      "stars": 1,
+      "forks": 1,
+      "updated_at": "2025-10-04T17:31:17Z",
       "language": "Shell",
       "archived": false
     },
@@ -7848,7 +7848,7 @@
       "url": "https://github.com/YunoHost-Apps/silverbullet_ynh",
       "stars": 4,
       "forks": 2,
-      "updated_at": "2025-09-28T10:34:59Z",
+      "updated_at": "2025-10-04T10:44:43Z",
       "language": "Shell",
       "archived": false
     },
@@ -8068,7 +8068,7 @@
       "url": "https://github.com/YunoHost-Apps/sparkyfitness_ynh",
       "stars": 0,
       "forks": 0,
-      "updated_at": "2025-10-04T00:29:43Z",
+      "updated_at": "2025-10-05T04:56:36Z",
       "language": "Shell",
       "archived": false
     },
@@ -8200,7 +8200,7 @@
       "url": "https://github.com/YunoHost-Apps/stirling-pdf_ynh",
       "stars": 3,
       "forks": 4,
-      "updated_at": "2025-09-10T18:43:38Z",
+      "updated_at": "2025-10-04T13:09:25Z",
       "language": "Shell",
       "archived": false
     },
@@ -9047,7 +9047,7 @@
       "url": "https://github.com/YunoHost-Apps/wallos_ynh",
       "stars": 2,
       "forks": 1,
-      "updated_at": "2025-09-17T07:32:50Z",
+      "updated_at": "2025-10-04T21:46:39Z",
       "language": "Shell",
       "archived": false
     },
