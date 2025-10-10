@@ -1,5 +1,5 @@
 {
-  "timestamp": "2025-10-09T06:34:43.748Z",
+  "timestamp": "2025-10-10T06:34:12.613Z",
   "script": "scripts.test.js",
   "source": "YunoHost-Apps GitHub Organization",
   "url": "https://github.com/YunoHost-Apps",
@@ -665,7 +665,7 @@
       "url": "https://github.com/YunoHost-Apps/borg_ynh",
       "stars": 20,
       "forks": 26,
-      "updated_at": "2025-10-03T20:38:07Z",
+      "updated_at": "2025-10-09T11:09:06Z",
       "language": "Shell",
       "archived": false
     },
@@ -2260,7 +2260,7 @@
       "url": "https://github.com/YunoHost-Apps/faircamp_ynh",
       "stars": 2,
       "forks": 2,
-      "updated_at": "2025-09-10T15:34:21Z",
+      "updated_at": "2025-10-09T09:15:48Z",
       "language": "Shell",
       "archived": false
     },
@@ -2786,9 +2786,9 @@
       "name": "funkwhale",
       "description": "A modern, convivial and free music server on YunoHost",
       "url": "https://github.com/YunoHost-Apps/funkwhale_ynh",
-      "stars": 79,
+      "stars": 80,
       "forks": 24,
-      "updated_at": "2025-09-03T05:16:19Z",
+      "updated_at": "2025-10-09T19:38:29Z",
       "language": "Shell",
       "archived": false
     },
@@ -2986,7 +2986,7 @@
       "url": "https://github.com/YunoHost-Apps/gitlab_ynh",
       "stars": 21,
       "forks": 9,
-      "updated_at": "2025-09-25T05:40:47Z",
+      "updated_at": "2025-10-09T20:56:51Z",
       "language": "Ruby",
       "archived": false
     },
@@ -3239,7 +3239,7 @@
       "url": "https://github.com/YunoHost-Apps/grist_ynh",
       "stars": 12,
       "forks": 4,
-      "updated_at": "2025-10-04T08:16:02Z",
+      "updated_at": "2025-10-09T21:21:40Z",
       "language": "Shell",
       "archived": false
     },
@@ -3666,9 +3666,9 @@
       "name": "immich",
       "description": "Photo and video backup solution directly from your mobile phone.",
       "url": "https://github.com/YunoHost-Apps/immich_ynh",
-      "stars": 19,
+      "stars": 20,
       "forks": 13,
-      "updated_at": "2025-10-07T08:18:35Z",
+      "updated_at": "2025-10-10T05:00:47Z",
       "language": "Shell",
       "archived": false
     },
@@ -4185,7 +4185,7 @@
       "url": "https://github.com/YunoHost-Apps/kresus_ynh",
       "stars": 20,
       "forks": 21,
-      "updated_at": "2025-09-22T06:54:31Z",
+      "updated_at": "2025-10-09T06:44:40Z",
       "language": "Shell",
       "archived": false
     },
@@ -5384,7 +5384,7 @@
       "url": "https://github.com/YunoHost-Apps/mostlymatter_ynh",
       "stars": 1,
       "forks": 0,
-      "updated_at": "2025-08-30T17:17:46Z",
+      "updated_at": "2025-10-09T12:42:12Z",
       "language": "Shell",
       "archived": false
     },
@@ -5504,7 +5504,7 @@
       "description": "Custom Web app with SFTP access",
       "url": "https://github.com/YunoHost-Apps/my_webapp_ynh",
       "stars": 52,
-      "forks": 56,
+      "forks": 57,
       "updated_at": "2025-09-25T08:57:17Z",
       "language": "Shell",
       "archived": false
@@ -6407,7 +6407,7 @@
       "url": "https://github.com/YunoHost-Apps/phanpy_ynh",
       "stars": 2,
       "forks": 2,
-      "updated_at": "2025-09-18T04:33:10Z",
+      "updated_at": "2025-10-10T04:09:49Z",
       "language": "Shell",
       "archived": false
     },
@@ -8398,7 +8398,7 @@
       "url": "https://github.com/YunoHost-Apps/syncthing_ynh",
       "stars": 24,
       "forks": 7,
-      "updated_at": "2025-10-05T16:07:16Z",
+      "updated_at": "2025-10-09T09:23:13Z",
       "language": "Shell",
       "archived": false
     },
@@ -8761,7 +8761,7 @@
       "url": "https://github.com/YunoHost-Apps/ttrss_ynh",
       "stars": 17,
       "forks": 14,
-      "updated_at": "2025-10-07T11:24:57Z",
+      "updated_at": "2025-10-09T12:48:06Z",
       "language": "Shell",
       "archived": false
     },
@@ -8947,7 +8947,7 @@
       "description": "Vert package for YunoHost",
       "url": "https://github.com/YunoHost-Apps/vert_ynh",
       "stars": 1,
-      "forks": 1,
+      "forks": 2,
       "updated_at": "2025-09-10T16:15:44Z",
       "language": "Shell",
       "archived": false
@@ -9233,7 +9233,7 @@
       "description": "Whoogle package for YunoHost",
       "url": "https://github.com/YunoHost-Apps/whoogle_ynh",
       "stars": 2,
-      "forks": 2,
+      "forks": 3,
       "updated_at": "2025-09-30T13:16:30Z",
       "language": "Shell",
       "archived": false
