@@ -1,5 +1,5 @@
 {
-  "timestamp": "2025-10-10T06:34:12.613Z",
+  "timestamp": "2025-10-11T06:30:29.720Z",
   "script": "scripts.test.js",
   "source": "YunoHost-Apps GitHub Organization",
   "url": "https://github.com/YunoHost-Apps",
@@ -663,9 +663,9 @@
       "name": "borg",
       "description": "Backup your Yunohost apps and data remotely using Borg",
       "url": "https://github.com/YunoHost-Apps/borg_ynh",
-      "stars": 20,
+      "stars": 21,
       "forks": 26,
-      "updated_at": "2025-10-09T11:09:06Z",
+      "updated_at": "2025-10-10T22:07:53Z",
       "language": "Shell",
       "archived": false
     },
@@ -1061,7 +1061,7 @@
       "url": "https://github.com/YunoHost-Apps/coin_ynh",
       "stars": 3,
       "forks": 6,
-      "updated_at": "2025-09-11T07:27:46Z",
+      "updated_at": "2025-10-10T16:20:48Z",
       "language": "Shell",
       "archived": false
     },
@@ -3183,7 +3183,7 @@
       "description": "GoToSocial package for YunoHost: an ActivityPub social network server, written in Golang.",
       "url": "https://github.com/YunoHost-Apps/gotosocial_ynh",
       "stars": 21,
-      "forks": 8,
+      "forks": 9,
       "updated_at": "2025-10-08T22:00:49Z",
       "language": "Shell",
       "archived": false
@@ -3822,7 +3822,7 @@
       "url": "https://github.com/YunoHost-Apps/jackett_ynh",
       "stars": 1,
       "forks": 4,
-      "updated_at": "2025-10-05T06:56:23Z",
+      "updated_at": "2025-10-10T07:35:19Z",
       "language": "Shell",
       "archived": false
     },
@@ -4603,7 +4603,7 @@
       "url": "https://github.com/YunoHost-Apps/loki_ynh",
       "stars": 3,
       "forks": 2,
-      "updated_at": "2025-09-30T12:49:36Z",
+      "updated_at": "2025-10-11T06:02:11Z",
       "language": "Shell",
       "archived": false
     },
@@ -5219,7 +5219,7 @@
       "url": "https://github.com/YunoHost-Apps/mitra_ynh",
       "stars": 1,
       "forks": 3,
-      "updated_at": "2025-09-23T07:53:05Z",
+      "updated_at": "2025-10-10T07:34:24Z",
       "language": "Shell",
       "archived": false
     },
@@ -5846,7 +5846,7 @@
       "url": "https://github.com/YunoHost-Apps/ojs_ynh",
       "stars": 2,
       "forks": 1,
-      "updated_at": "2025-09-26T21:36:57Z",
+      "updated_at": "2025-10-10T10:12:13Z",
       "language": "PHP",
       "archived": false
     },
@@ -7848,7 +7848,7 @@
       "url": "https://github.com/YunoHost-Apps/silverbullet_ynh",
       "stars": 4,
       "forks": 2,
-      "updated_at": "2025-10-04T10:44:43Z",
+      "updated_at": "2025-10-10T08:19:23Z",
       "language": "Shell",
       "archived": false
     },
@@ -8473,9 +8473,9 @@
       "name": "technitium-dns",
       "description": "DNS server for privacy & security package for YunoHost",
       "url": "https://github.com/YunoHost-Apps/technitium-dns_ynh",
-      "stars": 5,
+      "stars": 6,
       "forks": 3,
-      "updated_at": "2025-10-05T13:51:44Z",
+      "updated_at": "2025-10-10T19:39:53Z",
       "language": "Shell",
       "archived": false
     },
@@ -8596,7 +8596,7 @@
       "url": "https://github.com/YunoHost-Apps/tiki_ynh",
       "stars": 4,
       "forks": 4,
-      "updated_at": "2025-08-30T17:10:31Z",
+      "updated_at": "2025-10-10T16:26:34Z",
       "language": "Shell",
       "archived": false
     },
@@ -9674,7 +9674,7 @@
       "url": "https://github.com/YunoHost-Apps/zabbix_ynh",
       "stars": 6,
       "forks": 6,
-      "updated_at": "2025-08-30T17:04:47Z",
+      "updated_at": "2025-10-10T21:55:23Z",
       "language": "Shell",
       "archived": false
     },
