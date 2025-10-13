@@ -1,11 +1,11 @@
 {
-  "timestamp": "2025-10-12T06:30:39.902Z",
+  "timestamp": "2025-10-13T06:36:09.108Z",
   "script": "scripts.test.js",
   "source": "YunoHost-Apps GitHub Organization",
   "url": "https://github.com/YunoHost-Apps",
   "api_url": "https://api.github.com/orgs/YunoHost-Apps/repos",
-  "total_apps": 893,
-  "total_repos_checked": 911,
+  "total_apps": 894,
+  "total_repos_checked": 912,
   "languages": [
     "CSS",
     "HTML",
@@ -663,9 +663,9 @@
       "name": "borg",
       "description": "Backup your Yunohost apps and data remotely using Borg",
       "url": "https://github.com/YunoHost-Apps/borg_ynh",
-      "stars": 21,
+      "stars": 22,
       "forks": 26,
-      "updated_at": "2025-10-10T22:07:53Z",
+      "updated_at": "2025-10-13T02:51:42Z",
       "language": "Shell",
       "archived": false
     },
@@ -2786,9 +2786,9 @@
       "name": "funkwhale",
       "description": "A modern, convivial and free music server on YunoHost",
       "url": "https://github.com/YunoHost-Apps/funkwhale_ynh",
-      "stars": 80,
+      "stars": 81,
       "forks": 24,
-      "updated_at": "2025-10-09T19:38:29Z",
+      "updated_at": "2025-10-12T16:17:02Z",
       "language": "Shell",
       "archived": false
     },
@@ -3899,7 +3899,7 @@
       "url": "https://github.com/YunoHost-Apps/jellyfin-vue_ynh",
       "stars": 0,
       "forks": 3,
-      "updated_at": "2025-10-06T07:20:58Z",
+      "updated_at": "2025-10-13T04:29:47Z",
       "language": "Shell",
       "archived": false
     },
@@ -4361,7 +4361,7 @@
       "url": "https://github.com/YunoHost-Apps/libremdb_ynh",
       "stars": 3,
       "forks": 1,
-      "updated_at": "2025-09-10T20:40:09Z",
+      "updated_at": "2025-10-13T06:26:18Z",
       "language": "Shell",
       "archived": false
     },
@@ -4503,7 +4503,7 @@
       "description": "Collaborative bookmark manager to collect, organize and archive webpages.",
       "url": "https://github.com/YunoHost-Apps/linkwarden_ynh",
       "stars": 3,
-      "forks": 3,
+      "forks": 4,
       "updated_at": "2025-09-03T08:29:45Z",
       "language": "Shell",
       "archived": false
@@ -4647,7 +4647,7 @@
       "url": "https://github.com/YunoHost-Apps/lufi_ynh",
       "stars": 16,
       "forks": 9,
-      "updated_at": "2025-08-30T17:02:19Z",
+      "updated_at": "2025-10-12T16:51:09Z",
       "language": "Perl",
       "archived": false
     },
@@ -8068,7 +8068,7 @@
       "url": "https://github.com/YunoHost-Apps/sparkyfitness_ynh",
       "stars": 0,
       "forks": 0,
-      "updated_at": "2025-10-09T05:49:58Z",
+      "updated_at": "2025-10-12T07:10:26Z",
       "language": "Shell",
       "archived": false
     },
@@ -8508,7 +8508,7 @@
       "url": "https://github.com/YunoHost-Apps/terraforming-mars_ynh",
       "stars": 1,
       "forks": 2,
-      "updated_at": "2025-10-06T07:05:42Z",
+      "updated_at": "2025-10-13T04:09:32Z",
       "language": "Shell",
       "archived": false
     },
@@ -8805,7 +8805,7 @@
       "url": "https://github.com/YunoHost-Apps/tuwunel_ynh",
       "stars": 3,
       "forks": 0,
-      "updated_at": "2025-09-15T08:45:28Z",
+      "updated_at": "2025-10-12T10:32:19Z",
       "language": "Shell",
       "archived": false
     },
@@ -9006,6 +9006,17 @@
       "updated_at": "2025-04-29T14:51:49Z",
       "language": "Shell",
       "archived": true
+    },
+    {
+      "id": "vtt_ynh",
+      "name": "vtt",
+      "description": "VTT (Virtual Tabletop) package for YunoHost",
+      "url": "https://github.com/YunoHost-Apps/vtt_ynh",
+      "stars": 0,
+      "forks": 0,
+      "updated_at": "2025-10-13T06:20:50Z",
+      "language": null,
+      "archived": false
     },
     {
       "id": "vvveb_ynh",
