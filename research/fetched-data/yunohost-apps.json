@@ -1,11 +1,11 @@
 {
-  "timestamp": "2025-10-13T06:36:09.108Z",
+  "timestamp": "2025-10-14T06:33:57.375Z",
   "script": "scripts.test.js",
   "source": "YunoHost-Apps GitHub Organization",
   "url": "https://github.com/YunoHost-Apps",
   "api_url": "https://api.github.com/orgs/YunoHost-Apps/repos",
-  "total_apps": 894,
-  "total_repos_checked": 912,
+  "total_apps": 896,
+  "total_repos_checked": 914,
   "languages": [
     "CSS",
     "HTML",
@@ -459,6 +459,17 @@
       "updated_at": "2024-05-15T17:57:19Z",
       "language": "Shell",
       "archived": true
+    },
+    {
+      "id": "azuracast_ynh",
+      "name": "azuracast",
+      "description": "",
+      "url": "https://github.com/YunoHost-Apps/azuracast_ynh",
+      "stars": 0,
+      "forks": 0,
+      "updated_at": "2025-10-13T11:58:59Z",
+      "language": "Shell",
+      "archived": false
     },
     {
       "id": "backdrop_ynh",
@@ -4361,7 +4372,7 @@
       "url": "https://github.com/YunoHost-Apps/libremdb_ynh",
       "stars": 3,
       "forks": 1,
-      "updated_at": "2025-10-13T06:26:18Z",
+      "updated_at": "2025-10-13T06:59:51Z",
       "language": "Shell",
       "archived": false
     },
@@ -4469,9 +4480,9 @@
       "name": "limesurvey",
       "description": "LimeSurvey package for yunoHost",
       "url": "https://github.com/YunoHost-Apps/limesurvey_ynh",
-      "stars": 5,
+      "stars": 6,
       "forks": 13,
-      "updated_at": "2025-10-11T09:31:36Z",
+      "updated_at": "2025-10-13T15:02:48Z",
       "language": "Shell",
       "archived": false
     },
@@ -6869,7 +6880,7 @@
       "url": "https://github.com/YunoHost-Apps/privatebin_ynh",
       "stars": 1,
       "forks": 4,
-      "updated_at": "2025-08-30T17:06:25Z",
+      "updated_at": "2025-10-13T08:19:29Z",
       "language": "PHP",
       "archived": false
     },
@@ -7501,6 +7512,17 @@
       "archived": true
     },
     {
+      "id": "sabnzbd_ynh",
+      "name": "sabnzbd",
+      "description": "A SabNZBD app for Yunohost",
+      "url": "https://github.com/YunoHost-Apps/sabnzbd_ynh",
+      "stars": 0,
+      "forks": 0,
+      "updated_at": "2025-10-13T15:06:30Z",
+      "language": "Shell",
+      "archived": false
+    },
+    {
       "id": "saltcorn_ynh",
       "name": "saltcorn",
       "description": "",
@@ -7538,9 +7560,9 @@
       "name": "satdress",
       "description": "Satdress package for YunoHost",
       "url": "https://github.com/YunoHost-Apps/satdress_ynh",
-      "stars": 5,
+      "stars": 6,
       "forks": 3,
-      "updated_at": "2025-09-20T14:34:51Z",
+      "updated_at": "2025-10-13T11:19:15Z",
       "language": "Shell",
       "archived": false
     },
@@ -8975,6 +8997,17 @@
       "archived": true
     },
     {
+      "id": "virtualtabletop_ynh",
+      "name": "virtualtabletop",
+      "description": "VirtualTabletop package for YunoHost",
+      "url": "https://github.com/YunoHost-Apps/virtualtabletop_ynh",
+      "stars": 0,
+      "forks": 0,
+      "updated_at": "2025-10-13T22:04:42Z",
+      "language": null,
+      "archived": false
+    },
+    {
       "id": "vore_ynh",
       "name": "vore",
       "description": "Vore package for YunoHost",
@@ -9006,17 +9039,6 @@
       "updated_at": "2025-04-29T14:51:49Z",
       "language": "Shell",
       "archived": true
-    },
-    {
-      "id": "vtt_ynh",
-      "name": "vtt",
-      "description": "VTT (Virtual Tabletop) package for YunoHost",
-      "url": "https://github.com/YunoHost-Apps/vtt_ynh",
-      "stars": 0,
-      "forks": 0,
-      "updated_at": "2025-10-13T06:20:50Z",
-      "language": null,
-      "archived": false
     },
     {
       "id": "vvveb_ynh",
@@ -9718,7 +9740,7 @@
       "url": "https://github.com/YunoHost-Apps/zerobin_ynh",
       "stars": 11,
       "forks": 12,
-      "updated_at": "2025-07-29T06:39:26Z",
+      "updated_at": "2025-10-13T06:45:32Z",
       "language": "Shell",
       "archived": false
     },
