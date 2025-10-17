@@ -1,18 +1,18 @@
 {
-  "timestamp": "2025-10-16T06:34:15.134Z",
+  "timestamp": "2025-10-17T06:33:44.610Z",
   "script": "run-all.js",
   "note": "Summary of all data fetching script executions",
   "data": {
-    "execution_time": "2025-10-16T06:34:15.134Z",
+    "execution_time": "2025-10-17T06:33:44.610Z",
     "total_scripts": 6,
     "successful": 6,
     "failed": 0,
-    "total_duration_ms": 19869,
+    "total_duration_ms": 18327,
     "results": [
       {
         "name": "CapRover UI Translations",
         "success": true,
-        "duration": 257,
+        "duration": 183,
         "result": [
           "ar-EG",
           "de-DE",
@@ -33,7 +33,7 @@
       {
         "name": "CasaOS UI Translations",
         "success": true,
-        "duration": 175,
+        "duration": 97,
         "result": [
           "ca_ES",
           "cs_CZ",
@@ -68,7 +68,7 @@
       {
         "name": "YunoHost Apps",
         "success": true,
-        "duration": 16703,
+        "duration": 16022,
         "result": {
           "count": 897,
           "apps": [
@@ -728,7 +728,7 @@
               "url": "https://github.com/YunoHost-Apps/borg_ynh",
               "stars": 22,
               "forks": 26,
-              "updated_at": "2025-10-13T02:51:42Z",
+              "updated_at": "2025-10-16T19:32:52Z",
               "language": "Shell",
               "archived": false
             },
@@ -1452,9 +1452,9 @@
               "name": "dagu",
               "description": "Dagu package for YunoHost",
               "url": "https://github.com/YunoHost-Apps/dagu_ynh",
-              "stars": 1,
+              "stars": 2,
               "forks": 2,
-              "updated_at": "2025-10-11T21:15:32Z",
+              "updated_at": "2025-10-16T13:56:19Z",
               "language": "Shell",
               "archived": false
             },
@@ -2695,9 +2695,9 @@
               "name": "fossflow",
               "description": "Make beautiful isometric infrastructure diagrams",
               "url": "https://github.com/YunoHost-Apps/fossflow_ynh",
-              "stars": 0,
+              "stars": 1,
               "forks": 1,
-              "updated_at": "2025-10-12T06:22:59Z",
+              "updated_at": "2025-10-16T20:11:55Z",
               "language": "Shell",
               "archived": false
             },
@@ -5699,7 +5699,7 @@
               "description": "Nextcloud package for YunoHost",
               "url": "https://github.com/YunoHost-Apps/nextcloud_ynh",
               "stars": 164,
-              "forks": 69,
+              "forks": 68,
               "updated_at": "2025-10-06T21:10:20Z",
               "language": "Shell",
               "archived": false
@@ -6228,7 +6228,7 @@
               "url": "https://github.com/YunoHost-Apps/owncloud_ynh",
               "stars": 4,
               "forks": 8,
-              "updated_at": "2025-09-11T06:11:52Z",
+              "updated_at": "2025-10-16T17:59:38Z",
               "language": "Shell",
               "archived": false
             },
@@ -8439,7 +8439,7 @@
               "url": "https://github.com/YunoHost-Apps/synapse_ynh",
               "stars": 83,
               "forks": 43,
-              "updated_at": "2025-10-08T21:28:09Z",
+              "updated_at": "2025-10-16T15:48:27Z",
               "language": "Shell",
               "archived": false
             },
@@ -9812,9 +9812,9 @@
               "name": "zeronet",
               "description": "Zeronet package for YunoHost",
               "url": "https://github.com/YunoHost-Apps/zeronet_ynh",
-              "stars": 9,
+              "stars": 10,
               "forks": 3,
-              "updated_at": "2024-05-15T17:52:39Z",
+              "updated_at": "2025-10-16T19:03:03Z",
               "language": "Shell",
               "archived": true
             },
@@ -9958,7 +9958,7 @@
       {
         "name": "YunoHost Docs Translations",
         "success": true,
-        "duration": 178,
+        "duration": 125,
         "result": [
           "ar",
           "ca",
@@ -9974,7 +9974,7 @@
       {
         "name": "YunoHost UI Translations",
         "success": true,
-        "duration": 2054,
+        "duration": 1539,
         "result": [
           {
             "language": "Basque",
@@ -10381,7 +10381,7 @@
       {
         "name": "Zimaboard Shipping Areas",
         "success": true,
-        "duration": 502,
+        "duration": 361,
         "result": [
           "Argentina",
           "Australia",
