@@ -1,5 +1,5 @@
 {
-  "timestamp": "2025-10-17T06:34:00.732Z",
+  "timestamp": "2025-10-18T06:31:27.278Z",
   "script": "scripts.test.js",
   "source": "YunoHost-Apps GitHub Organization",
   "url": "https://github.com/YunoHost-Apps",
@@ -3216,7 +3216,7 @@
       "description": "Grafana package for YunoHost",
       "url": "https://github.com/YunoHost-Apps/grafana_ynh",
       "stars": 17,
-      "forks": 12,
+      "forks": 13,
       "updated_at": "2025-08-30T17:02:27Z",
       "language": "Shell",
       "archived": false
@@ -3568,7 +3568,7 @@
       "description": "Static site generator, packaged for YunoHost",
       "url": "https://github.com/YunoHost-Apps/hugo_ynh",
       "stars": 1,
-      "forks": 3,
+      "forks": 2,
       "updated_at": "2025-08-30T17:13:21Z",
       "language": "Shell",
       "archived": false
@@ -3811,7 +3811,7 @@
       "url": "https://github.com/YunoHost-Apps/it-tools_ynh",
       "stars": 1,
       "forks": 1,
-      "updated_at": "2025-09-23T08:02:29Z",
+      "updated_at": "2025-10-18T01:42:51Z",
       "language": "Shell",
       "archived": false
     },
@@ -3920,7 +3920,7 @@
       "description": "Jellyseer package for YunoHost",
       "url": "https://github.com/YunoHost-Apps/jellyseerr_ynh",
       "stars": 1,
-      "forks": 4,
+      "forks": 5,
       "updated_at": "2025-09-03T05:17:11Z",
       "language": "Shell",
       "archived": false
@@ -3987,7 +3987,7 @@
       "url": "https://github.com/YunoHost-Apps/jsoncrack_ynh",
       "stars": 3,
       "forks": 1,
-      "updated_at": "2025-09-10T14:23:52Z",
+      "updated_at": "2025-10-18T01:50:27Z",
       "language": "Shell",
       "archived": false
     },
@@ -5295,7 +5295,7 @@
       "description": "Mollysocket package for YunoHost",
       "url": "https://github.com/YunoHost-Apps/mollysocket_ynh",
       "stars": 1,
-      "forks": 2,
+      "forks": 3,
       "updated_at": "2025-09-04T12:35:57Z",
       "language": "Shell",
       "archived": false
@@ -5978,7 +5978,7 @@
       "url": "https://github.com/YunoHost-Apps/opencut_ynh",
       "stars": 0,
       "forks": 0,
-      "updated_at": "2025-10-15T20:51:44Z",
+      "updated_at": "2025-10-17T06:42:09Z",
       "language": "Shell",
       "archived": false
     },
@@ -7527,9 +7527,9 @@
       "name": "sabnzbd",
       "description": "A SabNZBD app for Yunohost",
       "url": "https://github.com/YunoHost-Apps/sabnzbd_ynh",
-      "stars": 0,
+      "stars": 1,
       "forks": 0,
-      "updated_at": "2025-10-13T15:06:30Z",
+      "updated_at": "2025-10-17T07:28:08Z",
       "language": "Shell",
       "archived": false
     },
