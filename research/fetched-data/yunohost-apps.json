@@ -1,11 +1,11 @@
 {
-  "timestamp": "2025-10-18T06:31:27.278Z",
+  "timestamp": "2025-10-19T06:32:07.890Z",
   "script": "scripts.test.js",
   "source": "YunoHost-Apps GitHub Organization",
   "url": "https://github.com/YunoHost-Apps",
   "api_url": "https://api.github.com/orgs/YunoHost-Apps/repos",
-  "total_apps": 897,
-  "total_repos_checked": 915,
+  "total_apps": 898,
+  "total_repos_checked": 916,
   "languages": [
     "CSS",
     "HTML",
@@ -676,7 +676,7 @@
       "url": "https://github.com/YunoHost-Apps/borg_ynh",
       "stars": 22,
       "forks": 26,
-      "updated_at": "2025-10-16T19:32:52Z",
+      "updated_at": "2025-10-18T09:04:13Z",
       "language": "Shell",
       "archived": false
     },
@@ -797,7 +797,7 @@
       "url": "https://github.com/YunoHost-Apps/calibreweb_ynh",
       "stars": 20,
       "forks": 8,
-      "updated_at": "2025-10-06T20:11:41Z",
+      "updated_at": "2025-10-18T08:27:42Z",
       "language": "Shell",
       "archived": false
     },
@@ -2722,7 +2722,7 @@
       "url": "https://github.com/YunoHost-Apps/freescout_ynh",
       "stars": 1,
       "forks": 3,
-      "updated_at": "2025-09-11T11:58:53Z",
+      "updated_at": "2025-10-18T21:25:31Z",
       "language": "Shell",
       "archived": false
     },
@@ -3195,7 +3195,7 @@
       "url": "https://github.com/YunoHost-Apps/gotosocial_ynh",
       "stars": 21,
       "forks": 9,
-      "updated_at": "2025-10-08T22:00:49Z",
+      "updated_at": "2025-10-18T20:43:46Z",
       "language": "Shell",
       "archived": false
     },
@@ -3459,7 +3459,7 @@
       "url": "https://github.com/YunoHost-Apps/homeassistant_ynh",
       "stars": 23,
       "forks": 16,
-      "updated_at": "2025-10-11T08:28:39Z",
+      "updated_at": "2025-10-18T18:16:59Z",
       "language": "Shell",
       "archived": false
     },
@@ -3679,7 +3679,7 @@
       "url": "https://github.com/YunoHost-Apps/immich_ynh",
       "stars": 20,
       "forks": 13,
-      "updated_at": "2025-10-10T05:00:47Z",
+      "updated_at": "2025-10-18T19:53:41Z",
       "language": "Shell",
       "archived": false
     },
@@ -3811,7 +3811,7 @@
       "url": "https://github.com/YunoHost-Apps/it-tools_ynh",
       "stars": 1,
       "forks": 1,
-      "updated_at": "2025-10-18T01:42:51Z",
+      "updated_at": "2025-10-18T13:00:06Z",
       "language": "Shell",
       "archived": false
     },
@@ -4240,7 +4240,7 @@
       "url": "https://github.com/YunoHost-Apps/lasuite-docs_ynh",
       "stars": 5,
       "forks": 2,
-      "updated_at": "2025-10-11T18:51:43Z",
+      "updated_at": "2025-10-18T20:02:01Z",
       "language": "Shell",
       "archived": false
     },
@@ -4810,9 +4810,9 @@
       "name": "matomo",
       "description": "Matomo package for YunoHost",
       "url": "https://github.com/YunoHost-Apps/matomo_ynh",
-      "stars": 19,
+      "stars": 20,
       "forks": 7,
-      "updated_at": "2025-10-08T06:46:34Z",
+      "updated_at": "2025-10-18T12:54:00Z",
       "language": "Shell",
       "archived": false
     },
@@ -5613,9 +5613,9 @@
       "name": "n8n",
       "description": "n8n package for YunoHost",
       "url": "https://github.com/YunoHost-Apps/n8n_ynh",
-      "stars": 14,
+      "stars": 15,
       "forks": 22,
-      "updated_at": "2025-09-27T07:13:22Z",
+      "updated_at": "2025-10-18T20:47:14Z",
       "language": "Shell",
       "archived": false
     },
@@ -6275,7 +6275,7 @@
       "url": "https://github.com/YunoHost-Apps/passed_ynh",
       "stars": 2,
       "forks": 1,
-      "updated_at": "2025-09-10T14:22:32Z",
+      "updated_at": "2025-10-19T00:48:40Z",
       "language": "Shell",
       "archived": false
     },
@@ -7408,7 +7408,7 @@
       "url": "https://github.com/YunoHost-Apps/rosariosis_ynh",
       "stars": 1,
       "forks": 1,
-      "updated_at": "2025-10-05T10:54:54Z",
+      "updated_at": "2025-10-18T21:24:41Z",
       "language": "Shell",
       "archived": false
     },
@@ -8183,6 +8183,17 @@
       "archived": false
     },
     {
+      "id": "ssh_apprise_ynh",
+      "name": "ssh_apprise",
+      "description": "A small utility to get notified of SSH connections on the server",
+      "url": "https://github.com/YunoHost-Apps/ssh_apprise_ynh",
+      "stars": 0,
+      "forks": 0,
+      "updated_at": "2025-10-18T17:27:53Z",
+      "language": "Shell",
+      "archived": false
+    },
+    {
       "id": "ssh_chroot_dir_ynh",
       "name": "ssh_chroot_dir",
       "description": "",
@@ -8386,7 +8397,7 @@
       "description": "Matrix server (synapse) package for YunoHost",
       "url": "https://github.com/YunoHost-Apps/synapse_ynh",
       "stars": 83,
-      "forks": 43,
+      "forks": 44,
       "updated_at": "2025-10-16T15:48:27Z",
       "language": "Shell",
       "archived": false
@@ -9586,7 +9597,7 @@
       "url": "https://github.com/YunoHost-Apps/yuno-archive_ynh",
       "stars": 1,
       "forks": 0,
-      "updated_at": "2025-09-10T12:02:10Z",
+      "updated_at": "2025-10-18T16:59:50Z",
       "language": "Shell",
       "archived": false
     },
