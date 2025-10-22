@@ -1,5 +1,5 @@
 {
-  "timestamp": "2025-10-21T06:34:44.145Z",
+  "timestamp": "2025-10-22T06:35:42.326Z",
   "script": "scripts.test.js",
   "source": "YunoHost Translation Platform",
   "url": "https://translate.yunohost.org/",
@@ -31,7 +31,7 @@
       "translated_percent": 100,
       "translated_words": 3819,
       "total_words": 3819,
-      "last_change": "2025-10-21T06:00:23.130496Z"
+      "last_change": "2025-10-21T08:18:28.983626Z"
     },
     {
       "language": "Basque",
