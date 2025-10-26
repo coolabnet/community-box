@@ -1,18 +1,18 @@
 {
-  "timestamp": "2025-10-25T06:31:02.689Z",
+  "timestamp": "2025-10-26T06:32:18.419Z",
   "script": "run-all.js",
   "note": "Summary of all data fetching script executions",
   "data": {
-    "execution_time": "2025-10-25T06:31:02.689Z",
+    "execution_time": "2025-10-26T06:32:18.419Z",
     "total_scripts": 6,
     "successful": 6,
     "failed": 0,
-    "total_duration_ms": 14593,
+    "total_duration_ms": 17526,
     "results": [
       {
         "name": "CapRover UI Translations",
         "success": true,
-        "duration": 123,
+        "duration": 301,
         "result": [
           "ar-EG",
           "de-DE",
@@ -33,7 +33,7 @@
       {
         "name": "CasaOS UI Translations",
         "success": true,
-        "duration": 76,
+        "duration": 129,
         "result": [
           "ca_ES",
           "cs_CZ",
@@ -68,7 +68,7 @@
       {
         "name": "YunoHost Apps",
         "success": true,
-        "duration": 12690,
+        "duration": 14810,
         "result": {
           "count": 899,
           "apps": [
@@ -77,9 +77,9 @@
               "name": "13ft",
               "description": "13ft package for YunoHost",
               "url": "https://github.com/YunoHost-Apps/13ft_ynh",
-              "stars": 9,
+              "stars": 10,
               "forks": 3,
-              "updated_at": "2025-10-07T19:50:35Z",
+              "updated_at": "2025-10-25T11:22:27Z",
               "language": "Shell",
               "archived": false
             },
@@ -264,9 +264,9 @@
               "name": "airsonic",
               "description": "Web-based media streamer",
               "url": "https://github.com/YunoHost-Apps/airsonic_ynh",
-              "stars": 10,
+              "stars": 11,
               "forks": 10,
-              "updated_at": "2025-08-30T17:04:44Z",
+              "updated_at": "2025-10-25T14:03:34Z",
               "language": "Shell",
               "archived": false
             },
@@ -462,9 +462,9 @@
               "name": "audiobookshelf",
               "description": "Audiobookshelf package for YunoHost",
               "url": "https://github.com/YunoHost-Apps/audiobookshelf_ynh",
-              "stars": 5,
+              "stars": 6,
               "forks": 6,
-              "updated_at": "2025-10-09T05:25:38Z",
+              "updated_at": "2025-10-25T11:22:17Z",
               "language": "Shell",
               "archived": false
             },
@@ -748,9 +748,9 @@
               "name": "borgwarehouse",
               "description": "BorgWarHouse package for YunoHost",
               "url": "https://github.com/YunoHost-Apps/borgwarehouse_ynh",
-              "stars": 1,
+              "stars": 2,
               "forks": 3,
-              "updated_at": "2025-08-30T17:14:01Z",
+              "updated_at": "2025-10-25T11:46:42Z",
               "language": "Shell",
               "archived": false
             },
@@ -924,9 +924,9 @@
               "name": "chatgpt-web",
               "description": "ChatGPT-web package for YunoHost",
               "url": "https://github.com/YunoHost-Apps/chatgpt-web_ynh",
-              "stars": 3,
+              "stars": 4,
               "forks": 4,
-              "updated_at": "2025-09-11T06:04:20Z",
+              "updated_at": "2025-10-25T11:45:06Z",
               "language": "Shell",
               "archived": false
             },
@@ -1078,9 +1078,9 @@
               "name": "cockpit",
               "description": "Cockpit package for YunoHost ",
               "url": "https://github.com/YunoHost-Apps/cockpit_ynh",
-              "stars": 8,
+              "stars": 9,
               "forks": 8,
-              "updated_at": "2025-08-30T17:05:07Z",
+              "updated_at": "2025-10-25T13:51:17Z",
               "language": "Shell",
               "archived": false
             },
@@ -1738,9 +1738,9 @@
               "name": "django-for-runners",
               "description": "YunoHost app package for https://github.com/jedie/django-for-runners",
               "url": "https://github.com/YunoHost-Apps/django-for-runners_ynh",
-              "stars": 3,
+              "stars": 4,
               "forks": 0,
-              "updated_at": "2025-08-30T17:06:41Z",
+              "updated_at": "2025-10-25T14:12:06Z",
               "language": "Python",
               "archived": false
             },
@@ -1892,9 +1892,9 @@
               "name": "dont-code",
               "description": "Dont-Code package for YunoHost",
               "url": "https://github.com/YunoHost-Apps/dont-code_ynh",
-              "stars": 2,
+              "stars": 3,
               "forks": 3,
-              "updated_at": "2025-08-30T17:11:40Z",
+              "updated_at": "2025-10-25T14:04:53Z",
               "language": "Shell",
               "archived": false
             },
@@ -2543,7 +2543,7 @@
               "url": "https://github.com/YunoHost-Apps/flohmarkt_ynh",
               "stars": 2,
               "forks": 2,
-              "updated_at": "2025-10-24T10:17:36Z",
+              "updated_at": "2025-10-25T15:06:37Z",
               "language": "Shell",
               "archived": false
             },
@@ -2662,9 +2662,9 @@
               "name": "forgejo-runner",
               "description": "Forgejo Runner package for YunoHost",
               "url": "https://github.com/YunoHost-Apps/forgejo-runner_ynh",
-              "stars": 1,
+              "stars": 2,
               "forks": 3,
-              "updated_at": "2025-09-20T21:05:51Z",
+              "updated_at": "2025-10-25T11:44:00Z",
               "language": "Shell",
               "archived": false
             },
@@ -2915,9 +2915,9 @@
               "name": "garage",
               "description": "Garage package for YunoHost",
               "url": "https://github.com/YunoHost-Apps/garage_ynh",
-              "stars": 2,
+              "stars": 3,
               "forks": 5,
-              "updated_at": "2025-09-11T06:54:03Z",
+              "updated_at": "2025-10-25T11:24:19Z",
               "language": "Shell",
               "archived": false
             },
@@ -3102,9 +3102,9 @@
               "name": "glances",
               "description": "Glances package for YunoHost",
               "url": "https://github.com/YunoHost-Apps/glances_ynh",
-              "stars": 0,
+              "stars": 1,
               "forks": 3,
-              "updated_at": "2025-08-30T17:18:29Z",
+              "updated_at": "2025-10-25T14:13:29Z",
               "language": "Shell",
               "archived": false
             },
@@ -3212,9 +3212,9 @@
               "name": "google-webfonts-helper",
               "description": " Google Webfonts helper package for YunoHost",
               "url": "https://github.com/YunoHost-Apps/google-webfonts-helper_ynh",
-              "stars": 1,
+              "stars": 2,
               "forks": 0,
-              "updated_at": "2025-09-10T16:17:33Z",
+              "updated_at": "2025-10-25T14:14:12Z",
               "language": "Shell",
               "archived": false
             },
@@ -3740,9 +3740,9 @@
               "name": "incus",
               "description": "Powerful system container and virtual machine manager ",
               "url": "https://github.com/YunoHost-Apps/incus_ynh",
-              "stars": 2,
+              "stars": 3,
               "forks": 1,
-              "updated_at": "2025-09-25T17:12:20Z",
+              "updated_at": "2025-10-25T11:27:36Z",
               "language": "Shell",
               "archived": false
             },
@@ -4248,7 +4248,7 @@
               "url": "https://github.com/YunoHost-Apps/kresus_ynh",
               "stars": 20,
               "forks": 21,
-              "updated_at": "2025-10-19T13:12:46Z",
+              "updated_at": "2025-10-25T08:03:44Z",
               "language": "Shell",
               "archived": false
             },
@@ -4279,9 +4279,9 @@
               "name": "languagetool",
               "description": "LanguageTool server package for YunoHost",
               "url": "https://github.com/YunoHost-Apps/languagetool_ynh",
-              "stars": 5,
+              "stars": 6,
               "forks": 6,
-              "updated_at": "2025-10-05T14:18:06Z",
+              "updated_at": "2025-10-25T11:25:19Z",
               "language": "Shell",
               "archived": false
             },
@@ -4488,9 +4488,9 @@
               "name": "libretranslate",
               "description": "LibreTranslate package for YunHost",
               "url": "https://github.com/YunoHost-Apps/libretranslate_ynh",
-              "stars": 3,
+              "stars": 4,
               "forks": 5,
-              "updated_at": "2025-10-06T17:09:54Z",
+              "updated_at": "2025-10-25T11:23:50Z",
               "language": "Shell",
               "archived": false
             },
@@ -4620,9 +4620,9 @@
               "name": "litechat",
               "description": "LiteChat package for YunoHost",
               "url": "https://github.com/YunoHost-Apps/litechat_ynh",
-              "stars": 0,
+              "stars": 1,
               "forks": 1,
-              "updated_at": "2025-08-30T17:19:26Z",
+              "updated_at": "2025-10-25T11:26:04Z",
               "language": "Shell",
               "archived": false
             },
@@ -4642,9 +4642,9 @@
               "name": "localai",
               "description": "Free, Open Source OpenAI alternative",
               "url": "https://github.com/YunoHost-Apps/localai_ynh",
-              "stars": 1,
+              "stars": 2,
               "forks": 2,
-              "updated_at": "2025-10-04T12:06:58Z",
+              "updated_at": "2025-10-25T11:25:34Z",
               "language": "Shell",
               "archived": false
             },
@@ -4664,9 +4664,9 @@
               "name": "loki",
               "description": "Grafana Loki is a set of components that can be composed into a fully featured logging stack.",
               "url": "https://github.com/YunoHost-Apps/loki_ynh",
-              "stars": 3,
+              "stars": 4,
               "forks": 2,
-              "updated_at": "2025-10-14T23:14:17Z",
+              "updated_at": "2025-10-25T11:18:51Z",
               "language": "Shell",
               "archived": false
             },
@@ -4853,7 +4853,7 @@
               "url": "https://github.com/YunoHost-Apps/mastofessb_ynh",
               "stars": 0,
               "forks": 0,
-              "updated_at": "2025-10-20T03:05:02Z",
+              "updated_at": "2025-10-26T03:27:28Z",
               "language": "Shell",
               "archived": false
             },
@@ -5082,9 +5082,9 @@
               "name": "meet",
               "description": "Simple and Secure Video Conferencing. Powered by LiveKit.",
               "url": "https://github.com/YunoHost-Apps/meet_ynh",
-              "stars": 0,
+              "stars": 1,
               "forks": 0,
-              "updated_at": "2025-08-30T17:17:34Z",
+              "updated_at": "2025-10-25T13:51:54Z",
               "language": "Shell",
               "archived": false
             },
@@ -5247,9 +5247,9 @@
               "name": "minio",
               "description": "High Performance, Kubernetes Native Object Storage, packaged for YunoHost",
               "url": "https://github.com/YunoHost-Apps/minio_ynh",
-              "stars": 8,
+              "stars": 9,
               "forks": 6,
-              "updated_at": "2025-08-31T20:59:16Z",
+              "updated_at": "2025-10-25T11:46:38Z",
               "language": "Shell",
               "archived": false
             },
@@ -5588,9 +5588,9 @@
               "name": "my-mind",
               "description": "My Mind package for YunoHost",
               "url": "https://github.com/YunoHost-Apps/my-mind_ynh",
-              "stars": 3,
+              "stars": 4,
               "forks": 1,
-              "updated_at": "2025-08-30T17:03:32Z",
+              "updated_at": "2025-10-25T13:52:08Z",
               "language": "Shell",
               "archived": false
             },
@@ -5764,9 +5764,9 @@
               "name": "nocodb",
               "description": "Open Source Airtable alternative, packaged for YunoHost",
               "url": "https://github.com/YunoHost-Apps/nocodb_ynh",
-              "stars": 11,
+              "stars": 12,
               "forks": 5,
-              "updated_at": "2025-10-04T11:53:47Z",
+              "updated_at": "2025-10-25T11:25:41Z",
               "language": "Shell",
               "archived": false
             },
@@ -6272,7 +6272,7 @@
               "url": "https://github.com/YunoHost-Apps/paheko_ynh",
               "stars": 4,
               "forks": 6,
-              "updated_at": "2025-10-06T15:24:30Z",
+              "updated_at": "2025-10-25T15:03:06Z",
               "language": "PHP",
               "archived": false
             },
@@ -6281,9 +6281,9 @@
               "name": "pairdrop",
               "description": "PairDrop package for YunoHost",
               "url": "https://github.com/YunoHost-Apps/pairdrop_ynh",
-              "stars": 1,
+              "stars": 2,
               "forks": 1,
-              "updated_at": "2025-08-30T17:13:54Z",
+              "updated_at": "2025-10-25T11:47:27Z",
               "language": "Shell",
               "archived": false
             },
@@ -6305,7 +6305,7 @@
               "url": "https://github.com/YunoHost-Apps/paperless-ngx_ynh",
               "stars": 14,
               "forks": 12,
-              "updated_at": "2025-09-15T19:13:54Z",
+              "updated_at": "2025-10-25T09:04:54Z",
               "language": "Shell",
               "archived": false
             },
@@ -6668,7 +6668,7 @@
               "url": "https://github.com/YunoHost-Apps/pihole_ynh",
               "stars": 21,
               "forks": 18,
-              "updated_at": "2025-09-10T11:58:50Z",
+              "updated_at": "2025-10-25T13:51:20Z",
               "language": "Shell",
               "archived": false
             },
@@ -6754,9 +6754,9 @@
               "name": "plakar",
               "description": "Backup solution powered by Kloset and ptar",
               "url": "https://github.com/YunoHost-Apps/plakar_ynh",
-              "stars": 1,
+              "stars": 2,
               "forks": 0,
-              "updated_at": "2025-08-30T17:19:24Z",
+              "updated_at": "2025-10-25T11:18:24Z",
               "language": "Shell",
               "archived": false
             },
@@ -6919,9 +6919,9 @@
               "name": "pretix",
               "description": "Pretix packge for YunoHost",
               "url": "https://github.com/YunoHost-Apps/pretix_ynh",
-              "stars": 2,
+              "stars": 3,
               "forks": 1,
-              "updated_at": "2025-09-10T19:58:14Z",
+              "updated_at": "2025-10-25T14:13:02Z",
               "language": "Shell",
               "archived": false
             },
@@ -6985,9 +6985,9 @@
               "name": "prometheus",
               "description": "Monitoring system and time series database, packaged for YunoHost",
               "url": "https://github.com/YunoHost-Apps/prometheus_ynh",
-              "stars": 6,
+              "stars": 7,
               "forks": 1,
-              "updated_at": "2025-10-23T08:47:53Z",
+              "updated_at": "2025-10-25T11:17:05Z",
               "language": "Shell",
               "archived": false
             },
@@ -7381,9 +7381,9 @@
               "name": "restic",
               "description": "Restic package for YunoHost",
               "url": "https://github.com/YunoHost-Apps/restic_ynh",
-              "stars": 8,
+              "stars": 9,
               "forks": 12,
-              "updated_at": "2025-10-06T20:48:40Z",
+              "updated_at": "2025-10-25T11:20:01Z",
               "language": "Shell",
               "archived": false
             },
@@ -7469,9 +7469,9 @@
               "name": "roundcube",
               "description": "Roundcube package for YunoHost",
               "url": "https://github.com/YunoHost-Apps/roundcube_ynh",
-              "stars": 14,
+              "stars": 15,
               "forks": 24,
-              "updated_at": "2025-10-06T18:44:02Z",
+              "updated_at": "2025-10-25T11:23:38Z",
               "language": "Shell",
               "archived": false
             },
@@ -7491,9 +7491,9 @@
               "name": "rspamd",
               "description": "Rspamd (spam filtering system) packaged for YunoHost",
               "url": "https://github.com/YunoHost-Apps/rspamd_ynh",
-              "stars": 4,
+              "stars": 5,
               "forks": 3,
-              "updated_at": "2025-10-14T16:59:31Z",
+              "updated_at": "2025-10-25T11:19:25Z",
               "language": "Shell",
               "archived": false
             },
@@ -7502,9 +7502,9 @@
               "name": "rspamdui",
               "description": "Web UI for rspamd",
               "url": "https://github.com/YunoHost-Apps/rspamdui_ynh",
-              "stars": 2,
+              "stars": 3,
               "forks": 5,
-              "updated_at": "2025-09-11T07:14:49Z",
+              "updated_at": "2025-10-25T14:03:27Z",
               "language": "Shell",
               "archived": false
             },
@@ -7678,9 +7678,9 @@
               "name": "scrumblr",
               "description": "Scrumblr package for YunoHost",
               "url": "https://github.com/YunoHost-Apps/scrumblr_ynh",
-              "stars": 2,
+              "stars": 3,
               "forks": 4,
-              "updated_at": "2025-08-30T17:39:58Z",
+              "updated_at": "2025-10-25T14:10:54Z",
               "language": "Shell",
               "archived": true
             },
@@ -7931,9 +7931,9 @@
               "name": "silverbullet",
               "description": "A creative space where you collect, create and expand your personal knowledge.",
               "url": "https://github.com/YunoHost-Apps/silverbullet_ynh",
-              "stars": 4,
+              "stars": 5,
               "forks": 2,
-              "updated_at": "2025-10-10T08:19:23Z",
+              "updated_at": "2025-10-25T11:19:58Z",
               "language": "Shell",
               "archived": false
             },
@@ -8140,9 +8140,9 @@
               "name": "spacedeck",
               "description": "Spacedeck, a web based, real time, collaborative whiteboard application with rich media support, packaged for YunoHost",
               "url": "https://github.com/YunoHost-Apps/spacedeck_ynh",
-              "stars": 5,
+              "stars": 6,
               "forks": 1,
-              "updated_at": "2025-08-30T17:08:20Z",
+              "updated_at": "2025-10-25T14:06:52Z",
               "language": "Shell",
               "archived": false
             },
@@ -8162,9 +8162,9 @@
               "name": "spftoolbox",
               "description": "See your record and check your domain settings",
               "url": "https://github.com/YunoHost-Apps/spftoolbox_ynh",
-              "stars": 8,
+              "stars": 9,
               "forks": 1,
-              "updated_at": "2025-08-30T17:03:48Z",
+              "updated_at": "2025-10-25T11:47:13Z",
               "language": "Shell",
               "archived": false
             },
@@ -8459,9 +8459,9 @@
               "name": "synapse-admin",
               "description": "synapse-admin package for YunoHost",
               "url": "https://github.com/YunoHost-Apps/synapse-admin_ynh",
-              "stars": 6,
+              "stars": 7,
               "forks": 3,
-              "updated_at": "2025-10-03T14:32:41Z",
+              "updated_at": "2025-10-25T11:04:10Z",
               "language": "Shell",
               "archived": false
             },
@@ -8503,9 +8503,9 @@
               "name": "tableaunoir",
               "description": "Tableaunoir package for YunoHost",
               "url": "https://github.com/YunoHost-Apps/tableaunoir_ynh",
-              "stars": 1,
+              "stars": 2,
               "forks": 1,
-              "updated_at": "2025-10-03T08:03:29Z",
+              "updated_at": "2025-10-25T11:25:59Z",
               "language": "Shell",
               "archived": false
             },
@@ -8525,9 +8525,9 @@
               "name": "tandoor",
               "description": "Tandoor package for YunoHost",
               "url": "https://github.com/YunoHost-Apps/tandoor_ynh",
-              "stars": 4,
+              "stars": 5,
               "forks": 8,
-              "updated_at": "2025-09-11T11:59:41Z",
+              "updated_at": "2025-10-25T11:17:47Z",
               "language": "Shell",
               "archived": false
             },
@@ -8701,9 +8701,9 @@
               "name": "timemachine",
               "description": "Use your local YunoHost server as a Time Machine Backup Drive",
               "url": "https://github.com/YunoHost-Apps/timemachine_ynh",
-              "stars": 7,
+              "stars": 8,
               "forks": 3,
-              "updated_at": "2025-10-24T16:52:19Z",
+              "updated_at": "2025-10-25T11:44:31Z",
               "language": "Shell",
               "archived": false
             },
@@ -8846,7 +8846,7 @@
               "url": "https://github.com/YunoHost-Apps/trivabble_ynh",
               "stars": 0,
               "forks": 0,
-              "updated_at": "2025-10-23T15:31:35Z",
+              "updated_at": "2025-10-25T08:59:50Z",
               "language": "Shell",
               "archived": false
             },
@@ -8943,9 +8943,9 @@
               "name": "ulogger",
               "description": "μlogger package for YunoHost",
               "url": "https://github.com/YunoHost-Apps/ulogger_ynh",
-              "stars": 6,
+              "stars": 7,
               "forks": 1,
-              "updated_at": "2025-09-10T14:26:27Z",
+              "updated_at": "2025-10-25T11:47:29Z",
               "language": "Shell",
               "archived": false
             },
@@ -9240,9 +9240,9 @@
               "name": "webhook",
               "description": "Webhook package for YunoHost",
               "url": "https://github.com/YunoHost-Apps/webhook_ynh",
-              "stars": 1,
+              "stars": 2,
               "forks": 0,
-              "updated_at": "2025-09-10T20:01:06Z",
+              "updated_at": "2025-10-25T14:12:25Z",
               "language": "Shell",
               "archived": false
             },
@@ -9559,9 +9559,9 @@
               "name": "yacy",
               "description": "Libre and decentralized search engine for YunoHost",
               "url": "https://github.com/YunoHost-Apps/yacy_ynh",
-              "stars": 6,
+              "stars": 7,
               "forks": 7,
-              "updated_at": "2025-10-21T18:23:13Z",
+              "updated_at": "2025-10-25T11:46:34Z",
               "language": "Shell",
               "archived": false
             },
@@ -9658,9 +9658,9 @@
               "name": "yuno-archive",
               "description": "",
               "url": "https://github.com/YunoHost-Apps/yuno-archive_ynh",
-              "stars": 1,
+              "stars": 2,
               "forks": 0,
-              "updated_at": "2025-10-18T16:59:50Z",
+              "updated_at": "2025-10-25T11:04:43Z",
               "language": "Shell",
               "archived": false
             },
@@ -9735,9 +9735,9 @@
               "name": "yunohost_landingpage",
               "description": "YunoHost landingpage app",
               "url": "https://github.com/YunoHost-Apps/yunohost_landingpage_ynh",
-              "stars": 0,
+              "stars": 1,
               "forks": 0,
-              "updated_at": "2025-03-31T12:44:59Z",
+              "updated_at": "2025-10-25T14:04:48Z",
               "language": "Shell",
               "archived": false
             },
@@ -9922,9 +9922,9 @@
               "name": "zulip",
               "description": "Zulip package for YunoHost",
               "url": "https://github.com/YunoHost-Apps/zulip_ynh",
-              "stars": 0,
+              "stars": 1,
               "forks": 2,
-              "updated_at": "2025-08-30T17:13:38Z",
+              "updated_at": "2025-10-25T11:47:54Z",
               "language": "Shell",
               "archived": false
             },
@@ -9980,7 +9980,7 @@
       {
         "name": "YunoHost Docs Translations",
         "success": true,
-        "duration": 79,
+        "duration": 118,
         "result": [
           "ar",
           "ca",
@@ -9996,24 +9996,8 @@
       {
         "name": "YunoHost UI Translations",
         "success": true,
-        "duration": 1371,
+        "duration": 1713,
         "result": [
-          {
-            "language": "Basque",
-            "language_code": "eu",
-            "translated_percent": 100,
-            "translated_words": 10449,
-            "total_words": 10449,
-            "last_change": "2025-10-19T15:40:13.661339Z"
-          },
-          {
-            "language": "French",
-            "language_code": "fr",
-            "translated_percent": 100,
-            "translated_words": 10449,
-            "total_words": 10449,
-            "last_change": "2025-10-19T18:11:16.124888Z"
-          },
           {
             "language": "German",
             "language_code": "de",
@@ -10111,12 +10095,28 @@
             "last_change": "2025-08-04T01:53:30.990748Z"
           },
           {
+            "language": "Basque",
+            "language_code": "eu",
+            "translated_percent": 99.8,
+            "translated_words": 10449,
+            "total_words": 10546,
+            "last_change": "2025-10-25T12:17:21.795285Z"
+          },
+          {
+            "language": "French",
+            "language_code": "fr",
+            "translated_percent": 99.8,
+            "translated_words": 10449,
+            "total_words": 10546,
+            "last_change": "2025-10-25T12:17:25.113139Z"
+          },
+          {
             "language": "Spanish",
             "language_code": "es",
-            "translated_percent": 99.2,
+            "translated_percent": 99.1,
             "translated_words": 10338,
-            "total_words": 10449,
-            "last_change": "2025-10-19T15:40:12.950552Z"
+            "total_words": 10546,
+            "last_change": "2025-10-25T12:17:20.526498Z"
           },
           {
             "language": "Spanish",
@@ -10161,10 +10161,10 @@
           {
             "language": "Catalan",
             "language_code": "ca",
-            "translated_percent": 93.2,
+            "translated_percent": 93.1,
             "translated_words": 9764,
-            "total_words": 10449,
-            "last_change": "2025-10-19T15:40:08.949331Z"
+            "total_words": 10546,
+            "last_change": "2025-10-25T12:17:12.274563Z"
           },
           {
             "language": "Portuguese",
@@ -10233,10 +10233,10 @@
           {
             "language": "German",
             "language_code": "de",
-            "translated_percent": 80.7,
+            "translated_percent": 80.6,
             "translated_words": 7793,
-            "total_words": 10449,
-            "last_change": "2025-10-19T15:40:11.020413Z"
+            "total_words": 10546,
+            "last_change": "2025-10-25T12:17:17.392911Z"
           },
           {
             "language": "Arabic",
@@ -10251,8 +10251,8 @@
             "language_code": "it",
             "translated_percent": 64.5,
             "translated_words": 6311,
-            "total_words": 10449,
-            "last_change": "2025-10-19T15:40:18.620343Z"
+            "total_words": 10546,
+            "last_change": "2025-10-25T12:17:32.102549Z"
           },
           {
             "language": "Portuguese",
@@ -10273,10 +10273,10 @@
           {
             "language": "Esperanto",
             "language_code": "eo",
-            "translated_percent": 48.6,
+            "translated_percent": 48.5,
             "translated_words": 4186,
-            "total_words": 10449,
-            "last_change": "2025-10-19T15:40:12.193500Z"
+            "total_words": 10546,
+            "last_change": "2025-10-25T12:17:19.550241Z"
           },
           {
             "language": "Esperanto",
@@ -10291,32 +10291,32 @@
             "language_code": "ru",
             "translated_percent": 35.1,
             "translated_words": 2819,
-            "total_words": 10449,
-            "last_change": "2025-10-19T15:40:26.517806Z"
+            "total_words": 10546,
+            "last_change": "2025-10-25T12:17:46.480428Z"
           },
           {
             "language": "Occitan",
             "language_code": "oc",
             "translated_percent": 33.9,
             "translated_words": 2399,
-            "total_words": 10449,
-            "last_change": "2025-10-19T15:40:23.989657Z"
+            "total_words": 10546,
+            "last_change": "2025-10-25T12:17:41.810967Z"
           },
           {
             "language": "Arabic",
             "language_code": "ar",
             "translated_percent": 23.4,
             "translated_words": 1139,
-            "total_words": 10449,
-            "last_change": "2025-10-19T15:40:07.192335Z"
+            "total_words": 10546,
+            "last_change": "2025-10-25T12:17:08.292289Z"
           },
           {
             "language": "Dutch",
             "language_code": "nl",
             "translated_percent": 21.8,
             "translated_words": 1786,
-            "total_words": 10449,
-            "last_change": "2025-10-19T15:40:23.515818Z"
+            "total_words": 10546,
+            "last_change": "2025-10-25T12:17:40.652871Z"
           },
           {
             "language": "Swedish",
@@ -10331,8 +10331,8 @@
             "language_code": "pt",
             "translated_percent": 18.9,
             "translated_words": 1403,
-            "total_words": 10449,
-            "last_change": "2025-10-19T15:40:25.204451Z"
+            "total_words": 10546,
+            "last_change": "2025-10-25T12:17:44.131419Z"
           },
           {
             "language": "Greek",
@@ -10347,16 +10347,16 @@
             "language_code": "tr",
             "translated_percent": 7.1,
             "translated_words": 658,
-            "total_words": 10449,
-            "last_change": "2025-10-19T15:40:30.361698Z"
+            "total_words": 10546,
+            "last_change": "2025-10-25T12:17:51.808216Z"
           },
           {
             "language": "Hindi",
             "language_code": "hi",
             "translated_percent": 2.3,
             "translated_words": 103,
-            "total_words": 10449,
-            "last_change": "2025-10-19T15:40:16.907156Z"
+            "total_words": 10546,
+            "last_change": "2025-10-25T12:17:28.436132Z"
           },
           {
             "language": "Hindi",
@@ -10371,16 +10371,16 @@
             "language_code": "hu",
             "translated_percent": 1.2,
             "translated_words": 69,
-            "total_words": 10449,
-            "last_change": "2025-10-19T15:40:17.498129Z"
+            "total_words": 10546,
+            "last_change": "2025-10-25T12:17:29.726770Z"
           },
           {
             "language": "Breton",
             "language_code": "br",
             "translated_percent": 0,
             "translated_words": 0,
-            "total_words": 10449,
-            "last_change": "2025-10-19T15:40:08.302772Z"
+            "total_words": 10546,
+            "last_change": "2025-10-25T12:17:10.822470Z"
           },
           {
             "language": "Breton",
@@ -10403,7 +10403,7 @@
       {
         "name": "Zimaboard Shipping Areas",
         "success": true,
-        "duration": 254,
+        "duration": 455,
         "result": [
           "Argentina",
           "Australia",
