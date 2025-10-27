@@ -1,5 +1,5 @@
 {
-  "timestamp": "2025-10-26T06:32:32.751Z",
+  "timestamp": "2025-10-27T06:38:09.301Z",
   "script": "scripts.test.js",
   "source": "YunoHost-Apps GitHub Organization",
   "url": "https://github.com/YunoHost-Apps",
@@ -676,7 +676,7 @@
       "url": "https://github.com/YunoHost-Apps/borg_ynh",
       "stars": 23,
       "forks": 26,
-      "updated_at": "2025-10-23T07:02:56Z",
+      "updated_at": "2025-10-26T07:45:35Z",
       "language": "Shell",
       "archived": false
     },
@@ -1215,7 +1215,7 @@
       "url": "https://github.com/YunoHost-Apps/copyparty_ynh",
       "stars": 3,
       "forks": 0,
-      "updated_at": "2025-10-23T10:08:21Z",
+      "updated_at": "2025-10-26T20:15:22Z",
       "language": "Shell",
       "archived": false
     },
@@ -2392,7 +2392,7 @@
       "url": "https://github.com/YunoHost-Apps/filerise_ynh",
       "stars": 0,
       "forks": 1,
-      "updated_at": "2025-10-24T16:10:34Z",
+      "updated_at": "2025-10-26T20:09:56Z",
       "language": "PHP",
       "archived": false
     },
@@ -2467,9 +2467,9 @@
       "name": "flarum",
       "description": "Flarum, an open-source forum software, packaged for YunoHost",
       "url": "https://github.com/YunoHost-Apps/flarum_ynh",
-      "stars": 22,
+      "stars": 21,
       "forks": 6,
-      "updated_at": "2025-07-10T21:39:01Z",
+      "updated_at": "2025-10-26T17:47:27Z",
       "language": "Shell",
       "archived": false
     },
@@ -3193,9 +3193,9 @@
       "name": "gotosocial",
       "description": "GoToSocial package for YunoHost: an ActivityPub social network server, written in Golang.",
       "url": "https://github.com/YunoHost-Apps/gotosocial_ynh",
-      "stars": 21,
+      "stars": 20,
       "forks": 8,
-      "updated_at": "2025-10-18T20:43:46Z",
+      "updated_at": "2025-10-26T18:00:40Z",
       "language": "Shell",
       "archived": false
     },
@@ -3833,7 +3833,7 @@
       "url": "https://github.com/YunoHost-Apps/jackett_ynh",
       "stars": 1,
       "forks": 4,
-      "updated_at": "2025-10-24T06:07:47Z",
+      "updated_at": "2025-10-26T20:14:19Z",
       "language": "Shell",
       "archived": false
     },
@@ -5868,7 +5868,7 @@
       "url": "https://github.com/YunoHost-Apps/olivetin_ynh",
       "stars": 1,
       "forks": 2,
-      "updated_at": "2025-10-25T04:03:47Z",
+      "updated_at": "2025-10-26T20:07:50Z",
       "language": "Shell",
       "archived": false
     },
@@ -5910,9 +5910,9 @@
       "name": "onlyoffice",
       "description": "OnlyOffice package for YunoHost",
       "url": "https://github.com/YunoHost-Apps/onlyoffice_ynh",
-      "stars": 19,
+      "stars": 20,
       "forks": 21,
-      "updated_at": "2025-10-20T19:16:50Z",
+      "updated_at": "2025-10-26T13:27:20Z",
       "language": "Shell",
       "archived": false
     },
@@ -7153,9 +7153,9 @@
       "name": "radicale",
       "description": "Radicale package for YunoHost",
       "url": "https://github.com/YunoHost-Apps/radicale_ynh",
-      "stars": 3,
+      "stars": 2,
       "forks": 5,
-      "updated_at": "2025-07-10T21:25:32Z",
+      "updated_at": "2025-10-26T17:46:27Z",
       "language": "JavaScript",
       "archived": false
     },
@@ -8134,7 +8134,7 @@
       "url": "https://github.com/YunoHost-Apps/spip_ynh",
       "stars": 5,
       "forks": 9,
-      "updated_at": "2025-10-14T17:00:50Z",
+      "updated_at": "2025-10-26T14:24:55Z",
       "language": "Shell",
       "archived": false
     },
@@ -8860,7 +8860,7 @@
       "url": "https://github.com/YunoHost-Apps/tuwunel_ynh",
       "stars": 3,
       "forks": 0,
-      "updated_at": "2025-10-19T14:12:22Z",
+      "updated_at": "2025-10-26T21:04:25Z",
       "language": "Shell",
       "archived": false
     },
@@ -9036,7 +9036,7 @@
       "url": "https://github.com/YunoHost-Apps/virtualtabletop_ynh",
       "stars": 1,
       "forks": 0,
-      "updated_at": "2025-10-22T22:25:31Z",
+      "updated_at": "2025-10-27T00:31:10Z",
       "language": "Shell",
       "archived": false
     },
