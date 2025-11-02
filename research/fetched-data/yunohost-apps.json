@@ -1,5 +1,5 @@
 {
-  "timestamp": "2025-11-01T06:31:50.978Z",
+  "timestamp": "2025-11-02T06:33:22.225Z",
   "script": "scripts.test.js",
   "source": "YunoHost-Apps GitHub Organization",
   "url": "https://github.com/YunoHost-Apps",
@@ -489,7 +489,7 @@
       "url": "https://github.com/YunoHost-Apps/backrest_ynh",
       "stars": 0,
       "forks": 1,
-      "updated_at": "2025-09-03T23:28:24Z",
+      "updated_at": "2025-11-01T12:41:52Z",
       "language": "Shell",
       "archived": false
     },
@@ -676,7 +676,7 @@
       "url": "https://github.com/YunoHost-Apps/borg_ynh",
       "stars": 23,
       "forks": 26,
-      "updated_at": "2025-10-26T07:45:35Z",
+      "updated_at": "2025-11-01T15:00:25Z",
       "language": "Shell",
       "archived": false
     },
@@ -2876,7 +2876,7 @@
       "url": "https://github.com/YunoHost-Apps/garden-party_ynh",
       "stars": 0,
       "forks": 1,
-      "updated_at": "2025-10-31T18:56:21Z",
+      "updated_at": "2025-11-01T13:30:11Z",
       "language": "Shell",
       "archived": false
     },
@@ -3183,7 +3183,7 @@
       "description": "Gotify package for YunoHost",
       "url": "https://github.com/YunoHost-Apps/gotify_ynh",
       "stars": 6,
-      "forks": 4,
+      "forks": 5,
       "updated_at": "2025-09-23T07:58:24Z",
       "language": "Shell",
       "archived": false
@@ -3261,7 +3261,7 @@
       "url": "https://github.com/YunoHost-Apps/grist_ynh",
       "stars": 12,
       "forks": 4,
-      "updated_at": "2025-10-09T21:21:40Z",
+      "updated_at": "2025-11-01T15:05:18Z",
       "language": "Shell",
       "archived": false
     },
@@ -3369,9 +3369,9 @@
       "name": "headplane",
       "description": "An advanced UI for headscale",
       "url": "https://github.com/YunoHost-Apps/headplane_ynh",
-      "stars": 5,
+      "stars": 6,
       "forks": 1,
-      "updated_at": "2025-08-30T17:17:02Z",
+      "updated_at": "2025-11-01T16:41:43Z",
       "language": "Shell",
       "archived": false
     },
@@ -3380,9 +3380,9 @@
       "name": "headscale",
       "description": "FOSS implementation of the Tailscale control server, packaged for YunoHost",
       "url": "https://github.com/YunoHost-Apps/headscale_ynh",
-      "stars": 13,
+      "stars": 14,
       "forks": 6,
-      "updated_at": "2025-08-30T17:11:18Z",
+      "updated_at": "2025-11-01T16:38:03Z",
       "language": "Shell",
       "archived": false
     },
@@ -3690,7 +3690,7 @@
       "url": "https://github.com/YunoHost-Apps/immich_ynh",
       "stars": 20,
       "forks": 13,
-      "updated_at": "2025-10-18T19:53:41Z",
+      "updated_at": "2025-11-01T09:51:29Z",
       "language": "Shell",
       "archived": false
     },
@@ -4603,7 +4603,7 @@
       "url": "https://github.com/YunoHost-Apps/localai_ynh",
       "stars": 2,
       "forks": 2,
-      "updated_at": "2025-10-25T11:25:34Z",
+      "updated_at": "2025-11-01T06:52:17Z",
       "language": "Shell",
       "archived": false
     },
@@ -4636,7 +4636,7 @@
       "url": "https://github.com/YunoHost-Apps/loops_ynh",
       "stars": 1,
       "forks": 1,
-      "updated_at": "2025-10-30T19:18:50Z",
+      "updated_at": "2025-11-01T09:09:52Z",
       "language": "Shell",
       "archived": false
     },
@@ -5890,7 +5890,7 @@
       "url": "https://github.com/YunoHost-Apps/ollama_ynh",
       "stars": 3,
       "forks": 2,
-      "updated_at": "2025-10-30T06:33:18Z",
+      "updated_at": "2025-11-01T06:36:48Z",
       "language": "Shell",
       "archived": false
     },
@@ -7253,7 +7253,7 @@
       "description": "Redirection app for YunoHost",
       "url": "https://github.com/YunoHost-Apps/redirect_ynh",
       "stars": 50,
-      "forks": 25,
+      "forks": 26,
       "updated_at": "2025-10-07T02:44:22Z",
       "language": "Shell",
       "archived": false
@@ -7606,7 +7606,7 @@
       "url": "https://github.com/YunoHost-Apps/scratch_ynh",
       "stars": 4,
       "forks": 1,
-      "updated_at": "2025-10-30T06:51:37Z",
+      "updated_at": "2025-11-01T07:13:37Z",
       "language": "Shell",
       "archived": false
     },
@@ -8695,7 +8695,7 @@
       "url": "https://github.com/YunoHost-Apps/tldraw_ynh",
       "stars": 2,
       "forks": 3,
-      "updated_at": "2025-10-30T10:57:15Z",
+      "updated_at": "2025-11-01T13:30:41Z",
       "language": "Shell",
       "archived": false
     },
@@ -9089,9 +9089,9 @@
       "name": "vvveb",
       "description": "Vvveb package for YunoHost",
       "url": "https://github.com/YunoHost-Apps/vvveb_ynh",
-      "stars": 2,
+      "stars": 3,
       "forks": 1,
-      "updated_at": "2025-10-07T07:17:20Z",
+      "updated_at": "2025-11-01T17:20:47Z",
       "language": "Shell",
       "archived": false
     },
