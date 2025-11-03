@@ -1,4 +1,5 @@
 {
+<<<<<<< Updated upstream
   "timestamp": "2025-11-02T06:33:20.901Z",
   "script": "run-all.js",
   "note": "Summary of all data fetching script executions",
@@ -8,11 +9,26 @@
     "successful": 6,
     "failed": 0,
     "total_duration_ms": 16237,
+=======
+  "timestamp": "2025-06-26T06:35:48.899Z",
+  "script": "run-all.js",
+  "note": "Summary of all data fetching script executions",
+  "data": {
+    "execution_time": "2025-06-26T06:35:48.899Z",
+    "total_scripts": 6,
+    "successful": 6,
+    "failed": 0,
+    "total_duration_ms": 15300,
+>>>>>>> Stashed changes
     "results": [
       {
         "name": "CapRover UI Translations",
         "success": true,
+<<<<<<< Updated upstream
         "duration": 278,
+=======
+        "duration": 239,
+>>>>>>> Stashed changes
         "result": [
           "ar-EG",
           "de-DE",
@@ -33,7 +49,11 @@
       {
         "name": "CasaOS UI Translations",
         "success": true,
+<<<<<<< Updated upstream
         "duration": 120,
+=======
+        "duration": 159,
+>>>>>>> Stashed changes
         "result": [
           "ca_ES",
           "cs_CZ",
@@ -68,9 +88,15 @@
       {
         "name": "YunoHost Apps",
         "success": true,
+<<<<<<< Updated upstream
         "duration": 13611,
         "result": {
           "count": 900,
+=======
+        "duration": 12666,
+        "result": {
+          "count": 865,
+>>>>>>> Stashed changes
           "apps": [
             {
               "id": "13ft_ynh",
@@ -154,9 +180,15 @@
               "name": "actual",
               "description": "Actual package for YunoHost",
               "url": "https://github.com/YunoHost-Apps/actual_ynh",
+<<<<<<< Updated upstream
               "stars": 7,
               "forks": 5,
               "updated_at": "2025-10-03T06:44:07Z",
+=======
+              "stars": 5,
+              "forks": 5,
+              "updated_at": "2025-06-12T08:35:09Z",
+>>>>>>> Stashed changes
               "language": "Shell",
               "archived": false
             },
@@ -167,7 +199,11 @@
               "url": "https://github.com/YunoHost-Apps/adguardhome_ynh",
               "stars": 17,
               "forks": 17,
+<<<<<<< Updated upstream
               "updated_at": "2025-10-24T15:30:06Z",
+=======
+              "updated_at": "2025-05-30T23:00:25Z",
+>>>>>>> Stashed changes
               "language": "Shell",
               "archived": false
             },
@@ -194,6 +230,7 @@
               "archived": false
             },
             {
+<<<<<<< Updated upstream
               "id": "adventurelog_ynh",
               "name": "adventurelog",
               "description": "AdventureLog package for YunoHost",
@@ -205,6 +242,8 @@
               "archived": false
             },
             {
+=======
+>>>>>>> Stashed changes
               "id": "aeneria_ynh",
               "name": "aeneria",
               "description": "æneria package for YunoHost",
@@ -244,7 +283,11 @@
               "url": "https://github.com/YunoHost-Apps/agora_ynh",
               "stars": 2,
               "forks": 2,
+<<<<<<< Updated upstream
               "updated_at": "2025-10-05T07:08:08Z",
+=======
+              "updated_at": "2025-04-20T07:34:47Z",
+>>>>>>> Stashed changes
               "language": "Shell",
               "archived": false
             },
@@ -321,7 +364,11 @@
               "url": "https://github.com/YunoHost-Apps/ampache_ynh",
               "stars": 17,
               "forks": 16,
+<<<<<<< Updated upstream
               "updated_at": "2025-08-30T17:00:11Z",
+=======
+              "updated_at": "2025-06-15T17:11:05Z",
+>>>>>>> Stashed changes
               "language": "PHP",
               "archived": false
             },
@@ -374,9 +421,15 @@
               "name": "anubis",
               "description": "Anubis package for YunoHost",
               "url": "https://github.com/YunoHost-Apps/anubis_ynh",
+<<<<<<< Updated upstream
               "stars": 7,
               "forks": 1,
               "updated_at": "2025-09-10T16:16:10Z",
+=======
+              "stars": 5,
+              "forks": 0,
+              "updated_at": "2025-06-12T03:56:20Z",
+>>>>>>> Stashed changes
               "language": "Shell",
               "archived": false
             },
@@ -385,9 +438,15 @@
               "name": "appflowy",
               "description": "",
               "url": "https://github.com/YunoHost-Apps/appflowy_ynh",
+<<<<<<< Updated upstream
               "stars": 4,
               "forks": 4,
               "updated_at": "2025-10-06T10:16:13Z",
+=======
+              "stars": 3,
+              "forks": 2,
+              "updated_at": "2025-06-21T12:17:42Z",
+>>>>>>> Stashed changes
               "language": "Shell",
               "archived": false
             },
@@ -638,9 +697,15 @@
               "name": "bileto",
               "description": "Bileto package for YunoHost",
               "url": "https://github.com/YunoHost-Apps/bileto_ynh",
+<<<<<<< Updated upstream
               "stars": 1,
               "forks": 1,
               "updated_at": "2025-10-21T18:18:25Z",
+=======
+              "stars": 0,
+              "forks": 0,
+              "updated_at": "2025-06-20T06:56:53Z",
+>>>>>>> Stashed changes
               "language": "Shell",
               "archived": false
             },
@@ -748,9 +813,15 @@
               "name": "borgwarehouse",
               "description": "BorgWarHouse package for YunoHost",
               "url": "https://github.com/YunoHost-Apps/borgwarehouse_ynh",
+<<<<<<< Updated upstream
               "stars": 2,
               "forks": 3,
               "updated_at": "2025-10-25T11:46:42Z",
+=======
+              "stars": 1,
+              "forks": 2,
+              "updated_at": "2025-06-02T07:44:12Z",
+>>>>>>> Stashed changes
               "language": "Shell",
               "archived": false
             },
@@ -1089,9 +1160,15 @@
               "name": "code-server",
               "description": "Code-server packaged for YunoHost",
               "url": "https://github.com/YunoHost-Apps/code-server_ynh",
+<<<<<<< Updated upstream
               "stars": 8,
               "forks": 1,
               "updated_at": "2025-10-21T18:55:39Z",
+=======
+              "stars": 6,
+              "forks": 2,
+              "updated_at": "2025-06-07T08:56:02Z",
+>>>>>>> Stashed changes
               "language": "Shell",
               "archived": false
             },
@@ -1190,7 +1267,11 @@
               "url": "https://github.com/YunoHost-Apps/compteur_du_gase_ynh",
               "stars": 0,
               "forks": 3,
+<<<<<<< Updated upstream
               "updated_at": "2025-08-30T17:10:26Z",
+=======
+              "updated_at": "2025-03-04T21:19:29Z",
+>>>>>>> Stashed changes
               "language": "Shell",
               "archived": false
             },
@@ -1211,8 +1292,13 @@
               "description": "Conduit packaged for YunoHost",
               "url": "https://github.com/YunoHost-Apps/conduit_ynh",
               "stars": 3,
+<<<<<<< Updated upstream
               "forks": 8,
               "updated_at": "2025-08-30T17:09:16Z",
+=======
+              "forks": 7,
+              "updated_at": "2025-06-08T12:45:17Z",
+>>>>>>> Stashed changes
               "language": "Shell",
               "archived": false
             },
@@ -1221,9 +1307,9 @@
               "name": "conduwuit",
               "description": "Conduwuit package for YunoHost",
               "url": "https://github.com/YunoHost-Apps/conduwuit_ynh",
-              "stars": 5,
+              "stars": 4,
               "forks": 1,
-              "updated_at": "2025-06-27T13:41:21Z",
+              "updated_at": "2025-04-26T03:44:34Z",
               "language": "Shell",
               "archived": true
             },
@@ -1299,8 +1385,13 @@
               "description": "Couchdb package for YunoHost",
               "url": "https://github.com/YunoHost-Apps/couchdb_ynh",
               "stars": 4,
+<<<<<<< Updated upstream
               "forks": 3,
               "updated_at": "2025-08-30T17:07:22Z",
+=======
+              "forks": 2,
+              "updated_at": "2024-06-08T19:59:42Z",
+>>>>>>> Stashed changes
               "language": "Shell",
               "archived": false
             },
@@ -1343,12 +1434,18 @@
               "description": "CryptPad package for YunoHost",
               "url": "https://github.com/YunoHost-Apps/cryptpad_ynh",
               "stars": 30,
+<<<<<<< Updated upstream
               "forks": 24,
               "updated_at": "2025-10-24T16:20:00Z",
+=======
+              "forks": 22,
+              "updated_at": "2025-06-07T05:47:19Z",
+>>>>>>> Stashed changes
               "language": "JavaScript",
               "archived": false
             },
             {
+<<<<<<< Updated upstream
               "id": "cryptroot-unlock_ynh",
               "name": "cryptroot-unlock",
               "description": "Unlock through SSH your partitions encrypted with LUKS",
@@ -1360,6 +1457,8 @@
               "archived": false
             },
             {
+=======
+>>>>>>> Stashed changes
               "id": "cubby_ynh",
               "name": "cubby",
               "description": "Cubby package for YunoHost",
@@ -1452,9 +1551,15 @@
               "name": "dagu",
               "description": "Dagu package for YunoHost",
               "url": "https://github.com/YunoHost-Apps/dagu_ynh",
+<<<<<<< Updated upstream
               "stars": 2,
               "forks": 2,
               "updated_at": "2025-10-28T06:54:36Z",
+=======
+              "stars": 0,
+              "forks": 1,
+              "updated_at": "2025-06-24T15:00:36Z",
+>>>>>>> Stashed changes
               "language": "Shell",
               "archived": false
             },
@@ -1509,7 +1614,11 @@
               "url": "https://github.com/YunoHost-Apps/deluge_ynh",
               "stars": 1,
               "forks": 1,
+<<<<<<< Updated upstream
               "updated_at": "2025-09-11T06:59:06Z",
+=======
+              "updated_at": "2025-06-06T06:48:01Z",
+>>>>>>> Stashed changes
               "language": "Shell",
               "archived": false
             },
@@ -1540,9 +1649,15 @@
               "name": "dex",
               "description": "Federated OpenID Connect Provider package for YunoHost",
               "url": "https://github.com/YunoHost-Apps/dex_ynh",
+<<<<<<< Updated upstream
               "stars": 9,
               "forks": 7,
               "updated_at": "2025-08-17T13:33:56Z",
+=======
+              "stars": 8,
+              "forks": 6,
+              "updated_at": "2025-06-07T17:30:31Z",
+>>>>>>> Stashed changes
               "language": "Shell",
               "archived": false
             },
@@ -1727,9 +1842,13 @@
               "name": "django-fmd",
               "description": "Find My Device Server -> https://gitlab.com/jedie/django-find-my-device",
               "url": "https://github.com/YunoHost-Apps/django-fmd_ynh",
-              "stars": 2,
+              "stars": 1,
               "forks": 0,
+<<<<<<< Updated upstream
               "updated_at": "2025-10-31T23:01:19Z",
+=======
+              "updated_at": "2024-09-07T11:14:31Z",
+>>>>>>> Stashed changes
               "language": "Python",
               "archived": false
             },
@@ -1947,9 +2066,15 @@
               "name": "dumbbudget",
               "description": "DumbBudget package for YunoHost",
               "url": "https://github.com/YunoHost-Apps/dumbbudget_ynh",
+<<<<<<< Updated upstream
               "stars": 1,
               "forks": 1,
               "updated_at": "2025-09-10T14:05:51Z",
+=======
+              "stars": 0,
+              "forks": 0,
+              "updated_at": "2025-05-19T20:06:56Z",
+>>>>>>> Stashed changes
               "language": "Shell",
               "archived": false
             },
@@ -1958,9 +2083,15 @@
               "name": "dumbdo",
               "description": "DumbDo package for YunoHost",
               "url": "https://github.com/YunoHost-Apps/dumbdo_ynh",
+<<<<<<< Updated upstream
               "stars": 1,
               "forks": 1,
               "updated_at": "2025-09-10T14:06:28Z",
+=======
+              "stars": 0,
+              "forks": 0,
+              "updated_at": "2025-06-09T08:47:41Z",
+>>>>>>> Stashed changes
               "language": "Shell",
               "archived": false
             },
@@ -1980,9 +2111,15 @@
               "name": "dumbkan",
               "description": "DumbKan package for YunoHost",
               "url": "https://github.com/YunoHost-Apps/dumbkan_ynh",
+<<<<<<< Updated upstream
               "stars": 1,
               "forks": 1,
               "updated_at": "2025-09-10T14:06:19Z",
+=======
+              "stars": 0,
+              "forks": 0,
+              "updated_at": "2025-06-09T08:49:33Z",
+>>>>>>> Stashed changes
               "language": "Shell",
               "archived": false
             },
@@ -1991,9 +2128,15 @@
               "name": "dumbpad",
               "description": "DumbPad package for YunoHost",
               "url": "https://github.com/YunoHost-Apps/dumbpad_ynh",
+<<<<<<< Updated upstream
               "stars": 1,
               "forks": 1,
               "updated_at": "2025-09-23T07:49:27Z",
+=======
+              "stars": 0,
+              "forks": 0,
+              "updated_at": "2025-06-09T10:05:28Z",
+>>>>>>> Stashed changes
               "language": "Shell",
               "archived": false
             },
@@ -2002,9 +2145,15 @@
               "name": "dumbwhois",
               "description": "DumbWhoIs package for YunoHost",
               "url": "https://github.com/YunoHost-Apps/dumbwhois_ynh",
+<<<<<<< Updated upstream
               "stars": 1,
               "forks": 1,
               "updated_at": "2025-09-10T17:11:20Z",
+=======
+              "stars": 0,
+              "forks": 0,
+              "updated_at": "2025-06-09T08:51:12Z",
+>>>>>>> Stashed changes
               "language": "Shell",
               "archived": false
             },
@@ -2091,8 +2240,13 @@
               "description": "Element package for YunoHost",
               "url": "https://github.com/YunoHost-Apps/element_ynh",
               "stars": 23,
+<<<<<<< Updated upstream
               "forks": 9,
               "updated_at": "2025-10-08T06:48:39Z",
+=======
+              "forks": 8,
+              "updated_at": "2025-06-17T20:29:19Z",
+>>>>>>> Stashed changes
               "language": "Shell",
               "archived": false
             },
@@ -2147,7 +2301,11 @@
               "url": "https://github.com/YunoHost-Apps/emoncms_ynh",
               "stars": 0,
               "forks": 1,
+<<<<<<< Updated upstream
               "updated_at": "2025-09-18T06:37:54Z",
+=======
+              "updated_at": "2025-02-09T21:51:34Z",
+>>>>>>> Stashed changes
               "language": "Shell",
               "archived": false
             },
@@ -2200,9 +2358,15 @@
               "name": "esphome",
               "description": "Unofficial ESPHome package for YunoHost",
               "url": "https://github.com/YunoHost-Apps/esphome_ynh",
+<<<<<<< Updated upstream
               "stars": 1,
               "forks": 1,
               "updated_at": "2025-09-15T14:09:04Z",
+=======
+              "stars": 0,
+              "forks": 0,
+              "updated_at": "2025-06-10T16:04:59Z",
+>>>>>>> Stashed changes
               "language": "Shell",
               "archived": false
             },
@@ -2410,6 +2574,7 @@
               "description": "FileBrowser package for YunoHost",
               "url": "https://github.com/YunoHost-Apps/filebrowser_ynh",
               "stars": 5,
+<<<<<<< Updated upstream
               "forks": 4,
               "updated_at": "2025-10-23T12:52:18Z",
               "language": "Shell",
@@ -2423,6 +2588,10 @@
               "stars": 0,
               "forks": 1,
               "updated_at": "2025-08-17T13:45:03Z",
+=======
+              "forks": 1,
+              "updated_at": "2025-06-26T06:14:10Z",
+>>>>>>> Stashed changes
               "language": "Shell",
               "archived": false
             },
@@ -2433,7 +2602,11 @@
               "url": "https://github.com/YunoHost-Apps/filepizza_ynh",
               "stars": 4,
               "forks": 2,
+<<<<<<< Updated upstream
               "updated_at": "2025-09-03T14:48:18Z",
+=======
+              "updated_at": "2025-04-08T12:20:15Z",
+>>>>>>> Stashed changes
               "language": "Shell",
               "archived": false
             },
@@ -2453,9 +2626,15 @@
               "name": "findmydevice",
               "description": "Find My Device Server package for YunoHost",
               "url": "https://github.com/YunoHost-Apps/findmydevice_ynh",
+<<<<<<< Updated upstream
               "stars": 3,
               "forks": 2,
               "updated_at": "2025-10-07T08:19:14Z",
+=======
+              "stars": 0,
+              "forks": 1,
+              "updated_at": "2025-05-15T07:10:56Z",
+>>>>>>> Stashed changes
               "language": "Shell",
               "archived": false
             },
@@ -2488,7 +2667,11 @@
               "url": "https://github.com/YunoHost-Apps/firefly-iii_ynh",
               "stars": 22,
               "forks": 12,
+<<<<<<< Updated upstream
               "updated_at": "2025-10-11T11:51:19Z",
+=======
+              "updated_at": "2025-06-21T19:47:20Z",
+>>>>>>> Stashed changes
               "language": "Shell",
               "archived": false
             },
@@ -2499,7 +2682,11 @@
               "url": "https://github.com/YunoHost-Apps/firefly-iii-di_ynh",
               "stars": 3,
               "forks": 9,
+<<<<<<< Updated upstream
               "updated_at": "2025-07-31T08:28:37Z",
+=======
+              "updated_at": "2025-06-09T08:51:42Z",
+>>>>>>> Stashed changes
               "language": "Shell",
               "archived": false
             },
@@ -2543,7 +2730,11 @@
               "url": "https://github.com/YunoHost-Apps/flohmarkt_ynh",
               "stars": 2,
               "forks": 2,
+<<<<<<< Updated upstream
               "updated_at": "2025-10-25T15:06:37Z",
+=======
+              "updated_at": "2025-06-13T19:31:57Z",
+>>>>>>> Stashed changes
               "language": "Shell",
               "archived": false
             },
@@ -2684,6 +2875,7 @@
               "name": "forte",
               "description": "Forte package for YunoHost",
               "url": "https://github.com/YunoHost-Apps/forte_ynh",
+<<<<<<< Updated upstream
               "stars": 2,
               "forks": 1,
               "updated_at": "2025-10-28T19:49:22Z",
@@ -2698,6 +2890,11 @@
               "stars": 2,
               "forks": 1,
               "updated_at": "2025-10-22T11:56:42Z",
+=======
+              "stars": 1,
+              "forks": 0,
+              "updated_at": "2025-06-24T06:06:26Z",
+>>>>>>> Stashed changes
               "language": "Shell",
               "archived": false
             },
@@ -2772,9 +2969,15 @@
               "name": "freescout",
               "description": "Freescout package for YunoHost",
               "url": "https://github.com/YunoHost-Apps/freescout_ynh",
+<<<<<<< Updated upstream
               "stars": 1,
               "forks": 3,
               "updated_at": "2025-10-18T21:25:31Z",
+=======
+              "stars": 0,
+              "forks": 2,
+              "updated_at": "2025-06-15T17:09:20Z",
+>>>>>>> Stashed changes
               "language": "Shell",
               "archived": false
             },
@@ -2849,9 +3052,15 @@
               "name": "funkwhale",
               "description": "A modern, convivial and free music server on YunoHost",
               "url": "https://github.com/YunoHost-Apps/funkwhale_ynh",
+<<<<<<< Updated upstream
               "stars": 81,
               "forks": 24,
               "updated_at": "2025-10-12T16:17:02Z",
+=======
+              "stars": 80,
+              "forks": 24,
+              "updated_at": "2025-05-31T18:19:23Z",
+>>>>>>> Stashed changes
               "language": "Shell",
               "archived": false
             },
@@ -2861,8 +3070,13 @@
               "description": "Fusion package for YunoHost",
               "url": "https://github.com/YunoHost-Apps/fusion_ynh",
               "stars": 0,
+<<<<<<< Updated upstream
               "forks": 1,
               "updated_at": "2025-10-08T06:45:33Z",
+=======
+              "forks": 0,
+              "updated_at": "2025-06-22T15:14:50Z",
+>>>>>>> Stashed changes
               "language": "Shell",
               "archived": false
             },
@@ -2883,8 +3097,13 @@
               "description": "Galette package for YunoHost",
               "url": "https://github.com/YunoHost-Apps/galette_ynh",
               "stars": 7,
+<<<<<<< Updated upstream
               "forks": 8,
               "updated_at": "2025-10-14T18:11:03Z",
+=======
+              "forks": 7,
+              "updated_at": "2025-05-18T20:09:13Z",
+>>>>>>> Stashed changes
               "language": "Shell",
               "archived": false
             },
@@ -3016,7 +3235,11 @@
               "url": "https://github.com/YunoHost-Apps/ghost_ynh",
               "stars": 21,
               "forks": 30,
+<<<<<<< Updated upstream
               "updated_at": "2025-10-27T17:19:31Z",
+=======
+              "updated_at": "2025-06-26T06:24:20Z",
+>>>>>>> Stashed changes
               "language": "Shell",
               "archived": false
             },
@@ -3025,9 +3248,15 @@
               "name": "gitea",
               "description": "Gitea is a fork of Gogs. A git platform, Mirror of https://framagit.org/YunoHost-Apps/gitea_ynh",
               "url": "https://github.com/YunoHost-Apps/gitea_ynh",
+<<<<<<< Updated upstream
               "stars": 27,
               "forks": 19,
               "updated_at": "2025-10-30T21:03:47Z",
+=======
+              "stars": 26,
+              "forks": 18,
+              "updated_at": "2025-06-18T14:37:36Z",
+>>>>>>> Stashed changes
               "language": "Shell",
               "archived": false
             },
@@ -3115,7 +3344,11 @@
               "url": "https://github.com/YunoHost-Apps/glitchsoc_ynh",
               "stars": 17,
               "forks": 10,
+<<<<<<< Updated upstream
               "updated_at": "2025-10-27T17:29:10Z",
+=======
+              "updated_at": "2025-04-30T15:04:28Z",
+>>>>>>> Stashed changes
               "language": "Shell",
               "archived": false
             },
@@ -3180,8 +3413,13 @@
               "description": "Gokapi package for YunoHost",
               "url": "https://github.com/YunoHost-Apps/gokapi_ynh",
               "stars": 0,
+<<<<<<< Updated upstream
               "forks": 2,
               "updated_at": "2025-08-30T17:17:05Z",
+=======
+              "forks": 0,
+              "updated_at": "2025-01-19T20:41:53Z",
+>>>>>>> Stashed changes
               "language": "Shell",
               "archived": false
             },
@@ -3344,9 +3582,13 @@
               "name": "guacamole",
               "description": "Apache Guacamole package for YunoHost",
               "url": "https://github.com/YunoHost-Apps/guacamole_ynh",
-              "stars": 12,
+              "stars": 11,
               "forks": 16,
+<<<<<<< Updated upstream
               "updated_at": "2025-08-30T17:07:30Z",
+=======
+              "updated_at": "2025-03-03T14:14:04Z",
+>>>>>>> Stashed changes
               "language": "Shell",
               "archived": false
             },
@@ -3478,7 +3720,11 @@
               "url": "https://github.com/YunoHost-Apps/helloworld_ynh",
               "stars": 4,
               "forks": 10,
+<<<<<<< Updated upstream
               "updated_at": "2025-09-11T06:48:11Z",
+=======
+              "updated_at": "2025-01-21T21:13:49Z",
+>>>>>>> Stashed changes
               "language": "Shell",
               "archived": false
             },
@@ -3520,9 +3766,15 @@
               "name": "homeassistant",
               "description": "Home automation platform package for YunoHost",
               "url": "https://github.com/YunoHost-Apps/homeassistant_ynh",
+<<<<<<< Updated upstream
               "stars": 23,
               "forks": 16,
               "updated_at": "2025-10-18T18:16:59Z",
+=======
+              "stars": 21,
+              "forks": 15,
+              "updated_at": "2025-06-25T05:56:48Z",
+>>>>>>> Stashed changes
               "language": "Shell",
               "archived": false
             },
@@ -3698,7 +3950,7 @@
               "url": "https://github.com/YunoHost-Apps/iceshrimp_ynh",
               "stars": 3,
               "forks": 3,
-              "updated_at": "2025-07-02T06:13:56Z",
+              "updated_at": "2024-09-28T12:40:23Z",
               "language": "Shell",
               "archived": false
             },
@@ -3872,9 +4124,15 @@
               "name": "it-tools",
               "description": "Collection of handy online tools for people working in IT.",
               "url": "https://github.com/YunoHost-Apps/it-tools_ynh",
+<<<<<<< Updated upstream
               "stars": 1,
               "forks": 1,
               "updated_at": "2025-10-20T00:42:28Z",
+=======
+              "stars": 0,
+              "forks": 0,
+              "updated_at": "2025-06-23T01:21:15Z",
+>>>>>>> Stashed changes
               "language": "Shell",
               "archived": false
             },
@@ -3885,7 +4143,11 @@
               "url": "https://github.com/YunoHost-Apps/itflow_ynh",
               "stars": 2,
               "forks": 1,
+<<<<<<< Updated upstream
               "updated_at": "2025-08-30T17:13:46Z",
+=======
+              "updated_at": "2025-06-14T17:10:25Z",
+>>>>>>> Stashed changes
               "language": "Shell",
               "archived": false
             },
@@ -3896,7 +4158,11 @@
               "url": "https://github.com/YunoHost-Apps/jackett_ynh",
               "stars": 1,
               "forks": 4,
+<<<<<<< Updated upstream
               "updated_at": "2025-10-31T06:57:07Z",
+=======
+              "updated_at": "2025-06-25T06:28:12Z",
+>>>>>>> Stashed changes
               "language": "Shell",
               "archived": false
             },
@@ -3973,7 +4239,11 @@
               "url": "https://github.com/YunoHost-Apps/jellyfin-vue_ynh",
               "stars": 0,
               "forks": 3,
+<<<<<<< Updated upstream
               "updated_at": "2025-10-27T07:02:26Z",
+=======
+              "updated_at": "2025-06-18T06:34:41Z",
+>>>>>>> Stashed changes
               "language": "Shell",
               "archived": false
             },
@@ -3995,7 +4265,11 @@
               "url": "https://github.com/YunoHost-Apps/jenkins_ynh",
               "stars": 6,
               "forks": 10,
+<<<<<<< Updated upstream
               "updated_at": "2025-10-30T06:50:30Z",
+=======
+              "updated_at": "2025-06-18T06:35:07Z",
+>>>>>>> Stashed changes
               "language": "Shell",
               "archived": false
             },
@@ -4028,7 +4302,11 @@
               "url": "https://github.com/YunoHost-Apps/joomla_ynh",
               "stars": 2,
               "forks": 6,
+<<<<<<< Updated upstream
               "updated_at": "2025-10-27T09:57:14Z",
+=======
+              "updated_at": "2025-05-29T19:27:50Z",
+>>>>>>> Stashed changes
               "language": "Shell",
               "archived": false
             },
@@ -4048,9 +4326,15 @@
               "name": "jsoncrack",
               "description": "Visualization application that transforms various data formats, such as JSON, YAML, XML, CSV and more, into interactive graphs.",
               "url": "https://github.com/YunoHost-Apps/jsoncrack_ynh",
+<<<<<<< Updated upstream
               "stars": 4,
               "forks": 1,
               "updated_at": "2025-10-21T09:40:00Z",
+=======
+              "stars": 2,
+              "forks": 0,
+              "updated_at": "2025-06-23T01:29:08Z",
+>>>>>>> Stashed changes
               "language": "Shell",
               "archived": false
             },
@@ -4127,7 +4411,11 @@
               "url": "https://github.com/YunoHost-Apps/kavita_ynh",
               "stars": 4,
               "forks": 4,
+<<<<<<< Updated upstream
               "updated_at": "2025-10-24T05:53:26Z",
+=======
+              "updated_at": "2025-04-24T07:50:47Z",
+>>>>>>> Stashed changes
               "language": "Shell",
               "archived": false
             },
@@ -4235,9 +4523,15 @@
               "name": "koel",
               "description": "A personal music streaming server, packaged for YunoHost",
               "url": "https://github.com/YunoHost-Apps/koel_ynh",
+<<<<<<< Updated upstream
               "stars": 2,
               "forks": 3,
               "updated_at": "2025-10-28T07:06:14Z",
+=======
+              "stars": 1,
+              "forks": 2,
+              "updated_at": "2025-06-26T06:25:04Z",
+>>>>>>> Stashed changes
               "language": "Shell",
               "archived": false
             },
@@ -4248,7 +4542,11 @@
               "url": "https://github.com/YunoHost-Apps/komga_ynh",
               "stars": 5,
               "forks": 4,
+<<<<<<< Updated upstream
               "updated_at": "2025-10-19T12:48:12Z",
+=======
+              "updated_at": "2025-02-24T16:10:46Z",
+>>>>>>> Stashed changes
               "language": "Shell",
               "archived": false
             },
@@ -4336,7 +4634,11 @@
               "url": "https://github.com/YunoHost-Apps/leantime_ynh",
               "stars": 2,
               "forks": 5,
+<<<<<<< Updated upstream
               "updated_at": "2025-08-30T17:12:44Z",
+=======
+              "updated_at": "2025-06-26T06:25:36Z",
+>>>>>>> Stashed changes
               "language": "Shell",
               "archived": false
             },
@@ -4390,8 +4692,13 @@
               "description": "LiberaForms package for YunoHost",
               "url": "https://github.com/YunoHost-Apps/liberaforms_ynh",
               "stars": 1,
+<<<<<<< Updated upstream
               "forks": 2,
               "updated_at": "2025-08-30T17:18:27Z",
+=======
+              "forks": 1,
+              "updated_at": "2025-03-21T13:28:31Z",
+>>>>>>> Stashed changes
               "language": "Shell",
               "archived": false
             },
@@ -4545,7 +4852,11 @@
               "url": "https://github.com/YunoHost-Apps/limesurvey_ynh",
               "stars": 6,
               "forks": 13,
+<<<<<<< Updated upstream
               "updated_at": "2025-10-29T08:27:41Z",
+=======
+              "updated_at": "2025-06-18T06:30:37Z",
+>>>>>>> Stashed changes
               "language": "Shell",
               "archived": false
             },
@@ -4600,7 +4911,11 @@
               "url": "https://github.com/YunoHost-Apps/lionwiki-t2t_ynh",
               "stars": 1,
               "forks": 3,
+<<<<<<< Updated upstream
               "updated_at": "2025-08-30T17:06:00Z",
+=======
+              "updated_at": "2025-05-02T20:13:15Z",
+>>>>>>> Stashed changes
               "language": "PHP",
               "archived": false
             },
@@ -4610,8 +4925,13 @@
               "description": "Listmonk package for YunoHost",
               "url": "https://github.com/YunoHost-Apps/listmonk_ynh",
               "stars": 5,
+<<<<<<< Updated upstream
               "forks": 4,
               "updated_at": "2025-10-02T08:02:19Z",
+=======
+              "forks": 3,
+              "updated_at": "2025-06-08T07:53:42Z",
+>>>>>>> Stashed changes
               "language": "Shell",
               "archived": false
             },
@@ -4653,9 +4973,15 @@
               "name": "localai",
               "description": "Free, Open Source OpenAI alternative",
               "url": "https://github.com/YunoHost-Apps/localai_ynh",
+<<<<<<< Updated upstream
               "stars": 2,
               "forks": 2,
               "updated_at": "2025-11-01T06:52:17Z",
+=======
+              "stars": 0,
+              "forks": 0,
+              "updated_at": "2025-06-20T13:54:35Z",
+>>>>>>> Stashed changes
               "language": "Shell",
               "archived": false
             },
@@ -4765,7 +5091,11 @@
               "url": "https://github.com/YunoHost-Apps/lychee_ynh",
               "stars": 10,
               "forks": 7,
+<<<<<<< Updated upstream
               "updated_at": "2025-10-30T13:52:31Z",
+=======
+              "updated_at": "2025-06-24T09:14:27Z",
+>>>>>>> Stashed changes
               "language": "Shell",
               "archived": false
             },
@@ -4830,8 +5160,13 @@
               "description": "Many Notes package for YunoHost",
               "url": "https://github.com/YunoHost-Apps/many-notes_ynh",
               "stars": 0,
+<<<<<<< Updated upstream
               "forks": 2,
               "updated_at": "2025-10-08T06:47:11Z",
+=======
+              "forks": 1,
+              "updated_at": "2025-05-26T05:56:15Z",
+>>>>>>> Stashed changes
               "language": "Shell",
               "archived": false
             },
@@ -4852,6 +5187,7 @@
               "description": "Free, open-source social network for YunoHost",
               "url": "https://github.com/YunoHost-Apps/mastodon_ynh",
               "stars": 86,
+<<<<<<< Updated upstream
               "forks": 42,
               "updated_at": "2025-10-23T12:49:29Z",
               "language": "Shell",
@@ -4865,6 +5201,10 @@
               "stars": 0,
               "forks": 0,
               "updated_at": "2025-10-28T08:33:40Z",
+=======
+              "forks": 39,
+              "updated_at": "2025-06-03T07:34:53Z",
+>>>>>>> Stashed changes
               "language": "Shell",
               "archived": false
             },
@@ -4930,7 +5270,11 @@
               "url": "https://github.com/YunoHost-Apps/mautic_ynh",
               "stars": 0,
               "forks": 3,
+<<<<<<< Updated upstream
               "updated_at": "2025-10-03T18:13:12Z",
+=======
+              "updated_at": "2025-05-29T06:40:46Z",
+>>>>>>> Stashed changes
               "language": "Shell",
               "archived": false
             },
@@ -5005,9 +5349,15 @@
               "name": "mautrix_telegram",
               "description": "Matrix Telegram pupetting bridge for YunoHost",
               "url": "https://github.com/YunoHost-Apps/mautrix_telegram_ynh",
+<<<<<<< Updated upstream
               "stars": 17,
               "forks": 7,
               "updated_at": "2025-10-24T06:36:14Z",
+=======
+              "stars": 16,
+              "forks": 5,
+              "updated_at": "2025-04-09T10:18:00Z",
+>>>>>>> Stashed changes
               "language": "Shell",
               "archived": false
             },
@@ -5072,8 +5422,13 @@
               "description": "MediaWiki package for YunoHost",
               "url": "https://github.com/YunoHost-Apps/mediawiki_ynh",
               "stars": 8,
+<<<<<<< Updated upstream
               "forks": 16,
               "updated_at": "2025-10-04T09:39:17Z",
+=======
+              "forks": 17,
+              "updated_at": "2025-04-12T13:22:49Z",
+>>>>>>> Stashed changes
               "language": "Shell",
               "archived": false
             },
@@ -5269,9 +5624,15 @@
               "name": "mirotalk",
               "description": "MiroTalk package for YunoHost",
               "url": "https://github.com/YunoHost-Apps/mirotalk_ynh",
+<<<<<<< Updated upstream
               "stars": 2,
               "forks": 3,
               "updated_at": "2025-10-21T10:08:05Z",
+=======
+              "stars": 0,
+              "forks": 0,
+              "updated_at": "2025-06-16T06:26:42Z",
+>>>>>>> Stashed changes
               "language": "Shell",
               "archived": false
             },
@@ -5577,9 +5938,15 @@
               "name": "my_webapp",
               "description": "Custom Web app with SFTP access",
               "url": "https://github.com/YunoHost-Apps/my_webapp_ynh",
+<<<<<<< Updated upstream
               "stars": 52,
               "forks": 57,
               "updated_at": "2025-09-25T08:57:17Z",
+=======
+              "stars": 49,
+              "forks": 52,
+              "updated_at": "2025-05-02T07:11:50Z",
+>>>>>>> Stashed changes
               "language": "Shell",
               "archived": false
             },
@@ -5677,8 +6044,13 @@
               "description": "n8n package for YunoHost",
               "url": "https://github.com/YunoHost-Apps/n8n_ynh",
               "stars": 15,
+<<<<<<< Updated upstream
               "forks": 22,
               "updated_at": "2025-10-18T20:47:14Z",
+=======
+              "forks": 21,
+              "updated_at": "2025-06-26T06:26:21Z",
+>>>>>>> Stashed changes
               "language": "Shell",
               "archived": false
             },
@@ -5688,8 +6060,13 @@
               "description": "Navidrome package for YunoHost",
               "url": "https://github.com/YunoHost-Apps/navidrome_ynh",
               "stars": 17,
+<<<<<<< Updated upstream
               "forks": 7,
               "updated_at": "2025-08-09T17:45:20Z",
+=======
+              "forks": 6,
+              "updated_at": "2025-05-30T06:56:38Z",
+>>>>>>> Stashed changes
               "language": "Shell",
               "archived": false
             },
@@ -5711,7 +6088,11 @@
               "url": "https://github.com/YunoHost-Apps/nextcloud_ynh",
               "stars": 164,
               "forks": 68,
+<<<<<<< Updated upstream
               "updated_at": "2025-10-24T11:19:25Z",
+=======
+              "updated_at": "2025-06-12T14:13:41Z",
+>>>>>>> Stashed changes
               "language": "Shell",
               "archived": false
             },
@@ -5788,7 +6169,11 @@
               "url": "https://github.com/YunoHost-Apps/node_exporter_ynh",
               "stars": 2,
               "forks": 0,
+<<<<<<< Updated upstream
               "updated_at": "2025-08-30T17:18:12Z",
+=======
+              "updated_at": "2025-05-30T21:09:36Z",
+>>>>>>> Stashed changes
               "language": "Shell",
               "archived": false
             },
@@ -5799,7 +6184,11 @@
               "url": "https://github.com/YunoHost-Apps/nodebb_ynh",
               "stars": 7,
               "forks": 6,
+<<<<<<< Updated upstream
               "updated_at": "2025-10-24T05:43:31Z",
+=======
+              "updated_at": "2025-06-10T07:44:12Z",
+>>>>>>> Stashed changes
               "language": "Shell",
               "archived": false
             },
@@ -5940,9 +6329,15 @@
               "name": "ollama",
               "description": "",
               "url": "https://github.com/YunoHost-Apps/ollama_ynh",
+<<<<<<< Updated upstream
               "stars": 3,
               "forks": 2,
               "updated_at": "2025-11-01T06:36:48Z",
+=======
+              "stars": 0,
+              "forks": 1,
+              "updated_at": "2025-06-19T06:16:01Z",
+>>>>>>> Stashed changes
               "language": "Shell",
               "archived": false
             },
@@ -5964,7 +6359,11 @@
               "url": "https://github.com/YunoHost-Apps/omeka-s_ynh",
               "stars": 5,
               "forks": 2,
+<<<<<<< Updated upstream
               "updated_at": "2025-08-30T17:08:14Z",
+=======
+              "updated_at": "2024-08-31T13:03:24Z",
+>>>>>>> Stashed changes
               "language": "Shell",
               "archived": false
             },
@@ -6030,6 +6429,7 @@
               "url": "https://github.com/YunoHost-Apps/opencloud_ynh",
               "stars": 2,
               "forks": 1,
+<<<<<<< Updated upstream
               "updated_at": "2025-10-28T07:35:04Z",
               "language": "Shell",
               "archived": false
@@ -6053,6 +6453,9 @@
               "stars": 0,
               "forks": 1,
               "updated_at": "2025-09-03T23:29:27Z",
+=======
+              "updated_at": "2025-06-10T16:28:29Z",
+>>>>>>> Stashed changes
               "language": "Shell",
               "archived": false
             },
@@ -6205,8 +6608,13 @@
               "description": "Overleaf package for YunoHost",
               "url": "https://github.com/YunoHost-Apps/overleaf_ynh",
               "stars": 2,
+<<<<<<< Updated upstream
               "forks": 6,
               "updated_at": "2025-10-27T17:04:56Z",
+=======
+              "forks": 5,
+              "updated_at": "2025-06-18T21:10:30Z",
+>>>>>>> Stashed changes
               "language": "Shell",
               "archived": false
             },
@@ -6525,7 +6933,11 @@
               "url": "https://github.com/YunoHost-Apps/photoview_ynh",
               "stars": 7,
               "forks": 12,
+<<<<<<< Updated upstream
               "updated_at": "2025-10-28T14:55:58Z",
+=======
+              "updated_at": "2025-05-02T20:16:17Z",
+>>>>>>> Stashed changes
               "language": "Shell",
               "archived": false
             },
@@ -6590,8 +7002,13 @@
               "description": "phpLDAPadmin package for YunoHost",
               "url": "https://github.com/YunoHost-Apps/phpldapadmin_ynh",
               "stars": 3,
+<<<<<<< Updated upstream
               "forks": 8,
               "updated_at": "2025-08-30T17:00:40Z",
+=======
+              "forks": 7,
+              "updated_at": "2025-04-02T23:45:36Z",
+>>>>>>> Stashed changes
               "language": "Shell",
               "archived": false
             },
@@ -6954,7 +7371,11 @@
               "url": "https://github.com/YunoHost-Apps/privatebin_ynh",
               "stars": 1,
               "forks": 4,
+<<<<<<< Updated upstream
               "updated_at": "2025-10-29T10:31:47Z",
+=======
+              "updated_at": "2025-02-01T19:54:44Z",
+>>>>>>> Stashed changes
               "language": "PHP",
               "archived": false
             },
@@ -6998,7 +7419,11 @@
               "url": "https://github.com/YunoHost-Apps/prometheus_ynh",
               "stars": 7,
               "forks": 1,
+<<<<<<< Updated upstream
               "updated_at": "2025-10-25T11:17:05Z",
+=======
+              "updated_at": "2025-06-01T20:54:14Z",
+>>>>>>> Stashed changes
               "language": "Shell",
               "archived": false
             },
@@ -7008,8 +7433,13 @@
               "description": "Prose package for YunoHost",
               "url": "https://github.com/YunoHost-Apps/prose_ynh",
               "stars": 0,
+<<<<<<< Updated upstream
               "forks": 2,
               "updated_at": "2025-10-23T14:53:05Z",
+=======
+              "forks": 1,
+              "updated_at": "2025-06-12T09:28:39Z",
+>>>>>>> Stashed changes
               "language": "Shell",
               "archived": false
             },
@@ -7249,9 +7679,15 @@
               "name": "rclone",
               "description": "RClone GUI package for YunoHost",
               "url": "https://github.com/YunoHost-Apps/rclone_ynh",
+<<<<<<< Updated upstream
               "stars": 7,
               "forks": 4,
               "updated_at": "2025-10-23T12:49:03Z",
+=======
+              "stars": 6,
+              "forks": 2,
+              "updated_at": "2025-05-22T06:58:23Z",
+>>>>>>> Stashed changes
               "language": "Shell",
               "archived": false
             },
@@ -7271,9 +7707,13 @@
               "name": "readarr",
               "description": "Readarr package for YunoHost",
               "url": "https://github.com/YunoHost-Apps/readarr_ynh",
-              "stars": 1,
+              "stars": 0,
               "forks": 1,
+<<<<<<< Updated upstream
               "updated_at": "2025-10-27T11:10:54Z",
+=======
+              "updated_at": "2024-11-15T21:50:40Z",
+>>>>>>> Stashed changes
               "language": "Shell",
               "archived": false
             },
@@ -7480,9 +7920,15 @@
               "name": "roundcube",
               "description": "Roundcube package for YunoHost",
               "url": "https://github.com/YunoHost-Apps/roundcube_ynh",
+<<<<<<< Updated upstream
               "stars": 15,
               "forks": 25,
               "updated_at": "2025-10-25T11:23:38Z",
+=======
+              "stars": 11,
+              "forks": 24,
+              "updated_at": "2025-06-03T07:50:19Z",
+>>>>>>> Stashed changes
               "language": "Shell",
               "archived": false
             },
@@ -7735,7 +8181,11 @@
               "url": "https://github.com/YunoHost-Apps/searxng_ynh",
               "stars": 14,
               "forks": 4,
+<<<<<<< Updated upstream
               "updated_at": "2025-10-27T19:40:50Z",
+=======
+              "updated_at": "2025-06-23T05:23:54Z",
+>>>>>>> Stashed changes
               "language": "Shell",
               "archived": false
             },
@@ -7757,6 +8207,7 @@
               "url": "https://github.com/YunoHost-Apps/send_ynh",
               "stars": 9,
               "forks": 2,
+<<<<<<< Updated upstream
               "updated_at": "2025-10-05T07:01:37Z",
               "language": "Shell",
               "archived": false
@@ -7769,6 +8220,9 @@
               "stars": 0,
               "forks": 0,
               "updated_at": "2025-08-30T17:19:39Z",
+=======
+              "updated_at": "2025-04-24T07:35:40Z",
+>>>>>>> Stashed changes
               "language": "Shell",
               "archived": false
             },
@@ -7799,6 +8253,7 @@
               "name": "sharkey",
               "description": "🌎 A Sharkish microblogging platform 🦈🚀",
               "url": "https://github.com/YunoHost-Apps/sharkey_ynh",
+<<<<<<< Updated upstream
               "stars": 5,
               "forks": 7,
               "updated_at": "2025-09-06T12:18:36Z",
@@ -7813,6 +8268,11 @@
               "stars": 1,
               "forks": 2,
               "updated_at": "2025-09-10T16:01:32Z",
+=======
+              "stars": 4,
+              "forks": 6,
+              "updated_at": "2025-05-31T12:56:30Z",
+>>>>>>> Stashed changes
               "language": "Shell",
               "archived": false
             },
@@ -7833,8 +8293,13 @@
               "description": "Shields package for YunoHost",
               "url": "https://github.com/YunoHost-Apps/shields_ynh",
               "stars": 0,
+<<<<<<< Updated upstream
               "forks": 1,
               "updated_at": "2025-10-03T06:43:02Z",
+=======
+              "forks": 0,
+              "updated_at": "2025-06-02T07:35:17Z",
+>>>>>>> Stashed changes
               "language": "Shell",
               "archived": false
             },
@@ -7933,7 +8398,11 @@
               "url": "https://github.com/YunoHost-Apps/signaturepdf_ynh",
               "stars": 2,
               "forks": 5,
+<<<<<<< Updated upstream
               "updated_at": "2025-10-15T19:45:25Z",
+=======
+              "updated_at": "2025-03-19T23:08:52Z",
+>>>>>>> Stashed changes
               "language": "Shell",
               "archived": false
             },
@@ -8065,7 +8534,11 @@
               "url": "https://github.com/YunoHost-Apps/snipeit_ynh",
               "stars": 2,
               "forks": 2,
+<<<<<<< Updated upstream
               "updated_at": "2025-10-23T14:12:57Z",
+=======
+              "updated_at": "2025-06-17T21:00:21Z",
+>>>>>>> Stashed changes
               "language": "Shell",
               "archived": false
             },
@@ -8273,8 +8746,13 @@
               "description": "sshwifty package for YunoHost",
               "url": "https://github.com/YunoHost-Apps/sshwifty_ynh",
               "stars": 0,
+<<<<<<< Updated upstream
               "forks": 1,
               "updated_at": "2025-10-19T10:21:50Z",
+=======
+              "forks": 0,
+              "updated_at": "2025-06-07T05:51:51Z",
+>>>>>>> Stashed changes
               "language": "Shell",
               "archived": false
             },
@@ -8329,7 +8807,11 @@
               "url": "https://github.com/YunoHost-Apps/streams_ynh",
               "stars": 1,
               "forks": 2,
+<<<<<<< Updated upstream
               "updated_at": "2025-10-19T12:48:05Z",
+=======
+              "updated_at": "2025-06-24T06:04:55Z",
+>>>>>>> Stashed changes
               "language": "Shell",
               "archived": false
             },
@@ -8406,7 +8888,11 @@
               "url": "https://github.com/YunoHost-Apps/superset_ynh",
               "stars": 4,
               "forks": 3,
+<<<<<<< Updated upstream
               "updated_at": "2025-09-11T06:37:28Z",
+=======
+              "updated_at": "2025-05-06T23:54:39Z",
+>>>>>>> Stashed changes
               "language": "Shell",
               "archived": false
             },
@@ -8417,7 +8903,11 @@
               "url": "https://github.com/YunoHost-Apps/sutom_ynh",
               "stars": 3,
               "forks": 2,
+<<<<<<< Updated upstream
               "updated_at": "2025-09-11T06:41:37Z",
+=======
+              "updated_at": "2025-05-02T20:28:06Z",
+>>>>>>> Stashed changes
               "language": "Shell",
               "archived": false
             },
@@ -8459,9 +8949,15 @@
               "name": "synapse",
               "description": "Matrix server (synapse) package for YunoHost",
               "url": "https://github.com/YunoHost-Apps/synapse_ynh",
+<<<<<<< Updated upstream
               "stars": 83,
               "forks": 44,
               "updated_at": "2025-10-16T15:48:27Z",
+=======
+              "stars": 82,
+              "forks": 43,
+              "updated_at": "2025-06-24T10:50:45Z",
+>>>>>>> Stashed changes
               "language": "Shell",
               "archived": false
             },
@@ -8734,9 +9230,13 @@
               "name": "tinyfilemanager",
               "description": "Tiny File Manager package for YunoHost",
               "url": "https://github.com/YunoHost-Apps/tinyfilemanager_ynh",
-              "stars": 3,
+              "stars": 2,
               "forks": 2,
+<<<<<<< Updated upstream
               "updated_at": "2025-08-30T17:10:17Z",
+=======
+              "updated_at": "2025-05-18T20:31:40Z",
+>>>>>>> Stashed changes
               "language": "Shell",
               "archived": false
             },
@@ -8879,7 +9379,11 @@
               "url": "https://github.com/YunoHost-Apps/ttrss_ynh",
               "stars": 17,
               "forks": 14,
+<<<<<<< Updated upstream
               "updated_at": "2025-10-28T19:47:31Z",
+=======
+              "updated_at": "2025-06-23T06:19:44Z",
+>>>>>>> Stashed changes
               "language": "Shell",
               "archived": false
             },
@@ -9020,9 +9524,13 @@
               "name": "uptime-kuma",
               "description": "Uptime Kuma package for YunoHost",
               "url": "https://github.com/YunoHost-Apps/uptime-kuma_ynh",
-              "stars": 12,
+              "stars": 13,
               "forks": 5,
+<<<<<<< Updated upstream
               "updated_at": "2025-10-24T16:00:51Z",
+=======
+              "updated_at": "2025-01-31T00:49:39Z",
+>>>>>>> Stashed changes
               "language": "Shell",
               "archived": false
             },
@@ -9185,6 +9693,7 @@
               "name": "wanderer",
               "description": "Wanderer package for YunoHost",
               "url": "https://github.com/YunoHost-Apps/wanderer_ynh",
+<<<<<<< Updated upstream
               "stars": 3,
               "forks": 1,
               "updated_at": "2025-09-23T08:41:46Z",
@@ -9199,6 +9708,11 @@
               "stars": 0,
               "forks": 0,
               "updated_at": "2025-10-19T10:25:07Z",
+=======
+              "stars": 0,
+              "forks": 0,
+              "updated_at": "2025-04-27T07:47:31Z",
+>>>>>>> Stashed changes
               "language": "Shell",
               "archived": false
             },
@@ -9209,7 +9723,11 @@
               "url": "https://github.com/YunoHost-Apps/watchdog_ynh",
               "stars": 2,
               "forks": 1,
+<<<<<<< Updated upstream
               "updated_at": "2025-09-10T20:06:49Z",
+=======
+              "updated_at": "2024-09-17T14:14:58Z",
+>>>>>>> Stashed changes
               "language": "Shell",
               "archived": false
             },
@@ -9406,8 +9924,13 @@
               "description": "WireGuard VPN software with a web UI configuration companion, packaged for YunoHost.",
               "url": "https://github.com/YunoHost-Apps/wireguard_ynh",
               "stars": 37,
+<<<<<<< Updated upstream
               "forks": 13,
               "updated_at": "2025-08-26T17:03:32Z",
+=======
+              "forks": 12,
+              "updated_at": "2025-05-12T13:20:58Z",
+>>>>>>> Stashed changes
               "language": "Shell",
               "archived": false
             },
@@ -9484,6 +10007,7 @@
               "url": "https://github.com/YunoHost-Apps/wordpress_ynh",
               "stars": 27,
               "forks": 30,
+<<<<<<< Updated upstream
               "updated_at": "2025-08-14T17:27:04Z",
               "language": "Shell",
               "archived": false
@@ -9496,6 +10020,9 @@
               "stars": 1,
               "forks": 0,
               "updated_at": "2025-09-10T14:19:11Z",
+=======
+              "updated_at": "2025-05-19T06:53:24Z",
+>>>>>>> Stashed changes
               "language": "Shell",
               "archived": false
             },
@@ -9504,9 +10031,15 @@
               "name": "workout-tracker",
               "description": "workout-tracker package for YunoHost",
               "url": "https://github.com/YunoHost-Apps/workout-tracker_ynh",
+<<<<<<< Updated upstream
               "stars": 2,
               "forks": 2,
               "updated_at": "2025-09-10T14:10:46Z",
+=======
+              "stars": 0,
+              "forks": 2,
+              "updated_at": "2025-06-26T06:09:43Z",
+>>>>>>> Stashed changes
               "language": "Shell",
               "archived": false
             },
@@ -9561,7 +10094,11 @@
               "url": "https://github.com/YunoHost-Apps/xwiki_ynh",
               "stars": 0,
               "forks": 1,
+<<<<<<< Updated upstream
               "updated_at": "2025-10-31T09:35:33Z",
+=======
+              "updated_at": "2025-06-03T19:48:39Z",
+>>>>>>> Stashed changes
               "language": "Shell",
               "archived": false
             },
@@ -9780,8 +10317,13 @@
               "description": "YunoRunner package  for YunoHost",
               "url": "https://github.com/YunoHost-Apps/yunorunner_ynh",
               "stars": 6,
+<<<<<<< Updated upstream
               "forks": 6,
               "updated_at": "2025-08-30T17:04:14Z",
+=======
+              "forks": 5,
+              "updated_at": "2025-01-31T08:40:32Z",
+>>>>>>> Stashed changes
               "language": "Shell",
               "archived": false
             },
@@ -9836,7 +10378,11 @@
               "url": "https://github.com/YunoHost-Apps/zerobin_ynh",
               "stars": 11,
               "forks": 12,
+<<<<<<< Updated upstream
               "updated_at": "2025-10-29T07:20:05Z",
+=======
+              "updated_at": "2025-02-19T21:48:21Z",
+>>>>>>> Stashed changes
               "language": "Shell",
               "archived": false
             },
@@ -9957,7 +10503,11 @@
               "url": "https://github.com/YunoHost-Apps/zwave-js-ui_ynh",
               "stars": 0,
               "forks": 1,
+<<<<<<< Updated upstream
               "updated_at": "2025-10-30T08:23:58Z",
+=======
+              "updated_at": "2025-05-30T06:57:48Z",
+>>>>>>> Stashed changes
               "language": "Shell",
               "archived": false
             },
@@ -9991,7 +10541,11 @@
       {
         "name": "YunoHost Docs Translations",
         "success": true,
+<<<<<<< Updated upstream
         "duration": 130,
+=======
+        "duration": 149,
+>>>>>>> Stashed changes
         "result": [
           "ar",
           "ca",
@@ -10007,7 +10561,11 @@
       {
         "name": "YunoHost UI Translations",
         "success": true,
+<<<<<<< Updated upstream
         "duration": 1790,
+=======
+        "duration": 1911,
+>>>>>>> Stashed changes
         "result": [
           {
             "language": "Catalan",
@@ -10268,10 +10826,33 @@
           {
             "language": "Portuguese",
             "language_code": "pt",
+<<<<<<< Updated upstream
             "translated_percent": 59.2,
             "translated_words": 1560,
             "total_words": 3819,
             "last_change": "2025-08-31T13:15:20.216474Z"
+=======
+            "translated_percent": 61.5,
+            "translated_words": 1562,
+            "total_words": 3627,
+            "last_change": "2025-04-15T20:18:33.174999Z"
+          },
+          {
+            "language": "Esperanto",
+            "language_code": "eo",
+            "translated_percent": 47.7,
+            "translated_words": 4047,
+            "total_words": 10292,
+            "last_change": "2025-06-16T09:39:17.803737Z"
+          },
+          {
+            "language": "Esperanto",
+            "language_code": "eo",
+            "translated_percent": 42,
+            "translated_words": 964,
+            "total_words": 3627,
+            "last_change": "2025-04-15T20:18:19.396025Z"
+>>>>>>> Stashed changes
           },
           {
             "language": "Hindi",
@@ -10414,7 +10995,11 @@
       {
         "name": "Zimaboard Shipping Areas",
         "success": true,
+<<<<<<< Updated upstream
         "duration": 308,
+=======
+        "duration": 176,
+>>>>>>> Stashed changes
         "result": [
           "Argentina",
           "Australia",

@@ -1,5 +1,9 @@
 {
+<<<<<<< Updated upstream
   "timestamp": "2025-11-02T06:33:24.018Z",
+=======
+  "timestamp": "2025-06-26T06:35:51.542Z",
+>>>>>>> Stashed changes
   "script": "scripts.test.js",
   "source": "YunoHost Translation Platform",
   "url": "https://translate.yunohost.org/",
@@ -268,10 +272,33 @@
     {
       "language": "Portuguese",
       "language_code": "pt",
+<<<<<<< Updated upstream
       "translated_percent": 59.2,
       "translated_words": 1560,
       "total_words": 3819,
       "last_change": "2025-08-31T13:15:20.216474Z"
+=======
+      "translated_percent": 61.5,
+      "translated_words": 1562,
+      "total_words": 3627,
+      "last_change": "2025-04-15T20:18:33.174999Z"
+    },
+    {
+      "language": "Esperanto",
+      "language_code": "eo",
+      "translated_percent": 47.7,
+      "translated_words": 4047,
+      "total_words": 10292,
+      "last_change": "2025-06-16T09:39:17.803737Z"
+    },
+    {
+      "language": "Esperanto",
+      "language_code": "eo",
+      "translated_percent": 42,
+      "translated_words": 964,
+      "total_words": 3627,
+      "last_change": "2025-04-15T20:18:19.396025Z"
+>>>>>>> Stashed changes
     },
     {
       "language": "Hindi",
