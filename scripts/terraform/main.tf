@@ -14,7 +14,7 @@ resource "digitalocean_project" "community_box" {
   description = "Community Box project for self-hosting platforms comparison"
   purpose     = "Testing / Development"
   environment = "Development"
-  resources   = concat(
+  resources = concat(
     var.create_yunohost ? [digitalocean_droplet.yunohost[0].urn] : [],
     var.create_casaos ? [digitalocean_droplet.casaos[0].urn] : [],
     var.create_caprover ? [digitalocean_droplet.caprover[0].urn] : []

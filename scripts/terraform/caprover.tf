@@ -6,7 +6,7 @@ resource "digitalocean_droplet" "caprover" {
   size     = var.caprover_droplet_size
   ssh_keys = [digitalocean_ssh_key.community_box.fingerprint]
   tags     = [digitalocean_tag.community_box.id, "caprover"]
-  
+
   user_data = <<-EOF
     #!/bin/bash
     
@@ -34,7 +34,7 @@ resource "digitalocean_droplet" "caprover" {
     # Add a message to indicate installation is complete
     echo "CapRover installation completed. Access the web interface at https://captain.SERVER_IP.nip.io" > /root/INSTALLATION_COMPLETE.txt
   EOF
-  
+
   # Ensure the volume is properly formatted and mounted
   provisioner "remote-exec" {
     inline = [
@@ -42,7 +42,7 @@ resource "digitalocean_droplet" "caprover" {
       "cloud-init status --wait",
       "echo 'Cloud-init completed. CapRover should be installed.'"
     ]
-    
+
     connection {
       type        = "ssh"
       user        = "root"

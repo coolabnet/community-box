@@ -6,7 +6,7 @@ resource "digitalocean_droplet" "casaos" {
   size     = var.casaos_droplet_size
   ssh_keys = [digitalocean_ssh_key.community_box.fingerprint]
   tags     = [digitalocean_tag.community_box.id, "casaos"]
-  
+
   user_data = <<-EOF
     #!/bin/bash
     
@@ -26,7 +26,7 @@ resource "digitalocean_droplet" "casaos" {
     # Add a message to indicate installation is complete
     echo "CasaOS installation completed. Access the web interface at http://SERVER_IP:80" > /root/INSTALLATION_COMPLETE.txt
   EOF
-  
+
   # Ensure the volume is properly formatted and mounted
   provisioner "remote-exec" {
     inline = [
@@ -34,7 +34,7 @@ resource "digitalocean_droplet" "casaos" {
       "cloud-init status --wait",
       "echo 'Cloud-init completed. CasaOS should be installed.'"
     ]
-    
+
     connection {
       type        = "ssh"
       user        = "root"
