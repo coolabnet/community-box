@@ -7,6 +7,7 @@ import UsageSelection from './UsageSelection';
 import RecommendationResults from './RecommendationResults';
 import { AnimatePresence } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
+import type { PriorityAllocation, UsageSelectionValues, UserAnswers } from '@/types/questionnaire';
 
 const Questionnaire = () => {
   const { t } = useTranslation();
@@ -108,13 +109,13 @@ const Questionnaire = () => {
   const currentQuestion = questions[currentStep];
 
   // Handle points allocation
-  const handlePointsAllocation = (values: Record<string, number>) => {
+  const handlePointsAllocation = (values: PriorityAllocation) => {
     setAnswer('points', values);
     handleNext();
   };
 
   // Handle usage selection
-  const handleUsageSelection = (values: Record<string, any>) => {
+  const handleUsageSelection = (values: UsageSelectionValues) => {
     setAnswer('usage', values);
     handleNext();
   };
@@ -145,7 +146,7 @@ const Questionnaire = () => {
       return (
         <RecommendationResults
           key="recommendation-results"
-          answers={answers}
+          answers={answers as UserAnswers}
           onStartOver={handleStartOver}
         />
       );

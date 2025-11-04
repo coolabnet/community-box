@@ -1,5 +1,6 @@
-import { useState, useEffect, useRef } from 'react';
+import { useState, useEffect, useRef, type ReactNode } from 'react';
 import { useTranslation } from 'react-i18next';
+import type { TFunction } from 'i18next';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Button } from '@/components/ui/button';
 import {
@@ -34,48 +35,20 @@ import {
 import { downloadPDF, sharePDF } from '@/utils/pdfGenerator';
 import PDFTemplate from './PDFTemplate';
 import { copyUrlToClipboard, shareUrl } from '@/utils/statePersistence';
+import type {
+  AttributeKey,
+  DeviceAttributes,
+  DeviceKey,
+  DeviceScore,
+  PriorityAllocation,
+  UserAnswers,
+} from '@/types/questionnaire';
 
 // Import board images
 import raspberryPiImage from '../assets/pi.png';
 import zimaImage from '../assets/zima.png';
 import nucImage from '../assets/nuc.png';
 import reusedPCImage from '../assets/laptop.jpg'; // Using banner as placeholder for reused PC
-
-// Define device types and attributes
-type DeviceKey = 'raspberryPi' | 'zimaBoard' | 'intelNUC' | 'reusedPC';
-type AttributeKey = 'energy' | 'concurrency' | 'growth' | 'reusable' | 'formatEase' | 'cost';
-
-interface DeviceAttributes {
-  key: DeviceKey;
-  name: string;
-  energy: number;
-  concurrency: number;
-  growth: number;
-  reusable: number;
-  formatEase: number;
-  cost: number;
-  icon: React.ReactNode;
-}
-
-interface UserAnswers {
-  electricity?: string;
-  users?: string;
-  growth?: string;
-  reuse?: string;
-  format?: string;
-  price?: string;
-  points?: Record<string, number>;
-  usage?: Record<string, any>;
-  mainUse?: string;
-  [key: string]: any;
-}
-
-interface DeviceScore {
-  device: DeviceAttributes;
-  score: number;
-  matchPercentage: number;
-  strengths: AttributeKey[];
-}
 
 // Define the devices with their attributes
 const devices: DeviceAttributes[] = [
@@ -126,7 +99,7 @@ const devices: DeviceAttributes[] = [
 ];
 
 // Map attribute keys to icons
-const attributeIcons: Record<AttributeKey, React.ReactNode> = {
+const attributeIcons: Record<AttributeKey, ReactNode> = {
   energy: <Zap className="h-5 w-5" />,
   concurrency: <Users className="h-5 w-5" />,
   growth: <TrendingUp className="h-5 w-5" />,
@@ -193,14 +166,16 @@ const calculateDeviceScores = (
   answers: UserAnswers,
   normalizedAnswers: Record<AttributeKey, number>
 ): DeviceScore[] => {
+  const points: PriorityAllocation = answers.points ?? {};
+
   // Get point weights from user's point allocation
   const pointWeights: Record<AttributeKey, number> = {
-    energy: answers.points.easyToUse || 0,
-    concurrency: answers.points.lowPower || 0,
-    growth: answers.points.language || 0,
-    reusable: answers.points.scalable || 0,
-    formatEase: answers.points.lowCost || 0,
-    cost: answers.points.lowCost || 0
+    energy: points.easyToUse ?? 0,
+    concurrency: points.lowPower ?? 0,
+    growth: points.language ?? 0,
+    reusable: points.scalable ?? 0,
+    formatEase: points.lowCost ?? 0,
+    cost: points.lowCost ?? 0
   };
 
   // Calculate total points allocated
@@ -277,7 +252,7 @@ const calculateDeviceScores = (
 };
 
 // Function to get match rating text based on percentage
-const getMatchRating = (percentage: number, t: any): string => {
+const getMatchRating = (percentage: number, t: TFunction): string => {
   if (percentage >= 90) return t('questionnaire.questions.results.perfectMatch');
   if (percentage >= 75) return t('questionnaire.questions.results.excellentMatch');
   if (percentage >= 60) return t('questionnaire.questions.results.goodMatch');

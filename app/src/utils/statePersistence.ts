@@ -8,7 +8,7 @@ const STORAGE_KEY = 'community-box-survey-state';
 // Types
 export interface SurveyState {
   currentStep: number;
-  answers: Record<string, any>;
+  answers: Record<string, unknown>;
 }
 
 /**
@@ -25,12 +25,13 @@ export const encodeStateToUrl = (state: SurveyState): string => {
 
   // Add answers
   Object.entries(answers).forEach(([key, value]) => {
-    // Handle different value types
-    if (typeof value === 'object') {
-      // For objects (like points allocation or usage selection), stringify
+    if (value === undefined) {
+      return;
+    }
+
+    if (typeof value === 'object' && value !== null) {
       params.append(key, JSON.stringify(value));
     } else {
-      // For simple values
       params.append(key, String(value));
     }
   });
@@ -54,7 +55,7 @@ export const decodeStateFromUrl = (): SurveyState | null => {
     if (isNaN(currentStep)) return null;
 
     // Get answers
-    const answers: Record<string, any> = {};
+    const answers: Record<string, unknown> = {};
 
     // Iterate through all params except 'step'
     params.forEach((value, key) => {
@@ -63,7 +64,7 @@ export const decodeStateFromUrl = (): SurveyState | null => {
       // Try to parse as JSON for object values
       try {
         answers[key] = JSON.parse(value);
-      } catch (e) {
+      } catch (error) {
         // If not valid JSON, use as string
         answers[key] = value;
       }

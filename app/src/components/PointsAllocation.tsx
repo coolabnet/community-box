@@ -1,8 +1,9 @@
-import { useState, useEffect } from 'react';
+import { useMemo, useState, type ReactNode } from 'react';
 import { useTranslation } from 'react-i18next';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Button } from '@/components/ui/button';
 import { cn } from '@/lib/utils';
+import type { PriorityAllocation, PriorityKey } from '@/types/questionnaire';
 import {
   MousePointerClick,
   Zap,
@@ -14,13 +15,9 @@ import {
   Sparkles
 } from 'lucide-react';
 
-// Define the priority types
-type PriorityKey = 'easyToUse' | 'lowPower' | 'language' | 'scalable' | 'lowCost';
-
-// Define the priority data structure
 interface Priority {
   key: PriorityKey;
-  icon: React.ReactNode;
+  icon: ReactNode;
   points: number;
 }
 
@@ -35,7 +32,11 @@ const priorityColors = {
   lowCost: { bg: 'bg-rose-100 dark:bg-rose-900/30', text: 'text-rose-600 dark:text-rose-400', fill: 'bg-rose-500' },
 };
 
-const PointsAllocation = ({ onNext }: { onNext: (values: Record<PriorityKey, number>) => void }) => {
+interface PointsAllocationProps {
+  onNext: (values: PriorityAllocation) => void;
+}
+
+const PointsAllocation = ({ onNext }: PointsAllocationProps) => {
   const { t } = useTranslation();
   const [priorities, setPriorities] = useState<Priority[]>([
     { key: 'easyToUse', icon: <MousePointerClick className="h-5 w-5" />, points: 0 },
@@ -45,14 +46,12 @@ const PointsAllocation = ({ onNext }: { onNext: (values: Record<PriorityKey, num
     { key: 'lowCost', icon: <DollarSign className="h-5 w-5" />, points: 0 },
   ]);
 
-  const [remainingPoints, setRemainingPoints] = useState(MAX_POINTS);
   const [showMaxPointsMessage, setShowMaxPointsMessage] = useState(false);
   const [activeCard, setActiveCard] = useState<number | null>(null);
 
-  // Calculate remaining points whenever priorities change
-  useEffect(() => {
+  const remainingPoints = useMemo(() => {
     const usedPoints = priorities.reduce((sum, priority) => sum + priority.points, 0);
-    setRemainingPoints(MAX_POINTS - usedPoints);
+    return MAX_POINTS - usedPoints;
   }, [priorities]);
 
   // Handle adding a point to a priority
@@ -96,10 +95,10 @@ const PointsAllocation = ({ onNext }: { onNext: (values: Record<PriorityKey, num
 
   // Handle continue button click
   const handleContinue = () => {
-    const values = priorities.reduce((acc, priority) => {
+    const values = priorities.reduce<PriorityAllocation>((acc, priority) => {
       acc[priority.key] = priority.points;
       return acc;
-    }, {} as Record<PriorityKey, number>);
+    }, {});
 
     onNext(values);
   };

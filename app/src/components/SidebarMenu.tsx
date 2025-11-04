@@ -213,7 +213,7 @@ export default function SidebarMenu({ isOpen = false, onToggle, showToggleButton
     if (isMobile && onToggle && isOpen) {
       onToggle();
     }
-  }, [pathname]); // Remove isMobile, onToggle, isOpen from dependencies
+  }, [isMobile, isOpen, onToggle, pathname]);
 
   const shouldShow = isOpen;
 

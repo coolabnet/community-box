@@ -1,41 +1,65 @@
 import { useParams } from 'react-router-dom';
-import { useEffect, useState } from 'react';
+import { useEffect, useReducer } from 'react';
 import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
 import rehypeHighlight from 'rehype-highlight';
 import { getMarkdownContent } from '@/lib/markdown';
 import { Loader2, AlertCircle } from 'lucide-react';
 
+type MarkdownState =
+  | { status: 'idle' | 'loading' }
+  | { status: 'success'; content: string }
+  | { status: 'error'; message: string };
+
+type MarkdownAction =
+  | { type: 'load' }
+  | { type: 'success'; content: string }
+  | { type: 'error'; message: string };
+
+const markdownReducer = (_state: MarkdownState, action: MarkdownAction): MarkdownState => {
+  switch (action.type) {
+    case 'load':
+      return { status: 'loading' };
+    case 'success':
+      return { status: 'success', content: action.content };
+    case 'error':
+      return { status: 'error', message: action.message };
+    default:
+      return { status: 'idle' };
+  }
+};
+
 export default function MarkdownPage() {
   const { '*': splat } = useParams() as { '*': string };
-  const [content, setContent] = useState<string | null>(null);
-  const [error, setError] = useState<string | null>(null);
-  const [loading, setLoading] = useState(true);
+  const [state, dispatch] = useReducer(markdownReducer, { status: 'loading' } as MarkdownState);
 
   useEffect(() => {
-    setContent(null);
-    setError(null);
-    setLoading(true);
+    dispatch({ type: 'load' });
 
     if (!splat) {
-      setError('No document specified.');
-      setLoading(false);
+      dispatch({ type: 'error', message: 'No document specified.' });
       return;
     }
 
+    let active = true;
+
     getMarkdownContent(splat)
       .then(md => {
-        setContent(md);
-        setLoading(false);
+        if (!active) return;
+        dispatch({ type: 'success', content: md });
       })
       .catch(err => {
         console.error('Failed to load markdown:', err);
-        setError(`Document "${splat}" not found or failed to load.`);
-        setLoading(false);
+        if (!active) return;
+        dispatch({ type: 'error', message: `Document "${splat}" not found or failed to load.` });
       });
+
+    return () => {
+      active = false;
+    };
   }, [splat]);
 
-  if (loading) {
+  if (state.status === 'loading' || state.status === 'idle') {
     return (
       <div className="flex items-center justify-center min-h-[400px]">
         <div className="flex items-center gap-2 text-muted-foreground">
@@ -46,13 +70,13 @@ export default function MarkdownPage() {
     );
   }
 
-  if (error) {
+  if (state.status === 'error') {
     return (
       <div className="flex items-center justify-center min-h-[400px]">
         <div className="text-center">
           <AlertCircle className="h-12 w-12 text-red-500 mx-auto mb-4" />
           <h2 className="text-xl font-semibold text-red-600 mb-2">Document Not Found</h2>
-          <p className="text-muted-foreground">{error}</p>
+          <p className="text-muted-foreground">{state.message}</p>
           <p className="text-sm text-muted-foreground mt-2">
             Please check the URL or try navigating from the menu.
           </p>
@@ -61,7 +85,7 @@ export default function MarkdownPage() {
     );
   }
 
-  if (!content) {
+  if (!state.content) {
     return (
       <div className="flex items-center justify-center min-h-[400px]">
         <div className="text-center">
@@ -76,7 +100,7 @@ export default function MarkdownPage() {
   return (
     <div className="bg-white rounded-lg shadow-sm border">
       <div className="p-8 max-w-4xl mx-auto">
-        <ReactMarkdown
+        <article
           className="prose prose-lg prose-slate max-w-none
             prose-headings:font-bold prose-headings:text-gray-900 prose-headings:tracking-tight
             prose-h1:text-4xl prose-h1:mb-8 prose-h1:mt-0 prose-h1:border-b prose-h1:border-gray-200 prose-h1:pb-4
@@ -91,11 +115,13 @@ export default function MarkdownPage() {
             prose-code:text-pink-600 prose-code:bg-pink-50 prose-code:px-2 prose-code:py-1 prose-code:rounded prose-code:text-sm prose-code:font-mono prose-code:before:content-none prose-code:after:content-none
             prose-pre:bg-gray-900 prose-pre:text-gray-100 prose-pre:rounded-lg prose-pre:p-4 prose-pre:overflow-x-auto prose-pre:text-sm
             prose-hr:border-gray-300 prose-hr:my-8"
-          remarkPlugins={[remarkGfm]}
-          rehypePlugins={[rehypeHighlight]}
-          components={{
-            // Custom heading components with anchor links
-            h1: ({ children, ...props }) => (
+        >
+          <ReactMarkdown
+            remarkPlugins={[remarkGfm]}
+            rehypePlugins={[rehypeHighlight]}
+            components={{
+              // Custom heading components with anchor links
+              h1: ({ children, ...props }) => (
               <h1 className="text-4xl font-bold text-gray-900 mb-8 mt-0 border-b border-gray-200 pb-4 tracking-tight" {...props}>
                 {children}
               </h1>
@@ -231,10 +257,11 @@ export default function MarkdownPage() {
                 {children}
               </em>
             )
-          }}
-        >
-          {content}
-        </ReactMarkdown>
+            }}
+          >
+            {state.content}
+          </ReactMarkdown>
+        </article>
       </div>
     </div>
   );

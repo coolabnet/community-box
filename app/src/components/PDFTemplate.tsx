@@ -1,5 +1,6 @@
-import { useRef } from 'react';
+import { useRef, type ReactNode } from 'react';
 import { useTranslation } from 'react-i18next';
+import type { TFunction } from 'i18next';
 import {
   Cpu,
   Zap,
@@ -19,41 +20,13 @@ import {
 // Import app logo
 import appLogo from '../assets/logo.svg';
 
-// Define the device types and attributes
-type DeviceKey = 'raspberryPi' | 'zimaBoard' | 'intelNUC' | 'reusedPC';
-type AttributeKey = 'energy' | 'concurrency' | 'growth' | 'reusable' | 'formatEase' | 'cost';
-
-interface DeviceAttributes {
-  key: DeviceKey;
-  name: string;
-  energy: number;
-  concurrency: number;
-  growth: number;
-  reusable: number;
-  formatEase: number;
-  cost: number;
-  icon: React.ReactNode;
-}
-
-interface DeviceScore {
-  device: DeviceAttributes;
-  score: number;
-  matchPercentage: number;
-  strengths: AttributeKey[];
-}
-
-interface UserAnswers {
-  electricity?: string;
-  users?: string;
-  growth?: string;
-  reuse?: string;
-  format?: string;
-  price?: string;
-  points?: Record<string, number>;
-  usage?: Record<string, any>;
-  mainUse?: string;
-  [key: string]: any;
-}
+import type {
+  AttributeKey,
+  DeviceAttributes,
+  DeviceScore,
+  UsageKey,
+  UserAnswers,
+} from '@/types/questionnaire';
 
 interface PDFTemplateProps {
   recommendation: DeviceScore;
@@ -62,7 +35,7 @@ interface PDFTemplateProps {
 }
 
 // Map attribute keys to icons
-const attributeIcons: Record<AttributeKey, React.ReactNode> = {
+const attributeIcons: Record<AttributeKey, ReactNode> = {
   energy: <Zap className="h-5 w-5" />,
   concurrency: <Users className="h-5 w-5" />,
   growth: <TrendingUp className="h-5 w-5" />,
@@ -72,7 +45,7 @@ const attributeIcons: Record<AttributeKey, React.ReactNode> = {
 };
 
 // Map usage keys to icons
-const usageIcons: Record<string, React.ReactNode> = {
+const usageIcons: Record<UsageKey, ReactNode> = {
   news: <Newspaper className="h-5 w-5" />,
   files: <FileText className="h-5 w-5" />,
   education: <GraduationCap className="h-5 w-5" />,
@@ -81,7 +54,7 @@ const usageIcons: Record<string, React.ReactNode> = {
 };
 
 // Function to get match rating text based on percentage
-const getMatchRating = (percentage: number, t: any): string => {
+const getMatchRating = (percentage: number, t: TFunction): string => {
   if (percentage >= 90) return t('questionnaire.questions.results.perfectMatch');
   if (percentage >= 75) return t('questionnaire.questions.results.excellentMatch');
   if (percentage >= 60) return t('questionnaire.questions.results.goodMatch');
@@ -89,7 +62,7 @@ const getMatchRating = (percentage: number, t: any): string => {
 };
 
 // Function to get human-readable answer text
-const getAnswerText = (questionId: string, value: any, t: any): string => {
+const getAnswerText = (questionId: string, value: unknown, t: TFunction): string => {
   if (questionId === 'points') {
     return 'Point allocation'; // This is handled separately
   }
@@ -324,18 +297,21 @@ const PDFTemplate = ({ recommendation, alternatives, answers }: PDFTemplateProps
               </h4>
 
               <div className="grid grid-cols-2 gap-3">
-                {Object.entries(answers.usage).map(([key, value]) => (
+                {Object.entries(answers.usage).map(([key, value]) => {
+                  const usageKey = key as UsageKey;
+                  return (
                   <div key={key} className="flex items-center gap-2">
                     <div className="text-primary">
-                      {usageIcons[key] || null}
+                      {usageIcons[usageKey] || null}
                     </div>
                     <div className="text-gray-800">
-                      {key === 'other' && typeof value === 'string'
+                      {usageKey === 'other' && typeof value === 'string'
                         ? `${t(`questionnaire.questions.usage.options.other.title`)}: ${value}`
                         : t(`questionnaire.questions.usage.options.${key}.title`)}
                     </div>
                   </div>
-                ))}
+                  );
+                })}
               </div>
             </div>
           )}

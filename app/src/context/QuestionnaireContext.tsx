@@ -1,8 +1,9 @@
+/* eslint-disable react-refresh/only-export-components */
 
-import React, { createContext, useContext, useState, useEffect } from 'react';
+import React, { createContext, useContext, useEffect, useMemo, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import {
-  SurveyState,
+  type SurveyState,
   decodeStateFromUrl,
   loadStateFromStorage,
   saveStateToStorage,
@@ -10,63 +11,53 @@ import {
   clearStoredState
 } from '@/utils/statePersistence';
 
+const getInitialSurveyState = (): SurveyState => {
+  const urlState = decodeStateFromUrl();
+  if (urlState) {
+    return urlState;
+  }
+
+  const storedState = loadStateFromStorage();
+  if (storedState) {
+    return storedState;
+  }
+
+  return {
+    currentStep: 0,
+    answers: {},
+  };
+};
+
 interface QuestionnaireContextType {
   currentStep: number;
   totalSteps: number;
-  answers: Record<string, any>;
+  answers: Record<string, unknown>;
   setCurrentStep: (step: number) => void;
-  setAnswer: (questionId: string, answer: any) => void;
+  setAnswer: (questionId: string, answer: unknown) => void;
   resetSurvey: () => void;
 }
 
 const QuestionnaireContext = createContext<QuestionnaireContextType | undefined>(undefined);
 
 export function QuestionnaireProvider({ children }: { children: React.ReactNode }) {
-  const [currentStep, setCurrentStep] = useState(0);
-  const [answers, setAnswers] = useState<Record<string, any>>({});
-  const [isInitialized, setIsInitialized] = useState(false);
+  const initialState = useMemo(() => getInitialSurveyState(), []);
+  const [currentStep, setCurrentStep] = useState(initialState.currentStep);
+  const [answers, setAnswers] = useState<Record<string, unknown>>(initialState.answers);
 
   const totalSteps = 10; // 6 questions + points + usage + main use + results
 
-  // Initialize state from URL params or localStorage
-  useEffect(() => {
-    // First try to get state from URL
-    const urlState = decodeStateFromUrl();
-
-    if (urlState) {
-      // If URL has state, use it
-      setCurrentStep(urlState.currentStep);
-      setAnswers(urlState.answers);
-    } else {
-      // Otherwise try localStorage
-      const storedState = loadStateFromStorage();
-
-      if (storedState) {
-        setCurrentStep(storedState.currentStep);
-        setAnswers(storedState.answers);
-      }
-    }
-
-    setIsInitialized(true);
-  }, []);
-
   // Save state to localStorage and update URL whenever state changes
   useEffect(() => {
-    if (!isInitialized) return;
-
     const state: SurveyState = {
       currentStep,
       answers
     };
 
-    // Save to localStorage
     saveStateToStorage(state);
-
-    // Update URL
     updateUrlWithState(state);
-  }, [currentStep, answers, isInitialized]);
+  }, [currentStep, answers]);
 
-  const setAnswer = (questionId: string, answer: any) => {
+  const setAnswer = (questionId: string, answer: unknown) => {
     setAnswers((prev) => ({ ...prev, [questionId]: answer }));
   };
 

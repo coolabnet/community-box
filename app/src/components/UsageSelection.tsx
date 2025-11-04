@@ -1,9 +1,10 @@
-import { useState, useEffect } from 'react';
+import { useState, type ReactNode } from 'react';
 import { useTranslation } from 'react-i18next';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { cn } from '@/lib/utils';
+import type { UsageKey, UsageSelectionValues } from '@/types/questionnaire';
 import {
   Newspaper,
   FileText,
@@ -14,18 +15,18 @@ import {
   AlertCircle
 } from 'lucide-react';
 
-// Define the usage option types
-type UsageKey = 'news' | 'files' | 'education' | 'media' | 'other';
-
-// Define the usage option data structure
 interface UsageOption {
   key: UsageKey;
-  icon: React.ReactNode;
+  icon: ReactNode;
   selected: boolean;
   otherText?: string;
 }
 
-const UsageSelection = ({ onNext }: { onNext: (values: Record<string, any>) => void }) => {
+interface UsageSelectionProps {
+  onNext: (values: UsageSelectionValues) => void;
+}
+
+const UsageSelection = ({ onNext }: UsageSelectionProps) => {
   const { t } = useTranslation();
   const [usageOptions, setUsageOptions] = useState<UsageOption[]>([
     { key: 'news', icon: <Newspaper className="h-8 w-8" />, selected: false },
@@ -82,12 +83,12 @@ const UsageSelection = ({ onNext }: { onNext: (values: Record<string, any>) => v
 
     // Prepare data for submission
     setTimeout(() => {
-      const values = usageOptions.reduce((acc, option) => {
+      const values = usageOptions.reduce<UsageSelectionValues>((acc, option) => {
         if (option.selected) {
-          acc[option.key] = option.key === 'other' ? option.otherText : true;
+          acc[option.key] = option.key === 'other' ? option.otherText ?? '' : true;
         }
         return acc;
-      }, {} as Record<string, any>);
+      }, {});
 
       onNext(values);
     }, 600);
