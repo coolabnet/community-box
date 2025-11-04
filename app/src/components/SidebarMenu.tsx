@@ -78,7 +78,7 @@ const createMenu = (pdfUrl: string): MenuItem[] => [
               { title: 'nuc-models-comparison.md', to: 'hardware/intel_nuc/nuc-models-comparison' },
               { title: 'nuc-overview.md', to: 'hardware/intel_nuc/nuc-overview' },
               { title: 'nuc-bios-setup.md', to: 'hardware/intel_nuc/nuc-bios-setup' },
-              { title: 'nuc-troubleshooting.md', to: 'hardware/intel_nuc/nuc-troubleshooting' }
+              { title: 'nuc-power-network.md', to: 'hardware/intel_nuc/nuc-power-network' }
             ]
           },
           {
@@ -86,8 +86,7 @@ const createMenu = (pdfUrl: string): MenuItem[] => [
             children: [
               { title: 'rpi-models-comparison.md', to: 'hardware/raspberry_pi_5/rpi-models-comparison' },
               { title: 'rpi-overview.md', to: 'hardware/raspberry_pi_5/rpi-overview' },
-              { title: 'rpi-cooling-power.md', to: 'hardware/raspberry_pi_5/rpi-cooling-power' },
-              { title: 'rpi-troubleshooting.md', to: 'hardware/raspberry_pi_5/rpi-troubleshooting' }
+              { title: 'rpi-cooling-power.md', to: 'hardware/raspberry_pi_5/rpi-cooling-power' }
             ]
           },
           {
@@ -103,7 +102,6 @@ const createMenu = (pdfUrl: string): MenuItem[] => [
             title: 'Recycled Computer',
             children: [
               { title: 'recycled-models-comparison.md', to: 'guides/recycled-models-comparison' },
-              { title: 'recycled-pc-requirements.md', to: 'guides/recycled-pc-requirements' },
               { title: 'recycled-preparation.md', to: 'guides/recycled-preparation' },
               { title: 'hardware-compatibility-check.md', to: 'guides/hardware-compatibility-check' }
             ]
@@ -115,65 +113,24 @@ const createMenu = (pdfUrl: string): MenuItem[] => [
         children: [
           { title: 'yunohost-overview.md', to: 'software/yunohost/README' },
           { title: 'caprover-overview.md', to: 'software/caprover/README' },
-          { title: 'casaos-overview.md', to: 'software/casaos/README' }
+          { title: 'casaos-overview.md', to: 'software/casaos/README' },
+          { title: 'balena-overview.md', to: 'software/balena/README' }
         ]
       },
       {
         title: '🔧 Essential Services',
         children: [
-          {
-            title: 'Content Distribution',
-            children: [
-              { title: 'local-media-server.md', to: 'guides/local-media-server' },
-              { title: 'educational-content-repo.md', to: 'guides/educational-content-repo' },
-              { title: 'app-cache-setup.md', to: 'guides/app-cache-setup' }
-            ]
-          },
-          {
-            title: 'Communication Tools',
-            children: [
-              { title: 'chat-server-setup.md', to: 'guides/chat-server-setup' },
-              { title: 'video-conferencing.md', to: 'guides/video-conferencing' },
-              { title: 'community-forum.md', to: 'guides/community-forum' }
-            ]
-          },
-          {
-            title: 'Network Services',
-            children: [
-              { title: 'captive-portal-config.md', to: 'guides/captive-portal-config' },
-              { title: 'bandwidth-management.md', to: 'guides/bandwidth-management' },
-              { title: 'user-authentication.md', to: 'guides/user-authentication' },
-              { title: 'usage-monitoring.md', to: 'guides/usage-monitoring' }
-            ]
-          },
-          {
-            title: 'Local Services',
-            children: [
-              { title: 'iot-gateway-setup.md', to: 'guides/iot-gateway-setup' },
-              { title: 'community-dashboard.md', to: 'guides/community-dashboard' },
-              { title: 'accounting-system.md', to: 'guides/accounting-system' }
-            ]
-          }
+          { title: 'libremesh-overview.md', to: 'guides/libremesh-overview' },
+          { title: 'mesh-network-basics.md', to: 'guides/mesh-network-basics' },
+          { title: 'dns-configuration.md', to: 'guides/dns-configuration' },
+          { title: 'deployment-best-practices.md', to: 'guides/deployment-best-practices' }
         ]
       },
       {
         title: '🌐 Network Configuration',
         children: [
-          {
-            title: 'LibreMesh Integration',
-            children: [
-              { title: 'captive-portal-guide.md', to: 'guides/captive-portal-guide' },
-              { title: 'mesh-network-basics.md', to: 'guides/mesh-network-basics' },
-              { title: 'dns-configuration.md', to: 'guides/dns-configuration' }
-            ]
-          },
-          {
-            title: 'Router Setup',
-            children: [
-              { title: 'router-selection-guide.md', to: 'guides/router-selection-guide' },
-              { title: 'libremesh-installation.md', to: 'guides/libremesh-installation' }
-            ]
-          }
+          { title: 'router-selection-guide.md', to: 'guides/router-selection-guide' },
+          { title: 'libremesh-installation.md', to: 'guides/libremesh-installation' }
         ]
       },
       {
@@ -182,18 +139,14 @@ const createMenu = (pdfUrl: string): MenuItem[] => [
           { title: 'etcher-guide.md', to: 'guides/etcher-guide' },
           { title: 'disk-partitioning.md', to: 'guides/disk-partitioning' },
           { title: 'external-storage.md', to: 'guides/external-storage' },
-          { title: 'server-maintenance.md', to: 'guides/server-maintenance' },
-          { title: 'network-maintenance.md', to: 'guides/network-maintenance' },
-          { title: 'security-best-practices.md', to: 'guides/security-best-practices' }
+          { title: 'mini-pc-decision-framework.md', to: 'guides/mini-pc-decision-framework' }
         ]
       },
       {
-        title: '📖 Case Stories',
+        title: '📖 Case Studies',
         children: [
-          { title: 'rural-school-network.md', to: 'guides/rural-school-network' },
-          { title: 'island-community-mesh.md', to: 'guides/island-community-mesh' },
-          { title: 'urban-neighborhood-portal.md', to: 'guides/urban-neighborhood-portal' },
-          { title: 'refugee-camp-connectivity.md', to: 'guides/refugee-camp-connectivity' }
+          { title: 'hardware-clustering-analysis.md', to: 'guides/hardware-clustering-analysis' },
+          { title: 'mesh-clustering-analysis.md', to: 'guides/mesh-clustering-analysis' }
         ]
       }
     ]
@@ -208,14 +161,13 @@ const createMenu = (pdfUrl: string): MenuItem[] => [
     icon: <Users size={16} />,
     children: [
       { title: 'Interactive Map', to: 'results/global-community-networks-directory' },
-      { title: 'community-directory.json', href: '/research/results/community-directory.json' },
-      { title: 'join-community-form.md', to: 'guides/join-community-form' }
+      { title: 'community-directory.json', href: '/research/results/community-directory.json' }
     ]
   },
   {
     title: 'ℹ️ About',
     icon: <Info size={16} />,
-    to: 'presentation/about'
+    to: 'presentation/introduction'
   }
 ];
 

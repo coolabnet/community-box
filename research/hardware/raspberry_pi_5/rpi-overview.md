@@ -137,7 +137,6 @@ Some networking constraints may affect server performance:
 ### Next Steps
 1. **Review Model Comparison**: See [rpi-models-comparison.md](rpi-models-comparison.md) for detailed specifications
 2. **Plan Power and Cooling**: Check [rpi-cooling-power.md](rpi-cooling-power.md) for optimization strategies
-3. **Prepare for Issues**: Familiarize yourself with [rpi-troubleshooting.md](rpi-troubleshooting.md)
 
 ## Conclusion
 

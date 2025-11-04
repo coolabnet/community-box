@@ -303,4 +303,4 @@ These recommendations balance reliability, performance, and energy efficiency fo
 
 ---
 
-*For specific model information, refer to [rpi-models-comparison.md](rpi-models-comparison.md). For troubleshooting common issues beyond power and cooling, see [rpi-troubleshooting.md](rpi-troubleshooting.md).*
+*For specific model information, refer to [rpi-models-comparison.md](rpi-models-comparison.md). For more Raspberry Pi resources, see the hardware overview and model comparison documents.*

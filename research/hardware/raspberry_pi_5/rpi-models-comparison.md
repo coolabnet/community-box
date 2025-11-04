@@ -276,4 +276,4 @@ Choosing the right Raspberry Pi model is crucial for successful community server
 
 ---
 
-*For detailed power and cooling requirements, see [rpi-cooling-power.md](rpi-cooling-power.md). For deployment troubleshooting, reference [rpi-troubleshooting.md](rpi-troubleshooting.md).*
+*For detailed power and cooling requirements, see [rpi-cooling-power.md](rpi-cooling-power.md).*
