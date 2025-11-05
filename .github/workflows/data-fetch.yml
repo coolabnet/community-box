@@ -30,7 +30,7 @@ jobs:
         working-directory: ./scripts/fetch-data
 
       - name: Run data fetching scripts
-        run: npm run fetch-all
+        run: npm run fetch-all -- --continue-on-error
         working-directory: ./scripts/fetch-data
 
       - name: Run tests to verify data integrity
