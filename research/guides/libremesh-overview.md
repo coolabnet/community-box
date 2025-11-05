@@ -137,7 +137,6 @@ This overview provides the foundation for understanding LibreMesh's capabilities
 
 - Review [mesh-network-basics.md](./mesh-network-basics.md) for networking concepts
 - Consult [libremesh-installation.md](./libremesh-installation.md) for hardware and installation procedures
-- Explore [captive-portal-guide.md](./captive-portal-guide.md) for user management
 - Reference [dns-configuration.md](./dns-configuration.md) for local service setup
 
 LibreMesh represents more than just networking technology—it's a tool for community empowerment and digital self-determination. By providing the technical foundation for community-controlled networks, it enables groups to take ownership of their digital infrastructure and create more resilient, equitable connectivity solutions.

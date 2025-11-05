@@ -412,6 +412,5 @@ For further development of your LibreMesh network:
 - Review [libremesh-overview.md](./libremesh-overview.md) for broader context
 - Consult [mesh-network-basics.md](./mesh-network-basics.md) for networking fundamentals
 - Follow [libremesh-installation.md](./libremesh-installation.md) for hardware and setup guidance
-- Explore [captive-portal-guide.md](./captive-portal-guide.md) for user management options
 
 By implementing a well-configured DNS system, you'll enhance the usability, performance, and resilience of your LibreMesh network, enabling seamless access to both local and internet resources.

@@ -513,7 +513,7 @@ lscpu > cpu_info.txt      # CPU information
 
 ## Next Steps
 
-1. **BIOS Setup**: Proceed to [BIOS Access and Setup](bios-access-and-setup.md)
+1. **BIOS Setup**: Configure BIOS/UEFI settings for server operation
 2. **Compatibility Verification**: Review [Hardware Compatibility Check](hardware-compatibility-check.md)
 3. **System Requirements**: Confirm [Recycled PC Requirements](recycled-pc-requirements.md)
 4. **Model Selection**: Reference [Recycled Models Comparison](recycled-models-comparison.md)

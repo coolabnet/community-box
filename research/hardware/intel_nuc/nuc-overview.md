@@ -154,7 +154,6 @@ Before proceeding with your Intel NUC server deployment:
 1. **Review Model Comparison**: See [nuc-models-comparison.md](nuc-models-comparison.md) for detailed specifications
 2. **Plan BIOS Configuration**: Refer to [nuc-bios-setup.md](nuc-bios-setup.md) for server-optimized settings
 3. **Configure Power and Network**: Check [nuc-power-network.md](nuc-power-network.md) for best practices
-4. **Prepare for Issues**: Familiarize yourself with [nuc-troubleshooting.md](nuc-troubleshooting.md)
 
 ## Additional Resources
 

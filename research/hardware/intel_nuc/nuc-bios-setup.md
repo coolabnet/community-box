@@ -198,7 +198,7 @@ Intel AMT: Enabled for remote management (business models)
 Note: Windows Server requires manual network driver installation
 - Download Intel LAN drivers beforehand
 - Use "Have Disk" method during driver installation
-- See [nuc-troubleshooting.md](nuc-troubleshooting.md) for detailed steps
+- Consult your model-specific documentation for detailed driver installation steps
 
 ## Advanced Configuration Options
 
@@ -458,7 +458,6 @@ Create a configuration record including:
 
 **Next Steps:**
 - Configure power and network settings: [nuc-power-network.md](nuc-power-network.md)
-- Prepare for common issues: [nuc-troubleshooting.md](nuc-troubleshooting.md)
 - Review model-specific considerations: [nuc-models-comparison.md](nuc-models-comparison.md)
 
 **Important**: Always verify these settings work with your specific model and intended operating system before deploying in production.

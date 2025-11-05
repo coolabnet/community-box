@@ -160,7 +160,7 @@ This comparison table highlights commonly available recycled PC and laptop model
 1. **Requirements**: Review [Recycled PC Requirements](recycled-pc-requirements.md) for detailed specs
 2. **Testing**: Use [Hardware Compatibility Check](hardware-compatibility-check.md) for verification
 3. **Preparation**: Follow [Recycled Preparation](recycled-preparation.md) for refurbishment
-4. **Setup**: Apply [BIOS Access and Setup](bios-access-and-setup.md) for configuration
+4. **Setup**: Apply appropriate BIOS configuration for your specific hardware model
 
 ---
 

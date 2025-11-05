@@ -456,9 +456,8 @@ After completing compatibility testing:
 
 1. **Document Results**: Complete compatibility test report
 2. **Physical Preparation**: Follow [Recycled Preparation](recycled-preparation.md) guide
-3. **BIOS Configuration**: Use [BIOS Access and Setup](bios-access-and-setup.md) for server optimization
-4. **Operating System**: Install and configure server OS
-5. **Service Configuration**: Deploy intended server services
+3. **Operating System**: Install and configure server OS
+4. **Service Configuration**: Deploy intended server services
 
 ---
 

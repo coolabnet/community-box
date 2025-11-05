@@ -218,7 +218,6 @@ For practical implementation of these concepts:
 
 - Consult [libremesh-overview.md](./libremesh-overview.md) for a broader understanding of LibreMesh
 - Follow [libremesh-installation.md](./libremesh-installation.md) for hardware and installation guidance
-- Explore [captive-portal-guide.md](./captive-portal-guide.md) for user management
 - Reference [dns-configuration.md](./dns-configuration.md) for local service configuration
 
 By understanding these fundamental mesh networking concepts, you'll be better equipped to design, deploy, and maintain an effective LibreMesh network that meets your community's needs.

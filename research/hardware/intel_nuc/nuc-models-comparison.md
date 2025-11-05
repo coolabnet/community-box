@@ -198,6 +198,5 @@ What's your performance requirement?
 **Next Steps:**
 - Review [nuc-bios-setup.md](nuc-bios-setup.md) for configuration guidelines
 - Check [nuc-power-network.md](nuc-power-network.md) for setup best practices
-- Prepare for potential issues with [nuc-troubleshooting.md](nuc-troubleshooting.md)
 
 *Specifications subject to change. Always verify with manufacturer documentation before purchase.*

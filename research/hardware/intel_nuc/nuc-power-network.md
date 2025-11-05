@@ -332,6 +332,5 @@ While wired connections are preferred for servers, wireless options are availabl
 **Next Steps:**
 - Complete BIOS configuration: [nuc-bios-setup.md](nuc-bios-setup.md)
 - Review model-specific details: [nuc-models-comparison.md](nuc-models-comparison.md)
-- Prepare for common issues: [nuc-troubleshooting.md](nuc-troubleshooting.md)
 
 *Always verify specific recommendations with your exact NUC model specifications before purchase.*

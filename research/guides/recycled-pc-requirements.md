@@ -155,7 +155,7 @@ For mission-critical applications:
 1. **Review**: [Recycled Models Comparison](recycled-models-comparison.md) for specific model recommendations
 2. **Test**: Use [Hardware Compatibility Check](hardware-compatibility-check.md) to verify components
 3. **Prepare**: Follow [Recycled Preparation](recycled-preparation.md) for refurbishment
-4. **Configure**: Apply [BIOS Access and Setup](bios-access-and-setup.md) for system configuration
+4. **Configure**: Apply appropriate BIOS configuration for your specific hardware
 
 ---
 

@@ -38,9 +38,7 @@ const quickLinks = [
     description: 'Case studies, community directory, and collaboration tools',
     icon: <Users className="h-8 w-8" />,
     links: [
-      { title: 'Global Community Networks', to: '/docs/results/global-community-networks-directory' },
-      { title: 'Rural School Network Case', to: '/docs/guides/rural-school-network' },
-      { title: 'Island Community Mesh', to: '/docs/guides/island-community-mesh' }
+      { title: 'Global Community Networks', to: '/docs/results/global-community-networks-directory' }
     ]
   }
 ];
