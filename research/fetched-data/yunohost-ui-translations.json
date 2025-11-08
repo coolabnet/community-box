@@ -1,29 +1,21 @@
 {
-  "timestamp": "2025-11-04T06:36:22.406Z",
+  "timestamp": "2025-11-08T06:32:50.881Z",
   "script": "scripts.test.js",
   "source": "YunoHost Translation Platform",
   "url": "https://translate.yunohost.org/",
   "api_url": "https://translate.yunohost.org/api/translations/?format=json",
   "total_languages": 50,
-  "fully_translated": 16,
-  "partially_translated": 31,
+  "fully_translated": 15,
+  "partially_translated": 32,
   "not_started": 3,
   "data": [
     {
-      "language": "Catalan",
-      "language_code": "ca",
+      "language": "French",
+      "language_code": "fr",
       "translated_percent": 100,
-      "translated_words": 10864,
-      "total_words": 10864,
-      "last_change": "2025-11-02T07:13:02.023649Z"
-    },
-    {
-      "language": "Basque",
-      "language_code": "eu",
-      "translated_percent": 100,
-      "translated_words": 10864,
-      "total_words": 10864,
-      "last_change": "2025-11-03T15:08:53.663788Z"
+      "translated_words": 10862,
+      "total_words": 10862,
+      "last_change": "2025-11-07T20:51:17.016644Z"
     },
     {
       "language": "Catalan",
@@ -31,7 +23,7 @@
       "translated_percent": 100,
       "translated_words": 3819,
       "total_words": 3819,
-      "last_change": "2025-10-28T23:13:01.781668Z"
+      "last_change": "2025-11-07T13:01:47.390617Z"
     },
     {
       "language": "German",
@@ -39,7 +31,7 @@
       "translated_percent": 100,
       "translated_words": 3819,
       "total_words": 3819,
-      "last_change": "2025-10-21T08:18:28.983626Z"
+      "last_change": "2025-11-07T13:01:49.249997Z"
     },
     {
       "language": "Basque",
@@ -47,7 +39,7 @@
       "translated_percent": 100,
       "translated_words": 3819,
       "total_words": 3819,
-      "last_change": "2025-11-03T15:08:53.627657Z"
+      "last_change": "2025-11-07T13:01:51.200272Z"
     },
     {
       "language": "French",
@@ -55,7 +47,7 @@
       "translated_percent": 100,
       "translated_words": 3819,
       "total_words": 3819,
-      "last_change": "2025-09-01T16:12:58.968772Z"
+      "last_change": "2025-11-07T20:50:23.048439Z"
     },
     {
       "language": "Russian",
@@ -63,7 +55,7 @@
       "translated_percent": 100,
       "translated_words": 3819,
       "total_words": 3819,
-      "last_change": "2025-11-01T12:52:40.758712Z"
+      "last_change": "2025-11-07T13:02:00.616852Z"
     },
     {
       "language": "Arabic",
@@ -82,7 +74,7 @@
       "last_change": "2025-08-04T01:53:29.268499Z"
     },
     {
-      "language": "Chinese (Simplified)",
+      "language": "Chinese (Simplified Han script)",
       "language_code": "zh_Hans",
       "translated_percent": 100,
       "translated_words": 139,
@@ -138,28 +130,36 @@
       "last_change": "2025-08-04T01:53:30.990748Z"
     },
     {
+      "language": "Catalan",
+      "language_code": "ca",
+      "translated_percent": 99.7,
+      "translated_words": 10801,
+      "total_words": 10862,
+      "last_change": "2025-11-07T13:03:04.784867Z"
+    },
+    {
+      "language": "Basque",
+      "language_code": "eu",
+      "translated_percent": 99.7,
+      "translated_words": 10801,
+      "total_words": 10862,
+      "last_change": "2025-11-07T13:03:11.878727Z"
+    },
+    {
       "language": "Spanish",
       "language_code": "es",
       "translated_percent": 99.1,
       "translated_words": 3749,
       "total_words": 3819,
-      "last_change": "2025-08-31T13:15:11.235593Z"
-    },
-    {
-      "language": "French",
-      "language_code": "fr",
-      "translated_percent": 98.3,
-      "translated_words": 10521,
-      "total_words": 10864,
-      "last_change": "2025-11-03T20:59:53.818945Z"
+      "last_change": "2025-11-07T13:01:50.834926Z"
     },
     {
       "language": "Spanish",
       "language_code": "es",
       "translated_percent": 97.4,
       "translated_words": 10313,
-      "total_words": 10864,
-      "last_change": "2025-10-31T16:40:14.321089Z"
+      "total_words": 10862,
+      "last_change": "2025-11-07T13:03:10.747056Z"
     },
     {
       "language": "German",
@@ -191,7 +191,7 @@
       "translated_percent": 95.9,
       "translated_words": 3609,
       "total_words": 3819,
-      "last_change": "2025-09-27T14:02:03.291459Z"
+      "last_change": "2025-11-07T13:01:58.509111Z"
     },
     {
       "language": "Portuguese",
@@ -207,7 +207,7 @@
       "translated_percent": 88.9,
       "translated_words": 3263,
       "total_words": 3819,
-      "last_change": "2025-08-31T13:15:15.748174Z"
+      "last_change": "2025-11-07T13:01:55.139032Z"
     },
     {
       "language": "Esperanto",
@@ -223,7 +223,7 @@
       "translated_percent": 84,
       "translated_words": 2974,
       "total_words": 3819,
-      "last_change": "2025-08-31T13:15:23.265042Z"
+      "last_change": "2025-11-07T13:02:02.968300Z"
     },
     {
       "language": "Polish",
@@ -231,7 +231,7 @@
       "translated_percent": 82.9,
       "translated_words": 2688,
       "total_words": 3819,
-      "last_change": "2025-08-31T13:15:19.794216Z"
+      "last_change": "2025-11-07T13:01:59.429596Z"
     },
     {
       "language": "Occitan",
@@ -239,15 +239,15 @@
       "translated_percent": 81.3,
       "translated_words": 2333,
       "total_words": 3819,
-      "last_change": "2025-08-31T13:15:19.429925Z"
+      "last_change": "2025-11-07T13:01:58.875923Z"
     },
     {
       "language": "German",
       "language_code": "de",
       "translated_percent": 79.2,
       "translated_words": 7768,
-      "total_words": 10864,
-      "last_change": "2025-10-31T16:40:10.973593Z"
+      "total_words": 10862,
+      "last_change": "2025-11-07T13:03:08.219923Z"
     },
     {
       "language": "Arabic",
@@ -255,15 +255,15 @@
       "translated_percent": 72.9,
       "translated_words": 1654,
       "total_words": 3819,
-      "last_change": "2025-10-07T15:19:08.161531Z"
+      "last_change": "2025-11-07T13:01:45.841806Z"
     },
     {
       "language": "Italian",
       "language_code": "it",
-      "translated_percent": 63.3,
-      "translated_words": 6286,
-      "total_words": 10864,
-      "last_change": "2025-10-31T16:40:24.796801Z"
+      "translated_percent": 63.6,
+      "translated_words": 6420,
+      "total_words": 10862,
+      "last_change": "2025-11-07T13:03:20.356250Z"
     },
     {
       "language": "Portuguese",
@@ -271,7 +271,7 @@
       "translated_percent": 59.2,
       "translated_words": 1560,
       "total_words": 3819,
-      "last_change": "2025-08-31T13:15:20.216474Z"
+      "last_change": "2025-11-07T13:01:59.853701Z"
     },
     {
       "language": "Hindi",
@@ -284,10 +284,10 @@
     {
       "language": "Esperanto",
       "language_code": "eo",
-      "translated_percent": 47.6,
-      "translated_words": 4178,
-      "total_words": 10864,
-      "last_change": "2025-10-31T16:40:13.195545Z"
+      "translated_percent": 48,
+      "translated_words": 4295,
+      "total_words": 10862,
+      "last_change": "2025-11-07T13:03:09.979532Z"
     },
     {
       "language": "Esperanto",
@@ -295,31 +295,31 @@
       "translated_percent": 40.5,
       "translated_words": 966,
       "total_words": 3819,
-      "last_change": "2025-10-24T17:30:09.088516Z"
+      "last_change": "2025-11-07T13:01:50.483671Z"
     },
     {
       "language": "Russian",
       "language_code": "ru",
-      "translated_percent": 34.3,
-      "translated_words": 2794,
-      "total_words": 10864,
-      "last_change": "2025-10-31T16:40:39.344456Z"
+      "translated_percent": 34.4,
+      "translated_words": 2808,
+      "total_words": 10862,
+      "last_change": "2025-11-07T13:03:30.920567Z"
     },
     {
       "language": "Occitan",
       "language_code": "oc",
       "translated_percent": 33.2,
       "translated_words": 2391,
-      "total_words": 10864,
-      "last_change": "2025-10-31T16:40:34.460908Z"
+      "total_words": 10862,
+      "last_change": "2025-11-07T13:03:27.674727Z"
     },
     {
       "language": "Arabic",
       "language_code": "ar",
       "translated_percent": 22.9,
       "translated_words": 1131,
-      "total_words": 10864,
-      "last_change": "2025-10-31T16:40:03.337604Z"
+      "total_words": 10862,
+      "last_change": "2025-11-07T13:03:02.299281Z"
     },
     {
       "language": "Swedish",
@@ -327,23 +327,23 @@
       "translated_percent": 21.7,
       "translated_words": 381,
       "total_words": 3819,
-      "last_change": "2025-08-31T13:15:22.452242Z"
+      "last_change": "2025-11-07T13:02:02.068022Z"
     },
     {
       "language": "Dutch",
       "language_code": "nl",
       "translated_percent": 21.2,
       "translated_words": 1761,
-      "total_words": 10864,
-      "last_change": "2025-10-31T16:40:33.253639Z"
+      "total_words": 10862,
+      "last_change": "2025-11-07T13:03:26.920289Z"
     },
     {
       "language": "Portuguese",
       "language_code": "pt",
       "translated_percent": 18.5,
       "translated_words": 1395,
-      "total_words": 10864,
-      "last_change": "2025-10-31T16:40:36.804922Z"
+      "total_words": 10862,
+      "last_change": "2025-11-07T13:03:29.353799Z"
     },
     {
       "language": "Greek",
@@ -351,23 +351,23 @@
       "translated_percent": 10.8,
       "translated_words": 164,
       "total_words": 3819,
-      "last_change": "2025-08-31T13:15:10.337461Z"
+      "last_change": "2025-11-07T13:01:49.825309Z"
     },
     {
       "language": "Turkish",
       "language_code": "tr",
       "translated_percent": 6.8,
       "translated_words": 650,
-      "total_words": 10864,
-      "last_change": "2025-10-31T16:40:44.932157Z"
+      "total_words": 10862,
+      "last_change": "2025-11-07T13:03:34.483292Z"
     },
     {
       "language": "Hindi",
       "language_code": "hi",
       "translated_percent": 2,
       "translated_words": 95,
-      "total_words": 10864,
-      "last_change": "2025-10-31T16:40:21.454990Z"
+      "total_words": 10862,
+      "last_change": "2025-11-07T13:03:17.036611Z"
     },
     {
       "language": "Hindi",
@@ -375,23 +375,23 @@
       "translated_percent": 1.6,
       "translated_words": 23,
       "total_words": 3819,
-      "last_change": "2025-08-31T13:15:14.355469Z"
+      "last_change": "2025-11-07T13:01:53.737002Z"
     },
     {
       "language": "Hungarian",
       "language_code": "hu",
       "translated_percent": 1.2,
       "translated_words": 69,
-      "total_words": 10864,
-      "last_change": "2025-10-31T16:40:22.518106Z"
+      "total_words": 10862,
+      "last_change": "2025-11-07T13:03:17.917117Z"
     },
     {
       "language": "Breton",
       "language_code": "br",
       "translated_percent": 0,
       "translated_words": 0,
-      "total_words": 10864,
-      "last_change": "2025-10-31T16:40:05.520071Z"
+      "total_words": 10862,
+      "last_change": "2025-11-07T13:03:04.009236Z"
     },
     {
       "language": "Breton",
@@ -399,7 +399,7 @@
       "translated_percent": 0,
       "translated_words": 0,
       "total_words": 3819,
-      "last_change": "2025-08-31T13:15:07.898534Z"
+      "last_change": "2025-11-07T13:01:46.653366Z"
     },
     {
       "language": "Breton",
