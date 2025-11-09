@@ -1,21 +1,29 @@
 {
-  "timestamp": "2025-11-08T06:32:50.881Z",
+  "timestamp": "2025-11-09T06:32:40.130Z",
   "script": "scripts.test.js",
   "source": "YunoHost Translation Platform",
   "url": "https://translate.yunohost.org/",
   "api_url": "https://translate.yunohost.org/api/translations/?format=json",
   "total_languages": 50,
-  "fully_translated": 15,
-  "partially_translated": 32,
+  "fully_translated": 16,
+  "partially_translated": 31,
   "not_started": 3,
   "data": [
+    {
+      "language": "Basque",
+      "language_code": "eu",
+      "translated_percent": 100,
+      "translated_words": 10862,
+      "total_words": 10862,
+      "last_change": "2025-11-08T16:27:18.698684Z"
+    },
     {
       "language": "French",
       "language_code": "fr",
       "translated_percent": 100,
       "translated_words": 10862,
       "total_words": 10862,
-      "last_change": "2025-11-07T20:51:17.016644Z"
+      "last_change": "2025-11-08T16:41:21.456866Z"
     },
     {
       "language": "Catalan",
@@ -47,7 +55,7 @@
       "translated_percent": 100,
       "translated_words": 3819,
       "total_words": 3819,
-      "last_change": "2025-11-07T20:50:23.048439Z"
+      "last_change": "2025-11-08T21:27:19.149197Z"
     },
     {
       "language": "Russian",
@@ -138,14 +146,6 @@
       "last_change": "2025-11-07T13:03:04.784867Z"
     },
     {
-      "language": "Basque",
-      "language_code": "eu",
-      "translated_percent": 99.7,
-      "translated_words": 10801,
-      "total_words": 10862,
-      "last_change": "2025-11-07T13:03:11.878727Z"
-    },
-    {
       "language": "Spanish",
       "language_code": "es",
       "translated_percent": 99.1,
@@ -202,6 +202,14 @@
       "last_change": "2025-08-04T01:53:31.163489Z"
     },
     {
+      "language": "Polish",
+      "language_code": "pl",
+      "translated_percent": 89.1,
+      "translated_words": 2763,
+      "total_words": 3819,
+      "last_change": "2025-11-08T21:27:20.172944Z"
+    },
+    {
       "language": "Italian",
       "language_code": "it",
       "translated_percent": 88.9,
@@ -224,14 +232,6 @@
       "translated_words": 2974,
       "total_words": 3819,
       "last_change": "2025-11-07T13:02:02.968300Z"
-    },
-    {
-      "language": "Polish",
-      "language_code": "pl",
-      "translated_percent": 82.9,
-      "translated_words": 2688,
-      "total_words": 3819,
-      "last_change": "2025-11-07T13:01:59.429596Z"
     },
     {
       "language": "Occitan",
@@ -308,10 +308,10 @@
     {
       "language": "Occitan",
       "language_code": "oc",
-      "translated_percent": 33.2,
-      "translated_words": 2391,
+      "translated_percent": 33.4,
+      "translated_words": 2395,
       "total_words": 10862,
-      "last_change": "2025-11-07T13:03:27.674727Z"
+      "last_change": "2025-11-08T16:27:19.637802Z"
     },
     {
       "language": "Arabic",

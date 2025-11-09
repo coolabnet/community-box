@@ -1,11 +1,11 @@
 {
-  "timestamp": "2025-11-08T06:32:44.205Z",
+  "timestamp": "2025-11-09T06:32:38.553Z",
   "script": "scripts.test.js",
   "source": "YunoHost-Apps GitHub Organization",
   "url": "https://github.com/YunoHost-Apps",
   "api_url": "https://api.github.com/orgs/YunoHost-Apps/repos",
-  "total_apps": 902,
-  "total_repos_checked": 920,
+  "total_apps": 903,
+  "total_repos_checked": 921,
   "languages": [
     "CSS",
     "HTML",
@@ -1038,7 +1038,7 @@
       "description": "Cockpit package for YunoHost ",
       "url": "https://github.com/YunoHost-Apps/cockpit_ynh",
       "stars": 9,
-      "forks": 8,
+      "forks": 9,
       "updated_at": "2025-10-31T19:22:34Z",
       "language": "Shell",
       "archived": false
@@ -2122,6 +2122,17 @@
       "archived": false
     },
     {
+      "id": "enafore_ynh",
+      "name": "enafore",
+      "description": "Enafore package for YunoHost",
+      "url": "https://github.com/YunoHost-Apps/enafore_ynh",
+      "stars": 0,
+      "forks": 0,
+      "updated_at": "2025-11-08T06:41:46Z",
+      "language": null,
+      "archived": false
+    },
+    {
       "id": "encryptic_ynh",
       "name": "encryptic",
       "description": "Encryptic package for YunoHost",
@@ -2458,7 +2469,7 @@
       "url": "https://github.com/YunoHost-Apps/firefly-iii_ynh",
       "stars": 22,
       "forks": 12,
-      "updated_at": "2025-11-07T11:44:21Z",
+      "updated_at": "2025-11-08T23:45:19Z",
       "language": "Shell",
       "archived": false
     },
@@ -2656,7 +2667,7 @@
       "url": "https://github.com/YunoHost-Apps/forte_ynh",
       "stars": 2,
       "forks": 1,
-      "updated_at": "2025-10-28T19:49:22Z",
+      "updated_at": "2025-11-08T22:46:52Z",
       "language": "Shell",
       "archived": false
     },
@@ -3272,7 +3283,7 @@
       "url": "https://github.com/YunoHost-Apps/grav_ynh",
       "stars": 18,
       "forks": 13,
-      "updated_at": "2025-11-03T18:53:33Z",
+      "updated_at": "2025-11-08T16:24:38Z",
       "language": "Shell",
       "archived": false
     },
@@ -3492,7 +3503,7 @@
       "url": "https://github.com/YunoHost-Apps/homeassistant_ynh",
       "stars": 23,
       "forks": 16,
-      "updated_at": "2025-10-18T18:16:59Z",
+      "updated_at": "2025-11-08T17:02:22Z",
       "language": "Shell",
       "archived": false
     },
@@ -4823,7 +4834,7 @@
       "url": "https://github.com/YunoHost-Apps/mastodon_ynh",
       "stars": 86,
       "forks": 42,
-      "updated_at": "2025-10-23T12:49:29Z",
+      "updated_at": "2025-11-08T17:14:16Z",
       "language": "Shell",
       "archived": false
     },
@@ -8057,7 +8068,7 @@
       "url": "https://github.com/YunoHost-Apps/snweb_ynh",
       "stars": 5,
       "forks": 4,
-      "updated_at": "2025-11-05T07:30:47Z",
+      "updated_at": "2025-11-08T11:05:45Z",
       "language": "Shell",
       "archived": false
     },
@@ -8101,7 +8112,7 @@
       "url": "https://github.com/YunoHost-Apps/sonarr_ynh",
       "stars": 2,
       "forks": 2,
-      "updated_at": "2025-10-22T07:39:35Z",
+      "updated_at": "2025-11-08T16:25:09Z",
       "language": "Shell",
       "archived": false
     },
@@ -8299,7 +8310,7 @@
       "url": "https://github.com/YunoHost-Apps/streams_ynh",
       "stars": 1,
       "forks": 2,
-      "updated_at": "2025-10-19T12:48:05Z",
+      "updated_at": "2025-11-08T22:42:06Z",
       "language": "Shell",
       "archived": false
     },
@@ -8893,7 +8904,7 @@
       "url": "https://github.com/YunoHost-Apps/tuwunel_ynh",
       "stars": 3,
       "forks": 0,
-      "updated_at": "2025-10-26T21:04:25Z",
+      "updated_at": "2025-11-08T11:44:07Z",
       "language": "Shell",
       "archived": false
     },
@@ -9278,7 +9289,7 @@
       "url": "https://github.com/YunoHost-Apps/wekan_ynh",
       "stars": 17,
       "forks": 18,
-      "updated_at": "2025-11-04T10:55:57Z",
+      "updated_at": "2025-11-08T11:00:18Z",
       "language": "Shell",
       "archived": false
     },
@@ -9641,7 +9652,7 @@
       "url": "https://github.com/YunoHost-Apps/yuno-archive_ynh",
       "stars": 2,
       "forks": 0,
-      "updated_at": "2025-10-25T11:04:43Z",
+      "updated_at": "2025-11-08T21:01:38Z",
       "language": "Shell",
       "archived": false
     },
