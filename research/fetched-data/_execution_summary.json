@@ -1,19 +1,19 @@
 {
-  "timestamp": "2025-11-09T06:32:37.731Z",
+  "timestamp": "2025-11-10T06:37:33.428Z",
   "script": "run-all.js",
   "note": "Summary of all data fetching script executions",
   "data": {
-    "execution_time": "2025-11-09T06:32:37.731Z",
+    "execution_time": "2025-11-10T06:37:33.428Z",
     "total_scripts": 6,
     "successful": 6,
     "failed": 0,
-    "total_duration_ms": 16141,
+    "total_duration_ms": 22081,
     "continue_on_error": true,
     "results": [
       {
         "name": "CapRover UI Translations",
         "success": true,
-        "duration": 195,
+        "duration": 236,
         "result": [
           "ar-EG",
           "de-DE",
@@ -34,7 +34,7 @@
       {
         "name": "CasaOS UI Translations",
         "success": true,
-        "duration": 102,
+        "duration": 161,
         "result": [
           "ca_ES",
           "cs_CZ",
@@ -69,7 +69,7 @@
       {
         "name": "YunoHost Apps",
         "success": true,
-        "duration": 14030,
+        "duration": 14664,
         "result": {
           "count": 903,
           "apps": [
@@ -288,7 +288,7 @@
               "description": "Social media based on ActivityPub, fork of Pleroma",
               "url": "https://github.com/YunoHost-Apps/akkoma_ynh",
               "stars": 15,
-              "forks": 7,
+              "forks": 6,
               "updated_at": "2025-10-06T09:17:05Z",
               "language": "Shell",
               "archived": false
@@ -848,9 +848,9 @@
               "name": "calibreweb",
               "description": "Calibre-web package for YunoHost",
               "url": "https://github.com/YunoHost-Apps/calibreweb_ynh",
-              "stars": 20,
+              "stars": 19,
               "forks": 8,
-              "updated_at": "2025-10-18T08:27:42Z",
+              "updated_at": "2025-11-09T16:40:58Z",
               "language": "Shell",
               "archived": false
             },
@@ -2181,8 +2181,8 @@
               "url": "https://github.com/YunoHost-Apps/enafore_ynh",
               "stars": 0,
               "forks": 0,
-              "updated_at": "2025-11-08T06:41:46Z",
-              "language": null,
+              "updated_at": "2025-11-09T21:51:16Z",
+              "language": "Shell",
               "archived": false
             },
             {
@@ -3554,9 +3554,9 @@
               "name": "homeassistant",
               "description": "Home automation platform package for YunoHost",
               "url": "https://github.com/YunoHost-Apps/homeassistant_ynh",
-              "stars": 23,
+              "stars": 22,
               "forks": 16,
-              "updated_at": "2025-11-08T17:02:22Z",
+              "updated_at": "2025-11-09T16:42:54Z",
               "language": "Shell",
               "archived": false
             },
@@ -3775,7 +3775,7 @@
               "description": "Photo and video backup solution directly from your mobile phone.",
               "url": "https://github.com/YunoHost-Apps/immich_ynh",
               "stars": 20,
-              "forks": 13,
+              "forks": 14,
               "updated_at": "2025-11-07T20:52:54Z",
               "language": "Shell",
               "archived": false
@@ -3797,7 +3797,7 @@
               "description": "Indexhibit package for YunoHost",
               "url": "https://github.com/YunoHost-Apps/indexhibit_ynh",
               "stars": 5,
-              "forks": 2,
+              "forks": 1,
               "updated_at": "2025-08-30T17:10:18Z",
               "language": "Shell",
               "archived": false
@@ -4722,7 +4722,7 @@
               "url": "https://github.com/YunoHost-Apps/loops_ynh",
               "stars": 1,
               "forks": 1,
-              "updated_at": "2025-11-07T18:48:49Z",
+              "updated_at": "2025-11-10T01:47:39Z",
               "language": "Shell",
               "archived": false
             },
@@ -4898,7 +4898,7 @@
               "url": "https://github.com/YunoHost-Apps/mastofessb_ynh",
               "stars": 0,
               "forks": 0,
-              "updated_at": "2025-10-28T08:33:40Z",
+              "updated_at": "2025-11-09T20:28:07Z",
               "language": "Shell",
               "archived": false
             },
@@ -6766,9 +6766,9 @@
               "name": "pixelfed",
               "description": "The federated image shareing service Pixelfed for YunoHost",
               "url": "https://github.com/YunoHost-Apps/pixelfed_ynh",
-              "stars": 49,
+              "stars": 50,
               "forks": 18,
-              "updated_at": "2025-09-07T18:32:58Z",
+              "updated_at": "2025-11-09T20:23:37Z",
               "language": "Shell",
               "archived": false
             },
@@ -6833,7 +6833,7 @@
               "description": "Pleroma package for YunoHost: A free, federated social networking server built on open protocols.",
               "url": "https://github.com/YunoHost-Apps/pleroma_ynh",
               "stars": 29,
-              "forks": 16,
+              "forks": 15,
               "updated_at": "2025-09-09T12:33:27Z",
               "language": "Shell",
               "archived": false
@@ -9077,7 +9077,7 @@
               "description": "Open source password management solutions for YunoHost",
               "url": "https://github.com/YunoHost-Apps/vaultwarden_ynh",
               "stars": 60,
-              "forks": 21,
+              "forks": 22,
               "updated_at": "2025-11-05T14:32:31Z",
               "language": "Shell",
               "archived": false
@@ -9133,7 +9133,7 @@
               "url": "https://github.com/YunoHost-Apps/virtualtabletop_ynh",
               "stars": 1,
               "forks": 0,
-              "updated_at": "2025-11-04T00:11:18Z",
+              "updated_at": "2025-11-10T03:34:50Z",
               "language": "Shell",
               "archived": false
             },
@@ -9705,7 +9705,7 @@
               "url": "https://github.com/YunoHost-Apps/yuno-archive_ynh",
               "stars": 2,
               "forks": 0,
-              "updated_at": "2025-11-08T21:01:38Z",
+              "updated_at": "2025-11-09T09:36:04Z",
               "language": "Shell",
               "archived": false
             },
@@ -9969,7 +9969,7 @@
               "url": "https://github.com/YunoHost-Apps/zulip_ynh",
               "stars": 1,
               "forks": 2,
-              "updated_at": "2025-10-25T11:47:54Z",
+              "updated_at": "2025-11-09T17:52:37Z",
               "language": "Shell",
               "archived": false
             },
@@ -10025,7 +10025,7 @@
       {
         "name": "YunoHost Docs Translations",
         "success": true,
-        "duration": 70,
+        "duration": 147,
         "result": [
           "ar",
           "ca",
@@ -10041,8 +10041,16 @@
       {
         "name": "YunoHost UI Translations",
         "success": true,
-        "duration": 1399,
+        "duration": 6219,
         "result": [
+          {
+            "language": "Catalan",
+            "language_code": "ca",
+            "translated_percent": 100,
+            "translated_words": 10862,
+            "total_words": 10862,
+            "last_change": "2025-11-09T21:57:10.903481Z"
+          },
           {
             "language": "Basque",
             "language_code": "eu",
@@ -10050,14 +10058,6 @@
             "translated_words": 10862,
             "total_words": 10862,
             "last_change": "2025-11-08T16:27:18.698684Z"
-          },
-          {
-            "language": "French",
-            "language_code": "fr",
-            "translated_percent": 100,
-            "translated_words": 10862,
-            "total_words": 10862,
-            "last_change": "2025-11-08T16:41:21.456866Z"
           },
           {
             "language": "Catalan",
@@ -10089,7 +10089,7 @@
             "translated_percent": 100,
             "translated_words": 3819,
             "total_words": 3819,
-            "last_change": "2025-11-08T21:27:19.149197Z"
+            "last_change": "2025-11-09T22:00:49.978378Z"
           },
           {
             "language": "Russian",
@@ -10172,12 +10172,12 @@
             "last_change": "2025-08-04T01:53:30.990748Z"
           },
           {
-            "language": "Catalan",
-            "language_code": "ca",
-            "translated_percent": 99.7,
-            "translated_words": 10801,
+            "language": "French",
+            "language_code": "fr",
+            "translated_percent": 99.8,
+            "translated_words": 10843,
             "total_words": 10862,
-            "last_change": "2025-11-07T13:03:04.784867Z"
+            "last_change": "2025-11-09T09:38:23.622261Z"
           },
           {
             "language": "Spanish",
@@ -10448,7 +10448,7 @@
       {
         "name": "Zimaboard Shipping Areas",
         "success": true,
-        "duration": 345,
+        "duration": 654,
         "result": [
           "Argentina",
           "Australia",
