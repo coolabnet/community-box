@@ -1,20 +1,18 @@
 {
-  "timestamp": "2025-11-11T06:36:24.125Z",
+  "timestamp": "2025-11-12T06:36:09.822Z",
   "script": "scripts.test.js",
   "source": "YunoHost Documentation Repository",
   "url": "https://github.com/YunoHost/doc",
   "locales_path": "i18n",
   "docs_url": "https://yunohost.org/docs",
-  "count": 9,
+  "count": 7,
   "data": [
-    "ar",
-    "ca",
     "de",
+    "docs",
     "en",
     "es",
     "fr",
     "it",
-    "oc",
     "ru"
   ]
 }
