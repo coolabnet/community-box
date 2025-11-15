@@ -1,5 +1,5 @@
 {
-  "timestamp": "2025-11-14T06:36:10.626Z",
+  "timestamp": "2025-11-15T06:32:41.806Z",
   "script": "scripts.test.js",
   "source": "YunoHost Translation Platform",
   "url": "https://translate.yunohost.org/",
@@ -23,7 +23,7 @@
       "translated_percent": 100,
       "translated_words": 10862,
       "total_words": 10862,
-      "last_change": "2025-11-12T20:30:41.088632Z"
+      "last_change": "2025-11-14T19:53:55.366238Z"
     },
     {
       "language": "Catalan",
@@ -47,7 +47,7 @@
       "translated_percent": 100,
       "translated_words": 3819,
       "total_words": 3819,
-      "last_change": "2025-11-12T16:54:25.475802Z"
+      "last_change": "2025-11-14T19:53:56.479877Z"
     },
     {
       "language": "French",
