@@ -1,5 +1,5 @@
 {
-  "timestamp": "2025-11-15T06:32:40.506Z",
+  "timestamp": "2025-11-16T06:33:48.437Z",
   "script": "scripts.test.js",
   "source": "YunoHost-Apps GitHub Organization",
   "url": "https://github.com/YunoHost-Apps",
@@ -663,9 +663,9 @@
       "name": "bookwyrm",
       "description": "Bookwyrm package for YunoHost",
       "url": "https://github.com/YunoHost-Apps/bookwyrm_ynh",
-      "stars": 9,
+      "stars": 10,
       "forks": 6,
-      "updated_at": "2025-10-19T06:40:25Z",
+      "updated_at": "2025-11-15T15:03:23Z",
       "language": "Shell",
       "archived": false
     },
@@ -1534,7 +1534,7 @@
       "url": "https://github.com/YunoHost-Apps/diagramsnet_ynh",
       "stars": 6,
       "forks": 4,
-      "updated_at": "2025-11-04T07:09:02Z",
+      "updated_at": "2025-11-15T08:15:37Z",
       "language": "Shell",
       "archived": false
     },
@@ -1830,7 +1830,7 @@
       "description": "Dolibarr ERP & CRM is a modern software to manage your organization's activity. This is an integration of Dolibarr in YunoHost",
       "url": "https://github.com/YunoHost-Apps/dolibarr_ynh",
       "stars": 15,
-      "forks": 21,
+      "forks": 22,
       "updated_at": "2025-10-03T19:10:37Z",
       "language": "Shell",
       "archived": false
@@ -2786,9 +2786,9 @@
       "name": "friendica",
       "description": "Friendica package for YunoHost",
       "url": "https://github.com/YunoHost-Apps/friendica_ynh",
-      "stars": 13,
+      "stars": 14,
       "forks": 16,
-      "updated_at": "2025-11-07T17:53:57Z",
+      "updated_at": "2025-11-15T15:08:17Z",
       "language": "Shell",
       "archived": false
     },
@@ -2920,7 +2920,7 @@
       "url": "https://github.com/YunoHost-Apps/garmin-to-fittrackee_ynh",
       "stars": 0,
       "forks": 1,
-      "updated_at": "2025-11-14T17:20:48Z",
+      "updated_at": "2025-11-15T10:50:22Z",
       "language": "Shell",
       "archived": false
     },
@@ -3503,7 +3503,7 @@
       "url": "https://github.com/YunoHost-Apps/homeassistant_ynh",
       "stars": 22,
       "forks": 16,
-      "updated_at": "2025-11-09T16:42:54Z",
+      "updated_at": "2025-11-15T07:36:37Z",
       "language": "Shell",
       "archived": false
     },
@@ -4746,7 +4746,7 @@
       "url": "https://github.com/YunoHost-Apps/lychee_ynh",
       "stars": 10,
       "forks": 7,
-      "updated_at": "2025-11-11T00:43:45Z",
+      "updated_at": "2025-11-16T00:06:01Z",
       "language": "Shell",
       "archived": false
     },
@@ -4832,9 +4832,9 @@
       "name": "mastodon",
       "description": "Free, open-source social network for YunoHost",
       "url": "https://github.com/YunoHost-Apps/mastodon_ynh",
-      "stars": 86,
+      "stars": 85,
       "forks": 42,
-      "updated_at": "2025-11-14T09:48:53Z",
+      "updated_at": "2025-11-15T14:34:12Z",
       "language": "Shell",
       "archived": false
     },
@@ -5428,7 +5428,7 @@
       "url": "https://github.com/YunoHost-Apps/mosquitto_ynh",
       "stars": 5,
       "forks": 5,
-      "updated_at": "2025-10-06T19:57:43Z",
+      "updated_at": "2025-11-15T20:27:17Z",
       "language": "Shell",
       "archived": false
     },
@@ -5657,9 +5657,9 @@
       "name": "n8n",
       "description": "n8n package for YunoHost",
       "url": "https://github.com/YunoHost-Apps/n8n_ynh",
-      "stars": 15,
+      "stars": 16,
       "forks": 22,
-      "updated_at": "2025-11-05T07:29:19Z",
+      "updated_at": "2025-11-16T01:24:49Z",
       "language": "Shell",
       "archived": false
     },
@@ -6009,9 +6009,9 @@
       "name": "opencloud",
       "description": "OpenCloud package for YunoHost",
       "url": "https://github.com/YunoHost-Apps/opencloud_ynh",
-      "stars": 2,
+      "stars": 3,
       "forks": 1,
-      "updated_at": "2025-11-03T20:40:56Z",
+      "updated_at": "2025-11-16T01:34:34Z",
       "language": "Shell",
       "archived": false
     },
@@ -6351,7 +6351,7 @@
       "description": "Federated (ActivityPub) video streaming platform using P2P for YunoHost",
       "url": "https://github.com/YunoHost-Apps/peertube_ynh",
       "stars": 93,
-      "forks": 28,
+      "forks": 29,
       "updated_at": "2025-11-03T15:08:40Z",
       "language": "Shell",
       "archived": false
@@ -6713,9 +6713,9 @@
       "name": "pixelfed",
       "description": "The federated image shareing service Pixelfed for YunoHost",
       "url": "https://github.com/YunoHost-Apps/pixelfed_ynh",
-      "stars": 50,
+      "stars": 49,
       "forks": 18,
-      "updated_at": "2025-11-09T20:23:37Z",
+      "updated_at": "2025-11-15T14:34:26Z",
       "language": "Shell",
       "archived": false
     },
@@ -6913,7 +6913,7 @@
       "url": "https://github.com/YunoHost-Apps/pretix_ynh",
       "stars": 3,
       "forks": 1,
-      "updated_at": "2025-10-25T14:13:02Z",
+      "updated_at": "2025-11-15T19:28:35Z",
       "language": "Shell",
       "archived": false
     },
@@ -7484,7 +7484,7 @@
       "description": "Roundcube package for YunoHost",
       "url": "https://github.com/YunoHost-Apps/roundcube_ynh",
       "stars": 15,
-      "forks": 25,
+      "forks": 26,
       "updated_at": "2025-10-25T11:23:38Z",
       "language": "Shell",
       "archived": false
@@ -7540,7 +7540,7 @@
       "url": "https://github.com/YunoHost-Apps/rss-bridge_ynh",
       "stars": 17,
       "forks": 8,
-      "updated_at": "2025-10-06T09:01:29Z",
+      "updated_at": "2025-11-15T08:17:16Z",
       "language": "Shell",
       "archived": false
     },
@@ -8167,7 +8167,7 @@
       "url": "https://github.com/YunoHost-Apps/sparkyfitness_ynh",
       "stars": 0,
       "forks": 0,
-      "updated_at": "2025-10-19T07:02:00Z",
+      "updated_at": "2025-11-15T11:39:09Z",
       "language": "Shell",
       "archived": false
     },
@@ -8508,7 +8508,7 @@
       "url": "https://github.com/YunoHost-Apps/syncthing_ynh",
       "stars": 24,
       "forks": 7,
-      "updated_at": "2025-11-05T07:14:04Z",
+      "updated_at": "2025-11-15T17:24:35Z",
       "language": "Shell",
       "archived": false
     },
@@ -9278,7 +9278,7 @@
       "url": "https://github.com/YunoHost-Apps/webmin_ynh",
       "stars": 5,
       "forks": 5,
-      "updated_at": "2025-10-11T09:33:17Z",
+      "updated_at": "2025-11-15T16:06:01Z",
       "language": "Shell",
       "archived": false
     },
