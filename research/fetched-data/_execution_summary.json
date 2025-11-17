@@ -1,19 +1,19 @@
 {
-  "timestamp": "2025-11-16T06:33:47.611Z",
+  "timestamp": "2025-11-17T06:36:43.491Z",
   "script": "run-all.js",
   "note": "Summary of all data fetching script executions",
   "data": {
-    "execution_time": "2025-11-16T06:33:47.611Z",
+    "execution_time": "2025-11-17T06:36:43.491Z",
     "total_scripts": 6,
     "successful": 6,
     "failed": 0,
-    "total_duration_ms": 15601,
+    "total_duration_ms": 13918,
     "continue_on_error": true,
     "results": [
       {
         "name": "CapRover UI Translations",
         "success": true,
-        "duration": 185,
+        "duration": 165,
         "result": [
           "ar-EG",
           "de-DE",
@@ -34,7 +34,7 @@
       {
         "name": "CasaOS UI Translations",
         "success": true,
-        "duration": 119,
+        "duration": 88,
         "result": [
           "ca_ES",
           "cs_CZ",
@@ -69,7 +69,7 @@
       {
         "name": "YunoHost Apps",
         "success": true,
-        "duration": 13198,
+        "duration": 12137,
         "result": {
           "count": 905,
           "apps": [
@@ -718,7 +718,7 @@
               "url": "https://github.com/YunoHost-Apps/bookwyrm_ynh",
               "stars": 10,
               "forks": 6,
-              "updated_at": "2025-11-15T15:03:23Z",
+              "updated_at": "2025-11-17T06:28:06Z",
               "language": "Shell",
               "archived": false
             },
@@ -926,7 +926,7 @@
               "description": "ChangeDetection Package for YunoHost",
               "url": "https://github.com/YunoHost-Apps/changedetection_ynh",
               "stars": 2,
-              "forks": 1,
+              "forks": 2,
               "updated_at": "2025-10-14T10:21:41Z",
               "language": "Shell",
               "archived": false
@@ -1070,7 +1070,7 @@
               "url": "https://github.com/YunoHost-Apps/cloudlog_ynh",
               "stars": 1,
               "forks": 1,
-              "updated_at": "2025-11-10T09:11:45Z",
+              "updated_at": "2025-11-16T16:03:29Z",
               "language": "Shell",
               "archived": false
             },
@@ -3468,7 +3468,7 @@
               "url": "https://github.com/YunoHost-Apps/headscale_ynh",
               "stars": 14,
               "forks": 6,
-              "updated_at": "2025-11-03T20:03:08Z",
+              "updated_at": "2025-11-16T15:31:05Z",
               "language": "Shell",
               "archived": false
             },
@@ -3908,7 +3908,7 @@
               "url": "https://github.com/YunoHost-Apps/it-tools_ynh",
               "stars": 1,
               "forks": 1,
-              "updated_at": "2025-11-10T09:11:31Z",
+              "updated_at": "2025-11-17T01:30:35Z",
               "language": "Shell",
               "archived": false
             },
@@ -4535,7 +4535,7 @@
               "url": "https://github.com/YunoHost-Apps/libretranslate_ynh",
               "stars": 4,
               "forks": 5,
-              "updated_at": "2025-10-25T11:23:50Z",
+              "updated_at": "2025-11-17T06:26:31Z",
               "language": "Shell",
               "archived": false
             },
@@ -5371,7 +5371,7 @@
               "url": "https://github.com/YunoHost-Apps/mobilizon_ynh",
               "stars": 22,
               "forks": 10,
-              "updated_at": "2025-11-11T19:58:58Z",
+              "updated_at": "2025-11-17T04:15:29Z",
               "language": "Shell",
               "archived": false
             },
@@ -5723,7 +5723,7 @@
               "url": "https://github.com/YunoHost-Apps/navidrome_ynh",
               "stars": 17,
               "forks": 7,
-              "updated_at": "2025-11-10T09:08:03Z",
+              "updated_at": "2025-11-16T09:29:47Z",
               "language": "Shell",
               "archived": false
             },
@@ -6062,9 +6062,9 @@
               "name": "opencloud",
               "description": "OpenCloud package for YunoHost",
               "url": "https://github.com/YunoHost-Apps/opencloud_ynh",
-              "stars": 3,
+              "stars": 4,
               "forks": 1,
-              "updated_at": "2025-11-16T01:34:34Z",
+              "updated_at": "2025-11-16T07:08:00Z",
               "language": "Shell",
               "archived": false
             },
@@ -6240,7 +6240,7 @@
               "url": "https://github.com/YunoHost-Apps/overleaf_ynh",
               "stars": 2,
               "forks": 6,
-              "updated_at": "2025-11-10T09:14:15Z",
+              "updated_at": "2025-11-17T06:28:50Z",
               "language": "Shell",
               "archived": false
             },
@@ -6702,7 +6702,7 @@
               "url": "https://github.com/YunoHost-Apps/piefed_ynh",
               "stars": 3,
               "forks": 0,
-              "updated_at": "2025-10-02T07:04:47Z",
+              "updated_at": "2025-11-16T15:37:44Z",
               "language": "Shell",
               "archived": false
             },
@@ -6987,7 +6987,7 @@
               "description": "PrivateBin package for YunoHost",
               "url": "https://github.com/YunoHost-Apps/privatebin_ynh",
               "stars": 1,
-              "forks": 4,
+              "forks": 5,
               "updated_at": "2025-11-13T14:18:58Z",
               "language": "PHP",
               "archived": false
@@ -7791,7 +7791,7 @@
               "url": "https://github.com/YunoHost-Apps/searxng_ynh",
               "stars": 14,
               "forks": 4,
-              "updated_at": "2025-11-10T06:47:23Z",
+              "updated_at": "2025-11-17T06:19:25Z",
               "language": "Shell",
               "archived": false
             },
@@ -8671,7 +8671,7 @@
               "url": "https://github.com/YunoHost-Apps/terraforming-mars_ynh",
               "stars": 1,
               "forks": 2,
-              "updated_at": "2025-11-10T07:12:15Z",
+              "updated_at": "2025-11-17T06:29:34Z",
               "language": "Shell",
               "archived": false
             },
@@ -10047,7 +10047,7 @@
       {
         "name": "YunoHost Docs Translations",
         "success": true,
-        "duration": 70,
+        "duration": 72,
         "result": [
           "de",
           "docs",
@@ -10061,7 +10061,7 @@
       {
         "name": "YunoHost UI Translations",
         "success": true,
-        "duration": 1455,
+        "duration": 1195,
         "result": [
           {
             "language": "Catalan",
@@ -10468,7 +10468,7 @@
       {
         "name": "Zimaboard Shipping Areas",
         "success": true,
-        "duration": 574,
+        "duration": 261,
         "result": [
           "Argentina",
           "Australia",
