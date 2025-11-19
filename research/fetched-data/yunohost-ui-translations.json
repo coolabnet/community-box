@@ -1,12 +1,12 @@
 {
-  "timestamp": "2025-11-18T06:35:39.151Z",
+  "timestamp": "2025-11-19T06:35:51.316Z",
   "script": "scripts.test.js",
   "source": "YunoHost Translation Platform",
   "url": "https://translate.yunohost.org/",
   "api_url": "https://translate.yunohost.org/api/translations/?format=json",
   "total_languages": 50,
-  "fully_translated": 16,
-  "partially_translated": 31,
+  "fully_translated": 18,
+  "partially_translated": 29,
   "not_started": 3,
   "data": [
     {
@@ -24,6 +24,14 @@
       "translated_words": 10862,
       "total_words": 10862,
       "last_change": "2025-11-14T19:53:55.366238Z"
+    },
+    {
+      "language": "Russian",
+      "language_code": "ru",
+      "translated_percent": 100,
+      "translated_words": 10862,
+      "total_words": 10862,
+      "last_change": "2025-11-19T00:03:55.874551Z"
     },
     {
       "language": "Catalan",
@@ -138,6 +146,14 @@
       "last_change": "2025-08-04T01:53:30.990748Z"
     },
     {
+      "language": "Russian",
+      "language_code": "ru",
+      "translated_percent": 100,
+      "translated_words": 139,
+      "total_words": 139,
+      "last_change": "2025-11-19T00:03:57.962288Z"
+    },
+    {
       "language": "French",
       "language_code": "fr",
       "translated_percent": 99.8,
@@ -168,14 +184,6 @@
       "translated_words": 137,
       "total_words": 139,
       "last_change": "2025-08-04T01:53:29.608059Z"
-    },
-    {
-      "language": "Russian",
-      "language_code": "ru",
-      "translated_percent": 96.1,
-      "translated_words": 137,
-      "total_words": 139,
-      "last_change": "2025-08-04T01:53:31.318905Z"
     },
     {
       "language": "Turkish",
@@ -296,14 +304,6 @@
       "translated_words": 966,
       "total_words": 3819,
       "last_change": "2025-11-07T13:01:50.483671Z"
-    },
-    {
-      "language": "Russian",
-      "language_code": "ru",
-      "translated_percent": 34.4,
-      "translated_words": 2808,
-      "total_words": 10862,
-      "last_change": "2025-11-07T13:03:30.920567Z"
     },
     {
       "language": "Occitan",

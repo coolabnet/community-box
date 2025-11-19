@@ -1,5 +1,5 @@
 {
-  "timestamp": "2025-11-18T06:35:37.366Z",
+  "timestamp": "2025-11-19T06:35:49.305Z",
   "script": "scripts.test.js",
   "source": "YunoHost-Apps GitHub Organization",
   "url": "https://github.com/YunoHost-Apps",
@@ -423,7 +423,7 @@
       "url": "https://github.com/YunoHost-Apps/autobd_ynh",
       "stars": 1,
       "forks": 2,
-      "updated_at": "2025-09-10T14:10:37Z",
+      "updated_at": "2025-11-18T12:29:35Z",
       "language": "Shell",
       "archived": false
     },
@@ -1632,7 +1632,7 @@
       "description": "Discourse package for YunoHost",
       "url": "https://github.com/YunoHost-Apps/discourse_ynh",
       "stars": 25,
-      "forks": 14,
+      "forks": 13,
       "updated_at": "2025-10-29T15:32:00Z",
       "language": "Shell",
       "archived": false
@@ -1830,7 +1830,7 @@
       "description": "Dolibarr ERP & CRM is a modern software to manage your organization's activity. This is an integration of Dolibarr in YunoHost",
       "url": "https://github.com/YunoHost-Apps/dolibarr_ynh",
       "stars": 15,
-      "forks": 22,
+      "forks": 21,
       "updated_at": "2025-10-03T19:10:37Z",
       "language": "Shell",
       "archived": false
@@ -3734,7 +3734,7 @@
       "url": "https://github.com/YunoHost-Apps/incus_ynh",
       "stars": 3,
       "forks": 1,
-      "updated_at": "2025-10-25T11:27:36Z",
+      "updated_at": "2025-11-18T11:35:15Z",
       "language": "Shell",
       "archived": false
     },
@@ -5087,7 +5087,7 @@
       "url": "https://github.com/YunoHost-Apps/meilisearch_ynh",
       "stars": 12,
       "forks": 3,
-      "updated_at": "2025-11-11T09:18:25Z",
+      "updated_at": "2025-11-18T07:53:51Z",
       "language": "Shell",
       "archived": false
     },
@@ -6868,7 +6868,7 @@
       "description": "Portainer package for YunoHost",
       "url": "https://github.com/YunoHost-Apps/portainer_ynh",
       "stars": 6,
-      "forks": 21,
+      "forks": 20,
       "updated_at": "2025-02-13T10:37:04Z",
       "language": "Shell",
       "archived": true
@@ -8178,7 +8178,7 @@
       "url": "https://github.com/YunoHost-Apps/sparkyfitness_ynh",
       "stars": 0,
       "forks": 0,
-      "updated_at": "2025-11-15T11:39:09Z",
+      "updated_at": "2025-11-19T06:19:20Z",
       "language": "Shell",
       "archived": false
     },
@@ -9201,7 +9201,7 @@
       "url": "https://github.com/YunoHost-Apps/wanderer_ynh",
       "stars": 3,
       "forks": 1,
-      "updated_at": "2025-11-11T16:32:27Z",
+      "updated_at": "2025-11-18T06:43:39Z",
       "language": "Shell",
       "archived": false
     },

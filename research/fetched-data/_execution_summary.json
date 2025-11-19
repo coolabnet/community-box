@@ -1,19 +1,19 @@
 {
-  "timestamp": "2025-11-18T06:35:36.615Z",
+  "timestamp": "2025-11-19T06:35:48.317Z",
   "script": "run-all.js",
   "note": "Summary of all data fetching script executions",
   "data": {
-    "execution_time": "2025-11-18T06:35:36.615Z",
+    "execution_time": "2025-11-19T06:35:48.317Z",
     "total_scripts": 6,
     "successful": 6,
     "failed": 0,
-    "total_duration_ms": 17319,
+    "total_duration_ms": 19881,
     "continue_on_error": true,
     "results": [
       {
         "name": "CapRover UI Translations",
         "success": true,
-        "duration": 249,
+        "duration": 230,
         "result": [
           "ar-EG",
           "de-DE",
@@ -34,7 +34,7 @@
       {
         "name": "CasaOS UI Translations",
         "success": true,
-        "duration": 173,
+        "duration": 177,
         "result": [
           "ca_ES",
           "cs_CZ",
@@ -69,7 +69,7 @@
       {
         "name": "YunoHost Apps",
         "success": true,
-        "duration": 14822,
+        "duration": 17301,
         "result": {
           "count": 906,
           "apps": [
@@ -476,7 +476,7 @@
               "url": "https://github.com/YunoHost-Apps/autobd_ynh",
               "stars": 1,
               "forks": 2,
-              "updated_at": "2025-09-10T14:10:37Z",
+              "updated_at": "2025-11-18T12:29:35Z",
               "language": "Shell",
               "archived": false
             },
@@ -1685,7 +1685,7 @@
               "description": "Discourse package for YunoHost",
               "url": "https://github.com/YunoHost-Apps/discourse_ynh",
               "stars": 25,
-              "forks": 14,
+              "forks": 13,
               "updated_at": "2025-10-29T15:32:00Z",
               "language": "Shell",
               "archived": false
@@ -1883,7 +1883,7 @@
               "description": "Dolibarr ERP & CRM is a modern software to manage your organization's activity. This is an integration of Dolibarr in YunoHost",
               "url": "https://github.com/YunoHost-Apps/dolibarr_ynh",
               "stars": 15,
-              "forks": 22,
+              "forks": 21,
               "updated_at": "2025-10-03T19:10:37Z",
               "language": "Shell",
               "archived": false
@@ -3787,7 +3787,7 @@
               "url": "https://github.com/YunoHost-Apps/incus_ynh",
               "stars": 3,
               "forks": 1,
-              "updated_at": "2025-10-25T11:27:36Z",
+              "updated_at": "2025-11-18T11:35:15Z",
               "language": "Shell",
               "archived": false
             },
@@ -5140,7 +5140,7 @@
               "url": "https://github.com/YunoHost-Apps/meilisearch_ynh",
               "stars": 12,
               "forks": 3,
-              "updated_at": "2025-11-11T09:18:25Z",
+              "updated_at": "2025-11-18T07:53:51Z",
               "language": "Shell",
               "archived": false
             },
@@ -6921,7 +6921,7 @@
               "description": "Portainer package for YunoHost",
               "url": "https://github.com/YunoHost-Apps/portainer_ynh",
               "stars": 6,
-              "forks": 21,
+              "forks": 20,
               "updated_at": "2025-02-13T10:37:04Z",
               "language": "Shell",
               "archived": true
@@ -8231,7 +8231,7 @@
               "url": "https://github.com/YunoHost-Apps/sparkyfitness_ynh",
               "stars": 0,
               "forks": 0,
-              "updated_at": "2025-11-15T11:39:09Z",
+              "updated_at": "2025-11-19T06:19:20Z",
               "language": "Shell",
               "archived": false
             },
@@ -9254,7 +9254,7 @@
               "url": "https://github.com/YunoHost-Apps/wanderer_ynh",
               "stars": 3,
               "forks": 1,
-              "updated_at": "2025-11-11T16:32:27Z",
+              "updated_at": "2025-11-18T06:43:39Z",
               "language": "Shell",
               "archived": false
             },
@@ -10058,7 +10058,7 @@
       {
         "name": "YunoHost Docs Translations",
         "success": true,
-        "duration": 139,
+        "duration": 124,
         "result": [
           "de",
           "docs",
@@ -10072,7 +10072,7 @@
       {
         "name": "YunoHost UI Translations",
         "success": true,
-        "duration": 1645,
+        "duration": 1740,
         "result": [
           {
             "language": "Catalan",
@@ -10089,6 +10089,14 @@
             "translated_words": 10862,
             "total_words": 10862,
             "last_change": "2025-11-14T19:53:55.366238Z"
+          },
+          {
+            "language": "Russian",
+            "language_code": "ru",
+            "translated_percent": 100,
+            "translated_words": 10862,
+            "total_words": 10862,
+            "last_change": "2025-11-19T00:03:55.874551Z"
           },
           {
             "language": "Catalan",
@@ -10203,6 +10211,14 @@
             "last_change": "2025-08-04T01:53:30.990748Z"
           },
           {
+            "language": "Russian",
+            "language_code": "ru",
+            "translated_percent": 100,
+            "translated_words": 139,
+            "total_words": 139,
+            "last_change": "2025-11-19T00:03:57.962288Z"
+          },
+          {
             "language": "French",
             "language_code": "fr",
             "translated_percent": 99.8,
@@ -10233,14 +10249,6 @@
             "translated_words": 137,
             "total_words": 139,
             "last_change": "2025-08-04T01:53:29.608059Z"
-          },
-          {
-            "language": "Russian",
-            "language_code": "ru",
-            "translated_percent": 96.1,
-            "translated_words": 137,
-            "total_words": 139,
-            "last_change": "2025-08-04T01:53:31.318905Z"
           },
           {
             "language": "Turkish",
@@ -10363,14 +10371,6 @@
             "last_change": "2025-11-07T13:01:50.483671Z"
           },
           {
-            "language": "Russian",
-            "language_code": "ru",
-            "translated_percent": 34.4,
-            "translated_words": 2808,
-            "total_words": 10862,
-            "last_change": "2025-11-07T13:03:30.920567Z"
-          },
-          {
             "language": "Occitan",
             "language_code": "oc",
             "translated_percent": 33.4,
@@ -10479,7 +10479,7 @@
       {
         "name": "Zimaboard Shipping Areas",
         "success": true,
-        "duration": 291,
+        "duration": 309,
         "result": [
           "Argentina",
           "Australia",
