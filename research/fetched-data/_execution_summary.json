@@ -1,19 +1,19 @@
 {
-  "timestamp": "2025-11-19T06:35:48.317Z",
+  "timestamp": "2025-11-20T06:35:15.350Z",
   "script": "run-all.js",
   "note": "Summary of all data fetching script executions",
   "data": {
-    "execution_time": "2025-11-19T06:35:48.317Z",
+    "execution_time": "2025-11-20T06:35:15.350Z",
     "total_scripts": 6,
     "successful": 6,
     "failed": 0,
-    "total_duration_ms": 19881,
+    "total_duration_ms": 18275,
     "continue_on_error": true,
     "results": [
       {
         "name": "CapRover UI Translations",
         "success": true,
-        "duration": 230,
+        "duration": 273,
         "result": [
           "ar-EG",
           "de-DE",
@@ -34,7 +34,7 @@
       {
         "name": "CasaOS UI Translations",
         "success": true,
-        "duration": 177,
+        "duration": 190,
         "result": [
           "ca_ES",
           "cs_CZ",
@@ -69,7 +69,7 @@
       {
         "name": "YunoHost Apps",
         "success": true,
-        "duration": 17301,
+        "duration": 15584,
         "result": {
           "count": 906,
           "apps": [
@@ -1488,7 +1488,7 @@
               "url": "https://github.com/YunoHost-Apps/davis_ynh",
               "stars": 1,
               "forks": 3,
-              "updated_at": "2025-10-31T11:01:25Z",
+              "updated_at": "2025-11-19T20:28:52Z",
               "language": "Shell",
               "archived": false
             },
@@ -2104,7 +2104,7 @@
               "url": "https://github.com/YunoHost-Apps/element_ynh",
               "stars": 23,
               "forks": 9,
-              "updated_at": "2025-11-05T07:39:01Z",
+              "updated_at": "2025-11-19T09:23:03Z",
               "language": "Shell",
               "archived": false
             },
@@ -2445,7 +2445,7 @@
               "url": "https://github.com/YunoHost-Apps/filebrowser_ynh",
               "stars": 5,
               "forks": 4,
-              "updated_at": "2025-11-14T09:36:55Z",
+              "updated_at": "2025-11-19T20:03:42Z",
               "language": "Shell",
               "archived": false
             },
@@ -4885,9 +4885,9 @@
               "name": "mastodon",
               "description": "Free, open-source social network for YunoHost",
               "url": "https://github.com/YunoHost-Apps/mastodon_ynh",
-              "stars": 85,
+              "stars": 86,
               "forks": 42,
-              "updated_at": "2025-11-15T14:34:12Z",
+              "updated_at": "2025-11-19T11:16:26Z",
               "language": "Shell",
               "archived": false
             },
@@ -8583,7 +8583,7 @@
               "url": "https://github.com/YunoHost-Apps/tableaunoir_ynh",
               "stars": 2,
               "forks": 1,
-              "updated_at": "2025-11-03T22:28:20Z",
+              "updated_at": "2025-11-19T20:51:17Z",
               "language": "Shell",
               "archived": false
             },
@@ -9847,7 +9847,7 @@
               "description": "YunoRunner package  for YunoHost",
               "url": "https://github.com/YunoHost-Apps/yunorunner_ynh",
               "stars": 6,
-              "forks": 6,
+              "forks": 7,
               "updated_at": "2025-08-30T17:04:14Z",
               "language": "Shell",
               "archived": false
@@ -10058,7 +10058,7 @@
       {
         "name": "YunoHost Docs Translations",
         "success": true,
-        "duration": 124,
+        "duration": 157,
         "result": [
           "de",
           "docs",
@@ -10072,7 +10072,7 @@
       {
         "name": "YunoHost UI Translations",
         "success": true,
-        "duration": 1740,
+        "duration": 1611,
         "result": [
           {
             "language": "Catalan",
@@ -10479,7 +10479,7 @@
       {
         "name": "Zimaboard Shipping Areas",
         "success": true,
-        "duration": 309,
+        "duration": 460,
         "result": [
           "Argentina",
           "Australia",
