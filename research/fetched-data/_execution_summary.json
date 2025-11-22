@@ -1,19 +1,19 @@
 {
-  "timestamp": "2025-11-21T06:36:56.406Z",
+  "timestamp": "2025-11-22T06:32:44.932Z",
   "script": "run-all.js",
   "note": "Summary of all data fetching script executions",
   "data": {
-    "execution_time": "2025-11-21T06:36:56.406Z",
+    "execution_time": "2025-11-22T06:32:44.932Z",
     "total_scripts": 6,
     "successful": 6,
     "failed": 0,
-    "total_duration_ms": 18278,
+    "total_duration_ms": 17340,
     "continue_on_error": true,
     "results": [
       {
         "name": "CapRover UI Translations",
         "success": true,
-        "duration": 168,
+        "duration": 260,
         "result": [
           "ar-EG",
           "de-DE",
@@ -34,7 +34,7 @@
       {
         "name": "CasaOS UI Translations",
         "success": true,
-        "duration": 107,
+        "duration": 162,
         "result": [
           "ca_ES",
           "cs_CZ",
@@ -69,7 +69,7 @@
       {
         "name": "YunoHost Apps",
         "success": true,
-        "duration": 16448,
+        "duration": 14013,
         "result": {
           "count": 906,
           "apps": [
@@ -707,7 +707,7 @@
               "url": "https://github.com/YunoHost-Apps/bookstack_ynh",
               "stars": 12,
               "forks": 6,
-              "updated_at": "2025-11-20T08:44:01Z",
+              "updated_at": "2025-11-21T17:33:30Z",
               "language": "Shell",
               "archived": false
             },
@@ -1169,7 +1169,7 @@
               "url": "https://github.com/YunoHost-Apps/commafeed_ynh",
               "stars": 0,
               "forks": 1,
-              "updated_at": "2025-09-23T08:39:28Z",
+              "updated_at": "2025-11-21T08:12:07Z",
               "language": "Shell",
               "archived": false
             },
@@ -1861,7 +1861,7 @@
               "description": "Dokos is a 100% open-source management software that is based on ERPNext",
               "url": "https://github.com/YunoHost-Apps/Dokos_ynh",
               "stars": 1,
-              "forks": 3,
+              "forks": 4,
               "updated_at": "2025-08-11T17:55:08Z",
               "language": "Shell",
               "archived": false
@@ -1883,7 +1883,7 @@
               "description": "Dolibarr ERP & CRM is a modern software to manage your organization's activity. This is an integration of Dolibarr in YunoHost",
               "url": "https://github.com/YunoHost-Apps/dolibarr_ynh",
               "stars": 15,
-              "forks": 21,
+              "forks": 20,
               "updated_at": "2025-10-03T19:10:37Z",
               "language": "Shell",
               "archived": false
@@ -2478,7 +2478,7 @@
               "url": "https://github.com/YunoHost-Apps/filerise_ynh",
               "stars": 0,
               "forks": 1,
-              "updated_at": "2025-11-20T21:38:27Z",
+              "updated_at": "2025-11-21T16:48:01Z",
               "language": "PHP",
               "archived": false
             },
@@ -2720,7 +2720,7 @@
               "url": "https://github.com/YunoHost-Apps/forte_ynh",
               "stars": 2,
               "forks": 1,
-              "updated_at": "2025-11-08T22:46:52Z",
+              "updated_at": "2025-11-21T09:28:03Z",
               "language": "Shell",
               "archived": false
             },
@@ -3193,7 +3193,7 @@
               "url": "https://github.com/YunoHost-Apps/gogs_ynh",
               "stars": 18,
               "forks": 9,
-              "updated_at": "2025-06-10T07:45:04Z",
+              "updated_at": "2025-11-21T22:42:38Z",
               "language": "Shell",
               "archived": false
             },
@@ -3324,7 +3324,7 @@
               "description": "Grammalecte server package for YunoHost",
               "url": "https://github.com/YunoHost-Apps/grammalecte_ynh",
               "stars": 5,
-              "forks": 2,
+              "forks": 1,
               "updated_at": "2025-09-11T07:21:33Z",
               "language": "Shell",
               "archived": false
@@ -3556,7 +3556,7 @@
               "url": "https://github.com/YunoHost-Apps/homeassistant_ynh",
               "stars": 22,
               "forks": 16,
-              "updated_at": "2025-11-15T07:36:37Z",
+              "updated_at": "2025-11-22T06:05:33Z",
               "language": "Shell",
               "archived": false
             },
@@ -3930,7 +3930,7 @@
               "url": "https://github.com/YunoHost-Apps/jackett_ynh",
               "stars": 1,
               "forks": 4,
-              "updated_at": "2025-11-20T21:36:34Z",
+              "updated_at": "2025-11-21T16:56:26Z",
               "language": "Shell",
               "archived": false
             },
@@ -4062,7 +4062,7 @@
               "url": "https://github.com/YunoHost-Apps/joomla_ynh",
               "stars": 2,
               "forks": 6,
-              "updated_at": "2025-10-27T09:57:14Z",
+              "updated_at": "2025-11-21T18:45:13Z",
               "language": "Shell",
               "archived": false
             },
@@ -4534,7 +4534,7 @@
               "description": "LibreTranslate package for YunHost",
               "url": "https://github.com/YunoHost-Apps/libretranslate_ynh",
               "stars": 4,
-              "forks": 5,
+              "forks": 4,
               "updated_at": "2025-11-17T06:26:31Z",
               "language": "Shell",
               "archived": false
@@ -4579,7 +4579,7 @@
               "url": "https://github.com/YunoHost-Apps/limesurvey_ynh",
               "stars": 6,
               "forks": 13,
-              "updated_at": "2025-11-20T21:26:10Z",
+              "updated_at": "2025-11-21T09:39:44Z",
               "language": "Shell",
               "archived": false
             },
@@ -4722,7 +4722,7 @@
               "url": "https://github.com/YunoHost-Apps/loops_ynh",
               "stars": 2,
               "forks": 2,
-              "updated_at": "2025-11-20T17:44:36Z",
+              "updated_at": "2025-11-21T07:23:05Z",
               "language": "Shell",
               "archived": false
             },
@@ -5833,7 +5833,7 @@
               "url": "https://github.com/YunoHost-Apps/nodebb_ynh",
               "stars": 7,
               "forks": 6,
-              "updated_at": "2025-11-20T08:44:50Z",
+              "updated_at": "2025-11-21T14:47:46Z",
               "language": "Shell",
               "archived": false
             },
@@ -6526,7 +6526,7 @@
               "url": "https://github.com/YunoHost-Apps/phanpy_ynh",
               "stars": 2,
               "forks": 3,
-              "updated_at": "2025-10-10T04:09:49Z",
+              "updated_at": "2025-11-21T10:40:19Z",
               "language": "Shell",
               "archived": false
             },
@@ -6878,7 +6878,7 @@
               "url": "https://github.com/YunoHost-Apps/pluxml_ynh",
               "stars": 9,
               "forks": 3,
-              "updated_at": "2025-08-28T17:42:03Z",
+              "updated_at": "2025-11-21T16:58:12Z",
               "language": "Shell",
               "archived": false
             },
@@ -7175,7 +7175,7 @@
               "url": "https://github.com/YunoHost-Apps/pyinventory_ynh",
               "stars": 6,
               "forks": 2,
-              "updated_at": "2025-09-21T13:43:22Z",
+              "updated_at": "2025-11-21T18:54:01Z",
               "language": "Python",
               "archived": false
             },
@@ -7648,7 +7648,7 @@
               "url": "https://github.com/YunoHost-Apps/sabnzbd_ynh",
               "stars": 1,
               "forks": 0,
-              "updated_at": "2025-11-13T07:32:14Z",
+              "updated_at": "2025-11-21T20:56:21Z",
               "language": "Shell",
               "archived": false
             },
@@ -8770,7 +8770,7 @@
               "url": "https://github.com/YunoHost-Apps/tiki_ynh",
               "stars": 4,
               "forks": 5,
-              "updated_at": "2025-10-11T09:06:29Z",
+              "updated_at": "2025-11-21T15:05:10Z",
               "language": "Shell",
               "archived": false
             },
@@ -9330,7 +9330,7 @@
               "description": "Weblate package for YunoHost",
               "url": "https://github.com/YunoHost-Apps/weblate_ynh",
               "stars": 14,
-              "forks": 10,
+              "forks": 9,
               "updated_at": "2025-11-06T18:23:01Z",
               "language": "Python",
               "archived": false
@@ -10058,7 +10058,7 @@
       {
         "name": "YunoHost Docs Translations",
         "success": true,
-        "duration": 69,
+        "duration": 133,
         "result": [
           "de",
           "docs",
@@ -10072,7 +10072,7 @@
       {
         "name": "YunoHost UI Translations",
         "success": true,
-        "duration": 1237,
+        "duration": 2369,
         "result": [
           {
             "language": "Catalan",
@@ -10089,6 +10089,14 @@
             "translated_words": 10862,
             "total_words": 10862,
             "last_change": "2025-11-14T19:53:55.366238Z"
+          },
+          {
+            "language": "French",
+            "language_code": "fr",
+            "translated_percent": 100,
+            "translated_words": 10862,
+            "total_words": 10862,
+            "last_change": "2025-11-22T00:12:45.064193Z"
           },
           {
             "language": "Russian",
@@ -10217,14 +10225,6 @@
             "translated_words": 139,
             "total_words": 139,
             "last_change": "2025-11-19T00:03:57.962288Z"
-          },
-          {
-            "language": "French",
-            "language_code": "fr",
-            "translated_percent": 99.8,
-            "translated_words": 10843,
-            "total_words": 10862,
-            "last_change": "2025-11-09T09:38:23.622261Z"
           },
           {
             "language": "Spanish",
@@ -10479,7 +10479,7 @@
       {
         "name": "Zimaboard Shipping Areas",
         "success": true,
-        "duration": 249,
+        "duration": 403,
         "result": [
           "Argentina",
           "Australia",
