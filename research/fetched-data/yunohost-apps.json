@@ -1,5 +1,5 @@
 {
-  "timestamp": "2025-11-26T06:37:38.870Z",
+  "timestamp": "2025-11-27T06:37:56.788Z",
   "script": "scripts.test.js",
   "source": "YunoHost-Apps GitHub Organization",
   "url": "https://github.com/YunoHost-Apps",
@@ -2622,7 +2622,7 @@
       "description": "Forgejo package for YunoHost",
       "url": "https://github.com/YunoHost-Apps/forgejo_ynh",
       "stars": 20,
-      "forks": 5,
+      "forks": 6,
       "updated_at": "2025-11-23T11:13:43Z",
       "language": "Shell",
       "archived": false
@@ -3723,7 +3723,7 @@
       "url": "https://github.com/YunoHost-Apps/immich_ynh",
       "stars": 21,
       "forks": 14,
-      "updated_at": "2025-11-22T14:24:28Z",
+      "updated_at": "2025-11-26T22:00:50Z",
       "language": "Shell",
       "archived": false
     },
@@ -5351,7 +5351,7 @@
       "url": "https://github.com/YunoHost-Apps/moncycle_ynh",
       "stars": 3,
       "forks": 3,
-      "updated_at": "2025-08-30T17:12:08Z",
+      "updated_at": "2025-11-26T10:52:42Z",
       "language": "Shell",
       "archived": false
     },
@@ -5461,7 +5461,7 @@
       "url": "https://github.com/YunoHost-Apps/movim_ynh",
       "stars": 7,
       "forks": 14,
-      "updated_at": "2025-11-20T21:32:39Z",
+      "updated_at": "2025-11-26T10:30:03Z",
       "language": "Shell",
       "archived": false
     },
@@ -6220,7 +6220,7 @@
       "url": "https://github.com/YunoHost-Apps/owncloud_ynh",
       "stars": 4,
       "forks": 8,
-      "updated_at": "2025-10-16T17:59:38Z",
+      "updated_at": "2025-11-26T16:13:57Z",
       "language": "Shell",
       "archived": false
     },
@@ -6473,7 +6473,7 @@
       "url": "https://github.com/YunoHost-Apps/phanpy_ynh",
       "stars": 2,
       "forks": 3,
-      "updated_at": "2025-11-26T05:31:38Z",
+      "updated_at": "2025-11-27T06:05:33Z",
       "language": "Shell",
       "archived": false
     },

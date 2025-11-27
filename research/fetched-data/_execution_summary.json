@@ -1,19 +1,19 @@
 {
-  "timestamp": "2025-11-26T06:37:21.033Z",
+  "timestamp": "2025-11-27T06:37:56.225Z",
   "script": "run-all.js",
   "note": "Summary of all data fetching script executions",
   "data": {
-    "execution_time": "2025-11-26T06:37:21.033Z",
+    "execution_time": "2025-11-27T06:37:56.225Z",
     "total_scripts": 6,
     "successful": 6,
     "failed": 0,
-    "total_duration_ms": 19947,
+    "total_duration_ms": 17833,
     "continue_on_error": true,
     "results": [
       {
         "name": "CapRover UI Translations",
         "success": true,
-        "duration": 287,
+        "duration": 130,
         "result": [
           "ar-EG",
           "de-DE",
@@ -34,7 +34,7 @@
       {
         "name": "CasaOS UI Translations",
         "success": true,
-        "duration": 110,
+        "duration": 81,
         "result": [
           "ca_ES",
           "cs_CZ",
@@ -69,7 +69,7 @@
       {
         "name": "YunoHost Apps",
         "success": true,
-        "duration": 17299,
+        "duration": 16073,
         "result": {
           "count": 908,
           "apps": [
@@ -2675,7 +2675,7 @@
               "description": "Forgejo package for YunoHost",
               "url": "https://github.com/YunoHost-Apps/forgejo_ynh",
               "stars": 20,
-              "forks": 5,
+              "forks": 6,
               "updated_at": "2025-11-23T11:13:43Z",
               "language": "Shell",
               "archived": false
@@ -3776,7 +3776,7 @@
               "url": "https://github.com/YunoHost-Apps/immich_ynh",
               "stars": 21,
               "forks": 14,
-              "updated_at": "2025-11-22T14:24:28Z",
+              "updated_at": "2025-11-26T22:00:50Z",
               "language": "Shell",
               "archived": false
             },
@@ -5404,7 +5404,7 @@
               "url": "https://github.com/YunoHost-Apps/moncycle_ynh",
               "stars": 3,
               "forks": 3,
-              "updated_at": "2025-08-30T17:12:08Z",
+              "updated_at": "2025-11-26T10:52:42Z",
               "language": "Shell",
               "archived": false
             },
@@ -5514,7 +5514,7 @@
               "url": "https://github.com/YunoHost-Apps/movim_ynh",
               "stars": 7,
               "forks": 14,
-              "updated_at": "2025-11-20T21:32:39Z",
+              "updated_at": "2025-11-26T10:30:03Z",
               "language": "Shell",
               "archived": false
             },
@@ -6273,7 +6273,7 @@
               "url": "https://github.com/YunoHost-Apps/owncloud_ynh",
               "stars": 4,
               "forks": 8,
-              "updated_at": "2025-10-16T17:59:38Z",
+              "updated_at": "2025-11-26T16:13:57Z",
               "language": "Shell",
               "archived": false
             },
@@ -6526,7 +6526,7 @@
               "url": "https://github.com/YunoHost-Apps/phanpy_ynh",
               "stars": 2,
               "forks": 3,
-              "updated_at": "2025-11-26T05:31:38Z",
+              "updated_at": "2025-11-27T06:05:33Z",
               "language": "Shell",
               "archived": false
             },
@@ -10080,7 +10080,7 @@
       {
         "name": "YunoHost Docs Translations",
         "success": true,
-        "duration": 105,
+        "duration": 62,
         "result": [
           "de",
           "docs",
@@ -10094,7 +10094,7 @@
       {
         "name": "YunoHost UI Translations",
         "success": true,
-        "duration": 1723,
+        "duration": 1127,
         "result": [
           {
             "language": "Catalan",
@@ -10501,7 +10501,7 @@
       {
         "name": "Zimaboard Shipping Areas",
         "success": true,
-        "duration": 423,
+        "duration": 360,
         "result": [
           "Argentina",
           "Australia",
