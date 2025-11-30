@@ -1,11 +1,11 @@
 {
-  "timestamp": "2025-11-29T06:34:39.210Z",
+  "timestamp": "2025-11-30T06:35:51.646Z",
   "script": "scripts.test.js",
   "source": "YunoHost-Apps GitHub Organization",
   "url": "https://github.com/YunoHost-Apps",
   "api_url": "https://api.github.com/orgs/YunoHost-Apps/repos",
-  "total_apps": 909,
-  "total_repos_checked": 927,
+  "total_apps": 911,
+  "total_repos_checked": 929,
   "languages": [
     "CSS",
     "HTML",
@@ -2469,7 +2469,7 @@
       "url": "https://github.com/YunoHost-Apps/firefly-iii_ynh",
       "stars": 22,
       "forks": 12,
-      "updated_at": "2025-11-14T09:40:55Z",
+      "updated_at": "2025-11-29T08:42:59Z",
       "language": "Shell",
       "archived": false
     },
@@ -4239,7 +4239,7 @@
       "description": "Kresus (personal finance manager) for YunoHost",
       "url": "https://github.com/YunoHost-Apps/kresus_ynh",
       "stars": 20,
-      "forks": 21,
+      "forks": 20,
       "updated_at": "2025-10-25T08:03:44Z",
       "language": "Shell",
       "archived": false
@@ -5274,7 +5274,7 @@
       "url": "https://github.com/YunoHost-Apps/mitra_ynh",
       "stars": 1,
       "forks": 3,
-      "updated_at": "2025-11-20T21:33:15Z",
+      "updated_at": "2025-11-29T08:42:10Z",
       "language": "Shell",
       "archived": false
     },
@@ -5461,7 +5461,7 @@
       "url": "https://github.com/YunoHost-Apps/movim_ynh",
       "stars": 7,
       "forks": 14,
-      "updated_at": "2025-11-26T10:30:03Z",
+      "updated_at": "2025-11-29T19:28:31Z",
       "language": "Shell",
       "archived": false
     },
@@ -7254,7 +7254,7 @@
       "url": "https://github.com/YunoHost-Apps/rallly_ynh",
       "stars": 7,
       "forks": 2,
-      "updated_at": "2025-11-24T16:40:18Z",
+      "updated_at": "2025-11-29T12:41:20Z",
       "language": "Shell",
       "archived": false
     },
@@ -7978,9 +7978,9 @@
       "name": "silverbullet",
       "description": "A creative space where you collect, create and expand your personal knowledge.",
       "url": "https://github.com/YunoHost-Apps/silverbullet_ynh",
-      "stars": 5,
+      "stars": 6,
       "forks": 2,
-      "updated_at": "2025-11-04T07:36:42Z",
+      "updated_at": "2025-11-29T11:08:11Z",
       "language": "Shell",
       "archived": false
     },
@@ -8200,7 +8200,7 @@
       "url": "https://github.com/YunoHost-Apps/sparkyfitness_ynh",
       "stars": 0,
       "forks": 0,
-      "updated_at": "2025-11-23T07:22:30Z",
+      "updated_at": "2025-11-29T06:44:17Z",
       "language": "Shell",
       "archived": false
     },
@@ -8766,6 +8766,17 @@
       "archived": false
     },
     {
+      "id": "tinyfeed_ynh",
+      "name": "tinyfeed",
+      "description": "Tinyfeed package for YunoHost",
+      "url": "https://github.com/YunoHost-Apps/tinyfeed_ynh",
+      "stars": 0,
+      "forks": 0,
+      "updated_at": "2025-11-29T17:54:57Z",
+      "language": "Shell",
+      "archived": false
+    },
+    {
       "id": "tinyfilemanager_ynh",
       "name": "tinyfilemanager",
       "description": "Tiny File Manager package for YunoHost",
@@ -8927,6 +8938,17 @@
       "stars": 5,
       "forks": 2,
       "updated_at": "2025-10-28T13:18:23Z",
+      "language": "Shell",
+      "archived": false
+    },
+    {
+      "id": "tunarr_ynh",
+      "name": "tunarr",
+      "description": "Tunarr package for YunoHost",
+      "url": "https://github.com/YunoHost-Apps/tunarr_ynh",
+      "stars": 0,
+      "forks": 0,
+      "updated_at": "2025-11-29T14:11:53Z",
       "language": "Shell",
       "archived": false
     },

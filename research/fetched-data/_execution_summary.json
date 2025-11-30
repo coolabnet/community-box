@@ -1,19 +1,19 @@
 {
-  "timestamp": "2025-11-29T06:34:25.280Z",
+  "timestamp": "2025-11-30T06:35:50.336Z",
   "script": "run-all.js",
   "note": "Summary of all data fetching script executions",
   "data": {
-    "execution_time": "2025-11-29T06:34:25.280Z",
+    "execution_time": "2025-11-30T06:35:50.336Z",
     "total_scripts": 6,
     "successful": 6,
     "failed": 0,
-    "total_duration_ms": 17577,
+    "total_duration_ms": 17276,
     "continue_on_error": true,
     "results": [
       {
         "name": "CapRover UI Translations",
         "success": true,
-        "duration": 187,
+        "duration": 276,
         "result": [
           "ar-EG",
           "de-DE",
@@ -34,7 +34,7 @@
       {
         "name": "CasaOS UI Translations",
         "success": true,
-        "duration": 115,
+        "duration": 130,
         "result": [
           "ca_ES",
           "cs_CZ",
@@ -69,9 +69,9 @@
       {
         "name": "YunoHost Apps",
         "success": true,
-        "duration": 15020,
+        "duration": 14570,
         "result": {
-          "count": 909,
+          "count": 911,
           "apps": [
             {
               "id": "13ft_ynh",
@@ -2522,7 +2522,7 @@
               "url": "https://github.com/YunoHost-Apps/firefly-iii_ynh",
               "stars": 22,
               "forks": 12,
-              "updated_at": "2025-11-14T09:40:55Z",
+              "updated_at": "2025-11-29T08:42:59Z",
               "language": "Shell",
               "archived": false
             },
@@ -4292,7 +4292,7 @@
               "description": "Kresus (personal finance manager) for YunoHost",
               "url": "https://github.com/YunoHost-Apps/kresus_ynh",
               "stars": 20,
-              "forks": 21,
+              "forks": 20,
               "updated_at": "2025-10-25T08:03:44Z",
               "language": "Shell",
               "archived": false
@@ -5327,7 +5327,7 @@
               "url": "https://github.com/YunoHost-Apps/mitra_ynh",
               "stars": 1,
               "forks": 3,
-              "updated_at": "2025-11-20T21:33:15Z",
+              "updated_at": "2025-11-29T08:42:10Z",
               "language": "Shell",
               "archived": false
             },
@@ -5514,7 +5514,7 @@
               "url": "https://github.com/YunoHost-Apps/movim_ynh",
               "stars": 7,
               "forks": 14,
-              "updated_at": "2025-11-26T10:30:03Z",
+              "updated_at": "2025-11-29T19:28:31Z",
               "language": "Shell",
               "archived": false
             },
@@ -7307,7 +7307,7 @@
               "url": "https://github.com/YunoHost-Apps/rallly_ynh",
               "stars": 7,
               "forks": 2,
-              "updated_at": "2025-11-24T16:40:18Z",
+              "updated_at": "2025-11-29T12:41:20Z",
               "language": "Shell",
               "archived": false
             },
@@ -8031,9 +8031,9 @@
               "name": "silverbullet",
               "description": "A creative space where you collect, create and expand your personal knowledge.",
               "url": "https://github.com/YunoHost-Apps/silverbullet_ynh",
-              "stars": 5,
+              "stars": 6,
               "forks": 2,
-              "updated_at": "2025-11-04T07:36:42Z",
+              "updated_at": "2025-11-29T11:08:11Z",
               "language": "Shell",
               "archived": false
             },
@@ -8253,7 +8253,7 @@
               "url": "https://github.com/YunoHost-Apps/sparkyfitness_ynh",
               "stars": 0,
               "forks": 0,
-              "updated_at": "2025-11-23T07:22:30Z",
+              "updated_at": "2025-11-29T06:44:17Z",
               "language": "Shell",
               "archived": false
             },
@@ -8819,6 +8819,17 @@
               "archived": false
             },
             {
+              "id": "tinyfeed_ynh",
+              "name": "tinyfeed",
+              "description": "Tinyfeed package for YunoHost",
+              "url": "https://github.com/YunoHost-Apps/tinyfeed_ynh",
+              "stars": 0,
+              "forks": 0,
+              "updated_at": "2025-11-29T17:54:57Z",
+              "language": "Shell",
+              "archived": false
+            },
+            {
               "id": "tinyfilemanager_ynh",
               "name": "tinyfilemanager",
               "description": "Tiny File Manager package for YunoHost",
@@ -8980,6 +8991,17 @@
               "stars": 5,
               "forks": 2,
               "updated_at": "2025-10-28T13:18:23Z",
+              "language": "Shell",
+              "archived": false
+            },
+            {
+              "id": "tunarr_ynh",
+              "name": "tunarr",
+              "description": "Tunarr package for YunoHost",
+              "url": "https://github.com/YunoHost-Apps/tunarr_ynh",
+              "stars": 0,
+              "forks": 0,
+              "updated_at": "2025-11-29T14:11:53Z",
               "language": "Shell",
               "archived": false
             },
@@ -10091,7 +10113,7 @@
       {
         "name": "YunoHost Docs Translations",
         "success": true,
-        "duration": 73,
+        "duration": 103,
         "result": [
           "de",
           "docs",
@@ -10105,7 +10127,7 @@
       {
         "name": "YunoHost UI Translations",
         "success": true,
-        "duration": 1810,
+        "duration": 1589,
         "result": [
           {
             "language": "Catalan",
@@ -10129,7 +10151,7 @@
             "translated_percent": 100,
             "translated_words": 10862,
             "total_words": 10862,
-            "last_change": "2025-11-22T15:27:44.672411Z"
+            "last_change": "2025-11-29T16:10:27.782019Z"
           },
           {
             "language": "Russian",
@@ -10169,7 +10191,7 @@
             "translated_percent": 100,
             "translated_words": 3819,
             "total_words": 3819,
-            "last_change": "2025-11-09T22:00:49.978378Z"
+            "last_change": "2025-11-29T16:10:32.469032Z"
           },
           {
             "language": "Russian",
@@ -10512,7 +10534,7 @@
       {
         "name": "Zimaboard Shipping Areas",
         "success": true,
-        "duration": 372,
+        "duration": 608,
         "result": [
           "Argentina",
           "Australia",
