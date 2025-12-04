@@ -1,5 +1,5 @@
 {
-  "timestamp": "2025-12-03T06:38:24.533Z",
+  "timestamp": "2025-12-04T06:38:07.437Z",
   "script": "scripts.test.js",
   "source": "YunoHost-Apps GitHub Organization",
   "url": "https://github.com/YunoHost-Apps",
@@ -665,7 +665,7 @@
       "url": "https://github.com/YunoHost-Apps/bookstack_ynh",
       "stars": 12,
       "forks": 6,
-      "updated_at": "2025-11-21T17:33:30Z",
+      "updated_at": "2025-12-03T15:28:36Z",
       "language": "Shell",
       "archived": false
     },
@@ -2062,7 +2062,7 @@
       "url": "https://github.com/YunoHost-Apps/element_ynh",
       "stars": 23,
       "forks": 9,
-      "updated_at": "2025-11-19T09:23:03Z",
+      "updated_at": "2025-12-03T20:11:46Z",
       "language": "Shell",
       "archived": false
     },
@@ -2095,7 +2095,7 @@
       "url": "https://github.com/YunoHost-Apps/elk_ynh",
       "stars": 0,
       "forks": 0,
-      "updated_at": "2025-11-07T22:35:00Z",
+      "updated_at": "2025-12-03T20:50:00Z",
       "language": "Shell",
       "archived": false
     },
@@ -4295,7 +4295,7 @@
       "url": "https://github.com/YunoHost-Apps/lasuite-docs_ynh",
       "stars": 5,
       "forks": 2,
-      "updated_at": "2025-11-20T08:00:26Z",
+      "updated_at": "2025-12-03T06:41:17Z",
       "language": "Shell",
       "archived": false
     },
@@ -4745,7 +4745,7 @@
       "description": "LXD dashboard package for YunoHost",
       "url": "https://github.com/YunoHost-Apps/lxd-dashboard_ynh",
       "stars": 3,
-      "forks": 3,
+      "forks": 2,
       "updated_at": "2024-12-11T00:38:45Z",
       "language": "Shell",
       "archived": false
@@ -10048,7 +10048,7 @@
       "url": "https://github.com/YunoHost-Apps/zwiicms_ynh",
       "stars": 1,
       "forks": 1,
-      "updated_at": "2025-11-24T05:29:49Z",
+      "updated_at": "2025-12-03T10:37:59Z",
       "language": "Shell",
       "archived": false
     }

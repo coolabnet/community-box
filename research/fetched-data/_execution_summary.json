@@ -1,19 +1,19 @@
 {
-  "timestamp": "2025-12-03T06:38:24.013Z",
+  "timestamp": "2025-12-04T06:38:06.710Z",
   "script": "run-all.js",
   "note": "Summary of all data fetching script executions",
   "data": {
-    "execution_time": "2025-12-03T06:38:24.013Z",
+    "execution_time": "2025-12-04T06:38:06.710Z",
     "total_scripts": 6,
     "successful": 6,
     "failed": 0,
-    "total_duration_ms": 19373,
+    "total_duration_ms": 18429,
     "continue_on_error": true,
     "results": [
       {
         "name": "CapRover UI Translations",
         "success": true,
-        "duration": 105,
+        "duration": 156,
         "result": [
           "ar-EG",
           "de-DE",
@@ -34,7 +34,7 @@
       {
         "name": "CasaOS UI Translations",
         "success": true,
-        "duration": 75,
+        "duration": 89,
         "result": [
           "ca_ES",
           "cs_CZ",
@@ -69,7 +69,7 @@
       {
         "name": "YunoHost Apps",
         "success": true,
-        "duration": 16966,
+        "duration": 16255,
         "result": {
           "count": 912,
           "apps": [
@@ -718,7 +718,7 @@
               "url": "https://github.com/YunoHost-Apps/bookstack_ynh",
               "stars": 12,
               "forks": 6,
-              "updated_at": "2025-11-21T17:33:30Z",
+              "updated_at": "2025-12-03T15:28:36Z",
               "language": "Shell",
               "archived": false
             },
@@ -2115,7 +2115,7 @@
               "url": "https://github.com/YunoHost-Apps/element_ynh",
               "stars": 23,
               "forks": 9,
-              "updated_at": "2025-11-19T09:23:03Z",
+              "updated_at": "2025-12-03T20:11:46Z",
               "language": "Shell",
               "archived": false
             },
@@ -2148,7 +2148,7 @@
               "url": "https://github.com/YunoHost-Apps/elk_ynh",
               "stars": 0,
               "forks": 0,
-              "updated_at": "2025-11-07T22:35:00Z",
+              "updated_at": "2025-12-03T20:50:00Z",
               "language": "Shell",
               "archived": false
             },
@@ -4348,7 +4348,7 @@
               "url": "https://github.com/YunoHost-Apps/lasuite-docs_ynh",
               "stars": 5,
               "forks": 2,
-              "updated_at": "2025-11-20T08:00:26Z",
+              "updated_at": "2025-12-03T06:41:17Z",
               "language": "Shell",
               "archived": false
             },
@@ -4798,7 +4798,7 @@
               "description": "LXD dashboard package for YunoHost",
               "url": "https://github.com/YunoHost-Apps/lxd-dashboard_ynh",
               "stars": 3,
-              "forks": 3,
+              "forks": 2,
               "updated_at": "2024-12-11T00:38:45Z",
               "language": "Shell",
               "archived": false
@@ -10101,7 +10101,7 @@
               "url": "https://github.com/YunoHost-Apps/zwiicms_ynh",
               "stars": 1,
               "forks": 1,
-              "updated_at": "2025-11-24T05:29:49Z",
+              "updated_at": "2025-12-03T10:37:59Z",
               "language": "Shell",
               "archived": false
             }
@@ -10124,7 +10124,7 @@
       {
         "name": "YunoHost Docs Translations",
         "success": true,
-        "duration": 66,
+        "duration": 65,
         "result": [
           "de",
           "docs",
@@ -10138,7 +10138,7 @@
       {
         "name": "YunoHost UI Translations",
         "success": true,
-        "duration": 1840,
+        "duration": 1509,
         "result": [
           {
             "language": "Catalan",
@@ -10545,7 +10545,7 @@
       {
         "name": "Zimaboard Shipping Areas",
         "success": true,
-        "duration": 321,
+        "duration": 355,
         "result": [
           "Argentina",
           "Australia",
