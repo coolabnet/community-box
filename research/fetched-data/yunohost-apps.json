@@ -1,5 +1,5 @@
 {
-  "timestamp": "2025-12-07T06:33:49.392Z",
+  "timestamp": "2025-12-08T06:41:04.301Z",
   "script": "scripts.test.js",
   "source": "YunoHost-Apps GitHub Organization",
   "url": "https://github.com/YunoHost-Apps",
@@ -653,7 +653,7 @@
       "description": "Bonfire federated social network platform",
       "url": "https://github.com/YunoHost-Apps/bonfire_ynh",
       "stars": 3,
-      "forks": 4,
+      "forks": 5,
       "updated_at": "2025-11-22T13:21:33Z",
       "language": "Shell",
       "archived": false
@@ -709,7 +709,7 @@
       "url": "https://github.com/YunoHost-Apps/borgwarehouse_ynh",
       "stars": 2,
       "forks": 3,
-      "updated_at": "2025-10-25T11:46:42Z",
+      "updated_at": "2025-12-07T15:13:27Z",
       "language": "Shell",
       "archived": false
     },
@@ -1060,7 +1060,7 @@
       "description": "Code-server packaged for YunoHost",
       "url": "https://github.com/YunoHost-Apps/code-server_ynh",
       "stars": 9,
-      "forks": 1,
+      "forks": 2,
       "updated_at": "2025-12-02T12:46:30Z",
       "language": "Shell",
       "archived": false
@@ -1237,7 +1237,7 @@
       "url": "https://github.com/YunoHost-Apps/copyparty_ynh",
       "stars": 3,
       "forks": 2,
-      "updated_at": "2025-11-05T07:33:09Z",
+      "updated_at": "2025-12-07T15:15:31Z",
       "language": "Shell",
       "archived": false
     },
@@ -1258,8 +1258,8 @@
       "description": "coturn TURN server package for YunoHost",
       "url": "https://github.com/YunoHost-Apps/coturn_ynh",
       "stars": 7,
-      "forks": 7,
-      "updated_at": "2025-11-17T14:18:38Z",
+      "forks": 8,
+      "updated_at": "2025-12-07T17:59:19Z",
       "language": "Shell",
       "archived": false
     },
@@ -2766,7 +2766,7 @@
       "url": "https://github.com/YunoHost-Apps/freescout_ynh",
       "stars": 1,
       "forks": 3,
-      "updated_at": "2025-11-23T11:26:10Z",
+      "updated_at": "2025-12-07T15:15:16Z",
       "language": "Shell",
       "archived": false
     },
@@ -3129,7 +3129,7 @@
       "url": "https://github.com/YunoHost-Apps/glpi_ynh",
       "stars": 0,
       "forks": 5,
-      "updated_at": "2025-09-11T14:03:39Z",
+      "updated_at": "2025-12-07T18:01:16Z",
       "language": "Shell",
       "archived": false
     },
@@ -3987,7 +3987,7 @@
       "url": "https://github.com/YunoHost-Apps/jenkins_ynh",
       "stars": 6,
       "forks": 10,
-      "updated_at": "2025-11-28T08:13:31Z",
+      "updated_at": "2025-12-07T15:17:02Z",
       "language": "Shell",
       "archived": false
     },
@@ -4095,9 +4095,9 @@
       "name": "karakeep",
       "description": "Karakeep package for YunoHost",
       "url": "https://github.com/YunoHost-Apps/karakeep_ynh",
-      "stars": 2,
+      "stars": 3,
       "forks": 2,
-      "updated_at": "2025-12-02T12:47:38Z",
+      "updated_at": "2025-12-07T18:28:36Z",
       "language": "Shell",
       "archived": false
     },
@@ -4680,7 +4680,7 @@
       "url": "https://github.com/YunoHost-Apps/loops_ynh",
       "stars": 2,
       "forks": 2,
-      "updated_at": "2025-12-02T15:27:36Z",
+      "updated_at": "2025-12-07T14:39:15Z",
       "language": "Shell",
       "archived": false
     },
@@ -4844,7 +4844,7 @@
       "description": "Free, open-source social network for YunoHost",
       "url": "https://github.com/YunoHost-Apps/mastodon_ynh",
       "stars": 86,
-      "forks": 42,
+      "forks": 43,
       "updated_at": "2025-11-23T11:14:53Z",
       "language": "Shell",
       "archived": false
@@ -5813,7 +5813,7 @@
       "url": "https://github.com/YunoHost-Apps/nodered_ynh",
       "stars": 7,
       "forks": 6,
-      "updated_at": "2025-10-28T19:47:53Z",
+      "updated_at": "2025-12-07T15:14:43Z",
       "language": "JavaScript",
       "archived": false
     },
@@ -5934,7 +5934,7 @@
       "url": "https://github.com/YunoHost-Apps/olivetin_ynh",
       "stars": 1,
       "forks": 2,
-      "updated_at": "2025-12-02T12:47:05Z",
+      "updated_at": "2025-12-07T15:16:32Z",
       "language": "Shell",
       "archived": false
     },
@@ -6209,7 +6209,7 @@
       "url": "https://github.com/YunoHost-Apps/overleaf_ynh",
       "stars": 2,
       "forks": 6,
-      "updated_at": "2025-12-01T08:20:00Z",
+      "updated_at": "2025-12-08T06:20:39Z",
       "language": "Shell",
       "archived": false
     },
@@ -6946,7 +6946,7 @@
       "url": "https://github.com/YunoHost-Apps/pretalx_ynh",
       "stars": 3,
       "forks": 1,
-      "updated_at": "2025-12-05T07:52:43Z",
+      "updated_at": "2025-12-07T23:40:14Z",
       "language": "Shell",
       "archived": false
     },
@@ -7034,7 +7034,7 @@
       "url": "https://github.com/YunoHost-Apps/prometheus_ynh",
       "stars": 7,
       "forks": 1,
-      "updated_at": "2025-11-05T10:14:51Z",
+      "updated_at": "2025-12-07T15:16:02Z",
       "language": "Shell",
       "archived": false
     },
@@ -8222,7 +8222,7 @@
       "url": "https://github.com/YunoHost-Apps/sparkyfitness_ynh",
       "stars": 0,
       "forks": 0,
-      "updated_at": "2025-12-01T08:22:55Z",
+      "updated_at": "2025-12-08T06:21:29Z",
       "language": "Shell",
       "archived": false
     },
@@ -8255,7 +8255,7 @@
       "url": "https://github.com/YunoHost-Apps/spip_ynh",
       "stars": 5,
       "forks": 9,
-      "updated_at": "2025-10-26T14:24:55Z",
+      "updated_at": "2025-12-07T15:17:24Z",
       "language": "Shell",
       "archived": false
     },
@@ -10003,7 +10003,7 @@
       "description": "Zoraxy package for YunoHost",
       "url": "https://github.com/YunoHost-Apps/zoraxy_ynh",
       "stars": 1,
-      "forks": 3,
+      "forks": 2,
       "updated_at": "2025-11-30T08:33:28Z",
       "language": "Shell",
       "archived": false
