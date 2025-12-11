@@ -1,5 +1,5 @@
 {
-  "timestamp": "2025-12-10T06:39:21.587Z",
+  "timestamp": "2025-12-11T06:40:12.819Z",
   "script": "scripts.test.js",
   "source": "YunoHost-Apps GitHub Organization",
   "url": "https://github.com/YunoHost-Apps",
@@ -652,9 +652,9 @@
       "name": "bonfire",
       "description": "Bonfire federated social network platform",
       "url": "https://github.com/YunoHost-Apps/bonfire_ynh",
-      "stars": 3,
+      "stars": 2,
       "forks": 5,
-      "updated_at": "2025-11-22T13:21:33Z",
+      "updated_at": "2025-12-10T19:07:19Z",
       "language": "Shell",
       "archived": false
     },
@@ -1786,7 +1786,7 @@
       "description": "Documize package for YunoHost",
       "url": "https://github.com/YunoHost-Apps/documize_ynh",
       "stars": 3,
-      "forks": 2,
+      "forks": 3,
       "updated_at": "2025-09-20T21:34:33Z",
       "language": "Shell",
       "archived": false
@@ -2678,7 +2678,7 @@
       "url": "https://github.com/YunoHost-Apps/forte_ynh",
       "stars": 2,
       "forks": 1,
-      "updated_at": "2025-11-21T09:28:03Z",
+      "updated_at": "2025-12-10T19:22:16Z",
       "language": "Shell",
       "archived": false
     },
@@ -2897,7 +2897,7 @@
       "description": "A shared agenda for local communities, federated with the fediverse.",
       "url": "https://github.com/YunoHost-Apps/gancio_ynh",
       "stars": 2,
-      "forks": 5,
+      "forks": 6,
       "updated_at": "2025-11-04T22:24:11Z",
       "language": "Shell",
       "archived": false
@@ -4680,7 +4680,7 @@
       "url": "https://github.com/YunoHost-Apps/loops_ynh",
       "stars": 2,
       "forks": 2,
-      "updated_at": "2025-12-07T14:39:15Z",
+      "updated_at": "2025-12-10T20:10:37Z",
       "language": "Shell",
       "archived": false
     },
@@ -5690,9 +5690,9 @@
       "name": "n8n",
       "description": "n8n package for YunoHost",
       "url": "https://github.com/YunoHost-Apps/n8n_ynh",
-      "stars": 16,
+      "stars": 17,
       "forks": 22,
-      "updated_at": "2025-11-16T01:24:49Z",
+      "updated_at": "2025-12-10T09:16:16Z",
       "language": "Shell",
       "archived": false
     },
@@ -6737,7 +6737,7 @@
       "url": "https://github.com/YunoHost-Apps/piwigo_ynh",
       "stars": 6,
       "forks": 5,
-      "updated_at": "2025-12-06T09:27:55Z",
+      "updated_at": "2025-12-10T21:46:14Z",
       "language": "PHP",
       "archived": false
     },
@@ -6813,7 +6813,7 @@
       "description": "Pleroma package for YunoHost: A free, federated social networking server built on open protocols.",
       "url": "https://github.com/YunoHost-Apps/pleroma_ynh",
       "stars": 30,
-      "forks": 15,
+      "forks": 16,
       "updated_at": "2025-11-11T03:41:37Z",
       "language": "Shell",
       "archived": false
@@ -6999,9 +6999,9 @@
       "name": "privtracker",
       "description": "PrivTracker package for YunoHost",
       "url": "https://github.com/YunoHost-Apps/privtracker_ynh",
-      "stars": 0,
+      "stars": 1,
       "forks": 1,
-      "updated_at": "2025-05-10T12:27:43Z",
+      "updated_at": "2025-12-10T17:40:50Z",
       "language": "Shell",
       "archived": false
     },
@@ -7331,7 +7331,7 @@
       "url": "https://github.com/YunoHost-Apps/readeck_ynh",
       "stars": 4,
       "forks": 4,
-      "updated_at": "2025-11-27T11:02:54Z",
+      "updated_at": "2025-12-10T20:11:41Z",
       "language": "Shell",
       "archived": false
     },
@@ -9707,7 +9707,7 @@
       "url": "https://github.com/YunoHost-Apps/yeetfile_ynh",
       "stars": 0,
       "forks": 1,
-      "updated_at": "2025-08-30T17:18:42Z",
+      "updated_at": "2025-12-10T21:03:32Z",
       "language": "Shell",
       "archived": false
     },
@@ -10081,7 +10081,7 @@
       "url": "https://github.com/YunoHost-Apps/zwiicms_ynh",
       "stars": 1,
       "forks": 1,
-      "updated_at": "2025-12-10T06:24:04Z",
+      "updated_at": "2025-12-11T06:10:44Z",
       "language": "Shell",
       "archived": false
     }
