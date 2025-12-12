@@ -1,19 +1,19 @@
 {
-  "timestamp": "2025-12-11T06:40:12.323Z",
+  "timestamp": "2025-12-12T06:39:26.384Z",
   "script": "run-all.js",
   "note": "Summary of all data fetching script executions",
   "data": {
-    "execution_time": "2025-12-11T06:40:12.323Z",
+    "execution_time": "2025-12-12T06:39:26.383Z",
     "total_scripts": 6,
     "successful": 6,
     "failed": 0,
-    "total_duration_ms": 18811,
+    "total_duration_ms": 19380,
     "continue_on_error": true,
     "results": [
       {
         "name": "CapRover UI Translations",
         "success": true,
-        "duration": 104,
+        "duration": 319,
         "result": [
           "ar-EG",
           "de-DE",
@@ -34,7 +34,7 @@
       {
         "name": "CasaOS UI Translations",
         "success": true,
-        "duration": 62,
+        "duration": 167,
         "result": [
           "ca_ES",
           "cs_CZ",
@@ -69,7 +69,7 @@
       {
         "name": "YunoHost Apps",
         "success": true,
-        "duration": 17025,
+        "duration": 16789,
         "result": {
           "count": 915,
           "apps": [
@@ -3094,7 +3094,7 @@
               "url": "https://github.com/YunoHost-Apps/gitlab_ynh",
               "stars": 21,
               "forks": 10,
-              "updated_at": "2025-11-28T14:12:21Z",
+              "updated_at": "2025-12-11T23:13:29Z",
               "language": "Ruby",
               "archived": false
             },
@@ -4733,7 +4733,7 @@
               "url": "https://github.com/YunoHost-Apps/loops_ynh",
               "stars": 2,
               "forks": 2,
-              "updated_at": "2025-12-10T20:10:37Z",
+              "updated_at": "2025-12-11T07:45:04Z",
               "language": "Shell",
               "archived": false
             },
@@ -6734,8 +6734,8 @@
               "description": "Federated forum and link aggregator, packaged for YunoHost",
               "url": "https://github.com/YunoHost-Apps/piefed_ynh",
               "stars": 3,
-              "forks": 1,
-              "updated_at": "2025-12-05T18:30:10Z",
+              "forks": 0,
+              "updated_at": "2025-12-11T07:23:15Z",
               "language": "Shell",
               "archived": false
             },
@@ -7340,7 +7340,7 @@
               "url": "https://github.com/YunoHost-Apps/rallly_ynh",
               "stars": 7,
               "forks": 2,
-              "updated_at": "2025-12-09T14:23:28Z",
+              "updated_at": "2025-12-11T09:04:58Z",
               "language": "Shell",
               "archived": false
             },
@@ -8429,7 +8429,7 @@
               "url": "https://github.com/YunoHost-Apps/stirling-pdf_ynh",
               "stars": 3,
               "forks": 4,
-              "updated_at": "2025-12-06T19:24:00Z",
+              "updated_at": "2025-12-11T08:22:34Z",
               "language": "Shell",
               "archived": false
             },
@@ -8902,7 +8902,7 @@
               "url": "https://github.com/YunoHost-Apps/tooljet_ynh",
               "stars": 6,
               "forks": 3,
-              "updated_at": "2025-09-25T22:29:49Z",
+              "updated_at": "2025-12-11T23:51:19Z",
               "language": "Shell",
               "archived": false
             },
@@ -9045,7 +9045,7 @@
               "url": "https://github.com/YunoHost-Apps/tunarr_ynh",
               "stars": 0,
               "forks": 0,
-              "updated_at": "2025-11-29T14:11:53Z",
+              "updated_at": "2025-12-11T09:19:28Z",
               "language": "Shell",
               "archived": false
             },
@@ -10157,7 +10157,7 @@
       {
         "name": "YunoHost Docs Translations",
         "success": true,
-        "duration": 55,
+        "duration": 98,
         "result": [
           "de",
           "docs",
@@ -10171,7 +10171,7 @@
       {
         "name": "YunoHost UI Translations",
         "success": true,
-        "duration": 1252,
+        "duration": 1707,
         "result": [
           {
             "language": "Catalan",
@@ -10578,7 +10578,7 @@
       {
         "name": "Zimaboard Shipping Areas",
         "success": true,
-        "duration": 313,
+        "duration": 300,
         "result": [
           "Argentina",
           "Australia",
