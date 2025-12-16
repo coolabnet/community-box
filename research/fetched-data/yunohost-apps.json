@@ -1,5 +1,5 @@
 {
-  "timestamp": "2025-12-15T06:42:02.517Z",
+  "timestamp": "2025-12-16T06:40:13.487Z",
   "script": "scripts.test.js",
   "source": "YunoHost-Apps GitHub Organization",
   "url": "https://github.com/YunoHost-Apps",
@@ -795,9 +795,9 @@
       "name": "calcom",
       "description": "cal.com package for YunoHost",
       "url": "https://github.com/YunoHost-Apps/calcom_ynh",
-      "stars": 0,
+      "stars": 1,
       "forks": 1,
-      "updated_at": "2025-12-15T02:14:51Z",
+      "updated_at": "2025-12-15T17:35:00Z",
       "language": "Shell",
       "archived": false
     },
@@ -3733,7 +3733,7 @@
       "description": "Photo and video backup solution directly from your mobile phone.",
       "url": "https://github.com/YunoHost-Apps/immich_ynh",
       "stars": 21,
-      "forks": 14,
+      "forks": 15,
       "updated_at": "2025-12-01T11:10:46Z",
       "language": "Shell",
       "archived": false
@@ -3767,7 +3767,7 @@
       "url": "https://github.com/YunoHost-Apps/indico_ynh",
       "stars": 2,
       "forks": 1,
-      "updated_at": "2025-12-12T22:55:00Z",
+      "updated_at": "2025-12-15T21:56:22Z",
       "language": "Shell",
       "archived": false
     },
@@ -3866,7 +3866,7 @@
       "url": "https://github.com/YunoHost-Apps/it-tools_ynh",
       "stars": 1,
       "forks": 1,
-      "updated_at": "2025-12-08T12:33:38Z",
+      "updated_at": "2025-12-15T16:55:38Z",
       "language": "Shell",
       "archived": false
     },
@@ -3965,7 +3965,7 @@
       "url": "https://github.com/YunoHost-Apps/jellyfin-vue_ynh",
       "stars": 0,
       "forks": 3,
-      "updated_at": "2025-12-01T08:09:54Z",
+      "updated_at": "2025-12-15T07:26:34Z",
       "language": "Shell",
       "archived": false
     },
@@ -4042,7 +4042,7 @@
       "url": "https://github.com/YunoHost-Apps/jsoncrack_ynh",
       "stars": 4,
       "forks": 1,
-      "updated_at": "2025-10-21T09:40:00Z",
+      "updated_at": "2025-12-15T16:35:15Z",
       "language": "Shell",
       "archived": false
     },
@@ -4680,7 +4680,7 @@
       "url": "https://github.com/YunoHost-Apps/loops_ynh",
       "stars": 2,
       "forks": 2,
-      "updated_at": "2025-12-12T10:33:36Z",
+      "updated_at": "2025-12-15T13:08:24Z",
       "language": "Shell",
       "archived": false
     },
@@ -6044,7 +6044,7 @@
       "url": "https://github.com/YunoHost-Apps/opencloud_ynh",
       "stars": 5,
       "forks": 1,
-      "updated_at": "2025-12-01T13:53:47Z",
+      "updated_at": "2025-12-15T21:06:23Z",
       "language": "Shell",
       "archived": false
     },
@@ -6088,7 +6088,7 @@
       "url": "https://github.com/YunoHost-Apps/openproject_ynh",
       "stars": 8,
       "forks": 4,
-      "updated_at": "2025-11-05T13:32:45Z",
+      "updated_at": "2025-12-15T22:25:11Z",
       "language": "Shell",
       "archived": false
     },
@@ -6220,7 +6220,7 @@
       "url": "https://github.com/YunoHost-Apps/overleaf_ynh",
       "stars": 2,
       "forks": 6,
-      "updated_at": "2025-12-08T06:20:39Z",
+      "updated_at": "2025-12-15T07:27:11Z",
       "language": "Shell",
       "archived": false
     },
@@ -6737,7 +6737,7 @@
       "url": "https://github.com/YunoHost-Apps/piwigo_ynh",
       "stars": 6,
       "forks": 5,
-      "updated_at": "2025-12-10T21:46:14Z",
+      "updated_at": "2025-12-15T22:41:05Z",
       "language": "PHP",
       "archived": false
     },
@@ -8695,7 +8695,7 @@
       "url": "https://github.com/YunoHost-Apps/terraforming-mars_ynh",
       "stars": 1,
       "forks": 2,
-      "updated_at": "2025-12-08T06:51:23Z",
+      "updated_at": "2025-12-15T07:27:47Z",
       "language": "Shell",
       "archived": false
     },
@@ -9595,9 +9595,9 @@
       "name": "wordpress",
       "description": "WordPress package for YunoHost",
       "url": "https://github.com/YunoHost-Apps/wordpress_ynh",
-      "stars": 28,
+      "stars": 29,
       "forks": 31,
-      "updated_at": "2025-11-23T13:25:16Z",
+      "updated_at": "2025-12-16T03:33:39Z",
       "language": "Shell",
       "archived": false
     },
