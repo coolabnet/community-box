@@ -1,14 +1,22 @@
 {
-  "timestamp": "2025-12-17T06:39:45.272Z",
+  "timestamp": "2025-12-18T06:39:49.251Z",
   "script": "scripts.test.js",
   "source": "YunoHost Translation Platform",
   "url": "https://translate.yunohost.org/",
   "api_url": "https://translate.yunohost.org/api/translations/?format=json",
   "total_languages": 50,
-  "fully_translated": 17,
-  "partially_translated": 30,
+  "fully_translated": 18,
+  "partially_translated": 29,
   "not_started": 3,
   "data": [
+    {
+      "language": "Catalan",
+      "language_code": "ca",
+      "translated_percent": 100,
+      "translated_words": 10981,
+      "total_words": 10981,
+      "last_change": "2025-12-17T19:50:38.612688Z"
+    },
     {
       "language": "French",
       "language_code": "fr",
@@ -144,14 +152,6 @@
       "translated_words": 139,
       "total_words": 139,
       "last_change": "2025-11-19T00:03:57.962288Z"
-    },
-    {
-      "language": "Catalan",
-      "language_code": "ca",
-      "translated_percent": 99.5,
-      "translated_words": 10862,
-      "total_words": 10981,
-      "last_change": "2025-12-13T17:38:10.280820Z"
     },
     {
       "language": "Basque",

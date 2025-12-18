@@ -1,19 +1,19 @@
 {
-  "timestamp": "2025-12-17T06:39:43.824Z",
+  "timestamp": "2025-12-18T06:39:46.910Z",
   "script": "run-all.js",
   "note": "Summary of all data fetching script executions",
   "data": {
-    "execution_time": "2025-12-17T06:39:43.824Z",
+    "execution_time": "2025-12-18T06:39:46.910Z",
     "total_scripts": 6,
     "successful": 6,
     "failed": 0,
-    "total_duration_ms": 16883,
+    "total_duration_ms": 18831,
     "continue_on_error": true,
     "results": [
       {
         "name": "CapRover UI Translations",
         "success": true,
-        "duration": 128,
+        "duration": 252,
         "result": [
           "ar-EG",
           "de-DE",
@@ -34,7 +34,7 @@
       {
         "name": "CasaOS UI Translations",
         "success": true,
-        "duration": 73,
+        "duration": 192,
         "result": [
           "ca_ES",
           "cs_CZ",
@@ -69,7 +69,7 @@
       {
         "name": "YunoHost Apps",
         "success": true,
-        "duration": 14783,
+        "duration": 16119,
         "result": {
           "count": 915,
           "apps": [
@@ -1311,7 +1311,7 @@
               "description": "coturn TURN server package for YunoHost",
               "url": "https://github.com/YunoHost-Apps/coturn_ynh",
               "stars": 7,
-              "forks": 8,
+              "forks": 7,
               "updated_at": "2025-12-07T17:59:19Z",
               "language": "Shell",
               "archived": false
@@ -2257,8 +2257,8 @@
               "description": "EspoCRM package for YunoHost",
               "url": "https://github.com/YunoHost-Apps/espocrm_ynh",
               "stars": 1,
-              "forks": 1,
-              "updated_at": "2025-09-27T16:53:59Z",
+              "forks": 2,
+              "updated_at": "2025-12-17T21:54:23Z",
               "language": "Shell",
               "archived": false
             },
@@ -2302,7 +2302,7 @@
               "url": "https://github.com/YunoHost-Apps/excalidraw_ynh",
               "stars": 4,
               "forks": 4,
-              "updated_at": "2025-11-04T09:36:01Z",
+              "updated_at": "2025-12-17T16:35:58Z",
               "language": "Shell",
               "archived": false
             },
@@ -3369,7 +3369,7 @@
               "url": "https://github.com/YunoHost-Apps/grocy_ynh",
               "stars": 8,
               "forks": 5,
-              "updated_at": "2025-08-30T17:06:43Z",
+              "updated_at": "2025-12-17T13:36:09Z",
               "language": "PHP",
               "archived": false
             },
@@ -4590,7 +4590,7 @@
               "url": "https://github.com/YunoHost-Apps/limesurvey_ynh",
               "stars": 6,
               "forks": 13,
-              "updated_at": "2025-12-14T18:06:52Z",
+              "updated_at": "2025-12-17T19:13:53Z",
               "language": "Shell",
               "archived": false
             },
@@ -4733,7 +4733,7 @@
               "url": "https://github.com/YunoHost-Apps/loops_ynh",
               "stars": 3,
               "forks": 2,
-              "updated_at": "2025-12-16T10:44:55Z",
+              "updated_at": "2025-12-17T22:08:27Z",
               "language": "Shell",
               "archived": false
             },
@@ -4963,8 +4963,8 @@
               "description": "Mattermost package for YunoHost",
               "url": "https://github.com/YunoHost-Apps/mattermost_ynh",
               "stars": 35,
-              "forks": 19,
-              "updated_at": "2025-12-09T21:03:20Z",
+              "forks": 20,
+              "updated_at": "2025-12-17T21:54:43Z",
               "language": "Shell",
               "archived": false
             },
@@ -7098,7 +7098,7 @@
               "url": "https://github.com/YunoHost-Apps/prometheus_ynh",
               "stars": 7,
               "forks": 1,
-              "updated_at": "2025-12-07T15:16:02Z",
+              "updated_at": "2025-12-17T21:25:36Z",
               "language": "Shell",
               "archived": false
             },
@@ -7340,7 +7340,7 @@
               "url": "https://github.com/YunoHost-Apps/rallly_ynh",
               "stars": 8,
               "forks": 2,
-              "updated_at": "2025-12-13T18:39:44Z",
+              "updated_at": "2025-12-17T19:26:34Z",
               "language": "Shell",
               "archived": false
             },
@@ -7427,7 +7427,7 @@
               "description": "Redlib package for YunoHost",
               "url": "https://github.com/YunoHost-Apps/redlib_ynh",
               "stars": 8,
-              "forks": 5,
+              "forks": 6,
               "updated_at": "2025-08-30T17:09:36Z",
               "language": "Shell",
               "archived": false
@@ -8429,7 +8429,7 @@
               "url": "https://github.com/YunoHost-Apps/stirling-pdf_ynh",
               "stars": 4,
               "forks": 4,
-              "updated_at": "2025-12-14T17:48:09Z",
+              "updated_at": "2025-12-17T19:15:23Z",
               "language": "Shell",
               "archived": false
             },
@@ -10157,7 +10157,7 @@
       {
         "name": "YunoHost Docs Translations",
         "success": true,
-        "duration": 60,
+        "duration": 139,
         "result": [
           "de",
           "docs",
@@ -10171,8 +10171,16 @@
       {
         "name": "YunoHost UI Translations",
         "success": true,
-        "duration": 1483,
+        "duration": 1637,
         "result": [
+          {
+            "language": "Catalan",
+            "language_code": "ca",
+            "translated_percent": 100,
+            "translated_words": 10981,
+            "total_words": 10981,
+            "last_change": "2025-12-17T19:50:38.612688Z"
+          },
           {
             "language": "French",
             "language_code": "fr",
@@ -10308,14 +10316,6 @@
             "translated_words": 139,
             "total_words": 139,
             "last_change": "2025-11-19T00:03:57.962288Z"
-          },
-          {
-            "language": "Catalan",
-            "language_code": "ca",
-            "translated_percent": 99.5,
-            "translated_words": 10862,
-            "total_words": 10981,
-            "last_change": "2025-12-13T17:38:10.280820Z"
           },
           {
             "language": "Basque",
@@ -10578,7 +10578,7 @@
       {
         "name": "Zimaboard Shipping Areas",
         "success": true,
-        "duration": 356,
+        "duration": 492,
         "result": [
           "Argentina",
           "Australia",
