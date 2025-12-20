@@ -1,19 +1,19 @@
 {
-  "timestamp": "2025-12-19T06:38:08.920Z",
+  "timestamp": "2025-12-20T06:36:24.706Z",
   "script": "run-all.js",
   "note": "Summary of all data fetching script executions",
   "data": {
-    "execution_time": "2025-12-19T06:38:08.920Z",
+    "execution_time": "2025-12-20T06:36:24.706Z",
     "total_scripts": 6,
     "successful": 6,
     "failed": 0,
-    "total_duration_ms": 18491,
+    "total_duration_ms": 18666,
     "continue_on_error": true,
     "results": [
       {
         "name": "CapRover UI Translations",
         "success": true,
-        "duration": 122,
+        "duration": 167,
         "result": [
           "ar-EG",
           "de-DE",
@@ -34,7 +34,7 @@
       {
         "name": "CasaOS UI Translations",
         "success": true,
-        "duration": 77,
+        "duration": 111,
         "result": [
           "ca_ES",
           "cs_CZ",
@@ -69,9 +69,9 @@
       {
         "name": "YunoHost Apps",
         "success": true,
-        "duration": 16739,
+        "duration": 16498,
         "result": {
-          "count": 917,
+          "count": 918,
           "apps": [
             {
               "id": "13ft_ynh",
@@ -1499,7 +1499,7 @@
               "url": "https://github.com/YunoHost-Apps/dato_ynh",
               "stars": 6,
               "forks": 1,
-              "updated_at": "2025-09-08T12:35:38Z",
+              "updated_at": "2025-12-19T14:33:34Z",
               "language": "Shell",
               "archived": false
             },
@@ -3798,7 +3798,7 @@
               "url": "https://github.com/YunoHost-Apps/immich_ynh",
               "stars": 23,
               "forks": 15,
-              "updated_at": "2025-12-18T11:20:30Z",
+              "updated_at": "2025-12-19T10:02:17Z",
               "language": "Shell",
               "archived": false
             },
@@ -4359,7 +4359,18 @@
               "url": "https://github.com/YunoHost-Apps/lasuite-docs_ynh",
               "stars": 5,
               "forks": 2,
-              "updated_at": "2025-12-03T06:41:17Z",
+              "updated_at": "2025-12-19T16:07:38Z",
+              "language": "Shell",
+              "archived": false
+            },
+            {
+              "id": "lasuite-meet_ynh",
+              "name": "lasuite-meet",
+              "description": "Simple and Secure Video Conferencing. Powered by LiveKit.",
+              "url": "https://github.com/YunoHost-Apps/lasuite-meet_ynh",
+              "stars": 1,
+              "forks": 0,
+              "updated_at": "2025-12-19T16:10:21Z",
               "language": "Shell",
               "archived": false
             },
@@ -4744,7 +4755,7 @@
               "url": "https://github.com/YunoHost-Apps/loops_ynh",
               "stars": 3,
               "forks": 2,
-              "updated_at": "2025-12-17T22:08:27Z",
+              "updated_at": "2025-12-19T18:45:19Z",
               "language": "Shell",
               "archived": false
             },
@@ -5154,17 +5165,6 @@
               "updated_at": "2024-05-15T17:55:05Z",
               "language": "Shell",
               "archived": true
-            },
-            {
-              "id": "meet_ynh",
-              "name": "meet",
-              "description": "Simple and Secure Video Conferencing. Powered by LiveKit.",
-              "url": "https://github.com/YunoHost-Apps/meet_ynh",
-              "stars": 1,
-              "forks": 0,
-              "updated_at": "2025-10-25T13:51:54Z",
-              "language": "Shell",
-              "archived": false
             },
             {
               "id": "meilisearch_ynh",
@@ -8451,7 +8451,7 @@
               "url": "https://github.com/YunoHost-Apps/stirling-pdf_ynh",
               "stars": 4,
               "forks": 4,
-              "updated_at": "2025-12-17T19:15:23Z",
+              "updated_at": "2025-12-19T09:19:10Z",
               "language": "Shell",
               "archived": false
             },
@@ -9151,11 +9151,22 @@
             {
               "id": "umap_ynh",
               "name": "umap",
-              "description": "\"uMap let you create maps with OpenStreetMap layers in a minute and embed them in your site.\"[uMap Website]",
+              "description": "Yunohost installer for uMap",
               "url": "https://github.com/YunoHost-Apps/umap_ynh",
+              "stars": 0,
+              "forks": 0,
+              "updated_at": "2025-12-19T18:01:07Z",
+              "language": "Python",
+              "archived": false
+            },
+            {
+              "id": "umap_old_ynh",
+              "name": "umap_old",
+              "description": "\"uMap let you create maps with OpenStreetMap layers in a minute and embed them in your site.\"[uMap Website]",
+              "url": "https://github.com/YunoHost-Apps/umap_old_ynh",
               "stars": 12,
               "forks": 7,
-              "updated_at": "2024-05-15T17:52:44Z",
+              "updated_at": "2025-12-19T15:33:38Z",
               "language": "Shell",
               "archived": true
             },
@@ -10179,7 +10190,7 @@
       {
         "name": "YunoHost Docs Translations",
         "success": true,
-        "duration": 68,
+        "duration": 70,
         "result": [
           "de",
           "docs",
@@ -10193,7 +10204,7 @@
       {
         "name": "YunoHost UI Translations",
         "success": true,
-        "duration": 1156,
+        "duration": 1363,
         "result": [
           {
             "language": "Catalan",
@@ -10202,6 +10213,14 @@
             "translated_words": 10981,
             "total_words": 10981,
             "last_change": "2025-12-18T16:43:14.774712Z"
+          },
+          {
+            "language": "Basque",
+            "language_code": "eu",
+            "translated_percent": 100,
+            "translated_words": 10981,
+            "total_words": 10981,
+            "last_change": "2025-12-19T15:14:33.123614Z"
           },
           {
             "language": "French",
@@ -10241,7 +10260,7 @@
             "translated_percent": 100,
             "translated_words": 3819,
             "total_words": 3819,
-            "last_change": "2025-11-14T19:53:56.479877Z"
+            "last_change": "2025-12-20T00:10:35.565037Z"
           },
           {
             "language": "French",
@@ -10340,14 +10359,6 @@
             "last_change": "2025-11-19T00:03:57.962288Z"
           },
           {
-            "language": "Basque",
-            "language_code": "eu",
-            "translated_percent": 99.5,
-            "translated_words": 10862,
-            "total_words": 10981,
-            "last_change": "2025-12-13T17:38:25.925253Z"
-          },
-          {
             "language": "Spanish",
             "language_code": "es",
             "translated_percent": 99.1,
@@ -10430,10 +10441,10 @@
           {
             "language": "Occitan",
             "language_code": "oc",
-            "translated_percent": 81.3,
-            "translated_words": 2333,
+            "translated_percent": 83.6,
+            "translated_words": 2394,
             "total_words": 3819,
-            "last_change": "2025-11-07T13:01:58.875923Z"
+            "last_change": "2025-12-19T22:27:19.883399Z"
           },
           {
             "language": "German",
@@ -10600,7 +10611,7 @@
       {
         "name": "Zimaboard Shipping Areas",
         "success": true,
-        "duration": 329,
+        "duration": 457,
         "result": [
           "Argentina",
           "Australia",
