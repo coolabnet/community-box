@@ -1,5 +1,5 @@
 {
-  "timestamp": "2025-12-23T06:40:19.419Z",
+  "timestamp": "2025-12-24T06:40:14.038Z",
   "script": "scripts.test.js",
   "source": "YunoHost-Apps GitHub Organization",
   "url": "https://github.com/YunoHost-Apps",
@@ -663,9 +663,9 @@
       "name": "bonfire",
       "description": "Bonfire federated social network platform",
       "url": "https://github.com/YunoHost-Apps/bonfire_ynh",
-      "stars": 2,
+      "stars": 3,
       "forks": 6,
-      "updated_at": "2025-12-10T19:07:19Z",
+      "updated_at": "2025-12-23T15:28:23Z",
       "language": "Shell",
       "archived": false
     },
@@ -1325,7 +1325,7 @@
       "url": "https://github.com/YunoHost-Apps/crabfit_ynh",
       "stars": 1,
       "forks": 1,
-      "updated_at": "2025-10-30T13:37:14Z",
+      "updated_at": "2025-12-23T19:43:31Z",
       "language": "Shell",
       "archived": false
     },
@@ -1446,7 +1446,7 @@
       "url": "https://github.com/YunoHost-Apps/dagu_ynh",
       "stars": 3,
       "forks": 2,
-      "updated_at": "2025-12-18T19:38:46Z",
+      "updated_at": "2025-12-24T06:39:08Z",
       "language": "Shell",
       "archived": false
     },
@@ -2226,7 +2226,7 @@
       "description": "EspoCRM package for YunoHost",
       "url": "https://github.com/YunoHost-Apps/espocrm_ynh",
       "stars": 1,
-      "forks": 2,
+      "forks": 1,
       "updated_at": "2025-12-22T20:19:17Z",
       "language": "Shell",
       "archived": false
@@ -2458,7 +2458,7 @@
       "url": "https://github.com/YunoHost-Apps/filerise_ynh",
       "stars": 0,
       "forks": 1,
-      "updated_at": "2025-12-20T13:44:19Z",
+      "updated_at": "2025-12-24T06:36:37Z",
       "language": "PHP",
       "archived": false
     },
@@ -3129,7 +3129,7 @@
       "url": "https://github.com/YunoHost-Apps/glitchsoc_ynh",
       "stars": 17,
       "forks": 10,
-      "updated_at": "2025-12-01T18:05:46Z",
+      "updated_at": "2025-12-23T21:14:36Z",
       "language": "Shell",
       "archived": false
     },
@@ -4460,7 +4460,7 @@
       "url": "https://github.com/YunoHost-Apps/libremdb_ynh",
       "stars": 3,
       "forks": 1,
-      "updated_at": "2025-10-28T19:48:48Z",
+      "updated_at": "2025-12-23T11:35:11Z",
       "language": "Shell",
       "archived": false
     },
@@ -5307,7 +5307,7 @@
       "url": "https://github.com/YunoHost-Apps/misskey_ynh",
       "stars": 30,
       "forks": 15,
-      "updated_at": "2025-12-18T19:32:35Z",
+      "updated_at": "2025-12-23T14:03:41Z",
       "language": "Shell",
       "archived": false
     },
@@ -5318,7 +5318,7 @@
       "url": "https://github.com/YunoHost-Apps/mitra_ynh",
       "stars": 1,
       "forks": 3,
-      "updated_at": "2025-11-29T08:42:10Z",
+      "updated_at": "2025-12-23T09:26:52Z",
       "language": "Shell",
       "archived": false
     },
@@ -5745,9 +5745,9 @@
       "name": "nextcloud",
       "description": "Nextcloud package for YunoHost",
       "url": "https://github.com/YunoHost-Apps/nextcloud_ynh",
-      "stars": 167,
+      "stars": 168,
       "forks": 67,
-      "updated_at": "2025-12-22T02:45:55Z",
+      "updated_at": "2025-12-24T06:17:57Z",
       "language": "Shell",
       "archived": false
     },
@@ -8573,7 +8573,7 @@
       "description": "Matrix server (synapse) package for YunoHost",
       "url": "https://github.com/YunoHost-Apps/synapse_ynh",
       "stars": 83,
-      "forks": 44,
+      "forks": 45,
       "updated_at": "2025-12-05T18:03:43Z",
       "language": "Shell",
       "archived": false
