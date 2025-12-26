@@ -1,5 +1,5 @@
 {
-  "timestamp": "2025-12-25T06:39:38.156Z",
+  "timestamp": "2025-12-26T06:39:01.828Z",
   "script": "scripts.test.js",
   "source": "YunoHost-Apps GitHub Organization",
   "url": "https://github.com/YunoHost-Apps",
@@ -434,7 +434,7 @@
       "url": "https://github.com/YunoHost-Apps/audiobookshelf_ynh",
       "stars": 6,
       "forks": 6,
-      "updated_at": "2025-12-22T06:22:18Z",
+      "updated_at": "2025-12-25T07:38:13Z",
       "language": "Shell",
       "archived": false
     },
@@ -2821,7 +2821,7 @@
       "url": "https://github.com/YunoHost-Apps/friendica_ynh",
       "stars": 14,
       "forks": 16,
-      "updated_at": "2025-11-15T15:08:17Z",
+      "updated_at": "2025-12-25T23:07:15Z",
       "language": "Shell",
       "archived": false
     },
@@ -4713,7 +4713,7 @@
       "url": "https://github.com/YunoHost-Apps/loops_ynh",
       "stars": 3,
       "forks": 2,
-      "updated_at": "2025-12-21T17:42:59Z",
+      "updated_at": "2025-12-25T23:49:21Z",
       "language": "Shell",
       "archived": false
     },
@@ -5163,7 +5163,7 @@
       "description": "Metabase package for YunoHost",
       "url": "https://github.com/YunoHost-Apps/metabase_ynh",
       "stars": 12,
-      "forks": 6,
+      "forks": 7,
       "updated_at": "2025-08-30T17:07:07Z",
       "language": "Shell",
       "archived": false
@@ -7584,7 +7584,7 @@
       "url": "https://github.com/YunoHost-Apps/rspamd_ynh",
       "stars": 5,
       "forks": 3,
-      "updated_at": "2025-11-11T18:02:01Z",
+      "updated_at": "2025-12-25T11:33:00Z",
       "language": "Shell",
       "archived": false
     },
@@ -7672,7 +7672,7 @@
       "url": "https://github.com/YunoHost-Apps/sabnzbd_ynh",
       "stars": 1,
       "forks": 0,
-      "updated_at": "2025-11-24T07:14:40Z",
+      "updated_at": "2025-12-25T19:56:12Z",
       "language": "Shell",
       "archived": false
     },
@@ -8090,7 +8090,7 @@
       "url": "https://github.com/YunoHost-Apps/simplex_ynh",
       "stars": 3,
       "forks": 7,
-      "updated_at": "2025-08-30T17:12:03Z",
+      "updated_at": "2025-12-25T17:59:36Z",
       "language": "Shell",
       "archived": false
     },
@@ -8266,7 +8266,7 @@
       "url": "https://github.com/YunoHost-Apps/sparkyfitness_ynh",
       "stars": 0,
       "forks": 0,
-      "updated_at": "2025-12-22T08:21:05Z",
+      "updated_at": "2025-12-25T15:46:33Z",
       "language": "Shell",
       "archived": false
     },
@@ -8519,7 +8519,7 @@
       "url": "https://github.com/YunoHost-Apps/superset_ynh",
       "stars": 4,
       "forks": 3,
-      "updated_at": "2025-09-11T06:37:28Z",
+      "updated_at": "2025-12-25T11:32:44Z",
       "language": "Shell",
       "archived": false
     },
