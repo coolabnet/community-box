@@ -1,5 +1,5 @@
 {
-  "timestamp": "2025-12-26T06:39:01.828Z",
+  "timestamp": "2025-12-27T06:37:13.564Z",
   "script": "scripts.test.js",
   "source": "YunoHost-Apps GitHub Organization",
   "url": "https://github.com/YunoHost-Apps",
@@ -2622,7 +2622,7 @@
       "description": "Focalboard package for YunoHost",
       "url": "https://github.com/YunoHost-Apps/focalboard_ynh",
       "stars": 7,
-      "forks": 3,
+      "forks": 4,
       "updated_at": "2025-08-30T17:07:33Z",
       "language": "Shell",
       "archived": false
@@ -2810,7 +2810,7 @@
       "url": "https://github.com/YunoHost-Apps/freshrss_ynh",
       "stars": 31,
       "forks": 22,
-      "updated_at": "2025-10-02T08:01:40Z",
+      "updated_at": "2025-12-26T13:22:55Z",
       "language": "Shell",
       "archived": false
     },
@@ -3525,7 +3525,7 @@
       "url": "https://github.com/YunoHost-Apps/homarr_ynh",
       "stars": 8,
       "forks": 8,
-      "updated_at": "2025-12-24T20:37:04Z",
+      "updated_at": "2025-12-27T00:54:23Z",
       "language": "Shell",
       "archived": false
     },
@@ -3799,7 +3799,7 @@
       "description": "InflixDB package for YunoHost",
       "url": "https://github.com/YunoHost-Apps/influxdb_v2_ynh",
       "stars": 3,
-      "forks": 2,
+      "forks": 3,
       "updated_at": "2025-11-05T10:16:35Z",
       "language": "Shell",
       "archived": false
@@ -4251,7 +4251,7 @@
       "url": "https://github.com/YunoHost-Apps/koel_ynh",
       "stars": 2,
       "forks": 3,
-      "updated_at": "2025-10-28T07:06:14Z",
+      "updated_at": "2025-12-26T11:44:17Z",
       "language": "Shell",
       "archived": false
     },
@@ -5131,7 +5131,7 @@
       "url": "https://github.com/YunoHost-Apps/meilisearch_ynh",
       "stars": 13,
       "forks": 3,
-      "updated_at": "2025-12-20T13:44:55Z",
+      "updated_at": "2025-12-26T08:10:54Z",
       "language": "Shell",
       "archived": false
     },
@@ -6704,7 +6704,7 @@
       "url": "https://github.com/YunoHost-Apps/piefed_ynh",
       "stars": 3,
       "forks": 0,
-      "updated_at": "2025-12-22T22:18:47Z",
+      "updated_at": "2025-12-26T08:12:17Z",
       "language": "Shell",
       "archived": false
     },
@@ -8574,7 +8574,7 @@
       "url": "https://github.com/YunoHost-Apps/synapse_ynh",
       "stars": 83,
       "forks": 45,
-      "updated_at": "2025-12-05T18:03:43Z",
+      "updated_at": "2025-12-26T10:21:26Z",
       "language": "Shell",
       "archived": false
     },
@@ -8981,7 +8981,7 @@
       "url": "https://github.com/YunoHost-Apps/trilium_ynh",
       "stars": 13,
       "forks": 10,
-      "updated_at": "2025-12-06T08:53:56Z",
+      "updated_at": "2025-12-27T00:23:13Z",
       "language": "Shell",
       "archived": false
     },
@@ -9322,7 +9322,7 @@
       "url": "https://github.com/YunoHost-Apps/wallabag2_ynh",
       "stars": 65,
       "forks": 16,
-      "updated_at": "2025-12-13T18:32:26Z",
+      "updated_at": "2025-12-26T18:33:57Z",
       "language": "Shell",
       "archived": false
     },
