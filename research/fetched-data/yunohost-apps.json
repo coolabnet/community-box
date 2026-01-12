@@ -1,11 +1,11 @@
 {
-  "timestamp": "2026-01-11T06:38:45.414Z",
+  "timestamp": "2026-01-12T06:44:17.910Z",
   "script": "scripts.test.js",
   "source": "YunoHost-Apps GitHub Organization",
   "url": "https://github.com/YunoHost-Apps",
   "api_url": "https://api.github.com/orgs/YunoHost-Apps/repos",
-  "total_apps": 924,
-  "total_repos_checked": 942,
+  "total_apps": 925,
+  "total_repos_checked": 943,
   "languages": [
     "CSS",
     "HTML",
@@ -1126,7 +1126,7 @@
       "description": "Collabora package for YunoHost",
       "url": "https://github.com/YunoHost-Apps/collabora_ynh",
       "stars": 16,
-      "forks": 14,
+      "forks": 15,
       "updated_at": "2025-10-07T21:34:56Z",
       "language": "Shell",
       "archived": false
@@ -1149,7 +1149,7 @@
       "url": "https://github.com/YunoHost-Apps/commafeed_ynh",
       "stars": 0,
       "forks": 1,
-      "updated_at": "2026-01-01T10:16:49Z",
+      "updated_at": "2026-01-11T13:00:36Z",
       "language": "Shell",
       "archived": false
     },
@@ -1644,7 +1644,7 @@
       "url": "https://github.com/YunoHost-Apps/digitranscode_ynh",
       "stars": 5,
       "forks": 3,
-      "updated_at": "2026-01-04T07:57:37Z",
+      "updated_at": "2026-01-11T11:26:37Z",
       "language": "Shell",
       "archived": false
     },
@@ -1875,7 +1875,7 @@
       "url": "https://github.com/YunoHost-Apps/dolibarr_ynh",
       "stars": 15,
       "forks": 20,
-      "updated_at": "2026-01-04T18:09:28Z",
+      "updated_at": "2026-01-11T16:14:05Z",
       "language": "Shell",
       "archived": false
     },
@@ -2436,7 +2436,7 @@
       "url": "https://github.com/YunoHost-Apps/filebrowser_ynh",
       "stars": 4,
       "forks": 4,
-      "updated_at": "2026-01-04T08:05:44Z",
+      "updated_at": "2026-01-11T11:26:02Z",
       "language": "Shell",
       "archived": false
     },
@@ -2535,7 +2535,7 @@
       "url": "https://github.com/YunoHost-Apps/firefly-iii-di_ynh",
       "stars": 3,
       "forks": 9,
-      "updated_at": "2026-01-10T12:25:28Z",
+      "updated_at": "2026-01-11T11:25:36Z",
       "language": "Shell",
       "archived": false
     },
@@ -2546,7 +2546,7 @@
       "url": "https://github.com/YunoHost-Apps/fittrackee_ynh",
       "stars": 6,
       "forks": 1,
-      "updated_at": "2026-01-04T18:35:10Z",
+      "updated_at": "2026-01-11T10:51:14Z",
       "language": "Shell",
       "archived": false
     },
@@ -3679,7 +3679,7 @@
       "url": "https://github.com/YunoHost-Apps/humhub_ynh",
       "stars": 3,
       "forks": 8,
-      "updated_at": "2025-10-05T14:09:22Z",
+      "updated_at": "2026-01-11T14:42:41Z",
       "language": "Shell",
       "archived": false
     },
@@ -4130,7 +4130,7 @@
       "url": "https://github.com/YunoHost-Apps/karadav_ynh",
       "stars": 1,
       "forks": 0,
-      "updated_at": "2025-08-30T20:21:16Z",
+      "updated_at": "2026-01-11T14:04:20Z",
       "language": "Shell",
       "archived": false
     },
@@ -4703,6 +4703,17 @@
       "stars": 2,
       "forks": 2,
       "updated_at": "2025-11-01T06:52:17Z",
+      "language": "Shell",
+      "archived": false
+    },
+    {
+      "id": "localsend_ynh",
+      "name": "localsend",
+      "description": "LocalSend package for YunoHost",
+      "url": "https://github.com/YunoHost-Apps/localsend_ynh",
+      "stars": 0,
+      "forks": 0,
+      "updated_at": "2026-01-11T17:56:21Z",
       "language": "Shell",
       "archived": false
     },
@@ -5296,7 +5307,7 @@
       "url": "https://github.com/YunoHost-Apps/miniflux_ynh",
       "stars": 8,
       "forks": 2,
-      "updated_at": "2026-01-09T10:48:25Z",
+      "updated_at": "2026-01-11T11:24:53Z",
       "language": "Shell",
       "archived": false
     },
@@ -5384,7 +5395,7 @@
       "url": "https://github.com/YunoHost-Apps/mobilizon_ynh",
       "stars": 23,
       "forks": 10,
-      "updated_at": "2025-12-29T07:00:57Z",
+      "updated_at": "2026-01-11T19:03:50Z",
       "language": "Shell",
       "archived": false
     },
@@ -6286,7 +6297,7 @@
       "url": "https://github.com/YunoHost-Apps/owncast_ynh",
       "stars": 13,
       "forks": 2,
-      "updated_at": "2025-08-30T17:08:17Z",
+      "updated_at": "2026-01-11T11:53:04Z",
       "language": "Shell",
       "archived": false
     },
@@ -7176,7 +7187,7 @@
       "description": "Share files you want in a protected environnement.",
       "url": "https://github.com/YunoHost-Apps/psitransfer_ynh",
       "stars": 2,
-      "forks": 2,
+      "forks": 3,
       "updated_at": "2025-12-31T09:36:47Z",
       "language": "Shell",
       "archived": false
@@ -7859,7 +7870,7 @@
       "url": "https://github.com/YunoHost-Apps/secretsanta_ynh",
       "stars": 0,
       "forks": 0,
-      "updated_at": "2025-11-17T17:24:03Z",
+      "updated_at": "2026-01-11T15:30:52Z",
       "language": "Shell",
       "archived": false
     },
@@ -9850,7 +9861,7 @@
       "url": "https://github.com/YunoHost-Apps/yourls_ynh",
       "stars": 8,
       "forks": 4,
-      "updated_at": "2025-12-29T16:46:22Z",
+      "updated_at": "2026-01-11T11:57:42Z",
       "language": "Shell",
       "archived": false
     },
