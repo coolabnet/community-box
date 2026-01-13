@@ -1,19 +1,19 @@
 {
-  "timestamp": "2026-01-12T06:44:03.181Z",
+  "timestamp": "2026-01-13T06:41:17.353Z",
   "script": "run-all.js",
   "note": "Summary of all data fetching script executions",
   "data": {
-    "execution_time": "2026-01-12T06:44:03.181Z",
+    "execution_time": "2026-01-13T06:41:17.353Z",
     "total_scripts": 6,
     "successful": 6,
     "failed": 0,
-    "total_duration_ms": 16464,
+    "total_duration_ms": 17666,
     "continue_on_error": true,
     "results": [
       {
         "name": "CapRover UI Translations",
         "success": true,
-        "duration": 164,
+        "duration": 196,
         "result": [
           "ar-EG",
           "de-DE",
@@ -34,7 +34,7 @@
       {
         "name": "CasaOS UI Translations",
         "success": true,
-        "duration": 89,
+        "duration": 104,
         "result": [
           "ca_ES",
           "cs_CZ",
@@ -69,9 +69,9 @@
       {
         "name": "YunoHost Apps",
         "success": true,
-        "duration": 14697,
+        "duration": 15484,
         "result": {
-          "count": 925,
+          "count": 926,
           "apps": [
             {
               "id": "13ft_ynh",
@@ -993,7 +993,7 @@
               "url": "https://github.com/YunoHost-Apps/chitchatter_ynh",
               "stars": 5,
               "forks": 3,
-              "updated_at": "2026-01-08T09:39:49Z",
+              "updated_at": "2026-01-12T07:16:39Z",
               "language": "Shell",
               "archived": false
             },
@@ -2588,7 +2588,7 @@
               "url": "https://github.com/YunoHost-Apps/firefly-iii-di_ynh",
               "stars": 3,
               "forks": 9,
-              "updated_at": "2026-01-11T11:25:36Z",
+              "updated_at": "2026-01-12T18:11:18Z",
               "language": "Shell",
               "archived": false
             },
@@ -3594,6 +3594,17 @@
               "archived": false
             },
             {
+              "id": "hollo_ynh",
+              "name": "hollo",
+              "description": "Hollo package for YunoHost",
+              "url": "https://github.com/YunoHost-Apps/hollo_ynh",
+              "stars": 0,
+              "forks": 0,
+              "updated_at": "2026-01-12T22:08:53Z",
+              "language": "Shell",
+              "archived": false
+            },
+            {
               "id": "homarr_ynh",
               "name": "homarr",
               "description": "Homarr package for YunoHost",
@@ -3985,7 +3996,7 @@
               "url": "https://github.com/YunoHost-Apps/jackett_ynh",
               "stars": 2,
               "forks": 4,
-              "updated_at": "2026-01-10T11:47:51Z",
+              "updated_at": "2026-01-12T07:17:22Z",
               "language": "Shell",
               "archived": false
             },
@@ -4062,7 +4073,7 @@
               "url": "https://github.com/YunoHost-Apps/jellyfin-vue_ynh",
               "stars": 0,
               "forks": 3,
-              "updated_at": "2026-01-05T06:14:34Z",
+              "updated_at": "2026-01-12T07:15:05Z",
               "language": "Shell",
               "archived": false
             },
@@ -4117,7 +4128,7 @@
               "url": "https://github.com/YunoHost-Apps/joomla_ynh",
               "stars": 2,
               "forks": 6,
-              "updated_at": "2025-11-26T00:34:15Z",
+              "updated_at": "2026-01-12T18:39:31Z",
               "language": "Shell",
               "archived": false
             },
@@ -4380,7 +4391,7 @@
               "description": "LanguageTool server package for YunoHost",
               "url": "https://github.com/YunoHost-Apps/languagetool_ynh",
               "stars": 6,
-              "forks": 6,
+              "forks": 7,
               "updated_at": "2025-10-25T11:25:19Z",
               "language": "Shell",
               "archived": false
@@ -6625,7 +6636,7 @@
               "url": "https://github.com/YunoHost-Apps/phanpy_ynh",
               "stars": 2,
               "forks": 3,
-              "updated_at": "2025-11-27T06:05:33Z",
+              "updated_at": "2026-01-12T07:53:30Z",
               "language": "Shell",
               "archived": false
             },
@@ -6801,7 +6812,7 @@
               "url": "https://github.com/YunoHost-Apps/piefed_ynh",
               "stars": 3,
               "forks": 0,
-              "updated_at": "2026-01-08T08:45:35Z",
+              "updated_at": "2026-01-12T07:19:06Z",
               "language": "Shell",
               "archived": false
             },
@@ -7593,7 +7604,7 @@
               "url": "https://github.com/YunoHost-Apps/retroarch_ynh",
               "stars": 8,
               "forks": 1,
-              "updated_at": "2025-11-04T12:21:06Z",
+              "updated_at": "2026-01-12T17:46:44Z",
               "language": "Shell",
               "archived": false
             },
@@ -7636,7 +7647,7 @@
               "description": "Rocket.Chat package for YunoHost",
               "url": "https://github.com/YunoHost-Apps/rocketchat_ynh",
               "stars": 16,
-              "forks": 22,
+              "forks": 21,
               "updated_at": "2025-12-29T16:44:42Z",
               "language": "Shell",
               "archived": false
@@ -9936,7 +9947,7 @@
               "url": "https://github.com/YunoHost-Apps/yuno_goti_notify_ynh",
               "stars": 0,
               "forks": 0,
-              "updated_at": "2025-08-30T17:17:13Z",
+              "updated_at": "2026-01-12T19:44:58Z",
               "language": "Shell",
               "archived": false
             },
@@ -10267,7 +10278,7 @@
       {
         "name": "YunoHost Docs Translations",
         "success": true,
-        "duration": 77,
+        "duration": 85,
         "result": [
           "de",
           "docs",
@@ -10281,7 +10292,7 @@
       {
         "name": "YunoHost UI Translations",
         "success": true,
-        "duration": 1163,
+        "duration": 1391,
         "result": [
           {
             "language": "Catalan",
@@ -10313,7 +10324,7 @@
             "translated_percent": 100,
             "translated_words": 10981,
             "total_words": 10981,
-            "last_change": "2025-12-15T05:31:38.661291Z"
+            "last_change": "2026-01-13T01:02:24.786056Z"
           },
           {
             "language": "Catalan",
@@ -10688,7 +10699,7 @@
       {
         "name": "Zimaboard Shipping Areas",
         "success": true,
-        "duration": 274,
+        "duration": 406,
         "result": [
           "Argentina",
           "Australia",
