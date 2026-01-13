@@ -9,6 +9,10 @@
     "build:dev": "vite build --mode development",
     "lint": "eslint .",
     "preview": "vite preview",
+    "test:e2e:dynamic": "bash test/e2e/dynamic-routes.sh",
+    "test:e2e:links": "bash test/e2e/link-integrity.sh",
+    "test:e2e:prod": "bash test/e2e/production-build.sh",
+    "test:e2e": "npm run test:e2e:links",
     "translate:pt": "npx ai-markdown-translator --input ./src/i18n/locales/en.json --output ./src/i18n/locales/pt.json --language \"Portuguese\" --extension \"json\" --rename --log --log-file translation-pt.log --log-dir ./logs --retry-count 3 --retry-delay 5 --model \"gpt-4.1-nano\"",
     "translate:es": "npx ai-markdown-translator --input ./src/i18n/locales/en.json --output ./src/i18n/locales/es.json --language \"Spanish\" --extension \"json\" --rename --log --log-file translation-es.log --log-dir ./logs --retry-count 3 --retry-delay 5 --model \"gpt-4.1-nano\"",
     "translate": "npm run translate:pt && npm run translate:es"
@@ -84,6 +88,7 @@
     "@types/react": "^19.2.2",
     "@types/react-dom": "^19.2.2",
     "@vitejs/plugin-react-swc": "^4.2.0",
+    "agent-browser": "^0.4.4",
     "autoprefixer": "^10.4.21",
     "eslint": "^9.39.1",
     "eslint-plugin-react-hooks": "^7.0.1",
