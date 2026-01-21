@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-01-20T06:43:02.301Z",
+  "timestamp": "2026-01-21T06:44:12.683Z",
   "script": "scripts.test.js",
   "source": "YunoHost-Apps GitHub Organization",
   "url": "https://github.com/YunoHost-Apps",
@@ -500,7 +500,7 @@
       "url": "https://github.com/YunoHost-Apps/backdrop_ynh",
       "stars": 1,
       "forks": 2,
-      "updated_at": "2025-10-14T23:15:33Z",
+      "updated_at": "2026-01-20T22:28:28Z",
       "language": "PHP",
       "archived": false
     },
@@ -896,7 +896,7 @@
       "url": "https://github.com/YunoHost-Apps/changedetection_ynh",
       "stars": 2,
       "forks": 2,
-      "updated_at": "2026-01-18T22:33:35Z",
+      "updated_at": "2026-01-20T08:01:55Z",
       "language": "Shell",
       "archived": false
     },
@@ -1259,7 +1259,7 @@
       "url": "https://github.com/YunoHost-Apps/copyparty_ynh",
       "stars": 4,
       "forks": 4,
-      "updated_at": "2026-01-10T12:26:10Z",
+      "updated_at": "2026-01-20T12:32:36Z",
       "language": "Shell",
       "archived": false
     },
@@ -2700,7 +2700,7 @@
       "url": "https://github.com/YunoHost-Apps/forgejo-runner_ynh",
       "stars": 2,
       "forks": 3,
-      "updated_at": "2025-10-25T11:44:00Z",
+      "updated_at": "2026-01-20T13:07:06Z",
       "language": "Shell",
       "archived": false
     },
@@ -3558,7 +3558,7 @@
       "url": "https://github.com/YunoHost-Apps/homarr_ynh",
       "stars": 8,
       "forks": 8,
-      "updated_at": "2026-01-14T21:42:31Z",
+      "updated_at": "2026-01-20T08:06:58Z",
       "language": "Shell",
       "archived": false
     },
@@ -3943,7 +3943,7 @@
       "url": "https://github.com/YunoHost-Apps/jackett_ynh",
       "stars": 2,
       "forks": 4,
-      "updated_at": "2026-01-19T10:04:52Z",
+      "updated_at": "2026-01-20T22:28:09Z",
       "language": "Shell",
       "archived": false
     },
@@ -4559,7 +4559,7 @@
       "url": "https://github.com/YunoHost-Apps/libretranslate_ynh",
       "stars": 4,
       "forks": 4,
-      "updated_at": "2025-11-17T06:26:31Z",
+      "updated_at": "2026-01-20T08:06:01Z",
       "language": "Shell",
       "archived": false
     },
@@ -6286,7 +6286,7 @@
       "url": "https://github.com/YunoHost-Apps/osticket_ynh",
       "stars": 2,
       "forks": 7,
-      "updated_at": "2026-01-08T10:00:04Z",
+      "updated_at": "2026-01-20T22:27:10Z",
       "language": "Shell",
       "archived": false
     },
@@ -6418,7 +6418,7 @@
       "url": "https://github.com/YunoHost-Apps/paperless-ngx_ynh",
       "stars": 14,
       "forks": 12,
-      "updated_at": "2026-01-18T22:31:16Z",
+      "updated_at": "2026-01-20T08:02:59Z",
       "language": "Shell",
       "archived": false
     },
@@ -8343,7 +8343,7 @@
       "url": "https://github.com/YunoHost-Apps/sparkyfitness_ynh",
       "stars": 0,
       "forks": 2,
-      "updated_at": "2026-01-17T06:53:18Z",
+      "updated_at": "2026-01-20T08:00:56Z",
       "language": "Shell",
       "archived": false
     },
@@ -8684,7 +8684,7 @@
       "url": "https://github.com/YunoHost-Apps/syncserver-rs_ynh",
       "stars": 6,
       "forks": 3,
-      "updated_at": "2025-12-18T07:58:57Z",
+      "updated_at": "2026-01-20T22:51:39Z",
       "language": "Shell",
       "archived": false
     },
@@ -9564,7 +9564,7 @@
       "url": "https://github.com/YunoHost-Apps/wekan_ynh",
       "stars": 17,
       "forks": 18,
-      "updated_at": "2026-01-17T12:49:34Z",
+      "updated_at": "2026-01-20T13:12:57Z",
       "language": "Shell",
       "archived": false
     },
@@ -9750,7 +9750,7 @@
       "description": "WordPress package for YunoHost",
       "url": "https://github.com/YunoHost-Apps/wordpress_ynh",
       "stars": 29,
-      "forks": 31,
+      "forks": 32,
       "updated_at": "2025-12-18T20:32:19Z",
       "language": "Shell",
       "archived": false
@@ -10070,7 +10070,7 @@
       "url": "https://github.com/YunoHost-Apps/zabbix_ynh",
       "stars": 6,
       "forks": 6,
-      "updated_at": "2025-11-02T18:22:56Z",
+      "updated_at": "2026-01-21T01:21:53Z",
       "language": "Shell",
       "archived": false
     },
