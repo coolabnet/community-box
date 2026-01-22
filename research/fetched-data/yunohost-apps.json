@@ -1,11 +1,11 @@
 {
-  "timestamp": "2026-01-21T06:44:12.683Z",
+  "timestamp": "2026-01-22T06:42:15.302Z",
   "script": "scripts.test.js",
   "source": "YunoHost-Apps GitHub Organization",
   "url": "https://github.com/YunoHost-Apps",
   "api_url": "https://api.github.com/orgs/YunoHost-Apps/repos",
-  "total_apps": 929,
-  "total_repos_checked": 947,
+  "total_apps": 932,
+  "total_repos_checked": 950,
   "languages": [
     "CSS",
     "HTML",
@@ -663,9 +663,9 @@
       "name": "bonfire",
       "description": "Bonfire federated social network platform",
       "url": "https://github.com/YunoHost-Apps/bonfire_ynh",
-      "stars": 4,
+      "stars": 5,
       "forks": 6,
-      "updated_at": "2026-01-18T22:35:53Z",
+      "updated_at": "2026-01-22T04:33:38Z",
       "language": "Shell",
       "archived": false
     },
@@ -1479,7 +1479,7 @@
       "url": "https://github.com/YunoHost-Apps/davis_ynh",
       "stars": 1,
       "forks": 3,
-      "updated_at": "2025-12-29T16:41:18Z",
+      "updated_at": "2026-01-21T12:49:39Z",
       "language": "Shell",
       "archived": false
     },
@@ -2727,6 +2727,17 @@
       "archived": false
     },
     {
+      "id": "fossbilling_ynh",
+      "name": "fossbilling",
+      "description": "FOSSBilling package for YunoHost",
+      "url": "https://github.com/YunoHost-Apps/fossbilling_ynh",
+      "stars": 0,
+      "forks": 0,
+      "updated_at": "2026-01-21T19:08:54Z",
+      "language": "Shell",
+      "archived": false
+    },
+    {
       "id": "fossflow_ynh",
       "name": "fossflow",
       "description": "Make beautiful isometric infrastructure diagrams",
@@ -3339,6 +3350,17 @@
       "stars": 18,
       "forks": 13,
       "updated_at": "2025-11-11T17:39:06Z",
+      "language": "Shell",
+      "archived": false
+    },
+    {
+      "id": "grimoire_ynh",
+      "name": "grimoire",
+      "description": "Bookmark manager for the wizards 🧙",
+      "url": "https://github.com/YunoHost-Apps/grimoire_ynh",
+      "stars": 0,
+      "forks": 0,
+      "updated_at": "2026-01-21T20:35:00Z",
       "language": "Shell",
       "archived": false
     },
@@ -4042,7 +4064,7 @@
       "url": "https://github.com/YunoHost-Apps/jenkins_ynh",
       "stars": 6,
       "forks": 10,
-      "updated_at": "2026-01-15T12:00:08Z",
+      "updated_at": "2026-01-21T17:00:03Z",
       "language": "Shell",
       "archived": false
     },
@@ -4087,6 +4109,17 @@
       "stars": 7,
       "forks": 4,
       "updated_at": "2026-01-18T22:30:42Z",
+      "language": "Shell",
+      "archived": false
+    },
+    {
+      "id": "journiv_ynh",
+      "name": "journiv",
+      "description": "Journiv package for YunoHost",
+      "url": "https://github.com/YunoHost-Apps/journiv_ynh",
+      "stars": 0,
+      "forks": 0,
+      "updated_at": "2026-01-21T09:42:58Z",
       "language": "Shell",
       "archived": false
     },
@@ -4621,11 +4654,11 @@
     {
       "id": "linkace_ynh",
       "name": "linkace",
-      "description": "",
+      "description": "A self-hosted archive to collect links of your favorite websites.",
       "url": "https://github.com/YunoHost-Apps/linkace_ynh",
       "stars": 0,
       "forks": 0,
-      "updated_at": "2026-01-19T10:33:04Z",
+      "updated_at": "2026-01-21T20:32:58Z",
       "language": "Shell",
       "archived": false
     },
@@ -5218,7 +5251,7 @@
       "description": "Metabase package for YunoHost",
       "url": "https://github.com/YunoHost-Apps/metabase_ynh",
       "stars": 12,
-      "forks": 7,
+      "forks": 6,
       "updated_at": "2025-08-30T17:07:07Z",
       "language": "Shell",
       "archived": false
@@ -9124,7 +9157,7 @@
       "url": "https://github.com/YunoHost-Apps/tunarr_ynh",
       "stars": 1,
       "forks": 0,
-      "updated_at": "2025-12-13T18:36:46Z",
+      "updated_at": "2026-01-21T16:58:37Z",
       "language": "Shell",
       "archived": false
     },
@@ -9564,7 +9597,7 @@
       "url": "https://github.com/YunoHost-Apps/wekan_ynh",
       "stars": 17,
       "forks": 18,
-      "updated_at": "2026-01-20T13:12:57Z",
+      "updated_at": "2026-01-21T19:38:41Z",
       "language": "Shell",
       "archived": false
     },
@@ -10158,7 +10191,7 @@
       "url": "https://github.com/YunoHost-Apps/zipline_ynh",
       "stars": 0,
       "forks": 5,
-      "updated_at": "2025-12-28T22:31:21Z",
+      "updated_at": "2026-01-21T16:53:05Z",
       "language": "Shell",
       "archived": false
     },
