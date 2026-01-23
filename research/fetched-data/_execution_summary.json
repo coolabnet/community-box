@@ -1,19 +1,19 @@
 {
-  "timestamp": "2026-01-22T06:42:14.566Z",
+  "timestamp": "2026-01-23T06:41:45.176Z",
   "script": "run-all.js",
   "note": "Summary of all data fetching script executions",
   "data": {
-    "execution_time": "2026-01-22T06:42:14.566Z",
+    "execution_time": "2026-01-23T06:41:45.176Z",
     "total_scripts": 6,
     "successful": 6,
     "failed": 0,
-    "total_duration_ms": 18350,
+    "total_duration_ms": 18555,
     "continue_on_error": true,
     "results": [
       {
         "name": "CapRover UI Translations",
         "success": true,
-        "duration": 163,
+        "duration": 290,
         "result": [
           "ar-EG",
           "de-DE",
@@ -34,7 +34,7 @@
       {
         "name": "CasaOS UI Translations",
         "success": true,
-        "duration": 98,
+        "duration": 179,
         "result": [
           "ca_ES",
           "cs_CZ",
@@ -69,9 +69,9 @@
       {
         "name": "YunoHost Apps",
         "success": true,
-        "duration": 16141,
+        "duration": 15868,
         "result": {
-          "count": 932,
+          "count": 933,
           "apps": [
             {
               "id": "13ft_ynh",
@@ -829,6 +829,17 @@
               "stars": 8,
               "forks": 2,
               "updated_at": "2025-10-28T16:18:41Z",
+              "language": "Shell",
+              "archived": false
+            },
+            {
+              "id": "cactus_appservice_ynh",
+              "name": "cactus_appservice",
+              "description": "Federated comment system, to embed into your webpages, based on the Matrix protocol.",
+              "url": "https://github.com/YunoHost-Apps/cactus_appservice_ynh",
+              "stars": 0,
+              "forks": 0,
+              "updated_at": "2026-01-22T16:31:37Z",
               "language": "Shell",
               "archived": false
             },
@@ -1928,7 +1939,7 @@
               "url": "https://github.com/YunoHost-Apps/dolibarr_ynh",
               "stars": 15,
               "forks": 20,
-              "updated_at": "2026-01-16T08:10:47Z",
+              "updated_at": "2026-01-22T13:19:33Z",
               "language": "Shell",
               "archived": false
             },
@@ -2533,7 +2544,7 @@
               "url": "https://github.com/YunoHost-Apps/filerise_ynh",
               "stars": 0,
               "forks": 1,
-              "updated_at": "2026-01-19T09:26:57Z",
+              "updated_at": "2026-01-22T10:29:10Z",
               "language": "PHP",
               "archived": false
             },
@@ -2729,9 +2740,9 @@
               "name": "forgejo",
               "description": "Forgejo package for YunoHost",
               "url": "https://github.com/YunoHost-Apps/forgejo_ynh",
-              "stars": 22,
+              "stars": 21,
               "forks": 6,
-              "updated_at": "2026-01-10T12:27:47Z",
+              "updated_at": "2026-01-22T11:10:50Z",
               "language": "Shell",
               "archived": false
             },
@@ -4447,7 +4458,7 @@
               "url": "https://github.com/YunoHost-Apps/lasuite-meet_ynh",
               "stars": 2,
               "forks": 1,
-              "updated_at": "2026-01-17T21:45:29Z",
+              "updated_at": "2026-01-22T12:50:26Z",
               "language": "Shell",
               "archived": false
             },
@@ -4854,7 +4865,7 @@
               "url": "https://github.com/YunoHost-Apps/loops_ynh",
               "stars": 3,
               "forks": 2,
-              "updated_at": "2026-01-19T14:05:45Z",
+              "updated_at": "2026-01-22T16:16:56Z",
               "language": "Shell",
               "archived": false
             },
@@ -5855,7 +5866,7 @@
               "url": "https://github.com/YunoHost-Apps/n8n_ynh",
               "stars": 18,
               "forks": 22,
-              "updated_at": "2026-01-17T17:01:01Z",
+              "updated_at": "2026-01-22T10:30:06Z",
               "language": "Shell",
               "archived": false
             },
@@ -6119,7 +6130,7 @@
               "url": "https://github.com/YunoHost-Apps/ollama_ynh",
               "stars": 4,
               "forks": 3,
-              "updated_at": "2026-01-17T06:49:06Z",
+              "updated_at": "2026-01-22T07:52:12Z",
               "language": "Shell",
               "archived": false
             },
@@ -7987,9 +7998,9 @@
               "name": "secretsanta",
               "description": "Secret Santa package for YunoHost",
               "url": "https://github.com/YunoHost-Apps/secretsanta_ynh",
-              "stars": 0,
+              "stars": 1,
               "forks": 0,
-              "updated_at": "2026-01-11T15:30:52Z",
+              "updated_at": "2026-01-22T22:19:39Z",
               "language": "Shell",
               "archived": false
             },
@@ -8769,7 +8780,7 @@
               "description": "Firefox Sync Storage packaged for YunoHost.",
               "url": "https://github.com/YunoHost-Apps/syncserver-rs_ynh",
               "stars": 6,
-              "forks": 3,
+              "forks": 2,
               "updated_at": "2026-01-20T22:51:39Z",
               "language": "Shell",
               "archived": false
@@ -9606,7 +9617,7 @@
               "url": "https://github.com/YunoHost-Apps/weblate_ynh",
               "stars": 15,
               "forks": 9,
-              "updated_at": "2026-01-06T07:34:07Z",
+              "updated_at": "2026-01-22T15:13:48Z",
               "language": "Python",
               "archived": false
             },
@@ -9683,7 +9694,7 @@
               "url": "https://github.com/YunoHost-Apps/wger_ynh",
               "stars": 1,
               "forks": 1,
-              "updated_at": "2025-09-10T16:02:39Z",
+              "updated_at": "2026-01-22T17:06:20Z",
               "language": "Shell",
               "archived": false
             },
@@ -10156,7 +10167,7 @@
               "url": "https://github.com/YunoHost-Apps/zabbix_ynh",
               "stars": 6,
               "forks": 6,
-              "updated_at": "2026-01-21T01:21:53Z",
+              "updated_at": "2026-01-22T16:28:13Z",
               "language": "Shell",
               "archived": false
             },
@@ -10344,7 +10355,7 @@
       {
         "name": "YunoHost Docs Translations",
         "success": true,
-        "duration": 81,
+        "duration": 137,
         "result": [
           "de",
           "docs",
@@ -10358,15 +10369,23 @@
       {
         "name": "YunoHost UI Translations",
         "success": true,
-        "duration": 1462,
+        "duration": 1748,
         "result": [
+          {
+            "language": "French",
+            "language_code": "fr",
+            "translated_percent": 100,
+            "translated_words": 11028,
+            "total_words": 11028,
+            "last_change": "2026-01-22T22:53:57.406313Z"
+          },
           {
             "language": "Russian",
             "language_code": "ru",
             "translated_percent": 100,
             "translated_words": 11028,
             "total_words": 11028,
-            "last_change": "2026-01-22T01:45:50.412109Z"
+            "last_change": "2026-01-22T09:49:55.145036Z"
           },
           {
             "language": "Catalan",
@@ -10503,14 +10522,6 @@
             "translated_words": 10981,
             "total_words": 11028,
             "last_change": "2026-01-21T23:49:37.499002Z"
-          },
-          {
-            "language": "French",
-            "language_code": "fr",
-            "translated_percent": 99.5,
-            "translated_words": 10981,
-            "total_words": 11028,
-            "last_change": "2026-01-21T23:49:40.957701Z"
           },
           {
             "language": "Spanish",
@@ -10765,7 +10776,7 @@
       {
         "name": "Zimaboard Shipping Areas",
         "success": true,
-        "duration": 405,
+        "duration": 333,
         "result": [
           "Argentina",
           "Australia",

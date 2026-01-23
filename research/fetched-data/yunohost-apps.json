@@ -1,11 +1,11 @@
 {
-  "timestamp": "2026-01-22T06:42:15.302Z",
+  "timestamp": "2026-01-23T06:41:46.032Z",
   "script": "scripts.test.js",
   "source": "YunoHost-Apps GitHub Organization",
   "url": "https://github.com/YunoHost-Apps",
   "api_url": "https://api.github.com/orgs/YunoHost-Apps/repos",
-  "total_apps": 932,
-  "total_repos_checked": 950,
+  "total_apps": 933,
+  "total_repos_checked": 951,
   "languages": [
     "CSS",
     "HTML",
@@ -776,6 +776,17 @@
       "stars": 8,
       "forks": 2,
       "updated_at": "2025-10-28T16:18:41Z",
+      "language": "Shell",
+      "archived": false
+    },
+    {
+      "id": "cactus_appservice_ynh",
+      "name": "cactus_appservice",
+      "description": "Federated comment system, to embed into your webpages, based on the Matrix protocol.",
+      "url": "https://github.com/YunoHost-Apps/cactus_appservice_ynh",
+      "stars": 0,
+      "forks": 0,
+      "updated_at": "2026-01-22T16:31:37Z",
       "language": "Shell",
       "archived": false
     },
@@ -1875,7 +1886,7 @@
       "url": "https://github.com/YunoHost-Apps/dolibarr_ynh",
       "stars": 15,
       "forks": 20,
-      "updated_at": "2026-01-16T08:10:47Z",
+      "updated_at": "2026-01-22T13:19:33Z",
       "language": "Shell",
       "archived": false
     },
@@ -2480,7 +2491,7 @@
       "url": "https://github.com/YunoHost-Apps/filerise_ynh",
       "stars": 0,
       "forks": 1,
-      "updated_at": "2026-01-19T09:26:57Z",
+      "updated_at": "2026-01-22T10:29:10Z",
       "language": "PHP",
       "archived": false
     },
@@ -2676,9 +2687,9 @@
       "name": "forgejo",
       "description": "Forgejo package for YunoHost",
       "url": "https://github.com/YunoHost-Apps/forgejo_ynh",
-      "stars": 22,
+      "stars": 21,
       "forks": 6,
-      "updated_at": "2026-01-10T12:27:47Z",
+      "updated_at": "2026-01-22T11:10:50Z",
       "language": "Shell",
       "archived": false
     },
@@ -4394,7 +4405,7 @@
       "url": "https://github.com/YunoHost-Apps/lasuite-meet_ynh",
       "stars": 2,
       "forks": 1,
-      "updated_at": "2026-01-17T21:45:29Z",
+      "updated_at": "2026-01-22T12:50:26Z",
       "language": "Shell",
       "archived": false
     },
@@ -4801,7 +4812,7 @@
       "url": "https://github.com/YunoHost-Apps/loops_ynh",
       "stars": 3,
       "forks": 2,
-      "updated_at": "2026-01-19T14:05:45Z",
+      "updated_at": "2026-01-22T16:16:56Z",
       "language": "Shell",
       "archived": false
     },
@@ -5802,7 +5813,7 @@
       "url": "https://github.com/YunoHost-Apps/n8n_ynh",
       "stars": 18,
       "forks": 22,
-      "updated_at": "2026-01-17T17:01:01Z",
+      "updated_at": "2026-01-22T10:30:06Z",
       "language": "Shell",
       "archived": false
     },
@@ -6066,7 +6077,7 @@
       "url": "https://github.com/YunoHost-Apps/ollama_ynh",
       "stars": 4,
       "forks": 3,
-      "updated_at": "2026-01-17T06:49:06Z",
+      "updated_at": "2026-01-22T07:52:12Z",
       "language": "Shell",
       "archived": false
     },
@@ -7934,9 +7945,9 @@
       "name": "secretsanta",
       "description": "Secret Santa package for YunoHost",
       "url": "https://github.com/YunoHost-Apps/secretsanta_ynh",
-      "stars": 0,
+      "stars": 1,
       "forks": 0,
-      "updated_at": "2026-01-11T15:30:52Z",
+      "updated_at": "2026-01-22T22:19:39Z",
       "language": "Shell",
       "archived": false
     },
@@ -8716,7 +8727,7 @@
       "description": "Firefox Sync Storage packaged for YunoHost.",
       "url": "https://github.com/YunoHost-Apps/syncserver-rs_ynh",
       "stars": 6,
-      "forks": 3,
+      "forks": 2,
       "updated_at": "2026-01-20T22:51:39Z",
       "language": "Shell",
       "archived": false
@@ -9553,7 +9564,7 @@
       "url": "https://github.com/YunoHost-Apps/weblate_ynh",
       "stars": 15,
       "forks": 9,
-      "updated_at": "2026-01-06T07:34:07Z",
+      "updated_at": "2026-01-22T15:13:48Z",
       "language": "Python",
       "archived": false
     },
@@ -9630,7 +9641,7 @@
       "url": "https://github.com/YunoHost-Apps/wger_ynh",
       "stars": 1,
       "forks": 1,
-      "updated_at": "2025-09-10T16:02:39Z",
+      "updated_at": "2026-01-22T17:06:20Z",
       "language": "Shell",
       "archived": false
     },
@@ -10103,7 +10114,7 @@
       "url": "https://github.com/YunoHost-Apps/zabbix_ynh",
       "stars": 6,
       "forks": 6,
-      "updated_at": "2026-01-21T01:21:53Z",
+      "updated_at": "2026-01-22T16:28:13Z",
       "language": "Shell",
       "archived": false
     },
