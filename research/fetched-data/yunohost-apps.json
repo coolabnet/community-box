@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-01-24T06:38:20.948Z",
+  "timestamp": "2026-01-25T06:38:56.501Z",
   "script": "scripts.test.js",
   "source": "YunoHost-Apps GitHub Organization",
   "url": "https://github.com/YunoHost-Apps",
@@ -609,7 +609,7 @@
       "description": "Bileto package for YunoHost",
       "url": "https://github.com/YunoHost-Apps/bileto_ynh",
       "stars": 1,
-      "forks": 1,
+      "forks": 2,
       "updated_at": "2025-11-23T11:44:46Z",
       "language": "Shell",
       "archived": false
@@ -863,7 +863,7 @@
       "url": "https://github.com/YunoHost-Apps/castopod_ynh",
       "stars": 26,
       "forks": 6,
-      "updated_at": "2026-01-15T18:28:18Z",
+      "updated_at": "2026-01-24T08:36:50Z",
       "language": "Shell",
       "archived": false
     },
@@ -1884,9 +1884,9 @@
       "name": "dolibarr",
       "description": "Dolibarr ERP & CRM is a modern software to manage your organization's activity. This is an integration of Dolibarr in YunoHost",
       "url": "https://github.com/YunoHost-Apps/dolibarr_ynh",
-      "stars": 15,
-      "forks": 20,
-      "updated_at": "2026-01-22T13:19:33Z",
+      "stars": 16,
+      "forks": 21,
+      "updated_at": "2026-01-24T07:18:56Z",
       "language": "Shell",
       "archived": false
     },
@@ -2478,9 +2478,9 @@
       "name": "filepizza",
       "description": "FilePizza package for YunoHost",
       "url": "https://github.com/YunoHost-Apps/filepizza_ynh",
-      "stars": 4,
+      "stars": 3,
       "forks": 2,
-      "updated_at": "2026-01-16T22:21:58Z",
+      "updated_at": "2026-01-24T19:41:27Z",
       "language": "Shell",
       "archived": false
     },
@@ -2744,8 +2744,8 @@
       "url": "https://github.com/YunoHost-Apps/fossbilling_ynh",
       "stars": 0,
       "forks": 0,
-      "updated_at": "2026-01-21T19:08:54Z",
-      "language": "Shell",
+      "updated_at": "2026-01-24T18:10:19Z",
+      "language": "PHP",
       "archived": false
     },
     {
@@ -3602,7 +3602,7 @@
       "url": "https://github.com/YunoHost-Apps/homeassistant_ynh",
       "stars": 24,
       "forks": 17,
-      "updated_at": "2026-01-17T15:30:29Z",
+      "updated_at": "2026-01-24T10:00:54Z",
       "language": "Shell",
       "archived": false
     },
@@ -3976,7 +3976,7 @@
       "url": "https://github.com/YunoHost-Apps/jackett_ynh",
       "stars": 2,
       "forks": 4,
-      "updated_at": "2026-01-23T11:01:27Z",
+      "updated_at": "2026-01-24T08:08:09Z",
       "language": "Shell",
       "archived": false
     },
@@ -4128,9 +4128,9 @@
       "name": "journiv",
       "description": "Journiv package for YunoHost",
       "url": "https://github.com/YunoHost-Apps/journiv_ynh",
-      "stars": 0,
+      "stars": 1,
       "forks": 0,
-      "updated_at": "2026-01-23T11:51:39Z",
+      "updated_at": "2026-01-24T11:36:01Z",
       "language": "Shell",
       "archived": false
     },
@@ -4436,9 +4436,9 @@
       "name": "leantime",
       "description": "Leantime package for YunoHost",
       "url": "https://github.com/YunoHost-Apps/leantime_ynh",
-      "stars": 2,
+      "stars": 3,
       "forks": 5,
-      "updated_at": "2026-01-10T12:26:49Z",
+      "updated_at": "2026-01-24T15:39:32Z",
       "language": "Shell",
       "archived": false
     },
@@ -4889,7 +4889,7 @@
       "url": "https://github.com/YunoHost-Apps/lychee_ynh",
       "stars": 11,
       "forks": 6,
-      "updated_at": "2026-01-17T17:50:21Z",
+      "updated_at": "2026-01-24T09:22:14Z",
       "language": "Shell",
       "archived": false
     },
@@ -6066,7 +6066,7 @@
       "url": "https://github.com/YunoHost-Apps/olivetin_ynh",
       "stars": 1,
       "forks": 2,
-      "updated_at": "2026-01-13T23:25:07Z",
+      "updated_at": "2026-01-24T08:09:53Z",
       "language": "Shell",
       "archived": false
     },
@@ -7417,9 +7417,9 @@
       "name": "rallly",
       "description": "Rallly package for YunoHost",
       "url": "https://github.com/YunoHost-Apps/rallly_ynh",
-      "stars": 8,
+      "stars": 7,
       "forks": 2,
-      "updated_at": "2026-01-23T14:16:27Z",
+      "updated_at": "2026-01-24T13:40:18Z",
       "language": "Shell",
       "archived": false
     },
@@ -7738,7 +7738,7 @@
       "url": "https://github.com/YunoHost-Apps/rsshub_ynh",
       "stars": 3,
       "forks": 2,
-      "updated_at": "2026-01-09T20:20:26Z",
+      "updated_at": "2026-01-24T08:46:46Z",
       "language": "Shell",
       "archived": false
     },
@@ -8387,7 +8387,7 @@
       "url": "https://github.com/YunoHost-Apps/sparkyfitness_ynh",
       "stars": 0,
       "forks": 2,
-      "updated_at": "2026-01-20T08:00:56Z",
+      "updated_at": "2026-01-24T07:44:57Z",
       "language": "Shell",
       "archived": false
     },
@@ -9971,7 +9971,7 @@
       "url": "https://github.com/YunoHost-Apps/yuno_goti_notify_ynh",
       "stars": 0,
       "forks": 0,
-      "updated_at": "2026-01-15T22:16:07Z",
+      "updated_at": "2026-01-24T19:19:01Z",
       "language": "Shell",
       "archived": false
     },
