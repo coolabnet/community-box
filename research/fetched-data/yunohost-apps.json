@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-01-25T06:38:56.501Z",
+  "timestamp": "2026-01-26T06:45:22.901Z",
   "script": "scripts.test.js",
   "source": "YunoHost-Apps GitHub Organization",
   "url": "https://github.com/YunoHost-Apps",
@@ -664,7 +664,7 @@
       "description": "Bonfire federated social network platform",
       "url": "https://github.com/YunoHost-Apps/bonfire_ynh",
       "stars": 5,
-      "forks": 6,
+      "forks": 7,
       "updated_at": "2026-01-22T04:33:38Z",
       "language": "Shell",
       "archived": false
@@ -1467,7 +1467,7 @@
       "description": "Dagu package for YunoHost",
       "url": "https://github.com/YunoHost-Apps/dagu_ynh",
       "stars": 3,
-      "forks": 2,
+      "forks": 3,
       "updated_at": "2026-01-05T09:10:25Z",
       "language": "Shell",
       "archived": false
@@ -3954,7 +3954,7 @@
       "url": "https://github.com/YunoHost-Apps/it-tools_ynh",
       "stars": 3,
       "forks": 1,
-      "updated_at": "2026-01-19T15:42:15Z",
+      "updated_at": "2026-01-26T01:46:24Z",
       "language": "Shell",
       "archived": false
     },
@@ -4130,7 +4130,7 @@
       "url": "https://github.com/YunoHost-Apps/journiv_ynh",
       "stars": 1,
       "forks": 0,
-      "updated_at": "2026-01-24T11:36:01Z",
+      "updated_at": "2026-01-25T21:22:55Z",
       "language": "Shell",
       "archived": false
     },
@@ -4493,7 +4493,7 @@
       "url": "https://github.com/YunoHost-Apps/liberaforms_ynh",
       "stars": 1,
       "forks": 2,
-      "updated_at": "2025-08-30T17:18:27Z",
+      "updated_at": "2026-01-25T23:32:30Z",
       "language": "Shell",
       "archived": false
     },
@@ -6077,7 +6077,7 @@
       "url": "https://github.com/YunoHost-Apps/ollama_ynh",
       "stars": 4,
       "forks": 3,
-      "updated_at": "2026-01-22T07:52:12Z",
+      "updated_at": "2026-01-25T07:36:04Z",
       "language": "Shell",
       "archived": false
     },
@@ -7494,9 +7494,9 @@
       "name": "redirect",
       "description": "Redirection app for YunoHost",
       "url": "https://github.com/YunoHost-Apps/redirect_ynh",
-      "stars": 51,
-      "forks": 28,
-      "updated_at": "2026-01-08T19:29:53Z",
+      "stars": 50,
+      "forks": 29,
+      "updated_at": "2026-01-25T13:54:01Z",
       "language": "Shell",
       "archived": false
     },
@@ -8563,7 +8563,7 @@
       "url": "https://github.com/YunoHost-Apps/streams_ynh",
       "stars": 1,
       "forks": 2,
-      "updated_at": "2025-12-14T14:23:26Z",
+      "updated_at": "2026-01-26T06:21:39Z",
       "language": "Shell",
       "archived": false
     },

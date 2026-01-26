@@ -1,19 +1,19 @@
 {
-  "timestamp": "2026-01-25T06:38:55.743Z",
+  "timestamp": "2026-01-26T06:45:22.136Z",
   "script": "run-all.js",
   "note": "Summary of all data fetching script executions",
   "data": {
-    "execution_time": "2026-01-25T06:38:55.743Z",
+    "execution_time": "2026-01-26T06:45:22.136Z",
     "total_scripts": 6,
     "successful": 6,
     "failed": 0,
-    "total_duration_ms": 18648,
+    "total_duration_ms": 18716,
     "continue_on_error": true,
     "results": [
       {
         "name": "CapRover UI Translations",
         "success": true,
-        "duration": 247,
+        "duration": 233,
         "result": [
           "ar-EG",
           "de-DE",
@@ -34,7 +34,7 @@
       {
         "name": "CasaOS UI Translations",
         "success": true,
-        "duration": 151,
+        "duration": 173,
         "result": [
           "ca_ES",
           "cs_CZ",
@@ -69,7 +69,7 @@
       {
         "name": "YunoHost Apps",
         "success": true,
-        "duration": 16137,
+        "duration": 16354,
         "result": {
           "count": 933,
           "apps": [
@@ -717,7 +717,7 @@
               "description": "Bonfire federated social network platform",
               "url": "https://github.com/YunoHost-Apps/bonfire_ynh",
               "stars": 5,
-              "forks": 6,
+              "forks": 7,
               "updated_at": "2026-01-22T04:33:38Z",
               "language": "Shell",
               "archived": false
@@ -1520,7 +1520,7 @@
               "description": "Dagu package for YunoHost",
               "url": "https://github.com/YunoHost-Apps/dagu_ynh",
               "stars": 3,
-              "forks": 2,
+              "forks": 3,
               "updated_at": "2026-01-05T09:10:25Z",
               "language": "Shell",
               "archived": false
@@ -4007,7 +4007,7 @@
               "url": "https://github.com/YunoHost-Apps/it-tools_ynh",
               "stars": 3,
               "forks": 1,
-              "updated_at": "2026-01-19T15:42:15Z",
+              "updated_at": "2026-01-26T01:46:24Z",
               "language": "Shell",
               "archived": false
             },
@@ -4183,7 +4183,7 @@
               "url": "https://github.com/YunoHost-Apps/journiv_ynh",
               "stars": 1,
               "forks": 0,
-              "updated_at": "2026-01-24T11:36:01Z",
+              "updated_at": "2026-01-25T21:22:55Z",
               "language": "Shell",
               "archived": false
             },
@@ -4546,7 +4546,7 @@
               "url": "https://github.com/YunoHost-Apps/liberaforms_ynh",
               "stars": 1,
               "forks": 2,
-              "updated_at": "2025-08-30T17:18:27Z",
+              "updated_at": "2026-01-25T23:32:30Z",
               "language": "Shell",
               "archived": false
             },
@@ -6130,7 +6130,7 @@
               "url": "https://github.com/YunoHost-Apps/ollama_ynh",
               "stars": 4,
               "forks": 3,
-              "updated_at": "2026-01-22T07:52:12Z",
+              "updated_at": "2026-01-25T07:36:04Z",
               "language": "Shell",
               "archived": false
             },
@@ -7547,9 +7547,9 @@
               "name": "redirect",
               "description": "Redirection app for YunoHost",
               "url": "https://github.com/YunoHost-Apps/redirect_ynh",
-              "stars": 51,
-              "forks": 28,
-              "updated_at": "2026-01-08T19:29:53Z",
+              "stars": 50,
+              "forks": 29,
+              "updated_at": "2026-01-25T13:54:01Z",
               "language": "Shell",
               "archived": false
             },
@@ -8616,7 +8616,7 @@
               "url": "https://github.com/YunoHost-Apps/streams_ynh",
               "stars": 1,
               "forks": 2,
-              "updated_at": "2025-12-14T14:23:26Z",
+              "updated_at": "2026-01-26T06:21:39Z",
               "language": "Shell",
               "archived": false
             },
@@ -10355,7 +10355,7 @@
       {
         "name": "YunoHost Docs Translations",
         "success": true,
-        "duration": 133,
+        "duration": 135,
         "result": [
           "de",
           "docs",
@@ -10369,7 +10369,7 @@
       {
         "name": "YunoHost UI Translations",
         "success": true,
-        "duration": 1656,
+        "duration": 1539,
         "result": [
           {
             "language": "Basque",
@@ -10417,7 +10417,7 @@
             "translated_percent": 100,
             "translated_words": 3819,
             "total_words": 3819,
-            "last_change": "2026-01-02T04:12:37.152302Z"
+            "last_change": "2026-01-25T17:02:30.869795Z"
           },
           {
             "language": "French",
@@ -10776,7 +10776,7 @@
       {
         "name": "Zimaboard Shipping Areas",
         "success": true,
-        "duration": 324,
+        "duration": 282,
         "result": [
           "Argentina",
           "Australia",

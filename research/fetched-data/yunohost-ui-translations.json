@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-01-25T06:38:58.169Z",
+  "timestamp": "2026-01-26T06:45:24.561Z",
   "script": "scripts.test.js",
   "source": "YunoHost Translation Platform",
   "url": "https://translate.yunohost.org/",
@@ -55,7 +55,7 @@
       "translated_percent": 100,
       "translated_words": 3819,
       "total_words": 3819,
-      "last_change": "2026-01-02T04:12:37.152302Z"
+      "last_change": "2026-01-25T17:02:30.869795Z"
     },
     {
       "language": "French",
