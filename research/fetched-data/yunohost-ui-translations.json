@@ -1,12 +1,12 @@
 {
-  "timestamp": "2026-01-30T06:57:10.860Z",
+  "timestamp": "2026-01-31T06:47:20.759Z",
   "script": "scripts.test.js",
   "source": "YunoHost Translation Platform",
   "url": "https://translate.yunohost.org/",
   "api_url": "https://translate.yunohost.org/api/translations/?format=json",
   "total_languages": 50,
-  "fully_translated": 19,
-  "partially_translated": 28,
+  "fully_translated": 20,
+  "partially_translated": 27,
   "not_started": 3,
   "data": [
     {
@@ -72,6 +72,14 @@
       "translated_words": 3819,
       "total_words": 3819,
       "last_change": "2025-11-29T16:10:32.469032Z"
+    },
+    {
+      "language": "Polish",
+      "language_code": "pl",
+      "translated_percent": 100,
+      "translated_words": 3819,
+      "total_words": 3819,
+      "last_change": "2026-01-31T00:40:00.111639Z"
     },
     {
       "language": "Russian",
@@ -216,14 +224,6 @@
       "translated_words": 2657,
       "total_words": 3819,
       "last_change": "2025-12-22T10:36:46.464476Z"
-    },
-    {
-      "language": "Polish",
-      "language_code": "pl",
-      "translated_percent": 89.1,
-      "translated_words": 2763,
-      "total_words": 3819,
-      "last_change": "2025-12-10T20:27:19.679298Z"
     },
     {
       "language": "Italian",
