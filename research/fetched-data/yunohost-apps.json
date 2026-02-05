@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-02-04T06:59:37.242Z",
+  "timestamp": "2026-02-05T07:05:30.673Z",
   "script": "scripts.test.js",
   "source": "YunoHost-Apps GitHub Organization",
   "url": "https://github.com/YunoHost-Apps",
@@ -1875,7 +1875,7 @@
       "url": "https://github.com/YunoHost-Apps/Dokos_ynh",
       "stars": 1,
       "forks": 4,
-      "updated_at": "2026-01-28T13:04:46Z",
+      "updated_at": "2026-02-04T16:37:57Z",
       "language": "Shell",
       "archived": false
     },
@@ -2920,7 +2920,7 @@
       "url": "https://github.com/YunoHost-Apps/funkwhale_ynh",
       "stars": 80,
       "forks": 23,
-      "updated_at": "2026-02-02T18:42:14Z",
+      "updated_at": "2026-02-05T03:11:58Z",
       "language": "Shell",
       "archived": false
     },
@@ -3635,7 +3635,7 @@
       "url": "https://github.com/YunoHost-Apps/homebox_ynh",
       "stars": 3,
       "forks": 2,
-      "updated_at": "2025-12-27T09:36:40Z",
+      "updated_at": "2026-02-04T08:28:09Z",
       "language": "Shell",
       "archived": false
     },
@@ -3844,7 +3844,7 @@
       "url": "https://github.com/YunoHost-Apps/immich_ynh",
       "stars": 26,
       "forks": 16,
-      "updated_at": "2026-01-29T21:11:22Z",
+      "updated_at": "2026-02-04T18:52:38Z",
       "language": "Shell",
       "archived": false
     },
@@ -4845,7 +4845,7 @@
       "url": "https://github.com/YunoHost-Apps/loops_ynh",
       "stars": 3,
       "forks": 2,
-      "updated_at": "2026-02-02T07:59:57Z",
+      "updated_at": "2026-02-05T06:54:11Z",
       "language": "Shell",
       "archived": false
     },
@@ -5868,7 +5868,7 @@
       "url": "https://github.com/YunoHost-Apps/navidrome_ynh",
       "stars": 18,
       "forks": 6,
-      "updated_at": "2026-01-05T15:26:47Z",
+      "updated_at": "2026-02-04T14:15:37Z",
       "language": "Shell",
       "archived": false
     },
@@ -6384,7 +6384,7 @@
       "description": "An open, extensible, wiki for your team built using React and Node.js",
       "url": "https://github.com/YunoHost-Apps/outline_ynh",
       "stars": 19,
-      "forks": 11,
+      "forks": 10,
       "updated_at": "2026-01-19T09:25:53Z",
       "language": "Shell",
       "archived": false
@@ -6902,7 +6902,7 @@
       "url": "https://github.com/YunoHost-Apps/piped_ynh",
       "stars": 3,
       "forks": 3,
-      "updated_at": "2026-01-15T21:31:19Z",
+      "updated_at": "2026-02-04T12:42:59Z",
       "language": "Shell",
       "archived": false
     },
@@ -7976,11 +7976,11 @@
     {
       "id": "seaweedfs_ynh",
       "name": "seaweedfs",
-      "description": "Seaweedfs pacakge for Yunohost",
+      "description": "Seaweedfs pacakge for YunoHost",
       "url": "https://github.com/YunoHost-Apps/seaweedfs_ynh",
       "stars": 0,
-      "forks": 0,
-      "updated_at": "2026-01-18T19:02:20Z",
+      "forks": 1,
+      "updated_at": "2026-02-04T18:00:34Z",
       "language": "Shell",
       "archived": false
     },
@@ -9223,7 +9223,7 @@
       "url": "https://github.com/YunoHost-Apps/tunarr_ynh",
       "stars": 1,
       "forks": 0,
-      "updated_at": "2026-01-31T21:22:02Z",
+      "updated_at": "2026-02-04T07:15:06Z",
       "language": "Shell",
       "archived": false
     },
@@ -10334,7 +10334,7 @@
       "url": "https://github.com/YunoHost-Apps/zwave-js-ui_ynh",
       "stars": 0,
       "forks": 1,
-      "updated_at": "2026-01-19T09:26:47Z",
+      "updated_at": "2026-02-04T22:39:40Z",
       "language": "Shell",
       "archived": false
     },
