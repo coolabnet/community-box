@@ -1,11 +1,11 @@
 {
-  "timestamp": "2026-02-06T07:01:39.849Z",
+  "timestamp": "2026-02-07T06:50:50.335Z",
   "script": "scripts.test.js",
   "source": "YunoHost-Apps GitHub Organization",
   "url": "https://github.com/YunoHost-Apps",
   "api_url": "https://api.github.com/orgs/YunoHost-Apps/repos",
-  "total_apps": 939,
-  "total_repos_checked": 957,
+  "total_apps": 940,
+  "total_repos_checked": 958,
   "languages": [
     "CSS",
     "HTML",
@@ -401,7 +401,7 @@
       "url": "https://github.com/YunoHost-Apps/arn_messager_ynh",
       "stars": 0,
       "forks": 1,
-      "updated_at": "2026-01-15T08:07:55Z",
+      "updated_at": "2026-02-06T20:11:47Z",
       "language": "Shell",
       "archived": false
     },
@@ -698,7 +698,7 @@
       "url": "https://github.com/YunoHost-Apps/bookwyrm_ynh",
       "stars": 10,
       "forks": 6,
-      "updated_at": "2025-11-17T06:28:06Z",
+      "updated_at": "2026-02-06T16:05:51Z",
       "language": "Shell",
       "archived": false
     },
@@ -1875,7 +1875,7 @@
       "url": "https://github.com/YunoHost-Apps/Dokos_ynh",
       "stars": 1,
       "forks": 4,
-      "updated_at": "2026-02-04T16:37:57Z",
+      "updated_at": "2026-02-06T09:45:33Z",
       "language": "Shell",
       "archived": false
     },
@@ -3976,7 +3976,7 @@
       "url": "https://github.com/YunoHost-Apps/it-tools_ynh",
       "stars": 3,
       "forks": 1,
-      "updated_at": "2026-01-26T01:46:24Z",
+      "updated_at": "2026-02-06T13:32:48Z",
       "language": "Shell",
       "archived": false
     },
@@ -4108,7 +4108,7 @@
       "url": "https://github.com/YunoHost-Apps/jenkins_ynh",
       "stars": 6,
       "forks": 10,
-      "updated_at": "2026-01-21T17:00:03Z",
+      "updated_at": "2026-02-06T07:31:37Z",
       "language": "Shell",
       "archived": false
     },
@@ -4526,7 +4526,7 @@
       "url": "https://github.com/YunoHost-Apps/liberaforms_ynh",
       "stars": 1,
       "forks": 2,
-      "updated_at": "2026-01-25T23:32:30Z",
+      "updated_at": "2026-02-06T07:33:00Z",
       "language": "Shell",
       "archived": false
     },
@@ -6209,7 +6209,7 @@
       "url": "https://github.com/YunoHost-Apps/opencloud_ynh",
       "stars": 6,
       "forks": 2,
-      "updated_at": "2026-01-30T16:11:31Z",
+      "updated_at": "2026-02-06T07:27:56Z",
       "language": "Shell",
       "archived": false
     },
@@ -6429,7 +6429,7 @@
       "url": "https://github.com/YunoHost-Apps/owncloud_ynh",
       "stars": 4,
       "forks": 9,
-      "updated_at": "2026-01-28T08:43:14Z",
+      "updated_at": "2026-02-06T09:09:35Z",
       "language": "Shell",
       "archived": false
     },
@@ -8843,6 +8843,17 @@
       "archived": true
     },
     {
+      "id": "tcg-collections_ynh",
+      "name": "tcg-collections",
+      "description": "Collection manager for Yu-Gi-Oh!, Riftbound or Dragon Ball Akira cards",
+      "url": "https://github.com/YunoHost-Apps/tcg-collections_ynh",
+      "stars": 0,
+      "forks": 0,
+      "updated_at": "2026-02-07T01:26:12Z",
+      "language": "Shell",
+      "archived": false
+    },
+    {
       "id": "teampass_ynh",
       "name": "teampass",
       "description": "Teampass package for YunoHost",
@@ -9553,7 +9564,7 @@
       "url": "https://github.com/YunoHost-Apps/warpgate_ynh",
       "stars": 0,
       "forks": 1,
-      "updated_at": "2025-12-08T22:43:04Z",
+      "updated_at": "2026-02-06T20:20:21Z",
       "language": "Shell",
       "archived": false
     },
@@ -9827,7 +9838,7 @@
       "description": "WonderCMS package for YunoHost",
       "url": "https://github.com/YunoHost-Apps/wondercms_ynh",
       "stars": 1,
-      "forks": 1,
+      "forks": 2,
       "updated_at": "2026-01-02T20:26:56Z",
       "language": "Shell",
       "archived": false
