@@ -44,23 +44,25 @@ const createMenu = (pdfUrl: string): MenuItem[] => [
       {
         title: 'Operating Systems (x86)',
         children: [
-          { title: 'YunoHost-x86_64-v11.2.iso', href: '#' },
-          { title: 'Caprover-ubuntu-x86_64-v2.iso', href: '#' },
-          { title: 'CasaOS-debian-x86_64-v0.4.8.img', href: '#' }
+          // { title: 'YunoHost-x86_64-v11.2.iso', href: '#' },
+          // { title: 'Caprover-ubuntu-x86_64-v2.iso', href: '#' },
+          // { title: 'CasaOS-debian-x86_64-v0.4.8.img', href: '#' }
+          { title: 'Images not built yet', href: '#' }
         ]
       },
       {
         title: 'Operating Systems (ARM64)',
         children: [
-          { title: 'YunoHost-rpi-arm64-v11.2.img', href: '#' },
-          { title: 'Caprover-ubuntu-arm64-v2.img', href: '#' },
-          { title: 'CasaOS-rpi-arm64-v0.4.8.img', href: '#' }
+          // { title: 'YunoHost-rpi-arm64-v11.2.img', href: '#' },
+          // { title: 'Caprover-ubuntu-arm64-v2.img', href: '#' },
+          // { title: 'CasaOS-rpi-arm64-v0.4.8.img', href: '#' }
+          { title: 'Images not built yet', href: '#' }
         ]
       },
       {
         title: 'Networking',
         children: [
-          { title: 'LibreMesh Image Finder', href: 'https://libremesh.org' }
+          { title: 'LibreMesh Image Finder', href: 'https://firmware-selector.libremesh.org/' }
         ]
       }
     ]
