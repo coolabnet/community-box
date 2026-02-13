@@ -22,9 +22,9 @@ This comprehensive guide provides step-by-step instructions for downloading, ver
 
 ### Finding Your Router's Firmware
 
-*`[Firmware Download Page Screenshot](libremesh-download-page.png)` — LibreMesh site at the firmware download section showing the downloads page interface.*
+*`[Firmware Selector Screenshot](libremesh-download-page.png)` — LibreMesh Firmware Selector tool for finding the correct firmware.*
 
-1. **Visit the LibreMesh downloads site**: https://downloads.libremesh.org/
+1. **Visit the LibreMesh Firmware Selector**: https://firmware-selector.libremesh.org/
 2. **Navigate to your router category**: Browse by manufacturer (TP-Link, GL.iNet, Asus, etc.)
 3. **Locate exact model and revision**: Match your device precisely
 4. **Choose firmware type**:
