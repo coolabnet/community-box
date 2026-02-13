@@ -160,7 +160,7 @@ const createMenu = (pdfUrl: string): MenuItem[] => [
     title: '🌍 Community',
     icon: <Users size={16} />,
     children: [
-      { title: 'Interactive Map', to: 'results/global-community-networks-directory' }
+      { title: 'Community Networks Directory', to: 'results/global-community-networks-directory' }
     ]
   },
   {
