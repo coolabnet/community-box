@@ -41,7 +41,7 @@ const UsageSelection = ({ onNext, onBack }: UsageSelectionProps) => {
     { key: 'files', icon: <FileText className="h-8 w-8" />, selected: savedUsage?.files ?? false },
     { key: 'education', icon: <GraduationCap className="h-8 w-8" />, selected: savedUsage?.education ?? false },
     { key: 'media', icon: <Radio className="h-8 w-8" />, selected: savedUsage?.media ?? false },
-    { key: 'other', icon: <MoreHorizontal className="h-8 w-8" />, selected: !!savedUsage?.other, otherText: typeof savedUsage?.other === 'string' ? savedUsage.other : '' },
+    { key: 'other', icon: <MoreHorizontal className="h-8 w-8" />, selected: 'other' in (savedUsage || {}), otherText: typeof savedUsage?.other === 'string' ? savedUsage.other : '' },
   ]);
 
   const [error, setError] = useState<string | null>(null);

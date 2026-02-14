@@ -5,7 +5,6 @@ import { Button } from '@/components/ui/button';
 import { cn } from '@/lib/utils';
 import type { PriorityAllocation, PriorityKey } from '@/types/questionnaire';
 import { useQuestionnaire } from '@/context/QuestionnaireContext';
-import { useQuestionnaire } from '@/context/QuestionnaireContext';
 import {
   MousePointerClick,
   Zap,
