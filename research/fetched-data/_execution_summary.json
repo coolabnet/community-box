@@ -1,19 +1,19 @@
 {
-  "timestamp": "2026-02-14T00:41:49.113Z",
+  "timestamp": "2026-02-14T06:53:40.919Z",
   "script": "run-all.js",
   "note": "Summary of all data fetching script executions",
   "data": {
-    "execution_time": "2026-02-14T00:41:49.113Z",
+    "execution_time": "2026-02-14T06:53:40.918Z",
     "total_scripts": 6,
     "successful": 6,
     "failed": 0,
-    "total_duration_ms": 16000,
+    "total_duration_ms": 15430,
     "continue_on_error": true,
     "results": [
       {
         "name": "CapRover UI Translations",
         "success": true,
-        "duration": 174,
+        "duration": 179,
         "result": [
           "ar-EG",
           "de-DE",
@@ -34,7 +34,7 @@
       {
         "name": "CasaOS UI Translations",
         "success": true,
-        "duration": 97,
+        "duration": 92,
         "result": [
           "ca_ES",
           "cs_CZ",
@@ -69,7 +69,7 @@
       {
         "name": "YunoHost Apps",
         "success": true,
-        "duration": 14072,
+        "duration": 13419,
         "result": {
           "count": 943,
           "apps": [
@@ -1244,9 +1244,9 @@
               "name": "commet",
               "description": "Commet package for YunoHost",
               "url": "https://github.com/YunoHost-Apps/commet_ynh",
-              "stars": 0,
+              "stars": 1,
               "forks": 3,
-              "updated_at": "2026-02-11T09:11:14Z",
+              "updated_at": "2026-02-14T01:34:56Z",
               "language": "Shell",
               "archived": false
             },
@@ -3248,7 +3248,7 @@
               "url": "https://github.com/YunoHost-Apps/glitchsoc_ynh",
               "stars": 17,
               "forks": 10,
-              "updated_at": "2026-02-05T21:02:59Z",
+              "updated_at": "2026-02-14T02:17:28Z",
               "language": "Shell",
               "archived": false
             },
@@ -5756,7 +5756,7 @@
               "url": "https://github.com/YunoHost-Apps/mumbleserver_ynh",
               "stars": 12,
               "forks": 4,
-              "updated_at": "2026-02-14T00:05:43Z",
+              "updated_at": "2026-02-14T02:14:02Z",
               "language": "Shell",
               "archived": false
             },
@@ -6185,7 +6185,7 @@
               "url": "https://github.com/YunoHost-Apps/ollama_ynh",
               "stars": 4,
               "forks": 3,
-              "updated_at": "2026-02-13T06:28:37Z",
+              "updated_at": "2026-02-14T06:44:24Z",
               "language": "Shell",
               "archived": false
             },
@@ -8913,7 +8913,7 @@
               "url": "https://github.com/YunoHost-Apps/tandoor_ynh",
               "stars": 5,
               "forks": 8,
-              "updated_at": "2026-02-10T13:51:55Z",
+              "updated_at": "2026-02-14T06:45:03Z",
               "language": "Shell",
               "archived": false
             },
@@ -9351,9 +9351,9 @@
               "name": "tuwunel",
               "description": "Tuwunel packaged for YunoHost",
               "url": "https://github.com/YunoHost-Apps/tuwunel_ynh",
-              "stars": 5,
+              "stars": 6,
               "forks": 0,
-              "updated_at": "2026-02-12T08:21:48Z",
+              "updated_at": "2026-02-14T01:13:25Z",
               "language": "Shell",
               "archived": false
             },
@@ -9463,7 +9463,7 @@
               "url": "https://github.com/YunoHost-Apps/uptime-kuma_ynh",
               "stars": 12,
               "forks": 6,
-              "updated_at": "2026-02-08T09:58:26Z",
+              "updated_at": "2026-02-14T04:19:09Z",
               "language": "Shell",
               "archived": false
             },
@@ -10465,7 +10465,7 @@
       {
         "name": "YunoHost Docs Translations",
         "success": true,
-        "duration": 76,
+        "duration": 65,
         "result": [
           "de",
           "docs",
@@ -10479,7 +10479,7 @@
       {
         "name": "YunoHost UI Translations",
         "success": true,
-        "duration": 1287,
+        "duration": 1266,
         "result": [
           {
             "language": "Catalan",
@@ -10886,7 +10886,7 @@
       {
         "name": "Zimaboard Shipping Areas",
         "success": true,
-        "duration": 294,
+        "duration": 409,
         "result": [
           "Argentina",
           "Australia",

@@ -1,6 +1,6 @@
 {
-  "timestamp": "2026-02-14T00:41:47.453Z",
-  "script": "run-all.js",
+  "timestamp": "2026-02-14T06:53:41.639Z",
+  "script": "scripts.test.js",
   "source": "YunoHost-Apps GitHub Organization",
   "url": "https://github.com/YunoHost-Apps",
   "api_url": "https://api.github.com/orgs/YunoHost-Apps/repos",
@@ -1191,9 +1191,9 @@
       "name": "commet",
       "description": "Commet package for YunoHost",
       "url": "https://github.com/YunoHost-Apps/commet_ynh",
-      "stars": 0,
+      "stars": 1,
       "forks": 3,
-      "updated_at": "2026-02-11T09:11:14Z",
+      "updated_at": "2026-02-14T01:34:56Z",
       "language": "Shell",
       "archived": false
     },
@@ -3195,7 +3195,7 @@
       "url": "https://github.com/YunoHost-Apps/glitchsoc_ynh",
       "stars": 17,
       "forks": 10,
-      "updated_at": "2026-02-05T21:02:59Z",
+      "updated_at": "2026-02-14T02:17:28Z",
       "language": "Shell",
       "archived": false
     },
@@ -5703,7 +5703,7 @@
       "url": "https://github.com/YunoHost-Apps/mumbleserver_ynh",
       "stars": 12,
       "forks": 4,
-      "updated_at": "2026-02-14T00:05:43Z",
+      "updated_at": "2026-02-14T02:14:02Z",
       "language": "Shell",
       "archived": false
     },
@@ -6132,7 +6132,7 @@
       "url": "https://github.com/YunoHost-Apps/ollama_ynh",
       "stars": 4,
       "forks": 3,
-      "updated_at": "2026-02-13T06:28:37Z",
+      "updated_at": "2026-02-14T06:44:24Z",
       "language": "Shell",
       "archived": false
     },
@@ -8860,7 +8860,7 @@
       "url": "https://github.com/YunoHost-Apps/tandoor_ynh",
       "stars": 5,
       "forks": 8,
-      "updated_at": "2026-02-10T13:51:55Z",
+      "updated_at": "2026-02-14T06:45:03Z",
       "language": "Shell",
       "archived": false
     },
@@ -9298,9 +9298,9 @@
       "name": "tuwunel",
       "description": "Tuwunel packaged for YunoHost",
       "url": "https://github.com/YunoHost-Apps/tuwunel_ynh",
-      "stars": 5,
+      "stars": 6,
       "forks": 0,
-      "updated_at": "2026-02-12T08:21:48Z",
+      "updated_at": "2026-02-14T01:13:25Z",
       "language": "Shell",
       "archived": false
     },
@@ -9410,7 +9410,7 @@
       "url": "https://github.com/YunoHost-Apps/uptime-kuma_ynh",
       "stars": 12,
       "forks": 6,
-      "updated_at": "2026-02-08T09:58:26Z",
+      "updated_at": "2026-02-14T04:19:09Z",
       "language": "Shell",
       "archived": false
     },
