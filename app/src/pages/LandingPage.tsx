@@ -1,14 +1,19 @@
+import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { motion } from 'framer-motion';
 import { Button } from '@/components/ui/button';
 import { useNavigate } from 'react-router-dom';
 import LanguageSwitcher from '@/components/LanguageSwitcher';
-import { Wifi } from 'lucide-react';
+import SidebarMenu from '@/components/SidebarMenu';
+import { useIsMobile } from '@/hooks/use-mobile';
+import { Wifi, Menu as MenuIcon, X as CloseIcon } from 'lucide-react';
 import bannerImage from '../assets/banner.png';
 
 const LandingPage = () => {
   const { t } = useTranslation();
   const navigate = useNavigate();
+  const isMobile = useIsMobile();
+  const [sidebarOpen, setSidebarOpen] = useState(false);
 
   const handleStart = () => {
     navigate('/questionnaire');
@@ -24,6 +29,15 @@ const LandingPage = () => {
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.5 }}
         >
+          {isMobile && (
+            <button
+              onClick={() => setSidebarOpen(!sidebarOpen)}
+              className="p-2 hover:bg-gray-100 rounded-lg transition-colors"
+              aria-label="Toggle sidebar"
+            >
+              {sidebarOpen ? <CloseIcon size={20} /> : <MenuIcon size={20} />}
+            </button>
+          )}
           <div className="h-10 w-10 rounded-full bg-primary flex items-center justify-center text-primary-foreground">
             <Wifi className="h-6 w-6" />
           </div>
@@ -35,6 +49,13 @@ const LandingPage = () => {
           <LanguageSwitcher />
         </div>
       </header>
+
+      {/* Sidebar Menu */}
+      <SidebarMenu
+        isOpen={sidebarOpen}
+        onToggle={() => setSidebarOpen(!sidebarOpen)}
+        showToggleButton={false}
+      />
 
       <div className="flex-1 flex flex-col items-center justify-center px-4 py-12">
         <motion.div
