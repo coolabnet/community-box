@@ -29,7 +29,7 @@ export interface DeviceScore {
 
 export type ElectricityAnswer = 'yes' | 'sometimes' | 'no';
 export type UsersAnswer = '1-2' | '3-5' | '6+';
-export type GrowthAnswer = 'low' | 'medium' | 'high';
+export type GrowthAnswer = 'low' | 'medium' | 'high' | 'notSure';
 export type ReuseAnswer = 'yes' | 'no';
 export type FormatAnswer = 'yes' | 'maybe' | 'no';
 export type PriceAnswer = 'low' | 'medium' | 'high';

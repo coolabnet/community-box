@@ -4,6 +4,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { Button } from '@/components/ui/button';
 import { cn } from '@/lib/utils';
 import type { PriorityAllocation, PriorityKey } from '@/types/questionnaire';
+import { useQuestionnaire } from '@/context/QuestionnaireContext';
 import {
   MousePointerClick,
   Zap,
@@ -12,7 +13,8 @@ import {
   DollarSign,
   Plus,
   Minus,
-  Sparkles
+  Sparkles,
+  ArrowLeft
 } from 'lucide-react';
 
 interface Priority {
@@ -25,25 +27,31 @@ const MAX_POINTS = 5;
 
 // Define priority colors
 const priorityColors = {
-  easyToUse: { bg: 'bg-blue-100 dark:bg-blue-900/30', text: 'text-blue-600 dark:text-blue-400', fill: 'bg-blue-500' },
-  lowPower: { bg: 'bg-green-100 dark:bg-green-900/30', text: 'text-green-600 dark:text-green-400', fill: 'bg-green-500' },
-  language: { bg: 'bg-purple-100 dark:bg-purple-900/30', text: 'text-purple-600 dark:text-purple-400', fill: 'bg-purple-500' },
-  scalable: { bg: 'bg-orange-100 dark:bg-orange-900/30', text: 'text-orange-600 dark:text-orange-400', fill: 'bg-orange-500' },
-  lowCost: { bg: 'bg-rose-100 dark:bg-rose-900/30', text: 'text-rose-600 dark:text-rose-400', fill: 'bg-rose-500' },
+  easyToUse: { bg: 'bg-blue-100 dark:bg-blue-900/30', text: 'text-blue-600 dark:text-blue-500', fill: 'bg-blue-500' },
+  lowPower: { bg: 'bg-green-100 dark:bg-green-900/30', text: 'text-green-600 dark:text-green-500', fill: 'bg-green-500' },
+  language: { bg: 'bg-purple-100 dark:bg-purple-900/30', text: 'text-purple-600 dark:text-purple-500', fill: 'bg-purple-500' },
+  scalable: { bg: 'bg-orange-100 dark:bg-orange-900/30', text: 'text-orange-600 dark:text-orange-500', fill: 'bg-orange-500' },
+  lowCost: { bg: 'bg-rose-100 dark:bg-rose-900/30', text: 'text-rose-600 dark:text-rose-500', fill: 'bg-rose-500' },
 };
 
 interface PointsAllocationProps {
   onNext: (values: PriorityAllocation) => void;
+  onBack?: () => void;
 }
 
-const PointsAllocation = ({ onNext }: PointsAllocationProps) => {
+const PointsAllocation = ({ onNext, onBack }: PointsAllocationProps) => {
   const { t } = useTranslation();
+  const { answers } = useQuestionnaire();
+
+  // Initialize priorities from saved answers if available
+  const savedPoints = answers.points as PriorityAllocation | undefined;
+
   const [priorities, setPriorities] = useState<Priority[]>([
-    { key: 'easyToUse', icon: <MousePointerClick className="h-5 w-5" />, points: 0 },
-    { key: 'lowPower', icon: <Zap className="h-5 w-5" />, points: 0 },
-    { key: 'language', icon: <Globe className="h-5 w-5" />, points: 0 },
-    { key: 'scalable', icon: <ArrowUpRight className="h-5 w-5" />, points: 0 },
-    { key: 'lowCost', icon: <DollarSign className="h-5 w-5" />, points: 0 },
+    { key: 'easyToUse', icon: <MousePointerClick className="h-5 w-5" />, points: savedPoints?.easyToUse ?? 0 },
+    { key: 'lowPower', icon: <Zap className="h-5 w-5" />, points: savedPoints?.lowPower ?? 0 },
+    { key: 'language', icon: <Globe className="h-5 w-5" />, points: savedPoints?.language ?? 0 },
+    { key: 'scalable', icon: <ArrowUpRight className="h-5 w-5" />, points: savedPoints?.scalable ?? 0 },
+    { key: 'lowCost', icon: <DollarSign className="h-5 w-5" />, points: savedPoints?.lowCost ?? 0 },
   ]);
 
   const [showMaxPointsMessage, setShowMaxPointsMessage] = useState(false);
@@ -135,10 +143,10 @@ const PointsAllocation = ({ onNext }: PointsAllocationProps) => {
             className={cn(
               "inline-flex items-center gap-2 px-5 py-2.5 rounded-full font-medium shadow-md",
               showMaxPointsMessage
-                ? "bg-amber-100 text-amber-700 dark:bg-amber-900/50 dark:text-amber-300"
+                ? "bg-amber-100 text-amber-700 dark:bg-amber-900/50 dark:text-amber-400"
                 : remainingPoints === 0
-                  ? "bg-blue-100 text-blue-700 dark:bg-blue-900/50 dark:text-blue-300"
-                  : "bg-gradient-to-r from-indigo-100 to-purple-100 text-indigo-700 dark:from-indigo-900/30 dark:to-purple-900/30 dark:text-indigo-300"
+                  ? "bg-blue-100 text-blue-700 dark:bg-blue-900/50 dark:text-blue-400"
+                  : "bg-gradient-to-r from-indigo-100 to-purple-100 text-indigo-700 dark:from-indigo-900/30 dark:to-purple-900/30 dark:text-indigo-400"
             )}
             initial={{ opacity: 0, scale: 0.9, y: -5 }}
             animate={{
@@ -297,11 +305,26 @@ const PointsAllocation = ({ onNext }: PointsAllocationProps) => {
 
       {/* Continue button */}
       <motion.div
-        className="flex justify-center"
+        className="flex justify-center gap-4"
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.5 }}
       >
+        {onBack && (
+          <motion.div
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+          >
+            <Button
+              variant="outline"
+              onClick={onBack}
+              className="px-8 py-6 text-lg"
+            >
+              <ArrowLeft className="mr-2 h-5 w-5" />
+              {t('questionnaire.buttons.back')}
+            </Button>
+          </motion.div>
+        )}
         <motion.div
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
