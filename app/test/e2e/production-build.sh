@@ -66,58 +66,56 @@ if [ "$DRY_RUN" = true ]; then
   echo "[DRY RUN] Would test: /community-box/questionnaire"
   echo "[DRY RUN] Would test: /community-box/docs/results/global-community-networks-directory"
   echo "[DRY RUN] Would test: /community-box/research/results/community-directory.json"
-else
-  echo -n "Testing: /community-box/ (home) ... "
-npx agent-browser open "$BASE_URL/" 2>/dev/null
-npx agent-browser wait 3000 2>/dev/null || true
-SNAPSHOT=$(npx agent-browser snapshot 2>/dev/null || echo "ERROR")
-if echo "$SNAPSHOT" | grep -qi "Community Box\|Hardware\|Software" ; then
-  echo "✅ PASSED"
-else
-  echo "❌ FAILED"
-  FAILED=1
-  FAILED_ROUTES="$FAILED_ROUTES\n  - /community-box/"
-fi
-
-echo -n "Testing: /questionnaire ... "
-npx agent-browser open "$BASE_URL/questionnaire" 2>/dev/null
-npx agent-browser wait 3000 2>/dev/null || true
-SNAPSHOT=$(npx agent-browser snapshot 2>/dev/null || echo "ERROR")
-if echo "$SNAPSHOT" | grep -qi "404\|Not Found" ; then
-  echo "❌ FAILED"
-  FAILED=1
-  FAILED_ROUTES="$FAILED_ROUTES\n  - /community-box/questionnaire"
-else
-  echo "✅ PASSED"
-fi
-
-echo -n "Testing: /docs/results/global-community-networks-directory ... "
-npx agent-browser open "$BASE_URL/docs/results/global-community-networks-directory" 2>/dev/null
-npx agent-browser wait 3000 2>/dev/null || true
-SNAPSHOT=$(npx agent-browser snapshot 2>/dev/null || echo "ERROR")
-if echo "$SNAPSHOT" | grep -qi "Document Not Found\|404" ; then
-  echo "❌ FAILED"
-  FAILED=1
-  FAILED_ROUTES="$FAILED_ROUTES\n  - /community-box/docs/results/global-community-networks-directory"
-else
-  echo "✅ PASSED"
-fi
-
-# Test JSON file with basename
-echo -n "Testing: /research/results/community-directory.json ... "
-STATUS=$(curl -s -o /dev/null -w "%{http_code}" "$BASE_URL/research/results/community-directory.json" 2>/dev/null || echo "000")
-if [ "$STATUS" = "200" ]; then
-  echo "✅ PASSED"
-else
-  echo "❌ FAILED (HTTP $STATUS)"
-  FAILED=1
-  FAILED_ROUTES="$FAILED_ROUTES\n  - /community-box/research/results/community-directory.json (HTTP $STATUS)"
-fi
-
-if [ "$DRY_RUN" = true ]; then
   echo ""
   echo "🔍 [DRY RUN] No actual tests were executed"
   exit 0
+else
+  echo -n "Testing: /community-box/ (home) ... "
+  npx agent-browser open "$BASE_URL/" 2>/dev/null
+  npx agent-browser wait 3000 2>/dev/null || true
+  SNAPSHOT=$(npx agent-browser snapshot 2>/dev/null || echo "ERROR")
+  if echo "$SNAPSHOT" | grep -qi "Community Box\|Hardware\|Software" ; then
+    echo "✅ PASSED"
+  else
+    echo "❌ FAILED"
+    FAILED=1
+    FAILED_ROUTES="$FAILED_ROUTES\n  - /community-box/"
+  fi
+
+  echo -n "Testing: /questionnaire ... "
+  npx agent-browser open "$BASE_URL/questionnaire" 2>/dev/null
+  npx agent-browser wait 3000 2>/dev/null || true
+  SNAPSHOT=$(npx agent-browser snapshot 2>/dev/null || echo "ERROR")
+  if echo "$SNAPSHOT" | grep -qi "404\|Not Found" ; then
+    echo "❌ FAILED"
+    FAILED=1
+    FAILED_ROUTES="$FAILED_ROUTES\n  - /community-box/questionnaire"
+  else
+    echo "✅ PASSED"
+  fi
+
+  echo -n "Testing: /docs/results/global-community-networks-directory ... "
+  npx agent-browser open "$BASE_URL/docs/results/global-community-networks-directory" 2>/dev/null
+  npx agent-browser wait 3000 2>/dev/null || true
+  SNAPSHOT=$(npx agent-browser snapshot 2>/dev/null || echo "ERROR")
+  if echo "$SNAPSHOT" | grep -qi "Document Not Found\|404" ; then
+    echo "❌ FAILED"
+    FAILED=1
+    FAILED_ROUTES="$FAILED_ROUTES\n  - /community-box/docs/results/global-community-networks-directory"
+  else
+    echo "✅ PASSED"
+  fi
+
+  # Test JSON file with basename
+  echo -n "Testing: /research/results/community-directory.json ... "
+  STATUS=$(curl -s -o /dev/null -w "%{http_code}" "$BASE_URL/research/results/community-directory.json" 2>/dev/null || echo "000")
+  if [ "$STATUS" = "200" ]; then
+    echo "✅ PASSED"
+  else
+    echo "❌ FAILED (HTTP $STATUS)"
+    FAILED=1
+    FAILED_ROUTES="$FAILED_ROUTES\n  - /community-box/research/results/community-directory.json (HTTP $STATUS)"
+  fi
 fi
 
 npx agent-browser close 2>/dev/null || true

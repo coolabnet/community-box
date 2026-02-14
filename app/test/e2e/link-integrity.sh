@@ -106,13 +106,14 @@ if [ "$DRY_RUN" = true ]; then
   echo "[DRY RUN] Would test: /research/results/community-directory.json (raw file)"
 else
   echo -n "Testing: /research/results/community-directory.json (raw file) ... "
-STATUS=$(curl -s -o /dev/null -w "%{http_code}" "$BASE_URL/research/results/community-directory.json" 2>/dev/null || echo "000")
-if [ "$STATUS" = "200" ]; then
-  echo "✅ PASSED"
-else
-  echo "❌ FAILED (HTTP $STATUS)"
-  FAILED=1
-  FAILED_ROUTES="$FAILED_ROUTES\n  - /research/results/community-directory.json (HTTP $STATUS)"
+  STATUS=$(curl -s -o /dev/null -w "%{http_code}" "$BASE_URL/research/results/community-directory.json" 2>/dev/null || echo "000")
+  if [ "$STATUS" = "200" ]; then
+    echo "✅ PASSED"
+  else
+    echo "❌ FAILED (HTTP $STATUS)"
+    FAILED=1
+    FAILED_ROUTES="$FAILED_ROUTES\n  - /research/results/community-directory.json (HTTP $STATUS)"
+  fi
 fi
 
 npx agent-browser close 2>/dev/null || true
