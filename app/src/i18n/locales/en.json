@@ -22,7 +22,8 @@
         "options": {
           "low": "Minimal growth",
           "medium": "Moderate growth",
-          "high": "Rapid growth"
+          "high": "Rapid growth",
+          "notSure": "Not sure"
         }
       },
       "reuse": {
