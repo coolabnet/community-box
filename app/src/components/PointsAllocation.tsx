@@ -4,6 +4,8 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { Button } from '@/components/ui/button';
 import { cn } from '@/lib/utils';
 import type { PriorityAllocation, PriorityKey } from '@/types/questionnaire';
+import { useQuestionnaire } from '@/context/QuestionnaireContext';
+import { useQuestionnaire } from '@/context/QuestionnaireContext';
 import {
   MousePointerClick,
   Zap,
@@ -12,7 +14,8 @@ import {
   DollarSign,
   Plus,
   Minus,
-  Sparkles
+  Sparkles,
+  ArrowLeft
 } from 'lucide-react';
 
 interface Priority {
@@ -34,16 +37,22 @@ const priorityColors = {
 
 interface PointsAllocationProps {
   onNext: (values: PriorityAllocation) => void;
+  onBack?: () => void;
 }
 
-const PointsAllocation = ({ onNext }: PointsAllocationProps) => {
+const PointsAllocation = ({ onNext, onBack }: PointsAllocationProps) => {
   const { t } = useTranslation();
+  const { answers } = useQuestionnaire();
+
+  // Initialize priorities from saved answers if available
+  const savedPoints = answers.points as PriorityAllocation | undefined;
+
   const [priorities, setPriorities] = useState<Priority[]>([
-    { key: 'easyToUse', icon: <MousePointerClick className="h-5 w-5" />, points: 0 },
-    { key: 'lowPower', icon: <Zap className="h-5 w-5" />, points: 0 },
-    { key: 'language', icon: <Globe className="h-5 w-5" />, points: 0 },
-    { key: 'scalable', icon: <ArrowUpRight className="h-5 w-5" />, points: 0 },
-    { key: 'lowCost', icon: <DollarSign className="h-5 w-5" />, points: 0 },
+    { key: 'easyToUse', icon: <MousePointerClick className="h-5 w-5" />, points: savedPoints?.easyToUse ?? 0 },
+    { key: 'lowPower', icon: <Zap className="h-5 w-5" />, points: savedPoints?.lowPower ?? 0 },
+    { key: 'language', icon: <Globe className="h-5 w-5" />, points: savedPoints?.language ?? 0 },
+    { key: 'scalable', icon: <ArrowUpRight className="h-5 w-5" />, points: savedPoints?.scalable ?? 0 },
+    { key: 'lowCost', icon: <DollarSign className="h-5 w-5" />, points: savedPoints?.lowCost ?? 0 },
   ]);
 
   const [showMaxPointsMessage, setShowMaxPointsMessage] = useState(false);
@@ -297,11 +306,26 @@ const PointsAllocation = ({ onNext }: PointsAllocationProps) => {
 
       {/* Continue button */}
       <motion.div
-        className="flex justify-center"
+        className="flex justify-center gap-4"
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.5 }}
       >
+        {onBack && (
+          <motion.div
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+          >
+            <Button
+              variant="outline"
+              onClick={onBack}
+              className="px-8 py-6 text-lg"
+            >
+              <ArrowLeft className="mr-2 h-5 w-5" />
+              {t('questionnaire.buttons.back')}
+            </Button>
+          </motion.div>
+        )}
         <motion.div
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}

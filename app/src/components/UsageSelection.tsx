@@ -5,6 +5,7 @@ import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { cn } from '@/lib/utils';
 import type { UsageKey, UsageSelectionValues } from '@/types/questionnaire';
+import { useQuestionnaire } from '@/context/QuestionnaireContext';
 import {
   Newspaper,
   FileText,
@@ -12,7 +13,8 @@ import {
   Radio,
   MoreHorizontal,
   Check,
-  AlertCircle
+  AlertCircle,
+  ArrowLeft
 } from 'lucide-react';
 
 interface UsageOption {
@@ -24,16 +26,22 @@ interface UsageOption {
 
 interface UsageSelectionProps {
   onNext: (values: UsageSelectionValues) => void;
+  onBack?: () => void;
 }
 
-const UsageSelection = ({ onNext }: UsageSelectionProps) => {
+const UsageSelection = ({ onNext, onBack }: UsageSelectionProps) => {
   const { t } = useTranslation();
+  const { answers } = useQuestionnaire();
+
+  // Initialize from saved answers if available
+  const savedUsage = answers.usage as UsageSelectionValues | undefined;
+
   const [usageOptions, setUsageOptions] = useState<UsageOption[]>([
-    { key: 'news', icon: <Newspaper className="h-8 w-8" />, selected: false },
-    { key: 'files', icon: <FileText className="h-8 w-8" />, selected: false },
-    { key: 'education', icon: <GraduationCap className="h-8 w-8" />, selected: false },
-    { key: 'media', icon: <Radio className="h-8 w-8" />, selected: false },
-    { key: 'other', icon: <MoreHorizontal className="h-8 w-8" />, selected: false, otherText: '' },
+    { key: 'news', icon: <Newspaper className="h-8 w-8" />, selected: savedUsage?.news ?? false },
+    { key: 'files', icon: <FileText className="h-8 w-8" />, selected: savedUsage?.files ?? false },
+    { key: 'education', icon: <GraduationCap className="h-8 w-8" />, selected: savedUsage?.education ?? false },
+    { key: 'media', icon: <Radio className="h-8 w-8" />, selected: savedUsage?.media ?? false },
+    { key: 'other', icon: <MoreHorizontal className="h-8 w-8" />, selected: !!savedUsage?.other, otherText: typeof savedUsage?.other === 'string' ? savedUsage.other : '' },
   ]);
 
   const [error, setError] = useState<string | null>(null);
@@ -202,14 +210,25 @@ const UsageSelection = ({ onNext }: UsageSelectionProps) => {
       {/* Continue button */}
       <div className="p-6 border-t border-border bg-card/50 backdrop-blur-sm">
         <motion.div
-          className="max-w-md mx-auto"
+          className="max-w-md mx-auto flex gap-4"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.5 }}
         >
+          {onBack && (
+            <Button
+              variant="outline"
+              onClick={onBack}
+              className="py-6 text-lg flex-1"
+              size="lg"
+            >
+              <ArrowLeft className="mr-2 h-5 w-5" />
+              {t('questionnaire.buttons.back')}
+            </Button>
+          )}
           <Button
             onClick={handleContinue}
-            className="w-full py-6 text-lg relative overflow-hidden"
+            className="py-6 text-lg relative overflow-hidden flex-1"
             size="lg"
           >
             <AnimatePresence mode="wait">
