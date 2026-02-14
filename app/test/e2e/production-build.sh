@@ -114,6 +114,12 @@ else
   FAILED_ROUTES="$FAILED_ROUTES\n  - /community-box/research/results/community-directory.json (HTTP $STATUS)"
 fi
 
+if [ "$DRY_RUN" = true ]; then
+  echo ""
+  echo "🔍 [DRY RUN] No actual tests were executed"
+  exit 0
+fi
+
 npx agent-browser close 2>/dev/null || true
 
 if [ $FAILED -eq 1 ]; then
