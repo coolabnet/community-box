@@ -3,14 +3,46 @@ set -e
 
 BASE_URL="${BASE_URL:-http://localhost:8080}"
 
+# Parse arguments
+DRY_RUN=false
+for arg in "$@"; do
+  case $arg in
+    --dry-run)
+      DRY_RUN=true
+      ;;
+  esac
+done
+
 echo "🧪 Testing All Routes from Research Folder"
 
+if [ "$DRY_RUN" = true ]; then
+  echo "🔍 [DRY RUN] Would scan research folder for markdown files..."
+fi
+
 # Check if dev server is already running
-if ! curl -s "$BASE_URL" > /dev/null 2>&1; then
+if [ "$DRY_RUN" = true ]; then
+  echo "🔍 [DRY RUN] Would start dev server if not running"
+elif ! curl -s "$BASE_URL" > /dev/null 2>&1; then
   echo "📦 Starting dev server..."
   npm run dev &
   DEV_PID=$!
-  sleep 8
+  # Poll for server readiness instead of fixed sleep
+  MAX_WAIT=30
+  INTERVAL=1
+  ELAPSED=0
+  while [ $ELAPSED -lt $MAX_WAIT ]; do
+    if curl -s "$BASE_URL" > /dev/null 2>&1; then
+      echo "✅ Dev server ready"
+      break
+    fi
+    sleep $INTERVAL
+    ELAPSED=$((ELAPSED + INTERVAL))
+    echo "Waiting for server... ${ELAPSED}s"
+  done
+  if [ $ELAPSED -ge $MAX_WAIT ]; then
+    echo "❌ Server failed to start within ${MAX_WAIT}s"
+    exit 1
+  fi
   STARTED_SERVER=true
 else
   echo "✅ Dev server already running"
@@ -50,6 +82,12 @@ for mdfile in "$PROJECT_ROOT"/research/**/*.md; do
   route="${mdfile#$PROJECT_ROOT/research/}"
   route="${route%.md}"
 
+  if [ "$DRY_RUN" = true ]; then
+    echo "[DRY RUN] Would test: /docs/$route"
+    ROUTE_COUNT=$((ROUTE_COUNT + 1))
+    continue
+  fi
+
   echo -n "Testing: /docs/$route ... "
   
   npx agent-browser open "$BASE_URL/docs/$route" 2>/dev/null
@@ -78,6 +116,11 @@ npx agent-browser close 2>/dev/null || true
 echo ""
 echo "📊 Test Results:"
 echo "  Total routes tested: $ROUTE_COUNT"
+
+if [ "$DRY_RUN" = true ]; then
+  echo "🔍 [DRY RUN] No actual tests were executed"
+  exit 0
+fi
 echo "  Failed: $FAILED_COUNT"
 
 if [ $FAILED_COUNT -gt 0 ]; then

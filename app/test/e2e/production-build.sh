@@ -4,32 +4,51 @@ set -e
 # Production uses /community-box basename
 BASE_URL="${BASE_URL:-http://localhost:4173/community-box}"
 
+# Parse arguments
+DRY_RUN=false
+for arg in "$@"; do
+  case $arg in
+    --dry-run)
+      DRY_RUN=true
+      ;;
+  esac
+done
+
 echo "🧪 Testing Production Build with /community-box basename"
 
-# Build production version
-echo "📦 Building production bundle..."
-npm run build
+if [ "$DRY_RUN" = true ]; then
+  echo "🔍 [DRY RUN] Would build and test production bundle"
+fi
 
-# Start preview server
-echo "🚀 Starting preview server..."
-npm run preview &
-PREVIEW_PID=$!
-# Poll for server readiness instead of fixed sleep
-MAX_WAIT=30
-INTERVAL=1
-ELAPSED=0
-while [ $ELAPSED -lt $MAX_WAIT ]; do
-  if curl -s "$BASE_URL" > /dev/null 2>&1; then
-    echo "✅ Preview server ready"
-    break
+# Build production version
+if [ "$DRY_RUN" = true ]; then
+  echo "🔍 [DRY RUN] Would run: npm run build"
+  echo "🔍 [DRY RUN] Would start preview server"
+else
+  echo "📦 Building production bundle..."
+  npm run build
+
+  # Start preview server
+  echo "🚀 Starting preview server..."
+  npm run preview &
+  PREVIEW_PID=$!
+  # Poll for server readiness instead of fixed sleep
+  MAX_WAIT=30
+  INTERVAL=1
+  ELAPSED=0
+  while [ $ELAPSED -lt $MAX_WAIT ]; do
+    if curl -s "$BASE_URL" > /dev/null 2>&1; then
+      echo "✅ Preview server ready"
+      break
+    fi
+    sleep $INTERVAL
+    ELAPSED=$((ELAPSED + INTERVAL))
+    echo "Waiting for server... ${ELAPSED}s"
+  done
+  if [ $ELAPSED -ge $MAX_WAIT ]; then
+    echo "❌ Server failed to start within ${MAX_WAIT}s"
+    exit 1
   fi
-  sleep $INTERVAL
-  ELAPSED=$((ELAPSED + INTERVAL))
-  echo "Waiting for server... ${ELAPSED}s"
-done
-if [ $ELAPSED -ge $MAX_WAIT ]; then
-  echo "❌ Server failed to start within ${MAX_WAIT}s"
-  exit 1
 fi
 
 cleanup() {
@@ -42,7 +61,13 @@ FAILED=0
 FAILED_ROUTES=""
 
 # Test critical routes with basename
-echo -n "Testing: /community-box/ (home) ... "
+if [ "$DRY_RUN" = true ]; then
+  echo "[DRY RUN] Would test: /community-box/ (home)"
+  echo "[DRY RUN] Would test: /community-box/questionnaire"
+  echo "[DRY RUN] Would test: /community-box/docs/results/global-community-networks-directory"
+  echo "[DRY RUN] Would test: /community-box/research/results/community-directory.json"
+else
+  echo -n "Testing: /community-box/ (home) ... "
 npx agent-browser open "$BASE_URL/" 2>/dev/null
 npx agent-browser wait 3000 2>/dev/null || true
 SNAPSHOT=$(npx agent-browser snapshot 2>/dev/null || echo "ERROR")

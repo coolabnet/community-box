@@ -3,14 +3,46 @@ set -e
 
 BASE_URL="${BASE_URL:-http://localhost:8080}"
 
+# Parse arguments
+DRY_RUN=false
+for arg in "$@"; do
+  case $arg in
+    --dry-run)
+      DRY_RUN=true
+      ;;
+  esac
+done
+
 echo "🧪 Testing Link Integrity (Issue #11 Critical Routes)"
 
+if [ "$DRY_RUN" = true ]; then
+  echo "🔍 [DRY RUN] Would scan routes without executing tests"
+fi
+
 # Check if dev server is already running
-if ! curl -s "$BASE_URL" > /dev/null 2>&1; then
+if [ "$DRY_RUN" = true ]; then
+  echo "🔍 [DRY RUN] Would start dev server if not running"
+elif ! curl -s "$BASE_URL" > /dev/null 2>&1; then
   echo "📦 Starting dev server..."
   npm run dev &
   DEV_PID=$!
-  sleep 8
+  # Poll for server readiness instead of fixed sleep
+  MAX_WAIT=30
+  INTERVAL=1
+  ELAPSED=0
+  while [ $ELAPSED -lt $MAX_WAIT ]; do
+    if curl -s "$BASE_URL" > /dev/null 2>&1; then
+      echo "✅ Dev server ready"
+      break
+    fi
+    sleep $INTERVAL
+    ELAPSED=$((ELAPSED + INTERVAL))
+    echo "Waiting for server... ${ELAPSED}s"
+  done
+  if [ $ELAPSED -ge $MAX_WAIT ]; then
+    echo "❌ Server failed to start within ${MAX_WAIT}s"
+    exit 1
+  fi
   STARTED_SERVER=true
 else
   echo "✅ Dev server already running"
@@ -47,6 +79,11 @@ FAILED=0
 FAILED_ROUTES=""
 
 for route in "${ROUTES[@]}"; do
+  if [ "$DRY_RUN" = true ]; then
+    echo "[DRY RUN] Would test: $route"
+    continue
+  fi
+
   echo -n "Testing: $route ... "
   
   npx agent-browser open "$BASE_URL$route" 2>/dev/null
@@ -65,7 +102,10 @@ for route in "${ROUTES[@]}"; do
 done
 
 # Test JSON file accessibility (this is a key Issue #11 bug)
-echo -n "Testing: /research/results/community-directory.json (raw file) ... "
+if [ "$DRY_RUN" = true ]; then
+  echo "[DRY RUN] Would test: /research/results/community-directory.json (raw file)"
+else
+  echo -n "Testing: /research/results/community-directory.json (raw file) ... "
 STATUS=$(curl -s -o /dev/null -w "%{http_code}" "$BASE_URL/research/results/community-directory.json" 2>/dev/null || echo "000")
 if [ "$STATUS" = "200" ]; then
   echo "✅ PASSED"
@@ -76,6 +116,12 @@ else
 fi
 
 npx agent-browser close 2>/dev/null || true
+
+if [ "$DRY_RUN" = true ]; then
+  echo ""
+  echo "🔍 [DRY RUN] No actual tests were executed"
+  exit 0
+fi
 
 if [ $FAILED -eq 1 ]; then
   echo -e "\n❌ Link integrity tests failed:$FAILED_ROUTES"
