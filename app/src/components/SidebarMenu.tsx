@@ -30,7 +30,7 @@ const createMenu = (pdfUrl: string): MenuItem[] => [
   {
     title: '🧭 Hardware Questionnaire',
     icon: <HardDrive size={16} />,
-    href: '/questionnaire'
+    to: '/questionnaire'
   },
   {
     title: '📄 Download Research Paper',
@@ -330,9 +330,11 @@ function MenuItem({ item, level }: { item: MenuItem; level: number }) {
   }
 
   if (item.to) {
+    // Use absolute paths directly, otherwise prepend /docs/
+    const linkPath = item.to.startsWith('/') ? item.to : `/docs/${item.to}`;
     return (
       <Link
-        to={`/docs/${item.to}`}
+        to={linkPath}
         className="block py-2 px-2 rounded hover:bg-secondary/50 hover:text-primary transition-colors text-sm"
         style={{ paddingLeft }}
       >
