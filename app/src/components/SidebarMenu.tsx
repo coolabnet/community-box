@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Link, useLocation } from 'react-router-dom';
 import {
@@ -210,9 +210,15 @@ export default function SidebarMenu({ isOpen = false, onToggle, showToggleButton
   }, [pdfUrl]);
 
   // Auto-close on route change (mobile) - only when pathname changes
+  const prevPathname = useRef(pathname);
   useEffect(() => {
-    if (isMobile && onToggle && isOpen) {
+    if (isMobile && onToggle && isOpen && pathname !== prevPathname.current) {
       onToggle();
+      prevPathname.current = pathname;
+    }
+    // Always update prevPathname when pathname changes
+    if (pathname !== prevPathname.current) {
+      prevPathname.current = pathname;
     }
   }, [isMobile, isOpen, onToggle, pathname]);
 
