@@ -14,7 +14,23 @@ npm run build
 echo "🚀 Starting preview server..."
 npm run preview &
 PREVIEW_PID=$!
-sleep 5
+# Poll for server readiness instead of fixed sleep
+MAX_WAIT=30
+INTERVAL=1
+ELAPSED=0
+while [ $ELAPSED -lt $MAX_WAIT ]; do
+  if curl -s "$BASE_URL" > /dev/null 2>&1; then
+    echo "✅ Preview server ready"
+    break
+  fi
+  sleep $INTERVAL
+  ELAPSED=$((ELAPSED + INTERVAL))
+  echo "Waiting for server... ${ELAPSED}s"
+done
+if [ $ELAPSED -ge $MAX_WAIT ]; then
+  echo "❌ Server failed to start within ${MAX_WAIT}s"
+  exit 1
+fi
 
 cleanup() {
   npx agent-browser close 2>/dev/null || true
@@ -27,7 +43,7 @@ FAILED_ROUTES=""
 
 # Test critical routes with basename
 echo -n "Testing: /community-box/ (home) ... "
-npx agent-browser open "http://localhost:4173/community-box/" 2>/dev/null
+npx agent-browser open "$BASE_URL/" 2>/dev/null
 npx agent-browser wait 3000 2>/dev/null || true
 SNAPSHOT=$(npx agent-browser snapshot 2>/dev/null || echo "ERROR")
 if echo "$SNAPSHOT" | grep -qi "Community Box\|Hardware\|Software" ; then
@@ -38,8 +54,8 @@ else
   FAILED_ROUTES="$FAILED_ROUTES\n  - /community-box/"
 fi
 
-echo -n "Testing: /community-box/questionnaire ... "
-npx agent-browser open "http://localhost:4173/community-box/questionnaire" 2>/dev/null
+echo -n "Testing: /questionnaire ... "
+npx agent-browser open "$BASE_URL/questionnaire" 2>/dev/null
 npx agent-browser wait 3000 2>/dev/null || true
 SNAPSHOT=$(npx agent-browser snapshot 2>/dev/null || echo "ERROR")
 if echo "$SNAPSHOT" | grep -qi "404\|Not Found" ; then
@@ -50,8 +66,8 @@ else
   echo "✅ PASSED"
 fi
 
-echo -n "Testing: /community-box/docs/results/global-community-networks-directory ... "
-npx agent-browser open "http://localhost:4173/community-box/docs/results/global-community-networks-directory" 2>/dev/null
+echo -n "Testing: /docs/results/global-community-networks-directory ... "
+npx agent-browser open "$BASE_URL/docs/results/global-community-networks-directory" 2>/dev/null
 npx agent-browser wait 3000 2>/dev/null || true
 SNAPSHOT=$(npx agent-browser snapshot 2>/dev/null || echo "ERROR")
 if echo "$SNAPSHOT" | grep -qi "Document Not Found\|404" ; then
@@ -63,8 +79,8 @@ else
 fi
 
 # Test JSON file with basename
-echo -n "Testing: /community-box/research/results/community-directory.json ... "
-STATUS=$(curl -s -o /dev/null -w "%{http_code}" "http://localhost:4173/community-box/research/results/community-directory.json" 2>/dev/null || echo "000")
+echo -n "Testing: /research/results/community-directory.json ... "
+STATUS=$(curl -s -o /dev/null -w "%{http_code}" "$BASE_URL/research/results/community-directory.json" 2>/dev/null || echo "000")
 if [ "$STATUS" = "200" ]; then
   echo "✅ PASSED"
 else
