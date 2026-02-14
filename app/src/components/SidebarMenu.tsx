@@ -30,7 +30,7 @@ const createMenu = (pdfUrl: string): MenuItem[] => [
   {
     title: '🧭 Hardware Questionnaire',
     icon: <HardDrive size={16} />,
-    href: '/questionnaire'
+    to: '/questionnaire'
   },
   {
     title: '📄 Download Research Paper',
@@ -44,23 +44,25 @@ const createMenu = (pdfUrl: string): MenuItem[] => [
       {
         title: 'Operating Systems (x86)',
         children: [
-          { title: 'YunoHost-x86_64-v11.2.iso', href: '#' },
-          { title: 'Caprover-ubuntu-x86_64-v2.iso', href: '#' },
-          { title: 'CasaOS-debian-x86_64-v0.4.8.img', href: '#' }
+          // { title: 'YunoHost-x86_64-v11.2.iso', href: '#' },
+          // { title: 'Caprover-ubuntu-x86_64-v2.iso', href: '#' },
+          // { title: 'CasaOS-debian-x86_64-v0.4.8.img', href: '#' }
+          { title: 'Images not built yet', href: '#' }
         ]
       },
       {
         title: 'Operating Systems (ARM64)',
         children: [
-          { title: 'YunoHost-rpi-arm64-v11.2.img', href: '#' },
-          { title: 'Caprover-ubuntu-arm64-v2.img', href: '#' },
-          { title: 'CasaOS-rpi-arm64-v0.4.8.img', href: '#' }
+          // { title: 'YunoHost-rpi-arm64-v11.2.img', href: '#' },
+          // { title: 'Caprover-ubuntu-arm64-v2.img', href: '#' },
+          // { title: 'CasaOS-rpi-arm64-v0.4.8.img', href: '#' }
+          { title: 'Images not built yet', href: '#' }
         ]
       },
       {
         title: 'Networking',
         children: [
-          { title: 'LibreMesh Image Finder', href: 'https://libremesh.org' }
+          { title: 'LibreMesh Image Finder', href: 'https://firmware-selector.libremesh.org/' }
         ]
       }
     ]
@@ -160,8 +162,7 @@ const createMenu = (pdfUrl: string): MenuItem[] => [
     title: '🌍 Community',
     icon: <Users size={16} />,
     children: [
-      { title: 'Interactive Map', to: 'results/global-community-networks-directory' },
-      { title: 'community-directory.json', href: '/research/results/community-directory.json' }
+      { title: 'Community Networks Directory', to: 'results/global-community-networks-directory' }
     ]
   },
   {
@@ -329,9 +330,11 @@ function MenuItem({ item, level }: { item: MenuItem; level: number }) {
   }
 
   if (item.to) {
+    // Use absolute paths directly, otherwise prepend /docs/
+    const linkPath = item.to.startsWith('/') ? item.to : `/docs/${item.to}`;
     return (
       <Link
-        to={`/docs/${item.to}`}
+        to={linkPath}
         className="block py-2 px-2 rounded hover:bg-secondary/50 hover:text-primary transition-colors text-sm"
         style={{ paddingLeft }}
       >
