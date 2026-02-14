@@ -232,7 +232,8 @@
       }
     },
     "buttons": {
-      "next": "Next"
+      "next": "Next",
+      "back": "Back"
     }
   },
   "notFound": {

@@ -34,6 +34,7 @@ interface QuestionnaireContextType {
   answers: Record<string, unknown>;
   setCurrentStep: (step: number) => void;
   setAnswer: (questionId: string, answer: unknown) => void;
+  goBack: () => void;
   resetSurvey: () => void;
 }
 
@@ -61,6 +62,12 @@ export function QuestionnaireProvider({ children }: { children: React.ReactNode 
     setAnswers((prev) => ({ ...prev, [questionId]: answer }));
   };
 
+  const goBack = () => {
+    if (currentStep > 0) {
+      setCurrentStep(currentStep - 1);
+    }
+  };
+
   // Reset the survey state
   const resetSurvey = () => {
     // Clear URL parameters
@@ -84,6 +91,7 @@ export function QuestionnaireProvider({ children }: { children: React.ReactNode 
         answers,
         setCurrentStep,
         setAnswer,
+        goBack,
         resetSurvey,
       }}
     >

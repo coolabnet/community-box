@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 import { Button } from '@/components/ui/button';
 import { cn } from '@/lib/utils';
 import { useTranslation } from 'react-i18next';
+import { ArrowLeft } from 'lucide-react';
 
 interface QuestionCardProps {
   question: string;
@@ -10,6 +11,7 @@ interface QuestionCardProps {
   onSelect?: (value: string | number) => void;
   selectedValue?: string | number;
   onNext: () => void;
+  onBack?: () => void;
   type?: 'options' | 'slider' | 'boolean';
   className?: string;
 }
@@ -20,6 +22,7 @@ const QuestionCard = ({
   onSelect,
   selectedValue,
   onNext,
+  onBack,
   type = 'options',
   className,
 }: QuestionCardProps) => {
@@ -57,7 +60,17 @@ const QuestionCard = ({
         </div>
       )}
 
-      <div className="flex justify-center mt-8">
+      <div className="flex justify-center gap-4 mt-8">
+        {onBack && (
+          <Button
+            variant="outline"
+            onClick={onBack}
+            className="px-8 py-6 text-lg"
+          >
+            <ArrowLeft className="mr-2 h-5 w-5" />
+            {t('questionnaire.buttons.back')}
+          </Button>
+        )}
         <Button
           onClick={onNext}
           disabled={selectedValue === undefined}
