@@ -63,9 +63,7 @@ export function QuestionnaireProvider({ children }: { children: React.ReactNode 
   };
 
   const goBack = () => {
-    if (currentStep > 0) {
-      setCurrentStep(currentStep - 1);
-    }
+    setCurrentStep((prevStep) => Math.max(0, prevStep - 1));
   };
 
   // Reset the survey state
