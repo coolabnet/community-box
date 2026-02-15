@@ -42,6 +42,7 @@ const Questionnaire = () => {
         { label: t('questionnaire.questions.growth.options.low'), value: 'low' },
         { label: t('questionnaire.questions.growth.options.medium'), value: 'medium' },
         { label: t('questionnaire.questions.growth.options.high'), value: 'high' },
+        { label: t('questionnaire.questions.growth.options.notSure'), value: 'notSure' },
       ],
     },
     {

@@ -50,12 +50,14 @@ const LandingPage = () => {
         </div>
       </header>
 
-      {/* Sidebar Menu */}
-      <SidebarMenu
-        isOpen={sidebarOpen}
-        onToggle={() => setSidebarOpen(!sidebarOpen)}
-        showToggleButton={false}
-      />
+      {/* Sidebar Menu - only mount when needed */}
+      {sidebarOpen && (
+        <SidebarMenu
+          isOpen={sidebarOpen}
+          onToggle={() => setSidebarOpen(!sidebarOpen)}
+          showToggleButton={false}
+        />
+      )}
 
       <div className="flex-1 flex flex-col items-center justify-center px-4 py-12">
         <motion.div
