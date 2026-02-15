@@ -22,7 +22,8 @@
         "options": {
           "low": "Crescimento mínimo",
           "medium": "Crescimento moderado",
-          "high": "Crescimento rápido"
+          "high": "Crescimento rápido",
+          "notSure": "Não sei"
         }
       },
       "reuse": {
@@ -246,7 +247,7 @@
     "select": "Idioma"
   },
   "landing": {
-    "title": "Encontrador de Plataformas Digitais Comunitárias",
+    "title": "Caixa Comunitária",
     "description": "Descubra a melhor configuração de tecnologia para as necessidades da sua comunidade. Responda a algumas perguntas simples e obtenha um guia personalizado.",
     "startButton": "Começar",
     "altHeroImage": "Colaboração comunitária",
