@@ -180,6 +180,7 @@ interface SidebarMenuProps {
 
 export default function SidebarMenu({ isOpen = false, onToggle, showToggleButton = true }: SidebarMenuProps) {
   const isMobile = useIsMobile();
+  const isDesktop = !isMobile;
   const [pdfUrl, setPdfUrl] = useState('https://github.com/coolabnet/community-box/releases/latest');
   const [menu, setMenu] = useState<MenuItem[]>([]);
   const { pathname } = useLocation();
@@ -222,19 +223,50 @@ export default function SidebarMenu({ isOpen = false, onToggle, showToggleButton
     }
   }, [isMobile, isOpen, onToggle, pathname]);
 
-  const shouldShow = isOpen;
+  // On desktop, sidebar is always visible in normal flow (side-by-side with content)
+  // On mobile, sidebar is toggleable overlay
+  const shouldShow = isDesktop || isOpen;
 
+  // Desktop: render as static sidebar in document flow
+  if (isDesktop && shouldShow) {
+    return (
+      <nav
+        className="w-80 bg-background border-r p-4 overflow-y-auto"
+        style={{
+          height: '100vh'
+        }}
+      >
+        <Link to="/" className="mb-6 flex items-center gap-2 hover:opacity-80 transition-opacity">
+          <div className="p-2 bg-primary rounded-full text-primary-foreground">
+            <Wifi size={20} />
+          </div>
+          <span className="font-bold text-lg">Community Box</span>
+        </Link>
+
+        <div className="space-y-2">
+          {menu.map((item, index) => (
+            <MenuItem key={index} item={item} level={0} />
+          ))}
+        </div>
+      </nav>
+    );
+  }
+
+  // Mobile: render as overlay with animation
   return (
     <>
-      {showToggleButton && (
+      {/* Mobile: floating toggle button (shown when sidebar is closed) */}
+      {!isOpen && onToggle && (
         <button
-          className="fixed top-4 left-4 z-50 p-2 bg-white rounded-full shadow-lg lg:hidden"
+          className="fixed top-4 left-4 z-50 p-2 bg-white rounded-full shadow-lg"
           onClick={onToggle}
+          aria-label="Open menu"
         >
-          {isOpen ? <CloseIcon size={20} /> : <MenuIcon size={20} />}
+          <MenuIcon size={20} />
         </button>
       )}
 
+      {/* Sidebar - mobile overlay */}
       <AnimatePresence>
         {shouldShow && (
           <motion.nav
@@ -248,12 +280,24 @@ export default function SidebarMenu({ isOpen = false, onToggle, showToggleButton
               height: pathname === '/questionnaire' ? 'calc(100vh - 73px)' : '100vh'
             }}
           >
-            <Link to="/" className="mb-6 flex items-center gap-2 hover:opacity-80 transition-opacity">
-              <div className="p-2 bg-primary rounded-full text-primary-foreground">
-                <Wifi size={20} />
-              </div>
-              <span className="font-bold text-lg">Community Box</span>
-            </Link>
+            <div className="flex justify-between items-start mb-6">
+              <Link to="/" className="flex items-center gap-2 hover:opacity-80 transition-opacity">
+                <div className="p-2 bg-primary rounded-full text-primary-foreground">
+                  <Wifi size={20} />
+                </div>
+                <span className="font-bold text-lg">Community Box</span>
+              </Link>
+              {/* Close button for mobile */}
+              {onToggle && (
+                <button
+                  onClick={onToggle}
+                  className="p-1 hover:bg-secondary rounded transition-colors"
+                  aria-label="Close menu"
+                >
+                  <CloseIcon size={20} />
+                </button>
+              )}
+            </div>
 
             <div className="space-y-2">
               {menu.map((item, index) => (
@@ -264,12 +308,13 @@ export default function SidebarMenu({ isOpen = false, onToggle, showToggleButton
         )}
       </AnimatePresence>
 
-      {isMobile && isOpen && onToggle && (
+      {/* Mobile overlay */}
+      {isOpen && onToggle && (
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
-          className="fixed inset-0 bg-black bg-opacity-30 z-30"
+          className="fixed inset-0 bg-black/30 z-30"
           onClick={onToggle}
         />
       )}
