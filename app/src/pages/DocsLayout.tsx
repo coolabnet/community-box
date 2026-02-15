@@ -17,7 +17,7 @@ export default function DocsLayout() {
   return (
     <div className="min-h-screen">
       {/* Desktop: side-by-side layout */}
-      <div className="hidden lg:flex">
+      <div className="hidden lg:flex min-h-screen">
         <SidebarMenu
           isOpen={true}
           onToggle={handleSidebarToggle}

@@ -227,11 +227,11 @@ export default function SidebarMenu({ isOpen = false, onToggle, showToggleButton
   // On mobile, sidebar is toggleable overlay
   const shouldShow = isDesktop || isOpen;
 
-  // Desktop: render as static sidebar in document flow
+  // Desktop: render as static sidebar with sticky positioning
   if (isDesktop && shouldShow) {
     return (
       <nav
-        className="w-80 bg-background border-r p-4 overflow-y-auto"
+        className="sticky top-0 w-80 bg-background border-r p-4 overflow-y-auto"
         style={{
           height: '100vh'
         }}
