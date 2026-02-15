@@ -11,7 +11,7 @@ import type { PriorityAllocation, UsageSelectionValues, UserAnswers } from '@/ty
 
 const Questionnaire = () => {
   const { t } = useTranslation();
-  const { currentStep, setCurrentStep, answers, setAnswer, resetSurvey } = useQuestionnaire();
+  const { currentStep, setCurrentStep, answers, setAnswer, goBack, resetSurvey } = useQuestionnaire();
 
   const questions = [
     {
@@ -42,6 +42,7 @@ const Questionnaire = () => {
         { label: t('questionnaire.questions.growth.options.low'), value: 'low' },
         { label: t('questionnaire.questions.growth.options.medium'), value: 'medium' },
         { label: t('questionnaire.questions.growth.options.high'), value: 'high' },
+        { label: t('questionnaire.questions.growth.options.notSure'), value: 'notSure' },
       ],
     },
     {
@@ -106,6 +107,12 @@ const Questionnaire = () => {
     }
   };
 
+  const handleBack = () => {
+    if (currentStep > 0) {
+      goBack();
+    }
+  };
+
   const currentQuestion = questions[currentStep];
 
   // Handle points allocation
@@ -133,6 +140,7 @@ const Questionnaire = () => {
         <PointsAllocation
           key="points-allocation"
           onNext={handlePointsAllocation}
+          onBack={handleBack}
         />
       );
     } else if (currentQuestion.id === 'usage') {
@@ -140,6 +148,7 @@ const Questionnaire = () => {
         <UsageSelection
           key="usage-selection"
           onNext={handleUsageSelection}
+          onBack={handleBack}
         />
       );
     } else if (currentQuestion.id === 'results') {
@@ -160,6 +169,7 @@ const Questionnaire = () => {
           selectedValue={answers[currentQuestion.id]}
           onSelect={(value) => setAnswer(currentQuestion.id, value)}
           onNext={handleNext}
+          onBack={handleBack}
         />
       );
     }
