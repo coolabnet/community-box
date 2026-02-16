@@ -176,14 +176,18 @@ interface SidebarMenuProps {
   isOpen?: boolean;
   onToggle?: () => void;
   showToggleButton?: boolean;
+  forceOverlay?: boolean; // When true, always show as overlay (e.g., landing page)
 }
 
-export default function SidebarMenu({ isOpen = false, onToggle, showToggleButton = true }: SidebarMenuProps) {
+export default function SidebarMenu({ isOpen = false, onToggle, showToggleButton = true, forceOverlay = false }: SidebarMenuProps) {
   const isMobile = useIsMobile();
   const isDesktop = !isMobile;
   const [pdfUrl, setPdfUrl] = useState('https://github.com/coolabnet/community-box/releases/latest');
   const [menu, setMenu] = useState<MenuItem[]>([]);
   const { pathname } = useLocation();
+
+  // When forceOverlay is true, behave like mobile (overlay mode)
+  const useOverlayMode = isMobile || forceOverlay;
 
   // Debug logging
   if (import.meta.env.DEV) {
@@ -213,7 +217,7 @@ export default function SidebarMenu({ isOpen = false, onToggle, showToggleButton
   // Auto-close on route change (mobile) - only when pathname changes
   const prevPathname = useRef(pathname);
   useEffect(() => {
-    if (isMobile && onToggle && isOpen && pathname !== prevPathname.current) {
+    if (useOverlayMode && onToggle && isOpen && pathname !== prevPathname.current) {
       onToggle();
       prevPathname.current = pathname;
     }
@@ -221,14 +225,15 @@ export default function SidebarMenu({ isOpen = false, onToggle, showToggleButton
     if (pathname !== prevPathname.current) {
       prevPathname.current = pathname;
     }
-  }, [isMobile, isOpen, onToggle, pathname]);
+  }, [useOverlayMode, isOpen, onToggle, pathname]);
 
-  // On desktop, sidebar is always visible in normal flow (side-by-side with content)
-  // On mobile, sidebar is toggleable overlay
-  const shouldShow = isDesktop || isOpen;
+  // On desktop with overlay mode (forceOverlay), behave like mobile (toggleable overlay)
+  // On desktop without overlay, sidebar is always visible in normal flow (side-by-side with content)
+  // On mobile, sidebar is always toggleable overlay
+  const shouldShow = !useOverlayMode || isOpen;
 
-  // Desktop: render as static sidebar with sticky positioning
-  if (isDesktop && shouldShow) {
+  // Desktop: render as static sidebar with sticky positioning (only when NOT in overlay mode)
+  if (isDesktop && !useOverlayMode && shouldShow) {
     return (
       <nav
         className="sticky top-0 w-80 bg-background border-r p-4 overflow-y-auto"
@@ -255,8 +260,8 @@ export default function SidebarMenu({ isOpen = false, onToggle, showToggleButton
   // Mobile: render as overlay with animation
   return (
     <>
-      {/* Mobile: floating toggle button (shown when sidebar is closed) */}
-      {!isOpen && onToggle && (
+      {/* Floating toggle button (shown when sidebar is closed and parent doesn't provide one) */}
+      {showToggleButton && !isOpen && onToggle && (
         <button
           className="fixed top-4 left-4 z-50 p-2 bg-white rounded-full shadow-lg"
           onClick={onToggle}
@@ -274,10 +279,10 @@ export default function SidebarMenu({ isOpen = false, onToggle, showToggleButton
             animate={{ x: 0 }}
             exit={{ x: '-100%' }}
             transition={{ type: 'spring', stiffness: 300, damping: 30 }}
-            className="fixed left-0 w-80 bg-background border-r p-4 overflow-y-auto z-40 shadow-lg"
+            className="fixed left-0 w-80 bg-background border-r p-4 overflow-y-auto z-50 shadow-lg"
             style={{
-              top: pathname === '/questionnaire' ? '73px' : '0',
-              height: pathname === '/questionnaire' ? 'calc(100vh - 73px)' : '100vh'
+              top: useOverlayMode ? '0' : '73px',
+              height: useOverlayMode ? '100vh' : 'calc(100vh - 73px)'
             }}
           >
             <div className="flex justify-between items-start mb-6">

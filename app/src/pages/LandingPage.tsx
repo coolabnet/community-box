@@ -5,14 +5,12 @@ import { Button } from '@/components/ui/button';
 import { useNavigate } from 'react-router-dom';
 import LanguageSwitcher from '@/components/LanguageSwitcher';
 import SidebarMenu from '@/components/SidebarMenu';
-import { useIsMobile } from '@/hooks/use-mobile';
 import { Wifi, Menu as MenuIcon, X as CloseIcon } from 'lucide-react';
 import bannerImage from '../assets/banner.png';
 
 const LandingPage = () => {
   const { t } = useTranslation();
   const navigate = useNavigate();
-  const isMobile = useIsMobile();
   const [sidebarOpen, setSidebarOpen] = useState(false);
 
   const handleStart = () => {
@@ -22,22 +20,20 @@ const LandingPage = () => {
   return (
     <div className="min-h-screen flex flex-col bg-gradient-to-b from-background to-secondary/20">
       {/* Header */}
-      <header className="w-full p-4 flex justify-between items-center">
+      <header className="w-full p-4 flex justify-between items-center z-50 relative">
         <motion.div
           className="flex items-center gap-2"
           initial={{ opacity: 0, x: -20 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.5 }}
         >
-          {isMobile && (
-            <button
-              onClick={() => setSidebarOpen(!sidebarOpen)}
-              className="p-2 hover:bg-gray-100 rounded-lg transition-colors"
-              aria-label="Toggle sidebar"
-            >
-              {sidebarOpen ? <CloseIcon size={20} /> : <MenuIcon size={20} />}
-            </button>
-          )}
+          <button
+            onClick={() => setSidebarOpen(!sidebarOpen)}
+            className="p-2 hover:bg-gray-100 rounded-lg transition-colors"
+            aria-label="Toggle sidebar"
+          >
+            {sidebarOpen ? <CloseIcon size={20} /> : <MenuIcon size={20} />}
+          </button>
           <div className="h-10 w-10 rounded-full bg-primary flex items-center justify-center text-primary-foreground">
             <Wifi className="h-6 w-6" />
           </div>
@@ -50,12 +46,13 @@ const LandingPage = () => {
         </div>
       </header>
 
-      {/* Sidebar Menu - only mount when needed */}
+      {/* Sidebar Menu - overlay mode on all screen sizes */}
       {sidebarOpen && (
         <SidebarMenu
           isOpen={sidebarOpen}
           onToggle={() => setSidebarOpen(!sidebarOpen)}
           showToggleButton={false}
+          forceOverlay={true}
         />
       )}
 

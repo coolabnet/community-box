@@ -4,13 +4,10 @@ import { QuestionnaireProvider } from '@/context/QuestionnaireContext';
 import Questionnaire from '@/components/Questionnaire';
 import SidebarMenu from '@/components/SidebarMenu';
 import LanguageSwitcher from '@/components/LanguageSwitcher';
-import { useIsMobile } from '@/hooks/use-mobile';
 import { Menu as MenuIcon, X as CloseIcon, Wifi } from 'lucide-react';
-import { motion, AnimatePresence } from 'framer-motion';
 import { Link } from 'react-router-dom';
 
 const Index = () => {
-  const isMobile = useIsMobile();
   const [sidebarOpen, setSidebarOpen] = useState(false);
 
   return (
@@ -43,14 +40,13 @@ const Index = () => {
         </header>
 
         <div className="flex min-h-[calc(100vh-73px)]">
-          {/* Use the centralized SidebarMenu component */}
-          <div style={{ marginTop: '73px' }}>
-            <SidebarMenu
-              isOpen={sidebarOpen}
-              onToggle={() => setSidebarOpen(!sidebarOpen)}
-              showToggleButton={false}
-            />
-          </div>
+          {/* Sidebar Menu - overlay mode on all screen sizes */}
+          <SidebarMenu
+            isOpen={sidebarOpen}
+            onToggle={() => setSidebarOpen(!sidebarOpen)}
+            showToggleButton={false}
+            forceOverlay={true}
+          />
 
           {/* Main content */}
           <main className="flex-1 transition-all duration-300">
