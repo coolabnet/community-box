@@ -1,6 +1,6 @@
 {
-  "timestamp": "2026-02-15T14:19:40.746Z",
-  "script": "run-all.js",
+  "timestamp": "2026-02-16T07:10:33.903Z",
+  "script": "scripts.test.js",
   "source": "YunoHost-Apps GitHub Organization",
   "url": "https://github.com/YunoHost-Apps",
   "api_url": "https://api.github.com/orgs/YunoHost-Apps/repos",
@@ -576,7 +576,7 @@
       "description": "BentoPDF package for YunoHost",
       "url": "https://github.com/YunoHost-Apps/bentopdf_ynh",
       "stars": 1,
-      "forks": 0,
+      "forks": 1,
       "updated_at": "2026-02-15T08:51:26Z",
       "language": "Shell",
       "archived": false
@@ -4856,7 +4856,7 @@
       "url": "https://github.com/YunoHost-Apps/loops_ynh",
       "stars": 3,
       "forks": 2,
-      "updated_at": "2026-02-14T13:22:36Z",
+      "updated_at": "2026-02-15T16:28:01Z",
       "language": "Shell",
       "archived": false
     },
@@ -8013,7 +8013,7 @@
       "url": "https://github.com/YunoHost-Apps/searxng_ynh",
       "stars": 14,
       "forks": 4,
-      "updated_at": "2026-02-09T09:28:10Z",
+      "updated_at": "2026-02-16T06:31:50Z",
       "language": "Shell",
       "archived": false
     },
@@ -9509,7 +9509,7 @@
       "url": "https://github.com/YunoHost-Apps/virtualtabletop_ynh",
       "stars": 1,
       "forks": 0,
-      "updated_at": "2026-02-09T01:34:15Z",
+      "updated_at": "2026-02-16T05:39:52Z",
       "language": "Shell",
       "archived": false
     },
@@ -9817,7 +9817,7 @@
       "url": "https://github.com/YunoHost-Apps/wikijs_ynh",
       "stars": 19,
       "forks": 5,
-      "updated_at": "2026-01-09T23:48:50Z",
+      "updated_at": "2026-02-16T05:51:01Z",
       "language": "Shell",
       "archived": false
     },

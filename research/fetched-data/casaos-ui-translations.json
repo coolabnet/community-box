@@ -1,6 +1,6 @@
 {
-  "timestamp": "2026-02-15T14:19:26.400Z",
-  "script": "run-all.js",
+  "timestamp": "2026-02-16T07:10:33.734Z",
+  "script": "scripts.test.js",
   "source": "CasaOS App UI Repository",
   "url": "https://github.com/IceWhaleTech/CasaOS-App-UI",
   "locales_path": "src/assets/lang",
