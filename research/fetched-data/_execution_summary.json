@@ -1,19 +1,19 @@
 {
-  "timestamp": "2026-02-17T07:05:24.931Z",
+  "timestamp": "2026-02-17T11:51:50.219Z",
   "script": "run-all.js",
   "note": "Summary of all data fetching script executions",
   "data": {
-    "execution_time": "2026-02-17T07:05:24.931Z",
+    "execution_time": "2026-02-17T11:51:50.219Z",
     "total_scripts": 6,
     "successful": 6,
     "failed": 0,
-    "total_duration_ms": 17663,
+    "total_duration_ms": 19551,
     "continue_on_error": true,
     "results": [
       {
         "name": "CapRover UI Translations",
         "success": true,
-        "duration": 254,
+        "duration": 119,
         "result": [
           "ar-EG",
           "de-DE",
@@ -34,7 +34,7 @@
       {
         "name": "CasaOS UI Translations",
         "success": true,
-        "duration": 172,
+        "duration": 71,
         "result": [
           "ca_ES",
           "cs_CZ",
@@ -69,7 +69,7 @@
       {
         "name": "YunoHost Apps",
         "success": true,
-        "duration": 14936,
+        "duration": 17799,
         "result": {
           "count": 945,
           "apps": [
@@ -927,7 +927,7 @@
               "url": "https://github.com/YunoHost-Apps/castopod_ynh",
               "stars": 26,
               "forks": 6,
-              "updated_at": "2026-02-16T11:13:25Z",
+              "updated_at": "2026-02-17T09:16:44Z",
               "language": "Shell",
               "archived": false
             },
@@ -2500,7 +2500,7 @@
               "url": "https://github.com/YunoHost-Apps/fiduswriter_ynh",
               "stars": 0,
               "forks": 0,
-              "updated_at": "2026-02-14T12:05:27Z",
+              "updated_at": "2026-02-17T09:42:02Z",
               "language": "Shell",
               "archived": false
             },
@@ -4073,7 +4073,7 @@
               "url": "https://github.com/YunoHost-Apps/jackett_ynh",
               "stars": 2,
               "forks": 4,
-              "updated_at": "2026-02-16T16:01:31Z",
+              "updated_at": "2026-02-17T07:17:03Z",
               "language": "Shell",
               "archived": false
             },
@@ -4194,7 +4194,7 @@
               "url": "https://github.com/YunoHost-Apps/jitsi_ynh",
               "stars": 21,
               "forks": 21,
-              "updated_at": "2026-02-10T12:37:29Z",
+              "updated_at": "2026-02-17T11:22:42Z",
               "language": "JavaScript",
               "archived": false
             },
@@ -6273,7 +6273,7 @@
               "url": "https://github.com/YunoHost-Apps/opencloud_ynh",
               "stars": 6,
               "forks": 2,
-              "updated_at": "2026-02-16T21:19:30Z",
+              "updated_at": "2026-02-17T09:25:12Z",
               "language": "Shell",
               "archived": false
             },
@@ -6493,7 +6493,7 @@
               "url": "https://github.com/YunoHost-Apps/owncloud_ynh",
               "stars": 4,
               "forks": 9,
-              "updated_at": "2026-02-13T20:09:00Z",
+              "updated_at": "2026-02-17T09:51:38Z",
               "language": "Shell",
               "archived": false
             },
@@ -7648,7 +7648,7 @@
               "url": "https://github.com/YunoHost-Apps/redmine_ynh",
               "stars": 4,
               "forks": 8,
-              "updated_at": "2025-10-28T19:48:33Z",
+              "updated_at": "2026-02-17T09:07:39Z",
               "language": "Shell",
               "archived": false
             },
@@ -10487,7 +10487,7 @@
       {
         "name": "YunoHost Docs Translations",
         "success": true,
-        "duration": 143,
+        "duration": 48,
         "result": [
           "de",
           "docs",
@@ -10501,7 +10501,7 @@
       {
         "name": "YunoHost UI Translations",
         "success": true,
-        "duration": 1822,
+        "duration": 1202,
         "result": [
           {
             "language": "French",
@@ -10908,7 +10908,7 @@
       {
         "name": "Zimaboard Shipping Areas",
         "success": true,
-        "duration": 336,
+        "duration": 312,
         "result": [
           "Argentina",
           "Australia",
