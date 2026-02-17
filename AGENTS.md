@@ -1,31 +1,74 @@
-# Repository Guidelines
+# AGENTS.md
 
-This repo pairs a React application with research artifacts for community networks. Use the practices below to keep updates focused and reproducible.
+Operational instructions for coding agents working in this repository.
 
-## Project Structure & Module Organization
-- `app/`: Vite + React front-end; TypeScript sources live in `app/src/`, public assets in `app/public/`, builds in `app/dist/`.
-- `research/`: Datasheets, raw findings, and presentation material that underpin the recommendation content.
-- `services/`: Service deployment notes grouped by domain (education, filtering, etc.); mirror updates across related research files.
-- `scripts/`: Automation for data pulls, PDF generation, Terraform scaffolding, and manual test playbooks.
+## Scope and Instruction Priority
+- Apply this file to the whole repository.
+- Treat deeper `AGENTS.md` files as overrides for their subtrees.
+- Follow direct user instructions over `AGENTS.md`.
 
-## Build, Test, and Development Commands
-- `cd app && npm install` (or `bun install`): Install UI dependencies; always re-run after pulling lockfile updates.
-- `npm run dev`: Launches the Vite dev server on port 5173 with hot reload.
-- `npm run build`: Produces an optimized bundle in `app/dist/`; run before sharing demos or data drops.
-- `npm run preview`: Serves the production bundle locally; use for final QA.
-- `npm run lint`: Runs ESLint using the repo’s shared config; address warnings before opening a PR.
-- `npm run translate`: Regenerates locale files and logs under `app/logs/`; commit regenerated JSON when text changes.
+## Do
+- Keep changes minimal, task-scoped, and reversible.
+- Keep docs aligned with behavior and command changes in the same update.
+- Keep TypeScript + JSX style with 2-space indentation and semicolons.
+- Use `PascalCase` for components/pages and `camelCase` for hooks/helpers.
+- Reuse Tailwind UI primitives from `app/src/components/ui/` before adding new ones.
+- Keep imports and hook usage compliant with ESLint.
+- Update `research/` or `services/` docs when app behavior changes.
+- Commit script changes with generated output when automation output changes.
 
-## Coding Style & Naming Conventions
-- TypeScript + JSX with 2-space indentation and semi-colons; use PascalCase for components/pages and camelCase for hooks and helpers.
-- Tailwind-first styling; keep shared primitives under `app/src/components/ui/` and avoid ad-hoc CSS.
-- ESLint (React Hooks + SWC plugins) and Tailwind config enforce import order, accessibility, and theme tokens—run `npm run lint` before committing.
+## Don't
+- Do not refactor unrelated code.
+- Do not manually edit generated artifacts in `app/dist/`.
+- Do not change lockfiles unless dependency changes are required.
+- Avoid renames or moves unless required to complete the task.
 
-## Testing Guidelines
-- Automated suites are light; start with `npm run lint`, then use `npm run preview` to exercise questionnaire flows, PDF export, and language switching.
-- For service validation, consult `scripts/tests/testing_services.md` and record findings in `research/` with any config updates.
-- When adding scripts, provide dry-run or sample outputs so others can iterate without hardware access.
+## Commands
+- Install deps: `cd app && npm install` (or `cd app && bun install`).
+- Dev server: `cd app && npm run dev`.
+- Lint: `cd app && npm run lint`.
+- Build: `cd app && npm run build`.
+- Preview: `cd app && npm run preview`.
+- Translate locales: `cd app && npm run translate` (logs in `app/logs/`).
+- Optional e2e: `cd app && npm run test:e2e`.
+- Optional e2e links: `cd app && npm run test:e2e:links`.
+- Optional e2e dynamic: `cd app && npm run test:e2e:dynamic`.
+- Optional e2e prod: `cd app && npm run test:e2e:prod`.
 
-## Commit & Pull Request Guidelines
-- Follow Conventional Commits (`type: short summary`); history favors `chore:` for data refreshes—extend with `feat:`, `fix:`, etc. for clarity. Append `[skip ci]` only when automation is unnecessary.
-- PRs should explain the why + how, link related research or issues, and include screenshots/GIFs for UI shifts. Flag required follow-up tasks (translations, data sync) so reviewers can verify end-to-end.
+## Safety and Permissions
+- Prefer non-destructive edits that are easy to review and revert.
+- Validate changes with the smallest required command set before broad test runs.
+- Call out unrun checks or environment constraints in the final response.
+
+## Project Structure Hints
+- `app/`: Vite + React frontend (`app/src/`, `app/public/`, `app/dist/`).
+- `research/`: Datasheets, findings, and recommendation support material.
+- `services/`: Service deployment notes by domain.
+- `scripts/`: Data pull, PDF, Terraform, and testing playbooks.
+
+## Validation Matrix
+- Any code change: run `cd app && npm run lint`.
+- UI, flow, or content changes in `app/src/`: run `cd app && npm run preview`.
+- For UI preview checks, verify questionnaire flow, PDF export, and language switching.
+- Translation or text changes: run `cd app && npm run translate`.
+- Commit updated locale JSON files after translation runs.
+- Script updates: include a dry-run or sample command/output in docs.
+- Service recommendation updates: follow `scripts/tests/testing_services.md`.
+- Document service validation outcomes in `research/`.
+
+## PR Checklist
+- Use Conventional Commit prefixes (`feat:`, `fix:`, `chore:`, etc.).
+- Use `[skip ci]` only when CI is unnecessary.
+- Include why, what changed, and how it was validated.
+- Include screenshots or GIFs for UI changes.
+- Link related issues/research notes and list follow-up tasks.
+
+## Agent Response Contract
+- Include files changed, validation commands run, and known gaps or unrun checks.
+- For planning/review critique, optionally run:
+  `codex exec "YOUR_QUESTION" --config model_reasoning_effort=\"high\"`.
+
+## When Stuck
+- Re-read this file and any deeper `AGENTS.md` in the target subtree.
+- Ask for clarification instead of making broad assumptions.
+- Propose the smallest safe next step and its validation command.
