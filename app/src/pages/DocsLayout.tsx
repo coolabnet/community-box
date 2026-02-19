@@ -27,14 +27,8 @@ export default function DocsLayout() {
         <main className="flex-1 overflow-auto bg-gray-50/50">
           <header className="sticky top-0 z-30 bg-white/95 backdrop-blur-sm border-b border-gray-200 px-6 py-4">
             <div className="flex justify-between items-center">
-              {/* Left - logo */}
+              {/* Left - empty (logo is in sidebar) */}
               <div className="flex items-center gap-3">
-                <Link to="/" className="flex items-center gap-2 hover:opacity-80 transition-opacity">
-                  <div className="h-8 w-8 rounded-full bg-primary flex items-center justify-center text-primary-foreground">
-                    <Wifi className="h-5 w-5" />
-                  </div>
-                  <span className="font-bold text-lg">Community Box</span>
-                </Link>
               </div>
               <LanguageSwitcher />
             </div>
@@ -57,18 +51,20 @@ export default function DocsLayout() {
             <div className="flex justify-between items-center">
               {/* Left - logo and menu toggle */}
               <div className="flex items-center gap-3">
+                {/* Burger menu only on screens < 768px where sidebar is an overlay */}
                 <button
                   onClick={handleSidebarToggle}
-                  className="p-2 hover:bg-gray-100 rounded-lg transition-colors"
+                  className="p-2 hover:bg-gray-100 rounded-lg transition-colors md:hidden"
                   aria-label="Toggle sidebar"
                 >
                   {sidebarOpen ? <CloseIcon size={20} /> : <MenuIcon size={20} />}
                 </button>
-                <Link to="/" className="flex items-center gap-2 hover:opacity-80 transition-opacity">
+                {/* Show logo only on very small screens (< 768px) since SidebarMenu shows logo inline at larger sizes */}
+                <Link to="/" className="flex items-center gap-2 hover:opacity-80 transition-opacity md:hidden">
                   <div className="h-8 w-8 rounded-full bg-primary flex items-center justify-center text-primary-foreground">
                     <Wifi className="h-5 w-5" />
                   </div>
-                  <span className="font-bold text-lg">Community Box</span>
+                  <span className="font-bold text-lg hidden sm:block">Community Box</span>
                 </Link>
               </div>
               <LanguageSwitcher />
