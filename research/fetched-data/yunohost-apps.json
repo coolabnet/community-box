@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-02-19T07:06:25.268Z",
+  "timestamp": "2026-02-20T07:03:18.549Z",
   "script": "scripts.test.js",
   "source": "YunoHost-Apps GitHub Organization",
   "url": "https://github.com/YunoHost-Apps",
@@ -269,7 +269,7 @@
       "url": "https://github.com/YunoHost-Apps/ampache_ynh",
       "stars": 17,
       "forks": 15,
-      "updated_at": "2025-12-22T11:21:34Z",
+      "updated_at": "2026-02-19T22:56:09Z",
       "language": "PHP",
       "archived": false
     },
@@ -874,7 +874,7 @@
       "url": "https://github.com/YunoHost-Apps/castopod_ynh",
       "stars": 26,
       "forks": 6,
-      "updated_at": "2026-02-17T09:16:44Z",
+      "updated_at": "2026-02-19T23:45:17Z",
       "language": "Shell",
       "archived": false
     },
@@ -2447,7 +2447,7 @@
       "url": "https://github.com/YunoHost-Apps/fiduswriter_ynh",
       "stars": 0,
       "forks": 0,
-      "updated_at": "2026-02-18T11:52:10Z",
+      "updated_at": "2026-02-19T23:36:22Z",
       "language": "Shell",
       "archived": false
     },
@@ -3315,7 +3315,7 @@
       "description": "Gotify package for YunoHost",
       "url": "https://github.com/YunoHost-Apps/gotify_ynh",
       "stars": 6,
-      "forks": 5,
+      "forks": 6,
       "updated_at": "2026-02-16T18:54:05Z",
       "language": "Shell",
       "archived": false
@@ -3943,7 +3943,7 @@
       "url": "https://github.com/YunoHost-Apps/invoiceninja5_ynh",
       "stars": 11,
       "forks": 6,
-      "updated_at": "2026-02-18T07:50:44Z",
+      "updated_at": "2026-02-19T22:41:52Z",
       "language": "Shell",
       "archived": false
     },
@@ -4724,7 +4724,7 @@
       "url": "https://github.com/YunoHost-Apps/linkstack_ynh",
       "stars": 6,
       "forks": 1,
-      "updated_at": "2026-01-28T20:05:55Z",
+      "updated_at": "2026-02-19T20:10:27Z",
       "language": "Shell",
       "archived": false
     },
@@ -6571,7 +6571,7 @@
       "description": "Federated (ActivityPub) video streaming platform using P2P for YunoHost",
       "url": "https://github.com/YunoHost-Apps/peertube_ynh",
       "stars": 94,
-      "forks": 30,
+      "forks": 29,
       "updated_at": "2026-01-28T20:06:11Z",
       "language": "Shell",
       "archived": false
@@ -6867,9 +6867,9 @@
       "name": "piefed",
       "description": "Federated forum and link aggregator, packaged for YunoHost",
       "url": "https://github.com/YunoHost-Apps/piefed_ynh",
-      "stars": 3,
+      "stars": 4,
       "forks": 0,
-      "updated_at": "2026-02-16T16:05:01Z",
+      "updated_at": "2026-02-19T19:03:22Z",
       "language": "Shell",
       "archived": false
     },
@@ -9443,7 +9443,7 @@
       "url": "https://github.com/YunoHost-Apps/uptime-kuma_ynh",
       "stars": 12,
       "forks": 6,
-      "updated_at": "2026-02-14T04:19:09Z",
+      "updated_at": "2026-02-19T17:54:40Z",
       "language": "Shell",
       "archived": false
     },
@@ -9474,9 +9474,9 @@
       "name": "vaultwarden",
       "description": "Open source password management solutions for YunoHost",
       "url": "https://github.com/YunoHost-Apps/vaultwarden_ynh",
-      "stars": 61,
+      "stars": 60,
       "forks": 24,
-      "updated_at": "2026-02-11T11:38:38Z",
+      "updated_at": "2026-02-19T16:27:48Z",
       "language": "Shell",
       "archived": false
     },
@@ -9960,7 +9960,7 @@
       "url": "https://github.com/YunoHost-Apps/workout-tracker_ynh",
       "stars": 2,
       "forks": 2,
-      "updated_at": "2026-01-05T07:13:36Z",
+      "updated_at": "2026-02-20T06:09:01Z",
       "language": "Shell",
       "archived": false
     },
@@ -10411,7 +10411,7 @@
       "url": "https://github.com/YunoHost-Apps/zwave-js-ui_ynh",
       "stars": 0,
       "forks": 1,
-      "updated_at": "2026-02-08T09:21:20Z",
+      "updated_at": "2026-02-19T17:43:28Z",
       "language": "Shell",
       "archived": false
     },
@@ -10422,7 +10422,7 @@
       "url": "https://github.com/YunoHost-Apps/zwiicms_ynh",
       "stars": 1,
       "forks": 1,
-      "updated_at": "2026-02-18T06:56:19Z",
+      "updated_at": "2026-02-19T07:15:14Z",
       "language": "Shell",
       "archived": false
     }
