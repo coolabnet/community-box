@@ -16,6 +16,7 @@ import {
 } from 'lucide-react';
 import { useIsMobile } from '@/hooks/use-mobile';
 import { getPdfDownloadUrl } from '@/lib/github';
+import { getAllMarkdownTitles, deslugify } from '@/lib/markdown';
 
 type MenuItem = {
   title: string;
@@ -24,6 +25,14 @@ type MenuItem = {
   icon?: React.ReactNode;
   children?: MenuItem[];
 };
+
+// Get titles at module level (computed once at build time)
+const MARKDOWN_TITLES = getAllMarkdownTitles();
+
+// Resolve title from path using frontmatter title or de-slugify fallback
+function resolveTitle(path: string): string {
+  return MARKDOWN_TITLES[path] || deslugify(path);
+}
 
 // Create menu function that accepts dynamic PDF URL
 const createMenu = (pdfUrl: string): MenuItem[] => [
@@ -77,35 +86,35 @@ const createMenu = (pdfUrl: string): MenuItem[] => [
           {
             title: 'Intel NUC',
             children: [
-              { title: 'nuc-models-comparison.md', to: 'hardware/intel_nuc/nuc-models-comparison' },
-              { title: 'nuc-overview.md', to: 'hardware/intel_nuc/nuc-overview' },
-              { title: 'nuc-bios-setup.md', to: 'hardware/intel_nuc/nuc-bios-setup' },
-              { title: 'nuc-power-network.md', to: 'hardware/intel_nuc/nuc-power-network' }
+              { title: resolveTitle('hardware/intel_nuc/nuc-models-comparison'), to: 'hardware/intel_nuc/nuc-models-comparison' },
+              { title: resolveTitle('hardware/intel_nuc/nuc-overview'), to: 'hardware/intel_nuc/nuc-overview' },
+              { title: resolveTitle('hardware/intel_nuc/nuc-bios-setup'), to: 'hardware/intel_nuc/nuc-bios-setup' },
+              { title: resolveTitle('hardware/intel_nuc/nuc-power-network'), to: 'hardware/intel_nuc/nuc-power-network' }
             ]
           },
           {
             title: 'Raspberry Pi',
             children: [
-              { title: 'rpi-models-comparison.md', to: 'hardware/raspberry_pi_5/rpi-models-comparison' },
-              { title: 'rpi-overview.md', to: 'hardware/raspberry_pi_5/rpi-overview' },
-              { title: 'rpi-cooling-power.md', to: 'hardware/raspberry_pi_5/rpi-cooling-power' }
+              { title: resolveTitle('hardware/raspberry_pi_5/rpi-models-comparison'), to: 'hardware/raspberry_pi_5/rpi-models-comparison' },
+              { title: resolveTitle('hardware/raspberry_pi_5/rpi-overview'), to: 'hardware/raspberry_pi_5/rpi-overview' },
+              { title: resolveTitle('hardware/raspberry_pi_5/rpi-cooling-power'), to: 'hardware/raspberry_pi_5/rpi-cooling-power' }
             ]
           },
           {
             title: 'ZimaBoard',
             children: [
-              { title: 'zima-models-comparison.md', to: 'hardware/zimaboard/zima-models-comparison' },
-              { title: 'zima-overview.md', to: 'hardware/zimaboard/zima-overview' },
-              { title: 'zima-expansion-options.md', to: 'hardware/zimaboard/zima-expansion-options' },
-              { title: 'zima-troubleshooting.md', to: 'hardware/zimaboard/zima-troubleshooting' }
+              { title: resolveTitle('hardware/zimaboard/zima-models-comparison'), to: 'hardware/zimaboard/zima-models-comparison' },
+              { title: resolveTitle('hardware/zimaboard/zima-overview'), to: 'hardware/zimaboard/zima-overview' },
+              { title: resolveTitle('hardware/zimaboard/zima-expansion-options'), to: 'hardware/zimaboard/zima-expansion-options' },
+              { title: resolveTitle('hardware/zimaboard/zima-troubleshooting'), to: 'hardware/zimaboard/zima-troubleshooting' }
             ]
           },
           {
             title: 'Recycled Computer',
             children: [
-              { title: 'recycled-models-comparison.md', to: 'guides/recycled-models-comparison' },
-              { title: 'recycled-preparation.md', to: 'guides/recycled-preparation' },
-              { title: 'hardware-compatibility-check.md', to: 'guides/hardware-compatibility-check' }
+              { title: resolveTitle('guides/recycled-models-comparison'), to: 'guides/recycled-models-comparison' },
+              { title: resolveTitle('guides/recycled-preparation'), to: 'guides/recycled-preparation' },
+              { title: resolveTitle('guides/hardware-compatibility-check'), to: 'guides/hardware-compatibility-check' }
             ]
           }
         ]
@@ -113,42 +122,42 @@ const createMenu = (pdfUrl: string): MenuItem[] => [
       {
         title: '💻 Software Platforms',
         children: [
-          { title: 'yunohost-overview.md', to: 'software/yunohost/README' },
-          { title: 'caprover-overview.md', to: 'software/caprover/README' },
-          { title: 'casaos-overview.md', to: 'software/casaos/README' },
-          { title: 'balena-overview.md', to: 'software/balena/README' }
+          { title: resolveTitle('software/yunohost/README'), to: 'software/yunohost/README' },
+          { title: resolveTitle('software/caprover/README'), to: 'software/caprover/README' },
+          { title: resolveTitle('software/casaos/README'), to: 'software/casaos/README' },
+          { title: resolveTitle('software/balena/README'), to: 'software/balena/README' }
         ]
       },
       {
         title: '🔧 Essential Services',
         children: [
-          { title: 'libremesh-overview.md', to: 'guides/libremesh-overview' },
-          { title: 'mesh-network-basics.md', to: 'guides/mesh-network-basics' },
-          { title: 'dns-configuration.md', to: 'guides/dns-configuration' },
-          { title: 'deployment-best-practices.md', to: 'guides/deployment-best-practices' }
+          { title: resolveTitle('guides/libremesh-overview'), to: 'guides/libremesh-overview' },
+          { title: resolveTitle('guides/mesh-network-basics'), to: 'guides/mesh-network-basics' },
+          { title: resolveTitle('guides/dns-configuration'), to: 'guides/dns-configuration' },
+          { title: resolveTitle('guides/deployment-best-practices'), to: 'guides/deployment-best-practices' }
         ]
       },
       {
         title: '🌐 Network Configuration',
         children: [
-          { title: 'router-selection-guide.md', to: 'guides/router-selection-guide' },
-          { title: 'libremesh-installation.md', to: 'guides/libremesh-installation' }
+          { title: resolveTitle('guides/router-selection-guide'), to: 'guides/router-selection-guide' },
+          { title: resolveTitle('guides/libremesh-installation'), to: 'guides/libremesh-installation' }
         ]
       },
       {
         title: '🛠️ System Management',
         children: [
-          { title: 'etcher-guide.md', to: 'guides/etcher-guide' },
-          { title: 'disk-partitioning.md', to: 'guides/disk-partitioning' },
-          { title: 'external-storage.md', to: 'guides/external-storage' },
-          { title: 'mini-pc-decision-framework.md', to: 'guides/mini-pc-decision-framework' }
+          { title: resolveTitle('guides/etcher-guide'), to: 'guides/etcher-guide' },
+          { title: resolveTitle('guides/disk-partitioning'), to: 'guides/disk-partitioning' },
+          { title: resolveTitle('guides/external-storage'), to: 'guides/external-storage' },
+          { title: resolveTitle('guides/mini-pc-decision-framework'), to: 'guides/mini-pc-decision-framework' }
         ]
       },
       {
         title: '📖 Case Studies',
         children: [
-          { title: 'hardware-clustering-analysis.md', to: 'guides/hardware-clustering-analysis' },
-          { title: 'mesh-clustering-analysis.md', to: 'guides/mesh-clustering-analysis' }
+          { title: resolveTitle('guides/hardware-clustering-analysis'), to: 'guides/hardware-clustering-analysis' },
+          { title: resolveTitle('guides/mesh-clustering-analysis'), to: 'guides/mesh-clustering-analysis' }
         ]
       }
     ]
@@ -162,7 +171,7 @@ const createMenu = (pdfUrl: string): MenuItem[] => [
     title: '🌍 Community',
     icon: <Users size={16} />,
     children: [
-      { title: 'Community Networks Directory', to: 'results/global-community-networks-directory' }
+      { title: resolveTitle('results/global-community-networks-directory'), to: 'results/global-community-networks-directory' }
     ]
   },
   {
