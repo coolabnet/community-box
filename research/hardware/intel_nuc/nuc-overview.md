@@ -1,3 +1,7 @@
+---
+title: Overview
+---
+
 # Intel NUC Overview for Community Server Deployment
 
 ## Introduction

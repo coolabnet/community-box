@@ -1,3 +1,7 @@
+---
+title: Router Selection
+---
+
 # Router Selection Guide for LibreMesh Community Networks
 
 This guide helps you evaluate and select routers that are compatible and reliable for LibreMesh firmware installation and community networking purposes. Making the right hardware choice is crucial for a successful community network deployment.

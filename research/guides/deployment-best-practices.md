@@ -1,3 +1,7 @@
+---
+title: Best Practices
+---
+
 # Mini PC AI Deployment Best Practices Guide
 
 ## Pre-Deployment Checklist

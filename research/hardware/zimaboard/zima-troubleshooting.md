@@ -1,3 +1,7 @@
+---
+title: Troubleshooting
+---
+
 # ZimaBoard Troubleshooting Guide
 
 ## Common Issues Quick Reference

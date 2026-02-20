@@ -1,3 +1,7 @@
+---
+title: DNS Configuration
+---
+
 # DNS Configuration for LibreMesh
 
 This guide explains how to configure DNS services on LibreMesh networks to enable reliable access to local services, implement caching, and establish domain naming inside the mesh network.

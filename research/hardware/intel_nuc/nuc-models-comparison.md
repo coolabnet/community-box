@@ -1,3 +1,7 @@
+---
+title: Models Comparison
+---
+
 # Intel NUC Models Comparison for Server Deployment
 
 ## Overview

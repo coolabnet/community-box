@@ -1,3 +1,7 @@
+---
+title: Hardware Clustering
+---
+
 # Hardware Clustering Analysis: Pi vs ZimaBoard vs NUC
 
 ## Executive Summary

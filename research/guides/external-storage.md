@@ -1,3 +1,7 @@
+---
+title: External Storage
+---
+
 # External Storage Guide for Community Server Expansion
 
 This guide covers connecting, formatting, and mounting additional storage devices (USB, SATA, SSD) to expand capacity and improve data resilience in community server deployments.

@@ -1,3 +1,7 @@
+---
+title: Cooling & Power
+---
+
 # Raspberry Pi Cooling and Power Requirements
 
 ## Introduction

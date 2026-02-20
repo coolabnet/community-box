@@ -1,3 +1,7 @@
+---
+title: Power & Network
+---
+
 # Intel NUC Power Supply, Storage, and Network Configuration Guide
 
 ## Introduction

@@ -1,3 +1,11 @@
+---
+title: Preparation
+---
+
+---
+title: Preparation
+---
+
 # Recycled Computer Preparation Guide
 
 ## Overview

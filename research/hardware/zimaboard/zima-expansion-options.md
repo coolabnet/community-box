@@ -1,3 +1,7 @@
+---
+title: Expansion Options
+---
+
 # ZimaBoard Expansion Options Guide
 
 ## Overview

@@ -1,3 +1,7 @@
+---
+title: Mesh Clustering
+---
+
 # Mesh Network Clustering Viability Analysis for Community Networks
 
 ## Executive Summary

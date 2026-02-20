@@ -1,3 +1,7 @@
+---
+title: BIOS Setup
+---
+
 # Intel NUC BIOS/UEFI Setup Guide for Community Server Deployment
 
 ## Introduction

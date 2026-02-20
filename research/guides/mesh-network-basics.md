@@ -1,3 +1,7 @@
+---
+title: Mesh Basics
+---
+
 # Mesh Network Basics
 
 ## Introduction to Mesh Networks

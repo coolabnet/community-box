@@ -1,3 +1,7 @@
+---
+title: CasaOS
+---
+
 # CasaOS Overview for Community Servers
 
 ## Introduction

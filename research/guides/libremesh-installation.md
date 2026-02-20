@@ -1,3 +1,7 @@
+---
+title: Installation
+---
+
 # LibreMesh Firmware Installation Guide
 
 This comprehensive guide provides step-by-step instructions for downloading, verifying, preparing, and flashing LibreMesh firmware onto your target router. Follow these procedures carefully to ensure a successful installation and avoid device damage.

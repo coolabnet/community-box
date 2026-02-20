@@ -1,3 +1,7 @@
+---
+title: Compatibility Check
+---
+
 # Hardware Compatibility Check Guide for Recycled Servers
 
 ## Overview

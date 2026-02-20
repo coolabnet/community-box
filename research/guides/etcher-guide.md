@@ -1,3 +1,7 @@
+---
+title: Etcher
+---
+
 # Complete Guide to Using Etcher for OS Image Flashing
 
 This guide provides step-by-step instructions for using balenaEtcher to safely write operating system images to SD cards and USB drives for community server deployments.

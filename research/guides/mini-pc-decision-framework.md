@@ -1,3 +1,7 @@
+---
+title: Decision Framework
+---
+
 # Mini PC AI Deployment Decision Framework
 
 ## Quick Decision Matrix

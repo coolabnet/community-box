@@ -1,3 +1,7 @@
+---
+title: CapRover
+---
+
 # CapRover Overview for Community Servers
 
 ## Introduction

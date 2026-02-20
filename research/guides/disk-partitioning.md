@@ -1,3 +1,7 @@
+---
+title: Partitioning
+---
+
 # Beginner's Guide to Disk Partitioning for Community Servers
 
 This comprehensive guide covers disk partitioning fundamentals using both graphical and command-line tools, with specific recommendations for community server deployments.

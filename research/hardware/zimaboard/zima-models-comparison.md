@@ -1,3 +1,7 @@
+---
+title: Models Comparison
+---
+
 # ZimaBoard Models Comparison
 
 ## Model Overview

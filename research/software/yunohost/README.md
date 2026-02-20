@@ -1,3 +1,7 @@
+---
+title: YunoHost
+---
+
 # YunoHost Overview for Community Servers
 
 ## Introduction

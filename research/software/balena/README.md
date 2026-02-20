@@ -1,3 +1,7 @@
+---
+title: Balena
+---
+
 # Balena Overview for Community Servers
 
 ## Introduction

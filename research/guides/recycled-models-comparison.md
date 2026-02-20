@@ -1,3 +1,11 @@
+---
+title: Models Comparison
+---
+
+---
+title: Models Comparison
+---
+
 # Recycled PC/Laptop Models Comparison for Community Servers
 
 ## Overview

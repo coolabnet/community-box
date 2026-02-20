@@ -1,3 +1,7 @@
+---
+title: Networks Directory
+---
+
 # Global Community Networks Directory
 
 A comprehensive list of community networks and community network organizations worldwide. Community networks are locally-owned and operated digital infrastructure projects that provide connectivity, services, and digital autonomy to their communities.

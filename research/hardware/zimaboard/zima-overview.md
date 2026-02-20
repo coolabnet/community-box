@@ -1,3 +1,7 @@
+---
+title: Overview
+---
+
 # ZimaBoard Overview: The x86 Single Board Server
 
 ## What is ZimaBoard?
