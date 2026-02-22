@@ -1,19 +1,19 @@
 {
-  "timestamp": "2026-02-21T06:50:46.919Z",
+  "timestamp": "2026-02-22T06:55:30.589Z",
   "script": "run-all.js",
   "note": "Summary of all data fetching script executions",
   "data": {
-    "execution_time": "2026-02-21T06:50:46.919Z",
+    "execution_time": "2026-02-22T06:55:30.589Z",
     "total_scripts": 6,
     "successful": 6,
     "failed": 0,
-    "total_duration_ms": 15936,
+    "total_duration_ms": 15477,
     "continue_on_error": true,
     "results": [
       {
         "name": "CapRover UI Translations",
         "success": true,
-        "duration": 149,
+        "duration": 192,
         "result": [
           "ar-EG",
           "de-DE",
@@ -34,7 +34,7 @@
       {
         "name": "CasaOS UI Translations",
         "success": true,
-        "duration": 69,
+        "duration": 88,
         "result": [
           "ca_ES",
           "cs_CZ",
@@ -69,7 +69,7 @@
       {
         "name": "YunoHost Apps",
         "success": true,
-        "duration": 13376,
+        "duration": 13427,
         "result": {
           "count": 946,
           "apps": [
@@ -2608,9 +2608,9 @@
               "name": "firefly-iii",
               "description": " Firefly III package for YunoHost",
               "url": "https://github.com/YunoHost-Apps/firefly-iii_ynh",
-              "stars": 24,
+              "stars": 25,
               "forks": 12,
-              "updated_at": "2026-02-17T20:00:14Z",
+              "updated_at": "2026-02-22T04:14:03Z",
               "language": "Shell",
               "archived": false
             },
@@ -3688,7 +3688,7 @@
               "url": "https://github.com/YunoHost-Apps/homeassistant_ynh",
               "stars": 24,
               "forks": 17,
-              "updated_at": "2026-02-14T07:53:36Z",
+              "updated_at": "2026-02-21T07:00:23Z",
               "language": "Shell",
               "archived": false
             },
@@ -6185,7 +6185,7 @@
               "url": "https://github.com/YunoHost-Apps/ollama_ynh",
               "stars": 4,
               "forks": 3,
-              "updated_at": "2026-02-17T06:04:01Z",
+              "updated_at": "2026-02-21T07:43:21Z",
               "language": "Shell",
               "archived": false
             },
@@ -8076,7 +8076,7 @@
               "description": "Seaweedfs pacakge for YunoHost",
               "url": "https://github.com/YunoHost-Apps/seaweedfs_ynh",
               "stars": 0,
-              "forks": 1,
+              "forks": 2,
               "updated_at": "2026-02-04T18:00:34Z",
               "language": "Shell",
               "archived": false
@@ -8539,7 +8539,7 @@
               "url": "https://github.com/YunoHost-Apps/sparkyfitness_ynh",
               "stars": 0,
               "forks": 2,
-              "updated_at": "2026-02-13T06:39:42Z",
+              "updated_at": "2026-02-21T09:32:41Z",
               "language": "Shell",
               "archived": false
             },
@@ -9672,7 +9672,7 @@
               "url": "https://github.com/YunoHost-Apps/wanderer_ynh",
               "stars": 5,
               "forks": 1,
-              "updated_at": "2026-02-17T06:04:29Z",
+              "updated_at": "2026-02-21T07:44:24Z",
               "language": "Shell",
               "archived": false
             },
@@ -9990,7 +9990,7 @@
               "description": "WordPress package for YunoHost",
               "url": "https://github.com/YunoHost-Apps/wordpress_ynh",
               "stars": 29,
-              "forks": 32,
+              "forks": 33,
               "updated_at": "2026-02-15T08:25:34Z",
               "language": "Shell",
               "archived": false
@@ -10498,7 +10498,7 @@
       {
         "name": "YunoHost Docs Translations",
         "success": true,
-        "duration": 62,
+        "duration": 76,
         "result": [
           "de",
           "docs",
@@ -10512,7 +10512,7 @@
       {
         "name": "YunoHost UI Translations",
         "success": true,
-        "duration": 1898,
+        "duration": 1380,
         "result": [
           {
             "language": "Basque",
@@ -10520,7 +10520,7 @@
             "translated_percent": 100,
             "translated_words": 11028,
             "total_words": 11028,
-            "last_change": "2026-02-20T23:17:43.847847Z"
+            "last_change": "2026-02-21T16:48:27.574289Z"
           },
           {
             "language": "French",
@@ -10919,7 +10919,7 @@
       {
         "name": "Zimaboard Shipping Areas",
         "success": true,
-        "duration": 382,
+        "duration": 314,
         "result": [
           "Argentina",
           "Australia",
