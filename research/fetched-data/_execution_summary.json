@@ -1,19 +1,19 @@
 {
-  "timestamp": "2026-02-22T06:55:30.589Z",
+  "timestamp": "2026-02-23T07:11:45.235Z",
   "script": "run-all.js",
   "note": "Summary of all data fetching script executions",
   "data": {
-    "execution_time": "2026-02-22T06:55:30.589Z",
+    "execution_time": "2026-02-23T07:11:45.234Z",
     "total_scripts": 6,
     "successful": 6,
     "failed": 0,
-    "total_duration_ms": 15477,
+    "total_duration_ms": 16091,
     "continue_on_error": true,
     "results": [
       {
         "name": "CapRover UI Translations",
         "success": true,
-        "duration": 192,
+        "duration": 162,
         "result": [
           "ar-EG",
           "de-DE",
@@ -34,7 +34,7 @@
       {
         "name": "CasaOS UI Translations",
         "success": true,
-        "duration": 88,
+        "duration": 77,
         "result": [
           "ca_ES",
           "cs_CZ",
@@ -69,9 +69,9 @@
       {
         "name": "YunoHost Apps",
         "success": true,
-        "duration": 13427,
+        "duration": 14226,
         "result": {
-          "count": 946,
+          "count": 947,
           "apps": [
             {
               "id": "13ft_ynh",
@@ -1608,7 +1608,7 @@
               "description": "Matrix homeserver of second-generation, packaged for YunoHost",
               "url": "https://github.com/YunoHost-Apps/dendrite_ynh",
               "stars": 15,
-              "forks": 8,
+              "forks": 7,
               "updated_at": "2025-10-01T11:36:52Z",
               "language": "Shell",
               "archived": false
@@ -2522,7 +2522,7 @@
               "url": "https://github.com/YunoHost-Apps/filebrowser_ynh",
               "stars": 4,
               "forks": 6,
-              "updated_at": "2026-02-16T18:46:00Z",
+              "updated_at": "2026-02-22T08:24:31Z",
               "language": "Shell",
               "archived": false
             },
@@ -3149,7 +3149,7 @@
               "url": "https://github.com/YunoHost-Apps/ghost_ynh",
               "stars": 21,
               "forks": 30,
-              "updated_at": "2026-02-14T09:08:56Z",
+              "updated_at": "2026-02-22T08:27:08Z",
               "language": "Shell",
               "archived": false
             },
@@ -3457,7 +3457,7 @@
               "url": "https://github.com/YunoHost-Apps/grist_ynh",
               "stars": 13,
               "forks": 6,
-              "updated_at": "2026-01-23T13:58:00Z",
+              "updated_at": "2026-02-22T14:30:24Z",
               "language": "Shell",
               "archived": false
             },
@@ -3526,6 +3526,17 @@
               "updated_at": "2025-08-30T17:39:34Z",
               "language": "Shell",
               "archived": true
+            },
+            {
+              "id": "hash-calendar_ynh",
+              "name": "hash-calendar",
+              "description": "hash-calendar packaged for YunoHost",
+              "url": "https://github.com/YunoHost-Apps/hash-calendar_ynh",
+              "stars": 0,
+              "forks": 0,
+              "updated_at": "2026-02-22T20:25:03Z",
+              "language": "Shell",
+              "archived": false
             },
             {
               "id": "haste_ynh",
@@ -4040,7 +4051,7 @@
               "url": "https://github.com/YunoHost-Apps/it-tools_ynh",
               "stars": 3,
               "forks": 1,
-              "updated_at": "2026-02-16T16:22:04Z",
+              "updated_at": "2026-02-23T00:33:41Z",
               "language": "Shell",
               "archived": false
             },
@@ -4150,7 +4161,7 @@
               "url": "https://github.com/YunoHost-Apps/jellyfin-vue_ynh",
               "stars": 0,
               "forks": 3,
-              "updated_at": "2026-02-09T08:14:09Z",
+              "updated_at": "2026-02-23T06:12:05Z",
               "language": "Shell",
               "archived": false
             },
@@ -4502,7 +4513,7 @@
               "url": "https://github.com/YunoHost-Apps/lasuite-meet_ynh",
               "stars": 4,
               "forks": 2,
-              "updated_at": "2026-02-11T06:11:11Z",
+              "updated_at": "2026-02-22T15:56:06Z",
               "language": "Shell",
               "archived": false
             },
@@ -4700,7 +4711,7 @@
               "url": "https://github.com/YunoHost-Apps/libretranslate_ynh",
               "stars": 4,
               "forks": 4,
-              "updated_at": "2026-02-11T06:58:39Z",
+              "updated_at": "2026-02-22T08:02:57Z",
               "language": "Shell",
               "archived": false
             },
@@ -4776,7 +4787,7 @@
               "description": "LinkStack package for YunoHost",
               "url": "https://github.com/YunoHost-Apps/linkstack_ynh",
               "stars": 6,
-              "forks": 1,
+              "forks": 2,
               "updated_at": "2026-02-19T20:10:27Z",
               "language": "Shell",
               "archived": false
@@ -6460,7 +6471,7 @@
               "url": "https://github.com/YunoHost-Apps/overleaf_ynh",
               "stars": 2,
               "forks": 6,
-              "updated_at": "2026-02-16T10:24:27Z",
+              "updated_at": "2026-02-23T06:12:44Z",
               "language": "Shell",
               "archived": false
             },
@@ -7494,7 +7505,7 @@
               "url": "https://github.com/YunoHost-Apps/qui_ynh",
               "stars": 0,
               "forks": 0,
-              "updated_at": "2026-02-17T20:12:58Z",
+              "updated_at": "2026-02-22T13:17:32Z",
               "language": "Shell",
               "archived": false
             },
@@ -7791,7 +7802,7 @@
               "url": "https://github.com/YunoHost-Apps/rosariosis_ynh",
               "stars": 1,
               "forks": 1,
-              "updated_at": "2026-02-02T10:52:21Z",
+              "updated_at": "2026-02-22T12:28:32Z",
               "language": "Shell",
               "archived": false
             },
@@ -8539,7 +8550,7 @@
               "url": "https://github.com/YunoHost-Apps/sparkyfitness_ynh",
               "stars": 0,
               "forks": 2,
-              "updated_at": "2026-02-21T09:32:41Z",
+              "updated_at": "2026-02-23T06:13:24Z",
               "language": "Shell",
               "archived": false
             },
@@ -9034,7 +9045,7 @@
               "url": "https://github.com/YunoHost-Apps/terraforming-mars_ynh",
               "stars": 1,
               "forks": 2,
-              "updated_at": "2026-02-16T07:44:47Z",
+              "updated_at": "2026-02-23T06:14:02Z",
               "language": "Shell",
               "archived": false
             },
@@ -10498,7 +10509,7 @@
       {
         "name": "YunoHost Docs Translations",
         "success": true,
-        "duration": 76,
+        "duration": 70,
         "result": [
           "de",
           "docs",
@@ -10512,7 +10523,7 @@
       {
         "name": "YunoHost UI Translations",
         "success": true,
-        "duration": 1380,
+        "duration": 1205,
         "result": [
           {
             "language": "Basque",
@@ -10919,7 +10930,7 @@
       {
         "name": "Zimaboard Shipping Areas",
         "success": true,
-        "duration": 314,
+        "duration": 351,
         "result": [
           "Argentina",
           "Australia",
