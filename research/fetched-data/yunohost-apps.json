@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-02-25T07:08:01.065Z",
+  "timestamp": "2026-02-26T07:06:24.016Z",
   "script": "scripts.test.js",
   "source": "YunoHost-Apps GitHub Organization",
   "url": "https://github.com/YunoHost-Apps",
@@ -1171,7 +1171,7 @@
       "url": "https://github.com/YunoHost-Apps/commafeed_ynh",
       "stars": 0,
       "forks": 1,
-      "updated_at": "2026-02-10T07:31:38Z",
+      "updated_at": "2026-02-25T14:30:32Z",
       "language": "Shell",
       "archived": false
     },
@@ -1281,7 +1281,7 @@
       "url": "https://github.com/YunoHost-Apps/copyparty_ynh",
       "stars": 4,
       "forks": 4,
-      "updated_at": "2026-02-15T08:52:00Z",
+      "updated_at": "2026-02-25T21:22:34Z",
       "language": "Shell",
       "archived": false
     },
@@ -2128,7 +2128,7 @@
       "url": "https://github.com/YunoHost-Apps/element-call_ynh",
       "stars": 1,
       "forks": 3,
-      "updated_at": "2025-12-04T19:10:20Z",
+      "updated_at": "2026-02-25T08:31:27Z",
       "language": "Shell",
       "archived": false
     },
@@ -2579,7 +2579,7 @@
       "url": "https://github.com/YunoHost-Apps/fittrackee_ynh",
       "stars": 6,
       "forks": 1,
-      "updated_at": "2026-02-08T17:31:02Z",
+      "updated_at": "2026-02-25T18:50:51Z",
       "language": "Shell",
       "archived": false
     },
@@ -2612,7 +2612,7 @@
       "url": "https://github.com/YunoHost-Apps/flohmarkt_ynh",
       "stars": 2,
       "forks": 3,
-      "updated_at": "2026-01-14T07:23:19Z",
+      "updated_at": "2026-02-25T18:48:04Z",
       "language": "Shell",
       "archived": false
     },
@@ -2854,7 +2854,7 @@
       "url": "https://github.com/YunoHost-Apps/freescout_ynh",
       "stars": 1,
       "forks": 4,
-      "updated_at": "2026-02-10T12:43:21Z",
+      "updated_at": "2026-02-25T22:38:56Z",
       "language": "Shell",
       "archived": false
     },
@@ -3195,7 +3195,7 @@
       "url": "https://github.com/YunoHost-Apps/glitchsoc_ynh",
       "stars": 17,
       "forks": 11,
-      "updated_at": "2026-02-18T07:56:30Z",
+      "updated_at": "2026-02-25T15:23:43Z",
       "language": "Shell",
       "archived": false
     },
@@ -3326,7 +3326,7 @@
       "description": "GoToSocial package for YunoHost: an ActivityPub social network server, written in Golang.",
       "url": "https://github.com/YunoHost-Apps/gotosocial_ynh",
       "stars": 21,
-      "forks": 10,
+      "forks": 11,
       "updated_at": "2026-02-03T11:45:44Z",
       "language": "Shell",
       "archived": false
@@ -3481,7 +3481,7 @@
       "url": "https://github.com/YunoHost-Apps/hash-calendar_ynh",
       "stars": 0,
       "forks": 0,
-      "updated_at": "2026-02-22T20:25:03Z",
+      "updated_at": "2026-02-25T18:39:31Z",
       "language": "Shell",
       "archived": false
     },
@@ -3954,7 +3954,7 @@
       "url": "https://github.com/YunoHost-Apps/invoiceninja5_ynh",
       "stars": 11,
       "forks": 6,
-      "updated_at": "2026-02-19T22:41:52Z",
+      "updated_at": "2026-02-25T21:12:29Z",
       "language": "Shell",
       "archived": false
     },
@@ -5406,7 +5406,7 @@
       "url": "https://github.com/YunoHost-Apps/minetest_ynh",
       "stars": 6,
       "forks": 8,
-      "updated_at": "2026-02-16T15:57:27Z",
+      "updated_at": "2026-02-25T22:06:35Z",
       "language": "Shell",
       "archived": false
     },
@@ -5461,7 +5461,7 @@
       "url": "https://github.com/YunoHost-Apps/mirotalk_ynh",
       "stars": 3,
       "forks": 3,
-      "updated_at": "2026-02-16T16:09:39Z",
+      "updated_at": "2026-02-25T21:24:57Z",
       "language": "Shell",
       "archived": false
     },
@@ -5945,7 +5945,7 @@
       "url": "https://github.com/YunoHost-Apps/nitter_ynh",
       "stars": 7,
       "forks": 5,
-      "updated_at": "2026-02-17T19:59:45Z",
+      "updated_at": "2026-02-25T21:10:41Z",
       "language": "Shell",
       "archived": false
     },
@@ -6935,7 +6935,7 @@
       "url": "https://github.com/YunoHost-Apps/piwigo_ynh",
       "stars": 7,
       "forks": 5,
-      "updated_at": "2025-12-31T14:32:34Z",
+      "updated_at": "2026-02-25T15:13:10Z",
       "language": "PHP",
       "archived": false
     },
@@ -7275,7 +7275,7 @@
       "description": "Prosody package for YunoHost",
       "url": "https://github.com/YunoHost-Apps/prosody_ynh",
       "stars": 6,
-      "forks": 9,
+      "forks": 10,
       "updated_at": "2026-01-07T21:14:21Z",
       "language": "Shell",
       "archived": false
@@ -7452,7 +7452,7 @@
       "url": "https://github.com/YunoHost-Apps/qui_ynh",
       "stars": 0,
       "forks": 0,
-      "updated_at": "2026-02-22T13:17:32Z",
+      "updated_at": "2026-02-25T08:17:59Z",
       "language": "Shell",
       "archived": false
     },
@@ -7826,7 +7826,7 @@
       "url": "https://github.com/YunoHost-Apps/rsshub_ynh",
       "stars": 3,
       "forks": 2,
-      "updated_at": "2026-02-16T16:31:23Z",
+      "updated_at": "2026-02-25T21:21:03Z",
       "language": "Shell",
       "archived": false
     },
@@ -8420,7 +8420,7 @@
       "url": "https://github.com/YunoHost-Apps/snweb_ynh",
       "stars": 5,
       "forks": 4,
-      "updated_at": "2026-02-08T16:46:37Z",
+      "updated_at": "2026-02-25T09:26:55Z",
       "language": "Shell",
       "archived": false
     },
@@ -8651,7 +8651,7 @@
       "url": "https://github.com/YunoHost-Apps/stirling-pdf_ynh",
       "stars": 4,
       "forks": 4,
-      "updated_at": "2026-02-24T12:58:32Z",
+      "updated_at": "2026-02-25T08:18:38Z",
       "language": "Shell",
       "archived": false
     },
@@ -9311,7 +9311,7 @@
       "url": "https://github.com/YunoHost-Apps/tunarr_ynh",
       "stars": 1,
       "forks": 0,
-      "updated_at": "2026-02-20T10:18:49Z",
+      "updated_at": "2026-02-25T08:41:15Z",
       "language": "Shell",
       "archived": false
     },
