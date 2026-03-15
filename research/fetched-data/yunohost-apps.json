@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-03-14T06:55:15.056Z",
+  "timestamp": "2026-03-15T07:04:57.726Z",
   "script": "scripts.test.js",
   "source": "YunoHost-Apps GitHub Organization",
   "url": "https://github.com/YunoHost-Apps",
@@ -159,7 +159,7 @@
       "url": "https://github.com/YunoHost-Apps/adventurelog_ynh",
       "stars": 2,
       "forks": 2,
-      "updated_at": "2025-09-26T07:29:26Z",
+      "updated_at": "2026-03-14T11:22:18Z",
       "language": "Shell",
       "archived": false
     },
@@ -434,7 +434,7 @@
       "url": "https://github.com/YunoHost-Apps/atuin_ynh",
       "stars": 0,
       "forks": 2,
-      "updated_at": "2026-02-13T19:06:54Z",
+      "updated_at": "2026-03-14T16:42:11Z",
       "language": "Shell",
       "archived": false
     },
@@ -2260,7 +2260,7 @@
       "url": "https://github.com/YunoHost-Apps/esphome_ynh",
       "stars": 1,
       "forks": 1,
-      "updated_at": "2025-09-15T14:09:04Z",
+      "updated_at": "2026-03-14T16:59:04Z",
       "language": "Shell",
       "archived": false
     },
@@ -2524,7 +2524,7 @@
       "url": "https://github.com/YunoHost-Apps/filerise_ynh",
       "stars": 1,
       "forks": 1,
-      "updated_at": "2026-03-10T00:34:53Z",
+      "updated_at": "2026-03-14T16:42:52Z",
       "language": "PHP",
       "archived": false
     },
@@ -3282,7 +3282,7 @@
       "description": "Gokapi package for YunoHost",
       "url": "https://github.com/YunoHost-Apps/gokapi_ynh",
       "stars": 0,
-      "forks": 2,
+      "forks": 3,
       "updated_at": "2026-03-14T00:26:12Z",
       "language": "Shell",
       "archived": false
@@ -5252,8 +5252,8 @@
       "url": "https://github.com/YunoHost-Apps/may_ynh",
       "stars": 0,
       "forks": 0,
-      "updated_at": "2026-03-13T12:57:25Z",
-      "language": null,
+      "updated_at": "2026-03-14T08:16:38Z",
+      "language": "Shell",
       "archived": false
     },
     {
@@ -5527,7 +5527,7 @@
       "url": "https://github.com/YunoHost-Apps/mitra_ynh",
       "stars": 1,
       "forks": 3,
-      "updated_at": "2026-02-15T08:47:18Z",
+      "updated_at": "2026-03-14T16:40:44Z",
       "language": "Shell",
       "archived": false
     },
@@ -5615,7 +5615,7 @@
       "url": "https://github.com/YunoHost-Apps/mongo-express_ynh",
       "stars": 0,
       "forks": 4,
-      "updated_at": "2025-09-30T12:06:39Z",
+      "updated_at": "2026-03-14T09:43:14Z",
       "language": "Shell",
       "archived": false
     },
@@ -6187,7 +6187,7 @@
       "url": "https://github.com/YunoHost-Apps/ollama_ynh",
       "stars": 4,
       "forks": 3,
-      "updated_at": "2026-03-07T07:54:41Z",
+      "updated_at": "2026-03-15T07:01:58Z",
       "language": "Shell",
       "archived": false
     },
@@ -6659,8 +6659,8 @@
       "description": "Federated (ActivityPub) video streaming platform using P2P for YunoHost",
       "url": "https://github.com/YunoHost-Apps/peertube_ynh",
       "stars": 96,
-      "forks": 30,
-      "updated_at": "2026-03-14T02:44:10Z",
+      "forks": 31,
+      "updated_at": "2026-03-15T01:51:47Z",
       "language": "Shell",
       "archived": false
     },
@@ -6957,7 +6957,7 @@
       "url": "https://github.com/YunoHost-Apps/piefed_ynh",
       "stars": 4,
       "forks": 0,
-      "updated_at": "2026-03-12T18:10:59Z",
+      "updated_at": "2026-03-14T07:40:27Z",
       "language": "Shell",
       "archived": false
     },
@@ -8343,7 +8343,7 @@
       "url": "https://github.com/YunoHost-Apps/silverbullet_ynh",
       "stars": 6,
       "forks": 2,
-      "updated_at": "2026-03-06T08:40:25Z",
+      "updated_at": "2026-03-14T10:30:45Z",
       "language": "Shell",
       "archived": false
     },
@@ -9332,7 +9332,7 @@
       "description": "Transmission package for YunoHost",
       "url": "https://github.com/YunoHost-Apps/transmission_ynh",
       "stars": 7,
-      "forks": 20,
+      "forks": 19,
       "updated_at": "2026-02-23T13:23:24Z",
       "language": "Shell",
       "archived": false
@@ -9608,7 +9608,7 @@
       "url": "https://github.com/YunoHost-Apps/versitygw_ynh",
       "stars": 0,
       "forks": 0,
-      "updated_at": "2026-03-12T22:43:03Z",
+      "updated_at": "2026-03-14T19:15:48Z",
       "language": "Shell",
       "archived": false
     },
@@ -10323,7 +10323,7 @@
       "url": "https://github.com/YunoHost-Apps/yunohost_dynette_ynh",
       "stars": 2,
       "forks": 0,
-      "updated_at": "2026-03-12T14:13:52Z",
+      "updated_at": "2026-03-14T13:32:40Z",
       "language": "Shell",
       "archived": false
     },
