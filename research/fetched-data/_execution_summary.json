@@ -1,19 +1,19 @@
 {
-  "timestamp": "2026-03-15T07:04:56.839Z",
+  "timestamp": "2026-03-16T07:25:16.965Z",
   "script": "run-all.js",
   "note": "Summary of all data fetching script executions",
   "data": {
-    "execution_time": "2026-03-15T07:04:56.839Z",
+    "execution_time": "2026-03-16T07:25:16.965Z",
     "total_scripts": 6,
     "successful": 6,
     "failed": 0,
-    "total_duration_ms": 21659,
+    "total_duration_ms": 19465,
     "continue_on_error": true,
     "results": [
       {
         "name": "CapRover UI Translations",
         "success": true,
-        "duration": 251,
+        "duration": 132,
         "result": [
           "ar-EG",
           "de-DE",
@@ -34,7 +34,7 @@
       {
         "name": "CasaOS UI Translations",
         "success": true,
-        "duration": 186,
+        "duration": 83,
         "result": [
           "ca_ES",
           "cs_CZ",
@@ -69,7 +69,7 @@
       {
         "name": "YunoHost Apps",
         "success": true,
-        "duration": 19320,
+        "duration": 17688,
         "result": {
           "count": 958,
           "apps": [
@@ -168,7 +168,7 @@
               "url": "https://github.com/YunoHost-Apps/actual_ynh",
               "stars": 7,
               "forks": 5,
-              "updated_at": "2026-03-04T14:13:22Z",
+              "updated_at": "2026-03-15T20:40:31Z",
               "language": "Shell",
               "archived": false
             },
@@ -1983,7 +1983,7 @@
               "url": "https://github.com/YunoHost-Apps/dont-code_ynh",
               "stars": 3,
               "forks": 3,
-              "updated_at": "2026-03-14T00:33:34Z",
+              "updated_at": "2026-03-15T13:26:39Z",
               "language": "Shell",
               "archived": false
             },
@@ -2313,7 +2313,7 @@
               "url": "https://github.com/YunoHost-Apps/esphome_ynh",
               "stars": 1,
               "forks": 1,
-              "updated_at": "2026-03-14T16:59:04Z",
+              "updated_at": "2026-03-15T15:52:03Z",
               "language": "Shell",
               "archived": false
             },
@@ -2555,7 +2555,7 @@
               "url": "https://github.com/YunoHost-Apps/filegator_ynh",
               "stars": 0,
               "forks": 2,
-              "updated_at": "2025-08-17T13:45:03Z",
+              "updated_at": "2026-03-15T12:14:30Z",
               "language": "Shell",
               "archived": false
             },
@@ -2841,7 +2841,7 @@
               "url": "https://github.com/YunoHost-Apps/fossflow_ynh",
               "stars": 3,
               "forks": 1,
-              "updated_at": "2026-03-09T13:19:37Z",
+              "updated_at": "2026-03-16T00:28:49Z",
               "language": "Shell",
               "archived": false
             },
@@ -3554,9 +3554,9 @@
               "name": "hash-calendar",
               "description": "hash-calendar packaged for YunoHost",
               "url": "https://github.com/YunoHost-Apps/hash-calendar_ynh",
-              "stars": 0,
+              "stars": 1,
               "forks": 0,
-              "updated_at": "2026-02-25T18:39:31Z",
+              "updated_at": "2026-03-15T11:33:18Z",
               "language": "Shell",
               "archived": false
             },
@@ -4073,7 +4073,7 @@
               "url": "https://github.com/YunoHost-Apps/it-tools_ynh",
               "stars": 4,
               "forks": 1,
-              "updated_at": "2026-03-09T13:15:09Z",
+              "updated_at": "2026-03-16T00:28:35Z",
               "language": "Shell",
               "archived": false
             },
@@ -6656,9 +6656,9 @@
               "name": "papra",
               "description": "The minimalistic document archiving platform.",
               "url": "https://github.com/YunoHost-Apps/papra_ynh",
-              "stars": 1,
+              "stars": 2,
               "forks": 1,
-              "updated_at": "2026-03-13T19:24:40Z",
+              "updated_at": "2026-03-15T11:31:54Z",
               "language": "Shell",
               "archived": false
             },
@@ -8132,7 +8132,7 @@
               "url": "https://github.com/YunoHost-Apps/seafile_ynh",
               "stars": 15,
               "forks": 19,
-              "updated_at": "2026-02-10T12:42:50Z",
+              "updated_at": "2026-03-16T06:46:44Z",
               "language": "Shell",
               "archived": false
             },
@@ -8154,7 +8154,7 @@
               "url": "https://github.com/YunoHost-Apps/searxng_ynh",
               "stars": 14,
               "forks": 4,
-              "updated_at": "2026-03-09T06:18:02Z",
+              "updated_at": "2026-03-16T06:58:18Z",
               "language": "Shell",
               "archived": false
             },
@@ -8968,7 +8968,7 @@
               "url": "https://github.com/YunoHost-Apps/synapse_ynh",
               "stars": 84,
               "forks": 48,
-              "updated_at": "2026-03-07T23:22:29Z",
+              "updated_at": "2026-03-16T06:47:43Z",
               "language": "Shell",
               "archived": false
             },
@@ -10056,7 +10056,7 @@
               "description": "WireGuard Client configuration app, for YunoHost",
               "url": "https://github.com/YunoHost-Apps/wireguard_client_ynh",
               "stars": 4,
-              "forks": 2,
+              "forks": 3,
               "updated_at": "2025-07-19T20:27:24Z",
               "language": "Shell",
               "archived": false
@@ -10630,7 +10630,7 @@
       {
         "name": "YunoHost Docs Translations",
         "success": true,
-        "duration": 145,
+        "duration": 71,
         "result": [
           "de",
           "docs",
@@ -10644,7 +10644,7 @@
       {
         "name": "YunoHost UI Translations",
         "success": true,
-        "duration": 1381,
+        "duration": 1211,
         "result": [
           {
             "language": "French",
@@ -11051,7 +11051,7 @@
       {
         "name": "Zimaboard Shipping Areas",
         "success": true,
-        "duration": 376,
+        "duration": 280,
         "result": [
           "Argentina",
           "Australia",
