@@ -1,19 +1,19 @@
 {
-  "timestamp": "2026-03-18T07:08:29.979Z",
+  "timestamp": "2026-03-19T07:04:15.195Z",
   "script": "run-all.js",
   "note": "Summary of all data fetching script executions",
   "data": {
-    "execution_time": "2026-03-18T07:08:29.979Z",
+    "execution_time": "2026-03-19T07:04:15.195Z",
     "total_scripts": 6,
     "successful": 6,
     "failed": 0,
-    "total_duration_ms": 22793,
+    "total_duration_ms": 21557,
     "continue_on_error": true,
     "results": [
       {
         "name": "CapRover UI Translations",
         "success": true,
-        "duration": 258,
+        "duration": 131,
         "result": [
           "ar-EG",
           "de-DE",
@@ -34,7 +34,7 @@
       {
         "name": "CasaOS UI Translations",
         "success": true,
-        "duration": 201,
+        "duration": 82,
         "result": [
           "ca_ES",
           "cs_CZ",
@@ -69,7 +69,7 @@
       {
         "name": "YunoHost Apps",
         "success": true,
-        "duration": 20293,
+        "duration": 19678,
         "result": {
           "count": 958,
           "apps": [
@@ -222,7 +222,7 @@
               "description": "æneria package for YunoHost",
               "url": "https://github.com/YunoHost-Apps/aeneria_ynh",
               "stars": 12,
-              "forks": 2,
+              "forks": 3,
               "updated_at": "2025-09-11T06:03:03Z",
               "language": "Shell",
               "archived": true
@@ -487,7 +487,7 @@
               "url": "https://github.com/YunoHost-Apps/atuin_ynh",
               "stars": 0,
               "forks": 2,
-              "updated_at": "2026-03-14T16:42:11Z",
+              "updated_at": "2026-03-18T09:22:50Z",
               "language": "Shell",
               "archived": false
             },
@@ -1664,7 +1664,7 @@
               "url": "https://github.com/YunoHost-Apps/diagramsnet_ynh",
               "stars": 6,
               "forks": 4,
-              "updated_at": "2026-03-07T11:55:01Z",
+              "updated_at": "2026-03-19T00:49:55Z",
               "language": "Shell",
               "archived": false
             },
@@ -2192,7 +2192,7 @@
               "url": "https://github.com/YunoHost-Apps/element-call_ynh",
               "stars": 1,
               "forks": 3,
-              "updated_at": "2026-02-25T08:31:27Z",
+              "updated_at": "2026-03-18T17:52:56Z",
               "language": "Shell",
               "archived": false
             },
@@ -3424,7 +3424,7 @@
               "url": "https://github.com/YunoHost-Apps/grafana_ynh",
               "stars": 18,
               "forks": 13,
-              "updated_at": "2026-03-17T16:40:04Z",
+              "updated_at": "2026-03-18T10:43:13Z",
               "language": "Shell",
               "archived": false
             },
@@ -3686,9 +3686,9 @@
               "name": "hollo",
               "description": "Hollo package for YunoHost",
               "url": "https://github.com/YunoHost-Apps/hollo_ynh",
-              "stars": 0,
+              "stars": 1,
               "forks": 0,
-              "updated_at": "2026-01-12T22:08:53Z",
+              "updated_at": "2026-03-18T21:33:43Z",
               "language": "Shell",
               "archived": false
             },
@@ -3732,7 +3732,7 @@
               "url": "https://github.com/YunoHost-Apps/homebox_ynh",
               "stars": 3,
               "forks": 3,
-              "updated_at": "2026-02-04T08:28:09Z",
+              "updated_at": "2026-03-19T06:37:01Z",
               "language": "Shell",
               "archived": false
             },
@@ -4084,7 +4084,7 @@
               "url": "https://github.com/YunoHost-Apps/itflow_ynh",
               "stars": 3,
               "forks": 1,
-              "updated_at": "2026-02-10T13:52:09Z",
+              "updated_at": "2026-03-18T17:51:56Z",
               "language": "Shell",
               "archived": false
             },
@@ -8504,9 +8504,9 @@
               "name": "snac",
               "description": "Snac package for YunoHost: A simple, minimalistic ActivityPub instance written in portable C",
               "url": "https://github.com/YunoHost-Apps/snac_ynh",
-              "stars": 1,
+              "stars": 2,
               "forks": 0,
-              "updated_at": "2026-03-06T12:36:19Z",
+              "updated_at": "2026-03-19T00:51:08Z",
               "language": "Shell",
               "archived": false
             },
@@ -9463,7 +9463,7 @@
               "url": "https://github.com/YunoHost-Apps/tunarr_ynh",
               "stars": 1,
               "forks": 0,
-              "updated_at": "2026-02-28T10:07:51Z",
+              "updated_at": "2026-03-19T01:04:10Z",
               "language": "Shell",
               "archived": false
             },
@@ -9605,7 +9605,7 @@
               "description": "Uptime Kuma package for YunoHost",
               "url": "https://github.com/YunoHost-Apps/uptime-kuma_ynh",
               "stars": 13,
-              "forks": 6,
+              "forks": 7,
               "updated_at": "2026-03-14T00:04:41Z",
               "language": "Shell",
               "archived": false
@@ -10630,7 +10630,7 @@
       {
         "name": "YunoHost Docs Translations",
         "success": true,
-        "duration": 163,
+        "duration": 61,
         "result": [
           "de",
           "docs",
@@ -10644,7 +10644,7 @@
       {
         "name": "YunoHost UI Translations",
         "success": true,
-        "duration": 1425,
+        "duration": 1187,
         "result": [
           {
             "language": "French",
@@ -11051,7 +11051,7 @@
       {
         "name": "Zimaboard Shipping Areas",
         "success": true,
-        "duration": 453,
+        "duration": 418,
         "result": [
           "Argentina",
           "Australia",
