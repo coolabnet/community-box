@@ -1,19 +1,19 @@
 {
-  "timestamp": "2026-03-19T07:04:15.195Z",
+  "timestamp": "2026-03-20T07:03:04.038Z",
   "script": "run-all.js",
   "note": "Summary of all data fetching script executions",
   "data": {
-    "execution_time": "2026-03-19T07:04:15.195Z",
+    "execution_time": "2026-03-20T07:03:04.038Z",
     "total_scripts": 6,
     "successful": 6,
     "failed": 0,
-    "total_duration_ms": 21557,
+    "total_duration_ms": 26009,
     "continue_on_error": true,
     "results": [
       {
         "name": "CapRover UI Translations",
         "success": true,
-        "duration": 131,
+        "duration": 257,
         "result": [
           "ar-EG",
           "de-DE",
@@ -34,7 +34,7 @@
       {
         "name": "CasaOS UI Translations",
         "success": true,
-        "duration": 82,
+        "duration": 169,
         "result": [
           "ca_ES",
           "cs_CZ",
@@ -69,7 +69,7 @@
       {
         "name": "YunoHost Apps",
         "success": true,
-        "duration": 19678,
+        "duration": 23307,
         "result": {
           "count": 958,
           "apps": [
@@ -498,7 +498,7 @@
               "url": "https://github.com/YunoHost-Apps/audiobookshelf_ynh",
               "stars": 7,
               "forks": 5,
-              "updated_at": "2026-03-13T06:46:55Z",
+              "updated_at": "2026-03-20T06:07:40Z",
               "language": "Shell",
               "archived": false
             },
@@ -3424,7 +3424,7 @@
               "url": "https://github.com/YunoHost-Apps/grafana_ynh",
               "stars": 18,
               "forks": 13,
-              "updated_at": "2026-03-18T10:43:13Z",
+              "updated_at": "2026-03-19T08:13:43Z",
               "language": "Shell",
               "archived": false
             },
@@ -3930,7 +3930,7 @@
               "url": "https://github.com/YunoHost-Apps/ihatemoney_ynh",
               "stars": 10,
               "forks": 5,
-              "updated_at": "2026-03-02T21:09:45Z",
+              "updated_at": "2026-03-19T14:14:27Z",
               "language": "Shell",
               "archived": false
             },
@@ -6240,7 +6240,7 @@
               "url": "https://github.com/YunoHost-Apps/ollama_ynh",
               "stars": 4,
               "forks": 3,
-              "updated_at": "2026-03-18T05:44:41Z",
+              "updated_at": "2026-03-20T06:09:35Z",
               "language": "Shell",
               "archived": false
             },
@@ -6316,7 +6316,7 @@
               "description": "User-friendly AI Interface (Supports Ollama, OpenAI API, ...)",
               "url": "https://github.com/YunoHost-Apps/open-webui_ynh",
               "stars": 4,
-              "forks": 1,
+              "forks": 2,
               "updated_at": "2026-02-16T18:17:01Z",
               "language": "Shell",
               "archived": false
@@ -7867,7 +7867,7 @@
               "description": "Rocket.Chat package for YunoHost",
               "url": "https://github.com/YunoHost-Apps/rocketchat_ynh",
               "stars": 16,
-              "forks": 21,
+              "forks": 20,
               "updated_at": "2026-02-10T10:08:28Z",
               "language": "Shell",
               "archived": false
@@ -10630,7 +10630,7 @@
       {
         "name": "YunoHost Docs Translations",
         "success": true,
-        "duration": 61,
+        "duration": 149,
         "result": [
           "de",
           "docs",
@@ -10644,7 +10644,7 @@
       {
         "name": "YunoHost UI Translations",
         "success": true,
-        "duration": 1187,
+        "duration": 1690,
         "result": [
           {
             "language": "French",
@@ -11051,7 +11051,7 @@
       {
         "name": "Zimaboard Shipping Areas",
         "success": true,
-        "duration": 418,
+        "duration": 437,
         "result": [
           "Argentina",
           "Australia",

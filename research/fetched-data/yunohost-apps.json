@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-03-19T07:04:31.911Z",
+  "timestamp": "2026-03-20T07:03:18.408Z",
   "script": "scripts.test.js",
   "source": "YunoHost-Apps GitHub Organization",
   "url": "https://github.com/YunoHost-Apps",
@@ -445,7 +445,7 @@
       "url": "https://github.com/YunoHost-Apps/audiobookshelf_ynh",
       "stars": 7,
       "forks": 5,
-      "updated_at": "2026-03-13T06:46:55Z",
+      "updated_at": "2026-03-20T06:07:40Z",
       "language": "Shell",
       "archived": false
     },
@@ -3371,7 +3371,7 @@
       "url": "https://github.com/YunoHost-Apps/grafana_ynh",
       "stars": 18,
       "forks": 13,
-      "updated_at": "2026-03-18T10:43:13Z",
+      "updated_at": "2026-03-19T08:13:43Z",
       "language": "Shell",
       "archived": false
     },
@@ -3877,7 +3877,7 @@
       "url": "https://github.com/YunoHost-Apps/ihatemoney_ynh",
       "stars": 10,
       "forks": 5,
-      "updated_at": "2026-03-02T21:09:45Z",
+      "updated_at": "2026-03-19T14:14:27Z",
       "language": "Shell",
       "archived": false
     },
@@ -6187,7 +6187,7 @@
       "url": "https://github.com/YunoHost-Apps/ollama_ynh",
       "stars": 4,
       "forks": 3,
-      "updated_at": "2026-03-18T05:44:41Z",
+      "updated_at": "2026-03-20T06:09:35Z",
       "language": "Shell",
       "archived": false
     },
@@ -6263,7 +6263,7 @@
       "description": "User-friendly AI Interface (Supports Ollama, OpenAI API, ...)",
       "url": "https://github.com/YunoHost-Apps/open-webui_ynh",
       "stars": 4,
-      "forks": 1,
+      "forks": 2,
       "updated_at": "2026-02-16T18:17:01Z",
       "language": "Shell",
       "archived": false
@@ -7814,7 +7814,7 @@
       "description": "Rocket.Chat package for YunoHost",
       "url": "https://github.com/YunoHost-Apps/rocketchat_ynh",
       "stars": 16,
-      "forks": 21,
+      "forks": 20,
       "updated_at": "2026-02-10T10:08:28Z",
       "language": "Shell",
       "archived": false
