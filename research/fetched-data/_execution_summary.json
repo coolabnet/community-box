@@ -1,19 +1,19 @@
 {
-  "timestamp": "2026-03-25T07:09:07.424Z",
+  "timestamp": "2026-03-26T07:16:25.462Z",
   "script": "run-all.js",
   "note": "Summary of all data fetching script executions",
   "data": {
-    "execution_time": "2026-03-25T07:09:07.424Z",
+    "execution_time": "2026-03-26T07:16:25.462Z",
     "total_scripts": 6,
     "successful": 6,
     "failed": 0,
-    "total_duration_ms": 23529,
+    "total_duration_ms": 19462,
     "continue_on_error": true,
     "results": [
       {
         "name": "CapRover UI Translations",
         "success": true,
-        "duration": 252,
+        "duration": 119,
         "result": [
           "ar-EG",
           "de-DE",
@@ -34,7 +34,7 @@
       {
         "name": "CasaOS UI Translations",
         "success": true,
-        "duration": 124,
+        "duration": 83,
         "result": [
           "ca_ES",
           "cs_CZ",
@@ -69,9 +69,9 @@
       {
         "name": "YunoHost Apps",
         "success": true,
-        "duration": 21206,
+        "duration": 17615,
         "result": {
-          "count": 960,
+          "count": 961,
           "apps": [
             {
               "id": "13ft_ynh",
@@ -653,6 +653,17 @@
               "stars": 2,
               "forks": 1,
               "updated_at": "2026-02-27T16:14:29Z",
+              "language": "Shell",
+              "archived": false
+            },
+            {
+              "id": "beszel_ynh",
+              "name": "beszel",
+              "description": "",
+              "url": "https://github.com/YunoHost-Apps/beszel_ynh",
+              "stars": 0,
+              "forks": 0,
+              "updated_at": "2026-03-25T16:54:44Z",
               "language": "Shell",
               "archived": false
             },
@@ -1575,7 +1586,7 @@
               "description": "Davis package for YunoHost",
               "url": "https://github.com/YunoHost-Apps/davis_ynh",
               "stars": 1,
-              "forks": 2,
+              "forks": 3,
               "updated_at": "2026-03-20T22:16:51Z",
               "language": "Shell",
               "archived": false
@@ -1994,7 +2005,7 @@
               "url": "https://github.com/YunoHost-Apps/dont-code_ynh",
               "stars": 3,
               "forks": 3,
-              "updated_at": "2026-03-17T17:28:16Z",
+              "updated_at": "2026-03-25T17:35:01Z",
               "language": "Shell",
               "archived": false
             },
@@ -2192,7 +2203,7 @@
               "url": "https://github.com/YunoHost-Apps/element_ynh",
               "stars": 23,
               "forks": 9,
-              "updated_at": "2026-02-24T18:08:56Z",
+              "updated_at": "2026-03-25T22:03:19Z",
               "language": "Shell",
               "archived": false
             },
@@ -3985,7 +3996,7 @@
               "url": "https://github.com/YunoHost-Apps/indico_ynh",
               "stars": 2,
               "forks": 1,
-              "updated_at": "2026-03-24T01:35:10Z",
+              "updated_at": "2026-03-25T10:45:00Z",
               "language": "Shell",
               "archived": false
             },
@@ -5886,9 +5897,9 @@
               "name": "my_webapp",
               "description": "Custom Web app with SFTP access",
               "url": "https://github.com/YunoHost-Apps/my_webapp_ynh",
-              "stars": 56,
+              "stars": 57,
               "forks": 57,
-              "updated_at": "2026-02-11T02:09:43Z",
+              "updated_at": "2026-03-25T12:37:01Z",
               "language": "Shell",
               "archived": false
             },
@@ -9318,9 +9329,9 @@
               "name": "tooljet",
               "description": "Open-source low-code framework for building React-based web applications and internal tools",
               "url": "https://github.com/YunoHost-Apps/tooljet_ynh",
-              "stars": 7,
+              "stars": 8,
               "forks": 2,
-              "updated_at": "2026-02-20T10:58:19Z",
+              "updated_at": "2026-03-26T02:23:49Z",
               "language": "Shell",
               "archived": false
             },
@@ -10652,7 +10663,7 @@
       {
         "name": "YunoHost Docs Translations",
         "success": true,
-        "duration": 112,
+        "duration": 65,
         "result": [
           "de",
           "docs",
@@ -10666,7 +10677,7 @@
       {
         "name": "YunoHost UI Translations",
         "success": true,
-        "duration": 1497,
+        "duration": 1262,
         "result": [
           {
             "language": "French",
@@ -11073,7 +11084,7 @@
       {
         "name": "Zimaboard Shipping Areas",
         "success": true,
-        "duration": 338,
+        "duration": 318,
         "result": [
           "Argentina",
           "Australia",
