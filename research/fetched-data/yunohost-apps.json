@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-03-26T07:16:35.690Z",
+  "timestamp": "2026-03-27T07:15:35.770Z",
   "script": "scripts.test.js",
   "source": "YunoHost-Apps GitHub Organization",
   "url": "https://github.com/YunoHost-Apps",
@@ -3393,7 +3393,7 @@
       "url": "https://github.com/YunoHost-Apps/grafana_ynh",
       "stars": 18,
       "forks": 13,
-      "updated_at": "2026-03-23T07:27:49Z",
+      "updated_at": "2026-03-26T09:21:09Z",
       "language": "Shell",
       "archived": false
     },
@@ -3910,7 +3910,7 @@
       "url": "https://github.com/YunoHost-Apps/immich_ynh",
       "stars": 28,
       "forks": 16,
-      "updated_at": "2026-03-24T19:15:39Z",
+      "updated_at": "2026-03-26T20:08:05Z",
       "language": "Shell",
       "archived": false
     },
@@ -4031,7 +4031,7 @@
       "url": "https://github.com/YunoHost-Apps/isso_ynh",
       "stars": 5,
       "forks": 2,
-      "updated_at": "2026-03-05T11:39:26Z",
+      "updated_at": "2026-03-27T06:33:09Z",
       "language": "Shell",
       "archived": false
     },
@@ -4504,7 +4504,7 @@
       "url": "https://github.com/YunoHost-Apps/lasuite-meet_ynh",
       "stars": 5,
       "forks": 2,
-      "updated_at": "2026-03-02T21:06:08Z",
+      "updated_at": "2026-03-26T22:17:37Z",
       "language": "Shell",
       "archived": false
     },
@@ -5241,7 +5241,7 @@
       "url": "https://github.com/YunoHost-Apps/mautrix_signal_ynh",
       "stars": 5,
       "forks": 12,
-      "updated_at": "2026-01-28T01:43:44Z",
+      "updated_at": "2026-03-26T07:51:42Z",
       "language": "Shell",
       "archived": false
     },
@@ -6209,7 +6209,7 @@
       "url": "https://github.com/YunoHost-Apps/ollama_ynh",
       "stars": 4,
       "forks": 3,
-      "updated_at": "2026-03-20T06:09:35Z",
+      "updated_at": "2026-03-27T06:01:22Z",
       "language": "Shell",
       "archived": false
     },
@@ -7089,7 +7089,7 @@
       "url": "https://github.com/YunoHost-Apps/planka_ynh",
       "stars": 1,
       "forks": 4,
-      "updated_at": "2025-10-27T15:44:17Z",
+      "updated_at": "2026-03-27T00:01:19Z",
       "language": "Shell",
       "archived": false
     },
@@ -8607,7 +8607,7 @@
       "url": "https://github.com/YunoHost-Apps/sparkyfitness_ynh",
       "stars": 0,
       "forks": 2,
-      "updated_at": "2026-03-18T06:11:32Z",
+      "updated_at": "2026-03-26T08:19:29Z",
       "language": "Shell",
       "archived": false
     },
