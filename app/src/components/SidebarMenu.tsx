@@ -1,6 +1,7 @@
 import { useState, useEffect, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Link, useLocation } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 import {
   Wifi,
   ChevronDown,
@@ -19,7 +20,8 @@ import { getPdfDownloadUrl } from '@/lib/github';
 import { getAllMarkdownTitles, deslugify } from '@/lib/markdown';
 
 type MenuItem = {
-  title: string;
+  title?: string;       // For dynamic content (markdown titles)
+  titleKey?: string;    // For i18n translation keys
   to?: string;         // internal docs path (no ".md")
   href?: string;       // external
   icon?: React.ReactNode;
@@ -34,42 +36,50 @@ function resolveTitle(path: string): string {
   return MARKDOWN_TITLES[path] || deslugify(path);
 }
 
+// Helper function to get display title
+function getDisplayTitle(item: MenuItem, t: (key: string) => string): string {
+  if (item.titleKey) {
+    return t(item.titleKey);
+  }
+  return item.title || '';
+}
+
 // Create menu function that accepts dynamic PDF URL
 const createMenu = (pdfUrl: string): MenuItem[] => [
   {
-    title: '🧭 Hardware Questionnaire',
+    titleKey: 'sidebar.hardwareQuestionnaire',
     icon: <HardDrive size={16} />,
     to: '/questionnaire'
   },
   {
-    title: '📄 Download Research Paper',
+    titleKey: 'sidebar.downloadResearchPaper',
     icon: <FileText size={16} />,
     href: pdfUrl
   },
   {
-    title: '💿 Download Images',
+    titleKey: 'sidebar.downloadImages',
     icon: <Download size={16} />,
     children: [
       {
-        title: 'Operating Systems (x86)',
+        titleKey: 'sidebar.operatingSystemsX86',
         children: [
           // { title: 'YunoHost-x86_64-v11.2.iso', href: '#' },
           // { title: 'Caprover-ubuntu-x86_64-v2.iso', href: '#' },
           // { title: 'CasaOS-debian-x86_64-v0.4.8.img', href: '#' }
-          { title: 'Images not built yet', href: '#' }
+          { titleKey: 'common.imagesNotBuiltYet', href: '#' }
         ]
       },
       {
-        title: 'Operating Systems (ARM64)',
+        titleKey: 'sidebar.operatingSystemsARM64',
         children: [
           // { title: 'YunoHost-rpi-arm64-v11.2.img', href: '#' },
           // { title: 'Caprover-ubuntu-arm64-v2.img', href: '#' },
           // { title: 'CasaOS-rpi-arm64-v0.4.8.img', href: '#' }
-          { title: 'Images not built yet', href: '#' }
+          { titleKey: 'common.imagesNotBuiltYet', href: '#' }
         ]
       },
       {
-        title: 'Networking',
+        titleKey: 'sidebar.networking',
         children: [
           { title: 'LibreMesh Image Finder', href: 'https://firmware-selector.libremesh.org/' }
         ]
@@ -77,14 +87,14 @@ const createMenu = (pdfUrl: string): MenuItem[] => [
     ]
   },
   {
-    title: '📚 Quickstart Guides',
+    titleKey: 'sidebar.quickstartGuides',
     icon: <BookOpen size={16} />,
     children: [
       {
-        title: '🖥️ Hardware Guides',
+        titleKey: 'sidebar.hardwareGuides',
         children: [
           {
-            title: 'Intel NUC',
+            titleKey: 'sidebar.intelNUC',
             children: [
               { title: resolveTitle('hardware/intel_nuc/nuc-models-comparison'), to: 'hardware/intel_nuc/nuc-models-comparison' },
               { title: resolveTitle('hardware/intel_nuc/nuc-overview'), to: 'hardware/intel_nuc/nuc-overview' },
@@ -93,7 +103,7 @@ const createMenu = (pdfUrl: string): MenuItem[] => [
             ]
           },
           {
-            title: 'Raspberry Pi',
+            titleKey: 'sidebar.raspberryPi',
             children: [
               { title: resolveTitle('hardware/raspberry_pi_5/rpi-models-comparison'), to: 'hardware/raspberry_pi_5/rpi-models-comparison' },
               { title: resolveTitle('hardware/raspberry_pi_5/rpi-overview'), to: 'hardware/raspberry_pi_5/rpi-overview' },
@@ -101,7 +111,7 @@ const createMenu = (pdfUrl: string): MenuItem[] => [
             ]
           },
           {
-            title: 'ZimaBoard',
+            titleKey: 'sidebar.zimaBoard',
             children: [
               { title: resolveTitle('hardware/zimaboard/zima-models-comparison'), to: 'hardware/zimaboard/zima-models-comparison' },
               { title: resolveTitle('hardware/zimaboard/zima-overview'), to: 'hardware/zimaboard/zima-overview' },
@@ -110,7 +120,7 @@ const createMenu = (pdfUrl: string): MenuItem[] => [
             ]
           },
           {
-            title: 'Recycled Computer',
+            titleKey: 'sidebar.recycledComputer',
             children: [
               { title: resolveTitle('guides/recycled-models-comparison'), to: 'guides/recycled-models-comparison' },
               { title: resolveTitle('guides/recycled-preparation'), to: 'guides/recycled-preparation' },
@@ -120,7 +130,7 @@ const createMenu = (pdfUrl: string): MenuItem[] => [
         ]
       },
       {
-        title: '💻 Software Platforms',
+        titleKey: 'sidebar.softwarePlatforms',
         children: [
           { title: resolveTitle('software/yunohost/README'), to: 'software/yunohost/README' },
           { title: resolveTitle('software/caprover/README'), to: 'software/caprover/README' },
@@ -129,7 +139,7 @@ const createMenu = (pdfUrl: string): MenuItem[] => [
         ]
       },
       {
-        title: '🔧 Essential Services',
+        titleKey: 'sidebar.essentialServices',
         children: [
           { title: resolveTitle('guides/libremesh-overview'), to: 'guides/libremesh-overview' },
           { title: resolveTitle('guides/mesh-network-basics'), to: 'guides/mesh-network-basics' },
@@ -138,14 +148,14 @@ const createMenu = (pdfUrl: string): MenuItem[] => [
         ]
       },
       {
-        title: '🌐 Network Configuration',
+        titleKey: 'sidebar.networkConfiguration',
         children: [
           { title: resolveTitle('guides/router-selection-guide'), to: 'guides/router-selection-guide' },
           { title: resolveTitle('guides/libremesh-installation'), to: 'guides/libremesh-installation' }
         ]
       },
       {
-        title: '🛠️ System Management',
+        titleKey: 'sidebar.systemManagement',
         children: [
           { title: resolveTitle('guides/etcher-guide'), to: 'guides/etcher-guide' },
           { title: resolveTitle('guides/disk-partitioning'), to: 'guides/disk-partitioning' },
@@ -154,7 +164,7 @@ const createMenu = (pdfUrl: string): MenuItem[] => [
         ]
       },
       {
-        title: '📖 Case Studies',
+        titleKey: 'sidebar.caseStudies',
         children: [
           { title: resolveTitle('guides/hardware-clustering-analysis'), to: 'guides/hardware-clustering-analysis' },
           { title: resolveTitle('guides/mesh-clustering-analysis'), to: 'guides/mesh-clustering-analysis' }
@@ -163,21 +173,21 @@ const createMenu = (pdfUrl: string): MenuItem[] => [
     ]
   },
   {
-    title: '☀️ Solar Calculator',
+    titleKey: 'sidebar.solarCalculator',
     icon: <Sun size={16} />,
     href: 'https://solar.coolab.org/'
   },
   {
-    title: '🌍 Community',
+    titleKey: 'sidebar.community',
     icon: <Users size={16} />,
     children: [
       { title: resolveTitle('results/global-community-networks-directory'), to: 'results/global-community-networks-directory' }
     ]
   },
   {
-    title: 'ℹ️ About',
+    titleKey: 'sidebar.about',
     icon: <Info size={16} />,
-    to: 'presentation/introduction'
+    to: 'about'
   }
 ];
 
@@ -189,6 +199,7 @@ interface SidebarMenuProps {
 }
 
 export default function SidebarMenu({ isOpen = false, onToggle, showToggleButton = true, forceOverlay = false }: SidebarMenuProps) {
+  const { t } = useTranslation();
   const isMobile = useIsMobile();
   const isDesktop = !isMobile;
   const [pdfUrl, setPdfUrl] = useState('https://github.com/coolabnet/community-box/releases/latest');
@@ -254,7 +265,7 @@ export default function SidebarMenu({ isOpen = false, onToggle, showToggleButton
           <div className="p-2 bg-primary rounded-full text-primary-foreground">
             <Wifi size={20} />
           </div>
-          <span className="font-bold text-lg">Community Box</span>
+          <span className="font-bold text-lg">{t('common.communityBox')}</span>
         </Link>
 
         <div className="space-y-2">
@@ -274,7 +285,7 @@ export default function SidebarMenu({ isOpen = false, onToggle, showToggleButton
         <button
           className="fixed top-4 left-4 z-50 p-2 bg-white rounded-full shadow-lg"
           onClick={onToggle}
-          aria-label="Open menu"
+          aria-label={t('common.openMenu')}
         >
           <MenuIcon size={20} />
         </button>
@@ -299,14 +310,14 @@ export default function SidebarMenu({ isOpen = false, onToggle, showToggleButton
                 <div className="p-2 bg-primary rounded-full text-primary-foreground">
                   <Wifi size={20} />
                 </div>
-                <span className="font-bold text-lg">Community Box</span>
+                <span className="font-bold text-lg">{t('common.communityBox')}</span>
               </Link>
               {/* Close button for mobile */}
               {onToggle && (
                 <button
                   onClick={onToggle}
                   className="p-1 hover:bg-secondary rounded transition-colors"
-                  aria-label="Close menu"
+                  aria-label={t('common.closeMenu')}
                 >
                   <CloseIcon size={20} />
                 </button>
@@ -337,9 +348,11 @@ export default function SidebarMenu({ isOpen = false, onToggle, showToggleButton
 }
 
 function MenuItem({ item, level }: { item: MenuItem; level: number }) {
+  const { t } = useTranslation();
   const hasChildren = !!item.children?.length;
   const [expanded, setExpanded] = useState(false);
   const paddingLeft = `${(level + 1) * 12}px`;
+  const displayTitle = getDisplayTitle(item, t);
 
   if (hasChildren) {
     return (
@@ -351,7 +364,7 @@ function MenuItem({ item, level }: { item: MenuItem; level: number }) {
         >
           <div className="flex items-center gap-2">
             {item.icon}
-            <span className="text-sm font-medium">{item.title}</span>
+            <span className="text-sm font-medium">{displayTitle}</span>
           </div>
           <ChevronDown
             size={16}
@@ -388,7 +401,7 @@ function MenuItem({ item, level }: { item: MenuItem; level: number }) {
       >
         <div className="flex items-center gap-2">
           {item.icon}
-          <span>{item.title}</span>
+          <span>{displayTitle}</span>
         </div>
       </a>
     );
@@ -405,7 +418,7 @@ function MenuItem({ item, level }: { item: MenuItem; level: number }) {
       >
         <div className="flex items-center gap-2">
           {item.icon}
-          <span>{item.title}</span>
+          <span>{displayTitle}</span>
         </div>
       </Link>
     );
