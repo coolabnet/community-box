@@ -1,5 +1,5 @@
-import { useState } from 'react';
-import { Outlet, Link } from 'react-router-dom';
+import { useState, useEffect } from 'react';
+import { Outlet, Link, useLocation } from 'react-router-dom';
 import SidebarMenu from '@/components/SidebarMenu';
 import LanguageSwitcher from '@/components/LanguageSwitcher';
 import { Menu as MenuIcon, X as CloseIcon, Wifi } from 'lucide-react';
@@ -7,9 +7,20 @@ import { useIsMobile } from '@/hooks/use-mobile';
 
 export default function DocsLayout() {
   const isMobile = useIsMobile();
+  const location = useLocation();
   // Sidebar starts closed on mobile, always open on desktop
   // Note: This only checks on initial render - for resize handling, mobile toggle works
   const [sidebarOpen, setSidebarOpen] = useState(!isMobile);
+
+  // Scroll to top when route changes within docs section
+  useEffect(() => {
+    window.scrollTo(0, 0);
+    // Also scroll the main content area (which has overflow-auto)
+    const mainElement = document.querySelector('main.overflow-auto');
+    if (mainElement) {
+      mainElement.scrollTop = 0;
+    }
+  }, [location.pathname]);
 
   const handleSidebarToggle = () => {
     setSidebarOpen(!sidebarOpen);
