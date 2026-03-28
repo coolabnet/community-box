@@ -28,13 +28,18 @@ import {
   Share2,
   Mail,
   MessageCircle,
-  AlertCircle
+  AlertCircle,
+  Cloud,
+  HardDrive,
+  Settings,
+  Package,
 } from 'lucide-react';
 
 // Import PDF utilities
 import { downloadPDF, sharePDF } from '@/utils/pdfGenerator';
 import PDFTemplate from './PDFTemplate';
 import { copyUrlToClipboard, shareUrl } from '@/utils/statePersistence';
+import { getRecommendations } from '@/utils/recommendations';
 import type {
   AttributeKey,
   DeviceAttributes,
@@ -42,6 +47,8 @@ import type {
   DeviceScore,
   PriorityAllocation,
   UserAnswers,
+  ServiceSuggestion,
+  OSSuggestion,
 } from '@/types/questionnaire';
 
 // Import board images
@@ -275,15 +282,28 @@ const RecommendationResults = ({
   const [isPdfGenerating, setIsPdfGenerating] = useState(false);
   const [showPdfPreview, setShowPdfPreview] = useState(false);
   const [shareSuccess, setShareSuccess] = useState<boolean | null>(null);
+  const [serviceSuggestions, setServiceSuggestions] = useState<ServiceSuggestion[]>([]);
+  const [osSuggestions, setOSSuggestions] = useState<OSSuggestion[]>([]);
   const pdfTemplateRef = useRef<HTMLDivElement>(null);
 
-  // Calculate device scores on component mount
+  // Calculate device scores and recommendations on component mount
   useEffect(() => {
     // Simulate calculation time for better UX
     const timer = setTimeout(() => {
       const normalizedAnswers = normalizeUserAnswers(answers);
       const scores = calculateDeviceScores(answers, normalizedAnswers);
       setDeviceScores(scores);
+
+      // Get service and OS recommendations
+      const recommendations = getRecommendations(
+        answers.usage,
+        answers.mainUse,
+        answers.format,
+        scores[0]?.device?.key as DeviceKey | undefined
+      );
+      setServiceSuggestions(recommendations.services);
+      setOSSuggestions(recommendations.operatingSystems);
+
       setIsCalculating(false);
     }, 1500);
 
@@ -739,6 +759,126 @@ const RecommendationResults = ({
                   </motion.div>
                 )}
               </AnimatePresence>
+
+              {/* Services and Operating Systems Recommendations */}
+              {!isCalculating && (
+                <motion.div
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: 0.65 }}
+                  className="space-y-8 mb-8"
+                >
+                  {/* Services Section */}
+                  {serviceSuggestions.length > 0 && (
+                    <div className="bg-card rounded-xl border border-border overflow-hidden">
+                      <div className="bg-primary/10 p-4">
+                        <div className="flex items-center gap-3">
+                          <div className="p-2 rounded-lg bg-primary text-primary-foreground">
+                            <Package className="h-5 w-5" />
+                          </div>
+                          <div>
+                            <h3 className="text-lg font-bold">
+                              {t('questionnaire.questions.results.services.title') || 'Recommended Services'}
+                            </h3>
+                            <p className="text-sm text-muted-foreground">
+                              {t('questionnaire.questions.results.services.description') || 'Self-hosted software for your Community Box'}
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                      <div className="p-4">
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
+                          {serviceSuggestions.map((service, index) => (
+                            <motion.div
+                              key={service.key}
+                              initial={{ opacity: 0, x: -20 }}
+                              animate={{ opacity: 1, x: 0 }}
+                              transition={{ delay: 0.05 * index }}
+                              className="flex items-start gap-3 p-3 bg-muted/30 rounded-lg hover:bg-muted/50 transition-colors"
+                            >
+                              <div className="text-2xl">{service.icon}</div>
+                              <div className="flex-1 min-w-0">
+                                <h4 className="font-medium text-sm">{t(`questionnaire.questions.results.services.items.${service.key}.name`)}</h4>
+                                <p className="text-xs text-muted-foreground">{t(`questionnaire.questions.results.services.items.${service.key}.description`)}</p>
+                              </div>
+                              <a
+                                href={`https://duckduckgo.com/?q=${encodeURIComponent(t(`questionnaire.questions.results.services.items.${service.key}.name`) + ' self-hosted')}`}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="text-primary hover:text-primary/80 shrink-0"
+                                aria-label={t(`questionnaire.questions.results.services.items.${service.key}.name`)}
+                              >
+                                <ExternalLink className="h-4 w-4" />
+                              </a>
+                            </motion.div>
+                          ))}
+                        </div>
+                      </div>
+                    </div>
+                  )}
+
+                  {/* Operating Systems Section */}
+                  {osSuggestions.length > 0 && (
+                    <div className="bg-card rounded-xl border border-border overflow-hidden">
+                      <div className="bg-primary/10 p-4">
+                        <div className="flex items-center gap-3">
+                          <div className="p-2 rounded-lg bg-primary text-primary-foreground">
+                            <HardDrive className="h-5 w-5" />
+                          </div>
+                          <div>
+                            <h3 className="text-lg font-bold">
+                              {t('questionnaire.questions.results.operatingSystems.title') || 'Recommended Operating Systems'}
+                            </h3>
+                            <p className="text-sm text-muted-foreground">
+                              {t('questionnaire.questions.results.operatingSystems.description') || 'OS options to run on your hardware'}
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                      <div className="p-4">
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
+                          {osSuggestions.map((os, index) => (
+                            <motion.div
+                              key={os.key}
+                              initial={{ opacity: 0, x: -20 }}
+                              animate={{ opacity: 1, x: 0 }}
+                              transition={{ delay: 0.05 * index }}
+                              className="flex items-start gap-3 p-3 bg-muted/30 rounded-lg hover:bg-muted/50 transition-colors"
+                            >
+                              <div className="p-2 rounded-lg bg-primary/10 text-primary">
+                                <Settings className="h-4 w-4" />
+                              </div>
+                              <div className="flex-1 min-w-0">
+                                <div className="flex items-center gap-2 mb-1">
+                                  <h4 className="font-medium text-sm">{t(`questionnaire.questions.results.operatingSystems.items.${os.key}.name`)}</h4>
+                                  <span className={cn(
+                                    "text-xs px-1.5 py-0.5 rounded-full",
+                                    os.difficulty === 'beginner' && "bg-green-100 text-green-700 dark:bg-green-900/30 dark:text-green-400",
+                                    os.difficulty === 'intermediate' && "bg-amber-100 text-amber-700 dark:bg-amber-900/30 dark:text-amber-400",
+                                    os.difficulty === 'advanced' && "bg-red-100 text-red-700 dark:bg-red-900/30 dark:text-red-400"
+                                  )}>
+                                    {t(`questionnaire.questions.results.operatingSystems.difficulty.${os.difficulty}`)}
+                                  </span>
+                                </div>
+                                <p className="text-xs text-muted-foreground">{t(`questionnaire.questions.results.operatingSystems.items.${os.key}.description`)}</p>
+                              </div>
+                              <a
+                                href={`https://duckduckgo.com/?q=${encodeURIComponent(t(`questionnaire.questions.results.operatingSystems.items.${os.key}.name`) + ' download')}`}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="text-primary hover:text-primary/80 shrink-0"
+                                aria-label={t(`questionnaire.questions.results.operatingSystems.items.${os.key}.name`)}
+                              >
+                                <ExternalLink className="h-4 w-4" />
+                              </a>
+                            </motion.div>
+                          ))}
+                        </div>
+                      </div>
+                    </div>
+                  )}
+                </motion.div>
+              )}
 
               {/* Action buttons */}
               {/* Share success message */}

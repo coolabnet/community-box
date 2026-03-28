@@ -10,9 +10,9 @@ const LanguageSwitcher = () => {
   const dropdownRef = useRef<HTMLDivElement>(null);
 
   const languages = [
-    { code: 'en', name: 'English' },
-    { code: 'es', name: 'Español' },
-    { code: 'pt', name: 'Português' },
+    { code: 'en', nameKey: 'language.english' },
+    { code: 'es', nameKey: 'language.spanish' },
+    { code: 'pt', nameKey: 'language.portuguese' },
   ];
 
   const currentLanguage = languages.find(lang => lang.code === i18n.language) || languages[0];
@@ -47,7 +47,7 @@ const LanguageSwitcher = () => {
           whileTap={{ scale: 0.95 }}
         >
           <Globe className="h-4 w-4 text-muted-foreground" />
-          <span className="text-sm font-medium">{currentLanguage.name}</span>
+          <span className="text-sm font-medium">{t(currentLanguage.nameKey)}</span>
           <motion.div
             animate={{ rotate: isOpen ? 180 : 0 }}
             transition={{ duration: 0.2 }}
@@ -83,7 +83,7 @@ const LanguageSwitcher = () => {
                     whileHover={{ x: 2 }}
                     whileTap={{ scale: 0.98 }}
                   >
-                    {lang.name}
+                    {t(lang.nameKey)}
                   </motion.button>
                 ))}
               </div>

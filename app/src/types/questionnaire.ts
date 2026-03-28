@@ -35,6 +35,32 @@ export type FormatAnswer = 'yes' | 'maybe' | 'no';
 export type PriceAnswer = 'low' | 'medium' | 'high';
 export type MainUseAnswer = 'education' | 'business' | 'personal';
 
+export type ServiceKey = 'nextcloud' | 'jellyfin' | 'moodle' | 'wordpress' | 'kiwix' | 'ubuntumm';
+export type OSKey = 'ubuntuServer' | 'debian' | 'raspbian' | 'truenas' | 'openmediavault';
+
+export interface ServiceSuggestion {
+  key: ServiceKey;
+  name: string;
+  description: string;
+  category: string[];
+  icon: string;
+}
+
+export interface OSSuggestion {
+  key: OSKey;
+  name: string;
+  description: string;
+  recommendedFor: string[];
+  difficulty: 'beginner' | 'intermediate' | 'advanced';
+  supportedHardware?: DeviceKey[];
+}
+
+export interface Recommendations {
+  deviceScores: DeviceScore[];
+  services: ServiceSuggestion[];
+  operatingSystems: OSSuggestion[];
+}
+
 export interface UserAnswers {
   electricity?: ElectricityAnswer;
   users?: UsersAnswer;

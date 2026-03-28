@@ -1,5 +1,6 @@
 
 import { useState } from 'react';
+import { useTranslation } from 'react-i18next';
 import { QuestionnaireProvider } from '@/context/QuestionnaireContext';
 import Questionnaire from '@/components/Questionnaire';
 import SidebarMenu from '@/components/SidebarMenu';
@@ -8,6 +9,7 @@ import { Menu as MenuIcon, X as CloseIcon, Wifi } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 const Index = () => {
+  const { t } = useTranslation();
   const [sidebarOpen, setSidebarOpen] = useState(false);
 
   return (
@@ -21,7 +23,7 @@ const Index = () => {
               <button
                 onClick={() => setSidebarOpen(!sidebarOpen)}
                 className="p-2 hover:bg-gray-100 rounded-lg transition-colors"
-                aria-label="Toggle sidebar"
+                aria-label={t('common.toggleSidebar')}
               >
                 {sidebarOpen ? <CloseIcon size={20} /> : <MenuIcon size={20} />}
               </button>
@@ -30,7 +32,7 @@ const Index = () => {
                 <div className="h-8 w-8 rounded-full bg-primary flex items-center justify-center text-primary-foreground">
                   <Wifi className="h-5 w-5" />
                 </div>
-                <span className="font-bold text-lg hidden sm:block">Community Box</span>
+                <span className="font-bold text-lg hidden sm:block">{t('common.communityBox')}</span>
               </Link>
             </div>
 
