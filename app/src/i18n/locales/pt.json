@@ -229,6 +229,34 @@
         "shareText": "Confira minha recomendação de Caixa Comunitária",
         "emailSubject": "Minha Recomendação de Caixa Comunitária",
         "emailBody": "Recebi uma recomendação para um {{device}} para as necessidades da minha caixa comunitária!"
+      },
+      "services": {
+        "title": "Serviços Recomendados",
+        "description": "Software auto-hospedado para sua Caixa Comunitária",
+        "items": {
+          "nextcloud": { "name": "Nextcloud", "description": "Armazenamento de arquivos auto-hospedado, calendário e plataforma de colaboração" },
+          "jellyfin": { "name": "Jellyfin", "description": "Servidor de mídia para filmes, música e fotos" },
+          "moodle": { "name": "Moodle", "description": "Sistema de gestão de aprendizagem para conteúdo educacional" },
+          "wordpress": { "name": "WordPress", "description": "Plataforma de publicação de sites e blogs" },
+          "kiwix": { "name": "Kiwix", "description": "Leitor offline da Wikipedia e conteúdo educacional" },
+          "ubuntumm": { "name": "Ubuntu MM", "description": "Sistema de gestão comunitária para acesso à internet e monitoramento" }
+        }
+      },
+      "operatingSystems": {
+        "title": "Sistemas Operacionais Recomendados",
+        "description": "Opções de SO para executar no seu hardware",
+        "items": {
+          "ubuntuServer": { "name": "Ubuntu Server", "description": "SO servidor Linux popular e bem documentado com grande suporte da comunidade" },
+          "debian": { "name": "Debian", "description": "Distribuição Linux estável e leve ideal para usuários experientes" },
+          "raspbian": { "name": "Raspberry Pi OS", "description": "SO oficial para Raspberry Pi, otimizado para computadores de placa única" },
+          "truenas": { "name": "TrueNAS", "description": "SO especializado para armazenamento conectado à rede e compartilhamento de arquivos" },
+          "openmediavault": { "name": "OpenMediaVault", "description": "Solução de armazenamento conectado à rede com gerenciamento baseado na web" }
+        },
+        "difficulty": {
+          "beginner": "Iniciante",
+          "intermediate": "Intermediário",
+          "advanced": "Avançado"
+        }
       }
     },
     "buttons": {
@@ -245,7 +273,48 @@
     "contextError": "useQuestionnaire deve ser usado dentro de um QuestionnaireProvider"
   },
   "language": {
-    "select": "Idioma"
+    "select": "Idioma",
+    "english": "English",
+    "spanish": "Español",
+    "portuguese": "Português"
+  },
+  "common": {
+    "communityBox": "Caixa Comunitária",
+    "pros": "Prós",
+    "cons": "Contras",
+    "idealFor": "Ideal Para",
+    "yourAnswersSummary": "Resumo das Suas Respostas",
+    "generatedBy": "Gerado por Ferramenta de Recomendação de Caixa Comunitária",
+    "copyright": "© {{year}} Projeto Caixa Comunitária",
+    "pointAllocation": "Atribuição de pontos",
+    "usageSelection": "Seleção de uso",
+    "imagesNotBuiltYet": "Imagens ainda não criadas",
+    "openMenu": "Abrir menu",
+    "closeMenu": "Fechar menu",
+    "toggleSidebar": "Alternar barra lateral"
+  },
+  "sidebar": {
+    "hardwareQuestionnaire": "🧭 Questionário de Hardware",
+    "downloadResearchPaper": "📄 Baixar Documento de Pesquisa",
+    "downloadImages": "💿 Baixar Imagens",
+    "operatingSystemsX86": "Sistemas Operacionais (x86)",
+    "operatingSystemsARM64": "Sistemas Operacionais (ARM64)",
+    "networking": "Redes",
+    "libreMeshImageFinder": "Localizador de Imagens LibreMesh",
+    "quickstartGuides": "📚 Guias de Início Rápido",
+    "hardwareGuides": "🖥️ Guias de Hardware",
+    "intelNUC": "Intel NUC",
+    "raspberryPi": "Raspberry Pi",
+    "zimaBoard": "ZimaBoard",
+    "recycledComputer": "Computador Reutilizado",
+    "softwarePlatforms": "💻 Plataformas de Software",
+    "essentialServices": "🔧 Serviços Essenciais",
+    "networkConfiguration": "🌐 Configuração de Rede",
+    "systemManagement": "🛠️ Gerenciamento do Sistema",
+    "caseStudies": "📖 Estudos de Caso",
+    "solarCalculator": "☀️ Calculadora Solar",
+    "community": "🌍 Comunidade",
+    "about": "ℹ️ Sobre"
   },
   "landing": {
     "title": "Caixa Comunitária",
