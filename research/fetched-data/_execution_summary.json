@@ -1,19 +1,19 @@
 {
-  "timestamp": "2026-03-28T07:04:27.283Z",
+  "timestamp": "2026-03-29T07:11:11.954Z",
   "script": "run-all.js",
   "note": "Summary of all data fetching script executions",
   "data": {
-    "execution_time": "2026-03-28T07:04:27.283Z",
+    "execution_time": "2026-03-29T07:11:11.954Z",
     "total_scripts": 6,
     "successful": 6,
     "failed": 0,
-    "total_duration_ms": 13319,
+    "total_duration_ms": 11509,
     "continue_on_error": true,
     "results": [
       {
         "name": "CapRover UI Translations",
         "success": true,
-        "duration": 205,
+        "duration": 114,
         "result": [
           "ar-EG",
           "de-DE",
@@ -34,7 +34,7 @@
       {
         "name": "CasaOS UI Translations",
         "success": true,
-        "duration": 108,
+        "duration": 73,
         "result": [
           "ca_ES",
           "cs_CZ",
@@ -69,7 +69,7 @@
       {
         "name": "YunoHost Apps",
         "success": true,
-        "duration": 11158,
+        "duration": 9612,
         "result": {
           "count": 961,
           "apps": [
@@ -3963,7 +3963,7 @@
               "url": "https://github.com/YunoHost-Apps/immich_ynh",
               "stars": 28,
               "forks": 16,
-              "updated_at": "2026-03-26T20:08:05Z",
+              "updated_at": "2026-03-28T13:21:14Z",
               "language": "Shell",
               "archived": false
             },
@@ -6174,7 +6174,7 @@
               "url": "https://github.com/YunoHost-Apps/ntfy_ynh",
               "stars": 14,
               "forks": 4,
-              "updated_at": "2026-03-27T17:15:11Z",
+              "updated_at": "2026-03-28T13:05:01Z",
               "language": "Shell",
               "archived": false
             },
@@ -8660,7 +8660,7 @@
               "url": "https://github.com/YunoHost-Apps/sparkyfitness_ynh",
               "stars": 0,
               "forks": 2,
-              "updated_at": "2026-03-26T08:19:29Z",
+              "updated_at": "2026-03-28T17:23:49Z",
               "language": "Shell",
               "archived": false
             },
@@ -10663,7 +10663,7 @@
       {
         "name": "YunoHost Docs Translations",
         "success": true,
-        "duration": 80,
+        "duration": 71,
         "result": [
           "de",
           "docs",
@@ -10677,7 +10677,7 @@
       {
         "name": "YunoHost UI Translations",
         "success": true,
-        "duration": 1427,
+        "duration": 1363,
         "result": [
           {
             "language": "French",
@@ -11084,7 +11084,7 @@
       {
         "name": "Zimaboard Shipping Areas",
         "success": true,
-        "duration": 341,
+        "duration": 276,
         "result": [
           "Argentina",
           "Australia",
