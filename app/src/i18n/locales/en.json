@@ -228,34 +228,67 @@
         "shareTitle": "Community Box Recommendation",
         "shareText": "Check out my Community Box recommendation",
         "emailSubject": "My Community Box Recommendation",
-        "emailBody": "I got a recommendation for a {{device}} for my community box needs!"
-      },
-      "services": {
-        "title": "Recommended Services",
-        "description": "Self-hosted software for your Community Box",
-        "items": {
-          "nextcloud": { "name": "Nextcloud", "description": "Self-hosted file storage, calendar, and collaboration platform" },
-          "jellyfin": { "name": "Jellyfin", "description": "Media server for movies, music, and photos" },
-          "moodle": { "name": "Moodle", "description": "Learning management system for educational content" },
-          "wordpress": { "name": "WordPress", "description": "Website and blog publishing platform" },
-          "kiwix": { "name": "Kiwix", "description": "Offline Wikipedia and educational content reader" },
-          "ubuntumm": { "name": "Ubuntu MM", "description": "Community management system for internet access and monitoring" }
-        }
-      },
-      "operatingSystems": {
-        "title": "Recommended Operating Systems",
-        "description": "OS options to run on your hardware",
-        "items": {
-          "ubuntuServer": { "name": "Ubuntu Server", "description": "Popular, well-documented Linux server OS with large community support" },
-          "debian": { "name": "Debian", "description": "Stable, lightweight Linux distribution ideal for experienced users" },
-          "raspbian": { "name": "Raspberry Pi OS", "description": "Official OS for Raspberry Pi, optimized for single-board computers" },
-          "truenas": { "name": "TrueNAS", "description": "Specialized OS for network-attached storage and file sharing" },
-          "openmediavault": { "name": "OpenMediaVault", "description": "Network-attached storage solution with web-based management" }
+        "emailBody": "I got a recommendation for a {{device}} for my community box needs!",
+        "services": {
+          "title": "Recommended Services",
+          "description": "Self-hosted software for your Community Box",
+          "items": {
+            "nextcloud": {
+              "name": "Nextcloud",
+              "description": "Self-hosted file storage, calendar, and collaboration platform"
+            },
+            "jellyfin": {
+              "name": "Jellyfin",
+              "description": "Media server for movies, music, and photos"
+            },
+            "moodle": {
+              "name": "Moodle",
+              "description": "Learning management system for educational content"
+            },
+            "wordpress": {
+              "name": "WordPress",
+              "description": "Website and blog publishing platform"
+            },
+            "kiwix": {
+              "name": "Kiwix",
+              "description": "Offline Wikipedia and educational content reader"
+            },
+            "ubuntumm": {
+              "name": "Ubuntu MM",
+              "description": "Community management system for internet access and monitoring"
+            }
+          }
         },
-        "difficulty": {
-          "beginner": "Beginner",
-          "intermediate": "Intermediate",
-          "advanced": "Advanced"
+        "operatingSystems": {
+          "title": "Recommended Operating Systems",
+          "description": "OS options to run on your hardware",
+          "items": {
+            "ubuntuServer": {
+              "name": "Ubuntu Server",
+              "description": "Popular, well-documented Linux server OS with large community support"
+            },
+            "debian": {
+              "name": "Debian",
+              "description": "Stable, lightweight Linux distribution ideal for experienced users"
+            },
+            "raspbian": {
+              "name": "Raspberry Pi OS",
+              "description": "Official OS for Raspberry Pi, optimized for single-board computers"
+            },
+            "truenas": {
+              "name": "TrueNAS",
+              "description": "Specialized OS for network-attached storage and file sharing"
+            },
+            "openmediavault": {
+              "name": "OpenMediaVault",
+              "description": "Network-attached storage solution with web-based management"
+            }
+          },
+          "difficulty": {
+            "beginner": "Beginner",
+            "intermediate": "Intermediate",
+            "advanced": "Advanced"
+          }
         }
       }
     },

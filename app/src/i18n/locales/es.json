@@ -78,7 +78,7 @@
           }
         },
         "pointsRemaining": "Puntos restantes: {{count}}",
-        "pointsRemaining_one": " Punto restante: {{count}}",
+        "pointsRemaining_one": "Punto restante: {{count}}",
         "pointsRemaining_other": "Puntos restantes: {{count}}",
         "maxPointsReached": "Cantidad máxima de puntos alcanzada",
         "continue": "Continuar"
@@ -228,34 +228,67 @@
         "shareTitle": "Recomendación de Caja Comunitaria",
         "shareText": "Revisa mi recomendación de Caja Comunitaria",
         "emailSubject": "Mi Recomendación de Caja Comunitaria",
-        "emailBody": "¡Recibí una recomendación para un {{device}} para las necesidades de mi caja comunitaria!"
-      },
-      "services": {
-        "title": "Servicios Recomendados",
-        "description": "Software autohospedado para tu Caja Comunitaria",
-        "items": {
-          "nextcloud": { "name": "Nextcloud", "description": "Almacenamiento de archivos autohospedado, calendario y plataforma de colaboración" },
-          "jellyfin": { "name": "Jellyfin", "description": "Servidor multimedia para películas, música y fotos" },
-          "moodle": { "name": "Moodle", "description": "Sistema de gestión del aprendizaje para contenido educativo" },
-          "wordpress": { "name": "WordPress", "description": "Plataforma de publicación de sitios web y blogs" },
-          "kiwix": { "name": "Kiwix", "description": "Lector offline de Wikipedia y contenido educativo" },
-          "ubuntumm": { "name": "Ubuntu MM", "description": "Sistema de gestión comunitaria para acceso a internet y monitoreo" }
-        }
-      },
-      "operatingSystems": {
-        "title": "Sistemas Operativos Recomendados",
-        "description": "Opciones de SO para ejecutar en tu hardware",
-        "items": {
-          "ubuntuServer": { "name": "Ubuntu Server", "description": "SO servidor Linux popular y bien documentado con gran soporte comunitario" },
-          "debian": { "name": "Debian", "description": "Distribución Linux estable y ligera ideal para usuarios experimentados" },
-          "raspbian": { "name": "Raspberry Pi OS", "description": "SO oficial para Raspberry Pi, optimizado para computadoras de placa única" },
-          "truenas": { "name": "TrueNAS", "description": "SO especializado para almacenamiento conectado en red y compartir archivos" },
-          "openmediavault": { "name": "OpenMediaVault", "description": "Solución de almacenamiento conectado en red con gestión basada en web" }
+        "emailBody": "¡Recibí una recomendación para un {{device}} para las necesidades de mi caja comunitaria!",
+        "services": {
+          "title": "Servicios Recomendados",
+          "description": "Software autohospedado para tu Caja Comunitaria",
+          "items": {
+            "nextcloud": {
+              "name": "Nextcloud",
+              "description": "Almacenamiento de archivos autohospedado, calendario y plataforma de colaboración"
+            },
+            "jellyfin": {
+              "name": "Jellyfin",
+              "description": "Servidor multimedia para películas, música y fotos"
+            },
+            "moodle": {
+              "name": "Moodle",
+              "description": "Sistema de gestión del aprendizaje para contenido educativo"
+            },
+            "wordpress": {
+              "name": "WordPress",
+              "description": "Plataforma de publicación de sitios web y blogs"
+            },
+            "kiwix": {
+              "name": "Kiwix",
+              "description": "Lector offline de Wikipedia y contenido educativo"
+            },
+            "ubuntumm": {
+              "name": "Ubuntu MM",
+              "description": "Sistema de gestión comunitaria para acceso a internet y monitoreo"
+            }
+          }
         },
-        "difficulty": {
-          "beginner": "Principiante",
-          "intermediate": "Intermedio",
-          "advanced": "Avanzado"
+        "operatingSystems": {
+          "title": "Sistemas Operativos Recomendados",
+          "description": "Opciones de SO para ejecutar en tu hardware",
+          "items": {
+            "ubuntuServer": {
+              "name": "Ubuntu Server",
+              "description": "SO servidor Linux popular y bien documentado con gran soporte comunitario"
+            },
+            "debian": {
+              "name": "Debian",
+              "description": "Distribución Linux estable y ligera ideal para usuarios experimentados"
+            },
+            "raspbian": {
+              "name": "Raspberry Pi OS",
+              "description": "SO oficial para Raspberry Pi, optimizado para computadoras de placa única"
+            },
+            "truenas": {
+              "name": "TrueNAS",
+              "description": "SO especializado para almacenamiento conectado en red y compartir archivos"
+            },
+            "openmediavault": {
+              "name": "OpenMediaVault",
+              "description": "Solución de almacenamiento conectado en red con gestión basada en web"
+            }
+          },
+          "difficulty": {
+            "beginner": "Principiante",
+            "intermediate": "Intermedio",
+            "advanced": "Avanzado"
+          }
         }
       }
     },

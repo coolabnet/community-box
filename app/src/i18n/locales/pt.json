@@ -228,34 +228,67 @@
         "shareTitle": "Recomendação da Caixa Comunitária",
         "shareText": "Confira minha recomendação de Caixa Comunitária",
         "emailSubject": "Minha Recomendação de Caixa Comunitária",
-        "emailBody": "Recebi uma recomendação para um {{device}} para as necessidades da minha caixa comunitária!"
-      },
-      "services": {
-        "title": "Serviços Recomendados",
-        "description": "Software auto-hospedado para sua Caixa Comunitária",
-        "items": {
-          "nextcloud": { "name": "Nextcloud", "description": "Armazenamento de arquivos auto-hospedado, calendário e plataforma de colaboração" },
-          "jellyfin": { "name": "Jellyfin", "description": "Servidor de mídia para filmes, música e fotos" },
-          "moodle": { "name": "Moodle", "description": "Sistema de gestão de aprendizagem para conteúdo educacional" },
-          "wordpress": { "name": "WordPress", "description": "Plataforma de publicação de sites e blogs" },
-          "kiwix": { "name": "Kiwix", "description": "Leitor offline da Wikipedia e conteúdo educacional" },
-          "ubuntumm": { "name": "Ubuntu MM", "description": "Sistema de gestão comunitária para acesso à internet e monitoramento" }
-        }
-      },
-      "operatingSystems": {
-        "title": "Sistemas Operacionais Recomendados",
-        "description": "Opções de SO para executar no seu hardware",
-        "items": {
-          "ubuntuServer": { "name": "Ubuntu Server", "description": "SO servidor Linux popular e bem documentado com grande suporte da comunidade" },
-          "debian": { "name": "Debian", "description": "Distribuição Linux estável e leve ideal para usuários experientes" },
-          "raspbian": { "name": "Raspberry Pi OS", "description": "SO oficial para Raspberry Pi, otimizado para computadores de placa única" },
-          "truenas": { "name": "TrueNAS", "description": "SO especializado para armazenamento conectado à rede e compartilhamento de arquivos" },
-          "openmediavault": { "name": "OpenMediaVault", "description": "Solução de armazenamento conectado à rede com gerenciamento baseado na web" }
+        "emailBody": "Recebi uma recomendação para um {{device}} para as necessidades da minha caixa comunitária!",
+        "services": {
+          "title": "Serviços Recomendados",
+          "description": "Software auto-hospedado para sua Caixa Comunitária",
+          "items": {
+            "nextcloud": {
+              "name": "Nextcloud",
+              "description": "Armazenamento de arquivos auto-hospedado, calendário e plataforma de colaboração"
+            },
+            "jellyfin": {
+              "name": "Jellyfin",
+              "description": "Servidor de mídia para filmes, música e fotos"
+            },
+            "moodle": {
+              "name": "Moodle",
+              "description": "Sistema de gestão de aprendizagem para conteúdo educacional"
+            },
+            "wordpress": {
+              "name": "WordPress",
+              "description": "Plataforma de publicação de sites e blogs"
+            },
+            "kiwix": {
+              "name": "Kiwix",
+              "description": "Leitor offline da Wikipedia e conteúdo educacional"
+            },
+            "ubuntumm": {
+              "name": "Ubuntu MM",
+              "description": "Sistema de gestão comunitária para acesso à internet e monitoramento"
+            }
+          }
         },
-        "difficulty": {
-          "beginner": "Iniciante",
-          "intermediate": "Intermediário",
-          "advanced": "Avançado"
+        "operatingSystems": {
+          "title": "Sistemas Operacionais Recomendados",
+          "description": "Opções de SO para executar no seu hardware",
+          "items": {
+            "ubuntuServer": {
+              "name": "Ubuntu Server",
+              "description": "SO servidor Linux popular e bem documentado com grande suporte da comunidade"
+            },
+            "debian": {
+              "name": "Debian",
+              "description": "Distribuição Linux estável e leve ideal para usuários experientes"
+            },
+            "raspbian": {
+              "name": "Raspberry Pi OS",
+              "description": "SO oficial para Raspberry Pi, otimizado para computadores de placa única"
+            },
+            "truenas": {
+              "name": "TrueNAS",
+              "description": "SO especializado para armazenamento conectado à rede e compartilhamento de arquivos"
+            },
+            "openmediavault": {
+              "name": "OpenMediaVault",
+              "description": "Solução de armazenamento conectado à rede com gerenciamento baseado na web"
+            }
+          },
+          "difficulty": {
+            "beginner": "Iniciante",
+            "intermediate": "Intermediário",
+            "advanced": "Avançado"
+          }
         }
       }
     },
