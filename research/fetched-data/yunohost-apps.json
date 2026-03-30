@@ -1,6 +1,6 @@
 {
-  "timestamp": "2026-03-30T07:49:50.470Z",
-  "script": "scripts.test.js",
+  "timestamp": "2026-03-30T16:05:44.326Z",
+  "script": "run-all.js",
   "source": "YunoHost-Apps GitHub Organization",
   "url": "https://github.com/YunoHost-Apps",
   "api_url": "https://api.github.com/orgs/YunoHost-Apps/repos",
@@ -3162,7 +3162,7 @@
       "url": "https://github.com/YunoHost-Apps/gitlab_ynh",
       "stars": 22,
       "forks": 10,
-      "updated_at": "2026-03-13T04:27:50Z",
+      "updated_at": "2026-03-30T11:44:18Z",
       "language": "Ruby",
       "archived": false
     },

@@ -1,19 +1,19 @@
 {
-  "timestamp": "2026-03-30T07:49:49.620Z",
+  "timestamp": "2026-03-30T16:05:46.504Z",
   "script": "run-all.js",
   "note": "Summary of all data fetching script executions",
   "data": {
-    "execution_time": "2026-03-30T07:49:49.620Z",
+    "execution_time": "2026-03-30T16:05:46.504Z",
     "total_scripts": 6,
     "successful": 6,
     "failed": 0,
-    "total_duration_ms": 13428,
+    "total_duration_ms": 14275,
     "continue_on_error": true,
     "results": [
       {
         "name": "CapRover UI Translations",
         "success": true,
-        "duration": 144,
+        "duration": 308,
         "result": [
           "ar-EG",
           "de-DE",
@@ -34,7 +34,7 @@
       {
         "name": "CasaOS UI Translations",
         "success": true,
-        "duration": 88,
+        "duration": 207,
         "result": [
           "ca_ES",
           "cs_CZ",
@@ -69,7 +69,7 @@
       {
         "name": "YunoHost Apps",
         "success": true,
-        "duration": 11405,
+        "duration": 11586,
         "result": {
           "count": 961,
           "apps": [
@@ -3215,7 +3215,7 @@
               "url": "https://github.com/YunoHost-Apps/gitlab_ynh",
               "stars": 22,
               "forks": 10,
-              "updated_at": "2026-03-13T04:27:50Z",
+              "updated_at": "2026-03-30T11:44:18Z",
               "language": "Ruby",
               "archived": false
             },
@@ -10663,7 +10663,7 @@
       {
         "name": "YunoHost Docs Translations",
         "success": true,
-        "duration": 58,
+        "duration": 200,
         "result": [
           "de",
           "docs",
@@ -10677,7 +10677,7 @@
       {
         "name": "YunoHost UI Translations",
         "success": true,
-        "duration": 1385,
+        "duration": 1720,
         "result": [
           {
             "language": "French",
@@ -11084,7 +11084,7 @@
       {
         "name": "Zimaboard Shipping Areas",
         "success": true,
-        "duration": 348,
+        "duration": 254,
         "result": [
           "Argentina",
           "Australia",
