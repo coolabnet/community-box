@@ -14,8 +14,8 @@ import MarkdownPage from "./pages/MarkdownPage";
 const queryClient = new QueryClient();
 
 const App = () => {
-  // Use basename for GitHub Pages deployment
-  const basename = import.meta.env.MODE === 'production' ? '/community-box' : '';
+  // Read router basename from environment, fall back to empty string
+  const basename = import.meta.env.VITE_ROUTER_BASENAME || '';
 
   return (
     <QueryClientProvider client={queryClient}>

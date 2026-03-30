@@ -14,43 +14,43 @@ import type {
 const services: Record<ServiceKey, ServiceSuggestion> = {
   nextcloud: {
     key: 'nextcloud',
-    name: '',
-    description: '',
+    name: 'services.nextcloud.name',
+    description: 'services.nextcloud.description',
     category: ['files', 'news', 'education'],
     icon: '☁️',
   },
   jellyfin: {
     key: 'jellyfin',
-    name: '',
-    description: '',
+    name: 'services.jellyfin.name',
+    description: 'services.jellyfin.description',
     category: ['media'],
     icon: '🎬',
   },
   moodle: {
     key: 'moodle',
-    name: '',
-    description: '',
+    name: 'services.moodle.name',
+    description: 'services.moodle.description',
     category: ['education'],
     icon: '📚',
   },
   wordpress: {
     key: 'wordpress',
-    name: '',
-    description: '',
+    name: 'services.wordpress.name',
+    description: 'services.wordpress.description',
     category: ['news', 'education'],
     icon: '📝',
   },
   kiwix: {
     key: 'kiwix',
-    name: '',
-    description: '',
+    name: 'services.kiwix.name',
+    description: 'services.kiwix.description',
     category: ['education', 'news'],
     icon: '📖',
   },
   ubuntumm: {
     key: 'ubuntumm',
-    name: '',
-    description: '',
+    name: 'services.ubuntumm.name',
+    description: 'services.ubuntumm.description',
     category: ['files', 'education', 'news'],
     icon: '🌐',
   },
@@ -60,40 +60,40 @@ const services: Record<ServiceKey, ServiceSuggestion> = {
 const operatingSystems: Record<OSKey, OSSuggestion> = {
   ubuntuServer: {
     key: 'ubuntuServer',
-    name: '',
-    description: '',
+    name: 'os.ubuntuServer.name',
+    description: 'os.ubuntuServer.description',
     recommendedFor: ['education', 'business', 'personal'],
     difficulty: 'beginner',
     supportedHardware: ['intelNUC', 'zimaBoard', 'reusedPC'],
   },
   debian: {
     key: 'debian',
-    name: '',
-    description: '',
+    name: 'os.debian.name',
+    description: 'os.debian.description',
     recommendedFor: ['business', 'personal'],
     difficulty: 'intermediate',
     supportedHardware: ['intelNUC', 'zimaBoard', 'reusedPC', 'raspberryPi'],
   },
   raspbian: {
     key: 'raspbian',
-    name: '',
-    description: '',
+    name: 'os.raspbian.name',
+    description: 'os.raspbian.description',
     recommendedFor: ['education', 'personal'],
     difficulty: 'beginner',
     supportedHardware: ['raspberryPi'],
   },
   truenas: {
     key: 'truenas',
-    name: '',
-    description: '',
+    name: 'os.truenas.name',
+    description: 'os.truenas.description',
     recommendedFor: ['business', 'education'],
     difficulty: 'intermediate',
     supportedHardware: ['intelNUC', 'zimaBoard', 'reusedPC'],
   },
   openmediavault: {
     key: 'openmediavault',
-    name: '',
-    description: '',
+    name: 'os.openmediavault.name',
+    description: 'os.openmediavault.description',
     recommendedFor: ['education', 'business'],
     difficulty: 'beginner',
     supportedHardware: ['intelNUC', 'zimaBoard', 'reusedPC', 'raspberryPi'],
@@ -156,9 +156,9 @@ export const getOSSuggestions = (
       )
     : allOSForUse;
 
-  // If no OS matches the hardware, fall back to all for that use case
+  // If no OS matches the hardware, return empty array instead of falling back to incompatible options
   if (osList.length === 0) {
-    osList = allOSForUse;
+    return [];
   }
 
   // If user cannot format at all, only show beginner options
@@ -170,6 +170,19 @@ export const getOSSuggestions = (
 };
 
 /**
+ * Type guard for UsageSelectionValues
+ */
+export function isUsageSelectionValues(usage: unknown): usage is UsageSelectionValues {
+  if (!usage || typeof usage !== 'object') return false;
+  
+  const validKeys = ['news', 'files', 'education', 'media', 'other'];
+  
+  return Object.entries(usage).every(([key, value]) => {
+    return validKeys.includes(key) && (value === true || typeof value === 'string');
+  });
+}
+
+/**
  * Get all recommendations (services and OS) based on user answers
  */
 export const getRecommendations = (
@@ -178,8 +191,8 @@ export const getRecommendations = (
   format: FormatAnswer | undefined,
   topDeviceKey?: DeviceKey
 ): Pick<Recommendations, 'services' | 'operatingSystems'> => {
-  // Safely cast usage to UsageSelectionValues if it has the right structure
-  const typedUsage = usage && typeof usage === 'object' ? usage as UsageSelectionValues : undefined;
+  // Safely cast usage to UsageSelectionValues using type guard
+  const typedUsage = isUsageSelectionValues(usage) ? usage : undefined;
 
   const serviceSuggestions = typedUsage
     ? getServiceSuggestions(typedUsage)
