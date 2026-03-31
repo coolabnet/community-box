@@ -1,19 +1,19 @@
 {
-  "timestamp": "2026-03-30T16:05:46.504Z",
+  "timestamp": "2026-03-31T07:23:11.339Z",
   "script": "run-all.js",
   "note": "Summary of all data fetching script executions",
   "data": {
-    "execution_time": "2026-03-30T16:05:46.504Z",
+    "execution_time": "2026-03-31T07:23:11.339Z",
     "total_scripts": 6,
     "successful": 6,
     "failed": 0,
-    "total_duration_ms": 14275,
+    "total_duration_ms": 17768,
     "continue_on_error": true,
     "results": [
       {
         "name": "CapRover UI Translations",
         "success": true,
-        "duration": 308,
+        "duration": 264,
         "result": [
           "ar-EG",
           "de-DE",
@@ -34,7 +34,7 @@
       {
         "name": "CasaOS UI Translations",
         "success": true,
-        "duration": 207,
+        "duration": 192,
         "result": [
           "ca_ES",
           "cs_CZ",
@@ -69,7 +69,7 @@
       {
         "name": "YunoHost Apps",
         "success": true,
-        "duration": 11586,
+        "duration": 14883,
         "result": {
           "count": 961,
           "apps": [
@@ -1464,9 +1464,9 @@
               "name": "cryptroot-unlock",
               "description": "Unlock through SSH your partitions encrypted with LUKS",
               "url": "https://github.com/YunoHost-Apps/cryptroot-unlock_ynh",
-              "stars": 2,
+              "stars": 3,
               "forks": 0,
-              "updated_at": "2026-03-23T23:08:50Z",
+              "updated_at": "2026-03-31T03:14:10Z",
               "language": "Shell",
               "archived": false
             },
@@ -4049,9 +4049,9 @@
               "name": "invoiceninja5",
               "description": "self-hosted invoicing platform to create & email invoices, track payments and expenses, and time billable tasks & projects for clients.",
               "url": "https://github.com/YunoHost-Apps/invoiceninja5_ynh",
-              "stars": 11,
+              "stars": 12,
               "forks": 6,
-              "updated_at": "2026-02-27T16:06:34Z",
+              "updated_at": "2026-03-30T19:10:02Z",
               "language": "Shell",
               "archived": false
             },
@@ -4128,7 +4128,7 @@
               "url": "https://github.com/YunoHost-Apps/jackett_ynh",
               "stars": 2,
               "forks": 4,
-              "updated_at": "2026-03-29T12:05:05Z",
+              "updated_at": "2026-03-31T05:59:32Z",
               "language": "Shell",
               "archived": false
             },
@@ -5415,7 +5415,7 @@
               "url": "https://github.com/YunoHost-Apps/meilisearch_ynh",
               "stars": 13,
               "forks": 3,
-              "updated_at": "2026-03-24T19:52:32Z",
+              "updated_at": "2026-03-31T05:58:37Z",
               "language": "Shell",
               "archived": false
             },
@@ -6174,7 +6174,7 @@
               "url": "https://github.com/YunoHost-Apps/ntfy_ynh",
               "stars": 14,
               "forks": 4,
-              "updated_at": "2026-03-28T13:05:01Z",
+              "updated_at": "2026-03-31T06:53:40Z",
               "language": "Shell",
               "archived": false
             },
@@ -6262,7 +6262,7 @@
               "url": "https://github.com/YunoHost-Apps/ollama_ynh",
               "stars": 4,
               "forks": 3,
-              "updated_at": "2026-03-27T06:01:22Z",
+              "updated_at": "2026-03-31T05:26:35Z",
               "language": "Shell",
               "archived": false
             },
@@ -6779,7 +6779,7 @@
               "url": "https://github.com/YunoHost-Apps/penpot_ynh",
               "stars": 9,
               "forks": 5,
-              "updated_at": "2026-03-27T19:05:18Z",
+              "updated_at": "2026-03-31T00:21:38Z",
               "language": "Shell",
               "archived": false
             },
@@ -7306,7 +7306,7 @@
               "description": "Prestashop package for YunoHost",
               "url": "https://github.com/YunoHost-Apps/prestashop_ynh",
               "stars": 10,
-              "forks": 8,
+              "forks": 9,
               "updated_at": "2025-11-24T14:30:44Z",
               "language": "Shell",
               "archived": false
@@ -7934,7 +7934,7 @@
               "url": "https://github.com/YunoHost-Apps/rspamd_ynh",
               "stars": 5,
               "forks": 5,
-              "updated_at": "2026-02-08T10:10:12Z",
+              "updated_at": "2026-03-30T19:52:57Z",
               "language": "Shell",
               "archived": false
             },
@@ -10663,7 +10663,7 @@
       {
         "name": "YunoHost Docs Translations",
         "success": true,
-        "duration": 200,
+        "duration": 194,
         "result": [
           "de",
           "docs",
@@ -10677,7 +10677,7 @@
       {
         "name": "YunoHost UI Translations",
         "success": true,
-        "duration": 1720,
+        "duration": 1963,
         "result": [
           {
             "language": "French",
@@ -10725,7 +10725,7 @@
             "translated_percent": 100,
             "translated_words": 3819,
             "total_words": 3819,
-            "last_change": "2026-02-18T21:39:16.103465Z"
+            "last_change": "2026-03-30T20:52:43.281476Z"
           },
           {
             "language": "Polish",
@@ -10845,7 +10845,7 @@
             "translated_percent": 99.1,
             "translated_words": 3749,
             "total_words": 3819,
-            "last_change": "2026-02-18T21:39:15.068941Z"
+            "last_change": "2026-03-30T17:59:36.878985Z"
           },
           {
             "language": "Spanish",
@@ -11084,7 +11084,7 @@
       {
         "name": "Zimaboard Shipping Areas",
         "success": true,
-        "duration": 254,
+        "duration": 272,
         "result": [
           "Argentina",
           "Australia",
