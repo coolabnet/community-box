@@ -1,11 +1,11 @@
 {
-  "timestamp": "2026-03-31T07:23:12.143Z",
+  "timestamp": "2026-04-01T07:41:36.202Z",
   "script": "scripts.test.js",
   "source": "YunoHost-Apps GitHub Organization",
   "url": "https://github.com/YunoHost-Apps",
   "api_url": "https://api.github.com/orgs/YunoHost-Apps/repos",
-  "total_apps": 961,
-  "total_repos_checked": 981,
+  "total_apps": 963,
+  "total_repos_checked": 983,
   "languages": [
     "CSS",
     "HTML",
@@ -127,6 +127,17 @@
       "stars": 18,
       "forks": 17,
       "updated_at": "2026-03-17T22:11:33Z",
+      "language": "Shell",
+      "archived": false
+    },
+    {
+      "id": "admidio_ynh",
+      "name": "admidio",
+      "description": "Admidio is a free open source user management system for websites of organizations and groups.",
+      "url": "https://github.com/YunoHost-Apps/admidio_ynh",
+      "stars": 0,
+      "forks": 0,
+      "updated_at": "2026-03-31T20:42:37Z",
       "language": "Shell",
       "archived": false
     },
@@ -1457,7 +1468,7 @@
       "url": "https://github.com/YunoHost-Apps/cusdis_ynh",
       "stars": 1,
       "forks": 1,
-      "updated_at": "2026-01-08T10:01:57Z",
+      "updated_at": "2026-03-31T09:51:30Z",
       "language": "Shell",
       "archived": false
     },
@@ -4162,7 +4173,7 @@
       "description": "Jellyseer package for YunoHost",
       "url": "https://github.com/YunoHost-Apps/jellyseerr_ynh",
       "stars": 1,
-      "forks": 5,
+      "forks": 4,
       "updated_at": "2026-02-28T07:31:24Z",
       "language": "Shell",
       "archived": false
@@ -4841,11 +4852,22 @@
     {
       "id": "litecart_ynh",
       "name": "litecart",
-      "description": "litecart package for YunoHost",
+      "description": "",
       "url": "https://github.com/YunoHost-Apps/litecart_ynh",
       "stars": 0,
       "forks": 0,
-      "updated_at": "2025-08-30T17:16:59Z",
+      "updated_at": "2026-04-01T03:11:10Z",
+      "language": "Shell",
+      "archived": false
+    },
+    {
+      "id": "litecart2_ynh",
+      "name": "litecart2",
+      "description": "",
+      "url": "https://github.com/YunoHost-Apps/litecart2_ynh",
+      "stars": 0,
+      "forks": 0,
+      "updated_at": "2026-04-01T03:10:42Z",
       "language": "Shell",
       "archived": false
     },
@@ -5097,7 +5119,7 @@
       "description": "Free, open-source social network for YunoHost",
       "url": "https://github.com/YunoHost-Apps/mastodon_ynh",
       "stars": 88,
-      "forks": 44,
+      "forks": 45,
       "updated_at": "2026-03-20T18:25:08Z",
       "language": "Shell",
       "archived": false
@@ -5956,7 +5978,7 @@
       "url": "https://github.com/YunoHost-Apps/navidrome_ynh",
       "stars": 18,
       "forks": 6,
-      "updated_at": "2026-02-11T08:45:20Z",
+      "updated_at": "2026-04-01T07:05:57Z",
       "language": "Shell",
       "archived": false
     },
@@ -6121,7 +6143,7 @@
       "url": "https://github.com/YunoHost-Apps/ntfy_ynh",
       "stars": 14,
       "forks": 4,
-      "updated_at": "2026-03-31T06:53:40Z",
+      "updated_at": "2026-04-01T07:01:41Z",
       "language": "Shell",
       "archived": false
     },
@@ -6308,7 +6330,7 @@
       "url": "https://github.com/YunoHost-Apps/opencloud_ynh",
       "stars": 6,
       "forks": 3,
-      "updated_at": "2026-03-10T17:49:19Z",
+      "updated_at": "2026-03-31T14:23:02Z",
       "language": "Shell",
       "archived": false
     },
@@ -7210,7 +7232,7 @@
       "url": "https://github.com/YunoHost-Apps/pollaris_ynh",
       "stars": 0,
       "forks": 0,
-      "updated_at": "2026-01-26T08:37:51Z",
+      "updated_at": "2026-03-31T20:04:05Z",
       "language": "Shell",
       "archived": false
     },
@@ -8319,9 +8341,9 @@
       "name": "sickrage",
       "description": "SickRage for YunoHost",
       "url": "https://github.com/YunoHost-Apps/sickrage_ynh",
-      "stars": 0,
+      "stars": 1,
       "forks": 2,
-      "updated_at": "2024-05-15T17:52:58Z",
+      "updated_at": "2026-03-31T13:20:56Z",
       "language": "Shell",
       "archived": true
     },
@@ -10587,7 +10609,7 @@
       "url": "https://github.com/YunoHost-Apps/zwiicms_ynh",
       "stars": 1,
       "forks": 1,
-      "updated_at": "2026-03-10T20:29:13Z",
+      "updated_at": "2026-04-01T07:29:16Z",
       "language": "Shell",
       "archived": false
     }
