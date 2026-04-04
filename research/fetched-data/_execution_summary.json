@@ -1,19 +1,19 @@
 {
-  "timestamp": "2026-04-03T07:16:59.446Z",
+  "timestamp": "2026-04-04T07:07:16.862Z",
   "script": "run-all.js",
   "note": "Summary of all data fetching script executions",
   "data": {
-    "execution_time": "2026-04-03T07:16:59.446Z",
+    "execution_time": "2026-04-04T07:07:16.862Z",
     "total_scripts": 6,
     "successful": 6,
     "failed": 0,
-    "total_duration_ms": 11933,
+    "total_duration_ms": 11562,
     "continue_on_error": true,
     "results": [
       {
         "name": "CapRover UI Translations",
         "success": true,
-        "duration": 129,
+        "duration": 120,
         "result": [
           "ar-EG",
           "de-DE",
@@ -34,7 +34,7 @@
       {
         "name": "CasaOS UI Translations",
         "success": true,
-        "duration": 93,
+        "duration": 83,
         "result": [
           "ca_ES",
           "cs_CZ",
@@ -69,9 +69,9 @@
       {
         "name": "YunoHost Apps",
         "success": true,
-        "duration": 10192,
+        "duration": 9752,
         "result": {
-          "count": 963,
+          "count": 964,
           "apps": [
             {
               "id": "13ft_ynh",
@@ -3281,7 +3281,7 @@
               "url": "https://github.com/YunoHost-Apps/glances_ynh",
               "stars": 1,
               "forks": 3,
-              "updated_at": "2025-10-25T14:13:29Z",
+              "updated_at": "2026-04-04T05:52:14Z",
               "language": "Shell",
               "archived": false
             },
@@ -3754,7 +3754,7 @@
               "url": "https://github.com/YunoHost-Apps/homeassistant_ynh",
               "stars": 24,
               "forks": 18,
-              "updated_at": "2026-03-25T05:35:15Z",
+              "updated_at": "2026-04-04T06:08:33Z",
               "language": "Shell",
               "archived": false
             },
@@ -5486,6 +5486,17 @@
               "archived": false
             },
             {
+              "id": "mfa_sidecar_ynh",
+              "name": "mfa_sidecar",
+              "description": "Authelia-based MFA sidecar for selected YunoHost domains and paths",
+              "url": "https://github.com/YunoHost-Apps/mfa_sidecar_ynh",
+              "stars": 0,
+              "forks": 0,
+              "updated_at": "2026-04-03T22:05:14Z",
+              "language": "Python",
+              "archived": false
+            },
+            {
               "id": "microbin_ynh",
               "name": "microbin",
               "description": "Microbin package for YunoHost",
@@ -6053,7 +6064,7 @@
               "url": "https://github.com/YunoHost-Apps/nextcloud_ynh",
               "stars": 172,
               "forks": 70,
-              "updated_at": "2026-03-29T16:10:24Z",
+              "updated_at": "2026-04-03T15:47:16Z",
               "language": "Shell",
               "archived": false
             },
@@ -6086,7 +6097,7 @@
               "url": "https://github.com/YunoHost-Apps/nitter_ynh",
               "stars": 8,
               "forks": 5,
-              "updated_at": "2026-03-24T20:01:57Z",
+              "updated_at": "2026-04-03T11:13:16Z",
               "language": "Shell",
               "archived": false
             },
@@ -8209,7 +8220,7 @@
               "url": "https://github.com/YunoHost-Apps/seaweedfs_ynh",
               "stars": 0,
               "forks": 2,
-              "updated_at": "2026-03-14T00:23:55Z",
+              "updated_at": "2026-04-03T09:40:18Z",
               "language": "Shell",
               "archived": false
             },
@@ -8394,9 +8405,9 @@
               "name": "sickrage",
               "description": "SickRage for YunoHost",
               "url": "https://github.com/YunoHost-Apps/sickrage_ynh",
-              "stars": 1,
+              "stars": 0,
               "forks": 2,
-              "updated_at": "2026-03-31T13:20:56Z",
+              "updated_at": "2026-04-03T12:05:27Z",
               "language": "Shell",
               "archived": true
             },
@@ -9022,7 +9033,7 @@
               "description": "synapse-admin package for YunoHost",
               "url": "https://github.com/YunoHost-Apps/synapse-admin_ynh",
               "stars": 7,
-              "forks": 3,
+              "forks": 4,
               "updated_at": "2026-02-08T10:03:14Z",
               "language": "Shell",
               "archived": false
@@ -9716,7 +9727,7 @@
               "url": "https://github.com/YunoHost-Apps/versitygw_ynh",
               "stars": 0,
               "forks": 0,
-              "updated_at": "2026-03-16T15:49:04Z",
+              "updated_at": "2026-04-03T09:22:38Z",
               "language": "Shell",
               "archived": false
             },
@@ -10662,7 +10673,7 @@
               "url": "https://github.com/YunoHost-Apps/zwiicms_ynh",
               "stars": 1,
               "forks": 1,
-              "updated_at": "2026-04-01T07:29:16Z",
+              "updated_at": "2026-04-04T06:19:15Z",
               "language": "Shell",
               "archived": false
             }
@@ -10685,7 +10696,7 @@
       {
         "name": "YunoHost Docs Translations",
         "success": true,
-        "duration": 65,
+        "duration": 54,
         "result": [
           "de",
           "docs",
@@ -10699,7 +10710,7 @@
       {
         "name": "YunoHost UI Translations",
         "success": true,
-        "duration": 1181,
+        "duration": 1277,
         "result": [
           {
             "language": "French",
@@ -11106,7 +11117,7 @@
       {
         "name": "Zimaboard Shipping Areas",
         "success": true,
-        "duration": 273,
+        "duration": 276,
         "result": [
           "Argentina",
           "Australia",
