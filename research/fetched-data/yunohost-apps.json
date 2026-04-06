@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-04-05T07:14:18.933Z",
+  "timestamp": "2026-04-06T07:51:59.173Z",
   "script": "scripts.test.js",
   "source": "YunoHost-Apps GitHub Organization",
   "url": "https://github.com/YunoHost-Apps",
@@ -610,7 +610,7 @@
       "url": "https://github.com/YunoHost-Apps/bentopdf_ynh",
       "stars": 2,
       "forks": 1,
-      "updated_at": "2026-02-27T16:14:29Z",
+      "updated_at": "2026-04-05T15:28:29Z",
       "language": "Shell",
       "archived": false
     },
@@ -2458,7 +2458,7 @@
       "url": "https://github.com/YunoHost-Apps/feber_ynh",
       "stars": 1,
       "forks": 2,
-      "updated_at": "2026-03-20T08:51:20Z",
+      "updated_at": "2026-04-05T18:19:42Z",
       "language": "Shell",
       "archived": false
     },
@@ -2821,7 +2821,7 @@
       "url": "https://github.com/YunoHost-Apps/fossflow_ynh",
       "stars": 3,
       "forks": 1,
-      "updated_at": "2026-03-30T02:05:21Z",
+      "updated_at": "2026-04-06T01:25:06Z",
       "language": "Shell",
       "archived": false
     },
@@ -3404,7 +3404,7 @@
       "url": "https://github.com/YunoHost-Apps/grafana_ynh",
       "stars": 18,
       "forks": 13,
-      "updated_at": "2026-03-27T10:42:50Z",
+      "updated_at": "2026-04-06T07:26:57Z",
       "language": "Shell",
       "archived": false
     },
@@ -4437,7 +4437,7 @@
       "description": "A personal music streaming server, packaged for YunoHost",
       "url": "https://github.com/YunoHost-Apps/koel_ynh",
       "stars": 2,
-      "forks": 3,
+      "forks": 4,
       "updated_at": "2026-03-05T09:48:38Z",
       "language": "Shell",
       "archived": false
@@ -6075,9 +6075,9 @@
       "name": "nocodb",
       "description": "Open Source Airtable alternative, packaged for YunoHost",
       "url": "https://github.com/YunoHost-Apps/nocodb_ynh",
-      "stars": 12,
+      "stars": 13,
       "forks": 5,
-      "updated_at": "2026-03-01T13:34:06Z",
+      "updated_at": "2026-04-05T08:27:39Z",
       "language": "Shell",
       "archived": false
     },
@@ -8156,7 +8156,7 @@
       "url": "https://github.com/YunoHost-Apps/searxng_ynh",
       "stars": 14,
       "forks": 4,
-      "updated_at": "2026-03-30T07:21:09Z",
+      "updated_at": "2026-04-06T06:27:59Z",
       "language": "Shell",
       "archived": false
     },
