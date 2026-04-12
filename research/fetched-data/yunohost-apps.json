@@ -1,6 +1,6 @@
 {
-  "timestamp": "2026-04-11T07:06:37.747Z",
-  "script": "scripts.test.js",
+  "timestamp": "2026-04-12T05:23:57.647Z",
+  "script": "run-all.js",
   "source": "YunoHost-Apps GitHub Organization",
   "url": "https://github.com/YunoHost-Apps",
   "api_url": "https://api.github.com/orgs/YunoHost-Apps/repos",
@@ -709,7 +709,7 @@
       "url": "https://github.com/YunoHost-Apps/bludit_ynh",
       "stars": 3,
       "forks": 2,
-      "updated_at": "2026-04-10T07:04:27Z",
+      "updated_at": "2026-04-11T21:52:54Z",
       "language": "Shell",
       "archived": false
     },
@@ -2645,7 +2645,7 @@
       "url": "https://github.com/YunoHost-Apps/flarum_ynh",
       "stars": 21,
       "forks": 7,
-      "updated_at": "2026-03-11T01:24:16Z",
+      "updated_at": "2026-04-11T16:52:03Z",
       "language": "Shell",
       "archived": false
     },
@@ -3723,7 +3723,7 @@
       "url": "https://github.com/YunoHost-Apps/homeassistant_ynh",
       "stars": 24,
       "forks": 18,
-      "updated_at": "2026-04-04T06:08:33Z",
+      "updated_at": "2026-04-11T23:17:17Z",
       "language": "Shell",
       "archived": false
     },
@@ -3976,7 +3976,7 @@
       "url": "https://github.com/YunoHost-Apps/indico_ynh",
       "stars": 2,
       "forks": 1,
-      "updated_at": "2026-04-09T17:57:31Z",
+      "updated_at": "2026-04-11T17:03:48Z",
       "language": "Shell",
       "archived": false
     },
@@ -4108,7 +4108,7 @@
       "url": "https://github.com/YunoHost-Apps/jackett_ynh",
       "stars": 2,
       "forks": 4,
-      "updated_at": "2026-04-09T07:20:36Z",
+      "updated_at": "2026-04-11T16:56:47Z",
       "language": "Shell",
       "archived": false
     },
@@ -4374,6 +4374,17 @@
       "forks": 7,
       "updated_at": "2026-03-02T21:15:25Z",
       "language": "HTML",
+      "archived": false
+    },
+    {
+      "id": "ketesa_ynh",
+      "name": "ketesa",
+      "description": "Ketesa package for YunoHost",
+      "url": "https://github.com/YunoHost-Apps/ketesa_ynh",
+      "stars": 7,
+      "forks": 4,
+      "updated_at": "2026-04-11T21:42:51Z",
+      "language": "Shell",
       "archived": false
     },
     {
@@ -4890,17 +4901,6 @@
       "stars": 0,
       "forks": 0,
       "updated_at": "2026-04-01T03:11:10Z",
-      "language": "Shell",
-      "archived": false
-    },
-    {
-      "id": "litecart2_ynh",
-      "name": "litecart2",
-      "description": "",
-      "url": "https://github.com/YunoHost-Apps/litecart2_ynh",
-      "stars": 0,
-      "forks": 0,
-      "updated_at": "2026-04-01T03:10:42Z",
       "language": "Shell",
       "archived": false
     },
@@ -5593,7 +5593,7 @@
       "url": "https://github.com/YunoHost-Apps/mirotalk_ynh",
       "stars": 4,
       "forks": 3,
-      "updated_at": "2026-04-09T17:43:11Z",
+      "updated_at": "2026-04-11T16:54:30Z",
       "language": "Shell",
       "archived": false
     },
@@ -5657,9 +5657,9 @@
       "name": "mobilizon",
       "description": "A federated organization and mobilization platform for YunoHost",
       "url": "https://github.com/YunoHost-Apps/mobilizon_ynh",
-      "stars": 25,
-      "forks": 11,
-      "updated_at": "2026-04-07T21:22:13Z",
+      "stars": 26,
+      "forks": 12,
+      "updated_at": "2026-04-12T03:35:22Z",
       "language": "Shell",
       "archived": false
     },
@@ -5950,6 +5950,17 @@
       "archived": false
     },
     {
+      "id": "mycart_ynh",
+      "name": "mycart",
+      "description": "",
+      "url": "https://github.com/YunoHost-Apps/mycart_ynh",
+      "stars": 0,
+      "forks": 0,
+      "updated_at": "2026-04-11T22:46:43Z",
+      "language": "Shell",
+      "archived": false
+    },
+    {
       "id": "mycryptochat_ynh",
       "name": "mycryptochat",
       "description": "MyCryptoChat for Yunohost",
@@ -6033,7 +6044,7 @@
       "url": "https://github.com/YunoHost-Apps/netdata_ynh",
       "stars": 10,
       "forks": 5,
-      "updated_at": "2026-04-10T17:29:30Z",
+      "updated_at": "2026-04-11T16:53:11Z",
       "language": "Shell",
       "archived": false
     },
@@ -6275,7 +6286,7 @@
       "url": "https://github.com/YunoHost-Apps/ollama_ynh",
       "stars": 4,
       "forks": 3,
-      "updated_at": "2026-04-09T04:59:41Z",
+      "updated_at": "2026-04-11T07:34:12Z",
       "language": "Shell",
       "archived": false
     },
@@ -6561,7 +6572,7 @@
       "url": "https://github.com/YunoHost-Apps/overleaf_ynh",
       "stars": 2,
       "forks": 6,
-      "updated_at": "2026-04-09T05:02:44Z",
+      "updated_at": "2026-04-11T07:33:10Z",
       "language": "Shell",
       "archived": false
     },
@@ -6792,7 +6803,7 @@
       "url": "https://github.com/YunoHost-Apps/penpot_ynh",
       "stars": 9,
       "forks": 5,
-      "updated_at": "2026-03-31T00:21:38Z",
+      "updated_at": "2026-04-11T22:32:36Z",
       "language": "Shell",
       "archived": false
     },
@@ -7089,7 +7100,7 @@
       "url": "https://github.com/YunoHost-Apps/piped_ynh",
       "stars": 3,
       "forks": 3,
-      "updated_at": "2026-03-03T12:35:25Z",
+      "updated_at": "2026-04-11T23:19:20Z",
       "language": "Shell",
       "archived": false
     },
@@ -7177,7 +7188,7 @@
       "url": "https://github.com/YunoHost-Apps/pleroma_ynh",
       "stars": 31,
       "forks": 16,
-      "updated_at": "2026-03-03T12:27:15Z",
+      "updated_at": "2026-04-11T12:52:12Z",
       "language": "Shell",
       "archived": false
     },
@@ -7771,7 +7782,7 @@
       "url": "https://github.com/YunoHost-Apps/redmine_ynh",
       "stars": 4,
       "forks": 8,
-      "updated_at": "2026-02-17T09:07:39Z",
+      "updated_at": "2026-04-11T16:55:39Z",
       "language": "Shell",
       "archived": false
     },
@@ -8420,7 +8431,7 @@
       "url": "https://github.com/YunoHost-Apps/signaturepdf_ynh",
       "stars": 2,
       "forks": 5,
-      "updated_at": "2026-04-10T06:25:11Z",
+      "updated_at": "2026-04-11T16:41:27Z",
       "language": "Shell",
       "archived": false
     },
@@ -9004,17 +9015,6 @@
       "stars": 84,
       "forks": 48,
       "updated_at": "2026-03-16T06:47:43Z",
-      "language": "Shell",
-      "archived": false
-    },
-    {
-      "id": "synapse-admin_ynh",
-      "name": "synapse-admin",
-      "description": "synapse-admin package for YunoHost",
-      "url": "https://github.com/YunoHost-Apps/synapse-admin_ynh",
-      "stars": 7,
-      "forks": 4,
-      "updated_at": "2026-02-08T10:03:14Z",
       "language": "Shell",
       "archived": false
     },
@@ -10015,7 +10015,7 @@
       "url": "https://github.com/YunoHost-Apps/whitebophir_ynh",
       "stars": 1,
       "forks": 3,
-      "updated_at": "2025-10-28T17:03:04Z",
+      "updated_at": "2026-04-11T16:56:11Z",
       "language": "Shell",
       "archived": false
     },

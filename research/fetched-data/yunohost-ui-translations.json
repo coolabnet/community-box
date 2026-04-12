@@ -1,6 +1,6 @@
 {
-  "timestamp": "2026-04-11T07:06:39.136Z",
-  "script": "scripts.test.js",
+  "timestamp": "2026-04-12T05:23:59.486Z",
+  "script": "run-all.js",
   "source": "YunoHost Translation Platform",
   "url": "https://translate.yunohost.org/",
   "api_url": "https://translate.yunohost.org/api/translations/?format=json",
