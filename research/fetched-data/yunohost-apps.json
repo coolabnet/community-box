@@ -1,6 +1,6 @@
 {
-  "timestamp": "2026-04-14T07:55:31.165Z",
-  "script": "scripts.test.js",
+  "timestamp": "2026-04-14T08:47:59.028Z",
+  "script": "run-all.js",
   "source": "YunoHost-Apps GitHub Organization",
   "url": "https://github.com/YunoHost-Apps",
   "api_url": "https://api.github.com/orgs/YunoHost-Apps/repos",
@@ -8618,7 +8618,7 @@
       "url": "https://github.com/YunoHost-Apps/snserver_ynh",
       "stars": 6,
       "forks": 6,
-      "updated_at": "2026-01-06T07:27:55Z",
+      "updated_at": "2026-04-14T08:47:32Z",
       "language": "Shell",
       "archived": false
     },
