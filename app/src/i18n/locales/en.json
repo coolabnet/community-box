@@ -327,7 +327,7 @@
     "toggleSidebar": "Toggle sidebar"
   },
   "sidebar": {
-    "hardwareQuestionnaire": "🧭 Hardware Questionnaire",
+    "setupWizard": "🧭 Setup Wizard",
     "downloadResearchPaper": "📄 Download Research Paper",
     "downloadImages": "💿 Download Images",
     "operatingSystemsX86": "Operating Systems (x86)",

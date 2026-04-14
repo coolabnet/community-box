@@ -327,7 +327,7 @@
     "toggleSidebar": "Alternar barra lateral"
   },
   "sidebar": {
-    "hardwareQuestionnaire": "🧭 Cuestionario de Hardware",
+    "setupWizard": "🧭 Asistente de Configuración",
     "downloadResearchPaper": "📄 Descargar Documento de Investigación",
     "downloadImages": "💿 Descargar Imágenes",
     "operatingSystemsX86": "Sistemas Operativos (x86)",

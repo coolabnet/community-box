@@ -9,7 +9,7 @@ import {
   X as CloseIcon,
   FileText,
   Download,
-  HardDrive,
+  Compass,
   BookOpen,
   Sun,
   Users,
@@ -47,8 +47,8 @@ function getDisplayTitle(item: MenuItem, t: (key: string) => string): string {
 // Create menu function that accepts dynamic PDF URL
 const createMenu = (pdfUrl: string): MenuItem[] => [
   {
-    titleKey: 'sidebar.hardwareQuestionnaire',
-    icon: <HardDrive size={16} />,
+    titleKey: 'sidebar.setupWizard',
+    icon: <Compass size={16} />,
     to: '/questionnaire'
   },
   {
