@@ -250,8 +250,9 @@ const calculateDeviceScores = (
     });
 
     // Calculate match percentage (0-100%)
-    const maxPossibleWeightedScore = 5; // Max similarity (5) for all attributes
-    const matchPercentage = (totalScore / maxPossibleWeightedScore) * 100;
+    // Max possible score is 5 (perfect similarity) weighted by actual weights
+    const maxPossibleWeightedScore = 5 * Object.values(normalizedWeights).reduce((sum, w) => sum + w, 0);
+    const matchPercentage = maxPossibleWeightedScore > 0 ? (totalScore / maxPossibleWeightedScore) * 100 : 0;
 
     return {
       device,
