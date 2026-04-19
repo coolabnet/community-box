@@ -176,12 +176,15 @@ const calculateDeviceScores = (
   const points: PriorityAllocation = answers.points ?? {};
 
   // Get point weights from user's point allocation
+  // Mapping: easyToUse→formatEase, lowPower→energy, scalable→growth, lowCost→cost
+  // language is excluded (no corresponding hardware attribute; weight redistributes via normalization)
+  // concurrency and reusable are not driven by priorities (driven by `users` answer and `reuse` special case)
   const pointWeights: Record<AttributeKey, number> = {
-    energy: points.easyToUse ?? 0,
-    concurrency: points.lowPower ?? 0,
-    growth: points.language ?? 0,
-    reusable: points.scalable ?? 0,
-    formatEase: points.lowCost ?? 0,
+    energy: points.lowPower ?? 0,
+    concurrency: 0,
+    growth: points.scalable ?? 0,
+    reusable: 0,
+    formatEase: points.easyToUse ?? 0,
     cost: points.lowCost ?? 0
   };
 
