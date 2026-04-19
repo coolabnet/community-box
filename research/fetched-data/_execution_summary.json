@@ -1,19 +1,19 @@
 {
-  "timestamp": "2026-04-18T07:15:43.833Z",
+  "timestamp": "2026-04-19T07:26:23.398Z",
   "script": "run-all.js",
   "note": "Summary of all data fetching script executions",
   "data": {
-    "execution_time": "2026-04-18T07:15:43.833Z",
+    "execution_time": "2026-04-19T07:26:23.398Z",
     "total_scripts": 6,
     "successful": 6,
     "failed": 0,
-    "total_duration_ms": 14834,
+    "total_duration_ms": 12210,
     "continue_on_error": true,
     "results": [
       {
         "name": "CapRover UI Translations",
         "success": true,
-        "duration": 291,
+        "duration": 207,
         "result": [
           "ar-EG",
           "de-DE",
@@ -34,7 +34,7 @@
       {
         "name": "CasaOS UI Translations",
         "success": true,
-        "duration": 160,
+        "duration": 114,
         "result": [
           "ca_ES",
           "cs_CZ",
@@ -69,7 +69,7 @@
       {
         "name": "YunoHost Apps",
         "success": true,
-        "duration": 12191,
+        "duration": 10012,
         "result": {
           "count": 973,
           "apps": [
@@ -167,7 +167,7 @@
               "description": "Actual package for YunoHost",
               "url": "https://github.com/YunoHost-Apps/actual_ynh",
               "stars": 7,
-              "forks": 5,
+              "forks": 6,
               "updated_at": "2026-04-06T09:40:35Z",
               "language": "Shell",
               "archived": false
@@ -189,8 +189,8 @@
               "description": "Admidio is a free open source user management system for websites of organizations and groups.",
               "url": "https://github.com/YunoHost-Apps/admidio_ynh",
               "stars": 0,
-              "forks": 0,
-              "updated_at": "2026-04-17T22:42:11Z",
+              "forks": 1,
+              "updated_at": "2026-04-18T13:55:55Z",
               "language": "Shell",
               "archived": false
             },
@@ -200,7 +200,7 @@
               "description": "Adminer package for YunoHost",
               "url": "https://github.com/YunoHost-Apps/adminer_ynh",
               "stars": 4,
-              "forks": 7,
+              "forks": 6,
               "updated_at": "2026-03-04T22:59:00Z",
               "language": "Shell",
               "archived": false
@@ -662,7 +662,7 @@
               "description": "BentoPDF package for YunoHost",
               "url": "https://github.com/YunoHost-Apps/bentopdf_ynh",
               "stars": 2,
-              "forks": 0,
+              "forks": 1,
               "updated_at": "2026-04-10T11:13:54Z",
               "language": "Shell",
               "archived": false
@@ -1740,7 +1740,7 @@
               "description": "Digiscreen package for YunoHost",
               "url": "https://github.com/YunoHost-Apps/digiscreen_ynh",
               "stars": 2,
-              "forks": 2,
+              "forks": 3,
               "updated_at": "2026-01-01T10:10:23Z",
               "language": "Shell",
               "archived": false
@@ -5151,7 +5151,7 @@
               "url": "https://github.com/YunoHost-Apps/mail_relay_ynh",
               "stars": 0,
               "forks": 0,
-              "updated_at": "2026-04-14T18:30:50Z",
+              "updated_at": "2026-04-18T20:40:42Z",
               "language": "Python",
               "archived": false
             },
@@ -6229,7 +6229,7 @@
               "url": "https://github.com/YunoHost-Apps/nodebb_ynh",
               "stars": 7,
               "forks": 7,
-              "updated_at": "2026-04-10T07:04:56Z",
+              "updated_at": "2026-04-18T10:04:04Z",
               "language": "Shell",
               "archived": false
             },
@@ -7439,7 +7439,7 @@
               "url": "https://github.com/YunoHost-Apps/pretalx_ynh",
               "stars": 4,
               "forks": 1,
-              "updated_at": "2026-03-08T14:28:53Z",
+              "updated_at": "2026-04-18T17:42:18Z",
               "language": "Shell",
               "archived": false
             },
@@ -7635,9 +7635,9 @@
               "name": "pureblog",
               "description": "PureBlog package for YunoHost",
               "url": "https://github.com/YunoHost-Apps/pureblog_ynh",
-              "stars": 0,
+              "stars": 1,
               "forks": 0,
-              "updated_at": "2026-04-17T20:46:40Z",
+              "updated_at": "2026-04-19T04:35:57Z",
               "language": "Shell",
               "archived": false
             },
@@ -10420,7 +10420,7 @@
               "url": "https://github.com/YunoHost-Apps/yeswiki_ynh",
               "stars": 7,
               "forks": 6,
-              "updated_at": "2026-03-24T21:27:53Z",
+              "updated_at": "2026-04-18T17:41:58Z",
               "language": "Shell",
               "archived": false
             },
@@ -10795,7 +10795,7 @@
       {
         "name": "YunoHost Docs Translations",
         "success": true,
-        "duration": 95,
+        "duration": 81,
         "result": [
           "de",
           "docs",
@@ -10809,7 +10809,7 @@
       {
         "name": "YunoHost UI Translations",
         "success": true,
-        "duration": 1771,
+        "duration": 1460,
         "result": [
           {
             "language": "French",
@@ -11216,7 +11216,7 @@
       {
         "name": "Zimaboard Shipping Areas",
         "success": true,
-        "duration": 326,
+        "duration": 336,
         "result": [
           "Argentina",
           "Australia",
