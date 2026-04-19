@@ -9,6 +9,7 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from '@/components/ui/dropdown-menu';
+import { tArray } from '@/lib/i18n-helpers';
 import { cn } from '@/lib/utils';
 import {
   Cpu,
@@ -612,7 +613,7 @@ const RecommendationResults = ({
                       <div className="flex-1">
                         <h4 className="font-medium mb-2">{t('questionnaire.questions.results.pros')}</h4>
                         <ul className="space-y-1">
-                          {(t(`questionnaire.questions.results.devices.${topRecommendation.device.key}.pros`, { returnObjects: true }) as string[]).map((pro: string, index: number) => (
+                          {tArray(t, `questionnaire.questions.results.devices.${topRecommendation.device.key}.pros`).map((pro: string, index: number) => (
                             <li key={index} className="flex items-start gap-2">
                               <Check className="h-4 w-4 text-green-500 mt-1 shrink-0" />
                               <span>{pro}</span>
@@ -623,7 +624,7 @@ const RecommendationResults = ({
                       <div className="flex-1">
                         <h4 className="font-medium mb-2">{t('questionnaire.questions.results.cons')}</h4>
                         <ul className="space-y-1">
-                          {(t(`questionnaire.questions.results.devices.${topRecommendation.device.key}.cons`, { returnObjects: true }) as string[]).map((con: string, index: number) => (
+                          {tArray(t, `questionnaire.questions.results.devices.${topRecommendation.device.key}.cons`).map((con: string, index: number) => (
                             <li key={index} className="flex items-start gap-2 text-muted-foreground">
                               <span className="h-4 w-4 text-muted-foreground mt-1 shrink-0">-</span>
                               <span>{con}</span>
@@ -733,7 +734,7 @@ const RecommendationResults = ({
                                   <div>
                                     <h4 className="text-sm font-medium mb-1">{t('questionnaire.questions.results.pros')}</h4>
                                     <ul className="text-sm space-y-1">
-                                      {(t(`questionnaire.questions.results.devices.${alternative.device.key}.pros`, { returnObjects: true }) as string[]).map((pro: string, i: number) => (
+                                      {tArray(t, `questionnaire.questions.results.devices.${alternative.device.key}.pros`).map((pro: string, i: number) => (
                                         <li key={i} className="flex items-start gap-1">
                                           <Check className="h-3 w-3 text-green-500 mt-1 shrink-0" />
                                           <span>{pro}</span>
@@ -744,7 +745,7 @@ const RecommendationResults = ({
                                   <div>
                                     <h4 className="text-sm font-medium mb-1">{t('questionnaire.questions.results.cons')}</h4>
                                     <ul className="text-sm space-y-1 text-muted-foreground">
-                                      {(t(`questionnaire.questions.results.devices.${alternative.device.key}.cons`, { returnObjects: true }) as string[]).map((con: string, i: number) => (
+                                      {tArray(t, `questionnaire.questions.results.devices.${alternative.device.key}.cons`).map((con: string, i: number) => (
                                         <li key={i} className="flex items-start gap-1">
                                           <span className="h-3 w-3 mt-1 shrink-0">-</span>
                                           <span>{con}</span>
