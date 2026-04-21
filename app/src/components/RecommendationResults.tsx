@@ -161,7 +161,7 @@ const normalizeUserAnswers = (answers: UserAnswers): Record<AttributeKey, number
 
   return {
     energy: energyMap[answers.electricity] || 3,
-    concurrency: concurrencyMap[answers.users] || 3,
+    concurrency: concurrencyMap[answers.users ?? '1-2'] || 3,
     growth: growthMap[answers.growth] || 3,
     reusable: reusableMap[answers.reuse] || 0,
     formatEase: formatEaseMap[answers.format] || 3,
@@ -178,8 +178,16 @@ const calculateDeviceScores = (
 
   // Get point weights from user's point allocation
   // Mapping: easyToUse→formatEase, lowPower→energy, scalable→growth, lowCost→cost
-  // language is excluded (no corresponding hardware attribute; weight redistributes via normalization)
-  // concurrency and reusable are not driven by priorities (driven by `users` answer and `reuse` special case)
+  // language is excluded from device scoring (no corresponding hardware attribute).
+  // Its points are redistributed proportionally among the other 4 priority-driven attributes.
+  // concurrency is driven by the `users` answer, not by priorities — it gets a baseline weight
+  // proportional to the user's concurrency needs so that multi-user scenarios influence rankings.
+  // reusable is driven by the `reuse` answer special case below, not by priorities.
+
+  const languagePoints = points.language ?? 0;
+  const priorityKeys: AttributeKey[] = ['energy', 'growth', 'formatEase', 'cost'];
+
+  // Start with direct priority allocations
   const pointWeights: Record<AttributeKey, number> = {
     energy: points.lowPower ?? 0,
     concurrency: 0,
@@ -188,6 +196,35 @@ const calculateDeviceScores = (
     formatEase: points.easyToUse ?? 0,
     cost: points.lowCost ?? 0
   };
+
+  // Redistribute language points proportionally among the 4 priority-driven attributes
+  if (languagePoints > 0) {
+    const totalPriorityPoints = priorityKeys.reduce((sum, key) => sum + pointWeights[key], 0);
+    if (totalPriorityPoints > 0) {
+      // Distribute proportionally to existing allocations
+      priorityKeys.forEach(key => {
+        pointWeights[key] += languagePoints * (pointWeights[key] / totalPriorityPoints);
+      });
+    } else {
+      // All priorities were 0 — distribute equally
+      const share = languagePoints / priorityKeys.length;
+      priorityKeys.forEach(key => {
+        pointWeights[key] = share;
+      });
+    }
+  }
+
+  // Derive concurrency baseline weight from the `users` answer
+  // More users → higher concurrency weight so multi-user needs influence device ranking
+  const concurrencyMap: Record<string, number> = {
+    '1-2': 0.5,   // Low concurrency need — small baseline weight
+    '3-5': 1.5,   // Moderate — meaningful weight
+    '6+': 3,      // High — strong influence on ranking
+  };
+  const rawUsers = answers.users ?? '1-2';
+  pointWeights.concurrency = priorityKeys.some(key => pointWeights[key] > 0)
+    ? (concurrencyMap[rawUsers] ?? 0.5)
+    : 0;
 
   // Calculate total points allocated
   const totalPoints = Object.values(pointWeights).reduce((sum, points) => sum + points, 0);

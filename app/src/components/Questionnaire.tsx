@@ -154,7 +154,7 @@ const Questionnaire = () => {
       );
     } else if (currentQuestion.id === 'results') {
       return (
-        <ErrorBoundary>
+        <ErrorBoundary resetLabel="Try Again">
           <RecommendationResults
             key="recommendation-results"
             answers={answers as UserAnswers}
