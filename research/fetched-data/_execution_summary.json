@@ -1,19 +1,19 @@
 {
-  "timestamp": "2026-04-22T07:57:03.409Z",
+  "timestamp": "2026-04-23T08:02:53.828Z",
   "script": "run-all.js",
   "note": "Summary of all data fetching script executions",
   "data": {
-    "execution_time": "2026-04-22T07:57:03.408Z",
+    "execution_time": "2026-04-23T08:02:53.828Z",
     "total_scripts": 6,
     "successful": 6,
     "failed": 0,
-    "total_duration_ms": 14139,
+    "total_duration_ms": 13696,
     "continue_on_error": true,
     "results": [
       {
         "name": "CapRover UI Translations",
         "success": true,
-        "duration": 177,
+        "duration": 238,
         "result": [
           "ar-EG",
           "de-DE",
@@ -34,7 +34,7 @@
       {
         "name": "CasaOS UI Translations",
         "success": true,
-        "duration": 110,
+        "duration": 201,
         "result": [
           "ca_ES",
           "cs_CZ",
@@ -69,7 +69,7 @@
       {
         "name": "YunoHost Apps",
         "success": true,
-        "duration": 11854,
+        "duration": 11136,
         "result": {
           "count": 973,
           "apps": [
@@ -2389,8 +2389,8 @@
               "description": "Etherpad-Lite package for YunoHost",
               "url": "https://github.com/YunoHost-Apps/etherpad_ynh",
               "stars": 3,
-              "forks": 1,
-              "updated_at": "2026-03-02T21:00:42Z",
+              "forks": 2,
+              "updated_at": "2026-04-22T16:59:43Z",
               "language": "Shell",
               "archived": false
             },
@@ -2400,7 +2400,7 @@
               "description": "Etherpad MyPads package for YunoHost",
               "url": "https://github.com/YunoHost-Apps/etherpad_mypads_ynh",
               "stars": 16,
-              "forks": 14,
+              "forks": 15,
               "updated_at": "2024-06-23T11:30:42Z",
               "language": "Shell",
               "archived": false
@@ -2598,7 +2598,7 @@
               "description": "Filegator package for YunoHost",
               "url": "https://github.com/YunoHost-Apps/filegator_ynh",
               "stars": 0,
-              "forks": 2,
+              "forks": 3,
               "updated_at": "2026-04-17T17:35:31Z",
               "language": "Shell",
               "archived": false
@@ -2687,7 +2687,7 @@
               "url": "https://github.com/YunoHost-Apps/fittrackee_ynh",
               "stars": 6,
               "forks": 1,
-              "updated_at": "2026-04-20T06:10:15Z",
+              "updated_at": "2026-04-23T07:51:38Z",
               "language": "Shell",
               "archived": false
             },
@@ -5249,8 +5249,8 @@
               "description": "Matomo package for YunoHost",
               "url": "https://github.com/YunoHost-Apps/matomo_ynh",
               "stars": 20,
-              "forks": 6,
-              "updated_at": "2026-03-24T17:24:08Z",
+              "forks": 7,
+              "updated_at": "2026-04-22T14:13:22Z",
               "language": "Shell",
               "archived": false
             },
@@ -5294,7 +5294,7 @@
               "url": "https://github.com/YunoHost-Apps/mattermost_ynh",
               "stars": 36,
               "forks": 20,
-              "updated_at": "2026-04-21T14:42:19Z",
+              "updated_at": "2026-04-22T16:36:22Z",
               "language": "Shell",
               "archived": false
             },
@@ -6372,7 +6372,7 @@
               "url": "https://github.com/YunoHost-Apps/ollama_ynh",
               "stars": 4,
               "forks": 3,
-              "updated_at": "2026-04-15T05:06:06Z",
+              "updated_at": "2026-04-23T05:45:04Z",
               "language": "Shell",
               "archived": false
             },
@@ -7295,8 +7295,8 @@
               "description": "Plik is a temporary file upload system (Wetransfer like) in Go.",
               "url": "https://github.com/YunoHost-Apps/plik_ynh",
               "stars": 0,
-              "forks": 0,
-              "updated_at": "2026-04-17T13:50:10Z",
+              "forks": 1,
+              "updated_at": "2026-04-22T23:12:42Z",
               "language": "Shell",
               "archived": false
             },
@@ -9078,7 +9078,7 @@
               "url": "https://github.com/YunoHost-Apps/svg-path-editor_ynh",
               "stars": 0,
               "forks": 0,
-              "updated_at": "2026-01-28T13:34:32Z",
+              "updated_at": "2026-04-22T08:44:03Z",
               "language": "Shell",
               "archived": false
             },
@@ -9133,7 +9133,7 @@
               "url": "https://github.com/YunoHost-Apps/sync-in_ynh",
               "stars": 0,
               "forks": 2,
-              "updated_at": "2026-04-15T06:17:38Z",
+              "updated_at": "2026-04-22T08:29:38Z",
               "language": "Shell",
               "archived": false
             },
@@ -9815,7 +9815,7 @@
               "url": "https://github.com/YunoHost-Apps/versitygw_ynh",
               "stars": 0,
               "forks": 0,
-              "updated_at": "2026-04-03T09:22:38Z",
+              "updated_at": "2026-04-22T23:37:00Z",
               "language": "Shell",
               "archived": false
             },
@@ -10420,7 +10420,7 @@
               "url": "https://github.com/YunoHost-Apps/yeswiki_ynh",
               "stars": 7,
               "forks": 6,
-              "updated_at": "2026-04-21T09:08:52Z",
+              "updated_at": "2026-04-22T16:49:22Z",
               "language": "Shell",
               "archived": false
             },
@@ -10761,7 +10761,7 @@
               "url": "https://github.com/YunoHost-Apps/zwave-js-ui_ynh",
               "stars": 0,
               "forks": 1,
-              "updated_at": "2026-04-14T18:22:45Z",
+              "updated_at": "2026-04-23T06:07:43Z",
               "language": "Shell",
               "archived": false
             },
@@ -10795,7 +10795,7 @@
       {
         "name": "YunoHost Docs Translations",
         "success": true,
-        "duration": 84,
+        "duration": 88,
         "result": [
           "de",
           "docs",
@@ -10809,8 +10809,16 @@
       {
         "name": "YunoHost UI Translations",
         "success": true,
-        "duration": 1592,
+        "duration": 1568,
         "result": [
+          {
+            "language": "Basque",
+            "language_code": "eu",
+            "translated_percent": 100,
+            "translated_words": 11043,
+            "total_words": 11043,
+            "last_change": "2026-04-22T20:42:43.049570Z"
+          },
           {
             "language": "French",
             "language_code": "fr",
@@ -10849,7 +10857,7 @@
             "translated_percent": 100,
             "translated_words": 3819,
             "total_words": 3819,
-            "last_change": "2026-04-14T13:06:12.228082Z"
+            "last_change": "2026-04-22T20:44:29.119343Z"
           },
           {
             "language": "French",
@@ -10962,14 +10970,6 @@
             "translated_words": 11028,
             "total_words": 11043,
             "last_change": "2026-02-25T19:20:01.405696Z"
-          },
-          {
-            "language": "Basque",
-            "language_code": "eu",
-            "translated_percent": 99.8,
-            "translated_words": 11028,
-            "total_words": 11043,
-            "last_change": "2026-02-25T19:20:09.285108Z"
           },
           {
             "language": "Spanish",
@@ -11216,7 +11216,7 @@
       {
         "name": "Zimaboard Shipping Areas",
         "success": true,
-        "duration": 322,
+        "duration": 465,
         "result": [
           "Argentina",
           "Australia",
