@@ -26,3 +26,8 @@ dist-ssr
 
 # Agent-generated plans (not part of the codebase)
 app/plans/
+
+# Agent tool directories
+.claude/
+.junie/
+.qoder/
