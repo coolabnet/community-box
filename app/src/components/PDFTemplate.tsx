@@ -1,6 +1,7 @@
 import { useRef, type ReactNode } from 'react';
 import { useTranslation } from 'react-i18next';
 import type { TFunction } from 'i18next';
+import { tArray } from '@/lib/i18n-helpers';
 import {
   Cpu,
   Zap,
@@ -176,7 +177,7 @@ const PDFTemplate = ({ recommendation, alternatives, answers }: PDFTemplateProps
           <div className="flex-1">
             <h4 className="font-medium mb-2 text-gray-800">{t('common.pros')}</h4>
             <ul className="space-y-1">
-              {t(`questionnaire.questions.results.devices.${topRecommendation.device.key}.pros`, { returnObjects: true }).map((pro: string, index: number) => (
+              {tArray(t, `questionnaire.questions.results.devices.${topRecommendation.device.key}.pros`).map((pro: string, index: number) => (
                 <li key={index} className="flex items-start gap-2">
                   <Check className="h-4 w-4 text-green-500 mt-1 shrink-0" />
                   <span className="text-gray-700">{pro}</span>
@@ -187,7 +188,7 @@ const PDFTemplate = ({ recommendation, alternatives, answers }: PDFTemplateProps
           <div className="flex-1">
             <h4 className="font-medium mb-2 text-gray-800">{t('common.cons')}</h4>
             <ul className="space-y-1">
-              {t(`questionnaire.questions.results.devices.${topRecommendation.device.key}.cons`, { returnObjects: true }).map((con: string, index: number) => (
+              {tArray(t, `questionnaire.questions.results.devices.${topRecommendation.device.key}.cons`).map((con: string, index: number) => (
                 <li key={index} className="flex items-start gap-2">
                   <span className="h-4 w-4 text-gray-400 mt-1 shrink-0">-</span>
                   <span className="text-gray-600">{con}</span>

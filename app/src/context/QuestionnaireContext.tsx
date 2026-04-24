@@ -1,6 +1,6 @@
 /* eslint-disable react-refresh/only-export-components */
 
-import React, { createContext, useContext, useEffect, useMemo, useState } from 'react';
+import React, { createContext, useContext, useEffect, useMemo, useRef, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import {
   type SurveyState,
@@ -47,8 +47,14 @@ export function QuestionnaireProvider({ children }: { children: React.ReactNode 
 
   const totalSteps = 10; // 6 questions + points + usage + main use + results
 
+  const skipUrlUpdateRef = useRef(false);
+
   // Save state to localStorage and update URL whenever state changes
   useEffect(() => {
+    if (skipUrlUpdateRef.current) {
+      skipUrlUpdateRef.current = false;
+      return;
+    }
     const state: SurveyState = {
       currentStep,
       answers
@@ -70,6 +76,8 @@ export function QuestionnaireProvider({ children }: { children: React.ReactNode 
 
   // Reset the survey state
   const resetSurvey = () => {
+    skipUrlUpdateRef.current = true;
+
     // Clear URL parameters
     window.history.replaceState({}, '', window.location.pathname);
 
@@ -81,6 +89,13 @@ export function QuestionnaireProvider({ children }: { children: React.ReactNode 
 
     // Clear localStorage
     clearStoredState();
+
+    // Safety net: if React bails out of re-rendering because state is already
+    // at initial values (e.g. currentStep=0, answers={}), the effect that
+    // consumes skipUrlUpdateRef never fires and the ref stays stuck at true.
+    // Reset it after the current macrotask so the next legitimate step-advance
+    // correctly updates the URL.
+    setTimeout(() => { skipUrlUpdateRef.current = false; }, 0);
   };
 
   return (

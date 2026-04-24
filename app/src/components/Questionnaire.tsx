@@ -5,6 +5,7 @@ import QuestionCard from './QuestionCard';
 import PointsAllocation from './PointsAllocation';
 import UsageSelection from './UsageSelection';
 import RecommendationResults from './RecommendationResults';
+import ErrorBoundary from './ErrorBoundary';
 import { AnimatePresence } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
 import type { PriorityAllocation, UsageSelectionValues, UserAnswers } from '@/types/questionnaire';
@@ -153,11 +154,13 @@ const Questionnaire = () => {
       );
     } else if (currentQuestion.id === 'results') {
       return (
-        <RecommendationResults
-          key="recommendation-results"
-          answers={answers as UserAnswers}
-          onStartOver={handleStartOver}
-        />
+        <ErrorBoundary resetLabel="Try Again">
+          <RecommendationResults
+            key="recommendation-results"
+            answers={answers as UserAnswers}
+            onStartOver={handleStartOver}
+          />
+        </ErrorBoundary>
       );
     } else {
       return (

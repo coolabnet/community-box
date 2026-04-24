@@ -9,6 +9,7 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from '@/components/ui/dropdown-menu';
+import { tArray } from '@/lib/i18n-helpers';
 import { cn } from '@/lib/utils';
 import {
   Cpu,
@@ -160,7 +161,7 @@ const normalizeUserAnswers = (answers: UserAnswers): Record<AttributeKey, number
 
   return {
     energy: energyMap[answers.electricity] || 3,
-    concurrency: concurrencyMap[answers.users] || 3,
+    concurrency: concurrencyMap[answers.users ?? '1-2'] || 3,
     growth: growthMap[answers.growth] || 3,
     reusable: reusableMap[answers.reuse] || 0,
     formatEase: formatEaseMap[answers.format] || 3,
@@ -176,14 +177,54 @@ const calculateDeviceScores = (
   const points: PriorityAllocation = answers.points ?? {};
 
   // Get point weights from user's point allocation
+  // Mapping: easyToUse→formatEase, lowPower→energy, scalable→growth, lowCost→cost
+  // language is excluded from device scoring (no corresponding hardware attribute).
+  // Its points are redistributed proportionally among the other 4 priority-driven attributes.
+  // concurrency is driven by the `users` answer, not by priorities — it gets a baseline weight
+  // proportional to the user's concurrency needs so that multi-user scenarios influence rankings.
+  // reusable is driven by the `reuse` answer special case below, not by priorities.
+
+  const languagePoints = points.language ?? 0;
+  const priorityKeys: AttributeKey[] = ['energy', 'growth', 'formatEase', 'cost'];
+
+  // Start with direct priority allocations
   const pointWeights: Record<AttributeKey, number> = {
-    energy: points.easyToUse ?? 0,
-    concurrency: points.lowPower ?? 0,
-    growth: points.language ?? 0,
-    reusable: points.scalable ?? 0,
-    formatEase: points.lowCost ?? 0,
+    energy: points.lowPower ?? 0,
+    concurrency: 0,
+    growth: points.scalable ?? 0,
+    reusable: 0,
+    formatEase: points.easyToUse ?? 0,
     cost: points.lowCost ?? 0
   };
+
+  // Redistribute language points proportionally among the 4 priority-driven attributes
+  if (languagePoints > 0) {
+    const totalPriorityPoints = priorityKeys.reduce((sum, key) => sum + pointWeights[key], 0);
+    if (totalPriorityPoints > 0) {
+      // Distribute proportionally to existing allocations
+      priorityKeys.forEach(key => {
+        pointWeights[key] += languagePoints * (pointWeights[key] / totalPriorityPoints);
+      });
+    } else {
+      // All priorities were 0 — distribute equally
+      const share = languagePoints / priorityKeys.length;
+      priorityKeys.forEach(key => {
+        pointWeights[key] = share;
+      });
+    }
+  }
+
+  // Derive concurrency baseline weight from the `users` answer
+  // More users → higher concurrency weight so multi-user needs influence device ranking
+  const concurrencyMap: Record<string, number> = {
+    '1-2': 0.5,   // Low concurrency need — small baseline weight
+    '3-5': 1.5,   // Moderate — meaningful weight
+    '6+': 3,      // High — strong influence on ranking
+  };
+  const rawUsers = answers.users ?? '1-2';
+  pointWeights.concurrency = priorityKeys.some(key => pointWeights[key] > 0)
+    ? (concurrencyMap[rawUsers] ?? 0.5)
+    : 0;
 
   // Calculate total points allocated
   const totalPoints = Object.values(pointWeights).reduce((sum, points) => sum + points, 0);
@@ -246,8 +287,9 @@ const calculateDeviceScores = (
     });
 
     // Calculate match percentage (0-100%)
-    const maxPossibleWeightedScore = 5; // Max similarity (5) for all attributes
-    const matchPercentage = (totalScore / maxPossibleWeightedScore) * 100;
+    // Max possible score is 5 (perfect similarity) weighted by actual weights
+    const maxPossibleWeightedScore = 5 * Object.values(normalizedWeights).reduce((sum, w) => sum + w, 0);
+    const matchPercentage = maxPossibleWeightedScore > 0 ? (totalScore / maxPossibleWeightedScore) * 100 : 0;
 
     return {
       device,
@@ -609,7 +651,7 @@ const RecommendationResults = ({
                       <div className="flex-1">
                         <h4 className="font-medium mb-2">{t('questionnaire.questions.results.pros')}</h4>
                         <ul className="space-y-1">
-                          {(t(`questionnaire.questions.results.devices.${topRecommendation.device.key}.pros`, { returnObjects: true }) as string[]).map((pro: string, index: number) => (
+                          {tArray(t, `questionnaire.questions.results.devices.${topRecommendation.device.key}.pros`).map((pro: string, index: number) => (
                             <li key={index} className="flex items-start gap-2">
                               <Check className="h-4 w-4 text-green-500 mt-1 shrink-0" />
                               <span>{pro}</span>
@@ -620,7 +662,7 @@ const RecommendationResults = ({
                       <div className="flex-1">
                         <h4 className="font-medium mb-2">{t('questionnaire.questions.results.cons')}</h4>
                         <ul className="space-y-1">
-                          {(t(`questionnaire.questions.results.devices.${topRecommendation.device.key}.cons`, { returnObjects: true }) as string[]).map((con: string, index: number) => (
+                          {tArray(t, `questionnaire.questions.results.devices.${topRecommendation.device.key}.cons`).map((con: string, index: number) => (
                             <li key={index} className="flex items-start gap-2 text-muted-foreground">
                               <span className="h-4 w-4 text-muted-foreground mt-1 shrink-0">-</span>
                               <span>{con}</span>
@@ -730,7 +772,7 @@ const RecommendationResults = ({
                                   <div>
                                     <h4 className="text-sm font-medium mb-1">{t('questionnaire.questions.results.pros')}</h4>
                                     <ul className="text-sm space-y-1">
-                                      {(t(`questionnaire.questions.results.devices.${alternative.device.key}.pros`, { returnObjects: true }) as string[]).map((pro: string, i: number) => (
+                                      {tArray(t, `questionnaire.questions.results.devices.${alternative.device.key}.pros`).map((pro: string, i: number) => (
                                         <li key={i} className="flex items-start gap-1">
                                           <Check className="h-3 w-3 text-green-500 mt-1 shrink-0" />
                                           <span>{pro}</span>
@@ -741,7 +783,7 @@ const RecommendationResults = ({
                                   <div>
                                     <h4 className="text-sm font-medium mb-1">{t('questionnaire.questions.results.cons')}</h4>
                                     <ul className="text-sm space-y-1 text-muted-foreground">
-                                      {(t(`questionnaire.questions.results.devices.${alternative.device.key}.cons`, { returnObjects: true }) as string[]).map((con: string, i: number) => (
+                                      {tArray(t, `questionnaire.questions.results.devices.${alternative.device.key}.cons`).map((con: string, i: number) => (
                                         <li key={i} className="flex items-start gap-1">
                                           <span className="h-3 w-3 mt-1 shrink-0">-</span>
                                           <span>{con}</span>
