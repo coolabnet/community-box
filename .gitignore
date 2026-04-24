@@ -23,3 +23,6 @@ dist-ssr
 *.sln
 *.sw?
 *.pdf
+
+# Agent-generated plans (not part of the codebase)
+app/plans/
