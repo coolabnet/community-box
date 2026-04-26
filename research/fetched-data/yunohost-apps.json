@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-04-25T07:25:03.772Z",
+  "timestamp": "2026-04-26T07:46:12.537Z",
   "script": "scripts.test.js",
   "source": "YunoHost-Apps GitHub Organization",
   "url": "https://github.com/YunoHost-Apps",
@@ -3413,9 +3413,9 @@
       "name": "gotosocial",
       "description": "GoToSocial package for YunoHost: an ActivityPub social network server, written in Golang.",
       "url": "https://github.com/YunoHost-Apps/gotosocial_ynh",
-      "stars": 22,
+      "stars": 21,
       "forks": 11,
-      "updated_at": "2026-04-09T17:39:22Z",
+      "updated_at": "2026-04-26T01:23:48Z",
       "language": "Shell",
       "archived": false
     },
@@ -4559,7 +4559,7 @@
       "url": "https://github.com/YunoHost-Apps/lasuite-meet_ynh",
       "stars": 5,
       "forks": 2,
-      "updated_at": "2026-04-24T18:18:29Z",
+      "updated_at": "2026-04-25T10:01:39Z",
       "language": "Shell",
       "archived": false
     },
@@ -6154,7 +6154,7 @@
       "url": "https://github.com/YunoHost-Apps/nocodb_ynh",
       "stars": 13,
       "forks": 5,
-      "updated_at": "2026-04-24T20:25:08Z",
+      "updated_at": "2026-04-25T14:08:30Z",
       "language": "Shell",
       "archived": false
     },
@@ -7583,7 +7583,7 @@
       "description": "PureBlog package for YunoHost",
       "url": "https://github.com/YunoHost-Apps/pureblog_ynh",
       "stars": 1,
-      "forks": 0,
+      "forks": 1,
       "updated_at": "2026-04-19T04:35:57Z",
       "language": "Shell",
       "archived": false
@@ -7726,7 +7726,7 @@
       "description": "Rahoot package for YunoHost",
       "url": "https://github.com/YunoHost-Apps/rahoot_ynh",
       "stars": 0,
-      "forks": 0,
+      "forks": 1,
       "updated_at": "2026-04-24T05:21:09Z",
       "language": "Shell",
       "archived": false
