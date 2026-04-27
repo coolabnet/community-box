@@ -1,11 +1,11 @@
 {
-  "timestamp": "2026-04-26T07:46:12.537Z",
+  "timestamp": "2026-04-27T08:33:13.415Z",
   "script": "scripts.test.js",
   "source": "YunoHost-Apps GitHub Organization",
   "url": "https://github.com/YunoHost-Apps",
   "api_url": "https://api.github.com/orgs/YunoHost-Apps/repos",
-  "total_apps": 974,
-  "total_repos_checked": 995,
+  "total_apps": 975,
+  "total_repos_checked": 996,
   "languages": [
     "CSS",
     "HTML",
@@ -1655,7 +1655,7 @@
       "url": "https://github.com/YunoHost-Apps/diagramsnet_ynh",
       "stars": 6,
       "forks": 4,
-      "updated_at": "2026-04-06T09:13:47Z",
+      "updated_at": "2026-04-26T21:14:37Z",
       "language": "Shell",
       "archived": false
     },
@@ -2359,7 +2359,7 @@
       "url": "https://github.com/YunoHost-Apps/excalidraw_ynh",
       "stars": 4,
       "forks": 5,
-      "updated_at": "2025-12-17T16:35:58Z",
+      "updated_at": "2026-04-26T21:16:20Z",
       "language": "Shell",
       "archived": false
     },
@@ -2645,7 +2645,7 @@
       "url": "https://github.com/YunoHost-Apps/flarum_ynh",
       "stars": 21,
       "forks": 7,
-      "updated_at": "2026-04-11T16:52:03Z",
+      "updated_at": "2026-04-26T21:20:38Z",
       "language": "Shell",
       "archived": false
     },
@@ -2832,7 +2832,7 @@
       "url": "https://github.com/YunoHost-Apps/fossflow_ynh",
       "stars": 3,
       "forks": 1,
-      "updated_at": "2026-04-20T00:06:44Z",
+      "updated_at": "2026-04-26T23:46:19Z",
       "language": "Shell",
       "archived": false
     },
@@ -4086,7 +4086,7 @@
       "url": "https://github.com/YunoHost-Apps/it-tools_ynh",
       "stars": 4,
       "forks": 1,
-      "updated_at": "2026-04-20T03:14:07Z",
+      "updated_at": "2026-04-26T23:48:28Z",
       "language": "Shell",
       "archived": false
     },
@@ -4284,7 +4284,7 @@
       "url": "https://github.com/YunoHost-Apps/jsoncrack_ynh",
       "stars": 5,
       "forks": 1,
-      "updated_at": "2026-04-20T00:14:04Z",
+      "updated_at": "2026-04-26T23:44:27Z",
       "language": "Shell",
       "archived": false
     },
@@ -4823,7 +4823,7 @@
       "url": "https://github.com/YunoHost-Apps/limesurvey_ynh",
       "stars": 6,
       "forks": 13,
-      "updated_at": "2026-04-16T23:25:35Z",
+      "updated_at": "2026-04-26T21:15:27Z",
       "language": "Shell",
       "archived": false
     },
@@ -5560,7 +5560,7 @@
       "url": "https://github.com/YunoHost-Apps/minetest_ynh",
       "stars": 6,
       "forks": 8,
-      "updated_at": "2026-04-06T09:18:46Z",
+      "updated_at": "2026-04-26T21:21:30Z",
       "language": "Shell",
       "archived": false
     },
@@ -6836,7 +6836,7 @@
       "url": "https://github.com/YunoHost-Apps/penpot_ynh",
       "stars": 9,
       "forks": 5,
-      "updated_at": "2026-04-17T07:47:07Z",
+      "updated_at": "2026-04-26T21:55:01Z",
       "language": "Shell",
       "archived": false
     },
@@ -8266,7 +8266,7 @@
       "url": "https://github.com/YunoHost-Apps/searxng_ynh",
       "stars": 14,
       "forks": 4,
-      "updated_at": "2026-04-20T05:09:28Z",
+      "updated_at": "2026-04-27T06:34:33Z",
       "language": "Shell",
       "archived": false
     },
@@ -8277,7 +8277,7 @@
       "url": "https://github.com/YunoHost-Apps/seaweedfs_ynh",
       "stars": 0,
       "forks": 2,
-      "updated_at": "2026-04-19T12:20:17Z",
+      "updated_at": "2026-04-26T16:59:25Z",
       "language": "Shell",
       "archived": false
     },
@@ -9536,6 +9536,17 @@
       "archived": false
     },
     {
+      "id": "TrustTunnel_ynh",
+      "name": "TrustTunnel",
+      "description": "TrustTunnel package for yunoHost",
+      "url": "https://github.com/YunoHost-Apps/TrustTunnel_ynh",
+      "stars": 0,
+      "forks": 0,
+      "updated_at": "2026-04-26T23:26:49Z",
+      "language": "Shell",
+      "archived": false
+    },
+    {
       "id": "trustyhash_ynh",
       "name": "trustyhash",
       "description": "Trusty Hash package for YunoHost",
@@ -9751,7 +9762,7 @@
       "url": "https://github.com/YunoHost-Apps/vaultwarden_ynh",
       "stars": 60,
       "forks": 23,
-      "updated_at": "2026-04-14T10:42:17Z",
+      "updated_at": "2026-04-26T11:16:37Z",
       "language": "Shell",
       "archived": false
     },
