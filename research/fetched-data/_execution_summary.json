@@ -1,19 +1,19 @@
 {
-  "timestamp": "2026-04-27T08:33:12.626Z",
+  "timestamp": "2026-04-28T08:31:32.877Z",
   "script": "run-all.js",
   "note": "Summary of all data fetching script executions",
   "data": {
-    "execution_time": "2026-04-27T08:33:12.626Z",
+    "execution_time": "2026-04-28T08:31:32.877Z",
     "total_scripts": 6,
     "successful": 6,
     "failed": 0,
-    "total_duration_ms": 17863,
+    "total_duration_ms": 14310,
     "continue_on_error": true,
     "results": [
       {
         "name": "CapRover UI Translations",
         "success": true,
-        "duration": 330,
+        "duration": 232,
         "result": [
           "ar-EG",
           "de-DE",
@@ -34,7 +34,7 @@
       {
         "name": "CasaOS UI Translations",
         "success": true,
-        "duration": 258,
+        "duration": 145,
         "result": [
           "ca_ES",
           "cs_CZ",
@@ -69,7 +69,7 @@
       {
         "name": "YunoHost Apps",
         "success": true,
-        "duration": 15003,
+        "duration": 11956,
         "result": {
           "count": 975,
           "apps": [
@@ -375,9 +375,9 @@
               "name": "anki-syncserver",
               "description": "Install Anki Sync Server on a YunoHost server",
               "url": "https://github.com/YunoHost-Apps/anki-syncserver_ynh",
-              "stars": 2,
+              "stars": 3,
               "forks": 1,
-              "updated_at": "2026-03-02T21:09:26Z",
+              "updated_at": "2026-04-27T20:54:58Z",
               "language": "Shell",
               "archived": false
             },
@@ -1554,7 +1554,7 @@
               "url": "https://github.com/YunoHost-Apps/cyberchef_ynh",
               "stars": 1,
               "forks": 2,
-              "updated_at": "2026-04-07T23:00:49Z",
+              "updated_at": "2026-04-28T01:24:26Z",
               "language": "Shell",
               "archived": false
             },
@@ -4292,7 +4292,7 @@
               "description": "Video conference for YunoHost",
               "url": "https://github.com/YunoHost-Apps/jitsi_ynh",
               "stars": 22,
-              "forks": 22,
+              "forks": 21,
               "updated_at": "2026-04-10T22:42:49Z",
               "language": "JavaScript",
               "archived": false
@@ -5404,7 +5404,7 @@
               "url": "https://github.com/YunoHost-Apps/may_ynh",
               "stars": 1,
               "forks": 0,
-              "updated_at": "2026-04-23T13:34:35Z",
+              "updated_at": "2026-04-28T05:53:18Z",
               "language": "Shell",
               "archived": false
             },
@@ -10817,7 +10817,7 @@
       {
         "name": "YunoHost Docs Translations",
         "success": true,
-        "duration": 197,
+        "duration": 162,
         "result": [
           "de",
           "docs",
@@ -10831,7 +10831,7 @@
       {
         "name": "YunoHost UI Translations",
         "success": true,
-        "duration": 1842,
+        "duration": 1282,
         "result": [
           {
             "language": "Basque",
@@ -10888,6 +10888,14 @@
             "translated_words": 3819,
             "total_words": 3819,
             "last_change": "2026-04-14T13:06:13.466238Z"
+          },
+          {
+            "language": "Dutch",
+            "language_code": "nl",
+            "translated_percent": 100,
+            "translated_words": 3819,
+            "total_words": 3819,
+            "last_change": "2026-04-28T07:53:50.845005Z"
           },
           {
             "language": "Polish",
@@ -11024,14 +11032,6 @@
             "translated_words": 137,
             "total_words": 139,
             "last_change": "2025-08-04T01:53:31.648832Z"
-          },
-          {
-            "language": "Dutch",
-            "language_code": "nl",
-            "translated_percent": 95.9,
-            "translated_words": 3609,
-            "total_words": 3819,
-            "last_change": "2026-04-14T13:06:18.266668Z"
           },
           {
             "language": "Portuguese",
@@ -11238,7 +11238,7 @@
       {
         "name": "Zimaboard Shipping Areas",
         "success": true,
-        "duration": 233,
+        "duration": 533,
         "result": [
           "Argentina",
           "Australia",

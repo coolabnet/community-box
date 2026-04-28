@@ -1,12 +1,12 @@
 {
-  "timestamp": "2026-04-27T08:33:15.147Z",
+  "timestamp": "2026-04-28T08:31:45.622Z",
   "script": "scripts.test.js",
   "source": "YunoHost Translation Platform",
   "url": "https://translate.yunohost.org/",
   "api_url": "https://translate.yunohost.org/api/translations/?format=json",
   "total_languages": 50,
-  "fully_translated": 19,
-  "partially_translated": 28,
+  "fully_translated": 20,
+  "partially_translated": 27,
   "not_started": 3,
   "data": [
     {
@@ -64,6 +64,14 @@
       "translated_words": 3819,
       "total_words": 3819,
       "last_change": "2026-04-14T13:06:13.466238Z"
+    },
+    {
+      "language": "Dutch",
+      "language_code": "nl",
+      "translated_percent": 100,
+      "translated_words": 3819,
+      "total_words": 3819,
+      "last_change": "2026-04-28T07:53:50.845005Z"
     },
     {
       "language": "Polish",
@@ -200,14 +208,6 @@
       "translated_words": 137,
       "total_words": 139,
       "last_change": "2025-08-04T01:53:31.648832Z"
-    },
-    {
-      "language": "Dutch",
-      "language_code": "nl",
-      "translated_percent": 95.9,
-      "translated_words": 3609,
-      "total_words": 3819,
-      "last_change": "2026-04-14T13:06:18.266668Z"
     },
     {
       "language": "Portuguese",

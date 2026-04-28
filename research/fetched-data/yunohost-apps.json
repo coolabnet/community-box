@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-04-27T08:33:13.415Z",
+  "timestamp": "2026-04-28T08:31:44.137Z",
   "script": "scripts.test.js",
   "source": "YunoHost-Apps GitHub Organization",
   "url": "https://github.com/YunoHost-Apps",
@@ -322,9 +322,9 @@
       "name": "anki-syncserver",
       "description": "Install Anki Sync Server on a YunoHost server",
       "url": "https://github.com/YunoHost-Apps/anki-syncserver_ynh",
-      "stars": 2,
+      "stars": 3,
       "forks": 1,
-      "updated_at": "2026-03-02T21:09:26Z",
+      "updated_at": "2026-04-27T20:54:58Z",
       "language": "Shell",
       "archived": false
     },
@@ -1501,7 +1501,7 @@
       "url": "https://github.com/YunoHost-Apps/cyberchef_ynh",
       "stars": 1,
       "forks": 2,
-      "updated_at": "2026-04-07T23:00:49Z",
+      "updated_at": "2026-04-28T01:24:26Z",
       "language": "Shell",
       "archived": false
     },
@@ -4239,7 +4239,7 @@
       "description": "Video conference for YunoHost",
       "url": "https://github.com/YunoHost-Apps/jitsi_ynh",
       "stars": 22,
-      "forks": 22,
+      "forks": 21,
       "updated_at": "2026-04-10T22:42:49Z",
       "language": "JavaScript",
       "archived": false
@@ -5351,7 +5351,7 @@
       "url": "https://github.com/YunoHost-Apps/may_ynh",
       "stars": 1,
       "forks": 0,
-      "updated_at": "2026-04-23T13:34:35Z",
+      "updated_at": "2026-04-28T05:53:18Z",
       "language": "Shell",
       "archived": false
     },
