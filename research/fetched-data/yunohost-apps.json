@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-04-29T08:25:04.043Z",
+  "timestamp": "2026-04-30T08:27:58.480Z",
   "script": "scripts.test.js",
   "source": "YunoHost-Apps GitHub Organization",
   "url": "https://github.com/YunoHost-Apps",
@@ -80,9 +80,9 @@
       "name": "4get",
       "description": "Self-hosted UI serving as proxy to major existing search engines",
       "url": "https://github.com/YunoHost-Apps/4get_ynh",
-      "stars": 0,
+      "stars": 1,
       "forks": 0,
-      "updated_at": "2026-02-28T03:50:49Z",
+      "updated_at": "2026-04-30T01:12:08Z",
       "language": "Shell",
       "archived": false
     },
@@ -1235,9 +1235,9 @@
       "name": "commet",
       "description": "Commet package for YunoHost",
       "url": "https://github.com/YunoHost-Apps/commet_ynh",
-      "stars": 2,
+      "stars": 3,
       "forks": 3,
-      "updated_at": "2026-04-28T22:38:22Z",
+      "updated_at": "2026-04-30T02:54:13Z",
       "language": "Shell",
       "archived": false
     },
@@ -1501,7 +1501,7 @@
       "url": "https://github.com/YunoHost-Apps/cyberchef_ynh",
       "stars": 1,
       "forks": 2,
-      "updated_at": "2026-04-28T01:24:26Z",
+      "updated_at": "2026-04-29T10:15:30Z",
       "language": "Shell",
       "archived": false
     },
@@ -6319,7 +6319,7 @@
       "url": "https://github.com/YunoHost-Apps/ollama_ynh",
       "stars": 4,
       "forks": 3,
-      "updated_at": "2026-04-23T05:45:04Z",
+      "updated_at": "2026-04-29T19:05:03Z",
       "language": "Shell",
       "archived": false
     },
@@ -7727,7 +7727,7 @@
       "url": "https://github.com/YunoHost-Apps/rahoot_ynh",
       "stars": 0,
       "forks": 1,
-      "updated_at": "2026-04-24T05:21:09Z",
+      "updated_at": "2026-04-30T05:48:19Z",
       "language": "Shell",
       "archived": false
     },
@@ -8750,7 +8750,7 @@
       "url": "https://github.com/YunoHost-Apps/sparkyfitness_ynh",
       "stars": 0,
       "forks": 2,
-      "updated_at": "2026-04-20T19:15:41Z",
+      "updated_at": "2026-04-30T05:49:23Z",
       "language": "Shell",
       "archived": false
     },
@@ -9826,9 +9826,9 @@
       "name": "virtualtabletop",
       "description": "Virtual board & card games packaged for YunoHost",
       "url": "https://github.com/YunoHost-Apps/virtualtabletop_ynh",
-      "stars": 2,
+      "stars": 3,
       "forks": 0,
-      "updated_at": "2026-04-20T18:15:29Z",
+      "updated_at": "2026-04-30T02:54:52Z",
       "language": "Shell",
       "archived": false
     },
@@ -9925,9 +9925,9 @@
       "name": "warpgate",
       "description": "Warpgate package for YunoHost",
       "url": "https://github.com/YunoHost-Apps/warpgate_ynh",
-      "stars": 0,
+      "stars": 1,
       "forks": 1,
-      "updated_at": "2026-04-22T02:08:23Z",
+      "updated_at": "2026-04-30T02:54:00Z",
       "language": "Shell",
       "archived": false
     },
