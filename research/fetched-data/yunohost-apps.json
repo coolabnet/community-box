@@ -1,11 +1,11 @@
 {
-  "timestamp": "2026-04-30T08:27:58.480Z",
+  "timestamp": "2026-05-01T08:19:09.244Z",
   "script": "scripts.test.js",
   "source": "YunoHost-Apps GitHub Organization",
   "url": "https://github.com/YunoHost-Apps",
   "api_url": "https://api.github.com/orgs/YunoHost-Apps/repos",
-  "total_apps": 975,
-  "total_repos_checked": 996,
+  "total_apps": 976,
+  "total_repos_checked": 997,
   "languages": [
     "CSS",
     "HTML",
@@ -445,7 +445,7 @@
       "url": "https://github.com/YunoHost-Apps/atuin_ynh",
       "stars": 0,
       "forks": 2,
-      "updated_at": "2026-04-17T12:27:04Z",
+      "updated_at": "2026-04-30T08:34:46Z",
       "language": "Shell",
       "archived": false
     },
@@ -1149,7 +1149,7 @@
       "url": "https://github.com/YunoHost-Apps/code-server_ynh",
       "stars": 9,
       "forks": 3,
-      "updated_at": "2026-04-09T07:22:18Z",
+      "updated_at": "2026-05-01T03:21:09Z",
       "language": "Shell",
       "archived": false
     },
@@ -1743,7 +1743,7 @@
       "url": "https://github.com/YunoHost-Apps/directorylister_ynh",
       "stars": 3,
       "forks": 2,
-      "updated_at": "2026-04-09T17:45:06Z",
+      "updated_at": "2026-05-01T03:16:05Z",
       "language": "Shell",
       "archived": false
     },
@@ -2470,6 +2470,17 @@
       "stars": 1,
       "forks": 2,
       "updated_at": "2026-04-05T18:19:42Z",
+      "language": "Shell",
+      "archived": false
+    },
+    {
+      "id": "fediprofile_ynh",
+      "name": "fediprofile",
+      "description": "FediProfile, packaged for YunoHost",
+      "url": "https://github.com/YunoHost-Apps/fediprofile_ynh",
+      "stars": 0,
+      "forks": 0,
+      "updated_at": "2026-04-30T15:33:41Z",
       "language": "Shell",
       "archived": false
     },
@@ -6319,7 +6330,7 @@
       "url": "https://github.com/YunoHost-Apps/ollama_ynh",
       "stars": 4,
       "forks": 3,
-      "updated_at": "2026-04-29T19:05:03Z",
+      "updated_at": "2026-05-01T07:18:05Z",
       "language": "Shell",
       "archived": false
     },
@@ -7683,7 +7694,7 @@
       "url": "https://github.com/YunoHost-Apps/qui_ynh",
       "stars": 0,
       "forks": 0,
-      "updated_at": "2026-04-09T18:02:08Z",
+      "updated_at": "2026-05-01T03:19:58Z",
       "language": "Shell",
       "archived": false
     },
