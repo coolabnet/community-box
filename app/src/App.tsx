@@ -14,8 +14,11 @@ import MarkdownPage from "./pages/MarkdownPage";
 const queryClient = new QueryClient();
 
 const App = () => {
-  // Read router basename from environment, fall back to empty string
-  const basename = import.meta.env.VITE_ROUTER_BASENAME || '';
+  // Derive basename from Vite's base config (set to '/community-box/' in production).
+  // VITE_ROUTER_BASENAME can override if needed. Strip trailing slash for React Router.
+  const basename = import.meta.env.VITE_ROUTER_BASENAME
+    || import.meta.env.BASE_URL.replace(/\/+$/, '')
+    || '';
 
   return (
     <QueryClientProvider client={queryClient}>
