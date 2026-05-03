@@ -1,11 +1,11 @@
 {
-  "timestamp": "2026-05-03T08:06:21.339Z",
-  "script": "scripts.test.js",
+  "timestamp": "2026-05-03T22:41:10.076Z",
+  "script": "run-all.js",
   "source": "YunoHost-Apps GitHub Organization",
   "url": "https://github.com/YunoHost-Apps",
   "api_url": "https://api.github.com/orgs/YunoHost-Apps/repos",
-  "total_apps": 978,
-  "total_repos_checked": 999,
+  "total_apps": 979,
+  "total_repos_checked": 1000,
   "languages": [
     "CSS",
     "HTML",
@@ -762,9 +762,9 @@
       "name": "borgserver",
       "description": "Borg server package for YunoHost",
       "url": "https://github.com/YunoHost-Apps/borgserver_ynh",
-      "stars": 9,
+      "stars": 10,
       "forks": 7,
-      "updated_at": "2025-12-22T16:02:56Z",
+      "updated_at": "2026-05-03T20:12:31Z",
       "language": "Shell",
       "archived": false
     },
@@ -1836,6 +1836,17 @@
       "archived": false
     },
     {
+      "id": "dmarcguard_ynh",
+      "name": "dmarcguard",
+      "description": "YunoHost package for DmarcGuard, a Self-hosted DMARC report parser with dashboard and IMAP ingestion.",
+      "url": "https://github.com/YunoHost-Apps/dmarcguard_ynh",
+      "stars": 0,
+      "forks": 0,
+      "updated_at": "2026-05-03T17:59:59Z",
+      "language": "Shell",
+      "archived": false
+    },
+    {
       "id": "docker_container_ynh",
       "name": "docker_container",
       "description": "Docker containers for yunohost",
@@ -2106,7 +2117,7 @@
       "url": "https://github.com/YunoHost-Apps/dynamicqrcode_ynh",
       "stars": 2,
       "forks": 2,
-      "updated_at": "2025-09-11T07:04:37Z",
+      "updated_at": "2026-05-03T15:13:32Z",
       "language": "Shell",
       "archived": false
     },
@@ -5021,7 +5032,7 @@
       "url": "https://github.com/YunoHost-Apps/loops_ynh",
       "stars": 3,
       "forks": 2,
-      "updated_at": "2026-05-02T19:54:40Z",
+      "updated_at": "2026-05-03T13:16:32Z",
       "language": "Shell",
       "archived": false
     },
@@ -5384,7 +5395,7 @@
       "url": "https://github.com/YunoHost-Apps/may_ynh",
       "stars": 1,
       "forks": 0,
-      "updated_at": "2026-05-03T07:00:54Z",
+      "updated_at": "2026-05-03T16:15:39Z",
       "language": "Shell",
       "archived": false
     },
@@ -6088,7 +6099,7 @@
       "url": "https://github.com/YunoHost-Apps/n8n_ynh",
       "stars": 19,
       "forks": 22,
-      "updated_at": "2026-05-03T06:57:27Z",
+      "updated_at": "2026-05-03T18:59:09Z",
       "language": "Shell",
       "archived": false
     },
@@ -6097,9 +6108,9 @@
       "name": "navidrome",
       "description": "Navidrome package for YunoHost",
       "url": "https://github.com/YunoHost-Apps/navidrome_ynh",
-      "stars": 18,
+      "stars": 19,
       "forks": 6,
-      "updated_at": "2026-04-10T19:54:31Z",
+      "updated_at": "2026-05-03T19:40:49Z",
       "language": "Shell",
       "archived": false
     },
@@ -9652,7 +9663,7 @@
       "url": "https://github.com/YunoHost-Apps/tuwunel_ynh",
       "stars": 9,
       "forks": 3,
-      "updated_at": "2026-04-25T01:57:06Z",
+      "updated_at": "2026-05-03T22:26:37Z",
       "language": "Shell",
       "archived": false
     },
