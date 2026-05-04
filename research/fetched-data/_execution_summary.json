@@ -1,19 +1,19 @@
 {
-  "timestamp": "2026-05-03T22:41:11.876Z",
+  "timestamp": "2026-05-04T08:35:46.121Z",
   "script": "run-all.js",
   "note": "Summary of all data fetching script executions",
   "data": {
-    "execution_time": "2026-05-03T22:41:11.876Z",
+    "execution_time": "2026-05-04T08:35:46.121Z",
     "total_scripts": 6,
     "successful": 6,
     "failed": 0,
-    "total_duration_ms": 12006,
+    "total_duration_ms": 15364,
     "continue_on_error": true,
     "results": [
       {
         "name": "CapRover UI Translations",
         "success": true,
-        "duration": 124,
+        "duration": 151,
         "result": [
           "ar-EG",
           "de-DE",
@@ -34,7 +34,7 @@
       {
         "name": "CasaOS UI Translations",
         "success": true,
-        "duration": 76,
+        "duration": 81,
         "result": [
           "ca_ES",
           "cs_CZ",
@@ -69,7 +69,7 @@
       {
         "name": "YunoHost Apps",
         "success": true,
-        "duration": 10009,
+        "duration": 13573,
         "result": {
           "count": 979,
           "apps": [
@@ -5448,7 +5448,7 @@
               "url": "https://github.com/YunoHost-Apps/may_ynh",
               "stars": 1,
               "forks": 0,
-              "updated_at": "2026-05-03T16:15:39Z",
+              "updated_at": "2026-05-04T05:24:28Z",
               "language": "Shell",
               "archived": false
             },
@@ -6416,7 +6416,7 @@
               "url": "https://github.com/YunoHost-Apps/ollama_ynh",
               "stars": 4,
               "forks": 3,
-              "updated_at": "2026-05-01T07:18:05Z",
+              "updated_at": "2026-05-04T05:12:57Z",
               "language": "Shell",
               "archived": false
             },
@@ -7241,7 +7241,7 @@
               "url": "https://github.com/YunoHost-Apps/piwigo_ynh",
               "stars": 7,
               "forks": 5,
-              "updated_at": "2026-02-25T15:13:10Z",
+              "updated_at": "2026-05-04T08:05:09Z",
               "language": "PHP",
               "archived": false
             },
@@ -8363,7 +8363,7 @@
               "url": "https://github.com/YunoHost-Apps/searxng_ynh",
               "stars": 14,
               "forks": 4,
-              "updated_at": "2026-04-27T06:34:33Z",
+              "updated_at": "2026-05-04T05:33:02Z",
               "language": "Shell",
               "archived": false
             },
@@ -10861,7 +10861,7 @@
       {
         "name": "YunoHost Docs Translations",
         "success": true,
-        "duration": 76,
+        "duration": 65,
         "result": [
           "de",
           "docs",
@@ -10875,7 +10875,7 @@
       {
         "name": "YunoHost UI Translations",
         "success": true,
-        "duration": 1267,
+        "duration": 1216,
         "result": [
           {
             "language": "Basque",
@@ -11282,7 +11282,7 @@
       {
         "name": "Zimaboard Shipping Areas",
         "success": true,
-        "duration": 454,
+        "duration": 278,
         "result": [
           "Argentina",
           "Australia",
