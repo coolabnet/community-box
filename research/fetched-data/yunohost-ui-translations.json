@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-05-04T08:35:47.847Z",
+  "timestamp": "2026-05-07T08:40:28.598Z",
   "script": "scripts.test.js",
   "source": "YunoHost Translation Platform",
   "url": "https://translate.yunohost.org/",
@@ -332,10 +332,10 @@
     {
       "language": "Dutch",
       "language_code": "nl",
-      "translated_percent": 20.9,
-      "translated_words": 1740,
+      "translated_percent": 21.1,
+      "translated_words": 1776,
       "total_words": 11043,
-      "last_change": "2026-02-25T19:20:23.350870Z"
+      "last_change": "2026-05-04T11:39:14.968615Z"
     },
     {
       "language": "Portuguese",
