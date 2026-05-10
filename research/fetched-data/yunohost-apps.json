@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-05-09T08:01:58.745Z",
+  "timestamp": "2026-05-10T08:13:28.434Z",
   "script": "scripts.test.js",
   "source": "YunoHost-Apps GitHub Organization",
   "url": "https://github.com/YunoHost-Apps",
@@ -2249,7 +2249,7 @@
       "url": "https://github.com/YunoHost-Apps/emby_ynh",
       "stars": 3,
       "forks": 10,
-      "updated_at": "2025-08-30T17:04:30Z",
+      "updated_at": "2026-05-09T15:17:58Z",
       "language": "Shell",
       "archived": false
     },
@@ -4163,7 +4163,7 @@
       "url": "https://github.com/YunoHost-Apps/jackett_ynh",
       "stars": 2,
       "forks": 4,
-      "updated_at": "2026-05-07T22:25:24Z",
+      "updated_at": "2026-05-09T09:16:42Z",
       "language": "Shell",
       "archived": false
     },
@@ -6748,7 +6748,7 @@
       "url": "https://github.com/YunoHost-Apps/paheko_ynh",
       "stars": 5,
       "forks": 7,
-      "updated_at": "2026-02-12T09:20:38Z",
+      "updated_at": "2026-05-09T20:22:02Z",
       "language": "PHP",
       "archived": false
     },

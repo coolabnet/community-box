@@ -1,19 +1,19 @@
 {
-  "timestamp": "2026-05-09T08:01:58.054Z",
+  "timestamp": "2026-05-10T08:13:27.615Z",
   "script": "run-all.js",
   "note": "Summary of all data fetching script executions",
   "data": {
-    "execution_time": "2026-05-09T08:01:58.054Z",
+    "execution_time": "2026-05-10T08:13:27.615Z",
     "total_scripts": 6,
     "successful": 6,
     "failed": 0,
-    "total_duration_ms": 19287,
+    "total_duration_ms": 18149,
     "continue_on_error": true,
     "results": [
       {
         "name": "CapRover UI Translations",
         "success": true,
-        "duration": 228,
+        "duration": 237,
         "result": [
           "ar-EG",
           "de-DE",
@@ -34,7 +34,7 @@
       {
         "name": "CasaOS UI Translations",
         "success": true,
-        "duration": 176,
+        "duration": 133,
         "result": [
           "ca_ES",
           "cs_CZ",
@@ -69,7 +69,7 @@
       {
         "name": "YunoHost Apps",
         "success": true,
-        "duration": 16276,
+        "duration": 16103,
         "result": {
           "count": 982,
           "apps": [
@@ -2302,7 +2302,7 @@
               "url": "https://github.com/YunoHost-Apps/emby_ynh",
               "stars": 3,
               "forks": 10,
-              "updated_at": "2025-08-30T17:04:30Z",
+              "updated_at": "2026-05-09T15:17:58Z",
               "language": "Shell",
               "archived": false
             },
@@ -4216,7 +4216,7 @@
               "url": "https://github.com/YunoHost-Apps/jackett_ynh",
               "stars": 2,
               "forks": 4,
-              "updated_at": "2026-05-07T22:25:24Z",
+              "updated_at": "2026-05-09T09:16:42Z",
               "language": "Shell",
               "archived": false
             },
@@ -6801,7 +6801,7 @@
               "url": "https://github.com/YunoHost-Apps/paheko_ynh",
               "stars": 5,
               "forks": 7,
-              "updated_at": "2026-02-12T09:20:38Z",
+              "updated_at": "2026-05-09T20:22:02Z",
               "language": "PHP",
               "archived": false
             },
@@ -10894,7 +10894,7 @@
       {
         "name": "YunoHost Docs Translations",
         "success": true,
-        "duration": 149,
+        "duration": 84,
         "result": [
           "de",
           "docs",
@@ -10908,7 +10908,7 @@
       {
         "name": "YunoHost UI Translations",
         "success": true,
-        "duration": 1885,
+        "duration": 1318,
         "result": [
           {
             "language": "Basque",
@@ -11315,7 +11315,7 @@
       {
         "name": "Zimaboard Shipping Areas",
         "success": true,
-        "duration": 573,
+        "duration": 274,
         "result": [
           "Argentina",
           "Australia",
