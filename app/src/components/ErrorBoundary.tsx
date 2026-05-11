@@ -8,7 +8,11 @@ interface ErrorBoundaryProps {
   /** Called when the user clicks the reset button. Use this to reset parent state
    *  (e.g. clear questionnaire answers) so the child tree re-renders with fresh props. */
   onReset?: () => void;
-  /** Custom label for the reset button. Defaults to "Start Over" when onReset is set, "Try Again" otherwise. */
+  /** Alias for onReset. Used by retryableLazy and similar retry-oriented wrappers. */
+  onRetry?: () => void;
+  /** Called when an error is caught by the boundary. Receives the error object. */
+  onError?: (error: Error) => void;
+  /** Custom label for the reset button. Defaults to "Start Over" when onReset/onRetry is set, "Try Again" otherwise. */
   resetLabel?: string;
 }
 
@@ -29,11 +33,14 @@ class ErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryState> {
 
   componentDidCatch(error: Error, errorInfo: ErrorInfo): void {
     console.error('ErrorBoundary caught an error:', error, errorInfo);
+    this.props.onError?.(error);
   }
 
   resetErrorBoundary = (): void => {
     this.setState({ hasError: false, error: null });
-    this.props.onReset?.();
+    // onRetry takes precedence; fall back to onReset for backwards compatibility
+    const retry = this.props.onRetry ?? this.props.onReset;
+    retry?.();
   };
 
   handleReload = (): void => {
@@ -59,7 +66,7 @@ class ErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryState> {
               Something went wrong
             </h2>
             <p className="text-muted-foreground text-sm mb-6">
-              {this.props.onReset
+              {(this.props.onRetry ?? this.props.onReset)
                 ? `An unexpected error occurred. Click "${this.props.resetLabel ?? 'Start Over'}" to reset, or reload the page.`
                 : 'An unexpected error occurred. Please try again or reload the page.'
               }
@@ -69,7 +76,7 @@ class ErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryState> {
                 onClick={this.resetErrorBoundary}
                 className="inline-flex items-center justify-center rounded-md bg-primary px-4 py-2 text-sm font-medium text-primary-foreground hover:bg-primary/90 transition-colors"
               >
-                {this.props.resetLabel ?? (this.props.onReset ? 'Start Over' : 'Try Again')}
+                {this.props.resetLabel ?? ((this.props.onRetry ?? this.props.onReset) ? 'Start Over' : 'Try Again')}
               </button>
               <button
                 onClick={this.handleReload}
