@@ -119,10 +119,13 @@ const attributeIcons: Record<AttributeKey, ReactNode> = {
 // Function to normalize user answers to the 1-5 scale
 export const normalizeUserAnswers = (answers: UserAnswers): Record<AttributeKey, number> => {
   // Map electricity answer to energy score (1-5)
+  // Higher value = greater need for energy efficiency.
+  // The similarity formula (5 - |user - device|) matches user needs to device capabilities,
+  // so a user with frequent outages (high need) gets a high value, matching efficient devices.
   const energyMap: Record<string, number> = {
-    'yes': 5, // Reliable power -> can use any device
-    'sometimes': 3, // Unreliable -> prefer energy efficient
-    'no': 1 // Frequent outages -> need very energy efficient
+    'yes': 1, // Reliable power → low need for efficiency
+    'sometimes': 3, // Unreliable → moderate need for efficiency
+    'no': 5 // Frequent outages → high need for efficiency
   };
 
   // Map users answer to concurrency score (1-5)
@@ -146,10 +149,14 @@ export const normalizeUserAnswers = (answers: UserAnswers): Record<AttributeKey,
   };
 
   // Map format answer to formatEase score (1-5)
+  // Higher value = greater need for easy setup.
+  // The similarity formula (5 - |user - device|) matches user needs to device capabilities,
+  // so a user who cannot format (high need for easy setup) gets a high value,
+  // matching devices that are easier to set up.
   const formatEaseMap: Record<string, number> = {
-    'yes': 5, // Can format confidently -> high setup ease
-    'maybe': 3, // With guidance -> moderate setup ease
-    'no': 1 // Cannot format -> low setup ease
+    'yes': 1, // Can format confidently → low need for easy setup
+    'maybe': 3, // With guidance → moderate need for easy setup
+    'no': 5 // Cannot format → high need for easy setup
   };
 
   // Map price answer to cost score (1-5)
