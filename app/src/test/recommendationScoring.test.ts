@@ -18,11 +18,11 @@ describe("normalizeUserAnswers", () => {
     const result = normalizeUserAnswers(answers);
 
     expect(result).toEqual({
-      energy: 5,
+      energy: 1, // 'yes' → reliable power → low need for efficiency
       concurrency: 3,
       growth: 3,
       reusable: 0,
-      formatEase: 5,
+      formatEase: 1, // 'yes' → can format → low need for easy setup
       cost: 5,
     });
   });
@@ -40,11 +40,11 @@ describe("normalizeUserAnswers", () => {
     const result = normalizeUserAnswers(answers);
 
     expect(result).toEqual({
-      energy: 1,
+      energy: 5, // 'no' → frequent outages → high need for efficiency
       concurrency: 5,
       growth: 5,
       reusable: 5,
-      formatEase: 1,
+      formatEase: 5, // 'no' → cannot format → high need for easy setup
       cost: 1,
     });
   });
@@ -52,19 +52,19 @@ describe("normalizeUserAnswers", () => {
   // ─── 2. Electricity / energy mappings ─────────────────────────────
 
   describe("electricity → energy mapping", () => {
-    it('maps "yes" → 5 (reliable power)', () => {
+    it('maps "yes" → 1 (reliable power → low need for efficiency)', () => {
       const result = normalizeUserAnswers({ electricity: "yes" });
-      expect(result.energy).toBe(5);
+      expect(result.energy).toBe(1);
     });
 
-    it('maps "sometimes" → 3 (unreliable power)', () => {
+    it('maps "sometimes" → 3 (unreliable power → moderate need)', () => {
       const result = normalizeUserAnswers({ electricity: "sometimes" });
       expect(result.energy).toBe(3);
     });
 
-    it('maps "no" → 1 (frequent outages)', () => {
+    it('maps "no" → 5 (frequent outages → high need for efficiency)', () => {
       const result = normalizeUserAnswers({ electricity: "no" });
-      expect(result.energy).toBe(1);
+      expect(result.energy).toBe(5);
     });
 
     it("defaults to 3 when electricity is undefined", () => {
@@ -170,19 +170,19 @@ describe("normalizeUserAnswers", () => {
   // ─── 6. Format / formatEase mappings ──────────────────────────────
 
   describe("format → formatEase mapping", () => {
-    it('maps "yes" → 5 (can format confidently)', () => {
+    it('maps "yes" → 1 (can format confidently → low need for easy setup)', () => {
       const result = normalizeUserAnswers({ format: "yes" });
-      expect(result.formatEase).toBe(5);
+      expect(result.formatEase).toBe(1);
     });
 
-    it('maps "maybe" → 3 (with guidance)', () => {
+    it('maps "maybe" → 3 (with guidance → moderate need)', () => {
       const result = normalizeUserAnswers({ format: "maybe" });
       expect(result.formatEase).toBe(3);
     });
 
-    it('maps "no" → 1 (cannot format)', () => {
+    it('maps "no" → 5 (cannot format → high need for easy setup)', () => {
       const result = normalizeUserAnswers({ format: "no" });
-      expect(result.formatEase).toBe(1);
+      expect(result.formatEase).toBe(5);
     });
 
     it("defaults to 3 when format is undefined", () => {
@@ -248,9 +248,9 @@ describe("normalizeUserAnswers", () => {
       });
 
       expect(result).toEqual({
-        energy: 5,          // explicit
+        energy: 1,     // 'yes' → reliable power → low need
         concurrency: 1,     // undefined → ?? picks '1-2' → 1
-        growth: 3,          // default
+        growth: 3,
         reusable: 5,        // explicit
         formatEase: 3,      // default
         cost: 3,            // default
@@ -280,7 +280,7 @@ describe("normalizeUserAnswers", () => {
         someUnknownField: "value",
       } as UserAnswers);
 
-      expect(result.energy).toBe(5);
+      expect(result.energy).toBe(1); // 'yes' → low need for efficiency
       // other fields use defaults — concurrency uses ?? fallback '1-2' → 1
       expect(result.concurrency).toBe(1);
     });
@@ -554,18 +554,28 @@ describe("calculateDeviceScores", () => {
       }
     });
 
-    it("reuse=yes changes top device compared to reuse=no", () => {
-      const withReuse: UserAnswers = { ...baseAnswers, reuse: "yes" };
-      const withoutReuse: UserAnswers = { ...baseAnswers, reuse: "no" };
+    it("reuse=yes boosts reusedPC ranking relative to its reuse=no position", () => {
+      // Use a profile where reusedPC is NOT top without reuse boost:
+      // frequent outages + cannot format + low budget favors Pi
+      const baseProfile: UserAnswers = {
+        electricity: "no", // frequent outages → energy need = 5
+        users: "1-2",
+        growth: "low",
+        reuse: "no",
+        format: "no", // cannot format → formatEase need = 5
+        price: "low",
+        points: { lowPower: 5, scalable: 0, easyToUse: 5, lowCost: 5 },
+      };
+      const withReuse: UserAnswers = { ...baseProfile, reuse: "yes" };
 
+      const resultsWithout = calculateDeviceScores(baseProfile, norm(baseProfile));
       const resultsWith = calculateDeviceScores(withReuse, norm(withReuse));
-      const resultsWithout = calculateDeviceScores(
-        withoutReuse,
-        norm(withoutReuse),
-      );
 
-      // Top device differs between the two scenarios
-      expect(resultsWith[0].device.key).not.toBe(resultsWithout[0].device.key);
+      // Without reuse, Raspberry Pi should be #1 (energy efficient + cheap)
+      expect(resultsWithout[0].device.key).toBe("raspberryPi");
+
+      // With reuse, reusedPC jumps to #1 due to 40% reusable weight
+      expect(resultsWith[0].device.key).toBe("reusedPC");
     });
   });
 
@@ -667,6 +677,101 @@ describe("calculateDeviceScores", () => {
       for (const r of results) {
         expect(r.matchPercentage).toBeGreaterThanOrEqual(0);
       }
+    });
+  });
+
+  // ─── 6. Semantic correctness ─────────────────────────────────────
+
+  describe("semantic correctness — correct device for user profile", () => {
+    it("user with frequent outages ranks Raspberry Pi above Reused PC", () => {
+      // User has frequent power outages → needs energy efficiency
+      // Raspberry Pi (energy=5) should score higher than Reused PC (energy=1)
+      const answers: UserAnswers = {
+        electricity: "no", // frequent outages → energy need = 5
+        users: "1-2",
+        growth: "low",
+        reuse: "no",
+        format: "yes",
+        price: "low",
+        points: { lowPower: 10, scalable: 0, easyToUse: 0, lowCost: 0 },
+      };
+
+      const results = calculateDeviceScores(answers, norm(answers));
+      const pi = results.find((r) => r.device.key === "raspberryPi")!;
+      const reusedPC = results.find((r) => r.device.key === "reusedPC")!;
+
+      expect(pi.score).toBeGreaterThan(reusedPC.score);
+    });
+
+    it("user who cannot format ranks easier devices above harder ones", () => {
+      // User cannot format → needs easy setup
+      // Devices with higher formatEase should score better for this user
+      // Raspberry Pi (formatEase=3) vs ZimaBoard (formatEase=2) vs Reused PC (formatEase=2)
+      const answers: UserAnswers = {
+        electricity: "yes",
+        users: "1-2",
+        growth: "low",
+        reuse: "no",
+        format: "no", // cannot format → formatEase need = 5
+        price: "medium",
+        points: { lowPower: 0, scalable: 0, easyToUse: 10, lowCost: 0 },
+      };
+
+      const results = calculateDeviceScores(answers, norm(answers));
+      const pi = results.find((r) => r.device.key === "raspberryPi")!;
+      const zima = results.find((r) => r.device.key === "zimaBoard")!;
+      const reusedPC = results.find((r) => r.device.key === "reusedPC")!;
+
+      // Raspberry Pi (formatEase=3) is closest to user need (5) among non-NUC devices
+      // NUC (formatEase=3) ties with Pi on formatEase, but Pi is cheaper (cost=5 vs cost=1)
+      expect(pi.score).toBeGreaterThan(zima.score);
+      expect(pi.score).toBeGreaterThan(reusedPC.score);
+    });
+
+    it("user with reliable power does not strongly prefer energy-efficient devices", () => {
+      // With reliable power (energy need = 1), the energy attribute contributes
+      // equally for all devices since the user has no special need.
+      // Reused PC (energy=1) and Pi (energy=5) should have similar energy scores
+      // when the user's energy need is low (1).
+      const answers: UserAnswers = {
+        electricity: "yes", // reliable power → energy need = 1
+        users: "1-2",
+        growth: "low",
+        reuse: "no",
+        format: "yes",
+        price: "low",
+        points: { lowPower: 10, scalable: 0, easyToUse: 0, lowCost: 0 },
+      };
+
+      const results = calculateDeviceScores(answers, norm(answers));
+
+      // Reused PC (energy=1) should match user energy need (1) perfectly
+      // Pi (energy=5) should have a larger gap from user need (1)
+      const reusedPC = results.find((r) => r.device.key === "reusedPC")!;
+      const pi = results.find((r) => r.device.key === "raspberryPi")!;
+
+      // When user need=1, Reused PC (1) gets similarity=5, Pi (5) gets similarity=1
+      // So with lowPower priority, Reused PC wins on energy
+      expect(reusedPC.score).toBeGreaterThan(pi.score);
+    });
+
+    it("combined: frequent outages + cannot format + low budget favors Raspberry Pi", () => {
+      const answers: UserAnswers = {
+        electricity: "no", // frequent outages → high energy need
+        users: "1-2",
+        growth: "low",
+        reuse: "no",
+        format: "no", // cannot format → high need for easy setup
+        price: "low", // low budget → need low cost
+        points: { lowPower: 5, scalable: 0, easyToUse: 5, lowCost: 5 },
+      };
+
+      const results = calculateDeviceScores(answers, norm(answers));
+
+      // Raspberry Pi: energy=5, formatEase=3, cost=5 — strong on energy & cost
+      // NUC: energy=2, formatEase=3, cost=1 — bad on energy & cost
+      // Reused PC: energy=1, formatEase=2, cost=4 — worst on energy
+      expect(results[0].device.key).toBe("raspberryPi");
     });
   });
 });
