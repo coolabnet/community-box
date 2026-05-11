@@ -223,14 +223,14 @@ export const calculateDeviceScores = (
 
   // Derive concurrency baseline weight from the `users` answer
   // More users → higher concurrency weight so multi-user needs influence device ranking
-  const concurrencyWeightMap: Record<string, number> = {
+  const concurrencyBaselineWeight: Record<string, number> = {
     '1-2': 0.5,   // Low concurrency need — small baseline weight
     '3-5': 1.5,   // Moderate — meaningful weight
     '6+': 3,      // High — strong influence on ranking
   };
   const rawUsers = answers.users ?? '1-2';
   pointWeights.concurrency = priorityKeys.some(key => pointWeights[key] > 0)
-    ? (concurrencyWeightMap[rawUsers] ?? 0.5)
+    ? (concurrencyBaselineWeight[rawUsers] ?? 0.5)
     : 0;
 
   // Calculate total points allocated
@@ -255,14 +255,23 @@ export const calculateDeviceScores = (
   if (answers.reuse === 'yes') {
     normalizedWeights.reusable = 0.4; // 40% weight to reusability
 
-    // Redistribute remaining 60% among other attributes
-    const remainingWeight = 0.6;
-    const otherAttributes = Object.keys(normalizedWeights).filter(key => key !== 'reusable');
-    const weightPerAttribute = remainingWeight / otherAttributes.length;
+    // Redistribute remaining 60% proportionally among other attributes,
+    // preserving derived weights (e.g. concurrency from the `users` answer)
+    const otherAttributes = Object.keys(normalizedWeights).filter(key => key !== 'reusable') as AttributeKey[];
+    const otherTotal = otherAttributes.reduce((sum, key) => sum + normalizedWeights[key], 0);
 
-    otherAttributes.forEach(key => {
-      normalizedWeights[key as AttributeKey] = weightPerAttribute;
-    });
+    if (otherTotal > 0) {
+      // Scale existing proportions to fill the remaining 60%
+      otherAttributes.forEach(key => {
+        normalizedWeights[key] = 0.6 * (normalizedWeights[key] / otherTotal);
+      });
+    } else {
+      // Fallback: equal distribution if all weights were zero
+      const weightPerAttribute = 0.6 / otherAttributes.length;
+      otherAttributes.forEach(key => {
+        normalizedWeights[key] = weightPerAttribute;
+      });
+    }
   }
 
   // Calculate scores for each device
