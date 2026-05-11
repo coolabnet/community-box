@@ -59,7 +59,7 @@ import nucImage from '../assets/nuc.png';
 import reusedPCImage from '../assets/laptop.jpg'; // Using banner as placeholder for reused PC
 
 // Define the devices with their attributes
-const devices: DeviceAttributes[] = [
+export const devices: DeviceAttributes[] = [
   {
     key: 'raspberryPi',
     name: 'Raspberry Pi',
@@ -117,7 +117,7 @@ const attributeIcons: Record<AttributeKey, ReactNode> = {
 };
 
 // Function to normalize user answers to the 1-5 scale
-const normalizeUserAnswers = (answers: UserAnswers): Record<AttributeKey, number> => {
+export const normalizeUserAnswers = (answers: UserAnswers): Record<AttributeKey, number> => {
   // Map electricity answer to energy score (1-5)
   const energyMap: Record<string, number> = {
     'yes': 5, // Reliable power -> can use any device
@@ -170,7 +170,7 @@ const normalizeUserAnswers = (answers: UserAnswers): Record<AttributeKey, number
 };
 
 // Function to calculate device scores based on user answers and point allocation
-const calculateDeviceScores = (
+export const calculateDeviceScores = (
   answers: UserAnswers,
   normalizedAnswers: Record<AttributeKey, number>
 ): DeviceScore[] => {
@@ -216,14 +216,14 @@ const calculateDeviceScores = (
 
   // Derive concurrency baseline weight from the `users` answer
   // More users → higher concurrency weight so multi-user needs influence device ranking
-  const concurrencyMap: Record<string, number> = {
+  const concurrencyWeightMap: Record<string, number> = {
     '1-2': 0.5,   // Low concurrency need — small baseline weight
     '3-5': 1.5,   // Moderate — meaningful weight
     '6+': 3,      // High — strong influence on ranking
   };
   const rawUsers = answers.users ?? '1-2';
   pointWeights.concurrency = priorityKeys.some(key => pointWeights[key] > 0)
-    ? (concurrencyMap[rawUsers] ?? 0.5)
+    ? (concurrencyWeightMap[rawUsers] ?? 0.5)
     : 0;
 
   // Calculate total points allocated

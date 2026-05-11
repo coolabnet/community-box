@@ -14,6 +14,8 @@ const Questionnaire = () => {
   const { t } = useTranslation();
   const { currentStep, setCurrentStep, answers, setAnswer, goBack, resetSurvey } = useQuestionnaire();
 
+  // NOTE: The number of steps here must match `totalSteps` in QuestionnaireContext.tsx.
+  // If you add or remove a step, update `totalSteps` there.
   const questions = [
     {
       id: 'electricity',

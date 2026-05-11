@@ -8,5 +8,11 @@ import type { TFunction } from 'i18next';
  */
 export function tArray(t: TFunction, key: string): string[] {
   const result = t(key, { returnObjects: true });
-  return Array.isArray(result) ? result : [];
+  if (Array.isArray(result)) {
+    return result;
+  }
+  if (import.meta.env.DEV) {
+    console.warn(`[i18n] Missing translation array for key: ${key}`);
+  }
+  return [];
 }

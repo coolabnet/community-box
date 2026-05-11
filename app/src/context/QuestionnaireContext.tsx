@@ -45,7 +45,9 @@ export function QuestionnaireProvider({ children }: { children: React.ReactNode 
   const [currentStep, setCurrentStep] = useState(initialState.currentStep);
   const [answers, setAnswers] = useState<Record<string, unknown>>(initialState.answers);
 
-  const totalSteps = 10; // 6 questions + points + usage + main use + results
+  // NOTE: Must match the number of question steps defined in Questionnaire.tsx.
+  // If you add or remove a step in the questionnaire, update this value.
+  const totalSteps = 10;
 
   const skipUrlUpdateRef = useRef(false);
 
