@@ -4,6 +4,8 @@ import ErrorBoundary from '@/components/ErrorBoundary';
 interface RetryableLazyOptions {
   /** Display name shown in React DevTools. Defaults to "RetryableLazy". */
   name?: string;
+  /** Custom Suspense fallback. Defaults to a generic loading spinner (no text). */
+  fallback?: React.ReactNode;
 }
 
 /**
@@ -74,7 +76,7 @@ export function retryableLazy<T extends ComponentType<Record<string, unknown>>>(
         onError={handleError}
         resetLabel="Reload Page"
       >
-        <Suspense fallback={<div className="flex items-center justify-center min-h-screen">Carregando...</div>}>
+        <Suspense fallback={options?.fallback ?? <div className="flex items-center justify-center min-h-screen"><div className="h-8 w-8 animate-spin rounded-full border-4 border-primary border-t-transparent" /></div>}>
           <LazyComponent />
         </Suspense>
       </ErrorBoundary>
