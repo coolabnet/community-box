@@ -91,13 +91,6 @@ export function QuestionnaireProvider({ children }: { children: React.ReactNode 
 
     // Clear localStorage
     clearStoredState();
-
-    // Safety net: if React bails out of re-rendering because state is already
-    // at initial values (e.g. currentStep=0, answers={}), the effect that
-    // consumes skipUrlUpdateRef never fires and the ref stays stuck at true.
-    // Reset it after the current macrotask so the next legitimate step-advance
-    // correctly updates the URL.
-    setTimeout(() => { skipUrlUpdateRef.current = false; }, 0);
   };
 
   return (

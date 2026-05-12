@@ -229,7 +229,9 @@ export const calculateDeviceScores = (
     '6+': 3,      // High — strong influence on ranking
   };
   const rawUsers = answers.users ?? '1-2';
-  pointWeights.concurrency = priorityKeys.some(key => pointWeights[key] > 0)
+  // User allocated at least one priority point (any priority or language)
+  const userAllocatedPoints = Object.values(points).some(p => p > 0);
+  pointWeights.concurrency = userAllocatedPoints
     ? (concurrencyBaselineWeight[rawUsers] ?? 0.5)
     : 0;
 
