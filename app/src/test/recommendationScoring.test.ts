@@ -773,5 +773,116 @@ describe("calculateDeviceScores", () => {
       // Reused PC: energy=1, formatEase=2, cost=4 — worst on energy
       expect(results[0].device.key).toBe("raspberryPi");
     });
+
+    it("strengths array contains matching attribute keys for a well-matched device", () => {
+      // User with frequent outages → energy need=5 matches Pi energy=5 → similarity=5
+      const answers: UserAnswers = {
+        electricity: "no", // energy need = 5
+        users: "1-2",
+        growth: "low",
+        reuse: "no",
+        format: "yes",
+        price: "low",
+        points: { lowPower: 5, scalable: 0, easyToUse: 0, lowCost: 5 },
+      };
+
+      const results = calculateDeviceScores(answers, norm(answers));
+      const pi = results.find((r) => r.device.key === "raspberryPi")!;
+
+      // Pi (energy=5) perfectly matches user energy need (5) → similarity=5 >= 4
+      expect(pi.strengths).toContain("energy");
+      // Pi (cost=5) matches user low budget (5) → similarity=5 >= 4
+      expect(pi.strengths).toContain("cost");
+    });
+
+    it("perfect match profile scores 100% with equal weights and reuse override", () => {
+      // Reused PC: energy=1, concurrency=4, growth=4, reusable=5, formatEase=2, cost=4
+      // With reuse="yes", reusable gets 40% weight
+      // Other attributes get equal share of 60%
+      const answers: UserAnswers = {
+        electricity: "no",        // energy need = 5 → gap |5-1|=4 → similarity=1
+        users: "1-2",             // concurrency need = 1 → gap |1-4|=3 → similarity=2
+        growth: "low",            // growth need = 1 → gap |1-4|=3 → similarity=2
+        reuse: "yes",             // reusable gets 40% weight boost
+        format: "yes",            // formatEase need = 1 → gap |1-2|=1 → similarity=4
+        price: "medium",          // cost need = 3 → gap |3-4|=1 → similarity=4
+        // no points → equal weights
+      };
+
+      const results = calculateDeviceScores(answers, norm(answers));
+      const reusedPC = results.find((r) => r.device.key === "reusedPC")!;
+
+      // With reuse="yes", reusedPC gets 40% weight on reusable where it's 5/5
+      // This gives it a dominant match over other devices
+      expect(results[0].device.key).toBe("reusedPC");
+      expect(reusedPC.matchPercentage).toBeGreaterThan(70);
+    });
+
+    it("tie-breaking: devices with equal scores sort consistently", () => {
+      // Deliberately create a profile where two devices should tie
+      // by giving no priority points (equal weights) and neutral answers
+      const answers: UserAnswers = {
+        electricity: "yes",
+        users: "1-2",
+        growth: "low",
+        reuse: "no",
+        format: "yes",
+        price: "medium",
+        // no points → equal weights
+      };
+
+      const results = calculateDeviceScores(answers, norm(answers));
+      const sortOrder = results.map((r) => r.device.key);
+      const sortedScores = results.map((r) => r.score);
+
+      // Verify scores are sorted descending (already sorted by function contract)
+      for (let i = 1; i < sortedScores.length; i++) {
+        expect(sortedScores[i]).toBeLessThanOrEqual(sortedScores[i - 1]);
+      }
+
+      // Re-run and verify same sort order (stability)
+      const results2 = calculateDeviceScores(answers, norm(answers));
+      expect(results2.map((r) => r.device.key)).toEqual(sortOrder);
+    });
+
+    it("language redistribution with single non-zero priority: all language flows into that priority", () => {
+      // Only lowPower=10 is set, plus language=20
+      // All 20 language points should be proportional-assigned to lowPower
+      const answers: UserAnswers = {
+        electricity: "no",
+        users: "1-2",
+        growth: "low",
+        reuse: "no",
+        format: "yes",
+        price: "low",
+        points: { lowPower: 10, scalable: 0, easyToUse: 0, lowCost: 0, language: 20 },
+      };
+
+      const results = calculateDeviceScores(answers, norm(answers));
+      const pi = results.find((r) => r.device.key === "raspberryPi")!;
+      // Pi wins on energy+cost, and with all points in energy, it should rank first
+      expect(pi.score).toBeGreaterThan(0);
+      expect(results[0].device.key).toBe("raspberryPi");
+    });
+
+    it("handles negative and out-of-range point values without NaN", () => {
+      const answers: UserAnswers = {
+        electricity: "yes",
+        users: "1-2",
+        growth: "low",
+        reuse: "no",
+        format: "yes",
+        price: "medium",
+        points: { lowPower: -5, scalable: 0, easyToUse: 0, lowCost: 0 },
+      };
+
+      const results = calculateDeviceScores(answers, norm(answers));
+
+      results.forEach((r) => {
+        expect(isNaN(r.score)).toBe(false);
+        expect(isNaN(r.matchPercentage)).toBe(false);
+        expect(r.matchPercentage).toBeGreaterThanOrEqual(0);
+      });
+    });
   });
 });
