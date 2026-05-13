@@ -1,11 +1,11 @@
 {
-  "timestamp": "2026-05-12T08:46:24.471Z",
+  "timestamp": "2026-05-13T08:50:22.979Z",
   "script": "scripts.test.js",
   "source": "YunoHost-Apps GitHub Organization",
   "url": "https://github.com/YunoHost-Apps",
   "api_url": "https://api.github.com/orgs/YunoHost-Apps/repos",
-  "total_apps": 982,
-  "total_repos_checked": 1003,
+  "total_apps": 983,
+  "total_repos_checked": 1004,
   "languages": [
     "CSS",
     "HTML",
@@ -3095,7 +3095,7 @@
       "description": "Garage package for YunoHost",
       "url": "https://github.com/YunoHost-Apps/garage_ynh",
       "stars": 4,
-      "forks": 6,
+      "forks": 7,
       "updated_at": "2026-01-31T23:30:13Z",
       "language": "Shell",
       "archived": false
@@ -3987,7 +3987,7 @@
       "url": "https://github.com/YunoHost-Apps/ihatemoney_ynh",
       "stars": 10,
       "forks": 6,
-      "updated_at": "2026-03-19T14:14:27Z",
+      "updated_at": "2026-05-12T20:53:25Z",
       "language": "Shell",
       "archived": false
     },
@@ -5455,6 +5455,17 @@
       "archived": true
     },
     {
+      "id": "mediamtx_ynh",
+      "name": "mediamtx",
+      "description": "",
+      "url": "https://github.com/YunoHost-Apps/mediamtx_ynh",
+      "stars": 0,
+      "forks": 0,
+      "updated_at": "2026-05-12T19:04:42Z",
+      "language": "Shell",
+      "archived": false
+    },
+    {
       "id": "mediatracker_ynh",
       "name": "mediatracker",
       "description": "MediaTracker package for YunoHost",
@@ -5494,7 +5505,7 @@
       "url": "https://github.com/YunoHost-Apps/meilisearch_ynh",
       "stars": 13,
       "forks": 3,
-      "updated_at": "2026-05-08T11:40:40Z",
+      "updated_at": "2026-05-13T05:56:19Z",
       "language": "Shell",
       "archived": false
     },
@@ -6330,7 +6341,7 @@
       "url": "https://github.com/YunoHost-Apps/octoprint_ynh",
       "stars": 4,
       "forks": 2,
-      "updated_at": "2026-05-11T17:55:44Z",
+      "updated_at": "2026-05-12T12:18:52Z",
       "language": "Shell",
       "archived": false
     },
@@ -6671,7 +6682,7 @@
       "url": "https://github.com/YunoHost-Apps/overleaf_ynh",
       "stars": 2,
       "forks": 6,
-      "updated_at": "2026-05-02T07:42:22Z",
+      "updated_at": "2026-05-12T17:26:27Z",
       "language": "Shell",
       "archived": false
     },

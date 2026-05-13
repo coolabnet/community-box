@@ -1,19 +1,19 @@
 {
-  "timestamp": "2026-05-12T08:46:23.865Z",
+  "timestamp": "2026-05-13T08:50:22.075Z",
   "script": "run-all.js",
   "note": "Summary of all data fetching script executions",
   "data": {
-    "execution_time": "2026-05-12T08:46:23.865Z",
+    "execution_time": "2026-05-13T08:50:22.075Z",
     "total_scripts": 6,
     "successful": 6,
     "failed": 0,
-    "total_duration_ms": 20056,
+    "total_duration_ms": 20293,
     "continue_on_error": true,
     "results": [
       {
         "name": "CapRover UI Translations",
         "success": true,
-        "duration": 204,
+        "duration": 221,
         "result": [
           "ar-EG",
           "de-DE",
@@ -34,7 +34,7 @@
       {
         "name": "CasaOS UI Translations",
         "success": true,
-        "duration": 104,
+        "duration": 176,
         "result": [
           "ca_ES",
           "cs_CZ",
@@ -69,9 +69,9 @@
       {
         "name": "YunoHost Apps",
         "success": true,
-        "duration": 18225,
+        "duration": 17898,
         "result": {
-          "count": 982,
+          "count": 983,
           "apps": [
             {
               "id": "13ft_ynh",
@@ -3148,7 +3148,7 @@
               "description": "Garage package for YunoHost",
               "url": "https://github.com/YunoHost-Apps/garage_ynh",
               "stars": 4,
-              "forks": 6,
+              "forks": 7,
               "updated_at": "2026-01-31T23:30:13Z",
               "language": "Shell",
               "archived": false
@@ -4040,7 +4040,7 @@
               "url": "https://github.com/YunoHost-Apps/ihatemoney_ynh",
               "stars": 10,
               "forks": 6,
-              "updated_at": "2026-03-19T14:14:27Z",
+              "updated_at": "2026-05-12T20:53:25Z",
               "language": "Shell",
               "archived": false
             },
@@ -5508,6 +5508,17 @@
               "archived": true
             },
             {
+              "id": "mediamtx_ynh",
+              "name": "mediamtx",
+              "description": "",
+              "url": "https://github.com/YunoHost-Apps/mediamtx_ynh",
+              "stars": 0,
+              "forks": 0,
+              "updated_at": "2026-05-12T19:04:42Z",
+              "language": "Shell",
+              "archived": false
+            },
+            {
               "id": "mediatracker_ynh",
               "name": "mediatracker",
               "description": "MediaTracker package for YunoHost",
@@ -5547,7 +5558,7 @@
               "url": "https://github.com/YunoHost-Apps/meilisearch_ynh",
               "stars": 13,
               "forks": 3,
-              "updated_at": "2026-05-08T11:40:40Z",
+              "updated_at": "2026-05-13T05:56:19Z",
               "language": "Shell",
               "archived": false
             },
@@ -6383,7 +6394,7 @@
               "url": "https://github.com/YunoHost-Apps/octoprint_ynh",
               "stars": 4,
               "forks": 2,
-              "updated_at": "2026-05-11T17:55:44Z",
+              "updated_at": "2026-05-12T12:18:52Z",
               "language": "Shell",
               "archived": false
             },
@@ -6724,7 +6735,7 @@
               "url": "https://github.com/YunoHost-Apps/overleaf_ynh",
               "stars": 2,
               "forks": 6,
-              "updated_at": "2026-05-02T07:42:22Z",
+              "updated_at": "2026-05-12T17:26:27Z",
               "language": "Shell",
               "archived": false
             },
@@ -10894,7 +10905,7 @@
       {
         "name": "YunoHost Docs Translations",
         "success": true,
-        "duration": 77,
+        "duration": 120,
         "result": [
           "de",
           "docs",
@@ -10908,7 +10919,7 @@
       {
         "name": "YunoHost UI Translations",
         "success": true,
-        "duration": 1200,
+        "duration": 1529,
         "result": [
           {
             "language": "Basque",
@@ -11315,7 +11326,7 @@
       {
         "name": "Zimaboard Shipping Areas",
         "success": true,
-        "duration": 246,
+        "duration": 349,
         "result": [
           "Argentina",
           "Australia",
