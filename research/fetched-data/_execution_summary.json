@@ -1,19 +1,19 @@
 {
-  "timestamp": "2026-05-14T08:43:41.639Z",
+  "timestamp": "2026-05-15T08:54:13.811Z",
   "script": "run-all.js",
   "note": "Summary of all data fetching script executions",
   "data": {
-    "execution_time": "2026-05-14T08:43:41.639Z",
+    "execution_time": "2026-05-15T08:54:13.811Z",
     "total_scripts": 6,
     "successful": 6,
     "failed": 0,
-    "total_duration_ms": 21542,
+    "total_duration_ms": 20263,
     "continue_on_error": true,
     "results": [
       {
         "name": "CapRover UI Translations",
         "success": true,
-        "duration": 324,
+        "duration": 338,
         "result": [
           "ar-EG",
           "de-DE",
@@ -34,7 +34,7 @@
       {
         "name": "CasaOS UI Translations",
         "success": true,
-        "duration": 188,
+        "duration": 187,
         "result": [
           "ca_ES",
           "cs_CZ",
@@ -69,7 +69,7 @@
       {
         "name": "YunoHost Apps",
         "success": true,
-        "duration": 18862,
+        "duration": 17713,
         "result": {
           "count": 983,
           "apps": [
@@ -222,7 +222,7 @@
               "description": "AdventureLog package for YunoHost",
               "url": "https://github.com/YunoHost-Apps/adventurelog_ynh",
               "stars": 2,
-              "forks": 2,
+              "forks": 3,
               "updated_at": "2026-04-08T16:54:14Z",
               "language": "Shell",
               "archived": false
@@ -5096,7 +5096,7 @@
               "url": "https://github.com/YunoHost-Apps/loops_ynh",
               "stars": 3,
               "forks": 2,
-              "updated_at": "2026-05-08T16:59:41Z",
+              "updated_at": "2026-05-14T15:12:10Z",
               "language": "Shell",
               "archived": false
             },
@@ -5250,7 +5250,7 @@
               "url": "https://github.com/YunoHost-Apps/mantis_ynh",
               "stars": 3,
               "forks": 1,
-              "updated_at": "2026-05-11T20:30:41Z",
+              "updated_at": "2026-05-15T07:33:30Z",
               "language": "Shell",
               "archived": false
             },
@@ -6216,9 +6216,9 @@
               "name": "nextcloud",
               "description": "Nextcloud package for YunoHost",
               "url": "https://github.com/YunoHost-Apps/nextcloud_ynh",
-              "stars": 172,
+              "stars": 174,
               "forks": 70,
-              "updated_at": "2026-05-11T09:18:41Z",
+              "updated_at": "2026-05-14T23:21:06Z",
               "language": "Shell",
               "archived": false
             },
@@ -6306,7 +6306,7 @@
               "url": "https://github.com/YunoHost-Apps/nodebb_ynh",
               "stars": 7,
               "forks": 7,
-              "updated_at": "2026-05-02T20:20:01Z",
+              "updated_at": "2026-05-14T16:23:13Z",
               "language": "Shell",
               "archived": false
             },
@@ -6966,7 +6966,7 @@
               "url": "https://github.com/YunoHost-Apps/penpot_ynh",
               "stars": 9,
               "forks": 5,
-              "updated_at": "2026-05-13T10:56:05Z",
+              "updated_at": "2026-05-15T07:42:29Z",
               "language": "Shell",
               "archived": false
             },
@@ -7879,7 +7879,7 @@
               "url": "https://github.com/YunoHost-Apps/rallly_ynh",
               "stars": 7,
               "forks": 3,
-              "updated_at": "2026-05-02T20:27:53Z",
+              "updated_at": "2026-05-15T08:25:33Z",
               "language": "Shell",
               "archived": false
             },
@@ -8330,7 +8330,7 @@
               "url": "https://github.com/YunoHost-Apps/screego_ynh",
               "stars": 2,
               "forks": 1,
-              "updated_at": "2026-01-05T07:13:15Z",
+              "updated_at": "2026-05-15T06:48:27Z",
               "language": "Shell",
               "archived": false
             },
@@ -8403,11 +8403,11 @@
             {
               "id": "seaweedfs_ynh",
               "name": "seaweedfs",
-              "description": "Seaweedfs pacakge for YunoHost",
+              "description": "Seaweedfs package for Yunohost",
               "url": "https://github.com/YunoHost-Apps/seaweedfs_ynh",
               "stars": 0,
               "forks": 2,
-              "updated_at": "2026-05-13T20:15:25Z",
+              "updated_at": "2026-05-14T22:28:02Z",
               "language": "Shell",
               "archived": false
             },
@@ -8748,7 +8748,7 @@
               "url": "https://github.com/YunoHost-Apps/snac_ynh",
               "stars": 2,
               "forks": 0,
-              "updated_at": "2026-03-19T00:51:08Z",
+              "updated_at": "2026-05-14T20:08:31Z",
               "language": "Shell",
               "archived": false
             },
@@ -10046,7 +10046,7 @@
               "url": "https://github.com/YunoHost-Apps/wanderer_ynh",
               "stars": 5,
               "forks": 1,
-              "updated_at": "2026-02-21T07:44:24Z",
+              "updated_at": "2026-05-14T19:53:53Z",
               "language": "Shell",
               "archived": false
             },
@@ -10255,7 +10255,7 @@
               "url": "https://github.com/YunoHost-Apps/wiki-go_ynh",
               "stars": 1,
               "forks": 1,
-              "updated_at": "2026-05-08T09:18:02Z",
+              "updated_at": "2026-05-15T07:32:26Z",
               "language": "Shell",
               "archived": false
             },
@@ -10905,7 +10905,7 @@
       {
         "name": "YunoHost Docs Translations",
         "success": true,
-        "duration": 132,
+        "duration": 181,
         "result": [
           "de",
           "docs",
@@ -10919,7 +10919,7 @@
       {
         "name": "YunoHost UI Translations",
         "success": true,
-        "duration": 1686,
+        "duration": 1482,
         "result": [
           {
             "language": "Basque",
@@ -11326,7 +11326,7 @@
       {
         "name": "Zimaboard Shipping Areas",
         "success": true,
-        "duration": 350,
+        "duration": 362,
         "result": [
           "Argentina",
           "Australia",
