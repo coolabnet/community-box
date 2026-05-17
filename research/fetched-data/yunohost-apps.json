@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-05-16T08:09:46.549Z",
+  "timestamp": "2026-05-17T08:26:28.509Z",
   "script": "scripts.test.js",
   "source": "YunoHost-Apps GitHub Organization",
   "url": "https://github.com/YunoHost-Apps",
@@ -2359,7 +2359,7 @@
       "url": "https://github.com/YunoHost-Apps/etherpad_ynh",
       "stars": 3,
       "forks": 3,
-      "updated_at": "2026-05-16T06:20:31Z",
+      "updated_at": "2026-05-16T20:59:12Z",
       "language": "Shell",
       "archived": false
     },
@@ -2865,7 +2865,7 @@
       "url": "https://github.com/YunoHost-Apps/fossbilling_ynh",
       "stars": 0,
       "forks": 1,
-      "updated_at": "2026-01-31T14:58:42Z",
+      "updated_at": "2026-05-16T10:45:27Z",
       "language": "PHP",
       "archived": false
     },
@@ -2985,7 +2985,7 @@
       "description": "Friendica package for YunoHost",
       "url": "https://github.com/YunoHost-Apps/friendica_ynh",
       "stars": 14,
-      "forks": 17,
+      "forks": 16,
       "updated_at": "2026-02-09T20:56:36Z",
       "language": "Shell",
       "archived": false
@@ -4557,9 +4557,9 @@
       "name": "kula",
       "description": "",
       "url": "https://github.com/YunoHost-Apps/kula_ynh",
-      "stars": 0,
+      "stars": 1,
       "forks": 0,
-      "updated_at": "2026-05-01T11:07:24Z",
+      "updated_at": "2026-05-16T09:52:45Z",
       "language": "Shell",
       "archived": false
     },
@@ -4768,7 +4768,7 @@
       "url": "https://github.com/YunoHost-Apps/libremdb_ynh",
       "stars": 3,
       "forks": 2,
-      "updated_at": "2026-02-23T15:14:07Z",
+      "updated_at": "2026-05-16T08:50:55Z",
       "language": "Shell",
       "archived": false
     },
@@ -5010,7 +5010,7 @@
       "url": "https://github.com/YunoHost-Apps/localsend_ynh",
       "stars": 0,
       "forks": 0,
-      "updated_at": "2026-01-31T20:19:15Z",
+      "updated_at": "2026-05-16T21:58:30Z",
       "language": "Shell",
       "archived": false
     },
@@ -5043,7 +5043,7 @@
       "url": "https://github.com/YunoHost-Apps/loops_ynh",
       "stars": 3,
       "forks": 2,
-      "updated_at": "2026-05-14T15:12:10Z",
+      "updated_at": "2026-05-16T14:39:34Z",
       "language": "Shell",
       "archived": false
     },
@@ -5670,7 +5670,7 @@
       "url": "https://github.com/YunoHost-Apps/miniflux_ynh",
       "stars": 8,
       "forks": 2,
-      "updated_at": "2026-04-09T17:31:30Z",
+      "updated_at": "2026-05-17T06:04:32Z",
       "language": "Shell",
       "archived": false
     },
@@ -5791,7 +5791,7 @@
       "url": "https://github.com/YunoHost-Apps/moncycle_ynh",
       "stars": 3,
       "forks": 3,
-      "updated_at": "2025-11-26T10:52:42Z",
+      "updated_at": "2026-05-16T19:07:21Z",
       "language": "Shell",
       "archived": false
     },
@@ -7353,7 +7353,7 @@
       "url": "https://github.com/YunoHost-Apps/pluxml_ynh",
       "stars": 9,
       "forks": 4,
-      "updated_at": "2026-05-13T20:49:14Z",
+      "updated_at": "2026-05-16T13:39:20Z",
       "language": "Shell",
       "archived": false
     },
@@ -8585,7 +8585,7 @@
       "url": "https://github.com/YunoHost-Apps/silverbullet_ynh",
       "stars": 6,
       "forks": 2,
-      "updated_at": "2026-05-07T06:33:56Z",
+      "updated_at": "2026-05-16T16:36:21Z",
       "language": "Shell",
       "archived": false
     },
