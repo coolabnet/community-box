@@ -1,11 +1,11 @@
 {
-  "timestamp": "2026-05-18T10:13:53.553Z",
+  "timestamp": "2026-05-19T09:54:37.178Z",
   "script": "scripts.test.js",
   "source": "YunoHost-Apps GitHub Organization",
   "url": "https://github.com/YunoHost-Apps",
   "api_url": "https://api.github.com/orgs/YunoHost-Apps/repos",
-  "total_apps": 984,
-  "total_repos_checked": 1005,
+  "total_apps": 985,
+  "total_repos_checked": 1006,
   "languages": [
     "CSS",
     "HTML",
@@ -455,7 +455,7 @@
       "description": "Audiobookshelf package for YunoHost",
       "url": "https://github.com/YunoHost-Apps/audiobookshelf_ynh",
       "stars": 7,
-      "forks": 5,
+      "forks": 6,
       "updated_at": "2026-05-18T05:12:33Z",
       "language": "Shell",
       "archived": false
@@ -1435,7 +1435,7 @@
       "url": "https://github.com/YunoHost-Apps/cryptroot-unlock_ynh",
       "stars": 3,
       "forks": 0,
-      "updated_at": "2026-03-31T03:14:10Z",
+      "updated_at": "2026-05-18T11:37:00Z",
       "language": "Shell",
       "archived": false
     },
@@ -2590,7 +2590,7 @@
       "url": "https://github.com/YunoHost-Apps/filegator_ynh",
       "stars": 0,
       "forks": 3,
-      "updated_at": "2026-05-15T13:19:37Z",
+      "updated_at": "2026-05-18T21:28:12Z",
       "language": "Shell",
       "archived": false
     },
@@ -4531,6 +4531,17 @@
       "archived": false
     },
     {
+      "id": "koffan_ynh",
+      "name": "koffan",
+      "description": "Koffan package for YunoHost",
+      "url": "https://github.com/YunoHost-Apps/koffan_ynh",
+      "stars": 0,
+      "forks": 0,
+      "updated_at": "2026-05-18T20:01:44Z",
+      "language": "Shell",
+      "archived": false
+    },
+    {
       "id": "komga_ynh",
       "name": "komga",
       "description": "Komga package for YunoHost",
@@ -6374,7 +6385,7 @@
       "url": "https://github.com/YunoHost-Apps/ojs_ynh",
       "stars": 2,
       "forks": 2,
-      "updated_at": "2026-03-10T07:09:35Z",
+      "updated_at": "2026-05-18T17:26:48Z",
       "language": "PHP",
       "archived": false
     },
@@ -9322,7 +9333,7 @@
       "url": "https://github.com/YunoHost-Apps/terraforming-mars_ynh",
       "stars": 2,
       "forks": 2,
-      "updated_at": "2026-05-11T05:54:28Z",
+      "updated_at": "2026-05-18T16:28:54Z",
       "language": "Shell",
       "archived": false
     },
@@ -9916,7 +9927,7 @@
       "url": "https://github.com/YunoHost-Apps/virtualtabletop_ynh",
       "stars": 3,
       "forks": 0,
-      "updated_at": "2026-05-01T19:15:23Z",
+      "updated_at": "2026-05-18T15:25:12Z",
       "language": "Shell",
       "archived": false
     },

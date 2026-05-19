@@ -1,19 +1,19 @@
 {
-  "timestamp": "2026-05-18T10:13:39.932Z",
+  "timestamp": "2026-05-19T09:54:36.593Z",
   "script": "run-all.js",
   "note": "Summary of all data fetching script executions",
   "data": {
-    "execution_time": "2026-05-18T10:13:39.932Z",
+    "execution_time": "2026-05-19T09:54:36.593Z",
     "total_scripts": 6,
     "successful": 6,
     "failed": 0,
-    "total_duration_ms": 15133,
+    "total_duration_ms": 19629,
     "continue_on_error": true,
     "results": [
       {
         "name": "CapRover UI Translations",
         "success": true,
-        "duration": 237,
+        "duration": 199,
         "result": [
           "ar-EG",
           "de-DE",
@@ -34,7 +34,7 @@
       {
         "name": "CasaOS UI Translations",
         "success": true,
-        "duration": 104,
+        "duration": 138,
         "result": [
           "ca_ES",
           "cs_CZ",
@@ -69,9 +69,9 @@
       {
         "name": "YunoHost Apps",
         "success": true,
-        "duration": 13292,
+        "duration": 17547,
         "result": {
-          "count": 984,
+          "count": 985,
           "apps": [
             {
               "id": "13ft_ynh",
@@ -508,7 +508,7 @@
               "description": "Audiobookshelf package for YunoHost",
               "url": "https://github.com/YunoHost-Apps/audiobookshelf_ynh",
               "stars": 7,
-              "forks": 5,
+              "forks": 6,
               "updated_at": "2026-05-18T05:12:33Z",
               "language": "Shell",
               "archived": false
@@ -1488,7 +1488,7 @@
               "url": "https://github.com/YunoHost-Apps/cryptroot-unlock_ynh",
               "stars": 3,
               "forks": 0,
-              "updated_at": "2026-03-31T03:14:10Z",
+              "updated_at": "2026-05-18T11:37:00Z",
               "language": "Shell",
               "archived": false
             },
@@ -2643,7 +2643,7 @@
               "url": "https://github.com/YunoHost-Apps/filegator_ynh",
               "stars": 0,
               "forks": 3,
-              "updated_at": "2026-05-15T13:19:37Z",
+              "updated_at": "2026-05-18T21:28:12Z",
               "language": "Shell",
               "archived": false
             },
@@ -4584,6 +4584,17 @@
               "archived": false
             },
             {
+              "id": "koffan_ynh",
+              "name": "koffan",
+              "description": "Koffan package for YunoHost",
+              "url": "https://github.com/YunoHost-Apps/koffan_ynh",
+              "stars": 0,
+              "forks": 0,
+              "updated_at": "2026-05-18T20:01:44Z",
+              "language": "Shell",
+              "archived": false
+            },
+            {
               "id": "komga_ynh",
               "name": "komga",
               "description": "Komga package for YunoHost",
@@ -6427,7 +6438,7 @@
               "url": "https://github.com/YunoHost-Apps/ojs_ynh",
               "stars": 2,
               "forks": 2,
-              "updated_at": "2026-03-10T07:09:35Z",
+              "updated_at": "2026-05-18T17:26:48Z",
               "language": "PHP",
               "archived": false
             },
@@ -9375,7 +9386,7 @@
               "url": "https://github.com/YunoHost-Apps/terraforming-mars_ynh",
               "stars": 2,
               "forks": 2,
-              "updated_at": "2026-05-11T05:54:28Z",
+              "updated_at": "2026-05-18T16:28:54Z",
               "language": "Shell",
               "archived": false
             },
@@ -9969,7 +9980,7 @@
               "url": "https://github.com/YunoHost-Apps/virtualtabletop_ynh",
               "stars": 3,
               "forks": 0,
-              "updated_at": "2026-05-01T19:15:23Z",
+              "updated_at": "2026-05-18T15:25:12Z",
               "language": "Shell",
               "archived": false
             },
@@ -10930,7 +10941,7 @@
       {
         "name": "YunoHost UI Translations",
         "success": true,
-        "duration": 1085,
+        "duration": 1316,
         "result": [
           {
             "language": "Basque",
@@ -11337,7 +11348,7 @@
       {
         "name": "Zimaboard Shipping Areas",
         "success": true,
-        "duration": 324,
+        "duration": 338,
         "result": [
           "Argentina",
           "Australia",
