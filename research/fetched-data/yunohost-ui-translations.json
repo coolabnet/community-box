@@ -1,12 +1,12 @@
 {
-  "timestamp": "2026-05-22T09:36:47.421Z",
+  "timestamp": "2026-05-23T08:25:09.603Z",
   "script": "scripts.test.js",
   "source": "YunoHost Translation Platform",
   "url": "https://translate.yunohost.org/",
   "api_url": "https://translate.yunohost.org/api/translations/?format=json",
   "total_languages": 50,
-  "fully_translated": 18,
-  "partially_translated": 29,
+  "fully_translated": 19,
+  "partially_translated": 28,
   "not_started": 3,
   "data": [
     {
@@ -16,6 +16,14 @@
       "translated_words": 11068,
       "total_words": 11068,
       "last_change": "2026-05-21T23:39:28.485564Z"
+    },
+    {
+      "language": "Russian",
+      "language_code": "ru",
+      "translated_percent": 100,
+      "translated_words": 11068,
+      "total_words": 11068,
+      "last_change": "2026-05-22T21:52:25.662406Z"
     },
     {
       "language": "Catalan",
@@ -160,14 +168,6 @@
       "translated_words": 10996,
       "total_words": 11068,
       "last_change": "2026-05-21T00:42:28.578586Z"
-    },
-    {
-      "language": "Russian",
-      "language_code": "ru",
-      "translated_percent": 99.5,
-      "translated_words": 10996,
-      "total_words": 11068,
-      "last_change": "2026-05-21T00:42:42.213267Z"
     },
     {
       "language": "Catalan",
