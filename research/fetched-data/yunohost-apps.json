@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-05-27T10:02:16.671Z",
+  "timestamp": "2026-05-28T10:11:32.674Z",
   "script": "scripts.test.js",
   "source": "YunoHost-Apps GitHub Organization",
   "url": "https://github.com/YunoHost-Apps",
@@ -366,9 +366,9 @@
       "name": "appflowy",
       "description": "",
       "url": "https://github.com/YunoHost-Apps/appflowy_ynh",
-      "stars": 4,
-      "forks": 5,
-      "updated_at": "2026-01-27T20:34:24Z",
+      "stars": 5,
+      "forks": 6,
+      "updated_at": "2026-05-28T06:25:44Z",
       "language": "Shell",
       "archived": false
     },
@@ -2137,9 +2137,9 @@
       "name": "easyappointments",
       "description": "Easy!Appointments package for YunoHost",
       "url": "https://github.com/YunoHost-Apps/easyappointments_ynh",
-      "stars": 6,
+      "stars": 7,
       "forks": 2,
-      "updated_at": "2026-03-02T21:12:49Z",
+      "updated_at": "2026-05-27T22:31:41Z",
       "language": "Shell",
       "archived": false
     },
@@ -2854,7 +2854,7 @@
       "url": "https://github.com/YunoHost-Apps/forte_ynh",
       "stars": 1,
       "forks": 1,
-      "updated_at": "2026-05-25T11:09:35Z",
+      "updated_at": "2026-05-28T04:51:17Z",
       "language": "Shell",
       "archived": false
     },
@@ -4042,7 +4042,7 @@
       "url": "https://github.com/YunoHost-Apps/influxdb_v2_ynh",
       "stars": 4,
       "forks": 3,
-      "updated_at": "2026-04-16T18:30:59Z",
+      "updated_at": "2026-05-28T07:56:40Z",
       "language": "Shell",
       "archived": false
     },
@@ -4317,7 +4317,7 @@
       "url": "https://github.com/YunoHost-Apps/journiv_ynh",
       "stars": 1,
       "forks": 1,
-      "updated_at": "2026-04-17T18:42:57Z",
+      "updated_at": "2026-05-27T22:25:56Z",
       "language": "Shell",
       "archived": false
     },
@@ -4889,7 +4889,7 @@
       "url": "https://github.com/YunoHost-Apps/limesurvey_ynh",
       "stars": 6,
       "forks": 13,
-      "updated_at": "2026-05-22T17:44:05Z",
+      "updated_at": "2026-05-27T12:33:18Z",
       "language": "Shell",
       "archived": false
     },
@@ -5714,7 +5714,7 @@
       "url": "https://github.com/YunoHost-Apps/misskey_ynh",
       "stars": 29,
       "forks": 15,
-      "updated_at": "2026-05-08T12:01:01Z",
+      "updated_at": "2026-05-27T12:37:33Z",
       "language": "Shell",
       "archived": false
     },
@@ -6352,7 +6352,7 @@
       "url": "https://github.com/YunoHost-Apps/octoprint_ynh",
       "stars": 5,
       "forks": 3,
-      "updated_at": "2026-05-24T05:21:15Z",
+      "updated_at": "2026-05-27T11:04:31Z",
       "language": "Shell",
       "archived": false
     },
@@ -6825,7 +6825,7 @@
       "url": "https://github.com/YunoHost-Apps/papra_ynh",
       "stars": 2,
       "forks": 1,
-      "updated_at": "2026-04-16T19:10:42Z",
+      "updated_at": "2026-05-27T22:52:16Z",
       "language": "Shell",
       "archived": false
     },
@@ -7220,8 +7220,8 @@
       "description": "piped package for YunoHost",
       "url": "https://github.com/YunoHost-Apps/piped_ynh",
       "stars": 3,
-      "forks": 3,
-      "updated_at": "2026-05-18T09:42:17Z",
+      "forks": 4,
+      "updated_at": "2026-05-27T19:43:33Z",
       "language": "Shell",
       "archived": false
     },
@@ -8849,7 +8849,7 @@
       "url": "https://github.com/YunoHost-Apps/sparkyfitness_ynh",
       "stars": 0,
       "forks": 2,
-      "updated_at": "2026-05-18T05:15:49Z",
+      "updated_at": "2026-05-28T06:01:04Z",
       "language": "Shell",
       "archived": false
     },
