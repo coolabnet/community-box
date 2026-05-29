@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-05-28T10:11:32.674Z",
+  "timestamp": "2026-05-29T10:01:05.928Z",
   "script": "scripts.test.js",
   "source": "YunoHost-Apps GitHub Organization",
   "url": "https://github.com/YunoHost-Apps",
@@ -456,7 +456,7 @@
       "url": "https://github.com/YunoHost-Apps/audiobookshelf_ynh",
       "stars": 7,
       "forks": 6,
-      "updated_at": "2026-05-18T05:12:33Z",
+      "updated_at": "2026-05-29T06:02:22Z",
       "language": "Shell",
       "archived": false
     },
@@ -3062,7 +3062,7 @@
       "description": "Galette package for YunoHost",
       "url": "https://github.com/YunoHost-Apps/galette_ynh",
       "stars": 7,
-      "forks": 8,
+      "forks": 9,
       "updated_at": "2026-01-30T07:10:00Z",
       "language": "Shell",
       "archived": false
@@ -9211,8 +9211,8 @@
       "description": "Syncthing package for YunoHost",
       "url": "https://github.com/YunoHost-Apps/syncthing_ynh",
       "stars": 25,
-      "forks": 7,
-      "updated_at": "2026-05-13T15:33:37Z",
+      "forks": 8,
+      "updated_at": "2026-05-28T12:57:08Z",
       "language": "Shell",
       "archived": false
     },
@@ -10222,9 +10222,9 @@
       "name": "wiki-go",
       "description": "Wiki-go packafe for YunoHost",
       "url": "https://github.com/YunoHost-Apps/wiki-go_ynh",
-      "stars": 1,
+      "stars": 2,
       "forks": 1,
-      "updated_at": "2026-05-15T07:32:26Z",
+      "updated_at": "2026-05-28T21:58:08Z",
       "language": "Shell",
       "archived": false
     },
@@ -10455,7 +10455,7 @@
       "url": "https://github.com/YunoHost-Apps/yamtrack_ynh",
       "stars": 0,
       "forks": 0,
-      "updated_at": "2026-04-24T18:54:13Z",
+      "updated_at": "2026-05-29T09:34:40Z",
       "language": "Shell",
       "archived": false
     },

@@ -1,19 +1,19 @@
 {
-  "timestamp": "2026-05-28T10:11:32.154Z",
+  "timestamp": "2026-05-29T10:01:05.411Z",
   "script": "run-all.js",
   "note": "Summary of all data fetching script executions",
   "data": {
-    "execution_time": "2026-05-28T10:11:32.154Z",
+    "execution_time": "2026-05-29T10:01:05.411Z",
     "total_scripts": 6,
     "successful": 6,
     "failed": 0,
-    "total_duration_ms": 19518,
+    "total_duration_ms": 19740,
     "continue_on_error": true,
     "results": [
       {
         "name": "CapRover UI Translations",
         "success": true,
-        "duration": 156,
+        "duration": 153,
         "result": [
           "ar-EG",
           "de-DE",
@@ -34,7 +34,7 @@
       {
         "name": "CasaOS UI Translations",
         "success": true,
-        "duration": 186,
+        "duration": 91,
         "result": [
           "ca_ES",
           "cs_CZ",
@@ -69,7 +69,7 @@
       {
         "name": "YunoHost Apps",
         "success": true,
-        "duration": 17319,
+        "duration": 17566,
         "result": {
           "count": 985,
           "apps": [
@@ -509,7 +509,7 @@
               "url": "https://github.com/YunoHost-Apps/audiobookshelf_ynh",
               "stars": 7,
               "forks": 6,
-              "updated_at": "2026-05-18T05:12:33Z",
+              "updated_at": "2026-05-29T06:02:22Z",
               "language": "Shell",
               "archived": false
             },
@@ -3115,7 +3115,7 @@
               "description": "Galette package for YunoHost",
               "url": "https://github.com/YunoHost-Apps/galette_ynh",
               "stars": 7,
-              "forks": 8,
+              "forks": 9,
               "updated_at": "2026-01-30T07:10:00Z",
               "language": "Shell",
               "archived": false
@@ -9264,8 +9264,8 @@
               "description": "Syncthing package for YunoHost",
               "url": "https://github.com/YunoHost-Apps/syncthing_ynh",
               "stars": 25,
-              "forks": 7,
-              "updated_at": "2026-05-13T15:33:37Z",
+              "forks": 8,
+              "updated_at": "2026-05-28T12:57:08Z",
               "language": "Shell",
               "archived": false
             },
@@ -10275,9 +10275,9 @@
               "name": "wiki-go",
               "description": "Wiki-go packafe for YunoHost",
               "url": "https://github.com/YunoHost-Apps/wiki-go_ynh",
-              "stars": 1,
+              "stars": 2,
               "forks": 1,
-              "updated_at": "2026-05-15T07:32:26Z",
+              "updated_at": "2026-05-28T21:58:08Z",
               "language": "Shell",
               "archived": false
             },
@@ -10508,7 +10508,7 @@
               "url": "https://github.com/YunoHost-Apps/yamtrack_ynh",
               "stars": 0,
               "forks": 0,
-              "updated_at": "2026-04-24T18:54:13Z",
+              "updated_at": "2026-05-29T09:34:40Z",
               "language": "Shell",
               "archived": false
             },
@@ -10927,7 +10927,7 @@
       {
         "name": "YunoHost Docs Translations",
         "success": true,
-        "duration": 147,
+        "duration": 68,
         "result": [
           "de",
           "docs",
@@ -10941,7 +10941,7 @@
       {
         "name": "YunoHost UI Translations",
         "success": true,
-        "duration": 1415,
+        "duration": 1509,
         "result": [
           {
             "language": "French",
@@ -11348,7 +11348,7 @@
       {
         "name": "Zimaboard Shipping Areas",
         "success": true,
-        "duration": 295,
+        "duration": 353,
         "result": [
           "Argentina",
           "Australia",
