@@ -1,19 +1,19 @@
 {
-  "timestamp": "2026-05-31T08:52:22.548Z",
+  "timestamp": "2026-06-01T11:44:25.945Z",
   "script": "run-all.js",
   "note": "Summary of all data fetching script executions",
   "data": {
-    "execution_time": "2026-05-31T08:52:22.548Z",
+    "execution_time": "2026-06-01T11:44:25.944Z",
     "total_scripts": 6,
     "successful": 6,
     "failed": 0,
-    "total_duration_ms": 17944,
+    "total_duration_ms": 17050,
     "continue_on_error": true,
     "results": [
       {
         "name": "CapRover UI Translations",
         "success": true,
-        "duration": 176,
+        "duration": 272,
         "result": [
           "ar-EG",
           "de-DE",
@@ -34,7 +34,7 @@
       {
         "name": "CasaOS UI Translations",
         "success": true,
-        "duration": 106,
+        "duration": 201,
         "result": [
           "ca_ES",
           "cs_CZ",
@@ -69,7 +69,7 @@
       {
         "name": "YunoHost Apps",
         "success": true,
-        "duration": 16067,
+        "duration": 14030,
         "result": {
           "count": 985,
           "apps": [
@@ -1477,7 +1477,7 @@
               "url": "https://github.com/YunoHost-Apps/cryptpad_ynh",
               "stars": 31,
               "forks": 22,
-              "updated_at": "2026-05-13T17:45:30Z",
+              "updated_at": "2026-05-31T17:35:34Z",
               "language": "JavaScript",
               "archived": false
             },
@@ -2247,7 +2247,7 @@
               "url": "https://github.com/YunoHost-Apps/element_ynh",
               "stars": 23,
               "forks": 9,
-              "updated_at": "2026-05-13T10:32:33Z",
+              "updated_at": "2026-05-31T13:17:22Z",
               "language": "Shell",
               "archived": false
             },
@@ -2729,9 +2729,9 @@
               "name": "fittrackee",
               "description": "FitTrackee package for YunoHost 🚴",
               "url": "https://github.com/YunoHost-Apps/fittrackee_ynh",
-              "stars": 6,
+              "stars": 7,
               "forks": 2,
-              "updated_at": "2026-05-25T09:29:20Z",
+              "updated_at": "2026-06-01T08:52:51Z",
               "language": "Shell",
               "archived": false
             },
@@ -4060,9 +4060,9 @@
               "name": "incus",
               "description": "Powerful system container and virtual machine manager ",
               "url": "https://github.com/YunoHost-Apps/incus_ynh",
-              "stars": 3,
+              "stars": 4,
               "forks": 1,
-              "updated_at": "2025-11-18T11:35:15Z",
+              "updated_at": "2026-05-31T10:38:01Z",
               "language": "Shell",
               "archived": false
             },
@@ -4962,9 +4962,9 @@
               "name": "linkace",
               "description": "A self-hosted archive to collect links of your favorite websites.",
               "url": "https://github.com/YunoHost-Apps/linkace_ynh",
-              "stars": 0,
+              "stars": 1,
               "forks": 0,
-              "updated_at": "2026-05-29T16:19:28Z",
+              "updated_at": "2026-06-01T07:32:09Z",
               "language": "Shell",
               "archived": false
             },
@@ -5470,7 +5470,7 @@
               "url": "https://github.com/YunoHost-Apps/may_ynh",
               "stars": 1,
               "forks": 0,
-              "updated_at": "2026-05-22T14:33:16Z",
+              "updated_at": "2026-06-01T06:05:10Z",
               "language": "Shell",
               "archived": false
             },
@@ -5578,9 +5578,9 @@
               "name": "memos",
               "description": "Memos package for YunoHost",
               "url": "https://github.com/YunoHost-Apps/memos_ynh",
-              "stars": 2,
+              "stars": 3,
               "forks": 2,
-              "updated_at": "2026-05-30T09:28:34Z",
+              "updated_at": "2026-06-01T07:33:58Z",
               "language": "Shell",
               "archived": false
             },
@@ -6832,9 +6832,9 @@
               "name": "pairdrop",
               "description": "PairDrop package for YunoHost",
               "url": "https://github.com/YunoHost-Apps/pairdrop_ynh",
-              "stars": 2,
+              "stars": 3,
               "forks": 1,
-              "updated_at": "2025-10-25T11:47:27Z",
+              "updated_at": "2026-06-01T07:38:03Z",
               "language": "Shell",
               "archived": false
             },
@@ -6900,7 +6900,7 @@
               "url": "https://github.com/YunoHost-Apps/paymenter_ynh",
               "stars": 0,
               "forks": 1,
-              "updated_at": "2026-05-24T16:48:55Z",
+              "updated_at": "2026-05-31T20:25:04Z",
               "language": "Shell",
               "archived": false
             },
@@ -7274,7 +7274,7 @@
               "url": "https://github.com/YunoHost-Apps/piped_ynh",
               "stars": 3,
               "forks": 4,
-              "updated_at": "2026-05-27T19:43:33Z",
+              "updated_at": "2026-06-01T07:53:02Z",
               "language": "Shell",
               "archived": false
             },
@@ -8418,7 +8418,7 @@
               "url": "https://github.com/YunoHost-Apps/searxng_ynh",
               "stars": 14,
               "forks": 4,
-              "updated_at": "2026-05-25T05:30:30Z",
+              "updated_at": "2026-06-01T06:01:28Z",
               "language": "Shell",
               "archived": false
             },
@@ -8902,7 +8902,7 @@
               "url": "https://github.com/YunoHost-Apps/sparkyfitness_ynh",
               "stars": 0,
               "forks": 2,
-              "updated_at": "2026-05-28T06:01:04Z",
+              "updated_at": "2026-06-01T06:16:18Z",
               "language": "Shell",
               "archived": false
             },
@@ -9386,7 +9386,7 @@
               "url": "https://github.com/YunoHost-Apps/terraforming-mars_ynh",
               "stars": 2,
               "forks": 2,
-              "updated_at": "2026-05-25T04:35:31Z",
+              "updated_at": "2026-06-01T06:15:32Z",
               "language": "Shell",
               "archived": false
             },
@@ -9912,9 +9912,9 @@
               "name": "vaultwarden",
               "description": "Open source password management solutions for YunoHost",
               "url": "https://github.com/YunoHost-Apps/vaultwarden_ynh",
-              "stars": 62,
+              "stars": 63,
               "forks": 23,
-              "updated_at": "2026-05-30T10:03:51Z",
+              "updated_at": "2026-05-31T14:40:40Z",
               "language": "Shell",
               "archived": false
             },
@@ -9958,7 +9958,7 @@
               "url": "https://github.com/YunoHost-Apps/vikunja_ynh",
               "stars": 10,
               "forks": 9,
-              "updated_at": "2026-04-17T07:34:06Z",
+              "updated_at": "2026-05-31T15:53:59Z",
               "language": "Shell",
               "archived": false
             },
@@ -10486,7 +10486,7 @@
               "url": "https://github.com/YunoHost-Apps/xwiki_ynh",
               "stars": 0,
               "forks": 1,
-              "updated_at": "2026-01-19T15:56:12Z",
+              "updated_at": "2026-05-31T09:45:41Z",
               "language": "Shell",
               "archived": false
             },
@@ -10927,7 +10927,7 @@
       {
         "name": "YunoHost Docs Translations",
         "success": true,
-        "duration": 79,
+        "duration": 194,
         "result": [
           "de",
           "docs",
@@ -10941,7 +10941,7 @@
       {
         "name": "YunoHost UI Translations",
         "success": true,
-        "duration": 1225,
+        "duration": 2022,
         "result": [
           {
             "language": "French",
@@ -11189,7 +11189,7 @@
             "translated_percent": 78.2,
             "translated_words": 7783,
             "total_words": 11068,
-            "last_change": "2026-05-21T00:42:26.238856Z"
+            "last_change": "2026-05-31T12:40:09.694490Z"
           },
           {
             "language": "Arabic",
@@ -11348,7 +11348,7 @@
       {
         "name": "Zimaboard Shipping Areas",
         "success": true,
-        "duration": 291,
+        "duration": 331,
         "result": [
           "Argentina",
           "Australia",
