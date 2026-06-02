@@ -36,6 +36,7 @@ interface QuestionnaireContextType {
   setAnswer: (questionId: string, answer: unknown) => void;
   goBack: () => void;
   resetSurvey: () => void;
+  setTotalSteps: (total: number) => void;
 }
 
 const QuestionnaireContext = createContext<QuestionnaireContextType | undefined>(undefined);
@@ -45,9 +46,7 @@ export function QuestionnaireProvider({ children }: { children: React.ReactNode 
   const [currentStep, setCurrentStep] = useState(initialState.currentStep);
   const [answers, setAnswers] = useState<Record<string, unknown>>(initialState.answers);
 
-  // NOTE: Must match the number of question steps defined in Questionnaire.tsx.
-  // If you add or remove a step in the questionnaire, update this value.
-  const totalSteps = 10;
+  const [totalSteps, setTotalSteps] = useState(10);
 
   const skipUrlUpdateRef = useRef(false);
 
@@ -103,6 +102,7 @@ export function QuestionnaireProvider({ children }: { children: React.ReactNode 
         setAnswer,
         goBack,
         resetSurvey,
+        setTotalSteps,
       }}
     >
       {children}

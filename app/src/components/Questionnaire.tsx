@@ -1,4 +1,5 @@
 
+import { useEffect } from 'react';
 import { useQuestionnaire } from '@/context/QuestionnaireContext';
 import ProgressBar from './ProgressBar';
 import QuestionCard from './QuestionCard';
@@ -12,10 +13,8 @@ import type { PriorityAllocation, UsageSelectionValues, UserAnswers } from '@/ty
 
 const Questionnaire = () => {
   const { t } = useTranslation();
-  const { currentStep, setCurrentStep, answers, setAnswer, goBack, resetSurvey } = useQuestionnaire();
+  const { currentStep, setCurrentStep, answers, setAnswer, goBack, resetSurvey, setTotalSteps } = useQuestionnaire();
 
-  // NOTE: The number of steps here must match `totalSteps` in QuestionnaireContext.tsx.
-  // If you add or remove a step, update `totalSteps` there.
   const questions = [
     {
       id: 'electricity',
@@ -104,6 +103,11 @@ const Questionnaire = () => {
     },
   ];
 
+  // Keep totalSteps in sync with the questions array
+  useEffect(() => {
+    setTotalSteps(questions.length);
+  }, [questions.length, setTotalSteps]);
+
   const handleNext = () => {
     if (currentStep < questions.length - 1) {
       setCurrentStep(currentStep + 1);
@@ -156,7 +160,7 @@ const Questionnaire = () => {
       );
     } else if (currentQuestion.id === 'results') {
       return (
-        <ErrorBoundary resetLabel={t('errors.tryAgain')}>
+        <ErrorBoundary resetLabel={t('errors.tryAgain')} onReset={resetSurvey}>
           <RecommendationResults
             key="recommendation-results"
             answers={answers as UserAnswers}

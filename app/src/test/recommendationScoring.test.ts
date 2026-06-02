@@ -1,5 +1,5 @@
 import { describe, it, expect } from "vitest";
-import { normalizeUserAnswers, calculateDeviceScores, devices } from "@/components/RecommendationResults";
+import { normalizeUserAnswers, calculateDeviceScores, devices } from "@/utils/deviceScoring";
 import type { UserAnswers, DeviceScore } from "@/types/questionnaire";
 
 describe("normalizeUserAnswers", () => {

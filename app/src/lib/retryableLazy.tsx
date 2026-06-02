@@ -74,7 +74,7 @@ export function retryableLazy<T extends ComponentType<Record<string, unknown>>>(
       <ErrorBoundary
         onRetry={() => window.location.reload()}
         onError={handleError}
-        resetLabel="Reload Page"
+        resetLabel="Retry Load"
       >
         <Suspense fallback={options?.fallback ?? <div className="flex items-center justify-center min-h-screen"><div className="h-8 w-8 animate-spin rounded-full border-4 border-primary border-t-transparent" /></div>}>
           <LazyComponent />
