@@ -303,7 +303,8 @@
     "returnHome": "Volver a Inicio"
   },
   "errors": {
-    "contextError": "useQuestionnaire debe usarse dentro de un QuestionnaireProvider"
+    "contextError": "useQuestionnaire debe usarse dentro de un QuestionnaireProvider",
+    "tryAgain": "Intentar de Nuevo"
   },
   "language": {
     "select": "Idioma",
