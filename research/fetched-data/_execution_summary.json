@@ -1,19 +1,19 @@
 {
-  "timestamp": "2026-06-03T01:27:56.199Z",
+  "timestamp": "2026-06-03T11:08:13.535Z",
   "script": "run-all.js",
   "note": "Summary of all data fetching script executions",
   "data": {
-    "execution_time": "2026-06-03T01:27:56.199Z",
+    "execution_time": "2026-06-03T11:08:13.535Z",
     "total_scripts": 6,
     "successful": 6,
     "failed": 0,
-    "total_duration_ms": 17650,
+    "total_duration_ms": 19444,
     "continue_on_error": true,
     "results": [
       {
         "name": "CapRover UI Translations",
         "success": true,
-        "duration": 125,
+        "duration": 161,
         "result": [
           "ar-EG",
           "de-DE",
@@ -34,7 +34,7 @@
       {
         "name": "CasaOS UI Translations",
         "success": true,
-        "duration": 79,
+        "duration": 101,
         "result": [
           "ca_ES",
           "cs_CZ",
@@ -69,7 +69,7 @@
       {
         "name": "YunoHost Apps",
         "success": true,
-        "duration": 15771,
+        "duration": 17348,
         "result": {
           "count": 985,
           "apps": [
@@ -1398,9 +1398,9 @@
               "name": "coquelicot",
               "description": "[Not working] Coquelicot package for YunoHost. Coquelicot is a one-click file sharing web application with a focus on protecting users privacy.",
               "url": "https://github.com/YunoHost-Apps/coquelicot_ynh",
-              "stars": 2,
+              "stars": 1,
               "forks": 0,
-              "updated_at": "2024-05-15T17:50:33Z",
+              "updated_at": "2026-06-03T05:36:12Z",
               "language": "Shell",
               "archived": true
             },
@@ -4304,7 +4304,7 @@
               "url": "https://github.com/YunoHost-Apps/jellyseerr_ynh",
               "stars": 1,
               "forks": 5,
-              "updated_at": "2026-04-16T05:42:22Z",
+              "updated_at": "2026-06-03T06:50:09Z",
               "language": "Shell",
               "archived": false
             },
@@ -5294,7 +5294,7 @@
               "url": "https://github.com/YunoHost-Apps/mastodon_ynh",
               "stars": 89,
               "forks": 45,
-              "updated_at": "2026-05-29T16:26:58Z",
+              "updated_at": "2026-06-03T08:30:04Z",
               "language": "Shell",
               "archived": false
             },
@@ -5899,7 +5899,7 @@
               "url": "https://github.com/YunoHost-Apps/monitorix_ynh",
               "stars": 4,
               "forks": 9,
-              "updated_at": "2025-12-20T13:49:02Z",
+              "updated_at": "2026-06-03T06:24:26Z",
               "language": "Shell",
               "archived": false
             },
@@ -6196,7 +6196,7 @@
               "url": "https://github.com/YunoHost-Apps/n8n_ynh",
               "stars": 19,
               "forks": 22,
-              "updated_at": "2026-06-02T22:35:42Z",
+              "updated_at": "2026-06-03T11:00:08Z",
               "language": "Shell",
               "archived": false
             },
@@ -6460,7 +6460,7 @@
               "url": "https://github.com/YunoHost-Apps/ollama_ynh",
               "stars": 4,
               "forks": 3,
-              "updated_at": "2026-05-19T12:58:04Z",
+              "updated_at": "2026-06-03T06:48:58Z",
               "language": "Shell",
               "archived": false
             },
@@ -6977,7 +6977,7 @@
               "url": "https://github.com/YunoHost-Apps/penpot_ynh",
               "stars": 9,
               "forks": 5,
-              "updated_at": "2026-05-15T07:42:29Z",
+              "updated_at": "2026-06-03T06:59:09Z",
               "language": "Shell",
               "archived": false
             },
@@ -7692,7 +7692,7 @@
               "url": "https://github.com/YunoHost-Apps/psitransfer_ynh",
               "stars": 2,
               "forks": 3,
-              "updated_at": "2026-04-15T07:01:41Z",
+              "updated_at": "2026-06-03T07:21:09Z",
               "language": "Shell",
               "archived": false
             },
@@ -8108,9 +8108,9 @@
               "name": "reverseproxy",
               "description": "WIP fork of redirect_ynh",
               "url": "https://github.com/YunoHost-Apps/reverseproxy_ynh",
-              "stars": 4,
+              "stars": 5,
               "forks": 8,
-              "updated_at": "2025-08-30T17:11:53Z",
+              "updated_at": "2026-06-03T09:29:53Z",
               "language": "Shell",
               "archived": false
             },
@@ -8482,9 +8482,9 @@
               "name": "shaarli",
               "description": "Shaarli package for YunoHost",
               "url": "https://github.com/YunoHost-Apps/shaarli_ynh",
-              "stars": 21,
+              "stars": 20,
               "forks": 15,
-              "updated_at": "2026-06-02T14:42:37Z",
+              "updated_at": "2026-06-03T05:36:26Z",
               "language": "Shell",
               "archived": false
             },
@@ -9263,9 +9263,9 @@
               "name": "syncthing",
               "description": "Syncthing package for YunoHost",
               "url": "https://github.com/YunoHost-Apps/syncthing_ynh",
-              "stars": 25,
+              "stars": 24,
               "forks": 8,
-              "updated_at": "2026-05-28T12:57:08Z",
+              "updated_at": "2026-06-03T05:36:24Z",
               "language": "Shell",
               "archived": false
             },
@@ -10927,7 +10927,7 @@
       {
         "name": "YunoHost Docs Translations",
         "success": true,
-        "duration": 64,
+        "duration": 176,
         "result": [
           "de",
           "docs",
@@ -10941,7 +10941,7 @@
       {
         "name": "YunoHost UI Translations",
         "success": true,
-        "duration": 1301,
+        "duration": 1265,
         "result": [
           {
             "language": "French",
@@ -11348,7 +11348,7 @@
       {
         "name": "Zimaboard Shipping Areas",
         "success": true,
-        "duration": 310,
+        "duration": 393,
         "result": [
           "Argentina",
           "Australia",
