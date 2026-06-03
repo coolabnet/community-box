@@ -1,17 +1,19 @@
 
+import { useEffect } from 'react';
 import { useQuestionnaire } from '@/context/QuestionnaireContext';
 import ProgressBar from './ProgressBar';
 import QuestionCard from './QuestionCard';
 import PointsAllocation from './PointsAllocation';
 import UsageSelection from './UsageSelection';
 import RecommendationResults from './RecommendationResults';
+import ErrorBoundary from './ErrorBoundary';
 import { AnimatePresence } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
 import type { PriorityAllocation, UsageSelectionValues, UserAnswers } from '@/types/questionnaire';
 
 const Questionnaire = () => {
   const { t } = useTranslation();
-  const { currentStep, setCurrentStep, answers, setAnswer, goBack, resetSurvey } = useQuestionnaire();
+  const { currentStep, setCurrentStep, answers, setAnswer, goBack, resetSurvey, setTotalSteps } = useQuestionnaire();
 
   const questions = [
     {
@@ -101,6 +103,11 @@ const Questionnaire = () => {
     },
   ];
 
+  // Keep totalSteps in sync with the questions array
+  useEffect(() => {
+    setTotalSteps(questions.length);
+  }, [questions.length, setTotalSteps]);
+
   const handleNext = () => {
     if (currentStep < questions.length - 1) {
       setCurrentStep(currentStep + 1);
@@ -153,11 +160,13 @@ const Questionnaire = () => {
       );
     } else if (currentQuestion.id === 'results') {
       return (
-        <RecommendationResults
-          key="recommendation-results"
-          answers={answers as UserAnswers}
-          onStartOver={handleStartOver}
-        />
+        <ErrorBoundary resetLabel={t('errors.tryAgain')} onReset={resetSurvey}>
+          <RecommendationResults
+            key="recommendation-results"
+            answers={answers as UserAnswers}
+            onStartOver={handleStartOver}
+          />
+        </ErrorBoundary>
       );
     } else {
       return (

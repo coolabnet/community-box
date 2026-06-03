@@ -1,6 +1,6 @@
 /* eslint-disable react-refresh/only-export-components */
 
-import React, { createContext, useContext, useEffect, useMemo, useState } from 'react';
+import React, { createContext, useContext, useEffect, useMemo, useRef, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import {
   type SurveyState,
@@ -36,6 +36,7 @@ interface QuestionnaireContextType {
   setAnswer: (questionId: string, answer: unknown) => void;
   goBack: () => void;
   resetSurvey: () => void;
+  setTotalSteps: (total: number) => void;
 }
 
 const QuestionnaireContext = createContext<QuestionnaireContextType | undefined>(undefined);
@@ -45,10 +46,16 @@ export function QuestionnaireProvider({ children }: { children: React.ReactNode 
   const [currentStep, setCurrentStep] = useState(initialState.currentStep);
   const [answers, setAnswers] = useState<Record<string, unknown>>(initialState.answers);
 
-  const totalSteps = 10; // 6 questions + points + usage + main use + results
+  const [totalSteps, setTotalSteps] = useState(10);
+
+  const skipUrlUpdateRef = useRef(false);
 
   // Save state to localStorage and update URL whenever state changes
   useEffect(() => {
+    if (skipUrlUpdateRef.current) {
+      skipUrlUpdateRef.current = false;
+      return;
+    }
     const state: SurveyState = {
       currentStep,
       answers
@@ -70,6 +77,8 @@ export function QuestionnaireProvider({ children }: { children: React.ReactNode 
 
   // Reset the survey state
   const resetSurvey = () => {
+    skipUrlUpdateRef.current = true;
+
     // Clear URL parameters
     window.history.replaceState({}, '', window.location.pathname);
 
@@ -93,6 +102,7 @@ export function QuestionnaireProvider({ children }: { children: React.ReactNode 
         setAnswer,
         goBack,
         resetSurvey,
+        setTotalSteps,
       }}
     >
       {children}

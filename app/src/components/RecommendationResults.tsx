@@ -9,6 +9,7 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from '@/components/ui/dropdown-menu';
+import { tArray } from '@/lib/i18n-helpers';
 import { cn } from '@/lib/utils';
 import {
   Cpu,
@@ -29,7 +30,6 @@ import {
   Mail,
   MessageCircle,
   AlertCircle,
-  Cloud,
   HardDrive,
   Settings,
   Package,
@@ -40,70 +40,15 @@ import { downloadPDF, sharePDF } from '@/utils/pdfGenerator';
 import PDFTemplate from './PDFTemplate';
 import { copyUrlToClipboard, shareUrl } from '@/utils/statePersistence';
 import { getRecommendations } from '@/utils/recommendations';
+import { normalizeUserAnswers, calculateDeviceScores } from '@/utils/deviceScoring';
 import type {
   AttributeKey,
-  DeviceAttributes,
   DeviceKey,
   DeviceScore,
-  PriorityAllocation,
   UserAnswers,
   ServiceSuggestion,
   OSSuggestion,
 } from '@/types/questionnaire';
-
-// Import board images
-import raspberryPiImage from '../assets/pi.png';
-import zimaImage from '../assets/zima.png';
-import nucImage from '../assets/nuc.png';
-import reusedPCImage from '../assets/laptop.jpg'; // Using banner as placeholder for reused PC
-
-// Define the devices with their attributes
-const devices: DeviceAttributes[] = [
-  {
-    key: 'raspberryPi',
-    name: 'Raspberry Pi',
-    energy: 5, // Very energy efficient
-    concurrency: 1, // Poor for multiple users
-    growth: 2, // Limited growth potential
-    reusable: 0, // Not reusable (new hardware)
-    formatEase: 3, // Moderate setup difficulty
-    cost: 5, // Very low cost
-    icon: <img src={raspberryPiImage} alt="Raspberry Pi" className="h-full w-full object-cover" />
-  },
-  {
-    key: 'zimaBoard',
-    name: 'ZimaBoard',
-    energy: 4, // Good energy efficiency
-    concurrency: 3, // Moderate multi-user support
-    growth: 3, // Moderate growth potential
-    reusable: 0, // Not reusable (new hardware)
-    formatEase: 2, // More difficult to set up
-    cost: 3, // Moderate cost
-    icon: <img src={zimaImage} alt="ZimaBoard" className="h-full w-full object-cover" />
-  },
-  {
-    key: 'intelNUC',
-    name: 'Intel NUC',
-    energy: 2, // Higher power consumption
-    concurrency: 5, // Excellent for multiple users
-    growth: 5, // Excellent growth potential
-    reusable: 0, // Not reusable (new hardware)
-    formatEase: 3, // Moderate setup difficulty
-    cost: 1, // High cost
-    icon: <img src={nucImage} alt="Intel NUC" className="h-full w-full object-cover" />
-  },
-  {
-    key: 'reusedPC',
-    name: 'Reused PC',
-    energy: 1, // High power consumption
-    concurrency: 4, // Good for multiple users
-    growth: 4, // Good growth potential
-    reusable: 5, // Excellent reusability (existing hardware)
-    formatEase: 2, // More difficult to set up
-    cost: 4, // Low cost (reused)
-    icon: <img src={reusedPCImage} alt="Recycled laptop" className="h-full w-full object-cover" />
-  }
-];
 
 // Map attribute keys to icons
 const attributeIcons: Record<AttributeKey, ReactNode> = {
@@ -113,149 +58,6 @@ const attributeIcons: Record<AttributeKey, ReactNode> = {
   reusable: <Recycle className="h-5 w-5" />,
   formatEase: <WrenchIcon className="h-5 w-5" />,
   cost: <DollarSign className="h-5 w-5" />
-};
-
-// Function to normalize user answers to the 1-5 scale
-const normalizeUserAnswers = (answers: UserAnswers): Record<AttributeKey, number> => {
-  // Map electricity answer to energy score (1-5)
-  const energyMap: Record<string, number> = {
-    'yes': 5, // Reliable power -> can use any device
-    'sometimes': 3, // Unreliable -> prefer energy efficient
-    'no': 1 // Frequent outages -> need very energy efficient
-  };
-
-  // Map users answer to concurrency score (1-5)
-  const concurrencyMap: Record<string, number> = {
-    '1-2': 1, // Few users -> low concurrency needs
-    '3-5': 3, // Medium users -> moderate concurrency needs
-    '6+': 5 // Many users -> high concurrency needs
-  };
-
-  // Map growth answer to growth score (1-5)
-  const growthMap: Record<string, number> = {
-    'low': 1, // Minimal growth -> low growth needs
-    'medium': 3, // Moderate growth -> moderate growth needs
-    'high': 5 // Rapid growth -> high growth needs
-  };
-
-  // Map reuse answer to reusable score (0 or 5)
-  const reusableMap: Record<string, number> = {
-    'yes': 5, // Has computer for reuse -> high reusability
-    'no': 0 // No computer for reuse -> no reusability
-  };
-
-  // Map format answer to formatEase score (1-5)
-  const formatEaseMap: Record<string, number> = {
-    'yes': 5, // Can format confidently -> high setup ease
-    'maybe': 3, // With guidance -> moderate setup ease
-    'no': 1 // Cannot format -> low setup ease
-  };
-
-  // Map price answer to cost score (1-5)
-  const costMap: Record<string, number> = {
-    'low': 5, // Low budget -> need low cost
-    'medium': 3, // Medium budget -> moderate cost acceptable
-    'high': 1 // High budget -> cost less important
-  };
-
-  return {
-    energy: energyMap[answers.electricity] || 3,
-    concurrency: concurrencyMap[answers.users] || 3,
-    growth: growthMap[answers.growth] || 3,
-    reusable: reusableMap[answers.reuse] || 0,
-    formatEase: formatEaseMap[answers.format] || 3,
-    cost: costMap[answers.price] || 3
-  };
-};
-
-// Function to calculate device scores based on user answers and point allocation
-const calculateDeviceScores = (
-  answers: UserAnswers,
-  normalizedAnswers: Record<AttributeKey, number>
-): DeviceScore[] => {
-  const points: PriorityAllocation = answers.points ?? {};
-
-  // Get point weights from user's point allocation
-  const pointWeights: Record<AttributeKey, number> = {
-    energy: points.easyToUse ?? 0,
-    concurrency: points.lowPower ?? 0,
-    growth: points.language ?? 0,
-    reusable: points.scalable ?? 0,
-    formatEase: points.lowCost ?? 0,
-    cost: points.lowCost ?? 0
-  };
-
-  // Calculate total points allocated
-  const totalPoints = Object.values(pointWeights).reduce((sum, points) => sum + points, 0);
-
-  // Calculate normalized weights (ensure sum is 1.0)
-  const normalizedWeights: Record<AttributeKey, number> = {} as Record<AttributeKey, number>;
-
-  if (totalPoints > 0) {
-    Object.keys(pointWeights).forEach(key => {
-      normalizedWeights[key as AttributeKey] = pointWeights[key as AttributeKey] / totalPoints;
-    });
-  } else {
-    // If no points allocated, use equal weights
-    const equalWeight = 1 / Object.keys(pointWeights).length;
-    Object.keys(pointWeights).forEach(key => {
-      normalizedWeights[key as AttributeKey] = equalWeight;
-    });
-  }
-
-  // Special case: if user has a computer for reuse, heavily weight the reusable attribute
-  if (answers.reuse === 'yes') {
-    normalizedWeights.reusable = 0.4; // 40% weight to reusability
-
-    // Redistribute remaining 60% among other attributes
-    const remainingWeight = 0.6;
-    const otherAttributes = Object.keys(normalizedWeights).filter(key => key !== 'reusable');
-    const weightPerAttribute = remainingWeight / otherAttributes.length;
-
-    otherAttributes.forEach(key => {
-      normalizedWeights[key as AttributeKey] = weightPerAttribute;
-    });
-  }
-
-  // Calculate scores for each device
-  return devices.map(device => {
-    // Calculate weighted score for each attribute
-    let totalScore = 0;
-    const maxPossibleScore = 5; // Maximum score per attribute
-    const strengths: AttributeKey[] = [];
-
-    Object.keys(normalizedAnswers).forEach(key => {
-      const attributeKey = key as AttributeKey;
-      const userValue = normalizedAnswers[attributeKey];
-      const deviceValue = device[attributeKey];
-
-      // Calculate similarity (5 - absolute difference)
-      // Higher similarity means better match
-      const similarity = 5 - Math.abs(userValue - deviceValue);
-
-      // Apply weight to similarity
-      const weightedSimilarity = similarity * normalizedWeights[attributeKey];
-
-      // Add to total score
-      totalScore += weightedSimilarity;
-
-      // If this is a strength (similarity >= 4), add to strengths array
-      if (similarity >= 4) {
-        strengths.push(attributeKey);
-      }
-    });
-
-    // Calculate match percentage (0-100%)
-    const maxPossibleWeightedScore = 5; // Max similarity (5) for all attributes
-    const matchPercentage = (totalScore / maxPossibleWeightedScore) * 100;
-
-    return {
-      device,
-      score: totalScore,
-      matchPercentage: Math.round(matchPercentage),
-      strengths
-    };
-  }).sort((a, b) => b.score - a.score); // Sort by score (highest first)
 };
 
 // Function to get match rating text based on percentage
@@ -609,7 +411,7 @@ const RecommendationResults = ({
                       <div className="flex-1">
                         <h4 className="font-medium mb-2">{t('questionnaire.questions.results.pros')}</h4>
                         <ul className="space-y-1">
-                          {(t(`questionnaire.questions.results.devices.${topRecommendation.device.key}.pros`, { returnObjects: true }) as string[]).map((pro: string, index: number) => (
+                          {tArray(t, `questionnaire.questions.results.devices.${topRecommendation.device.key}.pros`).map((pro: string, index: number) => (
                             <li key={index} className="flex items-start gap-2">
                               <Check className="h-4 w-4 text-green-500 mt-1 shrink-0" />
                               <span>{pro}</span>
@@ -620,7 +422,7 @@ const RecommendationResults = ({
                       <div className="flex-1">
                         <h4 className="font-medium mb-2">{t('questionnaire.questions.results.cons')}</h4>
                         <ul className="space-y-1">
-                          {(t(`questionnaire.questions.results.devices.${topRecommendation.device.key}.cons`, { returnObjects: true }) as string[]).map((con: string, index: number) => (
+                          {tArray(t, `questionnaire.questions.results.devices.${topRecommendation.device.key}.cons`).map((con: string, index: number) => (
                             <li key={index} className="flex items-start gap-2 text-muted-foreground">
                               <span className="h-4 w-4 text-muted-foreground mt-1 shrink-0">-</span>
                               <span>{con}</span>
@@ -730,7 +532,7 @@ const RecommendationResults = ({
                                   <div>
                                     <h4 className="text-sm font-medium mb-1">{t('questionnaire.questions.results.pros')}</h4>
                                     <ul className="text-sm space-y-1">
-                                      {(t(`questionnaire.questions.results.devices.${alternative.device.key}.pros`, { returnObjects: true }) as string[]).map((pro: string, i: number) => (
+                                      {tArray(t, `questionnaire.questions.results.devices.${alternative.device.key}.pros`).map((pro: string, i: number) => (
                                         <li key={i} className="flex items-start gap-1">
                                           <Check className="h-3 w-3 text-green-500 mt-1 shrink-0" />
                                           <span>{pro}</span>
@@ -741,7 +543,7 @@ const RecommendationResults = ({
                                   <div>
                                     <h4 className="text-sm font-medium mb-1">{t('questionnaire.questions.results.cons')}</h4>
                                     <ul className="text-sm space-y-1 text-muted-foreground">
-                                      {(t(`questionnaire.questions.results.devices.${alternative.device.key}.cons`, { returnObjects: true }) as string[]).map((con: string, i: number) => (
+                                      {tArray(t, `questionnaire.questions.results.devices.${alternative.device.key}.cons`).map((con: string, i: number) => (
                                         <li key={i} className="flex items-start gap-1">
                                           <span className="h-3 w-3 mt-1 shrink-0">-</span>
                                           <span>{con}</span>

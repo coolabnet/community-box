@@ -30,5 +30,6 @@ export default defineConfig(({ mode }) => {
         "@research": path.resolve(__dirname, "../research"),
       },
     },
+
   };
 });
