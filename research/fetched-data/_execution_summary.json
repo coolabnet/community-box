@@ -1,19 +1,19 @@
 {
-  "timestamp": "2026-06-03T11:08:13.535Z",
+  "timestamp": "2026-06-04T10:02:19.032Z",
   "script": "run-all.js",
   "note": "Summary of all data fetching script executions",
   "data": {
-    "execution_time": "2026-06-03T11:08:13.535Z",
+    "execution_time": "2026-06-04T10:02:19.031Z",
     "total_scripts": 6,
     "successful": 6,
     "failed": 0,
-    "total_duration_ms": 19444,
+    "total_duration_ms": 16265,
     "continue_on_error": true,
     "results": [
       {
         "name": "CapRover UI Translations",
         "success": true,
-        "duration": 161,
+        "duration": 277,
         "result": [
           "ar-EG",
           "de-DE",
@@ -34,7 +34,7 @@
       {
         "name": "CasaOS UI Translations",
         "success": true,
-        "duration": 101,
+        "duration": 193,
         "result": [
           "ca_ES",
           "cs_CZ",
@@ -69,9 +69,9 @@
       {
         "name": "YunoHost Apps",
         "success": true,
-        "duration": 17348,
+        "duration": 13548,
         "result": {
-          "count": 985,
+          "count": 986,
           "apps": [
             {
               "id": "13ft_ynh",
@@ -1026,7 +1026,7 @@
               "url": "https://github.com/YunoHost-Apps/chatgpt-web_ynh",
               "stars": 4,
               "forks": 4,
-              "updated_at": "2026-05-11T06:13:43Z",
+              "updated_at": "2026-06-04T07:17:06Z",
               "language": "Shell",
               "archived": false
             },
@@ -1059,7 +1059,7 @@
               "url": "https://github.com/YunoHost-Apps/chitchatter_ynh",
               "stars": 5,
               "forks": 2,
-              "updated_at": "2026-05-26T19:52:00Z",
+              "updated_at": "2026-06-04T07:14:40Z",
               "language": "Shell",
               "archived": false
             },
@@ -1246,7 +1246,7 @@
               "url": "https://github.com/YunoHost-Apps/collabora_ynh",
               "stars": 17,
               "forks": 15,
-              "updated_at": "2026-03-04T17:35:42Z",
+              "updated_at": "2026-06-04T07:19:56Z",
               "language": "Shell",
               "archived": false
             },
@@ -1356,7 +1356,7 @@
               "url": "https://github.com/YunoHost-Apps/converse_ynh",
               "stars": 5,
               "forks": 2,
-              "updated_at": "2026-03-23T02:30:25Z",
+              "updated_at": "2026-06-04T07:11:47Z",
               "language": "Shell",
               "archived": false
             },
@@ -1389,7 +1389,7 @@
               "url": "https://github.com/YunoHost-Apps/copyparty_ynh",
               "stars": 5,
               "forks": 4,
-              "updated_at": "2026-05-01T11:03:00Z",
+              "updated_at": "2026-06-04T07:12:46Z",
               "language": "Shell",
               "archived": false
             },
@@ -2191,7 +2191,7 @@
               "description": "Easy!Appointments package for YunoHost",
               "url": "https://github.com/YunoHost-Apps/easyappointments_ynh",
               "stars": 7,
-              "forks": 2,
+              "forks": 3,
               "updated_at": "2026-05-27T22:31:41Z",
               "language": "Shell",
               "archived": false
@@ -2313,7 +2313,7 @@
               "url": "https://github.com/YunoHost-Apps/emoncms_ynh",
               "stars": 0,
               "forks": 1,
-              "updated_at": "2026-05-26T21:39:10Z",
+              "updated_at": "2026-06-04T07:10:15Z",
               "language": "Shell",
               "archived": false
             },
@@ -2599,7 +2599,7 @@
               "url": "https://github.com/YunoHost-Apps/fiduswriter_ynh",
               "stars": 0,
               "forks": 0,
-              "updated_at": "2026-05-29T21:23:18Z",
+              "updated_at": "2026-06-04T07:09:29Z",
               "language": "Shell",
               "archived": false
             },
@@ -2907,7 +2907,7 @@
               "url": "https://github.com/YunoHost-Apps/forte_ynh",
               "stars": 2,
               "forks": 1,
-              "updated_at": "2026-05-30T21:07:17Z",
+              "updated_at": "2026-06-03T14:30:26Z",
               "language": "Shell",
               "archived": false
             },
@@ -3006,7 +3006,7 @@
               "url": "https://github.com/YunoHost-Apps/freescout_ynh",
               "stars": 1,
               "forks": 4,
-              "updated_at": "2026-05-26T15:00:29Z",
+              "updated_at": "2026-06-04T07:18:42Z",
               "language": "Shell",
               "archived": false
             },
@@ -3028,7 +3028,7 @@
               "url": "https://github.com/YunoHost-Apps/freshrss_ynh",
               "stars": 32,
               "forks": 23,
-              "updated_at": "2026-03-16T18:23:01Z",
+              "updated_at": "2026-06-04T07:14:01Z",
               "language": "Shell",
               "archived": false
             },
@@ -3270,7 +3270,7 @@
               "url": "https://github.com/YunoHost-Apps/gitea_ynh",
               "stars": 28,
               "forks": 19,
-              "updated_at": "2026-05-26T20:55:25Z",
+              "updated_at": "2026-06-04T08:58:28Z",
               "language": "Shell",
               "archived": false
             },
@@ -3358,7 +3358,7 @@
               "url": "https://github.com/YunoHost-Apps/glitchsoc_ynh",
               "stars": 18,
               "forks": 11,
-              "updated_at": "2026-05-13T15:42:09Z",
+              "updated_at": "2026-06-04T07:15:14Z",
               "language": "Shell",
               "archived": false
             },
@@ -3831,7 +3831,7 @@
               "url": "https://github.com/YunoHost-Apps/homeassistant_ynh",
               "stars": 24,
               "forks": 17,
-              "updated_at": "2026-05-23T08:06:11Z",
+              "updated_at": "2026-06-04T05:35:47Z",
               "language": "Shell",
               "archived": false
             },
@@ -4700,7 +4700,7 @@
               "url": "https://github.com/YunoHost-Apps/lazylibrarian_ynh",
               "stars": 0,
               "forks": 0,
-              "updated_at": "2026-05-26T21:30:25Z",
+              "updated_at": "2026-06-04T07:08:52Z",
               "language": "Shell",
               "archived": false
             },
@@ -4820,7 +4820,7 @@
               "description": "LibreERP package for YunoHost",
               "url": "https://github.com/YunoHost-Apps/libreerp_ynh",
               "stars": 18,
-              "forks": 19,
+              "forks": 18,
               "updated_at": "2026-05-26T18:10:29Z",
               "language": "Shell",
               "archived": false
@@ -5767,7 +5767,7 @@
               "url": "https://github.com/YunoHost-Apps/misskey_ynh",
               "stars": 29,
               "forks": 15,
-              "updated_at": "2026-05-27T12:37:33Z",
+              "updated_at": "2026-06-03T20:45:09Z",
               "language": "Shell",
               "archived": false
             },
@@ -6256,6 +6256,17 @@
               "archived": true
             },
             {
+              "id": "nftables-blacklist_ynh",
+              "name": "nftables-blacklist",
+              "description": "A script to ban large numbers of IP addresses published in blacklists, packaged for YunoHost",
+              "url": "https://github.com/YunoHost-Apps/nftables-blacklist_ynh",
+              "stars": 0,
+              "forks": 0,
+              "updated_at": "2026-06-03T15:45:56Z",
+              "language": "Shell",
+              "archived": false
+            },
+            {
               "id": "nitter_ynh",
               "name": "nitter",
               "description": "Nitter package for YunoHost",
@@ -6735,7 +6746,7 @@
               "url": "https://github.com/YunoHost-Apps/outline_ynh",
               "stars": 19,
               "forks": 10,
-              "updated_at": "2026-05-02T20:29:26Z",
+              "updated_at": "2026-06-04T07:07:57Z",
               "language": "Shell",
               "archived": false
             },
@@ -7703,7 +7714,7 @@
               "url": "https://github.com/YunoHost-Apps/pterodactyl_ynh",
               "stars": 7,
               "forks": 9,
-              "updated_at": "2026-05-26T21:20:07Z",
+              "updated_at": "2026-06-04T07:07:16Z",
               "language": "Shell",
               "archived": false
             },
@@ -8220,7 +8231,7 @@
               "url": "https://github.com/YunoHost-Apps/rsshub_ynh",
               "stars": 4,
               "forks": 2,
-              "updated_at": "2026-05-03T06:43:16Z",
+              "updated_at": "2026-06-04T07:17:39Z",
               "language": "Shell",
               "archived": false
             },
@@ -8395,7 +8406,7 @@
               "description": "Seafile package for YunoHost",
               "url": "https://github.com/YunoHost-Apps/seafile_ynh",
               "stars": 15,
-              "forks": 19,
+              "forks": 20,
               "updated_at": "2026-04-17T11:24:46Z",
               "language": "Shell",
               "archived": false
@@ -8505,7 +8516,7 @@
               "description": "🌎 A Sharkish microblogging platform 🦈🚀",
               "url": "https://github.com/YunoHost-Apps/sharkey_ynh",
               "stars": 4,
-              "forks": 7,
+              "forks": 6,
               "updated_at": "2026-05-24T21:03:21Z",
               "language": "Shell",
               "archived": false
@@ -9001,7 +9012,7 @@
               "url": "https://github.com/YunoHost-Apps/ssh_apprise_ynh",
               "stars": 1,
               "forks": 0,
-              "updated_at": "2026-05-02T20:27:21Z",
+              "updated_at": "2026-06-04T07:06:36Z",
               "language": "Shell",
               "archived": false
             },
@@ -9716,7 +9727,7 @@
               "url": "https://github.com/YunoHost-Apps/ttrss_ynh",
               "stars": 18,
               "forks": 14,
-              "updated_at": "2026-05-25T17:57:59Z",
+              "updated_at": "2026-06-04T07:06:01Z",
               "language": "Shell",
               "archived": false
             },
@@ -10288,7 +10299,7 @@
               "url": "https://github.com/YunoHost-Apps/wikidocs_ynh",
               "stars": 1,
               "forks": 0,
-              "updated_at": "2026-05-20T18:10:05Z",
+              "updated_at": "2026-06-04T07:04:28Z",
               "language": "Shell",
               "archived": false
             },
@@ -10927,7 +10938,7 @@
       {
         "name": "YunoHost Docs Translations",
         "success": true,
-        "duration": 176,
+        "duration": 194,
         "result": [
           "de",
           "docs",
@@ -10941,7 +10952,7 @@
       {
         "name": "YunoHost UI Translations",
         "success": true,
-        "duration": 1265,
+        "duration": 1754,
         "result": [
           {
             "language": "French",
@@ -10958,62 +10969,6 @@
             "translated_words": 11068,
             "total_words": 11068,
             "last_change": "2026-05-22T21:52:25.662406Z"
-          },
-          {
-            "language": "Catalan",
-            "language_code": "ca",
-            "translated_percent": 100,
-            "translated_words": 3819,
-            "total_words": 3819,
-            "last_change": "2026-04-14T13:06:09.395360Z"
-          },
-          {
-            "language": "German",
-            "language_code": "de",
-            "translated_percent": 100,
-            "translated_words": 3819,
-            "total_words": 3819,
-            "last_change": "2026-04-14T13:06:10.728461Z"
-          },
-          {
-            "language": "Basque",
-            "language_code": "eu",
-            "translated_percent": 100,
-            "translated_words": 3819,
-            "total_words": 3819,
-            "last_change": "2026-04-23T12:57:12.108832Z"
-          },
-          {
-            "language": "French",
-            "language_code": "fr",
-            "translated_percent": 100,
-            "translated_words": 3819,
-            "total_words": 3819,
-            "last_change": "2026-04-14T13:06:13.466238Z"
-          },
-          {
-            "language": "Dutch",
-            "language_code": "nl",
-            "translated_percent": 100,
-            "translated_words": 3819,
-            "total_words": 3819,
-            "last_change": "2026-04-28T07:53:50.845005Z"
-          },
-          {
-            "language": "Polish",
-            "language_code": "pl",
-            "translated_percent": 100,
-            "translated_words": 3819,
-            "total_words": 3819,
-            "last_change": "2026-04-14T13:06:19.321033Z"
-          },
-          {
-            "language": "Russian",
-            "language_code": "ru",
-            "translated_percent": 100,
-            "translated_words": 3819,
-            "total_words": 3819,
-            "last_change": "2026-04-14T13:06:20.398472Z"
           },
           {
             "language": "Arabic",
@@ -11096,6 +11051,62 @@
             "last_change": "2025-11-19T00:03:57.962288Z"
           },
           {
+            "language": "Catalan",
+            "language_code": "ca",
+            "translated_percent": 99.7,
+            "translated_words": 3809,
+            "total_words": 3820,
+            "last_change": "2026-06-03T12:49:35.327891Z"
+          },
+          {
+            "language": "German",
+            "language_code": "de",
+            "translated_percent": 99.7,
+            "translated_words": 3809,
+            "total_words": 3820,
+            "last_change": "2026-06-03T12:49:36.330676Z"
+          },
+          {
+            "language": "Basque",
+            "language_code": "eu",
+            "translated_percent": 99.7,
+            "translated_words": 3809,
+            "total_words": 3820,
+            "last_change": "2026-06-03T12:49:37.502997Z"
+          },
+          {
+            "language": "French",
+            "language_code": "fr",
+            "translated_percent": 99.7,
+            "translated_words": 3809,
+            "total_words": 3820,
+            "last_change": "2026-06-03T12:49:38.388460Z"
+          },
+          {
+            "language": "Dutch",
+            "language_code": "nl",
+            "translated_percent": 99.7,
+            "translated_words": 3809,
+            "total_words": 3820,
+            "last_change": "2026-06-03T12:49:42.784774Z"
+          },
+          {
+            "language": "Polish",
+            "language_code": "pl",
+            "translated_percent": 99.7,
+            "translated_words": 3809,
+            "total_words": 3820,
+            "last_change": "2026-06-03T12:49:43.834801Z"
+          },
+          {
+            "language": "Russian",
+            "language_code": "ru",
+            "translated_percent": 99.7,
+            "translated_words": 3809,
+            "total_words": 3820,
+            "last_change": "2026-06-03T12:49:44.665144Z"
+          },
+          {
             "language": "Basque",
             "language_code": "eu",
             "translated_percent": 99.5,
@@ -11114,10 +11125,10 @@
           {
             "language": "Spanish",
             "language_code": "es",
-            "translated_percent": 99.1,
-            "translated_words": 3749,
-            "total_words": 3819,
-            "last_change": "2026-04-14T13:06:11.750079Z"
+            "translated_percent": 98.9,
+            "translated_words": 3739,
+            "total_words": 3820,
+            "last_change": "2026-06-03T12:49:37.223241Z"
           },
           {
             "language": "German",
@@ -11154,18 +11165,18 @@
           {
             "language": "Occitan",
             "language_code": "oc",
-            "translated_percent": 89.1,
-            "translated_words": 2657,
-            "total_words": 3819,
-            "last_change": "2026-04-14T13:06:19.041393Z"
+            "translated_percent": 88.9,
+            "translated_words": 2647,
+            "total_words": 3820,
+            "last_change": "2026-06-03T12:49:43.308638Z"
           },
           {
             "language": "Italian",
             "language_code": "it",
-            "translated_percent": 88.9,
-            "translated_words": 3263,
-            "total_words": 3819,
-            "last_change": "2026-04-14T13:06:15.571310Z"
+            "translated_percent": 88.7,
+            "translated_words": 3253,
+            "total_words": 3820,
+            "last_change": "2026-06-03T12:49:40.177833Z"
           },
           {
             "language": "Esperanto",
@@ -11178,10 +11189,10 @@
           {
             "language": "Turkish",
             "language_code": "tr",
-            "translated_percent": 84,
-            "translated_words": 2974,
-            "total_words": 3819,
-            "last_change": "2026-04-14T13:06:22.052121Z"
+            "translated_percent": 83.8,
+            "translated_words": 2964,
+            "total_words": 3820,
+            "last_change": "2026-06-03T12:49:46.609945Z"
           },
           {
             "language": "German",
@@ -11196,8 +11207,8 @@
             "language_code": "ar",
             "translated_percent": 72.9,
             "translated_words": 1654,
-            "total_words": 3819,
-            "last_change": "2026-04-14T13:06:08.336939Z"
+            "total_words": 3820,
+            "last_change": "2026-06-03T12:49:34.538918Z"
           },
           {
             "language": "Italian",
@@ -11210,10 +11221,10 @@
           {
             "language": "Portuguese",
             "language_code": "pt",
-            "translated_percent": 59.2,
-            "translated_words": 1560,
-            "total_words": 3819,
-            "last_change": "2026-04-14T13:06:19.586193Z"
+            "translated_percent": 59,
+            "translated_words": 1550,
+            "total_words": 3820,
+            "last_change": "2026-06-03T12:49:44.065049Z"
           },
           {
             "language": "Hindi",
@@ -11236,8 +11247,8 @@
             "language_code": "eo",
             "translated_percent": 40.5,
             "translated_words": 966,
-            "total_words": 3819,
-            "last_change": "2026-04-14T13:06:11.477336Z"
+            "total_words": 3820,
+            "last_change": "2026-06-03T12:49:36.929408Z"
           },
           {
             "language": "Occitan",
@@ -11260,8 +11271,8 @@
             "language_code": "sv",
             "translated_percent": 21.7,
             "translated_words": 381,
-            "total_words": 3819,
-            "last_change": "2026-04-14T13:06:21.305377Z"
+            "total_words": 3820,
+            "last_change": "2026-06-03T12:49:45.655068Z"
           },
           {
             "language": "Dutch",
@@ -11284,8 +11295,8 @@
             "language_code": "el",
             "translated_percent": 10.8,
             "translated_words": 164,
-            "total_words": 3819,
-            "last_change": "2026-04-14T13:06:11.180633Z"
+            "total_words": 3820,
+            "last_change": "2026-06-03T12:49:36.743316Z"
           },
           {
             "language": "Turkish",
@@ -11308,8 +11319,8 @@
             "language_code": "hi",
             "translated_percent": 1.6,
             "translated_words": 23,
-            "total_words": 3819,
-            "last_change": "2026-04-14T13:06:14.488592Z"
+            "total_words": 3820,
+            "last_change": "2026-06-03T12:49:39.203375Z"
           },
           {
             "language": "Hungarian",
@@ -11332,8 +11343,8 @@
             "language_code": "br",
             "translated_percent": 0,
             "translated_words": 0,
-            "total_words": 3819,
-            "last_change": "2026-04-14T13:06:09.138312Z"
+            "total_words": 3820,
+            "last_change": "2026-06-03T12:49:35.114780Z"
           },
           {
             "language": "Breton",
@@ -11348,7 +11359,7 @@
       {
         "name": "Zimaboard Shipping Areas",
         "success": true,
-        "duration": 393,
+        "duration": 299,
         "result": [
           "Argentina",
           "Australia",
