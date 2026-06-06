@@ -1,12 +1,12 @@
 {
-  "timestamp": "2026-06-05T09:59:45.260Z",
+  "timestamp": "2026-06-06T08:39:10.833Z",
   "script": "scripts.test.js",
   "source": "YunoHost Translation Platform",
   "url": "https://translate.yunohost.org/",
   "api_url": "https://translate.yunohost.org/api/translations/?format=json",
   "total_languages": 50,
-  "fully_translated": 13,
-  "partially_translated": 34,
+  "fully_translated": 14,
+  "partially_translated": 33,
   "not_started": 3,
   "data": [
     {
@@ -31,7 +31,15 @@
       "translated_percent": 100,
       "translated_words": 3820,
       "total_words": 3820,
-      "last_change": "2026-06-04T17:54:27.244787Z"
+      "last_change": "2026-06-05T18:36:39.934358Z"
+    },
+    {
+      "language": "Russian",
+      "language_code": "ru",
+      "translated_percent": 100,
+      "translated_words": 3820,
+      "total_words": 3820,
+      "last_change": "2026-06-05T22:12:43.568404Z"
     },
     {
       "language": "Arabic",
@@ -152,14 +160,6 @@
       "translated_words": 3809,
       "total_words": 3820,
       "last_change": "2026-06-03T12:49:43.834801Z"
-    },
-    {
-      "language": "Russian",
-      "language_code": "ru",
-      "translated_percent": 99.7,
-      "translated_words": 3809,
-      "total_words": 3820,
-      "last_change": "2026-06-03T12:49:44.665144Z"
     },
     {
       "language": "Basque",

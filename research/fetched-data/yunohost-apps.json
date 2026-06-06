@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-06-05T09:59:44.163Z",
+  "timestamp": "2026-06-06T08:39:09.200Z",
   "script": "scripts.test.js",
   "source": "YunoHost-Apps GitHub Organization",
   "url": "https://github.com/YunoHost-Apps",
@@ -1149,7 +1149,7 @@
       "url": "https://github.com/YunoHost-Apps/code-server_ynh",
       "stars": 9,
       "forks": 3,
-      "updated_at": "2026-05-23T14:12:00Z",
+      "updated_at": "2026-06-05T10:10:47Z",
       "language": "Shell",
       "archived": false
     },
@@ -2227,7 +2227,7 @@
       "url": "https://github.com/YunoHost-Apps/elk_ynh",
       "stars": 1,
       "forks": 1,
-      "updated_at": "2026-06-05T09:15:39Z",
+      "updated_at": "2026-06-06T02:56:25Z",
       "language": "Shell",
       "archived": false
     },
@@ -3205,7 +3205,7 @@
       "description": "Ghost package for YunoHost",
       "url": "https://github.com/YunoHost-Apps/ghost_ynh",
       "stars": 22,
-      "forks": 30,
+      "forks": 29,
       "updated_at": "2026-05-26T14:59:30Z",
       "language": "Shell",
       "archived": false
@@ -3778,7 +3778,7 @@
       "url": "https://github.com/YunoHost-Apps/homeassistant_ynh",
       "stars": 25,
       "forks": 17,
-      "updated_at": "2026-06-05T08:27:06Z",
+      "updated_at": "2026-06-06T07:18:29Z",
       "language": "Shell",
       "archived": false
     },
@@ -6418,7 +6418,7 @@
       "url": "https://github.com/YunoHost-Apps/ollama_ynh",
       "stars": 5,
       "forks": 3,
-      "updated_at": "2026-06-05T08:26:05Z",
+      "updated_at": "2026-06-06T06:17:55Z",
       "language": "Shell",
       "archived": false
     },
@@ -6913,7 +6913,7 @@
       "url": "https://github.com/YunoHost-Apps/peertube-search-index_ynh",
       "stars": 9,
       "forks": 3,
-      "updated_at": "2026-05-13T17:46:52Z",
+      "updated_at": "2026-06-05T17:40:55Z",
       "language": "Shell",
       "archived": false
     },
@@ -9729,7 +9729,7 @@
       "url": "https://github.com/YunoHost-Apps/tuwunel_ynh",
       "stars": 9,
       "forks": 2,
-      "updated_at": "2026-05-22T07:51:54Z",
+      "updated_at": "2026-06-06T05:12:20Z",
       "language": "Shell",
       "archived": false
     },
@@ -10037,7 +10037,7 @@
       "url": "https://github.com/YunoHost-Apps/warpgate_ynh",
       "stars": 1,
       "forks": 0,
-      "updated_at": "2026-05-22T17:19:48Z",
+      "updated_at": "2026-06-06T02:56:31Z",
       "language": "Shell",
       "archived": false
     },
@@ -10851,7 +10851,7 @@
       "url": "https://github.com/YunoHost-Apps/zwave-js-ui_ynh",
       "stars": 0,
       "forks": 1,
-      "updated_at": "2026-06-02T21:12:54Z",
+      "updated_at": "2026-06-06T08:17:25Z",
       "language": "Shell",
       "archived": false
     },
