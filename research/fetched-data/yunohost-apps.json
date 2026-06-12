@@ -1,11 +1,11 @@
 {
-  "timestamp": "2026-06-11T10:44:28.594Z",
+  "timestamp": "2026-06-12T10:20:46.341Z",
   "script": "scripts.test.js",
   "source": "YunoHost-Apps GitHub Organization",
   "url": "https://github.com/YunoHost-Apps",
   "api_url": "https://api.github.com/orgs/YunoHost-Apps/repos",
-  "total_apps": 989,
-  "total_repos_checked": 1010,
+  "total_apps": 990,
+  "total_repos_checked": 1011,
   "languages": [
     "CSS",
     "HTML",
@@ -1534,7 +1534,7 @@
       "url": "https://github.com/YunoHost-Apps/dagu_ynh",
       "stars": 3,
       "forks": 3,
-      "updated_at": "2026-06-11T06:10:14Z",
+      "updated_at": "2026-06-12T06:33:58Z",
       "language": "Shell",
       "archived": false
     },
@@ -2226,7 +2226,7 @@
       "description": "Elk package for YunoHost",
       "url": "https://github.com/YunoHost-Apps/elk_ynh",
       "stars": 1,
-      "forks": 1,
+      "forks": 0,
       "updated_at": "2026-06-06T02:56:25Z",
       "language": "Shell",
       "archived": false
@@ -2359,7 +2359,7 @@
       "url": "https://github.com/YunoHost-Apps/etherpad_ynh",
       "stars": 3,
       "forks": 4,
-      "updated_at": "2026-06-10T16:55:00Z",
+      "updated_at": "2026-06-12T06:50:11Z",
       "language": "Shell",
       "archived": false
     },
@@ -2568,7 +2568,7 @@
       "url": "https://github.com/YunoHost-Apps/filebrowser_ynh",
       "stars": 4,
       "forks": 5,
-      "updated_at": "2026-06-07T08:45:19Z",
+      "updated_at": "2026-06-11T19:27:51Z",
       "language": "Shell",
       "archived": false
     },
@@ -3030,7 +3030,7 @@
       "url": "https://github.com/YunoHost-Apps/funkwhale_ynh",
       "stars": 82,
       "forks": 25,
-      "updated_at": "2026-05-08T06:06:00Z",
+      "updated_at": "2026-06-11T20:41:24Z",
       "language": "Shell",
       "archived": false
     },
@@ -3458,7 +3458,7 @@
       "description": "GoToSocial package for YunoHost: an ActivityPub social network server, written in Golang.",
       "url": "https://github.com/YunoHost-Apps/gotosocial_ynh",
       "stars": 21,
-      "forks": 11,
+      "forks": 12,
       "updated_at": "2026-04-26T01:23:48Z",
       "language": "Shell",
       "archived": false
@@ -3834,6 +3834,17 @@
       "stars": 43,
       "forks": 19,
       "updated_at": "2025-12-30T08:24:33Z",
+      "language": "Shell",
+      "archived": false
+    },
+    {
+      "id": "htmly_ynh",
+      "name": "htmly",
+      "description": "htmly package for YunoHost",
+      "url": "https://github.com/YunoHost-Apps/htmly_ynh",
+      "stars": 0,
+      "forks": 0,
+      "updated_at": "2026-06-11T20:54:08Z",
       "language": "Shell",
       "archived": false
     },
@@ -4735,7 +4746,7 @@
       "url": "https://github.com/YunoHost-Apps/liberaforms_ynh",
       "stars": 1,
       "forks": 2,
-      "updated_at": "2026-06-07T10:35:27Z",
+      "updated_at": "2026-06-11T12:00:51Z",
       "language": "Shell",
       "archived": false
     },
@@ -5240,7 +5251,7 @@
       "description": "Free, open-source social network for YunoHost",
       "url": "https://github.com/YunoHost-Apps/mastodon_ynh",
       "stars": 89,
-      "forks": 45,
+      "forks": 46,
       "updated_at": "2026-06-07T13:05:49Z",
       "language": "Shell",
       "archived": false
@@ -5251,7 +5262,7 @@
       "description": "YunohostApps package for https://codeberg.org/superseriousbusiness/masto-fe-standalone",
       "url": "https://github.com/YunoHost-Apps/mastofessb_ynh",
       "stars": 0,
-      "forks": 1,
+      "forks": 0,
       "updated_at": "2025-11-09T20:28:07Z",
       "language": "Shell",
       "archived": false
@@ -5307,7 +5318,7 @@
       "url": "https://github.com/YunoHost-Apps/mattermost_ynh",
       "stars": 36,
       "forks": 19,
-      "updated_at": "2026-04-22T16:36:22Z",
+      "updated_at": "2026-06-12T08:25:16Z",
       "language": "Shell",
       "archived": false
     },
@@ -6154,7 +6165,7 @@
       "url": "https://github.com/YunoHost-Apps/navidrome_ynh",
       "stars": 19,
       "forks": 6,
-      "updated_at": "2026-05-03T19:40:49Z",
+      "updated_at": "2026-06-11T12:57:35Z",
       "language": "Shell",
       "archived": false
     },
@@ -6913,7 +6924,7 @@
       "url": "https://github.com/YunoHost-Apps/peertube_ynh",
       "stars": 97,
       "forks": 31,
-      "updated_at": "2026-05-23T18:45:47Z",
+      "updated_at": "2026-06-11T15:20:06Z",
       "language": "Shell",
       "archived": false
     },
@@ -8409,7 +8420,7 @@
       "url": "https://github.com/YunoHost-Apps/seaweedfs_ynh",
       "stars": 0,
       "forks": 1,
-      "updated_at": "2026-06-09T07:13:59Z",
+      "updated_at": "2026-06-12T06:42:01Z",
       "language": "Shell",
       "archived": false
     },
@@ -9210,9 +9221,9 @@
       "name": "synapse",
       "description": "Matrix server (synapse) package for YunoHost",
       "url": "https://github.com/YunoHost-Apps/synapse_ynh",
-      "stars": 84,
+      "stars": 85,
       "forks": 48,
-      "updated_at": "2026-06-05T08:25:49Z",
+      "updated_at": "2026-06-11T12:54:10Z",
       "language": "Shell",
       "archived": false
     },
@@ -10059,7 +10070,7 @@
       "url": "https://github.com/YunoHost-Apps/warpgate_ynh",
       "stars": 1,
       "forks": 0,
-      "updated_at": "2026-06-10T15:23:13Z",
+      "updated_at": "2026-06-12T02:35:52Z",
       "language": "Shell",
       "archived": false
     },
@@ -10421,7 +10432,7 @@
       "description": "WriteFreely is a beautifully pared-down blogging platform that's simple on the surface, yet powerful underneath for YunoHost",
       "url": "https://github.com/YunoHost-Apps/writefreely_ynh",
       "stars": 19,
-      "forks": 3,
+      "forks": 2,
       "updated_at": "2026-03-24T21:20:31Z",
       "language": "Shell",
       "archived": false

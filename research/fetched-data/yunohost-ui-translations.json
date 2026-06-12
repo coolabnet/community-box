@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-06-11T10:44:29.864Z",
+  "timestamp": "2026-06-12T10:20:47.804Z",
   "script": "scripts.test.js",
   "source": "YunoHost Translation Platform",
   "url": "https://translate.yunohost.org/",
@@ -15,7 +15,7 @@
       "translated_percent": 100,
       "translated_words": 11291,
       "total_words": 11291,
-      "last_change": "2026-06-10T17:33:38.757332Z"
+      "last_change": "2026-06-11T17:36:40.461113Z"
     },
     {
       "language": "Russian",
@@ -255,7 +255,7 @@
       "translated_percent": 78.5,
       "translated_words": 7822,
       "total_words": 11291,
-      "last_change": "2026-06-11T08:39:37.765640Z"
+      "last_change": "2026-06-12T00:40:00.309342Z"
     },
     {
       "language": "Arabic",
