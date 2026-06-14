@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-06-13T09:22:46.219Z",
+  "timestamp": "2026-06-14T09:42:39.988Z",
   "script": "scripts.test.js",
   "source": "YunoHost-Apps GitHub Organization",
   "url": "https://github.com/YunoHost-Apps",
@@ -544,7 +544,7 @@
       "url": "https://github.com/YunoHost-Apps/bagisto_ynh",
       "stars": 0,
       "forks": 0,
-      "updated_at": "2026-03-21T20:17:14Z",
+      "updated_at": "2026-06-13T18:20:29Z",
       "language": "Shell",
       "archived": false
     },
@@ -608,9 +608,9 @@
       "name": "bentopdf",
       "description": "BentoPDF package for YunoHost",
       "url": "https://github.com/YunoHost-Apps/bentopdf_ynh",
-      "stars": 2,
+      "stars": 3,
       "forks": 0,
-      "updated_at": "2026-05-24T23:58:51Z",
+      "updated_at": "2026-06-13T20:34:40Z",
       "language": "Shell",
       "archived": false
     },
@@ -1534,7 +1534,7 @@
       "url": "https://github.com/YunoHost-Apps/dagu_ynh",
       "stars": 3,
       "forks": 3,
-      "updated_at": "2026-06-12T06:33:58Z",
+      "updated_at": "2026-06-13T11:16:44Z",
       "language": "Shell",
       "archived": false
     },
@@ -2776,7 +2776,7 @@
       "description": "Focalboard package for YunoHost",
       "url": "https://github.com/YunoHost-Apps/focalboard_ynh",
       "stars": 7,
-      "forks": 4,
+      "forks": 3,
       "updated_at": "2025-08-30T17:07:33Z",
       "language": "Shell",
       "archived": false
@@ -2865,7 +2865,7 @@
       "url": "https://github.com/YunoHost-Apps/fossbilling_ynh",
       "stars": 0,
       "forks": 1,
-      "updated_at": "2026-05-22T16:44:11Z",
+      "updated_at": "2026-06-13T15:26:36Z",
       "language": "PHP",
       "archived": false
     },
@@ -3777,7 +3777,7 @@
       "description": "Home automation platform package for YunoHost",
       "url": "https://github.com/YunoHost-Apps/homeassistant_ynh",
       "stars": 25,
-      "forks": 17,
+      "forks": 16,
       "updated_at": "2026-06-13T05:09:04Z",
       "language": "Shell",
       "archived": false
@@ -4239,7 +4239,7 @@
       "description": "Jellyfin package for YunoHost",
       "url": "https://github.com/YunoHost-Apps/jellyfin_ynh",
       "stars": 33,
-      "forks": 23,
+      "forks": 24,
       "updated_at": "2026-06-08T10:02:30Z",
       "language": "Shell",
       "archived": false
@@ -4680,7 +4680,7 @@
       "url": "https://github.com/YunoHost-Apps/leantime_ynh",
       "stars": 3,
       "forks": 5,
-      "updated_at": "2026-05-30T20:56:43Z",
+      "updated_at": "2026-06-13T11:17:26Z",
       "language": "Shell",
       "archived": false
     },
@@ -5021,7 +5021,7 @@
       "url": "https://github.com/YunoHost-Apps/localai_ynh",
       "stars": 2,
       "forks": 3,
-      "updated_at": "2026-06-13T06:24:26Z",
+      "updated_at": "2026-06-14T05:44:23Z",
       "language": "Shell",
       "archived": false
     },
@@ -6297,7 +6297,7 @@
       "url": "https://github.com/YunoHost-Apps/nodebb_ynh",
       "stars": 7,
       "forks": 6,
-      "updated_at": "2026-05-14T16:23:13Z",
+      "updated_at": "2026-06-13T11:14:49Z",
       "language": "Shell",
       "archived": false
     },
@@ -6593,7 +6593,7 @@
       "description": "OpenProject instanciation for YunoHost",
       "url": "https://github.com/YunoHost-Apps/openproject_ynh",
       "stars": 8,
-      "forks": 4,
+      "forks": 3,
       "updated_at": "2026-01-18T09:07:28Z",
       "language": "Shell",
       "archived": false
@@ -6737,7 +6737,7 @@
       "url": "https://github.com/YunoHost-Apps/overleaf_ynh",
       "stars": 3,
       "forks": 6,
-      "updated_at": "2026-06-06T20:27:26Z",
+      "updated_at": "2026-06-14T09:21:16Z",
       "language": "Shell",
       "archived": false
     },
@@ -7968,7 +7968,7 @@
       "description": "Redirection app for YunoHost",
       "url": "https://github.com/YunoHost-Apps/redirect_ynh",
       "stars": 53,
-      "forks": 30,
+      "forks": 29,
       "updated_at": "2026-06-05T09:17:20Z",
       "language": "Shell",
       "archived": false
@@ -8640,7 +8640,7 @@
       "url": "https://github.com/YunoHost-Apps/signaturepdf_ynh",
       "stars": 2,
       "forks": 5,
-      "updated_at": "2026-04-11T16:41:27Z",
+      "updated_at": "2026-06-13T11:15:50Z",
       "language": "Shell",
       "archived": false
     },
@@ -9903,9 +9903,9 @@
       "name": "vaultwarden",
       "description": "Open source password management solutions for YunoHost",
       "url": "https://github.com/YunoHost-Apps/vaultwarden_ynh",
-      "stars": 64,
+      "stars": 63,
       "forks": 23,
-      "updated_at": "2026-06-05T08:35:45Z",
+      "updated_at": "2026-06-13T17:22:23Z",
       "language": "Shell",
       "archived": false
     },
@@ -10301,7 +10301,7 @@
       "url": "https://github.com/YunoHost-Apps/wikimore_ynh",
       "stars": 0,
       "forks": 1,
-      "updated_at": "2026-03-13T20:55:17Z",
+      "updated_at": "2026-06-13T17:08:40Z",
       "language": "Shell",
       "archived": false
     },
@@ -10598,7 +10598,7 @@
       "url": "https://github.com/YunoHost-Apps/yuno-archive_ynh",
       "stars": 3,
       "forks": 0,
-      "updated_at": "2026-04-28T09:00:39Z",
+      "updated_at": "2026-06-13T13:19:46Z",
       "language": "Shell",
       "archived": false
     },
