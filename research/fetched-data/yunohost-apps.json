@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-06-23T09:50:56.360Z",
+  "timestamp": "2026-06-24T09:38:37.658Z",
   "script": "scripts.test.js",
   "source": "YunoHost-Apps GitHub Organization",
   "url": "https://github.com/YunoHost-Apps",
@@ -2359,7 +2359,7 @@
       "url": "https://github.com/YunoHost-Apps/etherpad_ynh",
       "stars": 3,
       "forks": 4,
-      "updated_at": "2026-06-16T09:48:40Z",
+      "updated_at": "2026-06-23T18:28:09Z",
       "language": "Shell",
       "archived": false
     },
@@ -3239,7 +3239,7 @@
       "url": "https://github.com/YunoHost-Apps/gitlab_ynh",
       "stars": 22,
       "forks": 10,
-      "updated_at": "2026-06-16T02:31:55Z",
+      "updated_at": "2026-06-23T11:18:40Z",
       "language": "Ruby",
       "archived": false
     },
@@ -3481,7 +3481,7 @@
       "url": "https://github.com/YunoHost-Apps/grafana_ynh",
       "stars": 18,
       "forks": 13,
-      "updated_at": "2026-06-09T13:44:14Z",
+      "updated_at": "2026-06-24T05:18:24Z",
       "language": "Shell",
       "archived": false
     },
@@ -4141,7 +4141,7 @@
       "url": "https://github.com/YunoHost-Apps/it-tools_ynh",
       "stars": 4,
       "forks": 1,
-      "updated_at": "2026-06-15T01:29:41Z",
+      "updated_at": "2026-06-24T01:43:20Z",
       "language": "Shell",
       "archived": false
     },
@@ -6229,9 +6229,9 @@
       "name": "nftables-blacklist",
       "description": "A script to ban large numbers of IP addresses published in blacklists, packaged for YunoHost",
       "url": "https://github.com/YunoHost-Apps/nftables-blacklist_ynh",
-      "stars": 0,
+      "stars": 1,
       "forks": 0,
-      "updated_at": "2026-06-21T07:28:34Z",
+      "updated_at": "2026-06-23T20:32:51Z",
       "language": "Shell",
       "archived": false
     },
@@ -6385,7 +6385,7 @@
       "url": "https://github.com/YunoHost-Apps/octoprint_ynh",
       "stars": 5,
       "forks": 3,
-      "updated_at": "2026-05-27T11:04:31Z",
+      "updated_at": "2026-06-24T05:02:58Z",
       "language": "Shell",
       "archived": false
     },
@@ -8189,7 +8189,7 @@
       "url": "https://github.com/YunoHost-Apps/rspamd_ynh",
       "stars": 6,
       "forks": 5,
-      "updated_at": "2026-06-19T19:05:54Z",
+      "updated_at": "2026-06-24T05:29:28Z",
       "language": "Shell",
       "archived": false
     },
@@ -10070,7 +10070,7 @@
       "url": "https://github.com/YunoHost-Apps/wallos_ynh",
       "stars": 2,
       "forks": 1,
-      "updated_at": "2026-06-07T08:46:33Z",
+      "updated_at": "2026-06-24T04:25:22Z",
       "language": "Shell",
       "archived": false
     },
@@ -10343,9 +10343,9 @@
       "name": "wireguard",
       "description": "WireGuard VPN software with a web UI configuration companion, packaged for YunoHost.",
       "url": "https://github.com/YunoHost-Apps/wireguard_ynh",
-      "stars": 37,
+      "stars": 38,
       "forks": 14,
-      "updated_at": "2026-03-02T21:06:58Z",
+      "updated_at": "2026-06-23T11:04:35Z",
       "language": "Shell",
       "archived": false
     },
@@ -10730,7 +10730,7 @@
       "url": "https://github.com/YunoHost-Apps/yunorunner_ynh",
       "stars": 6,
       "forks": 7,
-      "updated_at": "2025-08-30T17:04:14Z",
+      "updated_at": "2026-06-24T08:50:14Z",
       "language": "Shell",
       "archived": false
     },
