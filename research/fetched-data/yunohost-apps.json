@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-06-24T09:38:37.658Z",
+  "timestamp": "2026-06-26T09:35:26.905Z",
   "script": "scripts.test.js",
   "source": "YunoHost-Apps GitHub Organization",
   "url": "https://github.com/YunoHost-Apps",
@@ -126,7 +126,7 @@
       "url": "https://github.com/YunoHost-Apps/adguardhome_ynh",
       "stars": 19,
       "forks": 17,
-      "updated_at": "2026-06-05T08:27:55Z",
+      "updated_at": "2026-06-24T21:24:08Z",
       "language": "Shell",
       "archived": false
     },
@@ -169,7 +169,7 @@
       "description": "AdventureLog package for YunoHost",
       "url": "https://github.com/YunoHost-Apps/adventurelog_ynh",
       "stars": 2,
-      "forks": 3,
+      "forks": 4,
       "updated_at": "2026-05-15T09:46:21Z",
       "language": "Shell",
       "archived": false
@@ -1556,7 +1556,7 @@
       "url": "https://github.com/YunoHost-Apps/davis_ynh",
       "stars": 1,
       "forks": 4,
-      "updated_at": "2026-06-02T18:22:45Z",
+      "updated_at": "2026-06-24T17:39:43Z",
       "language": "Shell",
       "archived": false
     },
@@ -3205,7 +3205,7 @@
       "description": "Ghost package for YunoHost",
       "url": "https://github.com/YunoHost-Apps/ghost_ynh",
       "stars": 22,
-      "forks": 29,
+      "forks": 30,
       "updated_at": "2026-06-20T06:59:52Z",
       "language": "Shell",
       "archived": false
@@ -3535,7 +3535,7 @@
       "description": "Grist package for YunoHost",
       "url": "https://github.com/YunoHost-Apps/grist_ynh",
       "stars": 14,
-      "forks": 6,
+      "forks": 7,
       "updated_at": "2026-06-20T11:30:37Z",
       "language": "Shell",
       "archived": false
@@ -4779,7 +4779,7 @@
       "url": "https://github.com/YunoHost-Apps/libreerp_ynh",
       "stars": 18,
       "forks": 18,
-      "updated_at": "2026-06-15T05:49:22Z",
+      "updated_at": "2026-06-24T21:26:31Z",
       "language": "Shell",
       "archived": false
     },
@@ -4900,7 +4900,7 @@
       "url": "https://github.com/YunoHost-Apps/limesurvey_ynh",
       "stars": 6,
       "forks": 13,
-      "updated_at": "2026-06-21T09:59:24Z",
+      "updated_at": "2026-06-24T18:01:44Z",
       "language": "Shell",
       "archived": false
     },
@@ -6154,7 +6154,7 @@
       "url": "https://github.com/YunoHost-Apps/n8n_ynh",
       "stars": 20,
       "forks": 22,
-      "updated_at": "2026-06-18T13:22:42Z",
+      "updated_at": "2026-06-25T14:43:56Z",
       "language": "Shell",
       "archived": false
     },
@@ -6979,7 +6979,7 @@
       "url": "https://github.com/YunoHost-Apps/penpot_ynh",
       "stars": 9,
       "forks": 5,
-      "updated_at": "2026-06-12T11:22:19Z",
+      "updated_at": "2026-06-25T08:01:20Z",
       "language": "Shell",
       "archived": false
     },
@@ -7956,9 +7956,9 @@
       "name": "readeck",
       "description": "Readeck package for YunoHost",
       "url": "https://github.com/YunoHost-Apps/readeck_ynh",
-      "stars": 5,
+      "stars": 6,
       "forks": 5,
-      "updated_at": "2026-04-17T02:46:34Z",
+      "updated_at": "2026-06-24T16:57:59Z",
       "language": "Shell",
       "archived": false
     },
@@ -10444,7 +10444,7 @@
       "url": "https://github.com/YunoHost-Apps/workout-tracker_ynh",
       "stars": 2,
       "forks": 2,
-      "updated_at": "2026-02-20T06:09:01Z",
+      "updated_at": "2026-06-26T02:36:59Z",
       "language": "Shell",
       "archived": false
     },
