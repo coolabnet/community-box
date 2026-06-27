@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-06-26T09:35:26.905Z",
+  "timestamp": "2026-06-27T08:41:47.623Z",
   "script": "scripts.test.js",
   "source": "YunoHost-Apps GitHub Organization",
   "url": "https://github.com/YunoHost-Apps",
@@ -818,7 +818,7 @@
       "description": "Enable deployment of Cookie Aware Cors Proxy to YunoHost",
       "url": "https://github.com/YunoHost-Apps/cac-proxy_ynh",
       "stars": 3,
-      "forks": 2,
+      "forks": 3,
       "updated_at": "2025-09-18T16:36:29Z",
       "language": "Shell",
       "archived": false
@@ -2215,7 +2215,7 @@
       "description": "Eleventy package for YunoHost",
       "url": "https://github.com/YunoHost-Apps/eleventy_ynh",
       "stars": 4,
-      "forks": 3,
+      "forks": 4,
       "updated_at": "2026-06-11T06:09:13Z",
       "language": "Shell",
       "archived": false
@@ -4097,7 +4097,7 @@
       "url": "https://github.com/YunoHost-Apps/invoiceninja5_ynh",
       "stars": 12,
       "forks": 6,
-      "updated_at": "2026-06-09T19:11:29Z",
+      "updated_at": "2026-06-26T14:42:26Z",
       "language": "Shell",
       "archived": false
     },
@@ -5153,7 +5153,7 @@
       "url": "https://github.com/YunoHost-Apps/lychee_ynh",
       "stars": 12,
       "forks": 6,
-      "updated_at": "2026-06-18T15:18:55Z",
+      "updated_at": "2026-06-27T07:47:30Z",
       "language": "Shell",
       "archived": false
     },
@@ -6440,7 +6440,7 @@
       "url": "https://github.com/YunoHost-Apps/ollama_ynh",
       "stars": 5,
       "forks": 3,
-      "updated_at": "2026-06-19T06:43:22Z",
+      "updated_at": "2026-06-27T08:18:56Z",
       "language": "Shell",
       "archived": false
     },
@@ -8442,7 +8442,7 @@
       "url": "https://github.com/YunoHost-Apps/seaweedfs_ynh",
       "stars": 0,
       "forks": 1,
-      "updated_at": "2026-06-22T10:07:38Z",
+      "updated_at": "2026-06-26T22:32:38Z",
       "language": "Shell",
       "archived": false
     },
@@ -10928,7 +10928,7 @@
       "url": "https://github.com/YunoHost-Apps/zwiicms_ynh",
       "stars": 1,
       "forks": 1,
-      "updated_at": "2026-05-31T05:37:48Z",
+      "updated_at": "2026-06-26T13:15:05Z",
       "language": "Shell",
       "archived": false
     }

@@ -1,19 +1,19 @@
 {
-  "timestamp": "2026-06-26T09:35:14.260Z",
+  "timestamp": "2026-06-27T08:41:46.822Z",
   "script": "run-all.js",
   "note": "Summary of all data fetching script executions",
   "data": {
-    "execution_time": "2026-06-26T09:35:14.260Z",
+    "execution_time": "2026-06-27T08:41:46.822Z",
     "total_scripts": 6,
     "successful": 6,
     "failed": 0,
-    "total_duration_ms": 20513,
+    "total_duration_ms": 14521,
     "continue_on_error": true,
     "results": [
       {
         "name": "CapRover UI Translations",
         "success": true,
-        "duration": 167,
+        "duration": 165,
         "result": [
           "ar-EG",
           "de-DE",
@@ -34,7 +34,7 @@
       {
         "name": "CasaOS UI Translations",
         "success": true,
-        "duration": 124,
+        "duration": 104,
         "result": [
           "ca_ES",
           "cs_CZ",
@@ -69,7 +69,7 @@
       {
         "name": "YunoHost Apps",
         "success": true,
-        "duration": 18284,
+        "duration": 12339,
         "result": {
           "count": 992,
           "apps": [
@@ -871,7 +871,7 @@
               "description": "Enable deployment of Cookie Aware Cors Proxy to YunoHost",
               "url": "https://github.com/YunoHost-Apps/cac-proxy_ynh",
               "stars": 3,
-              "forks": 2,
+              "forks": 3,
               "updated_at": "2025-09-18T16:36:29Z",
               "language": "Shell",
               "archived": false
@@ -2268,7 +2268,7 @@
               "description": "Eleventy package for YunoHost",
               "url": "https://github.com/YunoHost-Apps/eleventy_ynh",
               "stars": 4,
-              "forks": 3,
+              "forks": 4,
               "updated_at": "2026-06-11T06:09:13Z",
               "language": "Shell",
               "archived": false
@@ -4150,7 +4150,7 @@
               "url": "https://github.com/YunoHost-Apps/invoiceninja5_ynh",
               "stars": 12,
               "forks": 6,
-              "updated_at": "2026-06-09T19:11:29Z",
+              "updated_at": "2026-06-26T14:42:26Z",
               "language": "Shell",
               "archived": false
             },
@@ -5206,7 +5206,7 @@
               "url": "https://github.com/YunoHost-Apps/lychee_ynh",
               "stars": 12,
               "forks": 6,
-              "updated_at": "2026-06-18T15:18:55Z",
+              "updated_at": "2026-06-27T07:47:30Z",
               "language": "Shell",
               "archived": false
             },
@@ -6493,7 +6493,7 @@
               "url": "https://github.com/YunoHost-Apps/ollama_ynh",
               "stars": 5,
               "forks": 3,
-              "updated_at": "2026-06-19T06:43:22Z",
+              "updated_at": "2026-06-27T08:18:56Z",
               "language": "Shell",
               "archived": false
             },
@@ -8495,7 +8495,7 @@
               "url": "https://github.com/YunoHost-Apps/seaweedfs_ynh",
               "stars": 0,
               "forks": 1,
-              "updated_at": "2026-06-22T10:07:38Z",
+              "updated_at": "2026-06-26T22:32:38Z",
               "language": "Shell",
               "archived": false
             },
@@ -10981,7 +10981,7 @@
               "url": "https://github.com/YunoHost-Apps/zwiicms_ynh",
               "stars": 1,
               "forks": 1,
-              "updated_at": "2026-05-31T05:37:48Z",
+              "updated_at": "2026-06-26T13:15:05Z",
               "language": "Shell",
               "archived": false
             }
@@ -11004,7 +11004,7 @@
       {
         "name": "YunoHost Docs Translations",
         "success": true,
-        "duration": 97,
+        "duration": 74,
         "result": [
           "de",
           "docs",
@@ -11018,7 +11018,7 @@
       {
         "name": "YunoHost UI Translations",
         "success": true,
-        "duration": 1471,
+        "duration": 1506,
         "result": [
           {
             "language": "French",
@@ -11425,7 +11425,7 @@
       {
         "name": "Zimaboard Shipping Areas",
         "success": true,
-        "duration": 370,
+        "duration": 333,
         "result": [
           "Argentina",
           "Australia",
