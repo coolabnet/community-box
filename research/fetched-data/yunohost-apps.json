@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-06-27T08:41:47.623Z",
+  "timestamp": "2026-06-28T09:17:19.949Z",
   "script": "scripts.test.js",
   "source": "YunoHost-Apps GitHub Organization",
   "url": "https://github.com/YunoHost-Apps",
@@ -1422,9 +1422,9 @@
       "name": "cryptpad",
       "description": "CryptPad package for YunoHost",
       "url": "https://github.com/YunoHost-Apps/cryptpad_ynh",
-      "stars": 31,
+      "stars": 32,
       "forks": 22,
-      "updated_at": "2026-05-31T17:35:34Z",
+      "updated_at": "2026-06-28T05:19:46Z",
       "language": "JavaScript",
       "archived": false
     },
@@ -3457,9 +3457,9 @@
       "name": "gotosocial",
       "description": "GoToSocial package for YunoHost: an ActivityPub social network server, written in Golang.",
       "url": "https://github.com/YunoHost-Apps/gotosocial_ynh",
-      "stars": 21,
+      "stars": 22,
       "forks": 12,
-      "updated_at": "2026-04-26T01:23:48Z",
+      "updated_at": "2026-06-28T04:29:35Z",
       "language": "Shell",
       "archived": false
     },
@@ -6715,7 +6715,7 @@
       "url": "https://github.com/YunoHost-Apps/ots_ynh",
       "stars": 0,
       "forks": 0,
-      "updated_at": "2026-06-17T06:13:23Z",
+      "updated_at": "2026-06-28T00:56:13Z",
       "language": "Shell",
       "archived": false
     },
@@ -6737,7 +6737,7 @@
       "url": "https://github.com/YunoHost-Apps/overleaf_ynh",
       "stars": 3,
       "forks": 6,
-      "updated_at": "2026-06-23T06:56:32Z",
+      "updated_at": "2026-06-27T09:24:14Z",
       "language": "Shell",
       "archived": false
     },
