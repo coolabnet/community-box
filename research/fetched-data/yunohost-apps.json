@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-06-28T09:17:19.949Z",
+  "timestamp": "2026-06-29T11:08:33.077Z",
   "script": "scripts.test.js",
   "source": "YunoHost-Apps GitHub Organization",
   "url": "https://github.com/YunoHost-Apps",
@@ -610,7 +610,7 @@
       "url": "https://github.com/YunoHost-Apps/bentopdf_ynh",
       "stars": 3,
       "forks": 0,
-      "updated_at": "2026-06-13T20:34:40Z",
+      "updated_at": "2026-06-29T09:54:33Z",
       "language": "Shell",
       "archived": false
     },
@@ -2358,7 +2358,7 @@
       "description": "Etherpad-Lite package for YunoHost",
       "url": "https://github.com/YunoHost-Apps/etherpad_ynh",
       "stars": 3,
-      "forks": 4,
+      "forks": 3,
       "updated_at": "2026-06-23T18:28:09Z",
       "language": "Shell",
       "archived": false
@@ -2809,7 +2809,7 @@
       "description": "Forgejo package for YunoHost",
       "url": "https://github.com/YunoHost-Apps/forgejo_ynh",
       "stars": 23,
-      "forks": 10,
+      "forks": 9,
       "updated_at": "2026-06-17T16:52:16Z",
       "language": "Shell",
       "archived": false
@@ -4097,7 +4097,7 @@
       "url": "https://github.com/YunoHost-Apps/invoiceninja5_ynh",
       "stars": 12,
       "forks": 6,
-      "updated_at": "2026-06-26T14:42:26Z",
+      "updated_at": "2026-06-28T18:02:37Z",
       "language": "Shell",
       "archived": false
     },
@@ -4141,7 +4141,7 @@
       "url": "https://github.com/YunoHost-Apps/it-tools_ynh",
       "stars": 4,
       "forks": 1,
-      "updated_at": "2026-06-24T01:43:20Z",
+      "updated_at": "2026-06-29T09:56:28Z",
       "language": "Shell",
       "archived": false
     },
@@ -4239,7 +4239,7 @@
       "description": "Jellyfin package for YunoHost",
       "url": "https://github.com/YunoHost-Apps/jellyfin_ynh",
       "stars": 33,
-      "forks": 24,
+      "forks": 23,
       "updated_at": "2026-06-08T10:02:30Z",
       "language": "Shell",
       "archived": false
@@ -4251,7 +4251,7 @@
       "url": "https://github.com/YunoHost-Apps/jellyfin-vue_ynh",
       "stars": 0,
       "forks": 3,
-      "updated_at": "2026-06-22T08:38:12Z",
+      "updated_at": "2026-06-29T05:13:34Z",
       "language": "Shell",
       "archived": false
     },
@@ -8431,7 +8431,7 @@
       "url": "https://github.com/YunoHost-Apps/searxng_ynh",
       "stars": 14,
       "forks": 4,
-      "updated_at": "2026-06-22T06:41:47Z",
+      "updated_at": "2026-06-29T06:30:41Z",
       "language": "Shell",
       "archived": false
     },
@@ -9399,7 +9399,7 @@
       "url": "https://github.com/YunoHost-Apps/terraforming-mars_ynh",
       "stars": 2,
       "forks": 2,
-      "updated_at": "2026-06-22T11:12:40Z",
+      "updated_at": "2026-06-29T06:21:12Z",
       "language": "Shell",
       "archived": false
     },
@@ -9784,7 +9784,7 @@
       "url": "https://github.com/YunoHost-Apps/tuwunel_ynh",
       "stars": 9,
       "forks": 2,
-      "updated_at": "2026-06-06T05:12:20Z",
+      "updated_at": "2026-06-28T20:56:51Z",
       "language": "Shell",
       "archived": false
     },
@@ -10322,7 +10322,7 @@
       "description": "",
       "url": "https://github.com/YunoHost-Apps/wikimore_ynh",
       "stars": 0,
-      "forks": 1,
+      "forks": 0,
       "updated_at": "2026-06-13T17:08:40Z",
       "language": "Shell",
       "archived": false
@@ -10344,7 +10344,7 @@
       "description": "WireGuard VPN software with a web UI configuration companion, packaged for YunoHost.",
       "url": "https://github.com/YunoHost-Apps/wireguard_ynh",
       "stars": 38,
-      "forks": 14,
+      "forks": 15,
       "updated_at": "2026-06-23T11:04:35Z",
       "language": "Shell",
       "archived": false
@@ -10730,7 +10730,7 @@
       "url": "https://github.com/YunoHost-Apps/yunorunner_ynh",
       "stars": 6,
       "forks": 7,
-      "updated_at": "2026-06-24T08:50:14Z",
+      "updated_at": "2026-06-28T22:04:36Z",
       "language": "Shell",
       "archived": false
     },
