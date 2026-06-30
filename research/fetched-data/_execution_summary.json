@@ -1,19 +1,19 @@
 {
-  "timestamp": "2026-06-29T11:08:32.537Z",
+  "timestamp": "2026-06-30T09:47:38.873Z",
   "script": "run-all.js",
   "note": "Summary of all data fetching script executions",
   "data": {
-    "execution_time": "2026-06-29T11:08:32.537Z",
+    "execution_time": "2026-06-30T09:47:38.873Z",
     "total_scripts": 6,
     "successful": 6,
     "failed": 0,
-    "total_duration_ms": 23934,
+    "total_duration_ms": 14020,
     "continue_on_error": true,
     "results": [
       {
         "name": "CapRover UI Translations",
         "success": true,
-        "duration": 192,
+        "duration": 216,
         "result": [
           "ar-EG",
           "de-DE",
@@ -34,7 +34,7 @@
       {
         "name": "CasaOS UI Translations",
         "success": true,
-        "duration": 95,
+        "duration": 122,
         "result": [
           "ca_ES",
           "cs_CZ",
@@ -69,7 +69,7 @@
       {
         "name": "YunoHost Apps",
         "success": true,
-        "duration": 22100,
+        "duration": 11769,
         "result": {
           "count": 992,
           "apps": [
@@ -124,7 +124,7 @@
               "url": "https://github.com/YunoHost-Apps/2FAuth_ynh",
               "stars": 4,
               "forks": 5,
-              "updated_at": "2026-06-09T08:03:54Z",
+              "updated_at": "2026-06-30T00:09:07Z",
               "language": "Shell",
               "archived": false
             },
@@ -243,9 +243,9 @@
               "name": "agendav",
               "description": "AgenDAV package for YunoHost",
               "url": "https://github.com/YunoHost-Apps/agendav_ynh",
-              "stars": 3,
+              "stars": 4,
               "forks": 14,
-              "updated_at": "2025-08-30T17:39:04Z",
+              "updated_at": "2026-06-30T05:29:05Z",
               "language": "Shell",
               "archived": true
             },
@@ -4601,7 +4601,7 @@
               "url": "https://github.com/YunoHost-Apps/koffan_ynh",
               "stars": 0,
               "forks": 0,
-              "updated_at": "2026-05-19T16:58:23Z",
+              "updated_at": "2026-06-29T17:50:00Z",
               "language": "Shell",
               "archived": false
             },
@@ -5030,7 +5030,7 @@
               "url": "https://github.com/YunoHost-Apps/listmonk_ynh",
               "stars": 5,
               "forks": 4,
-              "updated_at": "2026-04-06T09:52:25Z",
+              "updated_at": "2026-06-29T17:12:43Z",
               "language": "Shell",
               "archived": false
             },
@@ -7351,7 +7351,7 @@
               "url": "https://github.com/YunoHost-Apps/pixelfed_ynh",
               "stars": 53,
               "forks": 21,
-              "updated_at": "2026-05-29T16:27:03Z",
+              "updated_at": "2026-06-29T16:42:27Z",
               "language": "Shell",
               "archived": false
             },
@@ -8009,9 +8009,9 @@
               "name": "readeck",
               "description": "Readeck package for YunoHost",
               "url": "https://github.com/YunoHost-Apps/readeck_ynh",
-              "stars": 6,
+              "stars": 7,
               "forks": 5,
-              "updated_at": "2026-06-24T16:57:59Z",
+              "updated_at": "2026-06-29T13:33:46Z",
               "language": "Shell",
               "archived": false
             },
@@ -8495,7 +8495,7 @@
               "url": "https://github.com/YunoHost-Apps/seaweedfs_ynh",
               "stars": 0,
               "forks": 1,
-              "updated_at": "2026-06-26T22:32:38Z",
+              "updated_at": "2026-06-30T00:47:16Z",
               "language": "Shell",
               "archived": false
             },
@@ -9318,9 +9318,9 @@
               "name": "syncserver-rs",
               "description": "Firefox Sync Storage packaged for YunoHost.",
               "url": "https://github.com/YunoHost-Apps/syncserver-rs_ynh",
-              "stars": 8,
+              "stars": 9,
               "forks": 2,
-              "updated_at": "2026-06-19T08:44:13Z",
+              "updated_at": "2026-06-29T15:18:02Z",
               "language": "Shell",
               "archived": false
             },
@@ -9881,7 +9881,7 @@
               "url": "https://github.com/YunoHost-Apps/umami_ynh",
               "stars": 4,
               "forks": 5,
-              "updated_at": "2026-05-10T12:26:49Z",
+              "updated_at": "2026-06-30T07:27:36Z",
               "language": "Shell",
               "archived": false
             },
@@ -10453,7 +10453,7 @@
               "url": "https://github.com/YunoHost-Apps/woodpecker_ynh",
               "stars": 2,
               "forks": 2,
-              "updated_at": "2026-05-29T18:19:53Z",
+              "updated_at": "2026-06-29T17:12:31Z",
               "language": "Shell",
               "archived": false
             },
@@ -10761,7 +10761,7 @@
               "url": "https://github.com/YunoHost-Apps/yunohost_myip_ynh",
               "stars": 1,
               "forks": 0,
-              "updated_at": "2025-09-10T18:20:19Z",
+              "updated_at": "2026-06-29T21:04:24Z",
               "language": "Shell",
               "archived": false
             },
@@ -10981,7 +10981,7 @@
               "url": "https://github.com/YunoHost-Apps/zwiicms_ynh",
               "stars": 1,
               "forks": 1,
-              "updated_at": "2026-06-26T13:15:05Z",
+              "updated_at": "2026-06-30T06:00:46Z",
               "language": "Shell",
               "archived": false
             }
@@ -11004,7 +11004,7 @@
       {
         "name": "YunoHost Docs Translations",
         "success": true,
-        "duration": 66,
+        "duration": 81,
         "result": [
           "de",
           "docs",
@@ -11018,7 +11018,7 @@
       {
         "name": "YunoHost UI Translations",
         "success": true,
-        "duration": 1234,
+        "duration": 1509,
         "result": [
           {
             "language": "French",
@@ -11425,7 +11425,7 @@
       {
         "name": "Zimaboard Shipping Areas",
         "success": true,
-        "duration": 247,
+        "duration": 323,
         "result": [
           "Argentina",
           "Australia",
