@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-06-30T09:47:41.071Z",
+  "timestamp": "2026-07-01T09:57:09.120Z",
   "script": "scripts.test.js",
   "source": "YunoHost Translation Platform",
   "url": "https://translate.yunohost.org/",
@@ -242,20 +242,20 @@
       "last_change": "2025-08-04T01:53:29.737805Z"
     },
     {
+      "language": "German",
+      "language_code": "de",
+      "translated_percent": 86,
+      "translated_words": 8677,
+      "total_words": 11291,
+      "last_change": "2026-06-30T18:15:08.504617Z"
+    },
+    {
       "language": "Turkish",
       "language_code": "tr",
       "translated_percent": 83.8,
       "translated_words": 2964,
       "total_words": 3820,
       "last_change": "2026-06-03T12:49:46.609945Z"
-    },
-    {
-      "language": "German",
-      "language_code": "de",
-      "translated_percent": 80.7,
-      "translated_words": 8147,
-      "total_words": 11291,
-      "last_change": "2026-06-29T04:43:19.945880Z"
     },
     {
       "language": "Arabic",

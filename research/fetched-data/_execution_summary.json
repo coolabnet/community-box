@@ -1,19 +1,19 @@
 {
-  "timestamp": "2026-06-30T09:47:38.873Z",
+  "timestamp": "2026-07-01T09:57:06.950Z",
   "script": "run-all.js",
   "note": "Summary of all data fetching script executions",
   "data": {
-    "execution_time": "2026-06-30T09:47:38.873Z",
+    "execution_time": "2026-07-01T09:57:06.950Z",
     "total_scripts": 6,
     "successful": 6,
     "failed": 0,
-    "total_duration_ms": 14020,
+    "total_duration_ms": 21745,
     "continue_on_error": true,
     "results": [
       {
         "name": "CapRover UI Translations",
         "success": true,
-        "duration": 216,
+        "duration": 145,
         "result": [
           "ar-EG",
           "de-DE",
@@ -34,7 +34,7 @@
       {
         "name": "CasaOS UI Translations",
         "success": true,
-        "duration": 122,
+        "duration": 93,
         "result": [
           "ca_ES",
           "cs_CZ",
@@ -69,7 +69,7 @@
       {
         "name": "YunoHost Apps",
         "success": true,
-        "duration": 11769,
+        "duration": 19841,
         "result": {
           "count": 992,
           "apps": [
@@ -3589,7 +3589,7 @@
               "url": "https://github.com/YunoHost-Apps/grist_ynh",
               "stars": 14,
               "forks": 7,
-              "updated_at": "2026-06-20T11:30:37Z",
+              "updated_at": "2026-07-01T08:49:15Z",
               "language": "Shell",
               "archived": false
             },
@@ -6207,7 +6207,7 @@
               "url": "https://github.com/YunoHost-Apps/n8n_ynh",
               "stars": 20,
               "forks": 22,
-              "updated_at": "2026-06-25T14:43:56Z",
+              "updated_at": "2026-07-01T02:10:44Z",
               "language": "Shell",
               "archived": false
             },
@@ -6493,7 +6493,7 @@
               "url": "https://github.com/YunoHost-Apps/ollama_ynh",
               "stars": 5,
               "forks": 3,
-              "updated_at": "2026-06-27T08:18:56Z",
+              "updated_at": "2026-07-01T05:50:58Z",
               "language": "Shell",
               "archived": false
             },
@@ -6592,7 +6592,7 @@
               "url": "https://github.com/YunoHost-Apps/opencloud_ynh",
               "stars": 6,
               "forks": 3,
-              "updated_at": "2026-06-16T11:56:28Z",
+              "updated_at": "2026-06-30T19:31:30Z",
               "language": "Shell",
               "archived": false
             },
@@ -6955,7 +6955,7 @@
               "url": "https://github.com/YunoHost-Apps/paymenter_ynh",
               "stars": 0,
               "forks": 1,
-              "updated_at": "2026-06-14T15:47:36Z",
+              "updated_at": "2026-07-01T02:26:43Z",
               "language": "Shell",
               "archived": false
             },
@@ -10145,7 +10145,7 @@
               "url": "https://github.com/YunoHost-Apps/warpgate_ynh",
               "stars": 1,
               "forks": 0,
-              "updated_at": "2026-06-19T02:13:21Z",
+              "updated_at": "2026-07-01T00:27:30Z",
               "language": "Shell",
               "archived": false
             },
@@ -11004,7 +11004,7 @@
       {
         "name": "YunoHost Docs Translations",
         "success": true,
-        "duration": 81,
+        "duration": 70,
         "result": [
           "de",
           "docs",
@@ -11018,7 +11018,7 @@
       {
         "name": "YunoHost UI Translations",
         "success": true,
-        "duration": 1509,
+        "duration": 1206,
         "result": [
           {
             "language": "French",
@@ -11253,20 +11253,20 @@
             "last_change": "2025-08-04T01:53:29.737805Z"
           },
           {
+            "language": "German",
+            "language_code": "de",
+            "translated_percent": 86,
+            "translated_words": 8677,
+            "total_words": 11291,
+            "last_change": "2026-06-30T18:15:08.504617Z"
+          },
+          {
             "language": "Turkish",
             "language_code": "tr",
             "translated_percent": 83.8,
             "translated_words": 2964,
             "total_words": 3820,
             "last_change": "2026-06-03T12:49:46.609945Z"
-          },
-          {
-            "language": "German",
-            "language_code": "de",
-            "translated_percent": 80.7,
-            "translated_words": 8147,
-            "total_words": 11291,
-            "last_change": "2026-06-29T04:43:19.945880Z"
           },
           {
             "language": "Arabic",
@@ -11425,7 +11425,7 @@
       {
         "name": "Zimaboard Shipping Areas",
         "success": true,
-        "duration": 323,
+        "duration": 390,
         "result": [
           "Argentina",
           "Australia",
