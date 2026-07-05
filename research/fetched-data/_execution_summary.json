@@ -1,19 +1,19 @@
 {
-  "timestamp": "2026-07-04T08:43:15.732Z",
+  "timestamp": "2026-07-05T09:11:55.594Z",
   "script": "run-all.js",
   "note": "Summary of all data fetching script executions",
   "data": {
-    "execution_time": "2026-07-04T08:43:15.732Z",
+    "execution_time": "2026-07-05T09:11:55.594Z",
     "total_scripts": 6,
     "successful": 6,
     "failed": 0,
-    "total_duration_ms": 20880,
+    "total_duration_ms": 15803,
     "continue_on_error": true,
     "results": [
       {
         "name": "CapRover UI Translations",
         "success": true,
-        "duration": 278,
+        "duration": 174,
         "result": [
           "ar-EG",
           "de-DE",
@@ -34,7 +34,7 @@
       {
         "name": "CasaOS UI Translations",
         "success": true,
-        "duration": 172,
+        "duration": 104,
         "result": [
           "ca_ES",
           "cs_CZ",
@@ -69,9 +69,9 @@
       {
         "name": "YunoHost Apps",
         "success": true,
-        "duration": 18379,
+        "duration": 13870,
         "result": {
-          "count": 994,
+          "count": 995,
           "apps": [
             {
               "id": "13ft_ynh",
@@ -2665,7 +2665,7 @@
               "url": "https://github.com/YunoHost-Apps/filerise_ynh",
               "stars": 1,
               "forks": 1,
-              "updated_at": "2026-05-08T12:11:11Z",
+              "updated_at": "2026-07-05T08:54:16Z",
               "language": "PHP",
               "archived": false
             },
@@ -4062,7 +4062,7 @@
               "url": "https://github.com/YunoHost-Apps/immich_ynh",
               "stars": 29,
               "forks": 17,
-              "updated_at": "2026-06-15T21:03:45Z",
+              "updated_at": "2026-07-04T16:36:10Z",
               "language": "Shell",
               "archived": false
             },
@@ -4227,7 +4227,7 @@
               "url": "https://github.com/YunoHost-Apps/jackett_ynh",
               "stars": 3,
               "forks": 5,
-              "updated_at": "2026-07-02T12:24:07Z",
+              "updated_at": "2026-07-05T06:21:34Z",
               "language": "Shell",
               "archived": false
             },
@@ -4445,9 +4445,9 @@
               "name": "karakeep",
               "description": "Karakeep package for YunoHost",
               "url": "https://github.com/YunoHost-Apps/karakeep_ynh",
-              "stars": 5,
+              "stars": 6,
               "forks": 3,
-              "updated_at": "2026-05-30T10:05:33Z",
+              "updated_at": "2026-07-04T20:49:05Z",
               "language": "Shell",
               "archived": false
             },
@@ -5543,11 +5543,11 @@
             {
               "id": "mediatheque_ynh",
               "name": "mediatheque",
-              "description": "Paquet yunohost pour mediatheque",
+              "description": "Mediatheque package for YunoHost",
               "url": "https://github.com/YunoHost-Apps/mediatheque_ynh",
               "stars": 0,
               "forks": 0,
-              "updated_at": "2026-07-03T20:58:51Z",
+              "updated_at": "2026-07-04T18:33:56Z",
               "language": "Shell",
               "archived": false
             },
@@ -6274,6 +6274,17 @@
               "stars": 3,
               "forks": 3,
               "updated_at": "2026-03-16T16:59:06Z",
+              "language": "Shell",
+              "archived": false
+            },
+            {
+              "id": "nextcloud-whiteboard_ynh",
+              "name": "nextcloud-whiteboard",
+              "description": "whiteboard app for Nextcloud",
+              "url": "https://github.com/YunoHost-Apps/nextcloud-whiteboard_ynh",
+              "stars": 0,
+              "forks": 0,
+              "updated_at": "2026-07-05T08:52:27Z",
               "language": "Shell",
               "archived": false
             },
@@ -7197,7 +7208,7 @@
               "url": "https://github.com/YunoHost-Apps/phpinfo_ynh",
               "stars": 0,
               "forks": 2,
-              "updated_at": "2025-08-30T17:05:10Z",
+              "updated_at": "2026-07-04T10:34:35Z",
               "language": "Shell",
               "archived": false
             },
@@ -10662,7 +10673,7 @@
               "url": "https://github.com/YunoHost-Apps/youtarr_ynh",
               "stars": 0,
               "forks": 0,
-              "updated_at": "2026-07-04T07:31:50Z",
+              "updated_at": "2026-07-04T09:58:05Z",
               "language": "Shell",
               "archived": false
             },
@@ -11003,7 +11014,7 @@
               "url": "https://github.com/YunoHost-Apps/zwiicms_ynh",
               "stars": 1,
               "forks": 1,
-              "updated_at": "2026-07-04T08:12:35Z",
+              "updated_at": "2026-07-05T06:37:15Z",
               "language": "Shell",
               "archived": false
             }
@@ -11026,7 +11037,7 @@
       {
         "name": "YunoHost Docs Translations",
         "success": true,
-        "duration": 142,
+        "duration": 78,
         "result": [
           "de",
           "docs",
@@ -11040,7 +11051,7 @@
       {
         "name": "YunoHost UI Translations",
         "success": true,
-        "duration": 1656,
+        "duration": 1242,
         "result": [
           {
             "language": "French",
@@ -11447,7 +11458,7 @@
       {
         "name": "Zimaboard Shipping Areas",
         "success": true,
-        "duration": 253,
+        "duration": 335,
         "result": [
           "Argentina",
           "Australia",

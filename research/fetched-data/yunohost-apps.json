@@ -1,11 +1,11 @@
 {
-  "timestamp": "2026-07-04T08:43:16.546Z",
+  "timestamp": "2026-07-05T09:11:56.138Z",
   "script": "scripts.test.js",
   "source": "YunoHost-Apps GitHub Organization",
   "url": "https://github.com/YunoHost-Apps",
   "api_url": "https://api.github.com/orgs/YunoHost-Apps/repos",
-  "total_apps": 994,
-  "total_repos_checked": 1015,
+  "total_apps": 995,
+  "total_repos_checked": 1016,
   "languages": [
     "CSS",
     "HTML",
@@ -2612,7 +2612,7 @@
       "url": "https://github.com/YunoHost-Apps/filerise_ynh",
       "stars": 1,
       "forks": 1,
-      "updated_at": "2026-05-08T12:11:11Z",
+      "updated_at": "2026-07-05T08:54:16Z",
       "language": "PHP",
       "archived": false
     },
@@ -4009,7 +4009,7 @@
       "url": "https://github.com/YunoHost-Apps/immich_ynh",
       "stars": 29,
       "forks": 17,
-      "updated_at": "2026-06-15T21:03:45Z",
+      "updated_at": "2026-07-04T16:36:10Z",
       "language": "Shell",
       "archived": false
     },
@@ -4174,7 +4174,7 @@
       "url": "https://github.com/YunoHost-Apps/jackett_ynh",
       "stars": 3,
       "forks": 5,
-      "updated_at": "2026-07-02T12:24:07Z",
+      "updated_at": "2026-07-05T06:21:34Z",
       "language": "Shell",
       "archived": false
     },
@@ -4392,9 +4392,9 @@
       "name": "karakeep",
       "description": "Karakeep package for YunoHost",
       "url": "https://github.com/YunoHost-Apps/karakeep_ynh",
-      "stars": 5,
+      "stars": 6,
       "forks": 3,
-      "updated_at": "2026-05-30T10:05:33Z",
+      "updated_at": "2026-07-04T20:49:05Z",
       "language": "Shell",
       "archived": false
     },
@@ -5490,11 +5490,11 @@
     {
       "id": "mediatheque_ynh",
       "name": "mediatheque",
-      "description": "Paquet yunohost pour mediatheque",
+      "description": "Mediatheque package for YunoHost",
       "url": "https://github.com/YunoHost-Apps/mediatheque_ynh",
       "stars": 0,
       "forks": 0,
-      "updated_at": "2026-07-03T20:58:51Z",
+      "updated_at": "2026-07-04T18:33:56Z",
       "language": "Shell",
       "archived": false
     },
@@ -6221,6 +6221,17 @@
       "stars": 3,
       "forks": 3,
       "updated_at": "2026-03-16T16:59:06Z",
+      "language": "Shell",
+      "archived": false
+    },
+    {
+      "id": "nextcloud-whiteboard_ynh",
+      "name": "nextcloud-whiteboard",
+      "description": "whiteboard app for Nextcloud",
+      "url": "https://github.com/YunoHost-Apps/nextcloud-whiteboard_ynh",
+      "stars": 0,
+      "forks": 0,
+      "updated_at": "2026-07-05T08:52:27Z",
       "language": "Shell",
       "archived": false
     },
@@ -7144,7 +7155,7 @@
       "url": "https://github.com/YunoHost-Apps/phpinfo_ynh",
       "stars": 0,
       "forks": 2,
-      "updated_at": "2025-08-30T17:05:10Z",
+      "updated_at": "2026-07-04T10:34:35Z",
       "language": "Shell",
       "archived": false
     },
@@ -10609,7 +10620,7 @@
       "url": "https://github.com/YunoHost-Apps/youtarr_ynh",
       "stars": 0,
       "forks": 0,
-      "updated_at": "2026-07-04T07:31:50Z",
+      "updated_at": "2026-07-04T09:58:05Z",
       "language": "Shell",
       "archived": false
     },
@@ -10950,7 +10961,7 @@
       "url": "https://github.com/YunoHost-Apps/zwiicms_ynh",
       "stars": 1,
       "forks": 1,
-      "updated_at": "2026-07-04T08:12:35Z",
+      "updated_at": "2026-07-05T06:37:15Z",
       "language": "Shell",
       "archived": false
     }
