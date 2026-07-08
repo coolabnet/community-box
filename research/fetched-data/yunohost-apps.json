@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-07-07T09:50:06.139Z",
+  "timestamp": "2026-07-08T08:35:36.467Z",
   "script": "scripts.test.js",
   "source": "YunoHost-Apps GitHub Organization",
   "url": "https://github.com/YunoHost-Apps",
@@ -874,7 +874,7 @@
       "url": "https://github.com/YunoHost-Apps/calcom_ynh",
       "stars": 1,
       "forks": 1,
-      "updated_at": "2025-12-28T18:56:22Z",
+      "updated_at": "2026-07-08T06:49:06Z",
       "language": "Shell",
       "archived": false
     },
@@ -2709,9 +2709,9 @@
       "name": "flohmarkt",
       "description": "integration of flohmarkt - a federated decentral classified ad software using activitypub - into YunoHost",
       "url": "https://github.com/YunoHost-Apps/flohmarkt_ynh",
-      "stars": 4,
-      "forks": 3,
-      "updated_at": "2026-06-15T19:34:51Z",
+      "stars": 5,
+      "forks": 4,
+      "updated_at": "2026-07-08T00:06:06Z",
       "language": "Shell",
       "archived": false
     },
@@ -5494,7 +5494,7 @@
       "url": "https://github.com/YunoHost-Apps/mediatheque_ynh",
       "stars": 0,
       "forks": 0,
-      "updated_at": "2026-07-06T15:45:16Z",
+      "updated_at": "2026-07-07T15:39:24Z",
       "language": "Shell",
       "archived": false
     },
@@ -6858,7 +6858,7 @@
       "url": "https://github.com/YunoHost-Apps/pairdrop_ynh",
       "stars": 3,
       "forks": 1,
-      "updated_at": "2026-06-01T07:38:03Z",
+      "updated_at": "2026-07-07T14:22:53Z",
       "language": "Shell",
       "archived": false
     },
@@ -7540,7 +7540,7 @@
       "url": "https://github.com/YunoHost-Apps/postiz_ynh",
       "stars": 0,
       "forks": 0,
-      "updated_at": "2026-06-17T18:36:57Z",
+      "updated_at": "2026-07-07T17:12:28Z",
       "language": "Shell",
       "archived": false
     },
@@ -7628,7 +7628,7 @@
       "url": "https://github.com/YunoHost-Apps/profilarr_ynh",
       "stars": 0,
       "forks": 1,
-      "updated_at": "2026-02-01T16:54:53Z",
+      "updated_at": "2026-07-07T12:51:36Z",
       "language": "Shell",
       "archived": false
     },
@@ -10125,7 +10125,7 @@
       "url": "https://github.com/YunoHost-Apps/warpgate_ynh",
       "stars": 1,
       "forks": 0,
-      "updated_at": "2026-07-02T04:04:33Z",
+      "updated_at": "2026-07-08T02:03:40Z",
       "language": "Shell",
       "archived": false
     },
@@ -10972,7 +10972,7 @@
       "url": "https://github.com/YunoHost-Apps/zwiicms_ynh",
       "stars": 1,
       "forks": 1,
-      "updated_at": "2026-07-07T06:09:19Z",
+      "updated_at": "2026-07-08T05:47:53Z",
       "language": "Shell",
       "archived": false
     }

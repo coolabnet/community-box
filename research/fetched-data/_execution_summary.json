@@ -1,19 +1,19 @@
 {
-  "timestamp": "2026-07-07T09:50:05.519Z",
+  "timestamp": "2026-07-08T08:35:35.641Z",
   "script": "run-all.js",
   "note": "Summary of all data fetching script executions",
   "data": {
-    "execution_time": "2026-07-07T09:50:05.519Z",
+    "execution_time": "2026-07-08T08:35:35.641Z",
     "total_scripts": 6,
     "successful": 6,
     "failed": 0,
-    "total_duration_ms": 21136,
+    "total_duration_ms": 23190,
     "continue_on_error": true,
     "results": [
       {
         "name": "CapRover UI Translations",
         "success": true,
-        "duration": 242,
+        "duration": 318,
         "result": [
           "ar-EG",
           "de-DE",
@@ -34,7 +34,7 @@
       {
         "name": "CasaOS UI Translations",
         "success": true,
-        "duration": 190,
+        "duration": 279,
         "result": [
           "ca_ES",
           "cs_CZ",
@@ -69,7 +69,7 @@
       {
         "name": "YunoHost Apps",
         "success": true,
-        "duration": 18461,
+        "duration": 20148,
         "result": {
           "count": 996,
           "apps": [
@@ -927,7 +927,7 @@
               "url": "https://github.com/YunoHost-Apps/calcom_ynh",
               "stars": 1,
               "forks": 1,
-              "updated_at": "2025-12-28T18:56:22Z",
+              "updated_at": "2026-07-08T06:49:06Z",
               "language": "Shell",
               "archived": false
             },
@@ -2762,9 +2762,9 @@
               "name": "flohmarkt",
               "description": "integration of flohmarkt - a federated decentral classified ad software using activitypub - into YunoHost",
               "url": "https://github.com/YunoHost-Apps/flohmarkt_ynh",
-              "stars": 4,
-              "forks": 3,
-              "updated_at": "2026-06-15T19:34:51Z",
+              "stars": 5,
+              "forks": 4,
+              "updated_at": "2026-07-08T00:06:06Z",
               "language": "Shell",
               "archived": false
             },
@@ -5547,7 +5547,7 @@
               "url": "https://github.com/YunoHost-Apps/mediatheque_ynh",
               "stars": 0,
               "forks": 0,
-              "updated_at": "2026-07-06T15:45:16Z",
+              "updated_at": "2026-07-07T15:39:24Z",
               "language": "Shell",
               "archived": false
             },
@@ -6911,7 +6911,7 @@
               "url": "https://github.com/YunoHost-Apps/pairdrop_ynh",
               "stars": 3,
               "forks": 1,
-              "updated_at": "2026-06-01T07:38:03Z",
+              "updated_at": "2026-07-07T14:22:53Z",
               "language": "Shell",
               "archived": false
             },
@@ -7593,7 +7593,7 @@
               "url": "https://github.com/YunoHost-Apps/postiz_ynh",
               "stars": 0,
               "forks": 0,
-              "updated_at": "2026-06-17T18:36:57Z",
+              "updated_at": "2026-07-07T17:12:28Z",
               "language": "Shell",
               "archived": false
             },
@@ -7681,7 +7681,7 @@
               "url": "https://github.com/YunoHost-Apps/profilarr_ynh",
               "stars": 0,
               "forks": 1,
-              "updated_at": "2026-02-01T16:54:53Z",
+              "updated_at": "2026-07-07T12:51:36Z",
               "language": "Shell",
               "archived": false
             },
@@ -10178,7 +10178,7 @@
               "url": "https://github.com/YunoHost-Apps/warpgate_ynh",
               "stars": 1,
               "forks": 0,
-              "updated_at": "2026-07-02T04:04:33Z",
+              "updated_at": "2026-07-08T02:03:40Z",
               "language": "Shell",
               "archived": false
             },
@@ -11025,7 +11025,7 @@
               "url": "https://github.com/YunoHost-Apps/zwiicms_ynh",
               "stars": 1,
               "forks": 1,
-              "updated_at": "2026-07-07T06:09:19Z",
+              "updated_at": "2026-07-08T05:47:53Z",
               "language": "Shell",
               "archived": false
             }
@@ -11048,7 +11048,7 @@
       {
         "name": "YunoHost Docs Translations",
         "success": true,
-        "duration": 153,
+        "duration": 235,
         "result": [
           "de",
           "docs",
@@ -11062,7 +11062,7 @@
       {
         "name": "YunoHost UI Translations",
         "success": true,
-        "duration": 1667,
+        "duration": 1760,
         "result": [
           {
             "language": "French",
@@ -11469,7 +11469,7 @@
       {
         "name": "Zimaboard Shipping Areas",
         "success": true,
-        "duration": 423,
+        "duration": 450,
         "result": [
           "Argentina",
           "Australia",
