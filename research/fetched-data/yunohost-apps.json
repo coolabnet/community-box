@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-07-10T09:42:54.087Z",
+  "timestamp": "2026-07-11T08:02:26.388Z",
   "script": "scripts.test.js",
   "source": "YunoHost-Apps GitHub Organization",
   "url": "https://github.com/YunoHost-Apps",
@@ -82,7 +82,7 @@
       "url": "https://github.com/YunoHost-Apps/4get_ynh",
       "stars": 1,
       "forks": 0,
-      "updated_at": "2026-04-30T01:12:08Z",
+      "updated_at": "2026-07-10T10:53:56Z",
       "language": "Shell",
       "archived": false
     },
@@ -1897,7 +1897,7 @@
       "url": "https://github.com/YunoHost-Apps/docmost_ynh",
       "stars": 1,
       "forks": 1,
-      "updated_at": "2026-06-17T22:21:32Z",
+      "updated_at": "2026-07-10T11:01:39Z",
       "language": "Shell",
       "archived": false
     },
@@ -3502,7 +3502,7 @@
       "description": "Grammalecte server package for YunoHost",
       "url": "https://github.com/YunoHost-Apps/grammalecte_ynh",
       "stars": 5,
-      "forks": 1,
+      "forks": 2,
       "updated_at": "2026-03-22T21:46:47Z",
       "language": "Shell",
       "archived": false
@@ -3778,7 +3778,7 @@
       "url": "https://github.com/YunoHost-Apps/homeassistant_ynh",
       "stars": 25,
       "forks": 16,
-      "updated_at": "2026-07-04T08:35:20Z",
+      "updated_at": "2026-07-11T07:41:52Z",
       "language": "Shell",
       "archived": false
     },
@@ -4009,7 +4009,7 @@
       "url": "https://github.com/YunoHost-Apps/immich_ynh",
       "stars": 29,
       "forks": 17,
-      "updated_at": "2026-07-04T16:36:10Z",
+      "updated_at": "2026-07-10T10:45:22Z",
       "language": "Shell",
       "archived": false
     },
@@ -5219,7 +5219,7 @@
       "url": "https://github.com/YunoHost-Apps/mailpit_ynh",
       "stars": 0,
       "forks": 0,
-      "updated_at": "2026-07-09T16:41:32Z",
+      "updated_at": "2026-07-10T18:03:31Z",
       "language": "Shell",
       "archived": false
     },
@@ -5768,7 +5768,7 @@
       "description": "Mixpost package for YunoHost",
       "url": "https://github.com/YunoHost-Apps/mixpost_ynh",
       "stars": 0,
-      "forks": 0,
+      "forks": 1,
       "updated_at": "2026-06-14T19:19:24Z",
       "language": "Shell",
       "archived": false
@@ -6812,9 +6812,9 @@
       "name": "owncloud",
       "description": "ownCloud package for YunoHost",
       "url": "https://github.com/YunoHost-Apps/owncloud_ynh",
-      "stars": 4,
+      "stars": 5,
       "forks": 9,
-      "updated_at": "2026-07-07T07:09:06Z",
+      "updated_at": "2026-07-10T12:52:09Z",
       "language": "Shell",
       "archived": false
     },
@@ -6858,7 +6858,7 @@
       "url": "https://github.com/YunoHost-Apps/paheko_ynh",
       "stars": 5,
       "forks": 7,
-      "updated_at": "2026-05-30T13:41:06Z",
+      "updated_at": "2026-07-10T20:11:04Z",
       "language": "PHP",
       "archived": false
     },
@@ -7639,7 +7639,7 @@
       "url": "https://github.com/YunoHost-Apps/profilarr_ynh",
       "stars": 0,
       "forks": 1,
-      "updated_at": "2026-07-07T12:51:36Z",
+      "updated_at": "2026-07-10T20:47:53Z",
       "language": "Shell",
       "archived": false
     },
@@ -7958,7 +7958,7 @@
       "url": "https://github.com/YunoHost-Apps/rclone_ynh",
       "stars": 8,
       "forks": 4,
-      "updated_at": "2026-06-13T08:24:22Z",
+      "updated_at": "2026-07-10T11:04:48Z",
       "language": "Shell",
       "archived": false
     },
@@ -8035,7 +8035,7 @@
       "url": "https://github.com/YunoHost-Apps/redlib_ynh",
       "stars": 8,
       "forks": 5,
-      "updated_at": "2026-01-01T11:09:17Z",
+      "updated_at": "2026-07-10T11:30:31Z",
       "language": "Shell",
       "archived": false
     },
@@ -8475,7 +8475,7 @@
       "url": "https://github.com/YunoHost-Apps/seaweedfs_ynh",
       "stars": 0,
       "forks": 1,
-      "updated_at": "2026-07-01T12:53:40Z",
+      "updated_at": "2026-07-10T10:22:31Z",
       "language": "Shell",
       "archived": false
     },
@@ -10366,7 +10366,7 @@
       "description": "",
       "url": "https://github.com/YunoHost-Apps/wikimore_ynh",
       "stars": 0,
-      "forks": 0,
+      "forks": 1,
       "updated_at": "2026-06-13T17:08:40Z",
       "language": "Shell",
       "archived": false
@@ -10983,7 +10983,7 @@
       "url": "https://github.com/YunoHost-Apps/zwiicms_ynh",
       "stars": 1,
       "forks": 1,
-      "updated_at": "2026-07-08T05:47:53Z",
+      "updated_at": "2026-07-10T15:25:57Z",
       "language": "Shell",
       "archived": false
     }
