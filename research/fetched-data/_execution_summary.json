@@ -1,19 +1,19 @@
 {
-  "timestamp": "2026-07-11T08:02:25.839Z",
+  "timestamp": "2026-07-12T08:23:53.787Z",
   "script": "run-all.js",
   "note": "Summary of all data fetching script executions",
   "data": {
-    "execution_time": "2026-07-11T08:02:25.839Z",
+    "execution_time": "2026-07-12T08:23:53.787Z",
     "total_scripts": 6,
     "successful": 6,
     "failed": 0,
-    "total_duration_ms": 13097,
+    "total_duration_ms": 22230,
     "continue_on_error": true,
     "results": [
       {
         "name": "CapRover UI Translations",
         "success": true,
-        "duration": 175,
+        "duration": 399,
         "result": [
           "ar-EG",
           "de-DE",
@@ -34,7 +34,7 @@
       {
         "name": "CasaOS UI Translations",
         "success": true,
-        "duration": 128,
+        "duration": 231,
         "result": [
           "ca_ES",
           "cs_CZ",
@@ -69,9 +69,9 @@
       {
         "name": "YunoHost Apps",
         "success": true,
-        "duration": 11124,
+        "duration": 18465,
         "result": {
-          "count": 997,
+          "count": 998,
           "apps": [
             {
               "id": "13ft_ynh",
@@ -1565,7 +1565,7 @@
               "url": "https://github.com/YunoHost-Apps/cypht_ynh",
               "stars": 3,
               "forks": 7,
-              "updated_at": "2026-07-01T13:04:25Z",
+              "updated_at": "2026-07-11T09:22:50Z",
               "language": "Shell",
               "archived": false
             },
@@ -6229,7 +6229,7 @@
               "url": "https://github.com/YunoHost-Apps/n8n_ynh",
               "stars": 20,
               "forks": 22,
-              "updated_at": "2026-07-10T02:47:49Z",
+              "updated_at": "2026-07-12T03:35:17Z",
               "language": "Shell",
               "archived": false
             },
@@ -6834,7 +6834,7 @@
               "url": "https://github.com/YunoHost-Apps/ovumcy_ynh",
               "stars": 0,
               "forks": 0,
-              "updated_at": "2026-07-04T08:33:56Z",
+              "updated_at": "2026-07-12T03:59:07Z",
               "language": "Shell",
               "archived": false
             },
@@ -7659,7 +7659,7 @@
               "url": "https://github.com/YunoHost-Apps/privatebin_ynh",
               "stars": 1,
               "forks": 5,
-              "updated_at": "2026-05-11T10:42:49Z",
+              "updated_at": "2026-07-11T16:29:44Z",
               "language": "PHP",
               "archived": false
             },
@@ -8363,7 +8363,7 @@
               "url": "https://github.com/YunoHost-Apps/rutorrent_ynh",
               "stars": 0,
               "forks": 1,
-              "updated_at": "2026-07-09T16:15:49Z",
+              "updated_at": "2026-07-11T09:52:11Z",
               "language": "Shell",
               "archived": false
             },
@@ -8945,7 +8945,7 @@
               "description": "SOGo Groupware for YunoHost.",
               "url": "https://github.com/YunoHost-Apps/sogo_ynh",
               "stars": 8,
-              "forks": 8,
+              "forks": 9,
               "updated_at": "2026-02-10T12:41:44Z",
               "language": "Shell",
               "archived": false
@@ -9452,7 +9452,7 @@
               "url": "https://github.com/YunoHost-Apps/technitium-dns_ynh",
               "stars": 8,
               "forks": 4,
-              "updated_at": "2026-07-06T18:24:38Z",
+              "updated_at": "2026-07-12T03:11:57Z",
               "language": "Shell",
               "archived": false
             },
@@ -9595,7 +9595,7 @@
               "url": "https://github.com/YunoHost-Apps/tiddlywiki_ynh",
               "stars": 7,
               "forks": 4,
-              "updated_at": "2026-05-30T10:01:23Z",
+              "updated_at": "2026-07-11T09:51:33Z",
               "language": "Shell",
               "archived": false
             },
@@ -10249,6 +10249,17 @@
               "archived": false
             },
             {
+              "id": "wealthfolio_ynh",
+              "name": "wealthfolio",
+              "description": "",
+              "url": "https://github.com/YunoHost-Apps/wealthfolio_ynh",
+              "stars": 0,
+              "forks": 0,
+              "updated_at": "2026-07-11T10:30:38Z",
+              "language": null,
+              "archived": false
+            },
+            {
               "id": "webdav_ynh",
               "name": "webdav",
               "description": "WebDAV package for YunoHost",
@@ -10419,8 +10430,8 @@
               "description": "",
               "url": "https://github.com/YunoHost-Apps/wikimore_ynh",
               "stars": 0,
-              "forks": 1,
-              "updated_at": "2026-06-13T17:08:40Z",
+              "forks": 0,
+              "updated_at": "2026-07-11T08:12:53Z",
               "language": "Shell",
               "archived": false
             },
@@ -10805,7 +10816,7 @@
               "url": "https://github.com/YunoHost-Apps/yunohost_landingpage_ynh",
               "stars": 1,
               "forks": 0,
-              "updated_at": "2026-07-05T18:13:33Z",
+              "updated_at": "2026-07-11T08:44:44Z",
               "language": "Shell",
               "archived": false
             },
@@ -11059,7 +11070,7 @@
       {
         "name": "YunoHost Docs Translations",
         "success": true,
-        "duration": 154,
+        "duration": 879,
         "result": [
           "de",
           "docs",
@@ -11073,7 +11084,7 @@
       {
         "name": "YunoHost UI Translations",
         "success": true,
-        "duration": 1253,
+        "duration": 1876,
         "result": [
           {
             "language": "Russian",
@@ -11480,7 +11491,7 @@
       {
         "name": "Zimaboard Shipping Areas",
         "success": true,
-        "duration": 263,
+        "duration": 380,
         "result": [
           "Argentina",
           "Australia",
