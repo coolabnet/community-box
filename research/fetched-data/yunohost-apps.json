@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-07-12T08:23:55.093Z",
+  "timestamp": "2026-07-13T09:35:29.351Z",
   "script": "scripts.test.js",
   "source": "YunoHost-Apps GitHub Organization",
   "url": "https://github.com/YunoHost-Apps",
@@ -3909,7 +3909,7 @@
       "description": "HumHub package for YunoHost",
       "url": "https://github.com/YunoHost-Apps/humhub_ynh",
       "stars": 3,
-      "forks": 8,
+      "forks": 7,
       "updated_at": "2026-05-23T16:12:13Z",
       "language": "Shell",
       "archived": false
@@ -4251,7 +4251,7 @@
       "url": "https://github.com/YunoHost-Apps/jellyfin-vue_ynh",
       "stars": 0,
       "forks": 3,
-      "updated_at": "2026-07-06T06:19:31Z",
+      "updated_at": "2026-07-13T06:08:50Z",
       "language": "Shell",
       "archived": false
     },
@@ -5065,7 +5065,7 @@
       "url": "https://github.com/YunoHost-Apps/loops_ynh",
       "stars": 3,
       "forks": 2,
-      "updated_at": "2026-06-21T20:04:25Z",
+      "updated_at": "2026-07-12T16:06:38Z",
       "language": "Shell",
       "archived": false
     },
@@ -5263,7 +5263,7 @@
       "url": "https://github.com/YunoHost-Apps/mastodon_ynh",
       "stars": 89,
       "forks": 47,
-      "updated_at": "2026-07-03T07:04:22Z",
+      "updated_at": "2026-07-12T16:54:05Z",
       "language": "Shell",
       "archived": false
     },
@@ -5426,9 +5426,9 @@
       "name": "mautrix_whatsapp",
       "description": "Matrix Whatsapp pupetting bridge for YunoHost",
       "url": "https://github.com/YunoHost-Apps/mautrix_whatsapp_ynh",
-      "stars": 28,
+      "stars": 29,
       "forks": 16,
-      "updated_at": "2026-07-02T12:27:44Z",
+      "updated_at": "2026-07-13T01:13:33Z",
       "language": "Shell",
       "archived": false
     },
@@ -5505,7 +5505,7 @@
       "url": "https://github.com/YunoHost-Apps/mediatheque_ynh",
       "stars": 0,
       "forks": 0,
-      "updated_at": "2026-07-09T19:39:54Z",
+      "updated_at": "2026-07-13T08:49:15Z",
       "language": "Shell",
       "archived": false
     },
@@ -6187,7 +6187,7 @@
       "url": "https://github.com/YunoHost-Apps/navidrome_ynh",
       "stars": 19,
       "forks": 6,
-      "updated_at": "2026-07-10T06:37:28Z",
+      "updated_at": "2026-07-12T13:13:24Z",
       "language": "Shell",
       "archived": false
     },
@@ -6572,7 +6572,7 @@
       "url": "https://github.com/YunoHost-Apps/opencloud_ynh",
       "stars": 6,
       "forks": 3,
-      "updated_at": "2026-06-30T19:31:30Z",
+      "updated_at": "2026-07-12T17:00:43Z",
       "language": "Shell",
       "archived": false
     },
@@ -7309,7 +7309,7 @@
       "url": "https://github.com/YunoHost-Apps/piped_ynh",
       "stars": 3,
       "forks": 4,
-      "updated_at": "2026-06-15T06:46:19Z",
+      "updated_at": "2026-07-13T08:02:10Z",
       "language": "Shell",
       "archived": false
     },
@@ -7550,7 +7550,7 @@
       "description": "Postiz package for YunoHost",
       "url": "https://github.com/YunoHost-Apps/postiz_ynh",
       "stars": 0,
-      "forks": 0,
+      "forks": 1,
       "updated_at": "2026-07-07T17:12:28Z",
       "language": "Shell",
       "archived": false
@@ -8464,7 +8464,7 @@
       "url": "https://github.com/YunoHost-Apps/searxng_ynh",
       "stars": 14,
       "forks": 4,
-      "updated_at": "2026-06-29T06:30:41Z",
+      "updated_at": "2026-07-13T07:24:38Z",
       "language": "Shell",
       "archived": false
     },
@@ -9443,7 +9443,7 @@
       "url": "https://github.com/YunoHost-Apps/terraforming-mars_ynh",
       "stars": 2,
       "forks": 3,
-      "updated_at": "2026-07-06T07:26:30Z",
+      "updated_at": "2026-07-13T06:39:40Z",
       "language": "Shell",
       "archived": false
     },
@@ -10037,7 +10037,7 @@
       "url": "https://github.com/YunoHost-Apps/virtualtabletop_ynh",
       "stars": 3,
       "forks": 0,
-      "updated_at": "2026-06-22T01:58:06Z",
+      "updated_at": "2026-07-13T00:25:53Z",
       "language": "Shell",
       "archived": false
     },
@@ -10114,7 +10114,7 @@
       "url": "https://github.com/YunoHost-Apps/wallos_ynh",
       "stars": 2,
       "forks": 1,
-      "updated_at": "2026-07-01T19:39:39Z",
+      "updated_at": "2026-07-12T13:12:47Z",
       "language": "Shell",
       "archived": false
     },
@@ -10202,8 +10202,8 @@
       "url": "https://github.com/YunoHost-Apps/wealthfolio_ynh",
       "stars": 0,
       "forks": 0,
-      "updated_at": "2026-07-11T10:30:38Z",
-      "language": null,
+      "updated_at": "2026-07-12T13:57:37Z",
+      "language": "Shell",
       "archived": false
     },
     {
@@ -10499,7 +10499,7 @@
       "url": "https://github.com/YunoHost-Apps/workout-tracker_ynh",
       "stars": 2,
       "forks": 2,
-      "updated_at": "2026-06-26T02:36:59Z",
+      "updated_at": "2026-07-13T06:28:19Z",
       "language": "Shell",
       "archived": false
     },
@@ -10851,7 +10851,7 @@
       "url": "https://github.com/YunoHost-Apps/zerobin_ynh",
       "stars": 11,
       "forks": 12,
-      "updated_at": "2026-05-08T20:06:26Z",
+      "updated_at": "2026-07-12T11:17:28Z",
       "language": "Shell",
       "archived": false
     },
