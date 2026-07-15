@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-07-14T08:15:39.863Z",
+  "timestamp": "2026-07-15T08:21:42.454Z",
   "script": "scripts.test.js",
   "source": "YunoHost-Apps GitHub Organization",
   "url": "https://github.com/YunoHost-Apps",
@@ -126,7 +126,7 @@
       "url": "https://github.com/YunoHost-Apps/adguardhome_ynh",
       "stars": 19,
       "forks": 17,
-      "updated_at": "2026-07-09T10:19:35Z",
+      "updated_at": "2026-07-14T10:20:36Z",
       "language": "Shell",
       "archived": false
     },
@@ -445,7 +445,7 @@
       "url": "https://github.com/YunoHost-Apps/atuin_ynh",
       "stars": 0,
       "forks": 2,
-      "updated_at": "2026-07-10T07:14:25Z",
+      "updated_at": "2026-07-15T07:45:23Z",
       "language": "Shell",
       "archived": false
     },
@@ -2611,7 +2611,7 @@
       "description": "FileRise package for YunoHost",
       "url": "https://github.com/YunoHost-Apps/filerise_ynh",
       "stars": 1,
-      "forks": 1,
+      "forks": 2,
       "updated_at": "2026-07-14T07:27:20Z",
       "language": "PHP",
       "archived": false
@@ -2678,7 +2678,7 @@
       "url": "https://github.com/YunoHost-Apps/fittrackee_ynh",
       "stars": 7,
       "forks": 2,
-      "updated_at": "2026-06-01T08:52:51Z",
+      "updated_at": "2026-07-14T17:26:16Z",
       "language": "Shell",
       "archived": false
     },
@@ -2953,7 +2953,7 @@
       "url": "https://github.com/YunoHost-Apps/freescout_ynh",
       "stars": 1,
       "forks": 4,
-      "updated_at": "2026-07-02T07:29:01Z",
+      "updated_at": "2026-07-14T20:32:04Z",
       "language": "Shell",
       "archived": false
     },
@@ -4570,7 +4570,7 @@
       "url": "https://github.com/YunoHost-Apps/kresus_ynh",
       "stars": 20,
       "forks": 20,
-      "updated_at": "2026-02-13T07:46:18Z",
+      "updated_at": "2026-07-15T06:39:33Z",
       "language": "Shell",
       "archived": false
     },
@@ -5219,7 +5219,7 @@
       "url": "https://github.com/YunoHost-Apps/mailpit_ynh",
       "stars": 0,
       "forks": 0,
-      "updated_at": "2026-07-10T18:03:31Z",
+      "updated_at": "2026-07-14T10:47:23Z",
       "language": "Shell",
       "archived": false
     },
@@ -5439,7 +5439,7 @@
       "url": "https://github.com/YunoHost-Apps/may_ynh",
       "stars": 1,
       "forks": 0,
-      "updated_at": "2026-06-05T05:26:07Z",
+      "updated_at": "2026-07-15T05:31:11Z",
       "language": "Shell",
       "archived": false
     },
@@ -6385,7 +6385,7 @@
       "url": "https://github.com/YunoHost-Apps/ntfy_ynh",
       "stars": 15,
       "forks": 4,
-      "updated_at": "2026-07-02T07:18:35Z",
+      "updated_at": "2026-07-14T16:38:11Z",
       "language": "Shell",
       "archived": false
     },
@@ -6473,7 +6473,7 @@
       "url": "https://github.com/YunoHost-Apps/ollama_ynh",
       "stars": 5,
       "forks": 3,
-      "updated_at": "2026-07-09T05:39:02Z",
+      "updated_at": "2026-07-15T07:47:03Z",
       "language": "Shell",
       "archived": false
     },
@@ -7903,7 +7903,7 @@
       "url": "https://github.com/YunoHost-Apps/radarr_ynh",
       "stars": 4,
       "forks": 5,
-      "updated_at": "2026-06-11T06:07:36Z",
+      "updated_at": "2026-07-14T17:57:05Z",
       "language": "Shell",
       "archived": false
     },
@@ -8915,7 +8915,7 @@
       "url": "https://github.com/YunoHost-Apps/sonarr_ynh",
       "stars": 2,
       "forks": 2,
-      "updated_at": "2026-03-22T03:46:19Z",
+      "updated_at": "2026-07-14T16:41:53Z",
       "language": "Shell",
       "archived": false
     },
@@ -9278,7 +9278,7 @@
       "url": "https://github.com/YunoHost-Apps/synapse_ynh",
       "stars": 85,
       "forks": 48,
-      "updated_at": "2026-06-11T12:54:10Z",
+      "updated_at": "2026-07-14T12:29:32Z",
       "language": "Shell",
       "archived": false
     },
