@@ -1,19 +1,19 @@
 {
-  "timestamp": "2026-07-15T08:21:31.005Z",
+  "timestamp": "2026-07-16T08:20:13.521Z",
   "script": "run-all.js",
   "note": "Summary of all data fetching script executions",
   "data": {
-    "execution_time": "2026-07-15T08:21:31.005Z",
+    "execution_time": "2026-07-16T08:20:13.521Z",
     "total_scripts": 6,
     "successful": 6,
     "failed": 0,
-    "total_duration_ms": 20892,
+    "total_duration_ms": 21843,
     "continue_on_error": true,
     "results": [
       {
         "name": "CapRover UI Translations",
         "success": true,
-        "duration": 319,
+        "duration": 152,
         "result": [
           "ar-EG",
           "de-DE",
@@ -34,7 +34,7 @@
       {
         "name": "CasaOS UI Translations",
         "success": true,
-        "duration": 139,
+        "duration": 129,
         "result": [
           "ca_ES",
           "cs_CZ",
@@ -69,7 +69,7 @@
       {
         "name": "YunoHost Apps",
         "success": true,
-        "duration": 18458,
+        "duration": 19793,
         "result": {
           "count": 998,
           "apps": [
@@ -1180,7 +1180,7 @@
               "url": "https://github.com/YunoHost-Apps/cloudreve_ynh",
               "stars": 0,
               "forks": 1,
-              "updated_at": "2026-07-01T13:09:34Z",
+              "updated_at": "2026-07-16T07:13:44Z",
               "language": "Shell",
               "archived": false
             },
@@ -2872,9 +2872,9 @@
               "name": "forgejo_runner",
               "description": "",
               "url": "https://github.com/YunoHost-Apps/forgejo_runner_ynh",
-              "stars": 3,
+              "stars": 4,
               "forks": 2,
-              "updated_at": "2026-06-21T09:55:59Z",
+              "updated_at": "2026-07-16T07:59:23Z",
               "language": "Shell",
               "archived": false
             },
@@ -4060,9 +4060,9 @@
               "name": "immich",
               "description": "Photo and video backup solution directly from your mobile phone.",
               "url": "https://github.com/YunoHost-Apps/immich_ynh",
-              "stars": 29,
+              "stars": 30,
               "forks": 17,
-              "updated_at": "2026-07-10T10:45:22Z",
+              "updated_at": "2026-07-16T07:39:00Z",
               "language": "Shell",
               "archived": false
             },
@@ -4434,9 +4434,9 @@
               "name": "karadav",
               "description": "KaraDAV packaged for YunoHost",
               "url": "https://github.com/YunoHost-Apps/karadav_ynh",
-              "stars": 1,
+              "stars": 2,
               "forks": 0,
-              "updated_at": "2026-01-11T14:04:20Z",
+              "updated_at": "2026-07-15T17:37:15Z",
               "language": "Shell",
               "archived": false
             },
@@ -4687,9 +4687,9 @@
               "name": "lasuite-meet",
               "description": "Simple and Secure Video Conferencing. Powered by LiveKit.",
               "url": "https://github.com/YunoHost-Apps/lasuite-meet_ynh",
-              "stars": 6,
+              "stars": 7,
               "forks": 2,
-              "updated_at": "2026-07-09T07:50:32Z",
+              "updated_at": "2026-07-16T07:58:04Z",
               "language": "Shell",
               "archived": false
             },
@@ -4830,9 +4830,9 @@
               "name": "libreerp",
               "description": "LibreERP package for YunoHost",
               "url": "https://github.com/YunoHost-Apps/libreerp_ynh",
-              "stars": 18,
+              "stars": 19,
               "forks": 18,
-              "updated_at": "2026-07-06T07:39:54Z",
+              "updated_at": "2026-07-16T08:01:47Z",
               "language": "Shell",
               "archived": false
             },
@@ -5490,9 +5490,9 @@
               "name": "may",
               "description": "May is a web-based dashboard application that gives you a neat and clean interface for logging your fuel fill-ups for all of your vehicles. The application has full multi-user support, as well as multiple vehicles per user. Whenever you fill-up your car or motorcycle, keep the receipt and record the data in May. ",
               "url": "https://github.com/YunoHost-Apps/may_ynh",
-              "stars": 1,
+              "stars": 2,
               "forks": 0,
-              "updated_at": "2026-07-15T05:31:11Z",
+              "updated_at": "2026-07-16T05:40:39Z",
               "language": "Shell",
               "archived": false
             },
@@ -6293,9 +6293,9 @@
               "name": "nextcloud-whiteboard",
               "description": "whiteboard app for Nextcloud",
               "url": "https://github.com/YunoHost-Apps/nextcloud-whiteboard_ynh",
-              "stars": 0,
+              "stars": 1,
               "forks": 0,
-              "updated_at": "2026-07-05T08:52:27Z",
+              "updated_at": "2026-07-16T08:02:47Z",
               "language": "Shell",
               "archived": false
             },
@@ -6623,9 +6623,9 @@
               "name": "opencloud",
               "description": "OpenCloud package for YunoHost",
               "url": "https://github.com/YunoHost-Apps/opencloud_ynh",
-              "stars": 6,
+              "stars": 7,
               "forks": 3,
-              "updated_at": "2026-07-12T17:00:43Z",
+              "updated_at": "2026-07-15T18:03:53Z",
               "language": "Shell",
               "archived": false
             },
@@ -6823,7 +6823,7 @@
               "url": "https://github.com/YunoHost-Apps/overleaf_ynh",
               "stars": 3,
               "forks": 6,
-              "updated_at": "2026-07-02T12:29:01Z",
+              "updated_at": "2026-07-16T06:34:49Z",
               "language": "Shell",
               "archived": false
             },
@@ -7824,7 +7824,7 @@
               "url": "https://github.com/YunoHost-Apps/pureblog_ynh",
               "stars": 1,
               "forks": 1,
-              "updated_at": "2026-07-01T12:41:53Z",
+              "updated_at": "2026-07-16T07:12:20Z",
               "language": "Shell",
               "archived": false
             },
@@ -8363,7 +8363,7 @@
               "url": "https://github.com/YunoHost-Apps/rutorrent_ynh",
               "stars": 0,
               "forks": 1,
-              "updated_at": "2026-07-11T09:52:11Z",
+              "updated_at": "2026-07-16T07:12:17Z",
               "language": "Shell",
               "archived": false
             },
@@ -9329,9 +9329,9 @@
               "name": "synapse",
               "description": "Matrix server (synapse) package for YunoHost",
               "url": "https://github.com/YunoHost-Apps/synapse_ynh",
-              "stars": 85,
+              "stars": 86,
               "forks": 48,
-              "updated_at": "2026-07-14T12:29:32Z",
+              "updated_at": "2026-07-16T07:50:00Z",
               "language": "Shell",
               "archived": false
             },
@@ -9362,9 +9362,9 @@
               "name": "syncthing",
               "description": "Syncthing package for YunoHost",
               "url": "https://github.com/YunoHost-Apps/syncthing_ynh",
-              "stars": 24,
+              "stars": 25,
               "forks": 8,
-              "updated_at": "2026-06-03T05:36:24Z",
+              "updated_at": "2026-07-16T07:56:28Z",
               "language": "Shell",
               "archived": false
             },
@@ -10046,7 +10046,7 @@
               "url": "https://github.com/YunoHost-Apps/versitygw_ynh",
               "stars": 0,
               "forks": 0,
-              "updated_at": "2026-07-01T12:52:45Z",
+              "updated_at": "2026-07-16T01:54:08Z",
               "language": "Shell",
               "archived": false
             },
@@ -10330,9 +10330,9 @@
               "name": "wekan",
               "description": "Wekan package for YunoHost",
               "url": "https://github.com/YunoHost-Apps/wekan_ynh",
-              "stars": 17,
+              "stars": 18,
               "forks": 18,
-              "updated_at": "2026-07-14T07:18:11Z",
+              "updated_at": "2026-07-16T07:36:35Z",
               "language": "Shell",
               "archived": false
             },
@@ -10374,9 +10374,9 @@
               "name": "whitebophir",
               "description": "Whitebophir package for YunoHost",
               "url": "https://github.com/YunoHost-Apps/whitebophir_ynh",
-              "stars": 1,
+              "stars": 2,
               "forks": 3,
-              "updated_at": "2026-04-13T06:35:54Z",
+              "updated_at": "2026-07-16T07:40:16Z",
               "language": "Shell",
               "archived": false
             },
@@ -10398,7 +10398,7 @@
               "url": "https://github.com/YunoHost-Apps/wiki-go_ynh",
               "stars": 2,
               "forks": 1,
-              "updated_at": "2026-07-02T07:11:12Z",
+              "updated_at": "2026-07-16T07:09:35Z",
               "language": "Shell",
               "archived": false
             },
@@ -10574,7 +10574,7 @@
               "url": "https://github.com/YunoHost-Apps/X-prober_ynh",
               "stars": 2,
               "forks": 1,
-              "updated_at": "2026-07-14T07:38:34Z",
+              "updated_at": "2026-07-16T07:14:28Z",
               "language": "Shell",
               "archived": false
             },
@@ -11070,7 +11070,7 @@
       {
         "name": "YunoHost Docs Translations",
         "success": true,
-        "duration": 95,
+        "duration": 92,
         "result": [
           "de",
           "docs",
@@ -11084,8 +11084,16 @@
       {
         "name": "YunoHost UI Translations",
         "success": true,
-        "duration": 1420,
+        "duration": 1180,
         "result": [
+          {
+            "language": "French",
+            "language_code": "fr",
+            "translated_percent": 100,
+            "translated_words": 11293,
+            "total_words": 11293,
+            "last_change": "2026-07-15T17:27:38.905335Z"
+          },
           {
             "language": "Russian",
             "language_code": "ru",
@@ -11189,14 +11197,6 @@
             "translated_words": 139,
             "total_words": 139,
             "last_change": "2025-11-19T00:03:57.962288Z"
-          },
-          {
-            "language": "French",
-            "language_code": "fr",
-            "translated_percent": 99.8,
-            "translated_words": 11271,
-            "total_words": 11293,
-            "last_change": "2026-07-09T23:43:35.404614Z"
           },
           {
             "language": "Catalan",
@@ -11491,7 +11491,7 @@
       {
         "name": "Zimaboard Shipping Areas",
         "success": true,
-        "duration": 461,
+        "duration": 497,
         "result": [
           "Argentina",
           "Australia",
