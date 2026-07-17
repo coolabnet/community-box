@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-07-16T08:20:14.121Z",
+  "timestamp": "2026-07-17T08:17:24.468Z",
   "script": "scripts.test.js",
   "source": "YunoHost-Apps GitHub Organization",
   "url": "https://github.com/YunoHost-Apps",
@@ -3238,7 +3238,7 @@
       "description": "GitLab package for YunoHost",
       "url": "https://github.com/YunoHost-Apps/gitlab_ynh",
       "stars": 22,
-      "forks": 10,
+      "forks": 11,
       "updated_at": "2026-06-23T11:18:40Z",
       "language": "Ruby",
       "archived": false
@@ -3249,7 +3249,7 @@
       "description": "GitLab runner package for YunoHost",
       "url": "https://github.com/YunoHost-Apps/gitlab-runner_ynh",
       "stars": 5,
-      "forks": 7,
+      "forks": 8,
       "updated_at": "2025-11-27T14:28:20Z",
       "language": "Shell",
       "archived": false
@@ -5065,7 +5065,7 @@
       "url": "https://github.com/YunoHost-Apps/loops_ynh",
       "stars": 3,
       "forks": 2,
-      "updated_at": "2026-07-12T16:06:38Z",
+      "updated_at": "2026-07-17T07:07:54Z",
       "language": "Shell",
       "archived": false
     },
@@ -5505,7 +5505,7 @@
       "url": "https://github.com/YunoHost-Apps/mediatheque_ynh",
       "stars": 0,
       "forks": 0,
-      "updated_at": "2026-07-13T08:49:15Z",
+      "updated_at": "2026-07-16T17:31:24Z",
       "language": "Shell",
       "archived": false
     },
@@ -5758,7 +5758,7 @@
       "url": "https://github.com/YunoHost-Apps/mitra_ynh",
       "stars": 1,
       "forks": 3,
-      "updated_at": "2026-07-02T07:42:06Z",
+      "updated_at": "2026-07-17T05:30:31Z",
       "language": "Shell",
       "archived": false
     },
@@ -6748,7 +6748,7 @@
       "url": "https://github.com/YunoHost-Apps/ots_ynh",
       "stars": 0,
       "forks": 0,
-      "updated_at": "2026-06-28T00:56:13Z",
+      "updated_at": "2026-07-17T01:09:17Z",
       "language": "Shell",
       "archived": false
     },
@@ -8189,7 +8189,7 @@
       "url": "https://github.com/YunoHost-Apps/rosariosis_ynh",
       "stars": 0,
       "forks": 1,
-      "updated_at": "2026-06-06T16:28:51Z",
+      "updated_at": "2026-07-16T21:08:46Z",
       "language": "Shell",
       "archived": false
     },
@@ -9826,9 +9826,9 @@
       "name": "tuwunel",
       "description": "Tuwunel packaged for YunoHost",
       "url": "https://github.com/YunoHost-Apps/tuwunel_ynh",
-      "stars": 9,
+      "stars": 10,
       "forks": 2,
-      "updated_at": "2026-07-10T08:27:35Z",
+      "updated_at": "2026-07-17T06:11:03Z",
       "language": "Shell",
       "archived": false
     },
@@ -10400,7 +10400,7 @@
       "url": "https://github.com/YunoHost-Apps/wireguard_ynh",
       "stars": 38,
       "forks": 15,
-      "updated_at": "2026-06-23T11:04:35Z",
+      "updated_at": "2026-07-16T15:50:57Z",
       "language": "Shell",
       "archived": false
     },
