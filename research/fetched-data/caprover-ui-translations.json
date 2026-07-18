@@ -1,11 +1,11 @@
 {
-  "timestamp": "2026-07-17T08:17:13.095Z",
+  "timestamp": "2026-07-18T07:59:01.686Z",
   "script": "scripts.test.js",
   "source": "CapRover Frontend Repository",
   "url": "https://github.com/caprover/caprover-frontend",
   "locales_path": "src/locales",
   "note": "Documentation is not translated",
-  "count": 14,
+  "count": 15,
   "data": [
     "ar-EG",
     "de-DE",
@@ -15,6 +15,7 @@
     "fr-FR",
     "hr-HR",
     "id-ID",
+    "ko-KR",
     "nl-NL",
     "pt-BR",
     "ru-RU",
