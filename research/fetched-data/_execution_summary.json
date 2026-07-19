@@ -1,19 +1,19 @@
 {
-  "timestamp": "2026-07-18T07:59:01.242Z",
+  "timestamp": "2026-07-19T08:25:02.057Z",
   "script": "run-all.js",
   "note": "Summary of all data fetching script executions",
   "data": {
-    "execution_time": "2026-07-18T07:59:01.242Z",
+    "execution_time": "2026-07-19T08:25:02.057Z",
     "total_scripts": 6,
     "successful": 6,
     "failed": 0,
-    "total_duration_ms": 20266,
+    "total_duration_ms": 17724,
     "continue_on_error": true,
     "results": [
       {
         "name": "CapRover UI Translations",
         "success": true,
-        "duration": 249,
+        "duration": 160,
         "result": [
           "ar-EG",
           "de-DE",
@@ -35,7 +35,7 @@
       {
         "name": "CasaOS UI Translations",
         "success": true,
-        "duration": 178,
+        "duration": 88,
         "result": [
           "ca_ES",
           "cs_CZ",
@@ -70,7 +70,7 @@
       {
         "name": "YunoHost Apps",
         "success": true,
-        "duration": 17239,
+        "duration": 15795,
         "result": {
           "count": 998,
           "apps": [
@@ -3270,7 +3270,7 @@
               "description": "Gitea is a fork of Gogs. A git platform, Mirror of https://framagit.org/YunoHost-Apps/gitea_ynh",
               "url": "https://github.com/YunoHost-Apps/gitea_ynh",
               "stars": 28,
-              "forks": 18,
+              "forks": 19,
               "updated_at": "2026-07-02T12:23:30Z",
               "language": "Shell",
               "archived": false
@@ -3281,7 +3281,7 @@
               "description": "Gitea Runner package for YunoHost",
               "url": "https://github.com/YunoHost-Apps/gitea-runner_ynh",
               "stars": 0,
-              "forks": 0,
+              "forks": 1,
               "updated_at": "2025-08-30T18:12:16Z",
               "language": "Shell",
               "archived": true
@@ -4624,7 +4624,7 @@
               "url": "https://github.com/YunoHost-Apps/kresus_ynh",
               "stars": 20,
               "forks": 20,
-              "updated_at": "2026-07-15T06:39:33Z",
+              "updated_at": "2026-07-18T14:05:51Z",
               "language": "Shell",
               "archived": false
             },
@@ -7825,7 +7825,7 @@
               "url": "https://github.com/YunoHost-Apps/pureblog_ynh",
               "stars": 1,
               "forks": 1,
-              "updated_at": "2026-07-16T07:12:20Z",
+              "updated_at": "2026-07-18T20:19:48Z",
               "language": "Shell",
               "archived": false
             },
@@ -8714,9 +8714,9 @@
               "name": "sickrage",
               "description": "SickRage for YunoHost",
               "url": "https://github.com/YunoHost-Apps/sickrage_ynh",
-              "stars": 0,
+              "stars": 1,
               "forks": 2,
-              "updated_at": "2026-04-03T12:05:27Z",
+              "updated_at": "2026-07-18T12:48:33Z",
               "language": "Shell",
               "archived": true
             },
@@ -9882,7 +9882,7 @@
               "url": "https://github.com/YunoHost-Apps/tuwunel_ynh",
               "stars": 10,
               "forks": 2,
-              "updated_at": "2026-07-17T06:11:03Z",
+              "updated_at": "2026-07-18T10:42:55Z",
               "language": "Shell",
               "archived": false
             },
@@ -10562,9 +10562,9 @@
               "name": "writefreely",
               "description": "WriteFreely is a beautifully pared-down blogging platform that's simple on the surface, yet powerful underneath for YunoHost",
               "url": "https://github.com/YunoHost-Apps/writefreely_ynh",
-              "stars": 19,
+              "stars": 18,
               "forks": 2,
-              "updated_at": "2026-07-18T02:40:40Z",
+              "updated_at": "2026-07-19T05:57:40Z",
               "language": "Shell",
               "archived": false
             },
@@ -11071,7 +11071,7 @@
       {
         "name": "YunoHost Docs Translations",
         "success": true,
-        "duration": 150,
+        "duration": 120,
         "result": [
           "de",
           "docs",
@@ -11085,7 +11085,7 @@
       {
         "name": "YunoHost UI Translations",
         "success": true,
-        "duration": 2141,
+        "duration": 1300,
         "result": [
           {
             "language": "French",
@@ -11492,7 +11492,7 @@
       {
         "name": "Zimaboard Shipping Areas",
         "success": true,
-        "duration": 309,
+        "duration": 261,
         "result": [
           "Argentina",
           "Australia",
