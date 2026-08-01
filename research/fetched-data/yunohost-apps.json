@@ -1,11 +1,11 @@
 {
-  "timestamp": "2026-07-31T08:55:23.159Z",
+  "timestamp": "2026-08-01T08:26:25.406Z",
   "script": "scripts.test.js",
   "source": "YunoHost-Apps GitHub Organization",
   "url": "https://github.com/YunoHost-Apps",
   "api_url": "https://api.github.com/orgs/YunoHost-Apps/repos",
-  "total_apps": 1000,
-  "total_repos_checked": 1021,
+  "total_apps": 1001,
+  "total_repos_checked": 1022,
   "languages": [
     "CSS",
     "HTML",
@@ -124,9 +124,9 @@
       "name": "adguardhome",
       "description": "AdGuard Home package for YunoHost: Network-wide ads & trackers blocking DNS server",
       "url": "https://github.com/YunoHost-Apps/adguardhome_ynh",
-      "stars": 19,
+      "stars": 20,
       "forks": 17,
-      "updated_at": "2026-07-14T10:20:36Z",
+      "updated_at": "2026-07-31T12:16:31Z",
       "language": "Shell",
       "archived": false
     },
@@ -753,7 +753,7 @@
       "url": "https://github.com/YunoHost-Apps/borg_ynh",
       "stars": 26,
       "forks": 26,
-      "updated_at": "2026-06-05T08:35:08Z",
+      "updated_at": "2026-07-31T20:58:32Z",
       "language": "Shell",
       "archived": false
     },
@@ -1655,7 +1655,7 @@
       "url": "https://github.com/YunoHost-Apps/diagramsnet_ynh",
       "stars": 6,
       "forks": 4,
-      "updated_at": "2026-07-27T08:05:46Z",
+      "updated_at": "2026-07-31T20:24:25Z",
       "language": "Shell",
       "archived": false
     },
@@ -2414,7 +2414,7 @@
       "url": "https://github.com/YunoHost-Apps/fab-manager_ynh",
       "stars": 4,
       "forks": 6,
-      "updated_at": "2026-07-24T06:30:26Z",
+      "updated_at": "2026-07-31T14:52:31Z",
       "language": "Shell",
       "archived": false
     },
@@ -3249,7 +3249,7 @@
       "description": "GitLab package for YunoHost",
       "url": "https://github.com/YunoHost-Apps/gitlab_ynh",
       "stars": 22,
-      "forks": 11,
+      "forks": 10,
       "updated_at": "2026-06-23T11:18:40Z",
       "language": "Ruby",
       "archived": false
@@ -3260,7 +3260,7 @@
       "description": "GitLab runner package for YunoHost",
       "url": "https://github.com/YunoHost-Apps/gitlab-runner_ynh",
       "stars": 5,
-      "forks": 8,
+      "forks": 7,
       "updated_at": "2025-11-27T14:28:20Z",
       "language": "Shell",
       "archived": false
@@ -3525,7 +3525,7 @@
       "url": "https://github.com/YunoHost-Apps/grav_ynh",
       "stars": 20,
       "forks": 14,
-      "updated_at": "2026-07-27T19:44:49Z",
+      "updated_at": "2026-07-31T21:22:04Z",
       "language": "Shell",
       "archived": false
     },
@@ -3746,6 +3746,17 @@
       "stars": 0,
       "forks": 0,
       "updated_at": "2025-09-11T20:29:59Z",
+      "language": "Shell",
+      "archived": false
+    },
+    {
+      "id": "hister_ynh",
+      "name": "hister",
+      "description": "Hister package for YunoHost",
+      "url": "https://github.com/YunoHost-Apps/hister_ynh",
+      "stars": 0,
+      "forks": 0,
+      "updated_at": "2026-07-31T18:13:53Z",
       "language": "Shell",
       "archived": false
     },
@@ -6075,9 +6086,9 @@
       "name": "my_webapp",
       "description": "Custom Web app with SFTP access",
       "url": "https://github.com/YunoHost-Apps/my_webapp_ynh",
-      "stars": 59,
+      "stars": 60,
       "forks": 57,
-      "updated_at": "2026-06-20T00:02:53Z",
+      "updated_at": "2026-07-31T12:21:23Z",
       "language": "Shell",
       "archived": false
     },
@@ -6187,7 +6198,7 @@
       "url": "https://github.com/YunoHost-Apps/n8n_ynh",
       "stars": 21,
       "forks": 22,
-      "updated_at": "2026-07-30T10:43:39Z",
+      "updated_at": "2026-07-31T20:41:05Z",
       "language": "Shell",
       "archived": false
     },
@@ -8033,9 +8044,9 @@
       "name": "redirect",
       "description": "Redirection app for YunoHost",
       "url": "https://github.com/YunoHost-Apps/redirect_ynh",
-      "stars": 53,
+      "stars": 54,
       "forks": 29,
-      "updated_at": "2026-06-05T09:17:20Z",
+      "updated_at": "2026-07-31T12:21:54Z",
       "language": "Shell",
       "archived": false
     },
