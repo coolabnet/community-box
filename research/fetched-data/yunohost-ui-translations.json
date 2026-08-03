@@ -1,12 +1,12 @@
 {
-  "timestamp": "2026-08-02T08:29:26.948Z",
+  "timestamp": "2026-08-03T09:54:11.668Z",
   "script": "scripts.test.js",
   "source": "YunoHost Translation Platform",
   "url": "https://translate.yunohost.org/",
   "api_url": "https://translate.yunohost.org/api/translations/?format=json",
   "total_languages": 50,
-  "fully_translated": 14,
-  "partially_translated": 33,
+  "fully_translated": 16,
+  "partially_translated": 31,
   "not_started": 3,
   "data": [
     {
@@ -24,6 +24,14 @@
       "translated_words": 11293,
       "total_words": 11293,
       "last_change": "2026-07-10T05:50:34.911400Z"
+    },
+    {
+      "language": "German",
+      "language_code": "de",
+      "translated_percent": 100,
+      "translated_words": 3820,
+      "total_words": 3820,
+      "last_change": "2026-08-03T07:49:53.554579Z"
     },
     {
       "language": "French",
@@ -64,6 +72,14 @@
       "translated_words": 139,
       "total_words": 139,
       "last_change": "2025-08-04T01:53:29.426108Z"
+    },
+    {
+      "language": "German",
+      "language_code": "de",
+      "translated_percent": 100,
+      "translated_words": 139,
+      "total_words": 139,
+      "last_change": "2026-08-02T21:20:35.777002Z"
     },
     {
       "language": "Spanish",
@@ -130,14 +146,6 @@
       "last_change": "2026-06-03T12:49:35.327891Z"
     },
     {
-      "language": "German",
-      "language_code": "de",
-      "translated_percent": 99.7,
-      "translated_words": 3809,
-      "total_words": 3820,
-      "last_change": "2026-06-03T12:49:36.330676Z"
-    },
-    {
       "language": "Basque",
       "language_code": "eu",
       "translated_percent": 99.7,
@@ -188,10 +196,10 @@
     {
       "language": "German",
       "language_code": "de",
-      "translated_percent": 96.1,
-      "translated_words": 137,
-      "total_words": 139,
-      "last_change": "2025-08-04T01:53:29.608059Z"
+      "translated_percent": 98.8,
+      "translated_words": 10636,
+      "total_words": 11293,
+      "last_change": "2026-08-03T09:53:35.765883Z"
     },
     {
       "language": "Turkish",
@@ -240,14 +248,6 @@
       "translated_words": 129,
       "total_words": 139,
       "last_change": "2025-08-04T01:53:29.737805Z"
-    },
-    {
-      "language": "German",
-      "language_code": "de",
-      "translated_percent": 88.2,
-      "translated_words": 8942,
-      "total_words": 11293,
-      "last_change": "2026-07-09T23:43:32.393535Z"
     },
     {
       "language": "Turkish",
