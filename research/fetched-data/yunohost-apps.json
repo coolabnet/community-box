@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-08-03T09:54:09.629Z",
+  "timestamp": "2026-08-04T08:44:30.285Z",
   "script": "scripts.test.js",
   "source": "YunoHost-Apps GitHub Organization",
   "url": "https://github.com/YunoHost-Apps",
@@ -137,7 +137,7 @@
       "url": "https://github.com/YunoHost-Apps/admidio_ynh",
       "stars": 0,
       "forks": 1,
-      "updated_at": "2026-05-20T22:32:14Z",
+      "updated_at": "2026-08-03T20:42:19Z",
       "language": "Shell",
       "archived": false
     },
@@ -619,9 +619,9 @@
       "name": "beszel",
       "description": "Beszel package for YunoHost",
       "url": "https://github.com/YunoHost-Apps/beszel_ynh",
-      "stars": 0,
+      "stars": 1,
       "forks": 0,
-      "updated_at": "2026-04-06T09:57:50Z",
+      "updated_at": "2026-08-04T00:54:10Z",
       "language": "Shell",
       "archived": false
     },
@@ -1996,7 +1996,7 @@
       "url": "https://github.com/YunoHost-Apps/dont-code_ynh",
       "stars": 3,
       "forks": 3,
-      "updated_at": "2026-08-02T10:31:45Z",
+      "updated_at": "2026-08-04T07:33:18Z",
       "language": "Shell",
       "archived": false
     },
@@ -2380,7 +2380,7 @@
       "description": "EuroOffice package for YunoHost",
       "url": "https://github.com/YunoHost-Apps/eurooffice_ynh",
       "stars": 0,
-      "forks": 1,
+      "forks": 2,
       "updated_at": "2026-07-28T15:11:16Z",
       "language": "Shell",
       "archived": false
@@ -3304,8 +3304,8 @@
       "description": "Glances package for YunoHost",
       "url": "https://github.com/YunoHost-Apps/glances_ynh",
       "stars": 2,
-      "forks": 3,
-      "updated_at": "2026-07-27T15:55:24Z",
+      "forks": 4,
+      "updated_at": "2026-08-03T15:53:09Z",
       "language": "Shell",
       "archived": false
     },
@@ -3591,7 +3591,7 @@
       "url": "https://github.com/YunoHost-Apps/gull_ynh",
       "stars": 0,
       "forks": 1,
-      "updated_at": "2025-08-30T17:18:32Z",
+      "updated_at": "2026-08-03T15:53:01Z",
       "language": "Shell",
       "archived": false
     },
@@ -4196,7 +4196,7 @@
       "url": "https://github.com/YunoHost-Apps/jackett_ynh",
       "stars": 3,
       "forks": 5,
-      "updated_at": "2026-08-03T09:49:12Z",
+      "updated_at": "2026-08-04T07:56:37Z",
       "language": "Shell",
       "archived": false
     },
@@ -4405,7 +4405,7 @@
       "url": "https://github.com/YunoHost-Apps/karakeep_ynh",
       "stars": 6,
       "forks": 3,
-      "updated_at": "2026-07-04T20:49:05Z",
+      "updated_at": "2026-08-03T11:46:35Z",
       "language": "Shell",
       "archived": false
     },
@@ -5516,7 +5516,7 @@
       "url": "https://github.com/YunoHost-Apps/mediatheque_ynh",
       "stars": 0,
       "forks": 0,
-      "updated_at": "2026-08-02T09:33:00Z",
+      "updated_at": "2026-08-03T20:47:07Z",
       "language": "Shell",
       "archived": false
     },
@@ -5560,7 +5560,7 @@
       "url": "https://github.com/YunoHost-Apps/meilisearch_ynh",
       "stars": 13,
       "forks": 3,
-      "updated_at": "2026-07-28T07:13:57Z",
+      "updated_at": "2026-08-04T07:57:29Z",
       "language": "Shell",
       "archived": false
     },
@@ -5910,9 +5910,9 @@
       "name": "mopidy",
       "description": "Mopidy package for YunoHost",
       "url": "https://github.com/YunoHost-Apps/mopidy_ynh",
-      "stars": 4,
+      "stars": 5,
       "forks": 7,
-      "updated_at": "2026-04-02T12:51:42Z",
+      "updated_at": "2026-08-04T00:20:44Z",
       "language": "Shell",
       "archived": false
     },
@@ -6560,7 +6560,7 @@
       "description": "Open Web Calendar package for YunoHost",
       "url": "https://github.com/YunoHost-Apps/open-web-calendar_ynh",
       "stars": 1,
-      "forks": 3,
+      "forks": 2,
       "updated_at": "2026-03-02T21:12:26Z",
       "language": "Shell",
       "archived": false
@@ -6594,7 +6594,7 @@
       "url": "https://github.com/YunoHost-Apps/opencloud_ynh",
       "stars": 7,
       "forks": 3,
-      "updated_at": "2026-07-23T14:58:15Z",
+      "updated_at": "2026-08-04T06:50:21Z",
       "language": "Shell",
       "archived": false
     },
@@ -7287,7 +7287,7 @@
       "url": "https://github.com/YunoHost-Apps/piefed_ynh",
       "stars": 5,
       "forks": 0,
-      "updated_at": "2026-07-26T07:50:19Z",
+      "updated_at": "2026-08-04T08:05:00Z",
       "language": "Shell",
       "archived": false
     },
@@ -7704,7 +7704,7 @@
       "description": "Prosody package for YunoHost",
       "url": "https://github.com/YunoHost-Apps/prosody_ynh",
       "stars": 8,
-      "forks": 8,
+      "forks": 9,
       "updated_at": "2026-07-13T13:33:12Z",
       "language": "Shell",
       "archived": false
@@ -7958,7 +7958,7 @@
       "url": "https://github.com/YunoHost-Apps/rallly_ynh",
       "stars": 7,
       "forks": 3,
-      "updated_at": "2026-07-06T15:07:19Z",
+      "updated_at": "2026-08-04T08:00:29Z",
       "language": "Shell",
       "archived": false
     },
@@ -9806,7 +9806,7 @@
       "url": "https://github.com/YunoHost-Apps/ttrss_ynh",
       "stars": 18,
       "forks": 14,
-      "updated_at": "2026-07-21T20:14:59Z",
+      "updated_at": "2026-08-03T17:07:03Z",
       "language": "Shell",
       "archived": false
     },
@@ -10169,7 +10169,7 @@
       "url": "https://github.com/YunoHost-Apps/warpgate_ynh",
       "stars": 1,
       "forks": 0,
-      "updated_at": "2026-08-02T04:46:08Z",
+      "updated_at": "2026-08-04T01:45:57Z",
       "language": "Shell",
       "archived": false
     },
@@ -10432,7 +10432,7 @@
       "description": "WireGuard VPN software with a web UI configuration companion, packaged for YunoHost.",
       "url": "https://github.com/YunoHost-Apps/wireguard_ynh",
       "stars": 38,
-      "forks": 15,
+      "forks": 14,
       "updated_at": "2026-07-28T21:20:49Z",
       "language": "Shell",
       "archived": false
@@ -10554,7 +10554,7 @@
       "url": "https://github.com/YunoHost-Apps/X-prober_ynh",
       "stars": 2,
       "forks": 1,
-      "updated_at": "2026-07-16T07:14:28Z",
+      "updated_at": "2026-08-03T14:15:39Z",
       "language": "Shell",
       "archived": false
     },
