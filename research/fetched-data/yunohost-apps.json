@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-08-04T08:44:30.285Z",
+  "timestamp": "2026-08-05T08:42:01.298Z",
   "script": "scripts.test.js",
   "source": "YunoHost-Apps GitHub Organization",
   "url": "https://github.com/YunoHost-Apps",
@@ -2589,7 +2589,7 @@
       "description": "FileBrowser Quantum package for YunoHost",
       "url": "https://github.com/YunoHost-Apps/filebrowser-quantum_ynh",
       "stars": 0,
-      "forks": 0,
+      "forks": 1,
       "updated_at": "2026-07-24T16:24:36Z",
       "language": "Shell",
       "archived": false
@@ -2821,7 +2821,7 @@
       "url": "https://github.com/YunoHost-Apps/forgejo_ynh",
       "stars": 23,
       "forks": 9,
-      "updated_at": "2026-07-22T08:19:35Z",
+      "updated_at": "2026-08-04T12:06:07Z",
       "language": "Shell",
       "archived": false
     },
@@ -3250,7 +3250,7 @@
       "url": "https://github.com/YunoHost-Apps/gitlab_ynh",
       "stars": 22,
       "forks": 10,
-      "updated_at": "2026-06-23T11:18:40Z",
+      "updated_at": "2026-08-04T22:14:49Z",
       "language": "Ruby",
       "archived": false
     },
@@ -3492,7 +3492,7 @@
       "url": "https://github.com/YunoHost-Apps/grafana_ynh",
       "stars": 18,
       "forks": 14,
-      "updated_at": "2026-07-23T21:18:05Z",
+      "updated_at": "2026-08-04T20:27:47Z",
       "language": "Shell",
       "archived": false
     },
@@ -3943,7 +3943,7 @@
       "url": "https://github.com/YunoHost-Apps/hydrogen_ynh",
       "stars": 1,
       "forks": 2,
-      "updated_at": "2025-08-30T17:09:03Z",
+      "updated_at": "2026-08-04T10:27:10Z",
       "language": "Shell",
       "archived": false
     },
@@ -4020,7 +4020,7 @@
       "url": "https://github.com/YunoHost-Apps/ihatemoney_ynh",
       "stars": 10,
       "forks": 6,
-      "updated_at": "2026-05-12T20:53:25Z",
+      "updated_at": "2026-08-05T05:41:46Z",
       "language": "Shell",
       "archived": false
     },
@@ -4030,7 +4030,7 @@
       "description": "Photo and video backup solution directly from your mobile phone.",
       "url": "https://github.com/YunoHost-Apps/immich_ynh",
       "stars": 30,
-      "forks": 17,
+      "forks": 18,
       "updated_at": "2026-08-02T06:04:21Z",
       "language": "Shell",
       "archived": false
@@ -5450,7 +5450,7 @@
       "url": "https://github.com/YunoHost-Apps/may_ynh",
       "stars": 2,
       "forks": 0,
-      "updated_at": "2026-07-18T06:39:50Z",
+      "updated_at": "2026-08-04T16:44:47Z",
       "language": "Shell",
       "archived": false
     },
@@ -6352,7 +6352,7 @@
       "url": "https://github.com/YunoHost-Apps/nodebb_ynh",
       "stars": 7,
       "forks": 6,
-      "updated_at": "2026-08-02T07:17:28Z",
+      "updated_at": "2026-08-04T10:29:45Z",
       "language": "Shell",
       "archived": false
     },
@@ -6990,7 +6990,7 @@
       "url": "https://github.com/YunoHost-Apps/peertube_ynh",
       "stars": 98,
       "forks": 31,
-      "updated_at": "2026-07-21T21:17:32Z",
+      "updated_at": "2026-08-04T10:27:44Z",
       "language": "Shell",
       "archived": false
     },
@@ -7771,7 +7771,7 @@
       "url": "https://github.com/YunoHost-Apps/pterodactyl_ynh",
       "stars": 7,
       "forks": 9,
-      "updated_at": "2026-07-01T12:55:08Z",
+      "updated_at": "2026-08-04T10:29:08Z",
       "language": "Shell",
       "archived": false
     },
@@ -10222,9 +10222,9 @@
       "name": "wazuh",
       "description": "Wazuh package for YunoHost",
       "url": "https://github.com/YunoHost-Apps/wazuh_ynh",
-      "stars": 0,
+      "stars": 1,
       "forks": 0,
-      "updated_at": "2026-05-04T17:17:01Z",
+      "updated_at": "2026-08-04T11:21:51Z",
       "language": "Shell",
       "archived": false
     },
