@@ -1,11 +1,11 @@
 {
-  "timestamp": "2026-08-05T08:42:01.298Z",
+  "timestamp": "2026-08-06T08:43:41.449Z",
   "script": "scripts.test.js",
   "source": "YunoHost-Apps GitHub Organization",
   "url": "https://github.com/YunoHost-Apps",
   "api_url": "https://api.github.com/orgs/YunoHost-Apps/repos",
-  "total_apps": 1001,
-  "total_repos_checked": 1022,
+  "total_apps": 1002,
+  "total_repos_checked": 1023,
   "languages": [
     "CSS",
     "HTML",
@@ -137,7 +137,7 @@
       "url": "https://github.com/YunoHost-Apps/admidio_ynh",
       "stars": 0,
       "forks": 1,
-      "updated_at": "2026-08-03T20:42:19Z",
+      "updated_at": "2026-08-06T07:54:36Z",
       "language": "Shell",
       "archived": false
     },
@@ -554,8 +554,8 @@
       "description": "Baïkal package for YunoHost",
       "url": "https://github.com/YunoHost-Apps/baikal_ynh",
       "stars": 11,
-      "forks": 16,
-      "updated_at": "2026-05-30T10:14:06Z",
+      "forks": 17,
+      "updated_at": "2026-08-05T13:40:46Z",
       "language": "Shell",
       "archived": false
     },
@@ -2821,7 +2821,7 @@
       "url": "https://github.com/YunoHost-Apps/forgejo_ynh",
       "stars": 23,
       "forks": 9,
-      "updated_at": "2026-08-04T12:06:07Z",
+      "updated_at": "2026-08-05T17:01:52Z",
       "language": "Shell",
       "archived": false
     },
@@ -5516,7 +5516,7 @@
       "url": "https://github.com/YunoHost-Apps/mediatheque_ynh",
       "stars": 0,
       "forks": 0,
-      "updated_at": "2026-08-03T20:47:07Z",
+      "updated_at": "2026-08-05T20:18:47Z",
       "language": "Shell",
       "archived": false
     },
@@ -5890,7 +5890,7 @@
       "url": "https://github.com/YunoHost-Apps/monitorix_ynh",
       "stars": 4,
       "forks": 10,
-      "updated_at": "2026-06-03T06:24:26Z",
+      "updated_at": "2026-08-05T20:12:45Z",
       "language": "Shell",
       "archived": false
     },
@@ -5967,7 +5967,7 @@
       "url": "https://github.com/YunoHost-Apps/mstream_ynh",
       "stars": 1,
       "forks": 1,
-      "updated_at": "2026-07-30T15:12:37Z",
+      "updated_at": "2026-08-05T22:42:16Z",
       "language": "Shell",
       "archived": false
     },
@@ -5989,7 +5989,7 @@
       "url": "https://github.com/YunoHost-Apps/mtg-multi_ynh",
       "stars": 0,
       "forks": 0,
-      "updated_at": "2026-07-30T18:59:57Z",
+      "updated_at": "2026-08-06T08:25:33Z",
       "language": "Shell",
       "archived": false
     },
@@ -6198,7 +6198,7 @@
       "url": "https://github.com/YunoHost-Apps/n8n_ynh",
       "stars": 21,
       "forks": 22,
-      "updated_at": "2026-08-02T08:04:50Z",
+      "updated_at": "2026-08-05T19:56:20Z",
       "language": "Shell",
       "archived": false
     },
@@ -6251,9 +6251,9 @@
       "name": "nextcloud-signaling",
       "description": "Standalone signaling server for Nextcloud Talk.",
       "url": "https://github.com/YunoHost-Apps/nextcloud-signaling_ynh",
-      "stars": 3,
+      "stars": 4,
       "forks": 3,
-      "updated_at": "2026-03-16T16:59:06Z",
+      "updated_at": "2026-08-05T20:22:07Z",
       "language": "Shell",
       "archived": false
     },
@@ -6287,6 +6287,17 @@
       "stars": 3,
       "forks": 0,
       "updated_at": "2026-07-28T04:44:15Z",
+      "language": "Shell",
+      "archived": false
+    },
+    {
+      "id": "nidimages_ynh",
+      "name": "nidimages",
+      "description": "Package for Nidimages in YunoHost",
+      "url": "https://github.com/YunoHost-Apps/nidimages_ynh",
+      "stars": 0,
+      "forks": 0,
+      "updated_at": "2026-08-05T11:27:24Z",
       "language": "Shell",
       "archived": false
     },
@@ -6495,7 +6506,7 @@
       "url": "https://github.com/YunoHost-Apps/ollama_ynh",
       "stars": 5,
       "forks": 3,
-      "updated_at": "2026-07-28T02:11:46Z",
+      "updated_at": "2026-08-06T06:29:35Z",
       "language": "Shell",
       "archived": false
     },
@@ -7089,7 +7100,7 @@
       "url": "https://github.com/YunoHost-Apps/pgadmin_ynh",
       "stars": 7,
       "forks": 2,
-      "updated_at": "2026-05-15T11:45:07Z",
+      "updated_at": "2026-08-05T17:02:33Z",
       "language": "Shell",
       "archived": false
     },
@@ -7506,7 +7517,7 @@
       "description": "Pocket-ID package for YunoHost",
       "url": "https://github.com/YunoHost-Apps/pocket-id_ynh",
       "stars": 0,
-      "forks": 0,
+      "forks": 1,
       "updated_at": "2026-07-01T12:55:59Z",
       "language": "Shell",
       "archived": false
@@ -9344,7 +9355,7 @@
       "url": "https://github.com/YunoHost-Apps/syncthing_ynh",
       "stars": 25,
       "forks": 8,
-      "updated_at": "2026-07-16T07:56:28Z",
+      "updated_at": "2026-08-06T07:53:56Z",
       "language": "Shell",
       "archived": false
     },
@@ -10169,7 +10180,7 @@
       "url": "https://github.com/YunoHost-Apps/warpgate_ynh",
       "stars": 1,
       "forks": 0,
-      "updated_at": "2026-08-04T01:45:57Z",
+      "updated_at": "2026-08-06T02:19:50Z",
       "language": "Shell",
       "archived": false
     },
@@ -10355,7 +10366,7 @@
       "description": "Whitebophir package for YunoHost",
       "url": "https://github.com/YunoHost-Apps/whitebophir_ynh",
       "stars": 2,
-      "forks": 3,
+      "forks": 4,
       "updated_at": "2026-07-16T07:40:16Z",
       "language": "Shell",
       "archived": false
@@ -10431,9 +10442,9 @@
       "name": "wireguard",
       "description": "WireGuard VPN software with a web UI configuration companion, packaged for YunoHost.",
       "url": "https://github.com/YunoHost-Apps/wireguard_ynh",
-      "stars": 38,
+      "stars": 37,
       "forks": 14,
-      "updated_at": "2026-07-28T21:20:49Z",
+      "updated_at": "2026-08-06T08:38:29Z",
       "language": "Shell",
       "archived": false
     },
@@ -10488,7 +10499,7 @@
       "url": "https://github.com/YunoHost-Apps/woodpecker_ynh",
       "stars": 2,
       "forks": 2,
-      "updated_at": "2026-06-29T17:12:31Z",
+      "updated_at": "2026-08-05T20:42:17Z",
       "language": "Shell",
       "archived": false
     },
@@ -10685,7 +10696,7 @@
       "description": "",
       "url": "https://github.com/YunoHost-Apps/youtarr_ynh",
       "stars": 0,
-      "forks": 0,
+      "forks": 1,
       "updated_at": "2026-07-23T06:21:13Z",
       "language": "Shell",
       "archived": false
