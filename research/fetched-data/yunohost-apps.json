@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-08-11T07:14:06.978Z",
+  "timestamp": "2026-08-12T07:38:13.778Z",
   "script": "scripts.test.js",
   "source": "YunoHost-Apps GitHub Organization",
   "url": "https://github.com/YunoHost-Apps",
@@ -4482,7 +4482,7 @@
       "url": "https://github.com/YunoHost-Apps/ketesa_ynh",
       "stars": 7,
       "forks": 4,
-      "updated_at": "2026-08-06T21:31:24Z",
+      "updated_at": "2026-08-11T11:01:06Z",
       "language": "Shell",
       "archived": false
     },
@@ -6528,7 +6528,7 @@
       "url": "https://github.com/YunoHost-Apps/ollama_ynh",
       "stars": 5,
       "forks": 3,
-      "updated_at": "2026-08-06T06:29:35Z",
+      "updated_at": "2026-08-12T07:17:01Z",
       "language": "Shell",
       "archived": false
     },
@@ -6869,7 +6869,7 @@
       "url": "https://github.com/YunoHost-Apps/owncloud_ynh",
       "stars": 5,
       "forks": 9,
-      "updated_at": "2026-07-10T12:52:09Z",
+      "updated_at": "2026-08-11T07:56:16Z",
       "language": "Shell",
       "archived": false
     },
@@ -6944,9 +6944,9 @@
       "name": "paperless-ngx",
       "description": "Scan, index and archive all your physical documents",
       "url": "https://github.com/YunoHost-Apps/paperless-ngx_ynh",
-      "stars": 16,
+      "stars": 15,
       "forks": 14,
-      "updated_at": "2026-08-07T15:47:12Z",
+      "updated_at": "2026-08-11T16:55:08Z",
       "language": "Shell",
       "archived": false
     },
@@ -7826,7 +7826,7 @@
       "url": "https://github.com/YunoHost-Apps/pureblog_ynh",
       "stars": 1,
       "forks": 1,
-      "updated_at": "2026-07-31T06:39:19Z",
+      "updated_at": "2026-08-11T08:08:31Z",
       "language": "Shell",
       "archived": false
     },
