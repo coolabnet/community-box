@@ -1,11 +1,11 @@
 {
-  "timestamp": "2026-08-12T07:38:13.778Z",
+  "timestamp": "2026-08-13T07:39:57.652Z",
   "script": "scripts.test.js",
   "source": "YunoHost-Apps GitHub Organization",
   "url": "https://github.com/YunoHost-Apps",
   "api_url": "https://api.github.com/orgs/YunoHost-Apps/repos",
-  "total_apps": 1004,
-  "total_repos_checked": 1025,
+  "total_apps": 1005,
+  "total_repos_checked": 1026,
   "languages": [
     "CSS",
     "HTML",
@@ -3140,7 +3140,7 @@
       "url": "https://github.com/YunoHost-Apps/garden-party_ynh",
       "stars": 0,
       "forks": 1,
-      "updated_at": "2026-03-27T19:42:08Z",
+      "updated_at": "2026-08-12T08:27:06Z",
       "language": "Shell",
       "archived": false
     },
@@ -3777,7 +3777,7 @@
       "description": "Hister package for YunoHost",
       "url": "https://github.com/YunoHost-Apps/hister_ynh",
       "stars": 0,
-      "forks": 0,
+      "forks": 1,
       "updated_at": "2026-08-01T19:12:35Z",
       "language": "Shell",
       "archived": false
@@ -4218,7 +4218,7 @@
       "url": "https://github.com/YunoHost-Apps/jackett_ynh",
       "stars": 3,
       "forks": 5,
-      "updated_at": "2026-08-04T07:56:37Z",
+      "updated_at": "2026-08-12T08:31:26Z",
       "language": "Shell",
       "archived": false
     },
@@ -5180,6 +5180,17 @@
       "archived": false
     },
     {
+      "id": "lxd-ui_ynh",
+      "name": "lxd-ui",
+      "description": "LXD UI for YunoHost",
+      "url": "https://github.com/YunoHost-Apps/lxd-ui_ynh",
+      "stars": 0,
+      "forks": 0,
+      "updated_at": "2026-08-12T14:05:52Z",
+      "language": "Shell",
+      "archived": false
+    },
+    {
       "id": "lychee_ynh",
       "name": "lychee",
       "description": "Lychee package for YunoHost",
@@ -5582,7 +5593,7 @@
       "url": "https://github.com/YunoHost-Apps/meilisearch_ynh",
       "stars": 13,
       "forks": 3,
-      "updated_at": "2026-08-04T07:57:29Z",
+      "updated_at": "2026-08-12T08:33:46Z",
       "language": "Shell",
       "archived": false
     },
@@ -7494,9 +7505,9 @@
       "name": "plume",
       "description": "Federated blogging application for YunoHost",
       "url": "https://github.com/YunoHost-Apps/plume_ynh",
-      "stars": 15,
+      "stars": 14,
       "forks": 2,
-      "updated_at": "2026-08-10T16:05:56Z",
+      "updated_at": "2026-08-12T16:24:23Z",
       "language": "Shell",
       "archived": false
     },
@@ -7694,7 +7705,7 @@
       "url": "https://github.com/YunoHost-Apps/profilarr_ynh",
       "stars": 0,
       "forks": 1,
-      "updated_at": "2026-07-10T20:47:53Z",
+      "updated_at": "2026-08-12T10:49:19Z",
       "language": "Shell",
       "archived": false
     },
@@ -8376,7 +8387,7 @@
       "url": "https://github.com/YunoHost-Apps/sabnzbd_ynh",
       "stars": 1,
       "forks": 0,
-      "updated_at": "2026-06-16T21:21:25Z",
+      "updated_at": "2026-08-12T10:47:17Z",
       "language": "Shell",
       "archived": false
     },
@@ -10080,8 +10091,8 @@
       "description": "Vikunja package for YunoHost",
       "url": "https://github.com/YunoHost-Apps/vikunja_ynh",
       "stars": 10,
-      "forks": 9,
-      "updated_at": "2026-05-31T15:53:59Z",
+      "forks": 10,
+      "updated_at": "2026-08-13T05:20:54Z",
       "language": "Shell",
       "archived": false
     },
@@ -10344,8 +10355,8 @@
       "description": "Wekan package for YunoHost",
       "url": "https://github.com/YunoHost-Apps/wekan_ynh",
       "stars": 18,
-      "forks": 18,
-      "updated_at": "2026-08-06T11:16:29Z",
+      "forks": 19,
+      "updated_at": "2026-08-12T09:58:43Z",
       "language": "Shell",
       "archived": false
     },
