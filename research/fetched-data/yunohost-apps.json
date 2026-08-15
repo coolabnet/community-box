@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-08-14T07:37:43.615Z",
+  "timestamp": "2026-08-15T06:44:43.917Z",
   "script": "scripts.test.js",
   "source": "YunoHost-Apps GitHub Organization",
   "url": "https://github.com/YunoHost-Apps",
@@ -379,7 +379,7 @@
       "url": "https://github.com/YunoHost-Apps/archivebox_ynh",
       "stars": 19,
       "forks": 6,
-      "updated_at": "2026-08-02T07:39:27Z",
+      "updated_at": "2026-08-14T09:33:00Z",
       "language": "Shell",
       "archived": false
     },
@@ -753,7 +753,7 @@
       "url": "https://github.com/YunoHost-Apps/borg_ynh",
       "stars": 26,
       "forks": 26,
-      "updated_at": "2026-08-09T19:30:01Z",
+      "updated_at": "2026-08-14T08:47:53Z",
       "language": "Shell",
       "archived": false
     },
@@ -3822,7 +3822,7 @@
       "url": "https://github.com/YunoHost-Apps/homeassistant_ynh",
       "stars": 25,
       "forks": 17,
-      "updated_at": "2026-08-10T15:41:16Z",
+      "updated_at": "2026-08-15T06:39:00Z",
       "language": "Shell",
       "archived": false
     },
@@ -5978,7 +5978,7 @@
       "url": "https://github.com/YunoHost-Apps/motioneye_ynh",
       "stars": 1,
       "forks": 3,
-      "updated_at": "2025-10-21T04:34:31Z",
+      "updated_at": "2026-08-14T19:50:10Z",
       "language": "Shell",
       "archived": false
     },
@@ -8056,8 +8056,8 @@
       "description": "Readeck package for YunoHost",
       "url": "https://github.com/YunoHost-Apps/readeck_ynh",
       "stars": 7,
-      "forks": 5,
-      "updated_at": "2026-06-29T13:33:46Z",
+      "forks": 4,
+      "updated_at": "2026-08-14T18:26:05Z",
       "language": "Shell",
       "archived": false
     },
@@ -10356,7 +10356,7 @@
       "url": "https://github.com/YunoHost-Apps/wekan_ynh",
       "stars": 18,
       "forks": 19,
-      "updated_at": "2026-08-13T10:50:47Z",
+      "updated_at": "2026-08-14T09:31:07Z",
       "language": "Shell",
       "archived": false
     },

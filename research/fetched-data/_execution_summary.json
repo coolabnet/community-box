@@ -1,19 +1,19 @@
 {
-  "timestamp": "2026-08-14T07:37:42.788Z",
+  "timestamp": "2026-08-15T06:44:31.061Z",
   "script": "run-all.js",
   "note": "Summary of all data fetching script executions",
   "data": {
-    "execution_time": "2026-08-14T07:37:42.788Z",
+    "execution_time": "2026-08-15T06:44:31.061Z",
     "total_scripts": 6,
     "successful": 6,
     "failed": 0,
-    "total_duration_ms": 15655,
+    "total_duration_ms": 14644,
     "continue_on_error": true,
     "results": [
       {
         "name": "CapRover UI Translations",
         "success": true,
-        "duration": 262,
+        "duration": 358,
         "result": [
           "ar-EG",
           "de-DE",
@@ -36,7 +36,7 @@
       {
         "name": "CasaOS UI Translations",
         "success": true,
-        "duration": 145,
+        "duration": 208,
         "result": [
           "ca_ES",
           "cs_CZ",
@@ -71,7 +71,7 @@
       {
         "name": "YunoHost Apps",
         "success": true,
-        "duration": 13086,
+        "duration": 12100,
         "result": {
           "count": 1005,
           "apps": [
@@ -434,7 +434,7 @@
               "url": "https://github.com/YunoHost-Apps/archivebox_ynh",
               "stars": 19,
               "forks": 6,
-              "updated_at": "2026-08-02T07:39:27Z",
+              "updated_at": "2026-08-14T09:33:00Z",
               "language": "Shell",
               "archived": false
             },
@@ -808,7 +808,7 @@
               "url": "https://github.com/YunoHost-Apps/borg_ynh",
               "stars": 26,
               "forks": 26,
-              "updated_at": "2026-08-09T19:30:01Z",
+              "updated_at": "2026-08-14T08:47:53Z",
               "language": "Shell",
               "archived": false
             },
@@ -3877,7 +3877,7 @@
               "url": "https://github.com/YunoHost-Apps/homeassistant_ynh",
               "stars": 25,
               "forks": 17,
-              "updated_at": "2026-08-10T15:41:16Z",
+              "updated_at": "2026-08-15T06:39:00Z",
               "language": "Shell",
               "archived": false
             },
@@ -6033,7 +6033,7 @@
               "url": "https://github.com/YunoHost-Apps/motioneye_ynh",
               "stars": 1,
               "forks": 3,
-              "updated_at": "2025-10-21T04:34:31Z",
+              "updated_at": "2026-08-14T19:50:10Z",
               "language": "Shell",
               "archived": false
             },
@@ -8111,8 +8111,8 @@
               "description": "Readeck package for YunoHost",
               "url": "https://github.com/YunoHost-Apps/readeck_ynh",
               "stars": 7,
-              "forks": 5,
-              "updated_at": "2026-06-29T13:33:46Z",
+              "forks": 4,
+              "updated_at": "2026-08-14T18:26:05Z",
               "language": "Shell",
               "archived": false
             },
@@ -10411,7 +10411,7 @@
               "url": "https://github.com/YunoHost-Apps/wekan_ynh",
               "stars": 18,
               "forks": 19,
-              "updated_at": "2026-08-13T10:50:47Z",
+              "updated_at": "2026-08-14T09:31:07Z",
               "language": "Shell",
               "archived": false
             },
@@ -11149,7 +11149,7 @@
       {
         "name": "YunoHost Docs Translations",
         "success": true,
-        "duration": 121,
+        "duration": 143,
         "result": [
           "de",
           "docs",
@@ -11163,7 +11163,7 @@
       {
         "name": "YunoHost UI Translations",
         "success": true,
-        "duration": 1670,
+        "duration": 1512,
         "result": [
           {
             "language": "French",
@@ -11570,7 +11570,7 @@
       {
         "name": "Zimaboard Shipping Areas",
         "success": true,
-        "duration": 371,
+        "duration": 323,
         "result": [
           "Argentina",
           "Australia",
