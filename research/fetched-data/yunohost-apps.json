@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-08-15T06:44:43.917Z",
+  "timestamp": "2026-08-16T06:46:07.502Z",
   "script": "scripts.test.js",
   "source": "YunoHost-Apps GitHub Organization",
   "url": "https://github.com/YunoHost-Apps",
@@ -170,7 +170,7 @@
       "url": "https://github.com/YunoHost-Apps/adventurelog_ynh",
       "stars": 2,
       "forks": 4,
-      "updated_at": "2026-07-27T21:18:24Z",
+      "updated_at": "2026-08-15T09:49:17Z",
       "language": "Shell",
       "archived": false
     },
@@ -2611,7 +2611,7 @@
       "description": "FileBrowser Quantum package for YunoHost",
       "url": "https://github.com/YunoHost-Apps/filebrowser-quantum_ynh",
       "stars": 0,
-      "forks": 1,
+      "forks": 2,
       "updated_at": "2026-07-24T16:24:36Z",
       "language": "Shell",
       "archived": false
@@ -3547,7 +3547,7 @@
       "url": "https://github.com/YunoHost-Apps/grav_ynh",
       "stars": 20,
       "forks": 14,
-      "updated_at": "2026-08-07T08:23:41Z",
+      "updated_at": "2026-08-15T09:07:17Z",
       "language": "Shell",
       "archived": false
     },
@@ -4207,7 +4207,7 @@
       "url": "https://github.com/YunoHost-Apps/its-mytabs_ynh",
       "stars": 0,
       "forks": 0,
-      "updated_at": "2026-04-02T05:34:15Z",
+      "updated_at": "2026-08-15T07:02:38Z",
       "language": "Shell",
       "archived": false
     },
@@ -4570,7 +4570,7 @@
       "url": "https://github.com/YunoHost-Apps/koel_ynh",
       "stars": 3,
       "forks": 4,
-      "updated_at": "2026-07-26T07:52:12Z",
+      "updated_at": "2026-08-15T09:12:34Z",
       "language": "Shell",
       "archived": false
     },
@@ -5549,7 +5549,7 @@
       "url": "https://github.com/YunoHost-Apps/mediatheque_ynh",
       "stars": 0,
       "forks": 0,
-      "updated_at": "2026-08-09T19:03:16Z",
+      "updated_at": "2026-08-15T10:10:19Z",
       "language": "Shell",
       "archived": false
     },
@@ -6539,7 +6539,7 @@
       "url": "https://github.com/YunoHost-Apps/ollama_ynh",
       "stars": 5,
       "forks": 3,
-      "updated_at": "2026-08-12T07:17:01Z",
+      "updated_at": "2026-08-15T07:03:18Z",
       "language": "Shell",
       "archived": false
     },
@@ -8057,7 +8057,7 @@
       "url": "https://github.com/YunoHost-Apps/readeck_ynh",
       "stars": 7,
       "forks": 4,
-      "updated_at": "2026-08-14T18:26:05Z",
+      "updated_at": "2026-08-15T11:03:45Z",
       "language": "Shell",
       "archived": false
     },
@@ -8288,7 +8288,7 @@
       "url": "https://github.com/YunoHost-Apps/rspamd_ynh",
       "stars": 6,
       "forks": 5,
-      "updated_at": "2026-07-29T21:01:58Z",
+      "updated_at": "2026-08-15T21:17:32Z",
       "language": "Shell",
       "archived": false
     },
@@ -8430,7 +8430,7 @@
       "description": "Satdress package for YunoHost",
       "url": "https://github.com/YunoHost-Apps/satdress_ynh",
       "stars": 6,
-      "forks": 3,
+      "forks": 2,
       "updated_at": "2026-08-09T17:57:47Z",
       "language": "Shell",
       "archived": false
@@ -10213,7 +10213,7 @@
       "url": "https://github.com/YunoHost-Apps/warpgate_ynh",
       "stars": 1,
       "forks": 0,
-      "updated_at": "2026-08-09T19:32:01Z",
+      "updated_at": "2026-08-16T01:50:20Z",
       "language": "Shell",
       "archived": false
     },
