@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-08-16T06:46:07.502Z",
+  "timestamp": "2026-08-17T07:03:18.490Z",
   "script": "scripts.test.js",
   "source": "YunoHost-Apps GitHub Organization",
   "url": "https://github.com/YunoHost-Apps",
@@ -3490,9 +3490,9 @@
       "name": "gotosocial",
       "description": "GoToSocial package for YunoHost: an ActivityPub social network server, written in Golang.",
       "url": "https://github.com/YunoHost-Apps/gotosocial_ynh",
-      "stars": 23,
+      "stars": 24,
       "forks": 13,
-      "updated_at": "2026-07-30T11:33:37Z",
+      "updated_at": "2026-08-16T09:22:18Z",
       "language": "Shell",
       "archived": false
     },
@@ -5978,7 +5978,7 @@
       "url": "https://github.com/YunoHost-Apps/motioneye_ynh",
       "stars": 1,
       "forks": 3,
-      "updated_at": "2026-08-14T19:50:10Z",
+      "updated_at": "2026-08-16T14:29:08Z",
       "language": "Shell",
       "archived": false
     },
@@ -7364,7 +7364,7 @@
       "url": "https://github.com/YunoHost-Apps/pinkarrows_ynh",
       "stars": 1,
       "forks": 0,
-      "updated_at": "2026-03-09T13:11:50Z",
+      "updated_at": "2026-08-17T00:41:31Z",
       "language": "Shell",
       "archived": false
     },
@@ -7375,7 +7375,7 @@
       "url": "https://github.com/YunoHost-Apps/piped_ynh",
       "stars": 3,
       "forks": 4,
-      "updated_at": "2026-08-03T07:44:47Z",
+      "updated_at": "2026-08-17T06:38:09Z",
       "language": "Shell",
       "archived": false
     },
@@ -8057,7 +8057,7 @@
       "url": "https://github.com/YunoHost-Apps/readeck_ynh",
       "stars": 7,
       "forks": 4,
-      "updated_at": "2026-08-15T11:03:45Z",
+      "updated_at": "2026-08-16T07:22:12Z",
       "language": "Shell",
       "archived": false
     },
@@ -8530,7 +8530,7 @@
       "url": "https://github.com/YunoHost-Apps/searxng_ynh",
       "stars": 14,
       "forks": 4,
-      "updated_at": "2026-08-10T15:43:22Z",
+      "updated_at": "2026-08-17T05:39:51Z",
       "language": "Shell",
       "archived": false
     },
@@ -9850,7 +9850,7 @@
       "url": "https://github.com/YunoHost-Apps/ttrss_ynh",
       "stars": 18,
       "forks": 14,
-      "updated_at": "2026-08-03T17:07:03Z",
+      "updated_at": "2026-08-17T07:01:32Z",
       "language": "Shell",
       "archived": false
     },
@@ -10114,7 +10114,7 @@
       "url": "https://github.com/YunoHost-Apps/virtualtabletop_ynh",
       "stars": 3,
       "forks": 0,
-      "updated_at": "2026-08-10T02:14:30Z",
+      "updated_at": "2026-08-17T03:43:18Z",
       "language": "Shell",
       "archived": false
     },
@@ -10356,7 +10356,7 @@
       "url": "https://github.com/YunoHost-Apps/wekan_ynh",
       "stars": 18,
       "forks": 19,
-      "updated_at": "2026-08-14T09:31:07Z",
+      "updated_at": "2026-08-16T07:50:38Z",
       "language": "Shell",
       "archived": false
     },
@@ -10872,7 +10872,7 @@
       "description": "YunoRunner package  for YunoHost",
       "url": "https://github.com/YunoHost-Apps/yunorunner_ynh",
       "stars": 6,
-      "forks": 7,
+      "forks": 8,
       "updated_at": "2026-07-03T12:23:14Z",
       "language": "Shell",
       "archived": false

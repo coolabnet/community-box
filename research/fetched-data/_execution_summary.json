@@ -1,19 +1,19 @@
 {
-  "timestamp": "2026-08-16T06:46:06.292Z",
+  "timestamp": "2026-08-17T07:03:03.986Z",
   "script": "run-all.js",
   "note": "Summary of all data fetching script executions",
   "data": {
-    "execution_time": "2026-08-16T06:46:06.292Z",
+    "execution_time": "2026-08-17T07:03:03.986Z",
     "total_scripts": 6,
     "successful": 6,
     "failed": 0,
-    "total_duration_ms": 15612,
+    "total_duration_ms": 15810,
     "continue_on_error": true,
     "results": [
       {
         "name": "CapRover UI Translations",
         "success": true,
-        "duration": 339,
+        "duration": 395,
         "result": [
           "ar-EG",
           "de-DE",
@@ -36,7 +36,7 @@
       {
         "name": "CasaOS UI Translations",
         "success": true,
-        "duration": 185,
+        "duration": 227,
         "result": [
           "ca_ES",
           "cs_CZ",
@@ -71,7 +71,7 @@
       {
         "name": "YunoHost Apps",
         "success": true,
-        "duration": 12849,
+        "duration": 13014,
         "result": {
           "count": 1005,
           "apps": [
@@ -3545,9 +3545,9 @@
               "name": "gotosocial",
               "description": "GoToSocial package for YunoHost: an ActivityPub social network server, written in Golang.",
               "url": "https://github.com/YunoHost-Apps/gotosocial_ynh",
-              "stars": 23,
+              "stars": 24,
               "forks": 13,
-              "updated_at": "2026-07-30T11:33:37Z",
+              "updated_at": "2026-08-16T09:22:18Z",
               "language": "Shell",
               "archived": false
             },
@@ -6033,7 +6033,7 @@
               "url": "https://github.com/YunoHost-Apps/motioneye_ynh",
               "stars": 1,
               "forks": 3,
-              "updated_at": "2026-08-14T19:50:10Z",
+              "updated_at": "2026-08-16T14:29:08Z",
               "language": "Shell",
               "archived": false
             },
@@ -7419,7 +7419,7 @@
               "url": "https://github.com/YunoHost-Apps/pinkarrows_ynh",
               "stars": 1,
               "forks": 0,
-              "updated_at": "2026-03-09T13:11:50Z",
+              "updated_at": "2026-08-17T00:41:31Z",
               "language": "Shell",
               "archived": false
             },
@@ -7430,7 +7430,7 @@
               "url": "https://github.com/YunoHost-Apps/piped_ynh",
               "stars": 3,
               "forks": 4,
-              "updated_at": "2026-08-03T07:44:47Z",
+              "updated_at": "2026-08-17T06:38:09Z",
               "language": "Shell",
               "archived": false
             },
@@ -8112,7 +8112,7 @@
               "url": "https://github.com/YunoHost-Apps/readeck_ynh",
               "stars": 7,
               "forks": 4,
-              "updated_at": "2026-08-15T11:03:45Z",
+              "updated_at": "2026-08-16T07:22:12Z",
               "language": "Shell",
               "archived": false
             },
@@ -8585,7 +8585,7 @@
               "url": "https://github.com/YunoHost-Apps/searxng_ynh",
               "stars": 14,
               "forks": 4,
-              "updated_at": "2026-08-10T15:43:22Z",
+              "updated_at": "2026-08-17T05:39:51Z",
               "language": "Shell",
               "archived": false
             },
@@ -9905,7 +9905,7 @@
               "url": "https://github.com/YunoHost-Apps/ttrss_ynh",
               "stars": 18,
               "forks": 14,
-              "updated_at": "2026-08-03T17:07:03Z",
+              "updated_at": "2026-08-17T07:01:32Z",
               "language": "Shell",
               "archived": false
             },
@@ -10169,7 +10169,7 @@
               "url": "https://github.com/YunoHost-Apps/virtualtabletop_ynh",
               "stars": 3,
               "forks": 0,
-              "updated_at": "2026-08-10T02:14:30Z",
+              "updated_at": "2026-08-17T03:43:18Z",
               "language": "Shell",
               "archived": false
             },
@@ -10411,7 +10411,7 @@
               "url": "https://github.com/YunoHost-Apps/wekan_ynh",
               "stars": 18,
               "forks": 19,
-              "updated_at": "2026-08-14T09:31:07Z",
+              "updated_at": "2026-08-16T07:50:38Z",
               "language": "Shell",
               "archived": false
             },
@@ -10927,7 +10927,7 @@
               "description": "YunoRunner package  for YunoHost",
               "url": "https://github.com/YunoHost-Apps/yunorunner_ynh",
               "stars": 6,
-              "forks": 7,
+              "forks": 8,
               "updated_at": "2026-07-03T12:23:14Z",
               "language": "Shell",
               "archived": false
@@ -11149,7 +11149,7 @@
       {
         "name": "YunoHost Docs Translations",
         "success": true,
-        "duration": 190,
+        "duration": 173,
         "result": [
           "de",
           "docs",
@@ -11163,7 +11163,7 @@
       {
         "name": "YunoHost UI Translations",
         "success": true,
-        "duration": 1705,
+        "duration": 1616,
         "result": [
           {
             "language": "French",
@@ -11570,7 +11570,7 @@
       {
         "name": "Zimaboard Shipping Areas",
         "success": true,
-        "duration": 344,
+        "duration": 385,
         "result": [
           "Argentina",
           "Australia",
