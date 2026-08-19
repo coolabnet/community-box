@@ -1,11 +1,11 @@
 {
-  "timestamp": "2026-08-18T06:49:53.062Z",
+  "timestamp": "2026-08-19T06:50:51.713Z",
   "script": "scripts.test.js",
   "source": "YunoHost-Apps GitHub Organization",
   "url": "https://github.com/YunoHost-Apps",
   "api_url": "https://api.github.com/orgs/YunoHost-Apps/repos",
-  "total_apps": 1005,
-  "total_repos_checked": 1026,
+  "total_apps": 1006,
+  "total_repos_checked": 1027,
   "languages": [
     "CSS",
     "HTML",
@@ -763,7 +763,7 @@
       "description": "Borg server package for YunoHost",
       "url": "https://github.com/YunoHost-Apps/borgserver_ynh",
       "stars": 11,
-      "forks": 7,
+      "forks": 8,
       "updated_at": "2026-06-05T08:36:11Z",
       "language": "Shell",
       "archived": false
@@ -1160,7 +1160,7 @@
       "url": "https://github.com/YunoHost-Apps/code-server_ynh",
       "stars": 9,
       "forks": 3,
-      "updated_at": "2026-08-17T20:03:48Z",
+      "updated_at": "2026-08-18T19:19:26Z",
       "language": "Shell",
       "archived": false
     },
@@ -1754,7 +1754,7 @@
       "url": "https://github.com/YunoHost-Apps/digiwords_ynh",
       "stars": 3,
       "forks": 2,
-      "updated_at": "2026-08-18T00:39:43Z",
+      "updated_at": "2026-08-18T09:45:30Z",
       "language": "Shell",
       "archived": false
     },
@@ -3272,7 +3272,7 @@
       "url": "https://github.com/YunoHost-Apps/gitlab_ynh",
       "stars": 22,
       "forks": 10,
-      "updated_at": "2026-08-17T08:02:55Z",
+      "updated_at": "2026-08-19T05:02:27Z",
       "language": "Ruby",
       "archived": false
     },
@@ -4141,7 +4141,7 @@
       "url": "https://github.com/YunoHost-Apps/invoiceninja5_ynh",
       "stars": 12,
       "forks": 7,
-      "updated_at": "2026-06-28T18:02:37Z",
+      "updated_at": "2026-08-18T16:31:02Z",
       "language": "Shell",
       "archived": false
     },
@@ -4218,7 +4218,7 @@
       "url": "https://github.com/YunoHost-Apps/jackett_ynh",
       "stars": 3,
       "forks": 5,
-      "updated_at": "2026-08-12T08:31:26Z",
+      "updated_at": "2026-08-19T05:40:49Z",
       "language": "Shell",
       "archived": false
     },
@@ -6341,7 +6341,7 @@
       "url": "https://github.com/YunoHost-Apps/nitter_ynh",
       "stars": 8,
       "forks": 5,
-      "updated_at": "2026-07-14T07:29:07Z",
+      "updated_at": "2026-08-18T08:52:15Z",
       "language": "Shell",
       "archived": false
     },
@@ -7078,7 +7078,7 @@
       "url": "https://github.com/YunoHost-Apps/penpot_ynh",
       "stars": 9,
       "forks": 5,
-      "updated_at": "2026-07-28T08:36:23Z",
+      "updated_at": "2026-08-18T07:45:27Z",
       "language": "Shell",
       "archived": false
     },
@@ -8227,6 +8227,17 @@
       "archived": false
     },
     {
+      "id": "rmfakecloud_ynh",
+      "name": "rmfakecloud",
+      "description": "rmfakecloud package for YunoHost",
+      "url": "https://github.com/YunoHost-Apps/rmfakecloud_ynh",
+      "stars": 0,
+      "forks": 0,
+      "updated_at": "2026-08-18T08:52:39Z",
+      "language": "Shell",
+      "archived": false
+    },
+    {
       "id": "roadiz_ynh",
       "name": "roadiz",
       "description": "Modern CMS based on a node system",
@@ -8298,8 +8309,8 @@
       "description": "Web UI for rspamd",
       "url": "https://github.com/YunoHost-Apps/rspamdui_ynh",
       "stars": 4,
-      "forks": 6,
-      "updated_at": "2026-06-05T08:49:46Z",
+      "forks": 7,
+      "updated_at": "2026-08-18T13:22:12Z",
       "language": "Shell",
       "archived": false
     },
@@ -8541,7 +8552,7 @@
       "url": "https://github.com/YunoHost-Apps/seaweedfs_ynh",
       "stars": 0,
       "forks": 1,
-      "updated_at": "2026-08-17T20:24:15Z",
+      "updated_at": "2026-08-18T19:18:56Z",
       "language": "Shell",
       "archived": false
     },
@@ -8948,7 +8959,7 @@
       "url": "https://github.com/YunoHost-Apps/snweb_ynh",
       "stars": 5,
       "forks": 4,
-      "updated_at": "2026-07-24T09:23:36Z",
+      "updated_at": "2026-08-18T17:49:17Z",
       "language": "Shell",
       "archived": false
     },
@@ -9903,9 +9914,9 @@
       "name": "tuwunel",
       "description": "Tuwunel packaged for YunoHost",
       "url": "https://github.com/YunoHost-Apps/tuwunel_ynh",
-      "stars": 10,
+      "stars": 11,
       "forks": 2,
-      "updated_at": "2026-08-06T14:31:39Z",
+      "updated_at": "2026-08-19T03:39:53Z",
       "language": "Shell",
       "archived": false
     },
