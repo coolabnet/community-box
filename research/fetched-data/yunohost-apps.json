@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-08-20T06:52:18.262Z",
+  "timestamp": "2026-08-21T06:53:28.323Z",
   "script": "scripts.test.js",
   "source": "YunoHost-Apps GitHub Organization",
   "url": "https://github.com/YunoHost-Apps",
@@ -2397,13 +2397,13 @@
       "archived": false
     },
     {
-      "id": "eurooffice_ynh",
-      "name": "eurooffice",
+      "id": "euro-office_ynh",
+      "name": "euro-office",
       "description": "EuroOffice package for YunoHost",
-      "url": "https://github.com/YunoHost-Apps/eurooffice_ynh",
+      "url": "https://github.com/YunoHost-Apps/euro-office_ynh",
       "stars": 0,
       "forks": 2,
-      "updated_at": "2026-07-28T15:11:16Z",
+      "updated_at": "2026-08-21T00:19:40Z",
       "language": "Shell",
       "archived": false
     },
@@ -4218,7 +4218,7 @@
       "url": "https://github.com/YunoHost-Apps/jackett_ynh",
       "stars": 3,
       "forks": 5,
-      "updated_at": "2026-08-19T05:40:49Z",
+      "updated_at": "2026-08-21T06:30:52Z",
       "language": "Shell",
       "archived": false
     },
@@ -4592,7 +4592,7 @@
       "url": "https://github.com/YunoHost-Apps/koinsight_ynh",
       "stars": 0,
       "forks": 0,
-      "updated_at": "2026-08-19T19:15:38Z",
+      "updated_at": "2026-08-20T18:08:08Z",
       "language": "Shell",
       "archived": false
     },
@@ -4702,7 +4702,7 @@
       "url": "https://github.com/YunoHost-Apps/lazylibrarian_ynh",
       "stars": 0,
       "forks": 0,
-      "updated_at": "2026-08-03T08:47:28Z",
+      "updated_at": "2026-08-20T16:08:44Z",
       "language": "Shell",
       "archived": false
     },
@@ -5065,7 +5065,7 @@
       "url": "https://github.com/YunoHost-Apps/localai_ynh",
       "stars": 2,
       "forks": 3,
-      "updated_at": "2026-08-08T23:42:54Z",
+      "updated_at": "2026-08-21T06:33:24Z",
       "language": "Shell",
       "archived": false
     },
@@ -5109,7 +5109,7 @@
       "url": "https://github.com/YunoHost-Apps/loops_ynh",
       "stars": 3,
       "forks": 2,
-      "updated_at": "2026-07-17T07:07:54Z",
+      "updated_at": "2026-08-20T19:57:25Z",
       "language": "Shell",
       "archived": false
     },
@@ -5153,7 +5153,7 @@
       "url": "https://github.com/YunoHost-Apps/lute_ynh",
       "stars": 0,
       "forks": 0,
-      "updated_at": "2026-01-31T13:15:35Z",
+      "updated_at": "2026-08-20T15:34:58Z",
       "language": "Shell",
       "archived": false
     },
@@ -6242,7 +6242,7 @@
       "url": "https://github.com/YunoHost-Apps/n8n_ynh",
       "stars": 21,
       "forks": 22,
-      "updated_at": "2026-08-17T19:55:54Z",
+      "updated_at": "2026-08-20T15:34:50Z",
       "language": "Shell",
       "archived": false
     },
@@ -9728,7 +9728,7 @@
       "description": "TorRelay package for YunoHost",
       "url": "https://github.com/YunoHost-Apps/torrelay_ynh",
       "stars": 1,
-      "forks": 2,
+      "forks": 3,
       "updated_at": "2025-12-18T14:04:03Z",
       "language": "Shell",
       "archived": false
@@ -9894,7 +9894,7 @@
       "url": "https://github.com/YunoHost-Apps/tunarr_ynh",
       "stars": 1,
       "forks": 0,
-      "updated_at": "2026-08-17T19:42:07Z",
+      "updated_at": "2026-08-20T15:32:25Z",
       "language": "Shell",
       "archived": false
     },
@@ -10092,7 +10092,7 @@
       "url": "https://github.com/YunoHost-Apps/versitygw_ynh",
       "stars": 0,
       "forks": 0,
-      "updated_at": "2026-07-16T01:54:08Z",
+      "updated_at": "2026-08-20T14:52:27Z",
       "language": "Shell",
       "archived": false
     },
@@ -10476,8 +10476,8 @@
       "description": "",
       "url": "https://github.com/YunoHost-Apps/wikimore_ynh",
       "stars": 0,
-      "forks": 0,
-      "updated_at": "2026-07-11T08:12:53Z",
+      "forks": 1,
+      "updated_at": "2026-08-21T06:16:34Z",
       "language": "Shell",
       "archived": false
     },
@@ -10752,7 +10752,7 @@
       "url": "https://github.com/YunoHost-Apps/youtarr_ynh",
       "stars": 0,
       "forks": 1,
-      "updated_at": "2026-08-13T10:22:50Z",
+      "updated_at": "2026-08-20T16:02:26Z",
       "language": "Shell",
       "archived": false
     },
