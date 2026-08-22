@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-08-21T06:53:28.323Z",
+  "timestamp": "2026-08-22T06:46:32.252Z",
   "script": "scripts.test.js",
   "source": "YunoHost-Apps GitHub Organization",
   "url": "https://github.com/YunoHost-Apps",
@@ -1688,7 +1688,7 @@
       "url": "https://github.com/YunoHost-Apps/digipad_ynh",
       "stars": 2,
       "forks": 1,
-      "updated_at": "2026-07-17T19:07:19Z",
+      "updated_at": "2026-08-21T14:05:30Z",
       "language": "Shell",
       "archived": false
     },
@@ -4031,7 +4031,7 @@
       "url": "https://github.com/YunoHost-Apps/ifm_ynh",
       "stars": 4,
       "forks": 2,
-      "updated_at": "2026-06-11T08:24:37Z",
+      "updated_at": "2026-08-21T21:18:53Z",
       "language": "Shell",
       "archived": false
     },
@@ -6550,7 +6550,7 @@
       "url": "https://github.com/YunoHost-Apps/ollama_ynh",
       "stars": 5,
       "forks": 3,
-      "updated_at": "2026-08-17T09:24:24Z",
+      "updated_at": "2026-08-21T07:35:57Z",
       "language": "Shell",
       "archived": false
     },
@@ -8409,7 +8409,7 @@
       "url": "https://github.com/YunoHost-Apps/sabnzbd_ynh",
       "stars": 1,
       "forks": 0,
-      "updated_at": "2026-08-12T10:47:17Z",
+      "updated_at": "2026-08-21T21:22:55Z",
       "language": "Shell",
       "archived": false
     },
@@ -9080,7 +9080,7 @@
       "url": "https://github.com/YunoHost-Apps/spip_ynh",
       "stars": 6,
       "forks": 8,
-      "updated_at": "2026-08-17T20:42:53Z",
+      "updated_at": "2026-08-21T09:45:34Z",
       "language": "Shell",
       "archived": false
     },
@@ -9146,7 +9146,7 @@
       "url": "https://github.com/YunoHost-Apps/ssh_apprise_ynh",
       "stars": 1,
       "forks": 0,
-      "updated_at": "2026-07-06T15:25:47Z",
+      "updated_at": "2026-08-21T16:17:41Z",
       "language": "Shell",
       "archived": false
     },
@@ -9971,7 +9971,7 @@
       "url": "https://github.com/YunoHost-Apps/umami_ynh",
       "stars": 4,
       "forks": 6,
-      "updated_at": "2026-08-13T07:58:52Z",
+      "updated_at": "2026-08-21T07:52:40Z",
       "language": "Shell",
       "archived": false
     },
@@ -11027,7 +11027,7 @@
       "url": "https://github.com/YunoHost-Apps/zola_ynh",
       "stars": 3,
       "forks": 3,
-      "updated_at": "2026-08-17T20:29:41Z",
+      "updated_at": "2026-08-21T16:19:19Z",
       "language": "Shell",
       "archived": false
     },
