@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-08-23T06:47:51.654Z",
+  "timestamp": "2026-08-24T07:05:42.361Z",
   "script": "scripts.test.js",
   "source": "YunoHost-Apps GitHub Organization",
   "url": "https://github.com/YunoHost-Apps",
@@ -885,7 +885,7 @@
       "url": "https://github.com/YunoHost-Apps/calibreweb_ynh",
       "stars": 19,
       "forks": 10,
-      "updated_at": "2026-06-08T18:55:14Z",
+      "updated_at": "2026-08-23T14:50:48Z",
       "language": "Shell",
       "archived": false
     },
@@ -1248,7 +1248,7 @@
       "url": "https://github.com/YunoHost-Apps/commet_ynh",
       "stars": 3,
       "forks": 3,
-      "updated_at": "2026-05-03T06:55:52Z",
+      "updated_at": "2026-08-23T19:20:40Z",
       "language": "Shell",
       "archived": false
     },
@@ -1578,7 +1578,7 @@
       "url": "https://github.com/YunoHost-Apps/dawarich_ynh",
       "stars": 2,
       "forks": 1,
-      "updated_at": "2026-06-05T08:25:23Z",
+      "updated_at": "2026-08-23T15:58:48Z",
       "language": "Shell",
       "archived": false
     },
@@ -2403,7 +2403,7 @@
       "url": "https://github.com/YunoHost-Apps/euro-office_ynh",
       "stars": 0,
       "forks": 2,
-      "updated_at": "2026-08-21T00:19:40Z",
+      "updated_at": "2026-08-24T06:44:01Z",
       "language": "Shell",
       "archived": false
     },
@@ -3547,7 +3547,7 @@
       "url": "https://github.com/YunoHost-Apps/grav_ynh",
       "stars": 20,
       "forks": 14,
-      "updated_at": "2026-08-15T09:07:17Z",
+      "updated_at": "2026-08-23T12:06:13Z",
       "language": "Shell",
       "archived": false
     },
@@ -4823,7 +4823,7 @@
       "url": "https://github.com/YunoHost-Apps/libreerp_ynh",
       "stars": 19,
       "forks": 18,
-      "updated_at": "2026-08-17T09:23:49Z",
+      "updated_at": "2026-08-24T06:03:44Z",
       "language": "Shell",
       "archived": false
     },
@@ -6495,7 +6495,7 @@
       "url": "https://github.com/YunoHost-Apps/octoprint_ynh",
       "stars": 5,
       "forks": 3,
-      "updated_at": "2026-06-24T05:02:58Z",
+      "updated_at": "2026-08-24T05:54:15Z",
       "language": "Shell",
       "archived": false
     },
@@ -7451,7 +7451,7 @@
       "description": "Planka package for YunoHost",
       "url": "https://github.com/YunoHost-Apps/planka_ynh",
       "stars": 1,
-      "forks": 4,
+      "forks": 5,
       "updated_at": "2026-08-17T20:20:52Z",
       "language": "Shell",
       "archived": false
@@ -9542,7 +9542,7 @@
       "url": "https://github.com/YunoHost-Apps/terraforming-mars_ynh",
       "stars": 2,
       "forks": 3,
-      "updated_at": "2026-08-17T09:27:44Z",
+      "updated_at": "2026-08-24T06:03:25Z",
       "language": "Shell",
       "archived": false
     },
@@ -10136,7 +10136,7 @@
       "url": "https://github.com/YunoHost-Apps/virtualtabletop_ynh",
       "stars": 3,
       "forks": 0,
-      "updated_at": "2026-08-17T03:43:18Z",
+      "updated_at": "2026-08-24T01:12:16Z",
       "language": "Shell",
       "archived": false
     },
@@ -10235,7 +10235,7 @@
       "url": "https://github.com/YunoHost-Apps/warpgate_ynh",
       "stars": 1,
       "forks": 0,
-      "updated_at": "2026-08-16T01:50:20Z",
+      "updated_at": "2026-08-24T01:12:09Z",
       "language": "Shell",
       "archived": false
     },
@@ -10477,7 +10477,7 @@
       "url": "https://github.com/YunoHost-Apps/wikimore_ynh",
       "stars": 0,
       "forks": 1,
-      "updated_at": "2026-08-21T06:16:34Z",
+      "updated_at": "2026-08-23T11:32:29Z",
       "language": "Shell",
       "archived": false
     },

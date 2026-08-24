@@ -1,29 +1,21 @@
 {
-  "timestamp": "2026-08-23T06:47:53.265Z",
+  "timestamp": "2026-08-24T07:05:43.772Z",
   "script": "scripts.test.js",
   "source": "YunoHost Translation Platform",
   "url": "https://translate.yunohost.org/",
   "api_url": "https://translate.yunohost.org/api/translations/?format=json",
   "total_languages": 50,
-  "fully_translated": 16,
-  "partially_translated": 31,
+  "fully_translated": 15,
+  "partially_translated": 32,
   "not_started": 3,
   "data": [
-    {
-      "language": "French",
-      "language_code": "fr",
-      "translated_percent": 100,
-      "translated_words": 11293,
-      "total_words": 11293,
-      "last_change": "2026-08-06T12:09:07.153448Z"
-    },
     {
       "language": "Russian",
       "language_code": "ru",
       "translated_percent": 100,
-      "translated_words": 11293,
-      "total_words": 11293,
-      "last_change": "2026-08-06T12:09:18.771311Z"
+      "translated_words": 11307,
+      "total_words": 11307,
+      "last_change": "2026-08-23T23:04:25.947806Z"
     },
     {
       "language": "German",
@@ -138,6 +130,14 @@
       "last_change": "2025-11-19T00:03:57.962288Z"
     },
     {
+      "language": "French",
+      "language_code": "fr",
+      "translated_percent": 99.8,
+      "translated_words": 11293,
+      "total_words": 11307,
+      "last_change": "2026-08-23T21:31:51.649659Z"
+    },
+    {
       "language": "Catalan",
       "language_code": "ca",
       "translated_percent": 99.7,
@@ -172,18 +172,10 @@
     {
       "language": "German",
       "language_code": "de",
-      "translated_percent": 99.5,
+      "translated_percent": 99.4,
       "translated_words": 11080,
-      "total_words": 11293,
-      "last_change": "2026-08-06T12:09:02.229580Z"
-    },
-    {
-      "language": "Basque",
-      "language_code": "eu",
-      "translated_percent": 98.9,
-      "translated_words": 10976,
-      "total_words": 11293,
-      "last_change": "2026-08-06T12:09:04.686483Z"
+      "total_words": 11307,
+      "last_change": "2026-08-23T21:31:45.117171Z"
     },
     {
       "language": "Spanish",
@@ -194,12 +186,20 @@
       "last_change": "2026-06-03T12:49:37.223241Z"
     },
     {
+      "language": "Basque",
+      "language_code": "eu",
+      "translated_percent": 98.8,
+      "translated_words": 10976,
+      "total_words": 11307,
+      "last_change": "2026-08-23T21:31:48.739883Z"
+    },
+    {
       "language": "Catalan",
       "language_code": "ca",
-      "translated_percent": 98.8,
+      "translated_percent": 98.7,
       "translated_words": 10961,
-      "total_words": 11293,
-      "last_change": "2026-08-06T12:08:59.590350Z"
+      "total_words": 11307,
+      "last_change": "2026-08-23T21:31:41.353106Z"
     },
     {
       "language": "Turkish",
@@ -212,10 +212,10 @@
     {
       "language": "Spanish",
       "language_code": "es",
-      "translated_percent": 95.4,
+      "translated_percent": 95.3,
       "translated_words": 10264,
-      "total_words": 11293,
-      "last_change": "2026-08-06T12:09:04.163133Z"
+      "total_words": 11307,
+      "last_change": "2026-08-23T21:31:47.772977Z"
     },
     {
       "language": "Portuguese",
@@ -268,10 +268,10 @@
     {
       "language": "Italian",
       "language_code": "it",
-      "translated_percent": 62.3,
+      "translated_percent": 62.2,
       "translated_words": 6415,
-      "total_words": 11293,
-      "last_change": "2026-08-06T12:09:10.741657Z"
+      "total_words": 11307,
+      "last_change": "2026-08-23T21:31:58.088571Z"
     },
     {
       "language": "Portuguese",
@@ -294,8 +294,8 @@
       "language_code": "eo",
       "translated_percent": 46.9,
       "translated_words": 4266,
-      "total_words": 11293,
-      "last_change": "2026-08-06T12:09:03.469061Z"
+      "total_words": 11307,
+      "last_change": "2026-08-23T21:31:47.090976Z"
     },
     {
       "language": "Esperanto",
@@ -310,16 +310,16 @@
       "language_code": "oc",
       "translated_percent": 32.6,
       "translated_words": 2366,
-      "total_words": 11293,
-      "last_change": "2026-08-06T12:09:16.380995Z"
+      "total_words": 11307,
+      "last_change": "2026-08-23T21:32:08.700918Z"
     },
     {
       "language": "Arabic",
       "language_code": "ar",
-      "translated_percent": 22.4,
+      "translated_percent": 22.3,
       "translated_words": 1110,
-      "total_words": 11293,
-      "last_change": "2026-08-06T12:08:57.636123Z"
+      "total_words": 11307,
+      "last_change": "2026-08-23T21:31:38.614087Z"
     },
     {
       "language": "Swedish",
@@ -334,16 +334,16 @@
       "language_code": "nl",
       "translated_percent": 20.9,
       "translated_words": 1776,
-      "total_words": 11293,
-      "last_change": "2026-08-06T12:09:15.224197Z"
+      "total_words": 11307,
+      "last_change": "2026-08-23T21:32:06.821048Z"
     },
     {
       "language": "Portuguese",
       "language_code": "pt",
       "translated_percent": 17.9,
       "translated_words": 1366,
-      "total_words": 11293,
-      "last_change": "2026-08-06T12:09:17.467153Z"
+      "total_words": 11307,
+      "last_change": "2026-08-23T21:32:10.501249Z"
     },
     {
       "language": "Greek",
@@ -356,18 +356,18 @@
     {
       "language": "Turkish",
       "language_code": "tr",
-      "translated_percent": 6.6,
+      "translated_percent": 6.5,
       "translated_words": 629,
-      "total_words": 11293,
-      "last_change": "2026-08-06T12:09:22.777342Z"
+      "total_words": 11307,
+      "last_change": "2026-08-23T21:32:17.598298Z"
     },
     {
       "language": "Hindi",
       "language_code": "hi",
       "translated_percent": 2,
       "translated_words": 95,
-      "total_words": 11293,
-      "last_change": "2026-08-06T12:09:08.928176Z"
+      "total_words": 11307,
+      "last_change": "2026-08-23T21:31:54.460937Z"
     },
     {
       "language": "Hindi",
@@ -382,16 +382,16 @@
       "language_code": "hu",
       "translated_percent": 1,
       "translated_words": 48,
-      "total_words": 11293,
-      "last_change": "2026-08-06T12:09:09.667014Z"
+      "total_words": 11307,
+      "last_change": "2026-08-23T21:31:55.562840Z"
     },
     {
       "language": "Breton",
       "language_code": "br",
       "translated_percent": 0,
       "translated_words": 0,
-      "total_words": 11293,
-      "last_change": "2026-08-06T12:08:58.781712Z"
+      "total_words": 11307,
+      "last_change": "2026-08-23T21:31:40.333668Z"
     },
     {
       "language": "Breton",
