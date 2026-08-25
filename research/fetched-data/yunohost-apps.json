@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-08-24T07:05:42.361Z",
+  "timestamp": "2026-08-25T06:54:42.188Z",
   "script": "scripts.test.js",
   "source": "YunoHost-Apps GitHub Organization",
   "url": "https://github.com/YunoHost-Apps",
@@ -775,7 +775,7 @@
       "url": "https://github.com/YunoHost-Apps/borgwarehouse_ynh",
       "stars": 2,
       "forks": 4,
-      "updated_at": "2026-08-02T19:40:04Z",
+      "updated_at": "2026-08-24T08:23:00Z",
       "language": "Shell",
       "archived": false
     },
@@ -883,9 +883,9 @@
       "name": "calibreweb",
       "description": "Calibre-web package for YunoHost",
       "url": "https://github.com/YunoHost-Apps/calibreweb_ynh",
-      "stars": 19,
+      "stars": 20,
       "forks": 10,
-      "updated_at": "2026-08-23T14:50:48Z",
+      "updated_at": "2026-08-25T01:47:46Z",
       "language": "Shell",
       "archived": false
     },
@@ -1082,7 +1082,7 @@
       "description": "onstituent relationship management for non-profits, NGOs and advocacy organizations for YunoHost",
       "url": "https://github.com/YunoHost-Apps/civicrm_drupal_ynh",
       "stars": 0,
-      "forks": 0,
+      "forks": 1,
       "updated_at": "2026-07-28T19:45:49Z",
       "language": "Shell",
       "archived": false
@@ -1159,7 +1159,7 @@
       "description": "Code-server packaged for YunoHost",
       "url": "https://github.com/YunoHost-Apps/code-server_ynh",
       "stars": 9,
-      "forks": 3,
+      "forks": 2,
       "updated_at": "2026-08-18T19:19:26Z",
       "language": "Shell",
       "archived": false
@@ -2039,7 +2039,7 @@
       "description": "Drupal package for YunoHost",
       "url": "https://github.com/YunoHost-Apps/drupal_ynh",
       "stars": 5,
-      "forks": 13,
+      "forks": 14,
       "updated_at": "2026-07-28T00:44:21Z",
       "language": "Shell",
       "archived": false
@@ -2403,7 +2403,7 @@
       "url": "https://github.com/YunoHost-Apps/euro-office_ynh",
       "stars": 0,
       "forks": 2,
-      "updated_at": "2026-08-24T06:44:01Z",
+      "updated_at": "2026-08-24T20:54:41Z",
       "language": "Shell",
       "archived": false
     },
@@ -3888,7 +3888,7 @@
       "url": "https://github.com/YunoHost-Apps/htmly_ynh",
       "stars": 0,
       "forks": 0,
-      "updated_at": "2026-06-11T20:54:08Z",
+      "updated_at": "2026-08-24T10:47:55Z",
       "language": "Shell",
       "archived": false
     },
@@ -4052,7 +4052,7 @@
       "description": "Photo and video backup solution directly from your mobile phone.",
       "url": "https://github.com/YunoHost-Apps/immich_ynh",
       "stars": 30,
-      "forks": 18,
+      "forks": 17,
       "updated_at": "2026-08-02T06:04:21Z",
       "language": "Shell",
       "archived": false
@@ -5197,7 +5197,7 @@
       "url": "https://github.com/YunoHost-Apps/lxd-ui_ynh",
       "stars": 0,
       "forks": 0,
-      "updated_at": "2026-08-13T12:49:51Z",
+      "updated_at": "2026-08-24T22:02:54Z",
       "language": "Shell",
       "archived": false
     },
@@ -5372,7 +5372,7 @@
       "description": "Matterbridge package for YunoHost",
       "url": "https://github.com/YunoHost-Apps/matterbridge_ynh",
       "stars": 11,
-      "forks": 6,
+      "forks": 5,
       "updated_at": "2025-10-28T10:52:29Z",
       "language": "Shell",
       "archived": false
@@ -5636,7 +5636,7 @@
       "description": "Metabase package for YunoHost",
       "url": "https://github.com/YunoHost-Apps/metabase_ynh",
       "stars": 12,
-      "forks": 6,
+      "forks": 5,
       "updated_at": "2025-08-30T17:07:07Z",
       "language": "Shell",
       "archived": false
@@ -5725,7 +5725,7 @@
       "url": "https://github.com/YunoHost-Apps/minetest_ynh",
       "stars": 6,
       "forks": 8,
-      "updated_at": "2026-08-03T09:03:51Z",
+      "updated_at": "2026-08-24T09:35:59Z",
       "language": "Shell",
       "archived": false
     },
@@ -5747,7 +5747,7 @@
       "url": "https://github.com/YunoHost-Apps/mini-qr_ynh",
       "stars": 0,
       "forks": 0,
-      "updated_at": "2026-07-30T06:37:26Z",
+      "updated_at": "2026-08-24T10:45:08Z",
       "language": "Shell",
       "archived": false
     },
@@ -6890,7 +6890,7 @@
       "description": "ownCloud package for YunoHost",
       "url": "https://github.com/YunoHost-Apps/owncloud_ynh",
       "stars": 5,
-      "forks": 9,
+      "forks": 8,
       "updated_at": "2026-08-11T07:56:16Z",
       "language": "Shell",
       "archived": false
@@ -7408,7 +7408,7 @@
       "url": "https://github.com/YunoHost-Apps/pixelfed_ynh",
       "stars": 53,
       "forks": 21,
-      "updated_at": "2026-06-29T16:42:27Z",
+      "updated_at": "2026-08-24T19:14:04Z",
       "language": "Shell",
       "archived": false
     },
@@ -8552,7 +8552,7 @@
       "url": "https://github.com/YunoHost-Apps/searxng_ynh",
       "stars": 14,
       "forks": 4,
-      "updated_at": "2026-08-17T05:39:51Z",
+      "updated_at": "2026-08-24T12:52:41Z",
       "language": "Shell",
       "archived": false
     },
@@ -9762,7 +9762,7 @@
       "url": "https://github.com/YunoHost-Apps/tracktor_ynh",
       "stars": 1,
       "forks": 0,
-      "updated_at": "2026-08-10T15:44:39Z",
+      "updated_at": "2026-08-24T21:30:10Z",
       "language": "Shell",
       "archived": false
     },
@@ -10235,7 +10235,7 @@
       "url": "https://github.com/YunoHost-Apps/warpgate_ynh",
       "stars": 1,
       "forks": 0,
-      "updated_at": "2026-08-24T01:12:09Z",
+      "updated_at": "2026-08-24T18:06:34Z",
       "language": "Shell",
       "archived": false
     },
@@ -10378,7 +10378,7 @@
       "url": "https://github.com/YunoHost-Apps/wekan_ynh",
       "stars": 18,
       "forks": 19,
-      "updated_at": "2026-08-22T10:57:12Z",
+      "updated_at": "2026-08-24T10:17:56Z",
       "language": "Shell",
       "archived": false
     },
@@ -10444,7 +10444,7 @@
       "url": "https://github.com/YunoHost-Apps/wiki-go_ynh",
       "stars": 2,
       "forks": 1,
-      "updated_at": "2026-07-16T07:09:35Z",
+      "updated_at": "2026-08-24T08:18:24Z",
       "language": "Shell",
       "archived": false
     },
