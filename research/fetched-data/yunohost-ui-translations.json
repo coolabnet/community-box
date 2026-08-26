@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-08-25T06:54:44.499Z",
+  "timestamp": "2026-08-26T06:55:37.212Z",
   "script": "scripts.test.js",
   "source": "YunoHost Translation Platform",
   "url": "https://translate.yunohost.org/",
@@ -314,20 +314,20 @@
       "last_change": "2026-08-23T21:32:08.700918Z"
     },
     {
+      "language": "Swedish",
+      "language_code": "sv",
+      "translated_percent": 22.9,
+      "translated_words": 429,
+      "total_words": 3820,
+      "last_change": "2026-08-25T14:41:40.637706Z"
+    },
+    {
       "language": "Arabic",
       "language_code": "ar",
       "translated_percent": 22.3,
       "translated_words": 1110,
       "total_words": 11307,
       "last_change": "2026-08-23T21:31:38.614087Z"
-    },
-    {
-      "language": "Swedish",
-      "language_code": "sv",
-      "translated_percent": 21.7,
-      "translated_words": 381,
-      "total_words": 3820,
-      "last_change": "2026-06-03T12:49:45.655068Z"
     },
     {
       "language": "Dutch",
