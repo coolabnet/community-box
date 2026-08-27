@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-08-26T06:55:36.083Z",
+  "timestamp": "2026-08-27T17:29:40.656Z",
   "script": "scripts.test.js",
   "source": "YunoHost-Apps GitHub Organization",
   "url": "https://github.com/YunoHost-Apps",
@@ -445,7 +445,7 @@
       "url": "https://github.com/YunoHost-Apps/atuin_ynh",
       "stars": 0,
       "forks": 2,
-      "updated_at": "2026-08-06T17:46:37Z",
+      "updated_at": "2026-08-27T12:40:09Z",
       "language": "Shell",
       "archived": false
     },
@@ -2403,7 +2403,7 @@
       "url": "https://github.com/YunoHost-Apps/euro-office_ynh",
       "stars": 0,
       "forks": 2,
-      "updated_at": "2026-08-24T20:54:41Z",
+      "updated_at": "2026-08-26T07:55:44Z",
       "language": "Shell",
       "archived": false
     },
@@ -3822,7 +3822,7 @@
       "url": "https://github.com/YunoHost-Apps/homeassistant_ynh",
       "stars": 25,
       "forks": 17,
-      "updated_at": "2026-08-15T06:39:00Z",
+      "updated_at": "2026-08-27T16:40:32Z",
       "language": "Shell",
       "archived": false
     },
@@ -4053,7 +4053,7 @@
       "url": "https://github.com/YunoHost-Apps/immich_ynh",
       "stars": 29,
       "forks": 17,
-      "updated_at": "2026-08-25T17:30:55Z",
+      "updated_at": "2026-08-27T17:14:31Z",
       "language": "Shell",
       "archived": false
     },
@@ -5494,7 +5494,7 @@
       "url": "https://github.com/YunoHost-Apps/may_ynh",
       "stars": 2,
       "forks": 0,
-      "updated_at": "2026-08-26T05:59:37Z",
+      "updated_at": "2026-08-27T05:19:12Z",
       "language": "Shell",
       "archived": false
     },
@@ -6329,8 +6329,8 @@
       "description": "A script to ban large numbers of IP addresses published in blacklists, packaged for YunoHost",
       "url": "https://github.com/YunoHost-Apps/nftables-blacklist_ynh",
       "stars": 3,
-      "forks": 0,
-      "updated_at": "2026-07-28T04:44:15Z",
+      "forks": 2,
+      "updated_at": "2026-08-26T10:13:15Z",
       "language": "Shell",
       "archived": false
     },
@@ -6550,7 +6550,7 @@
       "url": "https://github.com/YunoHost-Apps/ollama_ynh",
       "stars": 5,
       "forks": 3,
-      "updated_at": "2026-08-21T07:35:57Z",
+      "updated_at": "2026-08-27T05:56:20Z",
       "language": "Shell",
       "archived": false
     },
@@ -7089,7 +7089,7 @@
       "url": "https://github.com/YunoHost-Apps/penpot_ynh",
       "stars": 9,
       "forks": 5,
-      "updated_at": "2026-08-18T07:45:27Z",
+      "updated_at": "2026-08-27T10:53:56Z",
       "language": "Shell",
       "archived": false
     },
@@ -10235,7 +10235,7 @@
       "url": "https://github.com/YunoHost-Apps/warpgate_ynh",
       "stars": 1,
       "forks": 0,
-      "updated_at": "2026-08-24T18:06:34Z",
+      "updated_at": "2026-08-27T16:17:12Z",
       "language": "Shell",
       "archived": false
     },
@@ -10675,7 +10675,7 @@
       "url": "https://github.com/YunoHost-Apps/yamtrack_ynh",
       "stars": 1,
       "forks": 0,
-      "updated_at": "2026-08-09T06:14:10Z",
+      "updated_at": "2026-08-26T11:34:08Z",
       "language": "Shell",
       "archived": false
     },
