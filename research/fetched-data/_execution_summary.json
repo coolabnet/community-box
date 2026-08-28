@@ -1,19 +1,19 @@
 {
-  "timestamp": "2026-08-27T17:29:27.516Z",
+  "timestamp": "2026-08-28T18:24:11.832Z",
   "script": "run-all.js",
   "note": "Summary of all data fetching script executions",
   "data": {
-    "execution_time": "2026-08-27T17:29:27.515Z",
+    "execution_time": "2026-08-28T18:24:11.832Z",
     "total_scripts": 6,
     "successful": 6,
     "failed": 0,
-    "total_duration_ms": 17082,
+    "total_duration_ms": 19620,
     "continue_on_error": true,
     "results": [
       {
         "name": "CapRover UI Translations",
         "success": true,
-        "duration": 261,
+        "duration": 263,
         "result": [
           "ar-EG",
           "de-DE",
@@ -36,7 +36,7 @@
       {
         "name": "CasaOS UI Translations",
         "success": true,
-        "duration": 218,
+        "duration": 202,
         "result": [
           "ca_ES",
           "cs_CZ",
@@ -71,7 +71,7 @@
       {
         "name": "YunoHost Apps",
         "success": true,
-        "duration": 14030,
+        "duration": 12240,
         "result": {
           "count": 1007,
           "apps": [
@@ -500,7 +500,7 @@
               "url": "https://github.com/YunoHost-Apps/atuin_ynh",
               "stars": 0,
               "forks": 2,
-              "updated_at": "2026-08-27T12:40:09Z",
+              "updated_at": "2026-08-28T12:03:43Z",
               "language": "Shell",
               "archived": false
             },
@@ -676,7 +676,7 @@
               "url": "https://github.com/YunoHost-Apps/beszel_ynh",
               "stars": 1,
               "forks": 0,
-              "updated_at": "2026-08-18T05:50:10Z",
+              "updated_at": "2026-08-28T15:42:35Z",
               "language": "Shell",
               "archived": false
             },
@@ -2039,7 +2039,7 @@
               "description": "Dolibarr ERP & CRM is a modern software to manage your organization's activity. This is an integration of Dolibarr in YunoHost",
               "url": "https://github.com/YunoHost-Apps/dolibarr_ynh",
               "stars": 17,
-              "forks": 21,
+              "forks": 22,
               "updated_at": "2026-07-22T20:59:20Z",
               "language": "Shell",
               "archived": false
@@ -3072,9 +3072,9 @@
               "name": "friendica",
               "description": "Friendica package for YunoHost",
               "url": "https://github.com/YunoHost-Apps/friendica_ynh",
-              "stars": 16,
+              "stars": 17,
               "forks": 15,
-              "updated_at": "2026-06-05T08:30:14Z",
+              "updated_at": "2026-08-28T13:39:20Z",
               "language": "Shell",
               "archived": false
             },
@@ -4273,7 +4273,7 @@
               "url": "https://github.com/YunoHost-Apps/jackett_ynh",
               "stars": 3,
               "forks": 5,
-              "updated_at": "2026-08-21T06:30:52Z",
+              "updated_at": "2026-08-28T05:55:43Z",
               "language": "Shell",
               "archived": false
             },
@@ -5438,7 +5438,7 @@
               "description": "Mattermost package for YunoHost",
               "url": "https://github.com/YunoHost-Apps/mattermost_ynh",
               "stars": 36,
-              "forks": 18,
+              "forks": 17,
               "updated_at": "2026-06-12T08:25:16Z",
               "language": "Shell",
               "archived": false
@@ -8739,7 +8739,7 @@
               "url": "https://github.com/YunoHost-Apps/shields_ynh",
               "stars": 0,
               "forks": 1,
-              "updated_at": "2026-07-24T06:37:39Z",
+              "updated_at": "2026-08-28T15:32:58Z",
               "language": "Shell",
               "archived": false
             },
@@ -10433,7 +10433,7 @@
               "url": "https://github.com/YunoHost-Apps/wekan_ynh",
               "stars": 18,
               "forks": 19,
-              "updated_at": "2026-08-24T10:17:56Z",
+              "updated_at": "2026-08-28T05:53:45Z",
               "language": "Shell",
               "archived": false
             },
@@ -11171,7 +11171,7 @@
       {
         "name": "YunoHost Docs Translations",
         "success": true,
-        "duration": 169,
+        "duration": 178,
         "result": [
           "de",
           "docs",
@@ -11188,7 +11188,7 @@
       {
         "name": "YunoHost UI Translations",
         "success": true,
-        "duration": 1948,
+        "duration": 6373,
         "result": [
           {
             "language": "French",
@@ -11595,7 +11595,7 @@
       {
         "name": "Zimaboard Shipping Areas",
         "success": true,
-        "duration": 456,
+        "duration": 364,
         "result": [
           "Argentina",
           "Australia",
