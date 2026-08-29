@@ -1,11 +1,11 @@
 {
-  "timestamp": "2026-08-28T18:24:12.445Z",
+  "timestamp": "2026-08-29T12:31:44.308Z",
   "script": "scripts.test.js",
   "source": "YunoHost-Apps GitHub Organization",
   "url": "https://github.com/YunoHost-Apps",
   "api_url": "https://api.github.com/orgs/YunoHost-Apps/repos",
-  "total_apps": 1007,
-  "total_repos_checked": 1028,
+  "total_apps": 1008,
+  "total_repos_checked": 1029,
   "languages": [
     "CSS",
     "HTML",
@@ -621,7 +621,18 @@
       "url": "https://github.com/YunoHost-Apps/beszel_ynh",
       "stars": 1,
       "forks": 0,
-      "updated_at": "2026-08-28T15:42:35Z",
+      "updated_at": "2026-08-29T08:12:20Z",
+      "language": "Shell",
+      "archived": false
+    },
+    {
+      "id": "beszel-agent_ynh",
+      "name": "beszel-agent",
+      "description": "Agent for the server monitoring platform, packaged for YunoHost",
+      "url": "https://github.com/YunoHost-Apps/beszel-agent_ynh",
+      "stars": 0,
+      "forks": 0,
+      "updated_at": "2026-08-28T21:22:11Z",
       "language": "Shell",
       "archived": false
     },
@@ -742,7 +753,7 @@
       "url": "https://github.com/YunoHost-Apps/bookwyrm_ynh",
       "stars": 10,
       "forks": 6,
-      "updated_at": "2026-06-19T06:41:40Z",
+      "updated_at": "2026-08-28T22:10:53Z",
       "language": "Shell",
       "archived": false
     },
@@ -2380,7 +2391,7 @@
       "description": "Etherpad-Lite package for YunoHost",
       "url": "https://github.com/YunoHost-Apps/etherpad_ynh",
       "stars": 3,
-      "forks": 3,
+      "forks": 4,
       "updated_at": "2026-07-29T13:29:51Z",
       "language": "Shell",
       "archived": false
@@ -2841,9 +2852,9 @@
       "name": "forgejo",
       "description": "Forgejo package for YunoHost",
       "url": "https://github.com/YunoHost-Apps/forgejo_ynh",
-      "stars": 23,
-      "forks": 9,
-      "updated_at": "2026-08-25T17:29:06Z",
+      "stars": 24,
+      "forks": 10,
+      "updated_at": "2026-08-29T06:48:52Z",
       "language": "Shell",
       "archived": false
     },
@@ -3569,7 +3580,7 @@
       "url": "https://github.com/YunoHost-Apps/grist_ynh",
       "stars": 14,
       "forks": 7,
-      "updated_at": "2026-07-30T06:17:43Z",
+      "updated_at": "2026-08-29T10:27:42Z",
       "language": "Shell",
       "archived": false
     },
@@ -6550,7 +6561,7 @@
       "url": "https://github.com/YunoHost-Apps/ollama_ynh",
       "stars": 5,
       "forks": 3,
-      "updated_at": "2026-08-27T05:56:20Z",
+      "updated_at": "2026-08-29T07:27:43Z",
       "language": "Shell",
       "archived": false
     },
@@ -10752,7 +10763,7 @@
       "url": "https://github.com/YunoHost-Apps/youtarr_ynh",
       "stars": 0,
       "forks": 1,
-      "updated_at": "2026-08-20T16:02:26Z",
+      "updated_at": "2026-08-29T08:23:00Z",
       "language": "Shell",
       "archived": false
     },
