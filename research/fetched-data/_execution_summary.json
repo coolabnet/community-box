@@ -1,19 +1,19 @@
 {
-  "timestamp": "2026-09-02T10:57:13.209Z",
+  "timestamp": "2026-09-03T10:56:09.217Z",
   "script": "run-all.js",
   "note": "Summary of all data fetching script executions",
   "data": {
-    "execution_time": "2026-09-02T10:57:13.209Z",
+    "execution_time": "2026-09-03T10:56:09.217Z",
     "total_scripts": 6,
     "successful": 6,
     "failed": 0,
-    "total_duration_ms": 15601,
+    "total_duration_ms": 14972,
     "continue_on_error": true,
     "results": [
       {
         "name": "CapRover UI Translations",
         "success": true,
-        "duration": 181,
+        "duration": 381,
         "result": [
           "ar-EG",
           "de-DE",
@@ -36,7 +36,7 @@
       {
         "name": "CasaOS UI Translations",
         "success": true,
-        "duration": 122,
+        "duration": 180,
         "result": [
           "ca_ES",
           "cs_CZ",
@@ -71,7 +71,7 @@
       {
         "name": "YunoHost Apps",
         "success": true,
-        "duration": 13588,
+        "duration": 12169,
         "result": {
           "count": 1011,
           "apps": [
@@ -434,7 +434,7 @@
               "url": "https://github.com/YunoHost-Apps/archivebox_ynh",
               "stars": 19,
               "forks": 6,
-              "updated_at": "2026-08-30T21:03:18Z",
+              "updated_at": "2026-09-03T07:30:11Z",
               "language": "Shell",
               "archived": false
             },
@@ -511,7 +511,7 @@
               "url": "https://github.com/YunoHost-Apps/atuin_ynh",
               "stars": 0,
               "forks": 2,
-              "updated_at": "2026-08-28T12:03:43Z",
+              "updated_at": "2026-09-02T14:24:06Z",
               "language": "Shell",
               "archived": false
             },
@@ -1731,7 +1731,7 @@
               "description": "Lets you create and print adhesive labels from a web browser",
               "url": "https://github.com/YunoHost-Apps/diagnostickoeur_ynh",
               "stars": 1,
-              "forks": 2,
+              "forks": 3,
               "updated_at": "2026-05-26T21:41:15Z",
               "language": "Shell",
               "archived": false
@@ -2062,7 +2062,7 @@
               "url": "https://github.com/YunoHost-Apps/dolibarr_ynh",
               "stars": 17,
               "forks": 22,
-              "updated_at": "2026-08-31T18:49:09Z",
+              "updated_at": "2026-09-03T08:29:34Z",
               "language": "Shell",
               "archived": false
             },
@@ -2929,9 +2929,9 @@
               "name": "forgejo",
               "description": "Forgejo package for YunoHost",
               "url": "https://github.com/YunoHost-Apps/forgejo_ynh",
-              "stars": 24,
+              "stars": 25,
               "forks": 10,
-              "updated_at": "2026-08-31T05:19:14Z",
+              "updated_at": "2026-09-03T00:18:15Z",
               "language": "Shell",
               "archived": false
             },
@@ -3149,9 +3149,9 @@
               "name": "funkwhale",
               "description": "A modern, convivial and free music server on YunoHost",
               "url": "https://github.com/YunoHost-Apps/funkwhale_ynh",
-              "stars": 81,
+              "stars": 80,
               "forks": 24,
-              "updated_at": "2026-07-05T19:10:55Z",
+              "updated_at": "2026-09-02T11:35:30Z",
               "language": "Shell",
               "archived": false
             },
@@ -3865,7 +3865,7 @@
               "description": "Hister package for YunoHost",
               "url": "https://github.com/YunoHost-Apps/hister_ynh",
               "stars": 0,
-              "forks": 1,
+              "forks": 2,
               "updated_at": "2026-08-31T19:08:39Z",
               "language": "Shell",
               "archived": false
@@ -5373,7 +5373,7 @@
               "url": "https://github.com/YunoHost-Apps/mailpit_ynh",
               "stars": 0,
               "forks": 0,
-              "updated_at": "2026-07-29T19:21:55Z",
+              "updated_at": "2026-09-03T09:36:36Z",
               "language": "Shell",
               "archived": false
             },
@@ -5580,9 +5580,9 @@
               "name": "mautrix_whatsapp",
               "description": "Matrix Whatsapp pupetting bridge for YunoHost",
               "url": "https://github.com/YunoHost-Apps/mautrix_whatsapp_ynh",
-              "stars": 29,
+              "stars": 28,
               "forks": 16,
-              "updated_at": "2026-08-17T20:04:18Z",
+              "updated_at": "2026-09-02T14:39:09Z",
               "language": "Shell",
               "archived": false
             },
@@ -10069,7 +10069,7 @@
               "description": "Umami package for YunoHost",
               "url": "https://github.com/YunoHost-Apps/umami_ynh",
               "stars": 4,
-              "forks": 6,
+              "forks": 7,
               "updated_at": "2026-08-21T07:52:40Z",
               "language": "Shell",
               "archived": false
@@ -11016,7 +11016,7 @@
               "url": "https://github.com/YunoHost-Apps/zabbix_ynh",
               "stars": 6,
               "forks": 6,
-              "updated_at": "2026-03-22T10:56:24Z",
+              "updated_at": "2026-09-02T11:01:36Z",
               "language": "Shell",
               "archived": false
             },
@@ -11215,7 +11215,7 @@
       {
         "name": "YunoHost Docs Translations",
         "success": true,
-        "duration": 105,
+        "duration": 148,
         "result": [
           "de",
           "docs",
@@ -11232,7 +11232,7 @@
       {
         "name": "YunoHost UI Translations",
         "success": true,
-        "duration": 1267,
+        "duration": 1794,
         "result": [
           {
             "language": "French",
@@ -11256,7 +11256,7 @@
             "translated_percent": 100,
             "translated_words": 3820,
             "total_words": 3820,
-            "last_change": "2026-09-02T07:30:31.400503Z"
+            "last_change": "2026-09-03T07:57:15.769221Z"
           },
           {
             "language": "French",
@@ -11639,7 +11639,7 @@
       {
         "name": "Zimaboard Shipping Areas",
         "success": true,
-        "duration": 338,
+        "duration": 300,
         "result": [
           "Argentina",
           "Australia",

@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-09-02T10:57:26.144Z",
+  "timestamp": "2026-09-03T10:56:10.455Z",
   "script": "scripts.test.js",
   "source": "YunoHost-Apps GitHub Organization",
   "url": "https://github.com/YunoHost-Apps",
@@ -379,7 +379,7 @@
       "url": "https://github.com/YunoHost-Apps/archivebox_ynh",
       "stars": 19,
       "forks": 6,
-      "updated_at": "2026-08-30T21:03:18Z",
+      "updated_at": "2026-09-03T07:30:11Z",
       "language": "Shell",
       "archived": false
     },
@@ -456,7 +456,7 @@
       "url": "https://github.com/YunoHost-Apps/atuin_ynh",
       "stars": 0,
       "forks": 2,
-      "updated_at": "2026-08-28T12:03:43Z",
+      "updated_at": "2026-09-02T14:24:06Z",
       "language": "Shell",
       "archived": false
     },
@@ -1676,7 +1676,7 @@
       "description": "Lets you create and print adhesive labels from a web browser",
       "url": "https://github.com/YunoHost-Apps/diagnostickoeur_ynh",
       "stars": 1,
-      "forks": 2,
+      "forks": 3,
       "updated_at": "2026-05-26T21:41:15Z",
       "language": "Shell",
       "archived": false
@@ -2007,7 +2007,7 @@
       "url": "https://github.com/YunoHost-Apps/dolibarr_ynh",
       "stars": 17,
       "forks": 22,
-      "updated_at": "2026-08-31T18:49:09Z",
+      "updated_at": "2026-09-03T08:29:34Z",
       "language": "Shell",
       "archived": false
     },
@@ -2874,9 +2874,9 @@
       "name": "forgejo",
       "description": "Forgejo package for YunoHost",
       "url": "https://github.com/YunoHost-Apps/forgejo_ynh",
-      "stars": 24,
+      "stars": 25,
       "forks": 10,
-      "updated_at": "2026-08-31T05:19:14Z",
+      "updated_at": "2026-09-03T00:18:15Z",
       "language": "Shell",
       "archived": false
     },
@@ -3094,9 +3094,9 @@
       "name": "funkwhale",
       "description": "A modern, convivial and free music server on YunoHost",
       "url": "https://github.com/YunoHost-Apps/funkwhale_ynh",
-      "stars": 81,
+      "stars": 80,
       "forks": 24,
-      "updated_at": "2026-07-05T19:10:55Z",
+      "updated_at": "2026-09-02T11:35:30Z",
       "language": "Shell",
       "archived": false
     },
@@ -3810,7 +3810,7 @@
       "description": "Hister package for YunoHost",
       "url": "https://github.com/YunoHost-Apps/hister_ynh",
       "stars": 0,
-      "forks": 1,
+      "forks": 2,
       "updated_at": "2026-08-31T19:08:39Z",
       "language": "Shell",
       "archived": false
@@ -5318,7 +5318,7 @@
       "url": "https://github.com/YunoHost-Apps/mailpit_ynh",
       "stars": 0,
       "forks": 0,
-      "updated_at": "2026-07-29T19:21:55Z",
+      "updated_at": "2026-09-03T09:36:36Z",
       "language": "Shell",
       "archived": false
     },
@@ -5525,9 +5525,9 @@
       "name": "mautrix_whatsapp",
       "description": "Matrix Whatsapp pupetting bridge for YunoHost",
       "url": "https://github.com/YunoHost-Apps/mautrix_whatsapp_ynh",
-      "stars": 29,
+      "stars": 28,
       "forks": 16,
-      "updated_at": "2026-08-17T20:04:18Z",
+      "updated_at": "2026-09-02T14:39:09Z",
       "language": "Shell",
       "archived": false
     },
@@ -10014,7 +10014,7 @@
       "description": "Umami package for YunoHost",
       "url": "https://github.com/YunoHost-Apps/umami_ynh",
       "stars": 4,
-      "forks": 6,
+      "forks": 7,
       "updated_at": "2026-08-21T07:52:40Z",
       "language": "Shell",
       "archived": false
@@ -10961,7 +10961,7 @@
       "url": "https://github.com/YunoHost-Apps/zabbix_ynh",
       "stars": 6,
       "forks": 6,
-      "updated_at": "2026-03-22T10:56:24Z",
+      "updated_at": "2026-09-02T11:01:36Z",
       "language": "Shell",
       "archived": false
     },
