@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-09-04T11:00:06.518Z",
+  "timestamp": "2026-09-05T10:16:54.330Z",
   "script": "scripts.test.js",
   "source": "YunoHost-Apps GitHub Organization",
   "url": "https://github.com/YunoHost-Apps",
@@ -116,7 +116,7 @@
       "url": "https://github.com/YunoHost-Apps/actual_ynh",
       "stars": 7,
       "forks": 6,
-      "updated_at": "2026-08-08T14:22:55Z",
+      "updated_at": "2026-09-04T13:22:27Z",
       "language": "Shell",
       "archived": false
     },
@@ -2613,7 +2613,7 @@
       "url": "https://github.com/YunoHost-Apps/fiduswriter_ynh",
       "stars": 0,
       "forks": 0,
-      "updated_at": "2026-08-31T10:46:01Z",
+      "updated_at": "2026-09-04T22:15:03Z",
       "language": "Shell",
       "archived": false
     },
@@ -5132,7 +5132,7 @@
       "url": "https://github.com/YunoHost-Apps/localsend_ynh",
       "stars": 0,
       "forks": 0,
-      "updated_at": "2026-08-30T20:53:23Z",
+      "updated_at": "2026-09-05T08:02:09Z",
       "language": "Shell",
       "archived": false
     },
@@ -5297,7 +5297,7 @@
       "url": "https://github.com/YunoHost-Apps/mailbag_ynh",
       "stars": 2,
       "forks": 1,
-      "updated_at": "2026-08-07T08:14:42Z",
+      "updated_at": "2026-09-05T08:05:02Z",
       "language": "Shell",
       "archived": false
     },
@@ -5616,7 +5616,7 @@
       "url": "https://github.com/YunoHost-Apps/mediatheque_ynh",
       "stars": 0,
       "forks": 0,
-      "updated_at": "2026-08-15T10:10:19Z",
+      "updated_at": "2026-09-05T08:05:19Z",
       "language": "Shell",
       "archived": false
     },
@@ -6683,7 +6683,7 @@
       "url": "https://github.com/YunoHost-Apps/open-webui_ynh",
       "stars": 5,
       "forks": 3,
-      "updated_at": "2026-06-05T08:38:44Z",
+      "updated_at": "2026-09-04T15:18:30Z",
       "language": "Shell",
       "archived": false
     },
@@ -8322,7 +8322,7 @@
       "url": "https://github.com/YunoHost-Apps/rocketchat_ynh",
       "stars": 17,
       "forks": 20,
-      "updated_at": "2026-07-24T06:57:21Z",
+      "updated_at": "2026-09-04T14:20:11Z",
       "language": "Shell",
       "archived": false
     },
