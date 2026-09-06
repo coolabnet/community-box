@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-09-05T10:16:55.548Z",
+  "timestamp": "2026-09-06T10:36:48.778Z",
   "script": "scripts.test.js",
   "source": "YunoHost Translation Platform",
   "url": "https://translate.yunohost.org/",
@@ -308,10 +308,10 @@
     {
       "language": "Occitan",
       "language_code": "oc",
-      "translated_percent": 32.4,
-      "translated_words": 2366,
+      "translated_percent": 32.5,
+      "translated_words": 2396,
       "total_words": 11478,
-      "last_change": "2026-09-03T18:35:32.239762Z"
+      "last_change": "2026-09-05T21:48:01.123213Z"
     },
     {
       "language": "Swedish",
@@ -340,10 +340,10 @@
     {
       "language": "Portuguese",
       "language_code": "pt",
-      "translated_percent": 17.8,
-      "translated_words": 1366,
+      "translated_percent": 17.9,
+      "translated_words": 1369,
       "total_words": 11478,
-      "last_change": "2026-09-03T18:35:33.763056Z"
+      "last_change": "2026-09-06T08:11:04.545381Z"
     },
     {
       "language": "Greek",

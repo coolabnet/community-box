@@ -1,11 +1,11 @@
 {
-  "timestamp": "2026-09-05T10:16:54.330Z",
+  "timestamp": "2026-09-06T10:36:46.928Z",
   "script": "scripts.test.js",
   "source": "YunoHost-Apps GitHub Organization",
   "url": "https://github.com/YunoHost-Apps",
   "api_url": "https://api.github.com/orgs/YunoHost-Apps/repos",
-  "total_apps": 1012,
-  "total_repos_checked": 1033,
+  "total_apps": 1014,
+  "total_repos_checked": 1035,
   "languages": [
     "CSS",
     "HTML",
@@ -633,7 +633,7 @@
       "url": "https://github.com/YunoHost-Apps/beszel_ynh",
       "stars": 1,
       "forks": 0,
-      "updated_at": "2026-08-29T08:12:20Z",
+      "updated_at": "2026-09-05T12:39:47Z",
       "language": "Shell",
       "archived": false
     },
@@ -688,7 +688,7 @@
       "url": "https://github.com/YunoHost-Apps/bileto_ynh",
       "stars": 1,
       "forks": 3,
-      "updated_at": "2026-08-30T21:07:35Z",
+      "updated_at": "2026-09-06T07:36:08Z",
       "language": "Shell",
       "archived": false
     },
@@ -3119,7 +3119,7 @@
       "url": "https://github.com/YunoHost-Apps/galene_ynh",
       "stars": 12,
       "forks": 4,
-      "updated_at": "2026-06-21T17:53:25Z",
+      "updated_at": "2026-09-05T16:29:38Z",
       "language": "Shell",
       "archived": false
     },
@@ -3388,6 +3388,17 @@
       "archived": false
     },
     {
+      "id": "globinours_ynh",
+      "name": "globinours",
+      "description": "Globinours package for YunoHost",
+      "url": "https://github.com/YunoHost-Apps/globinours_ynh",
+      "stars": 0,
+      "forks": 0,
+      "updated_at": "2026-09-05T16:36:32Z",
+      "language": "Shell",
+      "archived": false
+    },
+    {
       "id": "glowingbear_ynh",
       "name": "glowingbear",
       "description": "Glowing Bear package for YunoHost",
@@ -3505,6 +3516,17 @@
       "stars": 2,
       "forks": 0,
       "updated_at": "2025-10-25T14:14:12Z",
+      "language": "Shell",
+      "archived": false
+    },
+    {
+      "id": "gopodder_ynh",
+      "name": "gopodder",
+      "description": "",
+      "url": "https://github.com/YunoHost-Apps/gopodder_ynh",
+      "stars": 0,
+      "forks": 0,
+      "updated_at": "2026-09-05T16:42:14Z",
       "language": "Shell",
       "archived": false
     },
@@ -3867,7 +3889,7 @@
       "url": "https://github.com/YunoHost-Apps/homeassistant_ynh",
       "stars": 25,
       "forks": 17,
-      "updated_at": "2026-09-04T05:55:40Z",
+      "updated_at": "2026-09-06T06:30:53Z",
       "language": "Shell",
       "archived": false
     },
@@ -5769,7 +5791,7 @@
       "description": "Minecraft Server package for YunoHost",
       "url": "https://github.com/YunoHost-Apps/minecraft_ynh",
       "stars": 13,
-      "forks": 17,
+      "forks": 18,
       "updated_at": "2026-05-01T19:07:23Z",
       "language": "Shell",
       "archived": false
@@ -6386,7 +6408,7 @@
       "url": "https://github.com/YunoHost-Apps/nftables-blacklist_ynh",
       "stars": 3,
       "forks": 2,
-      "updated_at": "2026-08-26T10:13:15Z",
+      "updated_at": "2026-09-05T23:26:13Z",
       "language": "Shell",
       "archived": false
     },
@@ -7132,9 +7154,9 @@
       "name": "pelican",
       "description": "Pelican package for Yunohost",
       "url": "https://github.com/YunoHost-Apps/pelican_ynh",
-      "stars": 4,
+      "stars": 5,
       "forks": 3,
-      "updated_at": "2025-10-21T10:22:45Z",
+      "updated_at": "2026-09-05T16:44:20Z",
       "language": "Shell",
       "archived": false
     },
@@ -10027,7 +10049,7 @@
       "url": "https://github.com/YunoHost-Apps/umami_ynh",
       "stars": 4,
       "forks": 7,
-      "updated_at": "2026-08-21T07:52:40Z",
+      "updated_at": "2026-09-05T12:42:51Z",
       "language": "Shell",
       "archived": false
     },
@@ -10434,7 +10456,7 @@
       "url": "https://github.com/YunoHost-Apps/wekan_ynh",
       "stars": 18,
       "forks": 19,
-      "updated_at": "2026-08-31T23:07:01Z",
+      "updated_at": "2026-09-05T13:06:42Z",
       "language": "Shell",
       "archived": false
     },
