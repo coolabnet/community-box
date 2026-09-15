@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-09-14T12:17:54.224Z",
+  "timestamp": "2026-09-15T11:26:03.323Z",
   "script": "scripts.test.js",
   "source": "YunoHost-Apps GitHub Organization",
   "url": "https://github.com/YunoHost-Apps",
@@ -413,7 +413,7 @@
       "url": "https://github.com/YunoHost-Apps/arkalib_ynh",
       "stars": 0,
       "forks": 0,
-      "updated_at": "2026-09-07T22:45:41Z",
+      "updated_at": "2026-09-14T12:41:13Z",
       "language": "Shell",
       "archived": false
     },
@@ -1568,7 +1568,7 @@
       "url": "https://github.com/YunoHost-Apps/dagu_ynh",
       "stars": 3,
       "forks": 3,
-      "updated_at": "2026-09-12T08:51:35Z",
+      "updated_at": "2026-09-15T06:19:11Z",
       "language": "Shell",
       "archived": false
     },
@@ -2008,7 +2008,7 @@
       "url": "https://github.com/YunoHost-Apps/dolibarr_ynh",
       "stars": 17,
       "forks": 22,
-      "updated_at": "2026-09-07T22:39:38Z",
+      "updated_at": "2026-09-15T10:03:16Z",
       "language": "Shell",
       "archived": false
     },
@@ -3095,9 +3095,9 @@
       "name": "funkwhale",
       "description": "A modern, convivial and free music server on YunoHost",
       "url": "https://github.com/YunoHost-Apps/funkwhale_ynh",
-      "stars": 80,
+      "stars": 81,
       "forks": 24,
-      "updated_at": "2026-09-02T11:35:30Z",
+      "updated_at": "2026-09-15T08:25:06Z",
       "language": "Shell",
       "archived": false
     },
@@ -3317,7 +3317,7 @@
       "url": "https://github.com/YunoHost-Apps/gitlab_ynh",
       "stars": 22,
       "forks": 11,
-      "updated_at": "2026-08-31T13:00:41Z",
+      "updated_at": "2026-09-15T10:09:05Z",
       "language": "Ruby",
       "archived": false
     },
@@ -4131,7 +4131,7 @@
       "url": "https://github.com/YunoHost-Apps/immich_ynh",
       "stars": 29,
       "forks": 17,
-      "updated_at": "2026-09-11T14:43:16Z",
+      "updated_at": "2026-09-15T08:08:43Z",
       "language": "Shell",
       "archived": false
     },
@@ -4296,7 +4296,7 @@
       "url": "https://github.com/YunoHost-Apps/jackett_ynh",
       "stars": 3,
       "forks": 5,
-      "updated_at": "2026-09-14T05:36:55Z",
+      "updated_at": "2026-09-15T06:22:27Z",
       "language": "Shell",
       "archived": false
     },
@@ -4406,7 +4406,7 @@
       "url": "https://github.com/YunoHost-Apps/jitsi_ynh",
       "stars": 22,
       "forks": 22,
-      "updated_at": "2026-07-25T07:59:07Z",
+      "updated_at": "2026-09-14T16:06:47Z",
       "language": "JavaScript",
       "archived": false
     },
@@ -4648,7 +4648,7 @@
       "url": "https://github.com/YunoHost-Apps/koel_ynh",
       "stars": 3,
       "forks": 4,
-      "updated_at": "2026-09-10T09:49:11Z",
+      "updated_at": "2026-09-15T06:24:05Z",
       "language": "Shell",
       "archived": false
     },
@@ -4659,7 +4659,7 @@
       "url": "https://github.com/YunoHost-Apps/koffan_ynh",
       "stars": 0,
       "forks": 0,
-      "updated_at": "2026-09-14T11:07:33Z",
+      "updated_at": "2026-09-15T06:26:56Z",
       "language": "Shell",
       "archived": false
     },
@@ -4802,7 +4802,7 @@
       "url": "https://github.com/YunoHost-Apps/leafwiki_ynh",
       "stars": 0,
       "forks": 0,
-      "updated_at": "2026-09-11T14:57:10Z",
+      "updated_at": "2026-09-14T18:40:16Z",
       "language": "Shell",
       "archived": false
     },
@@ -5231,7 +5231,7 @@
       "url": "https://github.com/YunoHost-Apps/lufi_ynh",
       "stars": 16,
       "forks": 9,
-      "updated_at": "2025-11-17T18:15:54Z",
+      "updated_at": "2026-09-14T16:30:49Z",
       "language": "Perl",
       "archived": false
     },
@@ -7508,7 +7508,7 @@
       "url": "https://github.com/YunoHost-Apps/pixelfed_ynh",
       "stars": 53,
       "forks": 20,
-      "updated_at": "2026-09-11T13:05:18Z",
+      "updated_at": "2026-09-14T17:21:33Z",
       "language": "Shell",
       "archived": false
     },
@@ -8663,7 +8663,7 @@
       "url": "https://github.com/YunoHost-Apps/seaweedfs_ynh",
       "stars": 0,
       "forks": 1,
-      "updated_at": "2026-08-23T00:02:13Z",
+      "updated_at": "2026-09-14T16:29:24Z",
       "language": "Shell",
       "archived": false
     },
