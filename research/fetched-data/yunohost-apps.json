@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-09-23T11:08:22.746Z",
+  "timestamp": "2026-09-24T11:25:24.642Z",
   "script": "scripts.test.js",
   "source": "YunoHost-Apps GitHub Organization",
   "url": "https://github.com/YunoHost-Apps",
@@ -753,7 +753,7 @@
       "description": "BookStack package for YunoHost",
       "url": "https://github.com/YunoHost-Apps/bookstack_ynh",
       "stars": 12,
-      "forks": 6,
+      "forks": 5,
       "updated_at": "2026-09-15T20:52:13Z",
       "language": "Shell",
       "archived": false
@@ -2602,7 +2602,7 @@
       "url": "https://github.com/YunoHost-Apps/fider_ynh",
       "stars": 1,
       "forks": 2,
-      "updated_at": "2026-08-09T17:54:45Z",
+      "updated_at": "2026-09-24T10:33:10Z",
       "language": "Shell",
       "archived": false
     },
@@ -6957,7 +6957,7 @@
       "description": "An open, extensible, wiki for your team built using React and Node.js",
       "url": "https://github.com/YunoHost-Apps/outline_ynh",
       "stars": 19,
-      "forks": 10,
+      "forks": 9,
       "updated_at": "2026-09-10T08:55:13Z",
       "language": "Shell",
       "archived": false
@@ -7056,7 +7056,7 @@
       "description": "Paheko package for YunoHost",
       "url": "https://github.com/YunoHost-Apps/paheko_ynh",
       "stars": 5,
-      "forks": 7,
+      "forks": 6,
       "updated_at": "2026-09-20T13:15:47Z",
       "language": "PHP",
       "archived": false
@@ -7211,7 +7211,7 @@
       "url": "https://github.com/YunoHost-Apps/penpot_ynh",
       "stars": 9,
       "forks": 5,
-      "updated_at": "2026-08-27T10:53:56Z",
+      "updated_at": "2026-09-24T08:52:59Z",
       "language": "Shell",
       "archived": false
     },
@@ -10544,7 +10544,7 @@
       "url": "https://github.com/YunoHost-Apps/wetty_ynh",
       "stars": 5,
       "forks": 1,
-      "updated_at": "2026-09-10T15:41:58Z",
+      "updated_at": "2026-09-24T10:41:21Z",
       "language": "Shell",
       "archived": false
     },
