@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-09-25T11:30:37.373Z",
+  "timestamp": "2026-09-26T11:05:13.970Z",
   "script": "scripts.test.js",
   "source": "YunoHost-Apps GitHub Organization",
   "url": "https://github.com/YunoHost-Apps",
@@ -3889,7 +3889,7 @@
       "url": "https://github.com/YunoHost-Apps/homeassistant_ynh",
       "stars": 25,
       "forks": 17,
-      "updated_at": "2026-09-19T04:42:12Z",
+      "updated_at": "2026-09-25T13:34:27Z",
       "language": "Shell",
       "archived": false
     },
@@ -4131,7 +4131,7 @@
       "url": "https://github.com/YunoHost-Apps/immich_ynh",
       "stars": 29,
       "forks": 17,
-      "updated_at": "2026-09-18T09:20:10Z",
+      "updated_at": "2026-09-26T05:15:32Z",
       "language": "Shell",
       "archived": false
     },
@@ -4692,7 +4692,7 @@
       "url": "https://github.com/YunoHost-Apps/kresus_ynh",
       "stars": 20,
       "forks": 20,
-      "updated_at": "2026-09-22T18:24:35Z",
+      "updated_at": "2026-09-26T06:01:25Z",
       "language": "Shell",
       "archived": false
     },
@@ -4758,7 +4758,7 @@
       "url": "https://github.com/YunoHost-Apps/lasuite-meet_ynh",
       "stars": 7,
       "forks": 2,
-      "updated_at": "2026-08-26T06:11:12Z",
+      "updated_at": "2026-09-26T10:23:13Z",
       "language": "Shell",
       "archived": false
     },
@@ -5967,7 +5967,7 @@
       "description": "A federated organization and mobilization platform for YunoHost",
       "url": "https://github.com/YunoHost-Apps/mobilizon_ynh",
       "stars": 28,
-      "forks": 12,
+      "forks": 13,
       "updated_at": "2026-08-13T12:47:23Z",
       "language": "Shell",
       "archived": false
@@ -7376,7 +7376,7 @@
       "url": "https://github.com/YunoHost-Apps/phpipam_ynh",
       "stars": 2,
       "forks": 3,
-      "updated_at": "2025-08-30T17:05:38Z",
+      "updated_at": "2026-09-26T08:51:31Z",
       "language": "PHP",
       "archived": false
     },
@@ -8430,9 +8430,9 @@
       "name": "rspamd",
       "description": "Rspamd (spam filtering system) packaged for YunoHost",
       "url": "https://github.com/YunoHost-Apps/rspamd_ynh",
-      "stars": 6,
+      "stars": 7,
       "forks": 8,
-      "updated_at": "2026-08-15T21:17:32Z",
+      "updated_at": "2026-09-26T06:33:26Z",
       "language": "Shell",
       "archived": false
     },
@@ -8441,9 +8441,9 @@
       "name": "rspamdui",
       "description": "Web UI for rspamd",
       "url": "https://github.com/YunoHost-Apps/rspamdui_ynh",
-      "stars": 4,
+      "stars": 5,
       "forks": 7,
-      "updated_at": "2026-08-18T13:22:12Z",
+      "updated_at": "2026-09-26T08:57:40Z",
       "language": "Shell",
       "archived": false
     },
@@ -9873,7 +9873,7 @@
       "url": "https://github.com/YunoHost-Apps/traccar_ynh",
       "stars": 1,
       "forks": 2,
-      "updated_at": "2026-05-08T20:09:15Z",
+      "updated_at": "2026-09-25T15:01:32Z",
       "language": "Shell",
       "archived": false
     },
