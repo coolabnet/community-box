@@ -1,19 +1,19 @@
 {
-  "timestamp": "2026-09-26T11:05:13.201Z",
+  "timestamp": "2026-09-27T11:44:00.335Z",
   "script": "run-all.js",
   "note": "Summary of all data fetching script executions",
   "data": {
-    "execution_time": "2026-09-26T11:05:13.201Z",
+    "execution_time": "2026-09-27T11:44:00.335Z",
     "total_scripts": 6,
     "successful": 6,
     "failed": 0,
-    "total_duration_ms": 12609,
+    "total_duration_ms": 12391,
     "continue_on_error": true,
     "results": [
       {
         "name": "CapRover UI Translations",
         "success": true,
-        "duration": 235,
+        "duration": 311,
         "result": [
           "ar-EG",
           "de-DE",
@@ -36,7 +36,7 @@
       {
         "name": "CasaOS UI Translations",
         "success": true,
-        "duration": 129,
+        "duration": 156,
         "result": [
           "ca_ES",
           "cs_CZ",
@@ -71,7 +71,7 @@
       {
         "name": "YunoHost Apps",
         "success": true,
-        "duration": 10269,
+        "duration": 9955,
         "result": {
           "count": 1020,
           "apps": [
@@ -203,7 +203,7 @@
               "url": "https://github.com/YunoHost-Apps/adminer_ynh",
               "stars": 4,
               "forks": 5,
-              "updated_at": "2026-09-01T09:46:11Z",
+              "updated_at": "2026-09-26T14:54:20Z",
               "language": "Shell",
               "archived": false
             },
@@ -1600,7 +1600,7 @@
               "url": "https://github.com/YunoHost-Apps/cypht_ynh",
               "stars": 3,
               "forks": 7,
-              "updated_at": "2026-08-30T20:58:06Z",
+              "updated_at": "2026-09-26T14:33:11Z",
               "language": "Shell",
               "archived": false
             },
@@ -5470,9 +5470,9 @@
               "name": "mastodon",
               "description": "Free, open-source social network for YunoHost",
               "url": "https://github.com/YunoHost-Apps/mastodon_ynh",
-              "stars": 89,
+              "stars": 88,
               "forks": 49,
-              "updated_at": "2026-09-15T16:34:04Z",
+              "updated_at": "2026-09-27T10:19:15Z",
               "language": "Shell",
               "archived": false
             },
@@ -6429,7 +6429,7 @@
               "url": "https://github.com/YunoHost-Apps/navidrome_ynh",
               "stars": 20,
               "forks": 6,
-              "updated_at": "2026-09-23T08:48:26Z",
+              "updated_at": "2026-09-26T20:19:18Z",
               "language": "Shell",
               "archived": false
             },
@@ -9685,7 +9685,7 @@
               "url": "https://github.com/YunoHost-Apps/technitium-dns_ynh",
               "stars": 8,
               "forks": 3,
-              "updated_at": "2026-09-20T02:37:36Z",
+              "updated_at": "2026-09-26T23:47:44Z",
               "language": "Shell",
               "archived": false
             },
@@ -11315,7 +11315,7 @@
       {
         "name": "YunoHost Docs Translations",
         "success": true,
-        "duration": 112,
+        "duration": 126,
         "result": [
           "de",
           "docs",
@@ -11332,7 +11332,7 @@
       {
         "name": "YunoHost UI Translations",
         "success": true,
-        "duration": 1568,
+        "duration": 1522,
         "result": [
           {
             "language": "French",
@@ -11739,7 +11739,7 @@
       {
         "name": "Zimaboard Shipping Areas",
         "success": true,
-        "duration": 296,
+        "duration": 321,
         "result": [
           "Argentina",
           "Australia",
