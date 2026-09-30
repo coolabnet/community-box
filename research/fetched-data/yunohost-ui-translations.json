@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-09-29T12:27:59.461Z",
+  "timestamp": "2026-09-30T12:12:52.376Z",
   "script": "scripts.test.js",
   "source": "YunoHost Translation Platform",
   "url": "https://translate.yunohost.org/",
@@ -362,6 +362,14 @@
       "last_change": "2026-09-23T16:29:21.819651Z"
     },
     {
+      "language": "Hungarian",
+      "language_code": "hu",
+      "translated_percent": 2.2,
+      "translated_words": 159,
+      "total_words": 11608,
+      "last_change": "2026-09-30T10:17:31.750163Z"
+    },
+    {
       "language": "Hindi",
       "language_code": "hi",
       "translated_percent": 2,
@@ -376,14 +384,6 @@
       "translated_words": 23,
       "total_words": 3820,
       "last_change": "2026-08-30T14:56:00.842067Z"
-    },
-    {
-      "language": "Hungarian",
-      "language_code": "hu",
-      "translated_percent": 1,
-      "translated_words": 48,
-      "total_words": 11608,
-      "last_change": "2026-09-23T16:28:57.560346Z"
     },
     {
       "language": "Breton",
