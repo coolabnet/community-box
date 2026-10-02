@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-09-30T12:12:52.376Z",
+  "timestamp": "2026-10-02T12:11:06.568Z",
   "script": "scripts.test.js",
   "source": "YunoHost Translation Platform",
   "url": "https://translate.yunohost.org/",
@@ -364,10 +364,10 @@
     {
       "language": "Hungarian",
       "language_code": "hu",
-      "translated_percent": 2.2,
-      "translated_words": 159,
+      "translated_percent": 3.6,
+      "translated_words": 261,
       "total_words": 11608,
-      "last_change": "2026-09-30T10:17:31.750163Z"
+      "last_change": "2026-10-01T23:12:45.827131Z"
     },
     {
       "language": "Hindi",
