@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-10-04T12:02:44.567Z",
+  "timestamp": "2026-10-06T13:04:10.536Z",
   "script": "scripts.test.js",
   "source": "YunoHost Translation Platform",
   "url": "https://translate.yunohost.org/",
@@ -279,7 +279,7 @@
       "translated_percent": 59,
       "translated_words": 1550,
       "total_words": 3820,
-      "last_change": "2026-08-30T14:56:06.656742Z"
+      "last_change": "2026-10-05T06:55:17.575707Z"
     },
     {
       "language": "Hindi",
