@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-10-09T12:52:54.604Z",
+  "timestamp": "2026-10-10T12:11:02.248Z",
   "script": "scripts.test.js",
   "source": "YunoHost-Apps GitHub Organization",
   "url": "https://github.com/YunoHost-Apps",
@@ -1480,7 +1480,7 @@
       "url": "https://github.com/YunoHost-Apps/cryptroot-unlock_ynh",
       "stars": 4,
       "forks": 0,
-      "updated_at": "2026-10-05T00:30:38Z",
+      "updated_at": "2026-10-09T15:08:34Z",
       "language": "Shell",
       "archived": false
     },
@@ -2557,7 +2557,7 @@
       "description": "a YunoHost app to run a custom FastAPI code",
       "url": "https://github.com/YunoHost-Apps/FastAPI_ynh",
       "stars": 3,
-      "forks": 7,
+      "forks": 6,
       "updated_at": "2026-01-05T14:43:03Z",
       "language": "Shell",
       "archived": false
@@ -4362,7 +4362,7 @@
       "url": "https://github.com/YunoHost-Apps/jauto-expose_ynh",
       "stars": 0,
       "forks": 0,
-      "updated_at": "2026-10-09T12:52:23Z",
+      "updated_at": "2026-10-09T13:29:35Z",
       "language": "Shell",
       "archived": false
     },
@@ -4393,9 +4393,9 @@
       "name": "jellyfin",
       "description": "Jellyfin package for YunoHost",
       "url": "https://github.com/YunoHost-Apps/jellyfin_ynh",
-      "stars": 33,
+      "stars": 32,
       "forks": 23,
-      "updated_at": "2026-10-06T21:46:58Z",
+      "updated_at": "2026-10-10T00:42:23Z",
       "language": "Shell",
       "archived": false
     },
@@ -5087,7 +5087,7 @@
       "description": "LimeSurvey package for yunoHost",
       "url": "https://github.com/YunoHost-Apps/limesurvey_ynh",
       "stars": 6,
-      "forks": 13,
+      "forks": 14,
       "updated_at": "2026-09-11T20:29:03Z",
       "language": "Shell",
       "archived": false
@@ -5550,7 +5550,7 @@
       "url": "https://github.com/YunoHost-Apps/mautrix_discord_ynh",
       "stars": 1,
       "forks": 5,
-      "updated_at": "2026-09-03T19:31:43Z",
+      "updated_at": "2026-10-09T14:50:33Z",
       "language": "Jinja",
       "archived": false
     },
@@ -6439,9 +6439,9 @@
       "name": "nextcloud",
       "description": "Nextcloud package for YunoHost",
       "url": "https://github.com/YunoHost-Apps/nextcloud_ynh",
-      "stars": 174,
+      "stars": 173,
       "forks": 69,
-      "updated_at": "2026-10-06T07:50:58Z",
+      "updated_at": "2026-10-10T00:42:20Z",
       "language": "Shell",
       "archived": false
     },
@@ -6705,7 +6705,7 @@
       "url": "https://github.com/YunoHost-Apps/ollama_ynh",
       "stars": 5,
       "forks": 3,
-      "updated_at": "2026-10-09T04:31:17Z",
+      "updated_at": "2026-10-10T06:09:33Z",
       "language": "Shell",
       "archived": false
     },
@@ -7090,7 +7090,7 @@
       "url": "https://github.com/YunoHost-Apps/paheko_ynh",
       "stars": 5,
       "forks": 6,
-      "updated_at": "2026-09-20T13:15:47Z",
+      "updated_at": "2026-10-10T10:20:10Z",
       "language": "PHP",
       "archived": false
     },
@@ -8201,7 +8201,7 @@
       "url": "https://github.com/YunoHost-Apps/rclone_ynh",
       "stars": 8,
       "forks": 4,
-      "updated_at": "2026-08-01T09:52:03Z",
+      "updated_at": "2026-10-10T07:29:08Z",
       "language": "Shell",
       "archived": false
     },
@@ -10214,7 +10214,7 @@
       "url": "https://github.com/YunoHost-Apps/uptime-kuma_ynh",
       "stars": 13,
       "forks": 5,
-      "updated_at": "2026-09-17T07:52:59Z",
+      "updated_at": "2026-10-10T09:47:13Z",
       "language": "Shell",
       "archived": false
     },
@@ -10907,7 +10907,7 @@
       "url": "https://github.com/YunoHost-Apps/yeswiki_ynh",
       "stars": 7,
       "forks": 7,
-      "updated_at": "2026-10-08T20:15:47Z",
+      "updated_at": "2026-10-09T18:50:53Z",
       "language": "Shell",
       "archived": false
     },
