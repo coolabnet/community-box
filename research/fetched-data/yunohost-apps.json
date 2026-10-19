@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-10-18T10:40:38.723Z",
+  "timestamp": "2026-10-19T12:39:08.039Z",
   "script": "scripts.test.js",
   "source": "YunoHost-Apps GitHub Organization",
   "url": "https://github.com/YunoHost-Apps",
@@ -2030,7 +2030,7 @@
       "url": "https://github.com/YunoHost-Apps/domoticz_ynh",
       "stars": 3,
       "forks": 3,
-      "updated_at": "2026-06-02T21:03:44Z",
+      "updated_at": "2026-10-18T22:16:55Z",
       "language": "Shell",
       "archived": false
     },
@@ -2437,7 +2437,7 @@
       "url": "https://github.com/YunoHost-Apps/etherpad_ynh",
       "stars": 3,
       "forks": 4,
-      "updated_at": "2026-10-11T16:28:59Z",
+      "updated_at": "2026-10-19T06:35:54Z",
       "language": "Shell",
       "archived": false
     },
@@ -2459,7 +2459,7 @@
       "url": "https://github.com/YunoHost-Apps/euro-office_ynh",
       "stars": 2,
       "forks": 2,
-      "updated_at": "2026-10-14T15:31:49Z",
+      "updated_at": "2026-10-19T08:20:43Z",
       "language": "Shell",
       "archived": false
     },
@@ -3163,7 +3163,7 @@
       "url": "https://github.com/YunoHost-Apps/galette_ynh",
       "stars": 7,
       "forks": 8,
-      "updated_at": "2026-01-30T07:10:00Z",
+      "updated_at": "2026-10-18T18:12:38Z",
       "language": "Shell",
       "archived": false
     },
@@ -7144,7 +7144,7 @@
       "description": "Scan, index and archive all your physical documents",
       "url": "https://github.com/YunoHost-Apps/paperless-ngx_ynh",
       "stars": 14,
-      "forks": 13,
+      "forks": 14,
       "updated_at": "2026-10-13T06:36:23Z",
       "language": "Shell",
       "archived": false
@@ -7596,7 +7596,7 @@
       "url": "https://github.com/YunoHost-Apps/pixelfed_ynh",
       "stars": 51,
       "forks": 20,
-      "updated_at": "2026-10-17T18:17:10Z",
+      "updated_at": "2026-10-18T15:38:33Z",
       "language": "Shell",
       "archived": false
     },
@@ -8212,7 +8212,7 @@
       "url": "https://github.com/YunoHost-Apps/razzia_ynh",
       "stars": 0,
       "forks": 1,
-      "updated_at": "2026-10-11T18:37:26Z",
+      "updated_at": "2026-10-19T08:38:13Z",
       "language": "Shell",
       "archived": false
     },
@@ -8232,9 +8232,9 @@
       "name": "reactive-resume",
       "description": "Reactive Resume package for YunoHost",
       "url": "https://github.com/YunoHost-Apps/reactive-resume_ynh",
-      "stars": 1,
-      "forks": 0,
-      "updated_at": "2025-09-10T17:17:52Z",
+      "stars": 2,
+      "forks": 1,
+      "updated_at": "2026-10-18T14:13:55Z",
       "language": "Shell",
       "archived": false
     },
@@ -8740,7 +8740,7 @@
       "url": "https://github.com/YunoHost-Apps/searxng_ynh",
       "stars": 14,
       "forks": 4,
-      "updated_at": "2026-10-12T06:41:41Z",
+      "updated_at": "2026-10-19T05:56:16Z",
       "language": "Shell",
       "archived": false
     },
@@ -9752,7 +9752,7 @@
       "url": "https://github.com/YunoHost-Apps/terraforming-mars_ynh",
       "stars": 2,
       "forks": 3,
-      "updated_at": "2026-10-05T11:35:00Z",
+      "updated_at": "2026-10-19T10:54:27Z",
       "language": "Shell",
       "archived": false
     },
@@ -10346,7 +10346,7 @@
       "url": "https://github.com/YunoHost-Apps/virtualtabletop_ynh",
       "stars": 3,
       "forks": 0,
-      "updated_at": "2026-10-12T02:14:40Z",
+      "updated_at": "2026-10-19T03:42:33Z",
       "language": "Shell",
       "archived": false
     },
@@ -11171,7 +11171,7 @@
       "url": "https://github.com/YunoHost-Apps/zerobin_ynh",
       "stars": 11,
       "forks": 12,
-      "updated_at": "2026-08-09T05:48:57Z",
+      "updated_at": "2026-10-19T08:22:05Z",
       "language": "Shell",
       "archived": false
     },
