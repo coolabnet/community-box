@@ -1,11 +1,11 @@
 {
-  "timestamp": "2026-10-20T11:11:30.306Z",
+  "timestamp": "2026-10-21T11:27:36.290Z",
   "script": "scripts.test.js",
   "source": "YunoHost-Apps GitHub Organization",
   "url": "https://github.com/YunoHost-Apps",
   "api_url": "https://api.github.com/orgs/YunoHost-Apps/repos",
-  "total_apps": 1027,
-  "total_repos_checked": 1048,
+  "total_apps": 1028,
+  "total_repos_checked": 1049,
   "languages": [
     "CSS",
     "HTML",
@@ -754,7 +754,7 @@
       "url": "https://github.com/YunoHost-Apps/bookstack_ynh",
       "stars": 12,
       "forks": 5,
-      "updated_at": "2026-09-30T14:59:29Z",
+      "updated_at": "2026-10-20T15:53:04Z",
       "language": "Shell",
       "archived": false
     },
@@ -3344,6 +3344,17 @@
       "archived": true
     },
     {
+      "id": "github-runner_ynh",
+      "name": "github-runner",
+      "description": "Package for the self-hosted runner for Github Actions",
+      "url": "https://github.com/YunoHost-Apps/github-runner_ynh",
+      "stars": 0,
+      "forks": 0,
+      "updated_at": "2026-10-20T19:28:53Z",
+      "language": "Shell",
+      "archived": false
+    },
+    {
       "id": "gitlab_ynh",
       "name": "gitlab",
       "description": "GitLab package for YunoHost",
@@ -4164,7 +4175,7 @@
       "url": "https://github.com/YunoHost-Apps/immich_ynh",
       "stars": 29,
       "forks": 17,
-      "updated_at": "2026-10-15T05:50:17Z",
+      "updated_at": "2026-10-20T18:05:06Z",
       "language": "Shell",
       "archived": false
     },
@@ -5088,7 +5099,7 @@
       "url": "https://github.com/YunoHost-Apps/lichenmarkdown_ynh",
       "stars": 0,
       "forks": 2,
-      "updated_at": "2025-11-17T21:49:48Z",
+      "updated_at": "2026-10-20T21:24:41Z",
       "language": "Shell",
       "archived": false
     },
@@ -6419,7 +6430,7 @@
       "url": "https://github.com/YunoHost-Apps/n8n_ynh",
       "stars": 21,
       "forks": 22,
-      "updated_at": "2026-10-19T15:57:22Z",
+      "updated_at": "2026-10-20T21:28:31Z",
       "language": "Shell",
       "archived": false
     },
@@ -7211,7 +7222,7 @@
       "url": "https://github.com/YunoHost-Apps/peaNUT_ynh",
       "stars": 0,
       "forks": 0,
-      "updated_at": "2026-10-03T17:18:03Z",
+      "updated_at": "2026-10-20T12:42:11Z",
       "language": "Shell",
       "archived": false
     },
@@ -8201,7 +8212,7 @@
       "url": "https://github.com/YunoHost-Apps/rallly_ynh",
       "stars": 7,
       "forks": 3,
-      "updated_at": "2026-10-07T06:57:36Z",
+      "updated_at": "2026-10-21T06:00:32Z",
       "language": "Shell",
       "archived": false
     },
@@ -9565,7 +9576,7 @@
       "url": "https://github.com/YunoHost-Apps/synapse_ynh",
       "stars": 86,
       "forks": 48,
-      "updated_at": "2026-10-06T10:19:28Z",
+      "updated_at": "2026-10-20T16:17:34Z",
       "language": "Shell",
       "archived": false
     },
@@ -10037,7 +10048,7 @@
       "description": "Trilium package for YunoHost",
       "url": "https://github.com/YunoHost-Apps/trilium_ynh",
       "stars": 14,
-      "forks": 10,
+      "forks": 9,
       "updated_at": "2026-10-07T14:10:50Z",
       "language": "Shell",
       "archived": false
@@ -10445,7 +10456,7 @@
       "url": "https://github.com/YunoHost-Apps/warpgate_ynh",
       "stars": 1,
       "forks": 0,
-      "updated_at": "2026-09-01T19:22:36Z",
+      "updated_at": "2026-10-21T03:44:21Z",
       "language": "Shell",
       "archived": false
     },
@@ -10874,7 +10885,7 @@
       "url": "https://github.com/YunoHost-Apps/xwiki_ynh",
       "stars": 0,
       "forks": 1,
-      "updated_at": "2026-08-19T10:22:23Z",
+      "updated_at": "2026-10-21T10:48:57Z",
       "language": "Shell",
       "archived": false
     },
@@ -10973,7 +10984,7 @@
       "url": "https://github.com/YunoHost-Apps/youtarr_ynh",
       "stars": 0,
       "forks": 1,
-      "updated_at": "2026-10-15T11:16:26Z",
+      "updated_at": "2026-10-20T18:13:17Z",
       "language": "Shell",
       "archived": false
     },
