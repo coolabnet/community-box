@@ -1,19 +1,19 @@
 {
-  "timestamp": "2026-10-23T11:17:13.323Z",
+  "timestamp": "2026-10-26T12:33:45.954Z",
   "script": "run-all.js",
   "note": "Summary of all data fetching script executions",
   "data": {
-    "execution_time": "2026-10-23T11:17:13.323Z",
+    "execution_time": "2026-10-26T12:33:45.954Z",
     "total_scripts": 6,
     "successful": 6,
     "failed": 0,
-    "total_duration_ms": 21779,
+    "total_duration_ms": 19853,
     "continue_on_error": true,
     "results": [
       {
         "name": "CapRover UI Translations",
         "success": true,
-        "duration": 193,
+        "duration": 377,
         "result": [
           "ar-EG",
           "de-DE",
@@ -36,7 +36,7 @@
       {
         "name": "CasaOS UI Translations",
         "success": true,
-        "duration": 143,
+        "duration": 207,
         "result": [
           "ca_ES",
           "cs_CZ",
@@ -71,7 +71,7 @@
       {
         "name": "YunoHost Apps",
         "success": true,
-        "duration": 19604,
+        "duration": 16210,
         "result": {
           "count": 1028,
           "apps": [
@@ -113,9 +113,9 @@
               "name": "299ko",
               "description": "299Ko package for YunoHost",
               "url": "https://github.com/YunoHost-Apps/299ko_ynh",
-              "stars": 1,
+              "stars": 2,
               "forks": 4,
-              "updated_at": "2026-08-02T07:18:01Z",
+              "updated_at": "2026-10-23T14:30:52Z",
               "language": "Shell",
               "archived": false
             },
@@ -170,7 +170,7 @@
               "url": "https://github.com/YunoHost-Apps/actual_ynh",
               "stars": 7,
               "forks": 6,
-              "updated_at": "2026-10-05T16:40:23Z",
+              "updated_at": "2026-10-25T22:25:53Z",
               "language": "Shell",
               "archived": false
             },
@@ -180,7 +180,7 @@
               "description": "AdGuard Home package for YunoHost: Network-wide ads & trackers blocking DNS server",
               "url": "https://github.com/YunoHost-Apps/adguardhome_ynh",
               "stars": 20,
-              "forks": 16,
+              "forks": 17,
               "updated_at": "2026-08-19T19:02:33Z",
               "language": "Shell",
               "archived": false
@@ -224,8 +224,8 @@
               "description": "AdventureLog package for YunoHost",
               "url": "https://github.com/YunoHost-Apps/adventurelog_ynh",
               "stars": 2,
-              "forks": 5,
-              "updated_at": "2026-10-17T11:52:03Z",
+              "forks": 4,
+              "updated_at": "2026-10-25T22:28:21Z",
               "language": "Shell",
               "archived": false
             },
@@ -423,9 +423,9 @@
               "url": "https://github.com/YunoHost-Apps/appflowy_ynh",
               "stars": 5,
               "forks": 8,
-              "updated_at": "2026-05-28T06:25:44Z",
+              "updated_at": "2026-10-25T17:28:15Z",
               "language": "Shell",
-              "archived": false
+              "archived": true
             },
             {
               "id": "archivebox_ynh",
@@ -433,8 +433,8 @@
               "description": "Self-hosted internet archiving solution to collect, save, and view sites you want to preserve offline, for YunoHost.",
               "url": "https://github.com/YunoHost-Apps/archivebox_ynh",
               "stars": 19,
-              "forks": 6,
-              "updated_at": "2026-09-03T07:30:11Z",
+              "forks": 7,
+              "updated_at": "2026-10-25T22:30:06Z",
               "language": "Shell",
               "archived": false
             },
@@ -478,7 +478,7 @@
               "url": "https://github.com/YunoHost-Apps/armadietto_ynh",
               "stars": 2,
               "forks": 3,
-              "updated_at": "2026-03-24T07:42:05Z",
+              "updated_at": "2026-10-25T22:30:39Z",
               "language": "Shell",
               "archived": false
             },
@@ -522,7 +522,7 @@
               "url": "https://github.com/YunoHost-Apps/audiobookshelf_ynh",
               "stars": 8,
               "forks": 6,
-              "updated_at": "2026-10-01T05:16:03Z",
+              "updated_at": "2026-10-24T06:51:29Z",
               "language": "Shell",
               "archived": false
             },
@@ -631,7 +631,7 @@
               "description": "Companion for Sonarr and Radarr that manages and downloads subtitles, packaged for YunoHost",
               "url": "https://github.com/YunoHost-Apps/bazarr_ynh",
               "stars": 2,
-              "forks": 1,
+              "forks": 2,
               "updated_at": "2026-09-27T22:52:09Z",
               "language": "Shell",
               "archived": false
@@ -687,7 +687,7 @@
               "url": "https://github.com/YunoHost-Apps/beszel_ynh",
               "stars": 1,
               "forks": 0,
-              "updated_at": "2026-10-03T10:20:16Z",
+              "updated_at": "2026-10-24T20:59:31Z",
               "language": "Shell",
               "archived": false
             },
@@ -697,8 +697,8 @@
               "description": "Agent for the server monitoring platform, packaged for YunoHost",
               "url": "https://github.com/YunoHost-Apps/beszel-agent_ynh",
               "stars": 0,
-              "forks": 0,
-              "updated_at": "2026-10-03T10:20:11Z",
+              "forks": 1,
+              "updated_at": "2026-10-24T21:00:37Z",
               "language": "Shell",
               "archived": false
             },
@@ -852,7 +852,7 @@
               "url": "https://github.com/YunoHost-Apps/borgwarehouse_ynh",
               "stars": 2,
               "forks": 5,
-              "updated_at": "2026-08-24T08:23:00Z",
+              "updated_at": "2026-10-25T22:44:34Z",
               "language": "Shell",
               "archived": false
             },
@@ -896,7 +896,7 @@
               "url": "https://github.com/YunoHost-Apps/cac-proxy_ynh",
               "stars": 3,
               "forks": 3,
-              "updated_at": "2025-09-18T16:36:29Z",
+              "updated_at": "2026-10-26T07:03:42Z",
               "language": "Shell",
               "archived": false
             },
@@ -1061,7 +1061,7 @@
               "url": "https://github.com/YunoHost-Apps/chatgpt-web_ynh",
               "stars": 4,
               "forks": 4,
-              "updated_at": "2026-10-12T10:47:19Z",
+              "updated_at": "2026-10-25T22:44:41Z",
               "language": "Shell",
               "archived": false
             },
@@ -1094,7 +1094,7 @@
               "url": "https://github.com/YunoHost-Apps/chitchatter_ynh",
               "stars": 5,
               "forks": 2,
-              "updated_at": "2026-10-23T09:38:43Z",
+              "updated_at": "2026-10-25T22:44:43Z",
               "language": "Shell",
               "archived": false
             },
@@ -1644,7 +1644,7 @@
               "url": "https://github.com/YunoHost-Apps/dato_ynh",
               "stars": 6,
               "forks": 1,
-              "updated_at": "2026-07-29T19:11:00Z",
+              "updated_at": "2026-10-25T22:44:55Z",
               "language": "Shell",
               "archived": false
             },
@@ -1655,7 +1655,7 @@
               "url": "https://github.com/YunoHost-Apps/davis_ynh",
               "stars": 1,
               "forks": 4,
-              "updated_at": "2026-10-23T09:45:05Z",
+              "updated_at": "2026-10-26T10:36:09Z",
               "language": "Shell",
               "archived": false
             },
@@ -1721,7 +1721,7 @@
               "url": "https://github.com/YunoHost-Apps/dex_ynh",
               "stars": 10,
               "forks": 9,
-              "updated_at": "2026-09-10T06:52:29Z",
+              "updated_at": "2026-10-24T15:53:07Z",
               "language": "Shell",
               "archived": false
             },
@@ -1776,7 +1776,7 @@
               "url": "https://github.com/YunoHost-Apps/digipad_ynh",
               "stars": 2,
               "forks": 1,
-              "updated_at": "2026-10-13T06:13:35Z",
+              "updated_at": "2026-10-25T13:07:20Z",
               "language": "Shell",
               "archived": false
             },
@@ -1864,7 +1864,7 @@
               "url": "https://github.com/YunoHost-Apps/discourse_ynh",
               "stars": 26,
               "forks": 11,
-              "updated_at": "2026-10-17T13:37:54Z",
+              "updated_at": "2026-10-25T22:45:00Z",
               "language": "Shell",
               "archived": false
             },
@@ -1996,7 +1996,7 @@
               "url": "https://github.com/YunoHost-Apps/docmost_ynh",
               "stars": 1,
               "forks": 1,
-              "updated_at": "2026-09-10T07:12:36Z",
+              "updated_at": "2026-10-25T22:45:03Z",
               "language": "Shell",
               "archived": false
             },
@@ -2040,7 +2040,7 @@
               "url": "https://github.com/YunoHost-Apps/dodoc_ynh",
               "stars": 5,
               "forks": 2,
-              "updated_at": "2026-05-31T07:21:25Z",
+              "updated_at": "2026-10-25T22:45:07Z",
               "language": "Shell",
               "archived": false
             },
@@ -2194,7 +2194,7 @@
               "url": "https://github.com/YunoHost-Apps/dumbdrop_ynh",
               "stars": 2,
               "forks": 2,
-              "updated_at": "2026-01-15T15:51:35Z",
+              "updated_at": "2026-10-25T22:45:15Z",
               "language": "Shell",
               "archived": false
             },
@@ -2216,7 +2216,7 @@
               "url": "https://github.com/YunoHost-Apps/dumbpad_ynh",
               "stars": 1,
               "forks": 1,
-              "updated_at": "2026-01-15T16:39:03Z",
+              "updated_at": "2026-10-25T22:45:18Z",
               "language": "Shell",
               "archived": false
             },
@@ -2227,7 +2227,7 @@
               "url": "https://github.com/YunoHost-Apps/dumbwhois_ynh",
               "stars": 1,
               "forks": 1,
-              "updated_at": "2026-02-09T07:58:32Z",
+              "updated_at": "2026-10-25T22:45:20Z",
               "language": "Shell",
               "archived": false
             },
@@ -2348,7 +2348,7 @@
               "url": "https://github.com/YunoHost-Apps/eleventy_ynh",
               "stars": 4,
               "forks": 3,
-              "updated_at": "2026-10-16T23:05:05Z",
+              "updated_at": "2026-10-25T22:45:24Z",
               "language": "Shell",
               "archived": false
             },
@@ -2359,7 +2359,7 @@
               "url": "https://github.com/YunoHost-Apps/elk_ynh",
               "stars": 1,
               "forks": 0,
-              "updated_at": "2026-07-30T22:51:44Z",
+              "updated_at": "2026-10-25T22:45:28Z",
               "language": "Shell",
               "archived": false
             },
@@ -2445,9 +2445,9 @@
               "name": "ergo",
               "description": "Ergo (IRC server) package for YunoHost",
               "url": "https://github.com/YunoHost-Apps/ergo_ynh",
-              "stars": 1,
+              "stars": 2,
               "forks": 2,
-              "updated_at": "2026-07-24T06:27:14Z",
+              "updated_at": "2026-10-23T14:36:12Z",
               "language": "Shell",
               "archived": false
             },
@@ -2491,7 +2491,7 @@
               "url": "https://github.com/YunoHost-Apps/etherpad_ynh",
               "stars": 3,
               "forks": 4,
-              "updated_at": "2026-10-19T06:35:54Z",
+              "updated_at": "2026-10-25T09:52:20Z",
               "language": "Shell",
               "archived": false
             },
@@ -2502,7 +2502,7 @@
               "url": "https://github.com/YunoHost-Apps/etherpad_mypads_ynh",
               "stars": 16,
               "forks": 17,
-              "updated_at": "2026-09-17T10:03:09Z",
+              "updated_at": "2026-10-24T15:19:16Z",
               "language": "Shell",
               "archived": false
             },
@@ -2513,7 +2513,7 @@
               "url": "https://github.com/YunoHost-Apps/euro-office_ynh",
               "stars": 2,
               "forks": 2,
-              "updated_at": "2026-10-20T08:06:37Z",
+              "updated_at": "2026-10-24T19:53:40Z",
               "language": "Shell",
               "archived": false
             },
@@ -2535,7 +2535,7 @@
               "url": "https://github.com/YunoHost-Apps/excalidraw_ynh",
               "stars": 6,
               "forks": 5,
-              "updated_at": "2026-05-30T10:15:03Z",
+              "updated_at": "2026-10-25T22:45:38Z",
               "language": "Shell",
               "archived": false
             },
@@ -2663,11 +2663,11 @@
             {
               "id": "feedme_ynh",
               "name": "feedme",
-              "description": "feedme package for YunoHost. Turn any web page into a RSS feed. ",
+              "description": "[DRAFT] feedme package for YunoHost. Turn any web page into a RSS feed. ",
               "url": "https://github.com/YunoHost-Apps/feedme_ynh",
               "stars": 0,
               "forks": 1,
-              "updated_at": "2026-10-05T16:01:23Z",
+              "updated_at": "2026-10-24T12:46:25Z",
               "language": "Shell",
               "archived": false
             },
@@ -2689,7 +2689,7 @@
               "url": "https://github.com/YunoHost-Apps/fider_ynh",
               "stars": 1,
               "forks": 2,
-              "updated_at": "2026-10-21T16:45:36Z",
+              "updated_at": "2026-10-25T22:45:44Z",
               "language": "Shell",
               "archived": false
             },
@@ -2755,7 +2755,7 @@
               "url": "https://github.com/YunoHost-Apps/filepizza_ynh",
               "stars": 4,
               "forks": 2,
-              "updated_at": "2026-06-06T12:43:52Z",
+              "updated_at": "2026-10-25T22:45:49Z",
               "language": "Shell",
               "archived": false
             },
@@ -2766,7 +2766,7 @@
               "url": "https://github.com/YunoHost-Apps/filerise_ynh",
               "stars": 1,
               "forks": 2,
-              "updated_at": "2026-10-16T18:43:10Z",
+              "updated_at": "2026-10-24T16:00:57Z",
               "language": "PHP",
               "archived": false
             },
@@ -2777,7 +2777,7 @@
               "url": "https://github.com/YunoHost-Apps/findmydevice_ynh",
               "stars": 3,
               "forks": 2,
-              "updated_at": "2026-09-19T04:53:17Z",
+              "updated_at": "2026-10-25T22:45:52Z",
               "language": "Shell",
               "archived": false
             },
@@ -2898,7 +2898,7 @@
               "url": "https://github.com/YunoHost-Apps/fluffychat_ynh",
               "stars": 1,
               "forks": 1,
-              "updated_at": "2026-08-18T05:43:23Z",
+              "updated_at": "2026-10-23T11:40:01Z",
               "language": "Shell",
               "archived": false
             },
@@ -2997,7 +2997,7 @@
               "url": "https://github.com/YunoHost-Apps/formbricks_ynh",
               "stars": 1,
               "forks": 1,
-              "updated_at": "2026-07-09T11:53:35Z",
+              "updated_at": "2026-10-25T22:45:56Z",
               "language": "Shell",
               "archived": false
             },
@@ -3030,7 +3030,7 @@
               "url": "https://github.com/YunoHost-Apps/fossflow_ynh",
               "stars": 3,
               "forks": 1,
-              "updated_at": "2026-05-23T13:06:37Z",
+              "updated_at": "2026-10-25T22:46:01Z",
               "language": "Shell",
               "archived": false
             },
@@ -3074,7 +3074,7 @@
               "url": "https://github.com/YunoHost-Apps/framagames_ynh",
               "stars": 0,
               "forks": 3,
-              "updated_at": "2025-12-29T07:50:31Z",
+              "updated_at": "2026-10-25T22:46:06Z",
               "language": "Shell",
               "archived": false
             },
@@ -3228,7 +3228,7 @@
               "url": "https://github.com/YunoHost-Apps/gamja_ynh",
               "stars": 1,
               "forks": 1,
-              "updated_at": "2026-08-09T17:57:56Z",
+              "updated_at": "2026-10-25T19:26:50Z",
               "language": "Shell",
               "archived": false
             },
@@ -3371,7 +3371,7 @@
               "url": "https://github.com/YunoHost-Apps/gitea_ynh",
               "stars": 28,
               "forks": 19,
-              "updated_at": "2026-07-28T12:51:28Z",
+              "updated_at": "2026-10-24T09:41:27Z",
               "language": "Shell",
               "archived": false
             },
@@ -3382,7 +3382,7 @@
               "url": "https://github.com/YunoHost-Apps/gitea-mirror_ynh",
               "stars": 0,
               "forks": 0,
-              "updated_at": "2026-10-15T06:24:50Z",
+              "updated_at": "2026-10-24T19:57:09Z",
               "language": "Shell",
               "archived": false
             },
@@ -3734,7 +3734,7 @@
               "url": "https://github.com/YunoHost-Apps/grist_ynh",
               "stars": 14,
               "forks": 7,
-              "updated_at": "2026-10-13T06:43:45Z",
+              "updated_at": "2026-10-25T22:46:17Z",
               "language": "Shell",
               "archived": false
             },
@@ -3855,7 +3855,7 @@
               "url": "https://github.com/YunoHost-Apps/headplane_ynh",
               "stars": 6,
               "forks": 1,
-              "updated_at": "2026-08-17T20:45:43Z",
+              "updated_at": "2026-10-25T22:46:22Z",
               "language": "Shell",
               "archived": false
             },
@@ -3866,7 +3866,7 @@
               "url": "https://github.com/YunoHost-Apps/headscale_ynh",
               "stars": 17,
               "forks": 5,
-              "updated_at": "2026-10-22T21:04:52Z",
+              "updated_at": "2026-10-25T16:41:10Z",
               "language": "Shell",
               "archived": false
             },
@@ -3888,7 +3888,7 @@
               "url": "https://github.com/YunoHost-Apps/hedgedoc_ynh",
               "stars": 13,
               "forks": 7,
-              "updated_at": "2026-08-31T05:23:45Z",
+              "updated_at": "2026-10-25T22:46:26Z",
               "language": "Shell",
               "archived": false
             },
@@ -3965,7 +3965,7 @@
               "url": "https://github.com/YunoHost-Apps/holos_ynh",
               "stars": 1,
               "forks": 1,
-              "updated_at": "2026-08-17T20:13:11Z",
+              "updated_at": "2026-10-25T22:46:30Z",
               "language": "Shell",
               "archived": false
             },
@@ -3987,7 +3987,7 @@
               "url": "https://github.com/YunoHost-Apps/homeassistant_ynh",
               "stars": 25,
               "forks": 17,
-              "updated_at": "2026-10-17T05:01:29Z",
+              "updated_at": "2026-10-25T09:50:28Z",
               "language": "Shell",
               "archived": false
             },
@@ -4174,7 +4174,7 @@
               "url": "https://github.com/YunoHost-Apps/iceshrimp_ynh",
               "stars": 4,
               "forks": 4,
-              "updated_at": "2026-01-09T15:40:26Z",
+              "updated_at": "2026-10-25T22:47:47Z",
               "language": "Shell",
               "archived": false
             },
@@ -4229,7 +4229,7 @@
               "url": "https://github.com/YunoHost-Apps/immich_ynh",
               "stars": 29,
               "forks": 17,
-              "updated_at": "2026-10-22T05:02:11Z",
+              "updated_at": "2026-10-25T22:46:43Z",
               "language": "Shell",
               "archived": false
             },
@@ -4394,7 +4394,7 @@
               "url": "https://github.com/YunoHost-Apps/jackett_ynh",
               "stars": 3,
               "forks": 5,
-              "updated_at": "2026-10-19T15:11:04Z",
+              "updated_at": "2026-10-24T19:56:13Z",
               "language": "Shell",
               "archived": false
             },
@@ -4470,7 +4470,7 @@
               "description": "Jellyfin package for YunoHost",
               "url": "https://github.com/YunoHost-Apps/jellyfin_ynh",
               "stars": 32,
-              "forks": 24,
+              "forks": 23,
               "updated_at": "2026-10-10T00:42:23Z",
               "language": "Shell",
               "archived": false
@@ -4482,7 +4482,7 @@
               "url": "https://github.com/YunoHost-Apps/jellyfin-vue_ynh",
               "stars": 0,
               "forks": 3,
-              "updated_at": "2026-10-19T17:00:36Z",
+              "updated_at": "2026-10-26T07:33:08Z",
               "language": "Shell",
               "archived": false
             },
@@ -4537,7 +4537,7 @@
               "url": "https://github.com/YunoHost-Apps/joplin_ynh",
               "stars": 7,
               "forks": 4,
-              "updated_at": "2026-09-28T18:21:12Z",
+              "updated_at": "2026-10-25T22:46:50Z",
               "language": "Shell",
               "archived": false
             },
@@ -4548,7 +4548,7 @@
               "url": "https://github.com/YunoHost-Apps/journiv_ynh",
               "stars": 1,
               "forks": 1,
-              "updated_at": "2026-10-06T20:52:28Z",
+              "updated_at": "2026-10-25T22:46:53Z",
               "language": "Shell",
               "archived": false
             },
@@ -4581,7 +4581,7 @@
               "url": "https://github.com/YunoHost-Apps/jupyterlab_ynh",
               "stars": 16,
               "forks": 6,
-              "updated_at": "2026-06-21T10:45:58Z",
+              "updated_at": "2026-10-25T22:46:56Z",
               "language": "Python",
               "archived": false
             },
@@ -4592,7 +4592,7 @@
               "url": "https://github.com/YunoHost-Apps/kanboard_ynh",
               "stars": 17,
               "forks": 18,
-              "updated_at": "2026-10-22T21:07:56Z",
+              "updated_at": "2026-10-24T09:55:58Z",
               "language": "PHP",
               "archived": false
             },
@@ -4614,7 +4614,7 @@
               "url": "https://github.com/YunoHost-Apps/karakeep_ynh",
               "stars": 6,
               "forks": 3,
-              "updated_at": "2026-08-17T20:16:54Z",
+              "updated_at": "2026-10-25T23:51:36Z",
               "language": "Shell",
               "archived": false
             },
@@ -4702,7 +4702,7 @@
               "url": "https://github.com/YunoHost-Apps/kimai2_ynh",
               "stars": 13,
               "forks": 9,
-              "updated_at": "2026-10-23T08:47:52Z",
+              "updated_at": "2026-10-26T09:40:16Z",
               "language": "Shell",
               "archived": false
             },
@@ -4889,7 +4889,7 @@
               "url": "https://github.com/YunoHost-Apps/lasuite-meet_ynh",
               "stars": 8,
               "forks": 2,
-              "updated_at": "2026-10-14T14:32:14Z",
+              "updated_at": "2026-10-26T07:39:19Z",
               "language": "Shell",
               "archived": false
             },
@@ -4911,7 +4911,7 @@
               "url": "https://github.com/YunoHost-Apps/lazylibrarian_ynh",
               "stars": 0,
               "forks": 0,
-              "updated_at": "2026-10-05T16:32:29Z",
+              "updated_at": "2026-10-24T08:04:30Z",
               "language": "Shell",
               "archived": false
             },
@@ -5065,7 +5065,7 @@
               "url": "https://github.com/YunoHost-Apps/libremdb_ynh",
               "stars": 3,
               "forks": 2,
-              "updated_at": "2026-05-16T08:50:55Z",
+              "updated_at": "2026-10-25T22:47:06Z",
               "language": "Shell",
               "archived": false
             },
@@ -5219,7 +5219,7 @@
               "url": "https://github.com/YunoHost-Apps/linkwarden_ynh",
               "stars": 4,
               "forks": 5,
-              "updated_at": "2026-09-12T20:09:55Z",
+              "updated_at": "2026-10-25T22:47:13Z",
               "language": "Shell",
               "archived": false
             },
@@ -5340,7 +5340,7 @@
               "url": "https://github.com/YunoHost-Apps/loops_ynh",
               "stars": 3,
               "forks": 2,
-              "updated_at": "2026-10-06T21:08:46Z",
+              "updated_at": "2026-10-24T08:06:12Z",
               "language": "Shell",
               "archived": false
             },
@@ -5428,7 +5428,7 @@
               "url": "https://github.com/YunoHost-Apps/lxd-ui_ynh",
               "stars": 0,
               "forks": 0,
-              "updated_at": "2026-10-14T06:36:52Z",
+              "updated_at": "2026-10-24T15:53:45Z",
               "language": "Shell",
               "archived": false
             },
@@ -5439,7 +5439,7 @@
               "url": "https://github.com/YunoHost-Apps/lychee_ynh",
               "stars": 11,
               "forks": 6,
-              "updated_at": "2026-10-14T06:36:02Z",
+              "updated_at": "2026-10-23T20:36:39Z",
               "language": "Shell",
               "archived": false
             },
@@ -5472,7 +5472,7 @@
               "url": "https://github.com/YunoHost-Apps/mailbag_ynh",
               "stars": 2,
               "forks": 1,
-              "updated_at": "2026-09-05T08:05:02Z",
+              "updated_at": "2026-10-25T22:47:20Z",
               "language": "Shell",
               "archived": false
             },
@@ -5527,7 +5527,7 @@
               "url": "https://github.com/YunoHost-Apps/many-notes_ynh",
               "stars": 0,
               "forks": 2,
-              "updated_at": "2026-06-17T06:34:03Z",
+              "updated_at": "2026-10-25T22:47:25Z",
               "language": "Shell",
               "archived": false
             },
@@ -5582,7 +5582,7 @@
               "url": "https://github.com/YunoHost-Apps/matrix-appservice-irc_ynh",
               "stars": 1,
               "forks": 2,
-              "updated_at": "2026-08-09T17:54:29Z",
+              "updated_at": "2026-10-25T22:47:32Z",
               "language": "Shell",
               "archived": false
             },
@@ -6022,7 +6022,7 @@
               "url": "https://github.com/YunoHost-Apps/mirotalk_ynh",
               "stars": 4,
               "forks": 3,
-              "updated_at": "2026-10-22T21:16:45Z",
+              "updated_at": "2026-10-25T22:46:47Z",
               "language": "Shell",
               "archived": false
             },
@@ -6033,7 +6033,7 @@
               "url": "https://github.com/YunoHost-Apps/misskey_ynh",
               "stars": 29,
               "forks": 15,
-              "updated_at": "2026-10-02T06:46:19Z",
+              "updated_at": "2026-10-25T22:47:36Z",
               "language": "Shell",
               "archived": false
             },
@@ -6044,7 +6044,7 @@
               "url": "https://github.com/YunoHost-Apps/mitra_ynh",
               "stars": 1,
               "forks": 3,
-              "updated_at": "2026-10-08T14:40:21Z",
+              "updated_at": "2026-10-25T22:47:43Z",
               "language": "Shell",
               "archived": false
             },
@@ -6132,7 +6132,7 @@
               "url": "https://github.com/YunoHost-Apps/mongo-express_ynh",
               "stars": 0,
               "forks": 4,
-              "updated_at": "2026-09-06T17:21:02Z",
+              "updated_at": "2026-10-25T19:27:07Z",
               "language": "Shell",
               "archived": false
             },
@@ -6175,7 +6175,7 @@
               "description": "Moodle package for YunoHost",
               "url": "https://github.com/YunoHost-Apps/moodle_ynh",
               "stars": 4,
-              "forks": 6,
+              "forks": 5,
               "updated_at": "2026-09-11T17:01:06Z",
               "language": "Shell",
               "archived": false
@@ -6253,7 +6253,7 @@
               "url": "https://github.com/YunoHost-Apps/mstream_ynh",
               "stars": 1,
               "forks": 1,
-              "updated_at": "2026-10-05T20:54:24Z",
+              "updated_at": "2026-10-25T22:47:54Z",
               "language": "Shell",
               "archived": false
             },
@@ -6451,7 +6451,7 @@
               "url": "https://github.com/YunoHost-Apps/mygpo_ynh",
               "stars": 7,
               "forks": 5,
-              "updated_at": "2026-09-30T20:47:03Z",
+              "updated_at": "2026-10-24T19:52:11Z",
               "language": "Shell",
               "archived": false
             },
@@ -6484,7 +6484,7 @@
               "url": "https://github.com/YunoHost-Apps/n8n_ynh",
               "stars": 21,
               "forks": 22,
-              "updated_at": "2026-10-22T19:18:28Z",
+              "updated_at": "2026-10-23T11:25:39Z",
               "language": "Shell",
               "archived": false
             },
@@ -6526,9 +6526,9 @@
               "name": "nextcloud",
               "description": "Nextcloud package for YunoHost",
               "url": "https://github.com/YunoHost-Apps/nextcloud_ynh",
-              "stars": 173,
+              "stars": 174,
               "forks": 69,
-              "updated_at": "2026-10-15T17:18:22Z",
+              "updated_at": "2026-10-23T14:23:08Z",
               "language": "Shell",
               "archived": false
             },
@@ -6550,7 +6550,7 @@
               "url": "https://github.com/YunoHost-Apps/nextcloud-whiteboard_ynh",
               "stars": 1,
               "forks": 0,
-              "updated_at": "2026-10-04T17:15:41Z",
+              "updated_at": "2026-10-24T19:55:58Z",
               "language": "Shell",
               "archived": false
             },
@@ -6649,7 +6649,7 @@
               "url": "https://github.com/YunoHost-Apps/nodebb_ynh",
               "stars": 7,
               "forks": 6,
-              "updated_at": "2026-10-15T11:38:02Z",
+              "updated_at": "2026-10-25T22:47:58Z",
               "language": "Shell",
               "archived": false
             },
@@ -6792,7 +6792,7 @@
               "url": "https://github.com/YunoHost-Apps/ollama_ynh",
               "stars": 5,
               "forks": 3,
-              "updated_at": "2026-10-22T04:47:13Z",
+              "updated_at": "2026-10-25T09:11:03Z",
               "language": "Shell",
               "archived": false
             },
@@ -6913,7 +6913,7 @@
               "url": "https://github.com/YunoHost-Apps/openemr_ynh",
               "stars": 0,
               "forks": 1,
-              "updated_at": "2026-03-06T14:40:52Z",
+              "updated_at": "2026-10-25T22:48:01Z",
               "language": "Shell",
               "archived": false
             },
@@ -7067,7 +7067,7 @@
               "url": "https://github.com/YunoHost-Apps/ots_ynh",
               "stars": 0,
               "forks": 0,
-              "updated_at": "2026-10-07T15:25:22Z",
+              "updated_at": "2026-10-25T23:15:36Z",
               "language": "Shell",
               "archived": false
             },
@@ -7089,7 +7089,7 @@
               "url": "https://github.com/YunoHost-Apps/overleaf_ynh",
               "stars": 3,
               "forks": 6,
-              "updated_at": "2026-10-03T16:42:41Z",
+              "updated_at": "2026-10-26T09:54:06Z",
               "language": "Shell",
               "archived": false
             },
@@ -7122,7 +7122,7 @@
               "url": "https://github.com/YunoHost-Apps/owncast-emojiwall_ynh",
               "stars": 2,
               "forks": 2,
-              "updated_at": "2026-07-24T18:06:38Z",
+              "updated_at": "2026-10-25T22:48:05Z",
               "language": "Shell",
               "archived": false
             },
@@ -7232,7 +7232,7 @@
               "url": "https://github.com/YunoHost-Apps/papra_ynh",
               "stars": 2,
               "forks": 1,
-              "updated_at": "2026-10-04T09:09:38Z",
+              "updated_at": "2026-10-25T14:21:03Z",
               "language": "Shell",
               "archived": false
             },
@@ -7276,7 +7276,7 @@
               "url": "https://github.com/YunoHost-Apps/peaNUT_ynh",
               "stars": 0,
               "forks": 0,
-              "updated_at": "2026-10-20T12:42:11Z",
+              "updated_at": "2026-10-25T22:53:28Z",
               "language": "Shell",
               "archived": false
             },
@@ -7298,7 +7298,7 @@
               "url": "https://github.com/YunoHost-Apps/peertube_ynh",
               "stars": 98,
               "forks": 32,
-              "updated_at": "2026-10-17T17:25:55Z",
+              "updated_at": "2026-10-25T22:48:23Z",
               "language": "Shell",
               "archived": false
             },
@@ -7309,7 +7309,7 @@
               "url": "https://github.com/YunoHost-Apps/peertube_remote_runner_ynh",
               "stars": 2,
               "forks": 2,
-              "updated_at": "2026-05-26T06:18:24Z",
+              "updated_at": "2026-10-25T22:47:19Z",
               "language": "Shell",
               "archived": false
             },
@@ -7320,7 +7320,7 @@
               "url": "https://github.com/YunoHost-Apps/peertube-search-index_ynh",
               "stars": 9,
               "forks": 3,
-              "updated_at": "2026-10-13T05:57:41Z",
+              "updated_at": "2026-10-25T22:48:19Z",
               "language": "Shell",
               "archived": false
             },
@@ -7342,7 +7342,7 @@
               "url": "https://github.com/YunoHost-Apps/penpot_ynh",
               "stars": 9,
               "forks": 5,
-              "updated_at": "2026-10-07T07:04:39Z",
+              "updated_at": "2026-10-24T21:40:25Z",
               "language": "Shell",
               "archived": false
             },
@@ -7419,7 +7419,7 @@
               "url": "https://github.com/YunoHost-Apps/phanpy_ynh",
               "stars": 2,
               "forks": 3,
-              "updated_at": "2026-10-17T03:43:59Z",
+              "updated_at": "2026-10-25T22:48:30Z",
               "language": "Shell",
               "archived": false
             },
@@ -7441,7 +7441,7 @@
               "url": "https://github.com/YunoHost-Apps/photoprism_ynh",
               "stars": 9,
               "forks": 6,
-              "updated_at": "2026-10-08T06:12:47Z",
+              "updated_at": "2026-10-26T11:36:11Z",
               "language": "Shell",
               "archived": false
             },
@@ -7518,7 +7518,7 @@
               "url": "https://github.com/YunoHost-Apps/phpldapadmin_ynh",
               "stars": 3,
               "forks": 8,
-              "updated_at": "2026-10-06T20:58:23Z",
+              "updated_at": "2026-10-25T22:48:33Z",
               "language": "Shell",
               "archived": false
             },
@@ -7595,7 +7595,7 @@
               "url": "https://github.com/YunoHost-Apps/piefed_ynh",
               "stars": 6,
               "forks": 1,
-              "updated_at": "2026-10-16T13:27:02Z",
+              "updated_at": "2026-10-24T19:58:37Z",
               "language": "Shell",
               "archived": false
             },
@@ -7639,7 +7639,7 @@
               "url": "https://github.com/YunoHost-Apps/piped_ynh",
               "stars": 3,
               "forks": 4,
-              "updated_at": "2026-10-19T17:03:20Z",
+              "updated_at": "2026-10-24T07:50:20Z",
               "language": "Shell",
               "archived": false
             },
@@ -7705,7 +7705,7 @@
               "url": "https://github.com/YunoHost-Apps/planka_ynh",
               "stars": 1,
               "forks": 5,
-              "updated_at": "2026-08-17T20:20:52Z",
+              "updated_at": "2026-10-25T22:48:40Z",
               "language": "Shell",
               "archived": false
             },
@@ -7749,7 +7749,7 @@
               "url": "https://github.com/YunoHost-Apps/plik_ynh",
               "stars": 0,
               "forks": 1,
-              "updated_at": "2026-04-22T23:12:42Z",
+              "updated_at": "2026-10-25T23:14:03Z",
               "language": "Shell",
               "archived": false
             },
@@ -7881,7 +7881,7 @@
               "url": "https://github.com/YunoHost-Apps/postiz_ynh",
               "stars": 0,
               "forks": 2,
-              "updated_at": "2026-09-01T23:21:54Z",
+              "updated_at": "2026-10-25T22:48:45Z",
               "language": "Shell",
               "archived": false
             },
@@ -7903,7 +7903,7 @@
               "url": "https://github.com/YunoHost-Apps/pretalx_ynh",
               "stars": 4,
               "forks": 1,
-              "updated_at": "2026-07-10T07:09:56Z",
+              "updated_at": "2026-10-25T22:48:48Z",
               "language": "Shell",
               "archived": false
             },
@@ -7914,7 +7914,7 @@
               "url": "https://github.com/YunoHost-Apps/pretix_ynh",
               "stars": 4,
               "forks": 1,
-              "updated_at": "2026-03-05T22:56:01Z",
+              "updated_at": "2026-10-25T22:48:54Z",
               "language": "Shell",
               "archived": false
             },
@@ -8002,7 +8002,7 @@
               "url": "https://github.com/YunoHost-Apps/prose_ynh",
               "stars": 0,
               "forks": 2,
-              "updated_at": "2026-01-27T16:51:04Z",
+              "updated_at": "2026-10-25T22:48:57Z",
               "language": "Shell",
               "archived": false
             },
@@ -8011,9 +8011,9 @@
               "name": "prosody",
               "description": "Prosody package for YunoHost",
               "url": "https://github.com/YunoHost-Apps/prosody_ynh",
-              "stars": 8,
+              "stars": 9,
               "forks": 8,
-              "updated_at": "2026-07-13T13:33:12Z",
+              "updated_at": "2026-10-23T14:35:42Z",
               "language": "Shell",
               "archived": false
             },
@@ -8068,7 +8068,7 @@
               "url": "https://github.com/YunoHost-Apps/psitransfer_ynh",
               "stars": 2,
               "forks": 2,
-              "updated_at": "2026-06-03T07:21:09Z",
+              "updated_at": "2026-10-25T22:49:01Z",
               "language": "Shell",
               "archived": false
             },
@@ -8211,7 +8211,7 @@
               "url": "https://github.com/YunoHost-Apps/qui_ynh",
               "stars": 0,
               "forks": 0,
-              "updated_at": "2026-10-14T16:31:43Z",
+              "updated_at": "2026-10-24T15:59:23Z",
               "language": "Shell",
               "archived": false
             },
@@ -8243,9 +8243,9 @@
               "description": "Radicale package for YunoHost",
               "url": "https://github.com/YunoHost-Apps/radicale_ynh",
               "stars": 3,
-              "forks": 5,
-              "updated_at": "2026-03-02T21:15:45Z",
-              "language": "JavaScript",
+              "forks": 6,
+              "updated_at": "2026-10-24T15:23:00Z",
+              "language": "Shell",
               "archived": false
             },
             {
@@ -8266,7 +8266,7 @@
               "url": "https://github.com/YunoHost-Apps/rallly_ynh",
               "stars": 7,
               "forks": 3,
-              "updated_at": "2026-10-22T07:47:22Z",
+              "updated_at": "2026-10-24T15:56:31Z",
               "language": "Shell",
               "archived": false
             },
@@ -8321,7 +8321,7 @@
               "url": "https://github.com/YunoHost-Apps/readeck_ynh",
               "stars": 7,
               "forks": 4,
-              "updated_at": "2026-09-21T13:55:24Z",
+              "updated_at": "2026-10-24T03:30:27Z",
               "language": "Shell",
               "archived": false
             },
@@ -8485,7 +8485,7 @@
               "description": "WIP fork of redirect_ynh",
               "url": "https://github.com/YunoHost-Apps/reverseproxy_ynh",
               "stars": 5,
-              "forks": 7,
+              "forks": 8,
               "updated_at": "2026-06-03T09:29:53Z",
               "language": "Shell",
               "archived": false
@@ -8519,7 +8519,7 @@
               "url": "https://github.com/YunoHost-Apps/rocketchat_ynh",
               "stars": 17,
               "forks": 19,
-              "updated_at": "2026-09-04T14:20:11Z",
+              "updated_at": "2026-10-25T10:44:41Z",
               "language": "Shell",
               "archived": false
             },
@@ -8607,7 +8607,7 @@
               "url": "https://github.com/YunoHost-Apps/rsshub_ynh",
               "stars": 4,
               "forks": 2,
-              "updated_at": "2026-10-22T21:12:44Z",
+              "updated_at": "2026-10-25T22:49:08Z",
               "language": "Shell",
               "archived": false
             },
@@ -8728,7 +8728,7 @@
               "url": "https://github.com/YunoHost-Apps/scratch_ynh",
               "stars": 6,
               "forks": 1,
-              "updated_at": "2026-04-06T09:48:28Z",
+              "updated_at": "2026-10-25T22:49:16Z",
               "language": "Shell",
               "archived": false
             },
@@ -8805,7 +8805,7 @@
               "url": "https://github.com/YunoHost-Apps/searxng_ynh",
               "stars": 14,
               "forks": 4,
-              "updated_at": "2026-10-19T05:56:16Z",
+              "updated_at": "2026-10-26T07:18:39Z",
               "language": "Shell",
               "archived": false
             },
@@ -8904,7 +8904,7 @@
               "url": "https://github.com/YunoHost-Apps/sharkey_ynh",
               "stars": 4,
               "forks": 6,
-              "updated_at": "2026-05-24T21:03:21Z",
+              "updated_at": "2026-10-25T22:48:06Z",
               "language": "Shell",
               "archived": false
             },
@@ -9212,7 +9212,7 @@
               "url": "https://github.com/YunoHost-Apps/snserver_ynh",
               "stars": 6,
               "forks": 5,
-              "updated_at": "2026-10-12T06:34:20Z",
+              "updated_at": "2026-10-25T11:43:02Z",
               "language": "Shell",
               "archived": false
             },
@@ -9223,7 +9223,7 @@
               "url": "https://github.com/YunoHost-Apps/snweb_ynh",
               "stars": 5,
               "forks": 4,
-              "updated_at": "2026-10-09T06:38:45Z",
+              "updated_at": "2026-10-24T15:55:00Z",
               "language": "Shell",
               "archived": false
             },
@@ -9244,7 +9244,7 @@
               "description": "SOGo Groupware for YunoHost.",
               "url": "https://github.com/YunoHost-Apps/sogo_ynh",
               "stars": 8,
-              "forks": 10,
+              "forks": 11,
               "updated_at": "2026-10-06T17:33:56Z",
               "language": "Shell",
               "archived": false
@@ -9300,7 +9300,7 @@
               "url": "https://github.com/YunoHost-Apps/sparkyfitness_ynh",
               "stars": 0,
               "forks": 3,
-              "updated_at": "2026-10-15T17:10:18Z",
+              "updated_at": "2026-10-25T22:49:25Z",
               "language": "Shell",
               "archived": false
             },
@@ -9630,7 +9630,7 @@
               "url": "https://github.com/YunoHost-Apps/synapse_ynh",
               "stars": 86,
               "forks": 48,
-              "updated_at": "2026-10-20T16:17:34Z",
+              "updated_at": "2026-10-24T11:11:12Z",
               "language": "Shell",
               "archived": false
             },
@@ -9641,7 +9641,7 @@
               "url": "https://github.com/YunoHost-Apps/sync-in_ynh",
               "stars": 0,
               "forks": 2,
-              "updated_at": "2026-10-16T18:51:01Z",
+              "updated_at": "2026-10-25T22:49:29Z",
               "language": "Shell",
               "archived": false
             },
@@ -9652,7 +9652,7 @@
               "url": "https://github.com/YunoHost-Apps/syncserver-rs_ynh",
               "stars": 9,
               "forks": 2,
-              "updated_at": "2026-07-21T10:02:13Z",
+              "updated_at": "2026-10-25T21:49:23Z",
               "language": "Shell",
               "archived": false
             },
@@ -9663,7 +9663,7 @@
               "url": "https://github.com/YunoHost-Apps/syncthing_ynh",
               "stars": 25,
               "forks": 8,
-              "updated_at": "2026-10-07T07:06:52Z",
+              "updated_at": "2026-10-24T07:53:19Z",
               "language": "Shell",
               "archived": false
             },
@@ -9718,7 +9718,7 @@
               "url": "https://github.com/YunoHost-Apps/tandoor_ynh",
               "stars": 6,
               "forks": 8,
-              "updated_at": "2026-09-08T10:58:24Z",
+              "updated_at": "2026-10-25T22:49:35Z",
               "language": "Shell",
               "archived": false
             },
@@ -9817,7 +9817,7 @@
               "url": "https://github.com/YunoHost-Apps/terraforming-mars_ynh",
               "stars": 2,
               "forks": 3,
-              "updated_at": "2026-10-19T10:54:27Z",
+              "updated_at": "2026-10-26T07:35:47Z",
               "language": "Shell",
               "archived": false
             },
@@ -9905,7 +9905,7 @@
               "url": "https://github.com/YunoHost-Apps/thelounge_ynh",
               "stars": 10,
               "forks": 8,
-              "updated_at": "2026-07-24T16:23:00Z",
+              "updated_at": "2026-10-25T22:49:45Z",
               "language": "JavaScript",
               "archived": false
             },
@@ -9916,7 +9916,7 @@
               "url": "https://github.com/YunoHost-Apps/tiddlywiki_ynh",
               "stars": 6,
               "forks": 4,
-              "updated_at": "2026-10-02T06:50:57Z",
+              "updated_at": "2026-10-25T22:49:48Z",
               "language": "Shell",
               "archived": false
             },
@@ -9982,7 +9982,7 @@
               "url": "https://github.com/YunoHost-Apps/tldraw_ynh",
               "stars": 3,
               "forks": 3,
-              "updated_at": "2026-03-02T21:16:09Z",
+              "updated_at": "2026-10-25T19:26:32Z",
               "language": "Shell",
               "archived": false
             },
@@ -10246,7 +10246,7 @@
               "url": "https://github.com/YunoHost-Apps/umami_ynh",
               "stars": 4,
               "forks": 7,
-              "updated_at": "2026-09-18T11:28:09Z",
+              "updated_at": "2026-10-26T11:49:41Z",
               "language": "Shell",
               "archived": false
             },
@@ -10312,7 +10312,7 @@
               "url": "https://github.com/YunoHost-Apps/uptime-kuma_ynh",
               "stars": 13,
               "forks": 5,
-              "updated_at": "2026-10-10T09:47:13Z",
+              "updated_at": "2026-10-24T09:45:46Z",
               "language": "Shell",
               "archived": false
             },
@@ -10367,7 +10367,7 @@
               "url": "https://github.com/YunoHost-Apps/versitygw_ynh",
               "stars": 0,
               "forks": 0,
-              "updated_at": "2026-10-15T06:19:19Z",
+              "updated_at": "2026-10-23T20:36:39Z",
               "language": "Shell",
               "archived": false
             },
@@ -10378,7 +10378,7 @@
               "url": "https://github.com/YunoHost-Apps/vert_ynh",
               "stars": 2,
               "forks": 2,
-              "updated_at": "2026-02-23T23:37:00Z",
+              "updated_at": "2026-10-25T22:50:02Z",
               "language": "Shell",
               "archived": false
             },
@@ -10389,7 +10389,7 @@
               "url": "https://github.com/YunoHost-Apps/vikunja_ynh",
               "stars": 10,
               "forks": 10,
-              "updated_at": "2026-10-06T20:57:54Z",
+              "updated_at": "2026-10-26T10:31:42Z",
               "language": "Shell",
               "archived": false
             },
@@ -10431,9 +10431,9 @@
               "name": "vpnclient",
               "description": "VPN Client app for YunoHost",
               "url": "https://github.com/YunoHost-Apps/vpnclient_ynh",
-              "stars": 43,
+              "stars": 44,
               "forks": 29,
-              "updated_at": "2026-10-12T16:11:05Z",
+              "updated_at": "2026-10-23T14:37:58Z",
               "language": "Shell",
               "archived": false
             },
@@ -10499,7 +10499,7 @@
               "url": "https://github.com/YunoHost-Apps/wanderer_ynh",
               "stars": 6,
               "forks": 1,
-              "updated_at": "2026-09-29T17:06:55Z",
+              "updated_at": "2026-10-24T19:32:01Z",
               "language": "Shell",
               "archived": false
             },
@@ -10619,8 +10619,8 @@
               "description": "Weblate package for YunoHost",
               "url": "https://github.com/YunoHost-Apps/weblate_ynh",
               "stars": 15,
-              "forks": 8,
-              "updated_at": "2026-08-30T21:53:48Z",
+              "forks": 9,
+              "updated_at": "2026-10-23T17:07:08Z",
               "language": "Python",
               "archived": false
             },
@@ -10664,7 +10664,7 @@
               "url": "https://github.com/YunoHost-Apps/wekan_ynh",
               "stars": 18,
               "forks": 19,
-              "updated_at": "2026-10-19T15:11:43Z",
+              "updated_at": "2026-10-24T15:43:35Z",
               "language": "Shell",
               "archived": false
             },
@@ -10697,7 +10697,7 @@
               "url": "https://github.com/YunoHost-Apps/wger_ynh",
               "stars": 1,
               "forks": 1,
-              "updated_at": "2026-01-22T17:06:20Z",
+              "updated_at": "2026-10-25T22:50:09Z",
               "language": "Shell",
               "archived": false
             },
@@ -10752,7 +10752,7 @@
               "url": "https://github.com/YunoHost-Apps/wikijs_ynh",
               "stars": 20,
               "forks": 5,
-              "updated_at": "2026-09-28T09:12:40Z",
+              "updated_at": "2026-10-25T22:50:18Z",
               "language": "Shell",
               "archived": false
             },
@@ -11005,7 +11005,7 @@
               "url": "https://github.com/YunoHost-Apps/yeswiki_ynh",
               "stars": 7,
               "forks": 7,
-              "updated_at": "2026-10-21T19:45:19Z",
+              "updated_at": "2026-10-23T13:35:41Z",
               "language": "Shell",
               "archived": false
             },
@@ -11291,7 +11291,7 @@
               "url": "https://github.com/YunoHost-Apps/zipline_ynh",
               "stars": 0,
               "forks": 5,
-              "updated_at": "2026-09-29T10:59:58Z",
+              "updated_at": "2026-10-25T22:50:24Z",
               "language": "Shell",
               "archived": false
             },
@@ -11397,13 +11397,13 @@
             "Shell",
             "TSQL"
           ],
-          "archived_count": 208
+          "archived_count": 209
         }
       },
       {
         "name": "YunoHost Docs Translations",
         "success": true,
-        "duration": 131,
+        "duration": 153,
         "result": [
           "de",
           "docs",
@@ -11420,7 +11420,7 @@
       {
         "name": "YunoHost UI Translations",
         "success": true,
-        "duration": 1363,
+        "duration": 2535,
         "result": [
           {
             "language": "French",
@@ -11476,7 +11476,7 @@
             "translated_percent": 100,
             "translated_words": 3820,
             "total_words": 3820,
-            "last_change": "2026-10-18T23:37:32.347325Z"
+            "last_change": "2026-10-23T20:47:08.295569Z"
           },
           {
             "language": "Arabic",
@@ -11671,6 +11671,14 @@
             "last_change": "2026-08-30T14:56:03.637033Z"
           },
           {
+            "language": "Turkish",
+            "language_code": "tr",
+            "translated_percent": 79.7,
+            "translated_words": 9860,
+            "total_words": 11608,
+            "last_change": "2026-10-23T21:18:35.818772Z"
+          },
+          {
             "language": "Arabic",
             "language_code": "ar",
             "translated_percent": 72.9,
@@ -11693,14 +11701,6 @@
             "translated_words": 1550,
             "total_words": 3820,
             "last_change": "2026-10-05T06:55:17.575707Z"
-          },
-          {
-            "language": "Turkish",
-            "language_code": "tr",
-            "translated_percent": 56.6,
-            "translated_words": 6926,
-            "total_words": 11608,
-            "last_change": "2026-10-22T21:44:15.930662Z"
           },
           {
             "language": "Hindi",
@@ -11827,7 +11827,7 @@
       {
         "name": "Zimaboard Shipping Areas",
         "success": true,
-        "duration": 345,
+        "duration": 371,
         "result": [
           "Argentina",
           "Australia",
