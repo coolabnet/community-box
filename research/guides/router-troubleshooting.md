@@ -20,8 +20,6 @@ This guide provides systematic troubleshooting procedures for common router setu
 
 ### Universal Reset Button Method
 
-*`[Reset Button Location](router-reset-button.png)` — Highlighted photo of a typical hardware reset button on a router, showing button location and surrounding indicators.*
-
 **Basic Reset Procedure**:
 1. **Locate reset button**: Usually recessed hole labeled "RESET"
 2. **Prepare tool**: Paperclip, pin, or similar pointed object
@@ -176,8 +174,6 @@ Indicator: Amber power LED indicates TFTP mode active
 
 ### Serial Console Hardware Setup
 
-*`[Serial Console Hookup](router-serial-console.png)` — Photo or diagram of attaching serial cables for advanced recovery, showing connection points and cable routing.*
-
 **Required Equipment**:
 - **USB-to-TTL adapter**: 3.3V logic levels (NOT RS232)
 - **Jumper wires**: Female-to-male or appropriate connectors
@@ -247,8 +243,6 @@ reset
 ## Firmware Restoration Procedures
 
 ### Restoring Original Firmware
-
-*`[Restoring Firmware Process](restoring-firmware.png)` — Series or diagram showing the steps of recovering from a failed install, including cable connections and interface screenshots.*
 
 **When to Restore Original Firmware**:
 - LibreMesh installation failed

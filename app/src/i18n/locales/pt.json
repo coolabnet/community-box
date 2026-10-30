@@ -352,9 +352,7 @@
       "nucOverview": "Visão Geral do Intel NUC",
       "zimaOverview": "Visão Geral do ZimaBoard",
       "libremeshOverview": "Visão Geral do LibreMesh",
-      "meshBasics": "Noções Básicas de Redes em Malha",
-      "routerSetup": "Configuração do Roteador",
-      "globalNetworks": "Redes Comunitárias Globais"
+      "meshBasics": "Noções Básicas de Redes em Malha"
     },
     "cards": {
       "paper": {

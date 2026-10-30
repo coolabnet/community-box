@@ -352,9 +352,7 @@
       "nucOverview": "Intel NUC Overview",
       "zimaOverview": "ZimaBoard Overview",
       "libremeshOverview": "LibreMesh Overview",
-      "meshBasics": "Mesh Network Basics",
-      "routerSetup": "Router Setup",
-      "globalNetworks": "Global Community Networks"
+      "meshBasics": "Mesh Network Basics"
     },
     "cards": {
       "paper": {

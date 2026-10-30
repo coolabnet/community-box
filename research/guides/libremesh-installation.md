@@ -26,8 +26,6 @@ This comprehensive guide provides step-by-step instructions for downloading, ver
 
 ### Finding Your Router's Firmware
 
-*`[Firmware Selector Screenshot](libremesh-download-page.png)` — LibreMesh Firmware Selector tool for finding the correct firmware.*
-
 1. **Visit the LibreMesh Firmware Selector**: https://firmware-selector.libremesh.org/
 2. **Navigate to your router category**: Browse by manufacturer (TP-Link, GL.iNet, Asus, etc.)
 3. **Locate exact model and revision**: Match your device precisely
@@ -68,8 +66,6 @@ Get-FileHash -Algorithm SHA256 filename.bin
    - **Gateway**: Leave blank for now
 
 ### Physical Connection Setup
-
-*`[Ethernet Connection Preparation](ethernet-cable-setup.png)` — User connecting LAN cable between computer and router for flashing, showing proper cable routing and connection points.*
 
 1. **Power off router**: Unplug power adapter completely
 2. **Connect Ethernet cable**: Computer to router LAN port (not WAN)
@@ -128,8 +124,6 @@ arp -a
 ## Step 4: Flash LibreMesh Firmware
 
 ### Standard Web-Based Flashing
-
-*`[Router in Flash Mode](router-flash-mode.png)` — Router with LEDs or physical indicators signaling firmware flashing mode, showing typical LED patterns during firmware upload.*
 
 1. **Navigate to firmware upgrade section**:
    - **TP-Link**: Advanced → System Tools → Firmware Upgrade

@@ -352,9 +352,7 @@
       "nucOverview": "Descripción General de Intel NUC",
       "zimaOverview": "Descripción General de ZimaBoard",
       "libremeshOverview": "Descripción General de LibreMesh",
-      "meshBasics": "Nociones Básicas de Redes en Malla",
-      "routerSetup": "Configuración del Enrutador",
-      "globalNetworks": "Redes Comunitarias Globales"
+      "meshBasics": "Nociones Básicas de Redes en Malla"
     },
     "cards": {
       "paper": {

@@ -17,8 +17,6 @@ Domain Name System (DNS) is a critical component of any network, translating hum
 
 LibreMesh uses dnsmasq as its primary DNS service, providing a lightweight yet powerful solution for mesh networks[36][37].
 
-`[Network Diagram with Local DNS](local-dns-diagram.png) — Schematic showing flow of local DNS queries.]`
-
 ## DNS Architecture in LibreMesh
 
 ### Components Overview
@@ -58,8 +56,6 @@ The main configuration files for DNS in LibreMesh are[37][38]:
 - **/etc/config/lime**: Main LibreMesh configuration affecting DNS behavior
 - **/etc/hosts**: Local hostname definitions
 - **/etc/dnsmasq.d/**: Additional configuration fragments
-
-`[LibreMesh DNS Config Screenshot](libremesh-dns-config.png) — Web UI or config file with DNS settings highlighted.]`
 
 ## Setting Up Local DNS Resolution
 
