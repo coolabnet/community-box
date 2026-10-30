@@ -1,18 +1,27 @@
 import type { TFunction } from 'i18next';
 import type { Requirements, ResourceLink } from '@/types/questionnaire';
 
-const INTERNAL_DOCS_PREFIX = '/docs/';
+// Internal paths: /docs/<segment>(/<segment>)* with an optional #anchor.
+// Only [A-Za-z0-9_-] is allowed in segments, so `%`, `.`, `\` and empty segments
+// (`//`, trailing `/`) never match and encoded traversal cannot survive.
+const INTERNAL_DOCS_PATH = /^\/docs\/[A-Za-z0-9_-]+(?:\/[A-Za-z0-9_-]+)*$/;
+const INTERNAL_ANCHOR = /^[A-Za-z0-9_-]+$/;
 
 /**
  * Resolve a catalog link URL to a safe href.
- * Accepts https:// URLs and app-internal /docs/ paths only; anything else is dropped.
+ * Accepts https:// URLs and strict app-internal /docs/ paths only; anything else is dropped.
  */
 export function safeHref(url: string): { href: string; internal: boolean } | null {
   if (typeof url !== 'string') return null;
 
   if (url.startsWith('/')) {
-    if (!url.startsWith(INTERNAL_DOCS_PREFIX)) return null;
-    if (url.includes('..') || url.includes('\\')) return null;
+    const hashAt = url.indexOf('#');
+    const path = hashAt === -1 ? url : url.slice(0, hashAt);
+    const anchor = hashAt === -1 ? null : url.slice(hashAt + 1);
+    if (!INTERNAL_DOCS_PATH.test(path)) return null;
+    if (anchor !== null && !INTERNAL_ANCHOR.test(anchor)) return null;
+    // Canonical form must match the input exactly (no normalisation surprises).
+    if (new URL(path, 'https://x.invalid').pathname !== path) return null;
     return { href: url, internal: true };
   }
 

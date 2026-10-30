@@ -37,10 +37,13 @@ const osFixture = {
   requirements: { architectures: ['armhf'] } satisfies Requirements,
 };
 
-const render = (props: { links?: ResourceLink[]; requirements?: Requirements }) =>
+const render = (
+  props: { links?: ResourceLink[]; requirements?: Requirements },
+  basename?: string
+) =>
   renderToStaticMarkup(
     <I18nextProvider i18n={i18n}>
-      <MemoryRouter>
+      <MemoryRouter basename={basename} initialEntries={[basename ?? "/"]}>
         <CatalogMeta {...props} />
       </MemoryRouter>
     </I18nextProvider>
@@ -55,6 +58,10 @@ describe('safeHref', () => {
     expect(safeHref('/docs/guides/x')).toEqual({ href: '/docs/guides/x', internal: true });
   });
 
+  it('accepts internal paths with a plain anchor', () => {
+    expect(safeHref('/docs/guides/x#section')).toEqual({ href: '/docs/guides/x#section', internal: true });
+  });
+
   it.each([
     'http://example.org',
     'javascript:alert(1)',
@@ -63,6 +70,19 @@ describe('safeHref', () => {
     '//evil.com',
     '/docs/../x',
     '/docs/\\..\\x',
+    '/docs/%2e%2e/x',
+    '/docs/%2E%2E/x',
+    '/docs/%252e%252e/x',
+    '/docs/%2e%2e/%2e%2e/outside',
+    '/docs/./x',
+    '/docs//x',
+    '/docs/a%2fb',
+    '/docs/a%5cb',
+    '/docs/x/',
+    '/docs/guides/x.md',
+    '/docs/guides/x#a/b',
+    '/docs/guides/x#%2e',
+    '/docs/',
     '/other/page',
     'relative',
     '',
@@ -124,6 +144,14 @@ describe('CatalogMeta', () => {
     expect(html).not.toContain('javascript:');
   });
 
+  it('prefixes internal links with the app basename and keeps external links absolute', () => {
+    const html = render(serviceFixture, '/community-box');
+    expect(html).toContain('href="/community-box/docs/guides/x"');
+    expect(html).not.toContain('href="/docs/guides/x"');
+    expect(html).toContain('href="https://example.org/"');
+    expect(html).toMatch(/<a[^>]*href="https:\/\/example\.org\/"[^>]*target="_blank"/);
+  });
+
   it('renders an external link for an OS-like entry', () => {
     const html = render(osFixture);
     expect(html).toContain('Requirements: armhf');
@@ -133,6 +161,14 @@ describe('CatalogMeta', () => {
 });
 
 describe('real catalogs', () => {
+  // RecommendationResults fills its lists in a 1.5s effect and no DOM env is installed,
+  // so it cannot be rendered in this suite. Every real entry must render no catalog markup.
+  it('renders no catalog markup for any real service or OS entry', () => {
+    for (const entry of [...Object.values(services), ...Object.values(operatingSystems)]) {
+      expect(render(entry), entry.key).toBe('');
+    }
+  });
+
   it.each([
     ['services', services],
     ['operatingSystems', operatingSystems],
