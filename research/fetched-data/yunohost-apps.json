@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-10-30T20:22:15.603Z",
+  "timestamp": "2026-10-30T23:51:03.369Z",
   "script": "run-all.js",
   "source": "YunoHost-Apps GitHub Organization",
   "url": "https://github.com/YunoHost-Apps",
@@ -6890,9 +6890,9 @@
       "name": "openproject",
       "description": "OpenProject instanciation for YunoHost",
       "url": "https://github.com/YunoHost-Apps/openproject_ynh",
-      "stars": 9,
+      "stars": 10,
       "forks": 4,
-      "updated_at": "2026-10-13T11:30:12Z",
+      "updated_at": "2026-10-30T23:45:12Z",
       "language": "Shell",
       "archived": false
     },
@@ -7056,7 +7056,7 @@
       "description": "Owncast package for YunoHost",
       "url": "https://github.com/YunoHost-Apps/owncast_ynh",
       "stars": 13,
-      "forks": 2,
+      "forks": 3,
       "updated_at": "2026-09-03T18:10:52Z",
       "language": "Shell",
       "archived": false

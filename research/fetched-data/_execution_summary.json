@@ -1,19 +1,19 @@
 {
-  "timestamp": "2026-10-30T20:22:17.456Z",
+  "timestamp": "2026-10-30T23:51:05.368Z",
   "script": "run-all.js",
   "note": "Summary of all data fetching script executions",
   "data": {
-    "execution_time": "2026-10-30T20:22:17.456Z",
+    "execution_time": "2026-10-30T23:51:05.368Z",
     "total_scripts": 6,
     "successful": 6,
     "failed": 0,
-    "total_duration_ms": 18371,
+    "total_duration_ms": 15564,
     "continue_on_error": true,
     "results": [
       {
         "name": "CapRover UI Translations",
         "success": true,
-        "duration": 284,
+        "duration": 357,
         "result": [
           "ar-EG",
           "de-DE",
@@ -36,7 +36,7 @@
       {
         "name": "CasaOS UI Translations",
         "success": true,
-        "duration": 140,
+        "duration": 177,
         "result": [
           "ca_ES",
           "cs_CZ",
@@ -71,7 +71,7 @@
       {
         "name": "YunoHost Apps",
         "success": true,
-        "duration": 16099,
+        "duration": 13034,
         "result": {
           "count": 1029,
           "apps": [
@@ -6944,9 +6944,9 @@
               "name": "openproject",
               "description": "OpenProject instanciation for YunoHost",
               "url": "https://github.com/YunoHost-Apps/openproject_ynh",
-              "stars": 9,
+              "stars": 10,
               "forks": 4,
-              "updated_at": "2026-10-13T11:30:12Z",
+              "updated_at": "2026-10-30T23:45:12Z",
               "language": "Shell",
               "archived": false
             },
@@ -7110,7 +7110,7 @@
               "description": "Owncast package for YunoHost",
               "url": "https://github.com/YunoHost-Apps/owncast_ynh",
               "stars": 13,
-              "forks": 2,
+              "forks": 3,
               "updated_at": "2026-09-03T18:10:52Z",
               "language": "Shell",
               "archived": false
@@ -11431,7 +11431,7 @@
       {
         "name": "YunoHost UI Translations",
         "success": true,
-        "duration": 1311,
+        "duration": 1499,
         "result": [
           {
             "language": "French",
@@ -11838,7 +11838,7 @@
       {
         "name": "Zimaboard Shipping Areas",
         "success": true,
-        "duration": 396,
+        "duration": 356,
         "result": [
           "Argentina",
           "Australia",
