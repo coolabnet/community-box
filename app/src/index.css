@@ -3,6 +3,9 @@
 
 @import "tailwindcss";
 
+/* Dark utilities follow the .dark theme class (same as the theme variables), not the OS setting. */
+@custom-variant dark (&:where(.dark, .dark *));
+
 @theme {
   --color-border: hsl(var(--border));
   --color-input: hsl(var(--input));
