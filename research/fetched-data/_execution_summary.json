@@ -1,19 +1,19 @@
 {
-  "timestamp": "2026-10-30T12:27:20.056Z",
+  "timestamp": "2026-10-30T16:52:49.882Z",
   "script": "run-all.js",
   "note": "Summary of all data fetching script executions",
   "data": {
-    "execution_time": "2026-10-30T12:27:20.056Z",
+    "execution_time": "2026-10-30T16:52:49.882Z",
     "total_scripts": 6,
     "successful": 6,
     "failed": 0,
-    "total_duration_ms": 15972,
+    "total_duration_ms": 25508,
     "continue_on_error": true,
     "results": [
       {
         "name": "CapRover UI Translations",
         "success": true,
-        "duration": 335,
+        "duration": 350,
         "result": [
           "ar-EG",
           "de-DE",
@@ -36,7 +36,7 @@
       {
         "name": "CasaOS UI Translations",
         "success": true,
-        "duration": 161,
+        "duration": 176,
         "result": [
           "ca_ES",
           "cs_CZ",
@@ -71,7 +71,7 @@
       {
         "name": "YunoHost Apps",
         "success": true,
-        "duration": 13822,
+        "duration": 20201,
         "result": {
           "count": 1029,
           "apps": [
@@ -1732,7 +1732,7 @@
               "url": "https://github.com/YunoHost-Apps/diacamma_ynh",
               "stars": 1,
               "forks": 1,
-              "updated_at": "2026-07-29T19:12:55Z",
+              "updated_at": "2026-10-30T13:16:45Z",
               "language": "Shell",
               "archived": false
             },
@@ -11414,7 +11414,7 @@
       {
         "name": "YunoHost Docs Translations",
         "success": true,
-        "duration": 117,
+        "duration": 152,
         "result": [
           "de",
           "docs",
@@ -11431,7 +11431,7 @@
       {
         "name": "YunoHost UI Translations",
         "success": true,
-        "duration": 1224,
+        "duration": 4193,
         "result": [
           {
             "language": "French",
@@ -11439,7 +11439,7 @@
             "translated_percent": 100,
             "translated_words": 11608,
             "total_words": 11608,
-            "last_change": "2026-10-29T12:21:27.971212Z"
+            "last_change": "2026-10-30T15:31:55.102071Z"
           },
           {
             "language": "German",
@@ -11838,7 +11838,7 @@
       {
         "name": "Zimaboard Shipping Areas",
         "success": true,
-        "duration": 313,
+        "duration": 436,
         "result": [
           "Argentina",
           "Australia",
