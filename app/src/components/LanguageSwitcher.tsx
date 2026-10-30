@@ -15,7 +15,9 @@ const LanguageSwitcher = () => {
     { code: 'pt', nameKey: 'language.portuguese' },
   ];
 
-  const currentLanguage = languages.find(lang => lang.code === i18n.language) || languages[0];
+  // Normalize resolved language (e.g. "pt-BR" -> "pt") before comparing
+  const normalizedLanguage = i18n.resolvedLanguage?.split('-')[0];
+  const currentLanguage = languages.find(lang => lang.code === normalizedLanguage) || languages[0];
 
   const changeLanguage = (lng: string) => {
     i18n.changeLanguage(lng);
@@ -75,7 +77,7 @@ const LanguageSwitcher = () => {
                     key={lang.code}
                     className={cn(
                       "flex w-full items-center px-2 py-1.5 text-sm rounded-sm transition-colors",
-                      i18n.language === lang.code
+                      normalizedLanguage === lang.code
                         ? "bg-primary/10 text-primary font-medium"
                         : "hover:bg-muted text-foreground"
                     )}

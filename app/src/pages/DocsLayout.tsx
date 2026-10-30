@@ -1,11 +1,13 @@
 import { useState, useEffect } from 'react';
 import { Outlet, Link, useLocation } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 import SidebarMenu from '@/components/SidebarMenu';
 import LanguageSwitcher from '@/components/LanguageSwitcher';
 import { Menu as MenuIcon, X as CloseIcon, Wifi } from 'lucide-react';
 import { useIsMobile } from '@/hooks/use-mobile';
 
 export default function DocsLayout() {
+  const { t } = useTranslation();
   const isMobile = useIsMobile();
   const location = useLocation();
   // Sidebar starts closed on mobile, always open on desktop
@@ -66,7 +68,7 @@ export default function DocsLayout() {
                 <button
                   onClick={handleSidebarToggle}
                   className="p-2 hover:bg-gray-100 rounded-lg transition-colors md:hidden"
-                  aria-label="Toggle sidebar"
+                  aria-label={t('common.toggleSidebar')}
                 >
                   {sidebarOpen ? <CloseIcon size={20} /> : <MenuIcon size={20} />}
                 </button>
@@ -75,7 +77,7 @@ export default function DocsLayout() {
                   <div className="h-8 w-8 rounded-full bg-primary flex items-center justify-center text-primary-foreground">
                     <Wifi className="h-5 w-5" />
                   </div>
-                  <span className="font-bold text-lg hidden sm:block">Community Box</span>
+                  <span className="font-bold text-lg hidden sm:block">{t('common.communityBox')}</span>
                 </Link>
               </div>
               <LanguageSwitcher />

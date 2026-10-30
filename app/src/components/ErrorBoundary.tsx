@@ -1,4 +1,5 @@
 import { Component, type ErrorInfo, type ReactNode } from 'react';
+import { withTranslation, type WithTranslation } from 'react-i18next';
 import { AlertTriangle } from 'lucide-react';
 
 interface ErrorBoundaryProps {
@@ -21,7 +22,7 @@ interface ErrorBoundaryState {
   error: Error | null;
 }
 
-class ErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryState> {
+class ErrorBoundary extends Component<ErrorBoundaryProps & WithTranslation, ErrorBoundaryState> {
   constructor(props: ErrorBoundaryProps) {
     super(props);
     this.state = { hasError: false, error: null };
@@ -48,6 +49,7 @@ class ErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryState> {
   };
 
   render(): ReactNode {
+    const { t } = this.props;
     if (this.state.hasError) {
       if (this.props.fallback) {
         const fallback = this.props.fallback;
@@ -63,12 +65,12 @@ class ErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryState> {
               </div>
             </div>
             <h2 className="text-xl font-semibold text-foreground mb-2">
-              Something went wrong
+              {t('errors.somethingWentWrong')}
             </h2>
             <p className="text-muted-foreground text-sm mb-6">
               {(this.props.onRetry ?? this.props.onReset)
-                ? `An unexpected error occurred. Click "${this.props.resetLabel ?? 'Start Over'}" to reset, or reload the page.`
-                : 'An unexpected error occurred. Please try again or reload the page.'
+                ? t('errors.unexpectedWithReset', { label: this.props.resetLabel ?? t('errors.startOver') })
+                : t('errors.unexpected')
               }
             </p>
             <div className="flex flex-col sm:flex-row gap-3 justify-center">
@@ -76,13 +78,13 @@ class ErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryState> {
                 onClick={this.resetErrorBoundary}
                 className="inline-flex items-center justify-center rounded-md bg-primary px-4 py-2 text-sm font-medium text-primary-foreground hover:bg-primary/90 transition-colors"
               >
-                {this.props.resetLabel ?? ((this.props.onRetry ?? this.props.onReset) ? 'Start Over' : 'Try Again')}
+                {this.props.resetLabel ?? ((this.props.onRetry ?? this.props.onReset) ? t('errors.startOver') : t('errors.tryAgain'))}
               </button>
               <button
                 onClick={this.handleReload}
                 className="inline-flex items-center justify-center rounded-md border border-border bg-background px-4 py-2 text-sm font-medium text-foreground hover:bg-muted transition-colors"
               >
-                Reload Page
+                {t('errors.reloadPage')}
               </button>
             </div>
           </div>
@@ -94,4 +96,4 @@ class ErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryState> {
   }
 }
 
-export default ErrorBoundary;
+export default withTranslation()(ErrorBoundary);

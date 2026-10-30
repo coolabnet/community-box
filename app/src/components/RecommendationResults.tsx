@@ -68,6 +68,39 @@ const getMatchRating = (percentage: number, t: TFunction): string => {
   return t('questionnaire.questions.results.fairMatch');
 };
 
+// Move the PDF template into body for capture, run the job, then put the node back
+// where React rendered it and restore its inline styles, even when capture fails.
+const withTemplateInBody = async <T,>(
+  templateElement: HTMLElement,
+  job: (element: HTMLElement) => Promise<T>
+): Promise<T> => {
+  const parent = templateElement.parentNode;
+  const nextSibling = templateElement.nextSibling;
+  const originalCssText = templateElement.style.cssText;
+
+  // Make the template visible during capture, off-screen
+  templateElement.style.display = 'block';
+  templateElement.style.position = 'absolute';
+  templateElement.style.top = '-9999px';
+  templateElement.style.left = '-9999px';
+  document.body.appendChild(templateElement);
+
+  try {
+    // Wait for the template to be rendered
+    await new Promise(resolve => setTimeout(resolve, 100));
+    return await job(templateElement);
+  } finally {
+    if (parent) {
+      if (nextSibling && nextSibling.parentNode === parent) {
+        parent.insertBefore(templateElement, nextSibling);
+      } else {
+        parent.appendChild(templateElement);
+      }
+    }
+    templateElement.style.cssText = originalCssText;
+  }
+};
+
 // Main component
 const RecommendationResults = ({
   answers,
@@ -128,30 +161,14 @@ const RecommendationResults = ({
     try {
       setIsPdfGenerating(true);
 
-      // Make sure the template is visible during capture
-      const templateElement = pdfTemplateRef.current;
-      const originalDisplay = templateElement.style.display;
-      templateElement.style.display = 'block';
-      templateElement.style.position = 'absolute';
-      templateElement.style.top = '-9999px';
-      templateElement.style.left = '-9999px';
-      document.body.appendChild(templateElement);
-
-      // Wait for the template to be rendered
-      await new Promise(resolve => setTimeout(resolve, 100));
-
       // Generate and download the PDF
-      await downloadPDF(templateElement, {
-        filename: 'community-box-recommendation.pdf',
-        quality: 2,
-        scale: 2
-      });
-
-      // Restore the template's original state
-      templateElement.style.display = originalDisplay;
-      templateElement.style.position = '';
-      templateElement.style.top = '';
-      templateElement.style.left = '';
+      await withTemplateInBody(pdfTemplateRef.current, element =>
+        downloadPDF(element, {
+          filename: 'community-box-recommendation.pdf',
+          quality: 2,
+          scale: 2
+        })
+      );
 
     } catch (error) {
       console.error('Error generating PDF:', error);
@@ -170,30 +187,14 @@ const RecommendationResults = ({
     try {
       setIsPdfGenerating(true);
 
-      // Make sure the template is visible during capture
-      const templateElement = pdfTemplateRef.current;
-      const originalDisplay = templateElement.style.display;
-      templateElement.style.display = 'block';
-      templateElement.style.position = 'absolute';
-      templateElement.style.top = '-9999px';
-      templateElement.style.left = '-9999px';
-      document.body.appendChild(templateElement);
-
-      // Wait for the template to be rendered
-      await new Promise(resolve => setTimeout(resolve, 100));
-
       // Generate and share the PDF
-      await sharePDF(templateElement, {
-        filename: 'community-box-recommendation.pdf',
-        quality: 2,
-        scale: 2
-      });
-
-      // Restore the template's original state
-      templateElement.style.display = originalDisplay;
-      templateElement.style.position = '';
-      templateElement.style.top = '';
-      templateElement.style.left = '';
+      await withTemplateInBody(pdfTemplateRef.current, element =>
+        sharePDF(element, {
+          filename: 'community-box-recommendation.pdf',
+          quality: 2,
+          scale: 2
+        })
+      );
 
     } catch (error) {
       console.error('Error sharing PDF:', error);

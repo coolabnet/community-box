@@ -302,9 +302,76 @@
     "message": "Oops! Page not found",
     "returnHome": "Return to Home"
   },
+  "docs": {
+    "loading": "Loading document...",
+    "notFoundTitle": "Document Not Found",
+    "notFoundMessage": "Document \"{{path}}\" not found or failed to load.",
+    "noDocument": "No document specified.",
+    "checkUrl": "Please check the URL or try navigating from the menu.",
+    "emptyTitle": "Empty Document",
+    "emptyMessage": "This document appears to be empty.",
+    "translationUnavailable": "This page is not yet translated; showing English."
+  },
+  "docsHome": {
+    "title": "Community Box Documentation",
+    "subtitle": "Comprehensive guides for building community networks with local servers, mesh networking, and sustainable technology solutions.",
+    "featured": "Featured Resources",
+    "sections": {
+      "hardware": {
+        "title": "Hardware Guides",
+        "description": "Setup guides for Raspberry Pi, Intel NUC, ZimaBoard, and recycled computers"
+      },
+      "software": {
+        "title": "Software Platforms",
+        "description": "Community server platforms: YunoHost, CapRover, and CasaOS"
+      },
+      "network": {
+        "title": "Network Configuration",
+        "description": "LibreMesh integration and mesh networking basics"
+      },
+      "community": {
+        "title": "Community Resources",
+        "description": "Case studies, community directory, and collaboration tools"
+      }
+    },
+    "links": {
+      "rpiOverview": "Raspberry Pi Overview",
+      "nucOverview": "Intel NUC Overview",
+      "zimaOverview": "ZimaBoard Overview",
+      "libremeshOverview": "LibreMesh Overview",
+      "meshBasics": "Mesh Network Basics",
+      "routerSetup": "Router Setup",
+      "globalNetworks": "Global Community Networks"
+    },
+    "cards": {
+      "paper": {
+        "title": "Research Paper",
+        "description": "Comprehensive comparative study of community server platforms",
+        "cta": "Download PDF"
+      },
+      "solar": {
+        "title": "Solar Calculator",
+        "description": "Calculate power requirements for off-grid deployments",
+        "cta": "Open Calculator"
+      },
+      "prep": {
+        "title": "Hardware Preparation",
+        "description": "Step-by-step guide for preparing recycled computers",
+        "cta": "Read Guide"
+      }
+    }
+  },
   "errors": {
     "contextError": "useQuestionnaire must be used within a QuestionnaireProvider",
-    "tryAgain": "Try Again"
+    "tryAgain": "Try Again",
+    "somethingWentWrong": "Something went wrong",
+    "unexpectedWithReset": "An unexpected error occurred. Click \"{{label}}\" to reset, or reload the page.",
+    "unexpected": "An unexpected error occurred. Please try again or reload the page.",
+    "startOver": "Start Over",
+    "reloadPage": "Reload Page",
+    "failedToLoad": "Failed to load",
+    "chunkLoadMessage": "A required component could not be loaded. This is usually caused by a network issue or after an update.",
+    "retryLoad": "Retry Load"
   },
   "language": {
     "select": "Language",
@@ -325,7 +392,9 @@
     "imagesNotBuiltYet": "Images not built yet",
     "openMenu": "Open menu",
     "closeMenu": "Close menu",
-    "toggleSidebar": "Toggle sidebar"
+    "toggleSidebar": "Toggle sidebar",
+    "logoAlt": "Community Box Logo",
+    "recycledLaptopAlt": "Recycled laptop"
   },
   "sidebar": {
     "setupWizard": "🧭 Setup Wizard",
@@ -354,6 +423,7 @@
     "title": "Community Box",
     "description": "Discover the best technology setup for your community's needs. Answer a few simple questions and get a personalized guide.",
     "startButton": "Start",
+    "browseGuides": "Browse Guides",
     "altHeroImage": "Community collaboration",
     "footer": "Community Box Project"
   }

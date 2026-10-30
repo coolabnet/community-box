@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef } from 'react';
+import { useState, useEffect, useRef, useMemo } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Link, useLocation } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
@@ -17,7 +17,7 @@ import {
 } from 'lucide-react';
 import { useIsMobile } from '@/hooks/use-mobile';
 import { getPdfDownloadUrl } from '@/lib/github';
-import { getAllMarkdownTitles, deslugify } from '@/lib/markdown';
+import { getMarkdownTitle, deslugify, normalizeDocLang, type DocLang } from '@/lib/markdown';
 
 type MenuItem = {
   title?: string;       // For dynamic content (markdown titles)
@@ -28,12 +28,10 @@ type MenuItem = {
   children?: MenuItem[];
 };
 
-// Get titles at module level (computed once at build time)
-const MARKDOWN_TITLES = getAllMarkdownTitles();
-
-// Resolve title from path using frontmatter title or de-slugify fallback
-function resolveTitle(path: string): string {
-  return MARKDOWN_TITLES[path] || deslugify(path);
+// Resolve title from path for the given language, falling back to the English frontmatter
+// title and then to a de-slugified filename
+function resolveTitle(path: string, lang: DocLang): string {
+  return getMarkdownTitle(path, lang) || deslugify(path);
 }
 
 // Helper function to get display title
@@ -45,7 +43,7 @@ function getDisplayTitle(item: MenuItem, t: (key: string) => string): string {
 }
 
 // Create menu function that accepts dynamic PDF URL
-const createMenu = (pdfUrl: string): MenuItem[] => [
+const createMenu = (pdfUrl: string, lang: DocLang): MenuItem[] => [
   {
     titleKey: 'sidebar.setupWizard',
     icon: <Compass size={16} />,
@@ -81,7 +79,7 @@ const createMenu = (pdfUrl: string): MenuItem[] => [
       {
         titleKey: 'sidebar.networking',
         children: [
-          { title: 'LibreMesh Image Finder', href: 'https://firmware-selector.libremesh.org/' }
+          { titleKey: 'sidebar.libreMeshImageFinder', href: 'https://firmware-selector.libremesh.org/' }
         ]
       }
     ]
@@ -96,35 +94,35 @@ const createMenu = (pdfUrl: string): MenuItem[] => [
           {
             titleKey: 'sidebar.intelNUC',
             children: [
-              { title: resolveTitle('hardware/intel_nuc/nuc-models-comparison'), to: 'hardware/intel_nuc/nuc-models-comparison' },
-              { title: resolveTitle('hardware/intel_nuc/nuc-overview'), to: 'hardware/intel_nuc/nuc-overview' },
-              { title: resolveTitle('hardware/intel_nuc/nuc-bios-setup'), to: 'hardware/intel_nuc/nuc-bios-setup' },
-              { title: resolveTitle('hardware/intel_nuc/nuc-power-network'), to: 'hardware/intel_nuc/nuc-power-network' }
+              { title: resolveTitle('hardware/intel_nuc/nuc-models-comparison', lang), to: 'hardware/intel_nuc/nuc-models-comparison' },
+              { title: resolveTitle('hardware/intel_nuc/nuc-overview', lang), to: 'hardware/intel_nuc/nuc-overview' },
+              { title: resolveTitle('hardware/intel_nuc/nuc-bios-setup', lang), to: 'hardware/intel_nuc/nuc-bios-setup' },
+              { title: resolveTitle('hardware/intel_nuc/nuc-power-network', lang), to: 'hardware/intel_nuc/nuc-power-network' }
             ]
           },
           {
             titleKey: 'sidebar.raspberryPi',
             children: [
-              { title: resolveTitle('hardware/raspberry_pi_5/rpi-models-comparison'), to: 'hardware/raspberry_pi_5/rpi-models-comparison' },
-              { title: resolveTitle('hardware/raspberry_pi_5/rpi-overview'), to: 'hardware/raspberry_pi_5/rpi-overview' },
-              { title: resolveTitle('hardware/raspberry_pi_5/rpi-cooling-power'), to: 'hardware/raspberry_pi_5/rpi-cooling-power' }
+              { title: resolveTitle('hardware/raspberry_pi_5/rpi-models-comparison', lang), to: 'hardware/raspberry_pi_5/rpi-models-comparison' },
+              { title: resolveTitle('hardware/raspberry_pi_5/rpi-overview', lang), to: 'hardware/raspberry_pi_5/rpi-overview' },
+              { title: resolveTitle('hardware/raspberry_pi_5/rpi-cooling-power', lang), to: 'hardware/raspberry_pi_5/rpi-cooling-power' }
             ]
           },
           {
             titleKey: 'sidebar.zimaBoard',
             children: [
-              { title: resolveTitle('hardware/zimaboard/zima-models-comparison'), to: 'hardware/zimaboard/zima-models-comparison' },
-              { title: resolveTitle('hardware/zimaboard/zima-overview'), to: 'hardware/zimaboard/zima-overview' },
-              { title: resolveTitle('hardware/zimaboard/zima-expansion-options'), to: 'hardware/zimaboard/zima-expansion-options' },
-              { title: resolveTitle('hardware/zimaboard/zima-troubleshooting'), to: 'hardware/zimaboard/zima-troubleshooting' }
+              { title: resolveTitle('hardware/zimaboard/zima-models-comparison', lang), to: 'hardware/zimaboard/zima-models-comparison' },
+              { title: resolveTitle('hardware/zimaboard/zima-overview', lang), to: 'hardware/zimaboard/zima-overview' },
+              { title: resolveTitle('hardware/zimaboard/zima-expansion-options', lang), to: 'hardware/zimaboard/zima-expansion-options' },
+              { title: resolveTitle('hardware/zimaboard/zima-troubleshooting', lang), to: 'hardware/zimaboard/zima-troubleshooting' }
             ]
           },
           {
             titleKey: 'sidebar.recycledComputer',
             children: [
-              { title: resolveTitle('guides/recycled-models-comparison'), to: 'guides/recycled-models-comparison' },
-              { title: resolveTitle('guides/recycled-preparation'), to: 'guides/recycled-preparation' },
-              { title: resolveTitle('guides/hardware-compatibility-check'), to: 'guides/hardware-compatibility-check' }
+              { title: resolveTitle('guides/recycled-models-comparison', lang), to: 'guides/recycled-models-comparison' },
+              { title: resolveTitle('guides/recycled-preparation', lang), to: 'guides/recycled-preparation' },
+              { title: resolveTitle('guides/hardware-compatibility-check', lang), to: 'guides/hardware-compatibility-check' }
             ]
           }
         ]
@@ -132,42 +130,42 @@ const createMenu = (pdfUrl: string): MenuItem[] => [
       {
         titleKey: 'sidebar.softwarePlatforms',
         children: [
-          { title: resolveTitle('software/yunohost/README'), to: 'software/yunohost/README' },
-          { title: resolveTitle('software/caprover/README'), to: 'software/caprover/README' },
-          { title: resolveTitle('software/casaos/README'), to: 'software/casaos/README' },
-          { title: resolveTitle('software/balena/README'), to: 'software/balena/README' }
+          { title: resolveTitle('software/yunohost/README', lang), to: 'software/yunohost/README' },
+          { title: resolveTitle('software/caprover/README', lang), to: 'software/caprover/README' },
+          { title: resolveTitle('software/casaos/README', lang), to: 'software/casaos/README' },
+          { title: resolveTitle('software/balena/README', lang), to: 'software/balena/README' }
         ]
       },
       {
         titleKey: 'sidebar.essentialServices',
         children: [
-          { title: resolveTitle('guides/libremesh-overview'), to: 'guides/libremesh-overview' },
-          { title: resolveTitle('guides/mesh-network-basics'), to: 'guides/mesh-network-basics' },
-          { title: resolveTitle('guides/dns-configuration'), to: 'guides/dns-configuration' },
-          { title: resolveTitle('guides/deployment-best-practices'), to: 'guides/deployment-best-practices' }
+          { title: resolveTitle('guides/libremesh-overview', lang), to: 'guides/libremesh-overview' },
+          { title: resolveTitle('guides/mesh-network-basics', lang), to: 'guides/mesh-network-basics' },
+          { title: resolveTitle('guides/dns-configuration', lang), to: 'guides/dns-configuration' },
+          { title: resolveTitle('guides/deployment-best-practices', lang), to: 'guides/deployment-best-practices' }
         ]
       },
       {
         titleKey: 'sidebar.networkConfiguration',
         children: [
-          { title: resolveTitle('guides/router-selection-guide'), to: 'guides/router-selection-guide' },
-          { title: resolveTitle('guides/libremesh-installation'), to: 'guides/libremesh-installation' }
+          { title: resolveTitle('guides/router-selection-guide', lang), to: 'guides/router-selection-guide' },
+          { title: resolveTitle('guides/libremesh-installation', lang), to: 'guides/libremesh-installation' }
         ]
       },
       {
         titleKey: 'sidebar.systemManagement',
         children: [
-          { title: resolveTitle('guides/etcher-guide'), to: 'guides/etcher-guide' },
-          { title: resolveTitle('guides/disk-partitioning'), to: 'guides/disk-partitioning' },
-          { title: resolveTitle('guides/external-storage'), to: 'guides/external-storage' },
-          { title: resolveTitle('guides/mini-pc-decision-framework'), to: 'guides/mini-pc-decision-framework' }
+          { title: resolveTitle('guides/etcher-guide', lang), to: 'guides/etcher-guide' },
+          { title: resolveTitle('guides/disk-partitioning', lang), to: 'guides/disk-partitioning' },
+          { title: resolveTitle('guides/external-storage', lang), to: 'guides/external-storage' },
+          { title: resolveTitle('guides/mini-pc-decision-framework', lang), to: 'guides/mini-pc-decision-framework' }
         ]
       },
       {
         titleKey: 'sidebar.caseStudies',
         children: [
-          { title: resolveTitle('guides/hardware-clustering-analysis'), to: 'guides/hardware-clustering-analysis' },
-          { title: resolveTitle('guides/mesh-clustering-analysis'), to: 'guides/mesh-clustering-analysis' }
+          { title: resolveTitle('guides/hardware-clustering-analysis', lang), to: 'guides/hardware-clustering-analysis' },
+          { title: resolveTitle('guides/mesh-clustering-analysis', lang), to: 'guides/mesh-clustering-analysis' }
         ]
       }
     ]
@@ -181,7 +179,7 @@ const createMenu = (pdfUrl: string): MenuItem[] => [
     titleKey: 'sidebar.community',
     icon: <Users size={16} />,
     children: [
-      { title: resolveTitle('results/global-community-networks-directory'), to: 'results/global-community-networks-directory' }
+      { title: resolveTitle('results/global-community-networks-directory', lang), to: 'results/global-community-networks-directory' }
     ]
   },
   {
@@ -199,11 +197,13 @@ interface SidebarMenuProps {
 }
 
 export default function SidebarMenu({ isOpen = false, onToggle, showToggleButton = true, forceOverlay = false }: SidebarMenuProps) {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
+  const lang = normalizeDocLang(i18n.resolvedLanguage);
   const isMobile = useIsMobile();
   const isDesktop = !isMobile;
   const [pdfUrl, setPdfUrl] = useState('https://github.com/coolabnet/community-box/releases/latest');
-  const [menu, setMenu] = useState<MenuItem[]>([]);
+  // Rebuilt whenever the PDF URL or the active language changes, so titles follow the language switch
+  const menu = useMemo(() => createMenu(pdfUrl, lang), [pdfUrl, lang]);
   const { pathname } = useLocation();
 
   // When forceOverlay is true, behave like mobile (overlay mode)
@@ -228,11 +228,6 @@ export default function SidebarMenu({ isOpen = false, onToggle, showToggleButton
 
     fetchPdfUrl();
   }, []);
-
-  // Update menu when PDF URL changes
-  useEffect(() => {
-    setMenu(createMenu(pdfUrl));
-  }, [pdfUrl]);
 
   // Auto-close on route change (mobile) - only when pathname changes
   const prevPathname = useRef(pathname);

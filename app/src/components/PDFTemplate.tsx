@@ -112,7 +112,7 @@ const PDFTemplate = ({ recommendation, alternatives, answers }: PDFTemplateProps
         <div className="pdf-logo">
           <img
             src={appLogo}
-            alt="Community Box Logo"
+            alt={t('common.logoAlt')}
             className="h-16 w-auto"
             onError={(e) => {
               // Fallback if logo fails to load

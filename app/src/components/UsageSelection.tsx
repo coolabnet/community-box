@@ -44,7 +44,8 @@ const UsageSelection = ({ onNext, onBack }: UsageSelectionProps) => {
     { key: 'other', icon: <MoreHorizontal className="h-8 w-8" />, selected: !!savedUsage?.other, otherText: typeof savedUsage?.other === 'string' ? savedUsage.other : '' },
   ]);
 
-  const [error, setError] = useState<string | null>(null);
+  // Store the error key, not the translated text, so it follows language switches
+  const [errorKey, setErrorKey] = useState<string | null>(null);
   const [showSuccessAnimation, setShowSuccessAnimation] = useState(false);
 
   // Toggle selection for an option
@@ -56,8 +57,8 @@ const UsageSelection = ({ onNext, onBack }: UsageSelectionProps) => {
     });
 
     // Clear error if any option is selected
-    if (error) {
-      setError(null);
+    if (errorKey) {
+      setErrorKey(null);
     }
   };
 
@@ -82,7 +83,7 @@ const UsageSelection = ({ onNext, onBack }: UsageSelectionProps) => {
     const hasSelection = usageOptions.some(option => option.selected);
 
     if (!hasSelection) {
-      setError(t('questionnaire.questions.usage.selectAtLeastOne'));
+      setErrorKey('questionnaire.questions.usage.selectAtLeastOne');
       return;
     }
 
@@ -193,7 +194,7 @@ const UsageSelection = ({ onNext, onBack }: UsageSelectionProps) => {
 
         {/* Error message */}
         <AnimatePresence>
-          {error && (
+          {errorKey && (
             <motion.div
               initial={{ opacity: 0, y: -10 }}
               animate={{ opacity: 1, y: 0 }}
@@ -201,7 +202,7 @@ const UsageSelection = ({ onNext, onBack }: UsageSelectionProps) => {
               className="mb-4 p-3 rounded-lg bg-destructive/10 text-destructive flex items-center gap-2 mx-auto max-w-md"
             >
               <AlertCircle className="h-5 w-5" />
-              <span>{error}</span>
+              <span>{t(errorKey)}</span>
             </motion.div>
           )}
         </AnimatePresence>

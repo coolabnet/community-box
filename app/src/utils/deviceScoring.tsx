@@ -1,4 +1,6 @@
+/* eslint-disable react-refresh/only-export-components */
 import type { ReactNode } from 'react';
+import { useTranslation } from 'react-i18next';
 import type {
   AttributeKey,
   DeviceAttributes,
@@ -12,6 +14,13 @@ import raspberryPiImage from '../assets/pi.png';
 import zimaImage from '../assets/zima.png';
 import nucImage from '../assets/nuc.png';
 import reusedPCImage from '../assets/laptop.jpg'; // Using banner as placeholder for reused PC
+
+// The alt text must be translated at render time (not with i18n.t at module level),
+// so the image is wrapped in a component that calls useTranslation.
+const RecycledPcIcon = () => {
+  const { t } = useTranslation();
+  return <img src={reusedPCImage} alt={t('common.recycledLaptopAlt')} className="h-full w-full object-cover" />;
+};
 
 // Define the devices with their attributes
 export const devices: DeviceAttributes[] = [
@@ -57,7 +66,7 @@ export const devices: DeviceAttributes[] = [
     reusable: 5, // Excellent reusability (existing hardware)
     formatEase: 2, // More difficult to set up
     cost: 4, // Low cost (reused)
-    icon: <img src={reusedPCImage} alt="Recycled laptop" className="h-full w-full object-cover" />
+    icon: <RecycledPcIcon />
   }
 ];
 

@@ -1,19 +1,21 @@
-import { useParams } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
 import { useEffect, useReducer } from 'react';
+import { useTranslation } from 'react-i18next';
 import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
 import rehypeHighlight from 'rehype-highlight';
-import { getMarkdownContent } from '@/lib/markdown';
+import { getMarkdownContent, normalizeDocLang, type DocLang } from '@/lib/markdown';
+import { resolveDocLink } from '@/lib/docLinks';
 import { Loader2, AlertCircle } from 'lucide-react';
 
 type MarkdownState =
   | { status: 'idle' | 'loading' }
-  | { status: 'success'; content: string }
+  | { status: 'success'; content: string; lang: DocLang }
   | { status: 'error'; message: string };
 
 type MarkdownAction =
   | { type: 'load' }
-  | { type: 'success'; content: string }
+  | { type: 'success'; content: string; lang: DocLang }
   | { type: 'error'; message: string };
 
 const markdownReducer = (_state: MarkdownState, action: MarkdownAction): MarkdownState => {
@@ -21,7 +23,7 @@ const markdownReducer = (_state: MarkdownState, action: MarkdownAction): Markdow
     case 'load':
       return { status: 'loading' };
     case 'success':
-      return { status: 'success', content: action.content };
+      return { status: 'success', content: action.content, lang: action.lang };
     case 'error':
       return { status: 'error', message: action.message };
     default:
@@ -31,40 +33,45 @@ const markdownReducer = (_state: MarkdownState, action: MarkdownAction): Markdow
 
 export default function MarkdownPage() {
   const { '*': splat } = useParams() as { '*': string };
+  const { t, i18n } = useTranslation();
+  const lang = normalizeDocLang(i18n.resolvedLanguage);
   const [state, dispatch] = useReducer(markdownReducer, { status: 'loading' } as MarkdownState);
 
   useEffect(() => {
     dispatch({ type: 'load' });
 
     if (!splat) {
-      dispatch({ type: 'error', message: 'No document specified.' });
+      dispatch({ type: 'error', message: t('docs.noDocument') });
       return;
     }
 
     let active = true;
 
-    getMarkdownContent(splat)
-      .then(md => {
+    getMarkdownContent(splat, lang)
+      .then(({ content, lang: servedLang }) => {
         if (!active) return;
-        dispatch({ type: 'success', content: md });
+        dispatch({ type: 'success', content, lang: servedLang });
       })
       .catch(err => {
         console.error('Failed to load markdown:', err);
         if (!active) return;
-        dispatch({ type: 'error', message: `Document "${splat}" not found or failed to load.` });
+        dispatch({ type: 'error', message: t('docs.notFoundMessage', { path: splat }) });
       });
 
     return () => {
       active = false;
     };
-  }, [splat]);
+  }, [splat, lang, t]);
+
+  // Show the notice when the requested language was not served (no translation, or it failed to load)
+  const showFallbackNotice = state.status === 'success' && state.lang !== lang;
 
   if (state.status === 'loading' || state.status === 'idle') {
     return (
       <div className="flex items-center justify-center min-h-[400px]">
         <div className="flex items-center gap-2 text-muted-foreground">
           <Loader2 className="h-5 w-5 animate-spin" />
-          <span>Loading document...</span>
+          <span>{t('docs.loading')}</span>
         </div>
       </div>
     );
@@ -75,10 +82,10 @@ export default function MarkdownPage() {
       <div className="flex items-center justify-center min-h-[400px]">
         <div className="text-center">
           <AlertCircle className="h-12 w-12 text-red-500 mx-auto mb-4" />
-          <h2 className="text-xl font-semibold text-red-600 mb-2">Document Not Found</h2>
+          <h2 className="text-xl font-semibold text-red-600 mb-2">{t('docs.notFoundTitle')}</h2>
           <p className="text-muted-foreground">{state.message}</p>
           <p className="text-sm text-muted-foreground mt-2">
-            Please check the URL or try navigating from the menu.
+            {t('docs.checkUrl')}
           </p>
         </div>
       </div>
@@ -90,8 +97,8 @@ export default function MarkdownPage() {
       <div className="flex items-center justify-center min-h-[400px]">
         <div className="text-center">
           <AlertCircle className="h-12 w-12 text-yellow-500 mx-auto mb-4" />
-          <h2 className="text-xl font-semibold text-yellow-600 mb-2">Empty Document</h2>
-          <p className="text-muted-foreground">This document appears to be empty.</p>
+          <h2 className="text-xl font-semibold text-yellow-600 mb-2">{t('docs.emptyTitle')}</h2>
+          <p className="text-muted-foreground">{t('docs.emptyMessage')}</p>
         </div>
       </div>
     );
@@ -100,6 +107,11 @@ export default function MarkdownPage() {
   return (
     <div className="bg-white rounded-lg shadow-sm border">
       <div className="p-8 max-w-4xl mx-auto">
+        {showFallbackNotice && (
+          <p role="status" className="mb-6 rounded-md border border-yellow-200 bg-yellow-50 px-4 py-2 text-sm text-yellow-800">
+            {t('docs.translationUnavailable')}
+          </p>
+        )}
         <article
           className="prose prose-lg prose-slate max-w-none
             prose-headings:font-bold prose-headings:text-gray-900 prose-headings:tracking-tight
@@ -149,6 +161,18 @@ export default function MarkdownPage() {
             ),
             // Enhanced link handling
             a: ({ href, children, ...props }) => {
+              // Relative links point at other docs: resolve them against this doc's directory
+              const resolved = resolveDocLink(href, splat ?? '');
+              if (resolved?.kind === 'doc' || resolved?.kind === 'route') {
+                return (
+                  <Link
+                    to={resolved.to}
+                    className="text-blue-600 hover:text-blue-800 underline decoration-2 underline-offset-2 hover:decoration-blue-800 transition-colors font-medium"
+                  >
+                    {children}
+                  </Link>
+                );
+              }
               if (href?.startsWith('http')) {
                 return (
                   <a

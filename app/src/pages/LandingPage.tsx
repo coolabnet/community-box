@@ -30,14 +30,14 @@ const LandingPage = () => {
           <button
             onClick={() => setSidebarOpen(!sidebarOpen)}
             className="p-2 hover:bg-gray-100 rounded-lg transition-colors"
-            aria-label="Toggle sidebar"
+            aria-label={t('common.toggleSidebar')}
           >
             {sidebarOpen ? <CloseIcon size={20} /> : <MenuIcon size={20} />}
           </button>
           <div className="h-10 w-10 rounded-full bg-primary flex items-center justify-center text-primary-foreground">
             <Wifi className="h-6 w-6" />
           </div>
-          <span className="font-bold text-xl">Community Box</span>
+          <span className="font-bold text-xl">{t('common.communityBox')}</span>
         </motion.div>
 
         {/* Language Switcher */}
@@ -128,7 +128,7 @@ const LandingPage = () => {
                 className="px-12 py-6 text-xl rounded-full shadow-lg border-2"
                 onClick={() => navigate('/docs')}
               >
-                📚 Browse Guides
+                📚 {t('landing.browseGuides')}
               </Button>
             </motion.div>
           </motion.div>

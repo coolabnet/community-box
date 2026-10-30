@@ -30,6 +30,8 @@ Operational instructions for coding agents working in this repository.
 - Build: `cd app && npm run build`.
 - Preview: `cd app && npm run preview`.
 - Translate locales: `cd app && npm run translate` (logs in `app/logs/`).
+- Translate research docs to pt/es: `cd app && npm run translate:docs` (needs `DEEPSEEK_API_KEY` or `ZAI_API_KEY`; add `-- --provider zai` when DeepSeek has no balance).
+- i18n consistency check: `cd app && npm run check:i18n`.
 - Optional e2e: `cd app && npm run test:e2e`.
 - Optional e2e links: `cd app && npm run test:e2e:links`.
 - Optional e2e dynamic: `cd app && npm run test:e2e:dynamic`.
@@ -51,6 +53,8 @@ Operational instructions for coding agents working in this repository.
 - UI, flow, or content changes in `app/src/`: run `cd app && npm run preview`.
 - For UI preview checks, verify questionnaire flow, PDF export, and language switching.
 - Translation or text changes: run `cd app && npm run translate`.
+- Docs markdown changes in `research/`: run `cd app && npm run translate:docs`, then `cd app && npm run check:i18n`; commit `research/i18n/**`.
+- New served docs must be added to `research/i18n/manifest.json`.
 - Commit updated locale JSON files after translation runs.
 - Script updates: include a dry-run or sample command/output in docs.
 - Service recommendation updates: follow `scripts/tests/testing_services.md`.

@@ -1,6 +1,7 @@
 import jsPDF from 'jspdf';
-import html2canvas from 'html2canvas';
+import html2canvas from 'html2canvas-pro';
 import { saveAs } from 'file-saver';
+import i18n from '@/i18n/i18n';
 
 // Define PDF generation options
 interface PDFOptions {
@@ -103,10 +104,9 @@ export const sharePDF = async (
         type: 'application/pdf',
       });
 
-      // Use default text since we don't have access to translations here
       await navigator.share({
-        title: 'Community Box Recommendation',
-        text: 'Here is my Community Box recommendation',
+        title: i18n.t('questionnaire.questions.results.shareTitle'),
+        text: i18n.t('questionnaire.questions.results.shareText'),
         files: [file],
       });
     } else {

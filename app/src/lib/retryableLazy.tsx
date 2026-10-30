@@ -1,4 +1,5 @@
 import React, { type ComponentType, Suspense } from 'react';
+import { useTranslation } from 'react-i18next';
 import ErrorBoundary from '@/components/ErrorBoundary';
 
 interface RetryableLazyOptions {
@@ -22,13 +23,13 @@ function isChunkLoadError(error: Error): boolean {
 
 /**
  * Wraps a React.lazy() component with:
- * - ErrorBoundary that detects chunk-load failures and offers "Reload Page"
+ * - ErrorBoundary that detects chunk-load failures and offers a page reload
  * - Suspense with a simple fallback
  * - displayName for React DevTools
  *
  * For chunk-load errors (network failures during code splitting), the browser
  * caches the failed import() by module specifier, so retrying with the same
- * factory always re-fails. We detect these and show "Reload Page" as the
+ * factory always re-fails. We detect these and show a page reload as the
  * primary action instead of a misleading "Try Again" button.
  */
 export function retryableLazy<T extends ComponentType<Record<string, unknown>>>(
@@ -39,6 +40,7 @@ export function retryableLazy<T extends ComponentType<Record<string, unknown>>>(
   const name = options?.name ?? 'RetryableLazy';
 
   const Wrapped = () => {
+    const { t } = useTranslation();
     const [chunkError, setChunkError] = React.useState(false);
 
     const handleError = (error: Error) => {
@@ -54,16 +56,16 @@ export function retryableLazy<T extends ComponentType<Record<string, unknown>>>(
         <div className="flex items-center justify-center min-h-[300px] p-6">
           <div className="bg-card border border-border rounded-xl shadow-sm max-w-md w-full p-8 text-center">
             <h2 className="text-xl font-semibold text-foreground mb-2">
-              Failed to load
+              {t('errors.failedToLoad')}
             </h2>
             <p className="text-muted-foreground text-sm mb-6">
-              A required component could not be loaded. This is usually caused by a network issue or after an update.
+              {t('errors.chunkLoadMessage')}
             </p>
             <button
               onClick={() => window.location.reload()}
               className="inline-flex items-center justify-center rounded-md bg-primary px-4 py-2 text-sm font-medium text-primary-foreground hover:bg-primary/90 transition-colors"
             >
-              Reload Page
+              {t('errors.reloadPage')}
             </button>
           </div>
         </div>
@@ -74,7 +76,7 @@ export function retryableLazy<T extends ComponentType<Record<string, unknown>>>(
       <ErrorBoundary
         onRetry={() => window.location.reload()}
         onError={handleError}
-        resetLabel="Retry Load"
+        resetLabel={t('errors.retryLoad')}
       >
         <Suspense fallback={options?.fallback ?? <div className="flex items-center justify-center min-h-screen"><div className="h-8 w-8 animate-spin rounded-full border-4 border-primary border-t-transparent" /></div>}>
           <LazyComponent />

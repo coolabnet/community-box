@@ -1,22 +1,32 @@
+import type { ReactNode } from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 import { BookOpen, HardDrive, Settings, Network, Users, FileText } from 'lucide-react';
 
-const quickLinks = [
+type QuickLinkSection = {
+  titleKey: string;
+  descKey: string;
+  icon: ReactNode;
+  links: { titleKey?: string; title?: string; to: string }[];
+};
+
+const quickLinks: QuickLinkSection[] = [
   {
-    title: 'Hardware Guides',
-    description: 'Setup guides for Raspberry Pi, Intel NUC, ZimaBoard, and recycled computers',
+    titleKey: 'docsHome.sections.hardware.title',
+    descKey: 'docsHome.sections.hardware.description',
     icon: <HardDrive className="h-8 w-8" />,
     links: [
-      { title: 'Raspberry Pi Overview', to: '/docs/hardware/raspberry_pi_5/rpi-overview' },
-      { title: 'Intel NUC Overview', to: '/docs/hardware/intel_nuc/nuc-overview' },
-      { title: 'ZimaBoard Overview', to: '/docs/hardware/zimaboard/zima-overview' }
+      { titleKey: 'docsHome.links.rpiOverview', to: '/docs/hardware/raspberry_pi_5/rpi-overview' },
+      { titleKey: 'docsHome.links.nucOverview', to: '/docs/hardware/intel_nuc/nuc-overview' },
+      { titleKey: 'docsHome.links.zimaOverview', to: '/docs/hardware/zimaboard/zima-overview' }
     ]
   },
   {
-    title: 'Software Platforms',
-    description: 'Community server platforms: YunoHost, CapRover, and CasaOS',
+    titleKey: 'docsHome.sections.software.title',
+    descKey: 'docsHome.sections.software.description',
     icon: <Settings className="h-8 w-8" />,
+    // Product names: kept as plain text, not translated
     links: [
       { title: 'YunoHost', to: '/docs/software/yunohost/README' },
       { title: 'CapRover', to: '/docs/software/caprover/README' },
@@ -24,26 +34,28 @@ const quickLinks = [
     ]
   },
   {
-    title: 'Network Configuration',
-    description: 'LibreMesh integration and mesh networking basics',
+    titleKey: 'docsHome.sections.network.title',
+    descKey: 'docsHome.sections.network.description',
     icon: <Network className="h-8 w-8" />,
     links: [
-      { title: 'LibreMesh Overview', to: '/docs/guides/libremesh-overview' },
-      { title: 'Mesh Network Basics', to: '/docs/guides/mesh-network-basics' },
-      { title: 'Router Setup', to: '/docs/guides/router-selection-guide' }
+      { titleKey: 'docsHome.links.libremeshOverview', to: '/docs/guides/libremesh-overview' },
+      { titleKey: 'docsHome.links.meshBasics', to: '/docs/guides/mesh-network-basics' },
+      { titleKey: 'docsHome.links.routerSetup', to: '/docs/guides/router-selection-guide' }
     ]
   },
   {
-    title: 'Community Resources',
-    description: 'Case studies, community directory, and collaboration tools',
+    titleKey: 'docsHome.sections.community.title',
+    descKey: 'docsHome.sections.community.description',
     icon: <Users className="h-8 w-8" />,
     links: [
-      { title: 'Global Community Networks', to: '/docs/results/global-community-networks-directory' }
+      { titleKey: 'docsHome.links.globalNetworks', to: '/docs/results/global-community-networks-directory' }
     ]
   }
 ];
 
 export default function DocsHome() {
+  const { t } = useTranslation();
+
   return (
     <div className="max-w-6xl mx-auto">
       {/* Header */}
@@ -54,11 +66,10 @@ export default function DocsHome() {
         className="text-center mb-12"
       >
         <h1 className="text-4xl font-bold text-gray-900 mb-4">
-          Community Box Documentation
+          {t('docsHome.title')}
         </h1>
         <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-          Comprehensive guides for building community networks with local servers,
-          mesh networking, and sustainable technology solutions.
+          {t('docsHome.subtitle')}
         </p>
       </motion.div>
 
@@ -71,7 +82,7 @@ export default function DocsHome() {
       >
         {quickLinks.map((section, index) => (
           <motion.div
-            key={section.title}
+            key={section.titleKey}
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.1 * index }}
@@ -82,11 +93,11 @@ export default function DocsHome() {
                 {section.icon}
               </div>
               <h3 className="text-xl font-semibold text-gray-900">
-                {section.title}
+                {t(section.titleKey)}
               </h3>
             </div>
             <p className="text-gray-600 mb-4">
-              {section.description}
+              {t(section.descKey)}
             </p>
             <div className="space-y-2">
               {section.links.map((link) => (
@@ -95,7 +106,7 @@ export default function DocsHome() {
                   to={link.to}
                   className="block text-blue-600 hover:text-blue-800 text-sm hover:underline"
                 >
-                  → {link.title}
+                  → {link.titleKey ? t(link.titleKey) : link.title}
                 </Link>
               ))}
             </div>
@@ -112,13 +123,13 @@ export default function DocsHome() {
       >
         <h2 className="text-2xl font-bold text-gray-900 mb-6 flex items-center gap-2">
           <FileText className="h-6 w-6" />
-          Featured Resources
+          {t('docsHome.featured')}
         </h2>
         <div className="grid md:grid-cols-3 gap-6">
           <div>
-            <h3 className="font-semibold text-gray-900 mb-2">Research Paper</h3>
+            <h3 className="font-semibold text-gray-900 mb-2">{t('docsHome.cards.paper.title')}</h3>
             <p className="text-gray-600 text-sm mb-3">
-              Comprehensive comparative study of community server platforms
+              {t('docsHome.cards.paper.description')}
             </p>
             <a
               href="https://github.com/coolabnet/community-box/releases/latest/download/CCCI_Comparative_Study_2024.pdf"
@@ -126,13 +137,13 @@ export default function DocsHome() {
               rel="noopener noreferrer"
               className="text-blue-600 hover:text-blue-800 text-sm hover:underline"
             >
-              Download PDF →
+              {t('docsHome.cards.paper.cta')} →
             </a>
           </div>
           <div>
-            <h3 className="font-semibold text-gray-900 mb-2">Solar Calculator</h3>
+            <h3 className="font-semibold text-gray-900 mb-2">{t('docsHome.cards.solar.title')}</h3>
             <p className="text-gray-600 text-sm mb-3">
-              Calculate power requirements for off-grid deployments
+              {t('docsHome.cards.solar.description')}
             </p>
             <a
               href="https://solar.coolab.org/"
@@ -140,19 +151,19 @@ export default function DocsHome() {
               rel="noopener noreferrer"
               className="text-blue-600 hover:text-blue-800 text-sm hover:underline"
             >
-              Open Calculator →
+              {t('docsHome.cards.solar.cta')} →
             </a>
           </div>
           <div>
-            <h3 className="font-semibold text-gray-900 mb-2">Hardware Preparation</h3>
+            <h3 className="font-semibold text-gray-900 mb-2">{t('docsHome.cards.prep.title')}</h3>
             <p className="text-gray-600 text-sm mb-3">
-              Step-by-step guide for preparing recycled computers
+              {t('docsHome.cards.prep.description')}
             </p>
             <Link
               to="/docs/guides/recycled-preparation"
               className="text-blue-600 hover:text-blue-800 text-sm hover:underline"
             >
-              Read Guide →
+              {t('docsHome.cards.prep.cta')} →
             </Link>
           </div>
         </div>

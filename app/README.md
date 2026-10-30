@@ -71,6 +71,36 @@ To add a new language:
 1. Create a new translation file in the locales directory
 2. Add the language to the language switcher in `src/components/LanguageSwitcher.tsx`
 
+### Translated research docs
+
+Served docs (English source in `research/`) are translated into Portuguese and Spanish by `scripts/translate-docs.mjs`:
+
+- Output: `research/i18n/<lang>/<path>.md` (for example `research/i18n/pt/guides/router-selection-guide.md`), plus a generated `_titles.json` per language.
+- Served docs are listed in `research/i18n/manifest.json`. Add new docs there.
+- If a translation is missing, the page shows the English text with a notice ("This page is not yet translated; showing English.").
+- Env vars: `DEEPSEEK_API_KEY` or `ZAI_API_KEY` (one is required). Optional `DOCS_TRANSLATE_MODEL` overrides the model. Keys are never logged.
+- Files with an unchanged `sourceHash` are skipped. The hash is the first 16 hex chars of the SHA-256 of the English file.
+- Fenced blocks with a language tag (`bash`, `yaml`, …) stay byte-identical to English. Untagged fences (or `text`/`txt`/`plaintext`) hold natural-language instructions: after the body translation their inner content is translated in separate batched requests that must preserve line count, indentation, fences and URLs — blocks failing validation stay in English.
+- Provider response bodies only reach logs and errors redacted (the API key becomes `***`) and capped at 200 characters.
+- Redo one file: `npm run translate:docs -- --force --only guides/router-selection-guide`.
+- Other flags: `--lang pt,es`, `--batch N/M`, `--concurrency 1-8`, `--provider deepseek|zai`.
+- Run logs go to `app/logs/translate-docs-<lang>.log`.
+
+Preview the plan without API calls:
+
+```
+$ cd app && node scripts/translate-docs.mjs --dry-run
+SKIP pt about (up-to-date)
+TRANSLATE pt guides/deployment-best-practices (missing)
+TRANSLATE pt guides/disk-partitioning (missing)
+TRANSLATE pt guides/dns-configuration (missing)
+...
+SKIP es software/yunohost/README (up-to-date)
+dry-run: would translate 35, skip 33, of 68 tasks
+```
+
+Check the result with `npm run check:i18n`. Besides the doc structure, the check compares each translation's own fenced blocks with the English source: tagged blocks must be byte-identical, untagged ones must keep the source line count.
+
 ## Building for Production
 
 To create a production build:

@@ -302,9 +302,76 @@
     "message": "¡Ups! Página no encontrada",
     "returnHome": "Volver a Inicio"
   },
+  "docs": {
+    "loading": "Cargando documento...",
+    "notFoundTitle": "Documento No Encontrado",
+    "notFoundMessage": "El documento \"{{path}}\" no se encontró o no se pudo cargar.",
+    "noDocument": "No se especificó ningún documento.",
+    "checkUrl": "Verifica la URL o intenta navegar desde el menú.",
+    "emptyTitle": "Documento Vacío",
+    "emptyMessage": "Este documento parece estar vacío.",
+    "translationUnavailable": "Esta página aún no está traducida; se muestra en inglés."
+  },
+  "docsHome": {
+    "title": "Documentación de Caja Comunitaria",
+    "subtitle": "Guías completas para construir redes comunitarias con servidores locales, redes en malla y soluciones de tecnología sostenibles.",
+    "featured": "Recursos Destacados",
+    "sections": {
+      "hardware": {
+        "title": "Guías de Hardware",
+        "description": "Guías de configuración para Raspberry Pi, Intel NUC, ZimaBoard y computadoras recicladas"
+      },
+      "software": {
+        "title": "Plataformas de Software",
+        "description": "Plataformas de servidor comunitario: YunoHost, CapRover y CasaOS"
+      },
+      "network": {
+        "title": "Configuración de Red",
+        "description": "Integración con LibreMesh y nociones básicas de redes en malla"
+      },
+      "community": {
+        "title": "Recursos Comunitarios",
+        "description": "Estudios de caso, directorio comunitario y herramientas de colaboración"
+      }
+    },
+    "links": {
+      "rpiOverview": "Descripción General de Raspberry Pi",
+      "nucOverview": "Descripción General de Intel NUC",
+      "zimaOverview": "Descripción General de ZimaBoard",
+      "libremeshOverview": "Descripción General de LibreMesh",
+      "meshBasics": "Nociones Básicas de Redes en Malla",
+      "routerSetup": "Configuración del Enrutador",
+      "globalNetworks": "Redes Comunitarias Globales"
+    },
+    "cards": {
+      "paper": {
+        "title": "Documento de Investigación",
+        "description": "Estudio comparativo completo de las plataformas de servidor comunitario",
+        "cta": "Descargar PDF"
+      },
+      "solar": {
+        "title": "Calculadora Solar",
+        "description": "Calcula los requisitos de energía para implementaciones fuera de la red",
+        "cta": "Abrir Calculadora"
+      },
+      "prep": {
+        "title": "Preparación de Hardware",
+        "description": "Guía paso a paso para preparar computadoras recicladas",
+        "cta": "Leer la Guía"
+      }
+    }
+  },
   "errors": {
     "contextError": "useQuestionnaire debe usarse dentro de un QuestionnaireProvider",
-    "tryAgain": "Intentar de Nuevo"
+    "tryAgain": "Intentar de Nuevo",
+    "somethingWentWrong": "Algo salió mal",
+    "unexpectedWithReset": "Ocurrió un error inesperado. Haz clic en \"{{label}}\" para restablecer o recarga la página.",
+    "unexpected": "Ocurrió un error inesperado. Intenta de nuevo o recarga la página.",
+    "startOver": "Empezar de nuevo",
+    "reloadPage": "Recargar Página",
+    "failedToLoad": "Error al cargar",
+    "chunkLoadMessage": "No se pudo cargar un componente necesario. Esto suele deberse a un problema de red o a una actualización.",
+    "retryLoad": "Reintentar Carga"
   },
   "language": {
     "select": "Idioma",
@@ -325,7 +392,9 @@
     "imagesNotBuiltYet": "Imágenes aún no creadas",
     "openMenu": "Abrir menú",
     "closeMenu": "Cerrar menú",
-    "toggleSidebar": "Alternar barra lateral"
+    "toggleSidebar": "Alternar barra lateral",
+    "logoAlt": "Logotipo de Caja Comunitaria",
+    "recycledLaptopAlt": "Laptop reciclada"
   },
   "sidebar": {
     "setupWizard": "🧭 Asistente de Configuración",
@@ -354,6 +423,7 @@
     "title": "Caja Comunitaria",
     "description": "Descubre la mejor configuración tecnológica para las necesidades de tu comunidad. Responde unas preguntas simples y obtiene una guía personalizada.",
     "startButton": "Comenzar",
+    "browseGuides": "Ver Guías",
     "altHeroImage": "Colaboración comunitaria",
     "footer": "Proyecto Caja Comunitaria"
   }
