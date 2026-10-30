@@ -7,7 +7,8 @@
           "yes": "Sim, energia confiável",
           "sometimes": "Às vezes instável",
           "no": "Quedas frequentes"
-        }
+        },
+        "help": "Planeja energia solar ou de bateria? Use a <a>calculadora solar da Coolab</a> para estimar o que você precisa. Ela abre em uma nova aba e precisa de internet."
       },
       "users": {
         "question": "Quantos usuários compartilharão este computador?",
@@ -18,7 +19,8 @@
         }
       },
       "growth": {
-        "question": "Crescimento esperado da comunidade nos próximos 2 anos?",
+        "question": "Você espera um aumento no uso do computador compartilhado nos próximos 2 anos?",
+        "help": "Crescimento significa mais pessoas, dispositivos ou serviços usando o computador compartilhado ao longo do tempo, por exemplo uma escola com mais turmas ou mais famílias entrando na rede. Se não tiver certeza, escolha “Não sei”: ele é pontuado igual ao crescimento moderado.",
         "options": {
           "low": "Crescimento mínimo",
           "medium": "Crescimento moderado",
@@ -28,13 +30,14 @@
       },
       "reuse": {
         "question": "Você tem um computador disponível para reutilização?",
+        "help": "Um computador reaproveitado deve ter pelo menos um processador de 64 bits (x86_64), 4 GB de RAM (8 GB recomendados) e um SSD de 120 GB. Veja os <a>requisitos para PCs reciclados</a> para mais detalhes.",
         "options": {
           "yes": "Sim",
           "no": "Não"
         }
       },
       "format": {
-        "question": "Você consegue formatar e configurar um computador?",
+        "question": "Você consegue formatar e configurar um computador como servidor?",
         "options": {
           "yes": "Sim, com confiança",
           "maybe": "Com orientação",
@@ -51,7 +54,7 @@
       },
       "points": {
         "question": "Atribua 5 pontos de importância",
-        "description": "Distribua 5 pontos entre essas prioridades com base na importância para você",
+        "description": "Você tem um total de 5 pontos para distribuir, escolhendo uma ou mais prioridades para a sua solução local.",
         "options": {
           "skip": "Continuar"
         },
@@ -92,7 +95,7 @@
         }
       },
       "usage": {
-        "question": "Para que sua comunidade usará isto primeiro?",
+        "question": "Selecione todos os serviços locais relevantes para a sua comunidade.",
         "description": "Selecione todas as opções que se aplicam",
         "options": {
           "news": {
@@ -292,6 +295,7 @@
         }
       }
     },
+    "moreInformation": "Mais informações",
     "buttons": {
       "next": "Próximo",
       "back": "Voltar"

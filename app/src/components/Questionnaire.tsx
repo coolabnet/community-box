@@ -1,5 +1,6 @@
 
 import { useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import { useQuestionnaire } from '@/context/QuestionnaireContext';
 import ProgressBar from './ProgressBar';
 import QuestionCard from './QuestionCard';
@@ -8,17 +9,27 @@ import UsageSelection from './UsageSelection';
 import RecommendationResults from './RecommendationResults';
 import ErrorBoundary from './ErrorBoundary';
 import { AnimatePresence } from 'framer-motion';
-import { useTranslation } from 'react-i18next';
+import { Trans, useTranslation } from 'react-i18next';
 import type { PriorityAllocation, UsageSelectionValues, UserAnswers } from '@/types/questionnaire';
 
 const Questionnaire = () => {
   const { t } = useTranslation();
   const { currentStep, setCurrentStep, answers, setAnswer, goBack, resetSurvey, setTotalSteps } = useQuestionnaire();
 
+  const helpLinkClass = 'font-medium underline underline-offset-4 hover:text-primary';
+
   const questions = [
     {
       id: 'electricity',
       question: t('questionnaire.questions.electricity.question'),
+      help: (
+        <Trans
+          i18nKey="questionnaire.questions.electricity.help"
+          components={{
+            a: <a href="https://solar.coolab.org/" target="_blank" rel="noopener noreferrer" className={helpLinkClass} />,
+          }}
+        />
+      ),
       type: 'options',
       options: [
         { label: t('questionnaire.questions.electricity.options.yes'), value: 'yes' },
@@ -39,6 +50,7 @@ const Questionnaire = () => {
     {
       id: 'growth',
       question: t('questionnaire.questions.growth.question'),
+      help: <Trans i18nKey="questionnaire.questions.growth.help" />,
       type: 'options',
       options: [
         { label: t('questionnaire.questions.growth.options.low'), value: 'low' },
@@ -50,6 +62,14 @@ const Questionnaire = () => {
     {
       id: 'reuse',
       question: t('questionnaire.questions.reuse.question'),
+      help: (
+        <Trans
+          i18nKey="questionnaire.questions.reuse.help"
+          components={{
+            a: <Link to="/docs/guides/recycled-pc-requirements" className={helpLinkClass} />,
+          }}
+        />
+      ),
       type: 'options',
       options: [
         { label: t('questionnaire.questions.reuse.options.yes'), value: 'yes' },
@@ -173,6 +193,7 @@ const Questionnaire = () => {
         <QuestionCard
           key={currentQuestion.id}
           question={currentQuestion.question}
+          help={currentQuestion.help}
           options={currentQuestion.options}
           type={currentQuestion.type as 'options' | 'slider' | 'boolean'}
           selectedValue={answers[currentQuestion.id]}
