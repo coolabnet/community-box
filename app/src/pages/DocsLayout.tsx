@@ -1,18 +1,32 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useSyncExternalStore } from 'react';
 import { Outlet, Link, useLocation } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import SidebarMenu from '@/components/SidebarMenu';
 import LanguageSwitcher from '@/components/LanguageSwitcher';
 import { Menu as MenuIcon, X as CloseIcon, Wifi } from 'lucide-react';
-import { useIsMobile } from '@/hooks/use-mobile';
+
+// Matches Tailwind's `lg` breakpoint so only one layout (and one <Outlet />) renders.
+const DESKTOP_QUERY = '(min-width: 1024px)';
+
+function subscribeDesktop(onChange: () => void) {
+  const mql = window.matchMedia(DESKTOP_QUERY);
+  mql.addEventListener('change', onChange);
+  return () => mql.removeEventListener('change', onChange);
+}
+
+function getDesktopSnapshot() {
+  return window.matchMedia(DESKTOP_QUERY).matches;
+}
 
 export default function DocsLayout() {
   const { t } = useTranslation();
-  const isMobile = useIsMobile();
   const location = useLocation();
+  const isDesktop = useSyncExternalStore(subscribeDesktop, getDesktopSnapshot, () => true);
   // Sidebar starts closed on mobile, always open on desktop
   // Note: This only checks on initial render - for resize handling, mobile toggle works
-  const [sidebarOpen, setSidebarOpen] = useState(!isMobile);
+  const [sidebarOpen, setSidebarOpen] = useState(
+    () => !window.matchMedia('(max-width: 767px)').matches
+  );
 
   // Scroll to top when route changes within docs section
   useEffect(() => {
@@ -31,7 +45,8 @@ export default function DocsLayout() {
   return (
     <div className="min-h-screen">
       {/* Desktop: side-by-side layout with sidebar always visible */}
-      <div className="hidden lg:flex min-h-screen">
+      {isDesktop ? (
+      <div className="flex min-h-screen">
         <SidebarMenu
           isOpen={true}
           onToggle={handleSidebarToggle}
@@ -51,9 +66,9 @@ export default function DocsLayout() {
           </div>
         </main>
       </div>
-
-      {/* Mobile: overlay layout */}
-      <div className="lg:hidden flex h-screen overflow-hidden">
+      ) : (
+      /* Mobile: overlay layout */
+      <div className="flex h-screen overflow-hidden">
         <SidebarMenu
           isOpen={sidebarOpen}
           onToggle={handleSidebarToggle}
@@ -88,6 +103,7 @@ export default function DocsLayout() {
           </div>
         </main>
       </div>
+      )}
     </div>
   );
 }

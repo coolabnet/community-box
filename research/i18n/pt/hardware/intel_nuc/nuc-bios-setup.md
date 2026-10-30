@@ -1,5 +1,5 @@
 ---
-title: Configuração da BIOS
+title: Configuração do BIOS
 sourcePath: hardware/intel_nuc/nuc-bios-setup.md
 sourceHash: 48f435ea0fc646fe
 translatedBy: glm-4.6
@@ -9,65 +9,65 @@ translatedBy: glm-4.6
 
 ## Introdução
 
-A configuração adequada da BIOS/UEFI é crucial para a operação estável de servidores Intel NUC. Este guia fornece instruções passo a passo adaptadas para plataformas de servidor comunitário como YunoHost, Caprover e CasaOS, com foco em confiabilidade, segurança e desempenho ideal.
+Uma configuração adequada de BIOS/UEFI é crucial para a operação estável de servidores Intel NUC. Este guia fornece instruções passo a passo adaptadas para plataformas de servidor comunitário como YunoHost, Caprover e CasaOS, com foco em confiabilidade, segurança e desempenho ideal.
 
 ## Preparação Antes da Configuração
 
 ### Equipamento Necessário
 - **Teclado USB com fio** (teclados Bluetooth podem não funcionar na BIOS)
-- **Monitor HDMI/DisplayPort** (telas USB-C podem não exibir a BIOS)
-- **Fonte de alimentação** adequada para o seu modelo de NUC
+- **Monitor HDMI/DisplayPort** (monitores USB-C podem não exibir a BIOS)
+- **Adaptador de energia** apropriado para o seu modelo de NUC
 - **Pen drive USB** (para atualizações de BIOS, se necessário)
 
-### Observações Importantes
-- Sempre conecte o teclado às portas USB traseiras para acesso à BIOS
-- Desative o Fast Boot no Windows antes de acessar a BIOS se estiver usando dual-boot
-- Tenha a senha de supervisor da BIOS/UEFI em mãos, se ela tiver sido definida anteriormente
+### Notas Importantes
+- Sempre conecte o teclado às portas USB traseiras para acessar a BIOS
+- Desative o Fast Boot no Windows antes de acessar a BIOS se estiver usando dual boot
+- Tenha em mãos a senha de supervisor da BIOS/UEFI, se definida anteriormente
 
 ## Acessando a BIOS/UEFI
 
 ### Método Padrão
-1. **Ligue** o NUC enquanto mantém pressionada a tecla **F2**
+1. **Ligue** o NUC enquanto segura a tecla **F2**
 2. Continue segurando F2 até que a configuração da BIOS apareça
-3. Se estiver usando um ASUS NUC, você poderá ver brevemente o logotipo da ASUS
+3. Se estiver usando um ASUS NUC, você pode ver o logotipo da ASUS brevemente
 
 ### Métodos Alternativos (se F2 falhar)
 
 #### Método 1: Menu do Botão de Energia
 1. **Desligue** completamente o NUC
 2. **Pressione e segure** o botão de energia por 3 segundos, depois solte
-3. **Pressione F7** quando o Menu do Botão de Energia aparecer
-4. Selecione "BIOS Setup" no menu
+3. **Pressione F7** quando o Power Button Menu aparecer
+4. Selecione "BIOS Setup" (Configuração da BIOS) no menu
 
-#### Método 2: Método de Inicialização a Frio
-1. **Desconecte** completamente a fonte de alimentação
-2. Espere 10 segundos
+#### Método 2: Método de Boot a Frio
+1. **Desconecte** completamente o adaptador de energia
+2. Aguarde 10 segundos
 3. **Reconecte** a energia e imediatamente pressione F2 repetidamente
-4. Este método frequentemente funciona quando o Fast Boot está ativado
+4. Este método geralmente funciona quando o Fast Boot está ativado
 
 #### Método 3: Configurações UEFI (Windows)
 Se o Windows estiver instalado:
-1. Mantenha **Shift** pressionado enquanto clica em "Reiniciar"
-2. Vá para **Solução de Problemas** → **Opções Avançadas** → **Configurações de Firmware UEFI**
-3. Clique em **Reiniciar** para iniciar na BIOS
+1. Segure **Shift** ao clicar em "Restart" (Reiniciar)
+2. Vá para **Troubleshoot** → **Advanced Options** → **UEFI Firmware Settings**
+3. Clique em **Restart** para inicializar na BIOS
 
 ## Configuração Inicial da BIOS
 
-### Etapa 1: Restaurar os Padrões
+### Passo 1: Restaurar Padrões
 ```
-1. Pressione F9 (Load BIOS Defaults)
+1. Pressione F9 (Load BIOS Defaults / Carregar padrões do BIOS)
 2. Confirme com Enter
 3. Isso garante uma configuração inicial limpa
 ```
 
-### Etapa 2: Informações Básicas do Sistema
+### Passo 2: Informações Básicas do Sistema
 Verifique se as seguintes informações estão corretas:
 - **Versão da BIOS**: Anote a versão atual
 - **Modelo da CPU**: Confirme a identificação do processador
 - **Memória**: Verifique se toda a RAM instalada foi detectada
-- **Armazenamento**: Verifique se todos os discos foram reconhecidos
+- **Armazenamento**: Confira se todos os discos foram reconhecidos
 
-## Configurações Essenciais para Servidores
+## Configurações Essenciais para Servidor
 
 ### Configuração de Segurança
 
@@ -75,22 +75,22 @@ Verifique se as seguintes informações estão corretas:
 ```
 Navegação: Advanced → Security → Passwords → Set Supervisor Password
 Recomendado: senha de 12+ caracteres com mistura de letras e números
-Armazenamento: documente a senha com segurança - necessária para alterações futuras
+Armazenamento: documente a senha com segurança — será necessária para alterações futuras
 ```
 
-#### Configurar Secure Boot (Recomendado: Desativado para Linux)
+#### Configurar Secure Boot (Recomendado: Disabled para Linux)
 ```
-Navegação: Advanced → Security → Secure Boot
-Configuração: Disabled
-Motivo: muitas distribuições Linux exigem o Secure Boot desativado
-Alternativa: algumas distribuições mais recentes suportam Secure Boot
+Navigation: Advanced → Security → Secure Boot
+Setting: Disabled
+Reason: Many Linux distributions require Secure Boot disabled
+Alternative: Some newer distributions support Secure Boot
 ```
 
-#### Configuração de Inicialização
+#### Configuração de Boot
 ```
 Navegação: Advanced → Boot → Boot Configuration
 Configurações:
-- Network Boot: Disabled (a menos que inicialização PXE seja necessária)
+- Network Boot: Disabled (a menos que seja necessário inicializar via PXE)
 - USB Boot: Enabled (para mídia de instalação)
 - Boot Device Control: Lock UEFI Boot (impede alterações não autorizadas)
 ```
@@ -103,14 +103,14 @@ Navegação: Advanced → Power → Secondary Power Settings
 
 After Power Failure: Power On
 - Garante que o servidor reinicie automaticamente após quedas de energia
-- Crítico para operação de servidor headless
+- Crítico para operação de servidor sem monitor (headless)
 
 Wake on LAN: Enabled
-- Permite acordar remotamente via pacotes mágicos de rede
+- Permite despertar remotamente via pacotes mágicos de rede
 - Útil para operação com eficiência energética
 
 USB Wake Support: Disabled
-- Previne acordar acidentalmente por atividade de dispositivos USB
+- Evita despertar acidentalmente por atividade de dispositivos USB
 - Recomendado para estabilidade do servidor
 ```
 
@@ -119,27 +119,27 @@ USB Wake Support: Disabled
 Navegação: Advanced → Power → CPU Power Management
 
 Enhanced Intel SpeedStep: Enabled
-- Permite escala dinâmica de frequência da CPU
+- Permite escalonamento dinâmico de frequência da CPU
 - Melhora a eficiência energética sob cargas variáveis
 
 Turbo Mode: Enabled
 - Permite que a CPU exceda a frequência base quando necessário
-- Importante para desempenho do servidor em picos de carga
+- Importante para o desempenho do servidor em picos de carga
 ```
 
-### Resfriamento e Gerenciamento Térmico
+### Gerenciamento de Resfriamento e Temperatura
 
-#### Configuração de Controle do Ventilador
+#### Configuração do Controle de Ventoinha
 ```
-Navegação: Advanced → Cooling → CPU Fan Header
+Navigation: Advanced → Cooling → CPU Fan Header
 
 Fan Control Mode: Quiet
-- Minimiza o ruído para ambientes domésticos/escritório
-- Alternativa: Balanced para necessidades de maior desempenho
+- Minimizes noise for home/office environments
+- Alternative: Balanced for higher performance needs
 
-Curvas personalizadas de fan: disponíveis em alguns modelos
-- Defina com base em limites de temperatura
-- Equilibre entre refrigeração e ruído
+Custom Fan Curves: Available on some models
+- Set based on temperature thresholds
+- Balance between cooling and noise
 ```
 
 ### Configuração de Armazenamento
@@ -150,14 +150,14 @@ Navegação: Advanced → Devices → Storage
 
 SATA Mode: AHCI
 - Necessário para compatibilidade com Linux
-- NÃO use o modo RAID/RST a menos que seja especificamente necessário
+- NÃO use modo RAID/RST a menos que seja especificamente necessário
 
 M.2 Slot Configuration: Auto
-- Permite detecção automática de unidades NVMe/SATA
-- Verifique se todas as unidades instaladas aparecem na lista
+- Permite detecção automática de drives NVMe/SATA
+- Verifique se todos os drives instalados aparecem na lista
 ```
 
-#### Configuração de Prioridade de Inicialização
+#### Configuração de Prioridade de Boot
 ```
 Navegação: Advanced → Boot → Boot Priority
 
@@ -173,7 +173,7 @@ Legacy Boot: Disabled
 
 ## Configurações Específicas do Sistema Operacional
 
-### Distribuições Linux para Servidores (Ubuntu, Debian, CentOS)
+### Distribuições Linux para Servidor (Ubuntu, Debian, CentOS)
 
 #### Configurações Essenciais
 ```
@@ -189,23 +189,23 @@ Intel VT-d: Enabled (para virtualização avançada)
 Navegação: Advanced → Devices → Network
 
 Wake on LAN: Enabled
-Network Stack: Enabled (para PXE se necessário)
+Network Stack: Enabled (para PXE, se necessário)
 ```
 
 ### Considerações para Windows Server
 
 #### Requisitos Especiais
 ```
-Secure Boot: Pode permanecer ativado para Windows Server 2019+
+Secure Boot: pode permanecer Enabled para Windows Server 2019+
 TPM: Enabled se disponível
 Intel AMT: Enabled para gerenciamento remoto (modelos corporativos)
 ```
 
 #### Preparação de Drivers de Rede
-Observação: O Windows Server exige instalação manual de drivers de rede
+Nota: O Windows Server requer instalação manual do driver de rede
 - Baixe os drivers Intel LAN antecipadamente
-- Use o método "Have Disk" durante a instalação dos drivers
-- Consulte a documentação específica do seu modelo para etapas detalhadas de instalação de drivers
+- Use o método "Have Disk" durante a instalação do driver
+- Consulte a documentação específica do seu modelo para etapas detalhadas de instalação do driver
 
 ## Opções de Configuração Avançadas
 
@@ -220,9 +220,9 @@ Network Access: Network Active
 SOL Terminal: Enabled (para Serial Over LAN)
 
 Processo de configuração:
-1. Ative o AMT na BIOS
+1. Ative o AMT no BIOS
 2. Configure as definições de rede
-3. Defina a senha do AMT durante a primeira inicialização
+3. Defina a senha do AMT na primeira inicialização
 4. Acesse via https://[nuc-ip]:16992
 ```
 
@@ -234,7 +234,7 @@ Intel Virtualization Technology (VT-x): Enabled
 Intel VT for Directed I/O (VT-d): Enabled
 Execute Disable Bit: Enabled
 
-Adicionais para ESXi:
+Adicional para ESXi:
 - SR-IOV: Enabled (se disponível)
 - IOMMU: Enabled
 ```
@@ -251,10 +251,10 @@ Memory Profile: Auto ou XMP Profile 1
 
 ECC Support: Auto
 - Ativado automaticamente se memória ECC for detectada
-- Não disponível em modelos NUC de consumidor
+- Não disponível em modelos NUC de consumo
 ```
 
-## Otimizações Específicas da Plataforma
+## Otimizações Específicas por Plataforma
 
 ### Configuração do YunoHost
 ```
@@ -277,7 +277,7 @@ Configurações recomendadas:
 - Otimização para Docker: Intel VT-x Enabled
 - Wake on LAN: Enabled para gerenciamento remoto
 
-Sem requisitos especiais - funciona com configuração padrão de Ubuntu/Debian
+Sem requisitos especiais — funciona com configuração padrão de Ubuntu/Debian
 ```
 
 ### Configuração do Caprover
@@ -287,15 +287,15 @@ Configurações recomendadas:
 - Otimização de rede: Wake on LAN Enabled
 - Configuração padrão de servidor Linux
 
-Suporte a virtualização recomendado para eficiência de contêineres
+Suporte à virtualização recomendado para eficiência de contêineres
 ```
 
 ## Processo de Atualização da BIOS
 
 ### Verificando a Versão da BIOS
 ```
-Versão atual: anote na tela principal da BIOS
-Versão mais recente: verifique o site de suporte da ASUS para o seu modelo
+Versão atual: anote na tela principal do BIOS
+Versão mais recente: consulte o site de suporte da ASUS para o seu modelo
 Atualização necessária: se a versão tiver mais de 6 meses
 ```
 
@@ -306,35 +306,35 @@ Atualização necessária: se a versão tiver mais de 6 meses
 Requisitos: ambiente Windows
 Processo:
 1. Baixe o instalador Express BIOS da ASUS
-2. Execute o instalador como Administrator
+2. Execute o instalador como Administrador
 3. Siga as instruções para atualização automática
 4. O sistema reiniciará automaticamente
 ```
 
 #### Método 2: Atualização de BIOS via F7
 ```
-Requisitos: pen drive USB, arquivo capsule da BIOS
+Requisitos: pen drive USB, arquivo de cápsula do BIOS
 Processo:
 1. Baixe o arquivo .cap para o diretório raiz do USB
 2. Desligue o NUC
-3. Segure o botão de energia por 3 segundos e solte
+3. Mantenha o botão de energia pressionado por 3 segundos, solte
 4. Pressione F7 quando o Power Button Menu aparecer
-5. A BIOS detectará e instalará a atualização automaticamente
+5. O BIOS detectará e instalará a atualização automaticamente
 ```
 
 #### Método 3: Atualização via UEFI Shell
 ```
-Somente usuários avançados - use o utilitário iFlash
-Consulte a documentação da ASUS para etapas específicas
+Somente para usuários avançados — use o utilitário iFlash
+Consulte a documentação da ASUS para passos específicos
 ```
 
-## Verificação Após a Configuração
+## Verificação Pós-Configuração
 
 ### Testes de Estabilidade do Sistema
 ```
 1. Inicialize no sistema operacional alvo com sucesso
 2. Verifique se todo o hardware foi detectado corretamente
-3. Verifique o comportamento do gerenciamento de energia
+3. Confira o comportamento do gerenciamento de energia
 4. Teste a conectividade de rede
 5. Valide o desempenho do armazenamento
 ```
@@ -359,30 +359,30 @@ Ferramentas externas:
    - Impede o acesso à BIOS
    - Pode causar problemas de inicialização com Linux
 
-2. **Configurações Incorretas do Ventilador**
-   - O modo "Performance" é muito alto para uso doméstico
-   - O modo "Silent" pode causar limitação térmica
+2. **Configurações Erradas da Ventoinha**
+   - Modo "Performance" é barulhento demais para uso doméstico
+   - Modo "Silent" pode causar throttling térmico
 
 3. **Configurações de Virtualização Incorretas**
-   - VT-x desativado impede o uso de Docker/VMs
+   - VT-x desativado impede Docker/VMs
    - VT-d desativado limita recursos avançados
 
 4. **Configuração de Segurança Insuficiente**
    - Sem senha de supervisor
-   - Secure Boot ativado para sistemas operacionais não suportados
+   - Secure Boot ativado para SO não suportado
 
 5. **Problemas de Configuração de Rede**
    - Wake on LAN desativado
-   - Inicialização pela rede deixada ativada desnecessariamente
+   - Network boot deixado ativado desnecessariamente
 
 ### ✅ Boas Práticas
 
-1. **Documente as Configurações**
+1. **Documentar as Configurações**
    - Tire fotos das telas críticas da BIOS
    - Anote quaisquer configurações personalizadas
 
 2. **Atualizações Regulares**
-   - Verifique atualizações de BIOS trimestralmente
+   - Verifique atualizações da BIOS trimestralmente
    - Atualize durante janelas de manutenção planejadas
 
 3. **Backup da Configuração**
@@ -395,9 +395,9 @@ Ferramentas externas:
 ```
 Soluções:
 1. Use teclado com fio na porta traseira
-2. Tente o método de boot frio (desligue a energia)
+2. Tente o método de cold boot (desconecte a energia)
 3. Desative o Fast Boot pelo Windows
-4. Use o método do Power Button Menu
+4. Use o método Power Button Menu
 ```
 
 ### Configurações da BIOS Não São Salvas
@@ -405,48 +405,48 @@ Soluções:
 Causas:
 - Falha da bateria CMOS (raro em NUCs)
 - Interrupção de energia durante o salvamento
-- Configurações do BIOS corrompidas
+- Configurações de BIOS corrompidas
 
 Soluções:
-1. Carregue os padrões e reconfigure
-2. Atualize o firmware do BIOS
+1. Load defaults (carregar padrões) e reconfigure
+2. Atualize o firmware da BIOS
 3. Contate o suporte da ASUS se persistir
 ```
 
-### Problemas de Inicialização Após a Configuração
+### Problemas de Boot Após a Configuração
 ```
-Opções de Recuperação:
-1. Carregue os padrões do BIOS (F9)
-2. Use o jumper de recuperação do BIOS (se disponível)
+Opções de recuperação:
+1. Load BIOS defaults (F9) (carregar padrões da BIOS)
+2. Use o jumper de recuperação da BIOS (se disponível)
 3. Recuperação via Power Button Menu
-4. Modo de recuperação do BIOS
+4. Modo de recuperação da BIOS
 ```
 
 ## Reforço de Segurança
 
 ### Configurações para Ambiente de Produção
 ```
-Supervisor Password: Obrigatória
-User Password: Opcional
+Supervisor Password: Required (obrigatória)
+User Password: Optional (opcional)
 Boot Device Control: Lock UEFI Boot Order
-USB Boot: Desativado (após a instalação do SO)
-Network Boot: Desativado
-Secure Boot: Ativado (se o SO suportar)
-Intel AMT: Desativado (a menos que seja necessário)
+USB Boot: Disabled (desativado, após a instalação do SO)
+Network Boot: Disabled (desativado)
+Secure Boot: Enabled (ativado, se o SO suportar)
+Intel AMT: Disabled (desativado, a menos que seja necessário)
 ```
 
 ### Configurações para Ambiente Doméstico
 ```
-Supervisor Password: Recomendada
-Wake on LAN: Ativado
-Auto Power On: Ativado
-USB Boot: Ativado (para manutenção)
-Secure Boot: Desativado (para flexibilidade)
+Supervisor Password: Recommended (recomendada)
+Wake on LAN: Enabled (ativado)
+Auto Power On: Enabled (ativado)
+USB Boot: Enabled (ativado, para manutenção)
+Secure Boot: Disabled (desativado, para flexibilidade)
 ```
 
-## Etapas Finais e Documentação
+## Passos Finais e Documentação
 
-### Salvar a Configuração
+### Salvar Configuração
 ```
 1. Pressione F10 para salvar e sair
 2. Confirme as alterações quando solicitado
@@ -465,6 +465,6 @@ Crie um registro de configuração incluindo:
 
 **Próximos Passos:**
 - Configure as opções de energia e rede: [nuc-power-network.md](nuc-power-network.md)
-- Consulte considerações específicas do modelo: [nuc-models-comparison.md](nuc-models-comparison.md)
+- Revise considerações específicas do modelo: [nuc-models-comparison.md](nuc-models-comparison.md)
 
-**Importante**: Sempre verifique se essas configurações funcionam com seu modelo específico e o sistema operacional pretendido antes de implantar em produção.
+**Importante**: Sempre verifique se essas configurações funcionam com o seu modelo específico e o sistema operacional pretendido antes de implantar em produção.

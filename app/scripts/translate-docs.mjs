@@ -9,6 +9,12 @@
 // are read from the environment (DEEPSEEK_API_KEY or ZAI_API_KEY, optional
 // DOCS_TRANSLATE_MODEL) and are never logged or written anywhere; provider
 // response bodies only appear in errors redacted and capped at 200 chars.
+//
+// Inside untagged (or text/txt/plaintext) fences, technical lines are never
+// sent to the model: they are replaced by @@LINE_n@@ placeholders and restored
+// verbatim, and a translated fence must keep its line count, per-line
+// indentation, per-line technical tokens, per-line firmware setting values
+// and English menu paths (see validateProseBlock / compareBlocks).
 
 import { createHash } from 'node:crypto';
 import { appendFile, mkdir, readFile, readdir, writeFile } from 'node:fs/promises';
@@ -189,7 +195,7 @@ export function splitFencedBlock(block) {
   };
 }
 
-/** Translatable blocks of a protected text: closed prose fences with content. */
+/** Translatable blocks of a protected text: closed prose fences with translatable content. */
 export function proseBlockCandidates(blocks) {
   const candidates = [];
   blocks.forEach((block, index) => {
@@ -199,6 +205,9 @@ export function proseBlockCandidates(blocks) {
     const parts = splitFencedBlock(block);
     if (!parts.close || !parts.inner.trim()) {
       return;
+    }
+    if (isMostlyTechnicalBlock(parts.inner)) {
+      return; // mostly-technical transcripts are kept in English as a whole
     }
     candidates.push({ index, ...parts });
   });
@@ -210,12 +219,384 @@ export function proseBlockPrompt(languageName) {
     'The user message contains fenced blocks of console, firmware or menu transcripts.',
     'Each block starts with an @@BLOCK_n@@ header line followed by the lines of that block.',
     `Translate the natural-language words of each block into ${languageName}.`,
-    'Keep exactly as written: commands, file paths, IP addresses, URLs, hardware key names (F2, Del, Esc),',
+    'Technical lines (commands, paths, config pairs, output) were replaced by @@LINE_n@@ placeholders:',
+    'reproduce every @@LINE_n@@ exactly as given, alone on its line, in the same position — never',
+    'translate, alter, split, merge or reorder them; they are restored verbatim afterwards.',
+    'Keep exactly as written, in the same order: file paths,',
+    'IP addresses, URLs, CLI flags, KEY=value pairs, hardware key names (F1-F12, Del, Esc, Enter, Tab),',
     'text in backticks, menu labels in quotes, option values, numbers, units and symbols.',
-    'Return a block unchanged when it is purely technical (commands, paths, output, key names only).',
+    'Firmware/BIOS menu paths — Title-Case words joined by →, ->, > or » (Advanced → Security → Passwords) —',
+    'firmware setting values (Enabled, Disabled, Auto, Power On, AHCI, ...) and quoted on-screen labels',
+    'are English text the user must match: keep them exactly in English, on their own line; a translation',
+    'may follow in parentheses after the English label ("Restart" (Reiniciar)), never replacing it.',
+    'Return a block unchanged when it is purely technical (@@LINE_n@@ placeholders and symbols only).',
     'Keep the line structure: same number of lines per block, same leading whitespace on every line,',
     'no blank separator lines, and reproduce every @@BLOCK_n@@ header line exactly as given.',
   ].join(' ');
+}
+
+// --- Technical tokens of untagged fenced blocks -------------------------------
+
+/** Line-initial words that make a whole fence line a command (mkfs.* by prefix). */
+const CLI_LINE_STARTERS = new Set([
+  'sudo', 'apt', 'apt-get', 'systemctl', 'ip', 'ping', 'nslookup', 'dig', 'cat', 'echo', 'nano',
+  'vi', 'mount', 'umount', 'fdisk', 'parted', 'lsblk', 'blkid', 'docker', 'curl', 'wget', 'ssh',
+  'scp', 'opkg', 'uci', 'iw', 'ifconfig', 'chmod', 'chown', 'cd', 'ls', 'cp', 'mv', 'rm', 'git',
+  'npm', 'yunohost', 'caprover', 'logread', 'grep', 'tcpdump',
+]);
+
+/** True when a fence line is a command: $ prompt, shebang, sudo or a common CLI word. */
+export function isCommandLine(line) {
+  const text = line.trim();
+  if (!text) {
+    return false;
+  }
+  if (text.startsWith('$') || text.startsWith('#!')) {
+    return true;
+  }
+  const firstWord = text.split(/\s+/, 1)[0];
+  return CLI_LINE_STARTERS.has(firstWord) || firstWord.startsWith('mkfs.');
+}
+
+// Executable path first tokens: /etc/init.d/dnsmasq, ./flash.sh, ~/bin/backup.
+const EXEC_PATH_RE = /^(?:\/|~\/|\.{1,2}\/)\S/;
+// UCI/OpenWrt statements: config/option/list.
+const UCI_LINE_RE = /^(?:config|option|list)\s/;
+// key=value config lines (UUID=..., net.ifnames=0) with no spaces in the key.
+const KEY_VALUE_RE = /^[A-Za-z_][\w.-]*=/;
+// Config-style `key: value` lines with an all-lowercase identifier key
+// (cachesize: 1000). Title-case or mixed-case labels such as `Navigation:
+// Advanced → Security` or `mSATA: Similar to M.2` are firmware or hardware
+// prose and must stay translatable, so uppercase letters never match here.
+const KEY_COLON_RE = /^[a-z_][a-z0-9_.-]*:[ \t]/;
+// Shell prompts: $, # (root), root@host:~#, > continuation.
+const PROMPT_RE = /^(?:\$|#|root@|>)/;
+// Hosts-file entries: an IPv4 address followed only by dotted hostnames.
+const HOSTS_ENTRY_RE = /^\d{1,3}(?:\.\d{1,3}){3}(?:\s+[A-Za-z0-9_-]+\.[A-Za-z0-9_-]+)+\s*$/;
+
+// --- Translatable prose lines of untagged fences ------------------------------
+//
+// Technical lines are never sent to the model: protectTechnicalLines() replaces
+// them with @@LINE_n@@ placeholders and restoreTechnicalLines() puts them back
+// verbatim afterwards. A line is technical by default; it is translatable prose
+// only when it starts (after indentation and an optional list marker or number)
+// with an uppercase letter or is a `Label: value` line whose label has an
+// uppercase letter, contains no shell metacharacters or path-like tokens
+// (| > < $ ` ; & = /path ./ ~/), and its first word is not all lowercase — so
+// commands beyond any allowlist (`nmcli connection up community`, `sudo ...`,
+// `ip addr`) stay technical no matter their first word.
+
+// Leading indentation, then an optional list marker ("- ", "* ", "1. ", "1) ").
+const LINE_INDENT_RE = /^[ \t]+/;
+const LIST_MARKER_RE = /^(?:[-*+]|\d{1,3}[.)])[ \t]+/;
+// Single shell metacharacters no prose line needs (&& included via &).
+const SHELL_METACHAR_RE = /[|><$`;&=]/;
+// Path-like tokens at a token start: /etc/config/wireless, ./flash.sh, ~/bin/backup.
+// The slash must start a real path (non-space right after), so prose separators
+// like "Defaults / Carregar" are not paths.
+const PATH_TOKEN_START_RE = /(^|[\s(\[{])(?:\.{1,2}|~)?\/\S/;
+
+/**
+ * True for fence lines that hold natural language and may be sent to the
+ * model. Everything else — commands, paths, config pairs, output, symbols —
+ * is technical by default and must stay byte-identical. Uppercase is Unicode
+ * (Á, Ú, ...) because translated lines are classified here too when a
+ * translated file is checked against its English source.
+ */
+export function isTranslatableProseLine(line) {
+  const content = line.replace(LINE_INDENT_RE, '').replace(LIST_MARKER_RE, '');
+  if (!content.trim()) {
+    return false;
+  }
+  const label = content.match(/^([^:\n]{1,60}):(?:[ \t]|$)/)?.[1] || null;
+  if (!/^\p{Lu}/u.test(content) && !(label && /\p{Lu}/u.test(label))) {
+    return false;
+  }
+  if (SHELL_METACHAR_RE.test(content) || PATH_TOKEN_START_RE.test(content)) {
+    return false;
+  }
+  return !/^[\p{Ll}]+$/u.test(content.split(/\s+/)[0]);
+}
+
+/**
+ * Replace every technical line of a prose-fence inner content with an
+ * `@@LINE_n@@` placeholder (keeping its indentation), so the model never sees
+ * it. Returns the request text and the original lines in placeholder order.
+ */
+export function protectTechnicalLines(inner) {
+  const originals = [];
+  const text = inner
+    .split('\n')
+    .map((line) => {
+      if (!line.trim() || isTranslatableProseLine(line)) {
+        return line;
+      }
+      originals.push(line);
+      return `${indentOf(line)}@@LINE_${originals.length - 1}@@`;
+    })
+    .join('\n');
+  return { text, lines: originals };
+}
+
+/**
+ * Put protected technical lines back verbatim. ok is false unless every
+ * placeholder comes back exactly once, alone on its own line, with no unknown
+ * indexes — then the caller keeps the whole block in English.
+ */
+export function restoreTechnicalLines(text, lines) {
+  const counts = new Array(lines.length).fill(0);
+  let unknown = false;
+  const restored = text
+    .split('\n')
+    .map((line) => {
+      const match = line.match(/^[ \t]*@@LINE_(\d+)@@[ \t]*$/);
+      if (!match) {
+        return line;
+      }
+      const index = Number(match[1]);
+      if (index >= counts.length) {
+        unknown = true;
+        return line;
+      }
+      counts[index] += 1;
+      return lines[index];
+    })
+    .join('\n');
+  return { text: restored, ok: !unknown && counts.every((count) => count === 1) };
+}
+
+/**
+ * True for fence lines that are wholly technical and must stay byte-identical
+ * when the surrounding fence is translated: command lines, executable paths,
+ * UCI config statements, key=value / config-style `key: value` lines,
+ * hosts-file entries, shell prompt lines — and, by the default-technical
+ * prose gate above, anything that is not recognizable natural language.
+ */
+export function isTechnicalLine(line) {
+  const text = line.trim();
+  if (!text) {
+    return false;
+  }
+  return (
+    isCommandLine(text) ||
+    EXEC_PATH_RE.test(text) ||
+    UCI_LINE_RE.test(text) ||
+    KEY_VALUE_RE.test(text) ||
+    KEY_COLON_RE.test(text) ||
+    HOSTS_ENTRY_RE.test(text) ||
+    PROMPT_RE.test(text) ||
+    !isTranslatableProseLine(line)
+  );
+}
+
+/**
+ * True when most non-empty inner lines of a fence are technical. Such blocks
+ * are config or command transcripts and are kept in English as a whole rather
+ * than sent for translation line by line.
+ */
+export function isMostlyTechnicalBlock(inner) {
+  const lines = inner.split('\n').map((line) => line.trim()).filter(Boolean);
+  if (lines.length === 0) {
+    return false;
+  }
+  return lines.filter((line) => isTechnicalLine(line)).length * 2 > lines.length;
+}
+
+/**
+ * Technical tokens inside a prose fence line, as one alternation so each text
+ * region is captured once: URLs, ::-words, IPv6/IPv4 addresses (with optional
+ * /mask or :port), file paths, CLI flags, KEY=value pairs, quoted labels,
+ * _-words, 0x hex values, key names (F1-F12, Del, Esc, Enter, Tab) and
+ * numbers with units.
+ */
+const TECH_TOKEN_RE = new RegExp(
+  [
+    '(?<url>https?://[^\\s<>"\')]+)',
+    '(?<colonword>\\b\\w+(?:::\\w+)+\\b)',
+    '(?<ipv6>\\b(?:[0-9a-fA-F]{1,4}:){2,7}[0-9a-fA-F]{0,4}(?:/\\d{1,3})?\\b|\\b::(?:[0-9a-fA-F]{1,4}:?)+(?:/\\d{1,3})?\\b)',
+    '(?<ipv4>\\b\\d{1,3}(?:\\.\\d{1,3}){3}(?:/\\d{1,2})?(?::\\d{1,5})?\\b)',
+    '(?<path>~/[^\\s\'"`<>|&;()]+|/[^\\s\'"`<>|&;()]+|(?<=[\\s(\\[{])[\\w.@-]+(?:/[\\w.@-]+)+)',
+    '(?<flag>(?<=[\\s(\\[{]|^)--?[A-Za-z][\\w-]*)',
+    '(?<keyval>(?<=[\\s(\\[{]|^)[A-Za-z_][\\w.-]*=\\S*)',
+    '(?<quoted>(?<!\\w)"[^"\\n]+"(?!\\w)|(?<!\\w)\'[^\'\\n]+\'(?!\\w))',
+    '(?<underword>\\b\\w+_\\w+\\b)',
+    '(?<hex>\\b0x[0-9a-fA-F]+\\b)',
+    '(?<keyname>\\b(?:F(?:[1-9]|1[0-2])|Del|Esc|Enter|Tab)\\b)',
+    '(?<numunit>\\b\\d+(?:[.,]\\d+)?(?:[KMGTPE]i?B|[KMGTPE]|V|W|A)(?!\\w)|\\b\\d+(?:[.,]\\d+)? ?(?:GHz|MHz|kHz|TB|GB|MB|KB|KiB|MiB|GiB|TiB|RPM|rpm|Mbps|Gbps|Kbps|mAh|mA|Wh|dBm|dBi|dB)\\b)',
+  ].join('|'),
+  'g'
+);
+
+const TRAILING_JUNK_RE = /[.,;:!?-]+$/;
+
+/** Canonicalize a raw match: strip trailing sentence punctuation, unify decimal commas. */
+function normalizeToken(match) {
+  let token = match[0];
+  const groups = match.groups || {};
+  if (groups.numunit) {
+    token = token.replace(/(\d),(\d)/g, '$1.$2');
+  } else if (groups.url || groups.path || groups.flag || groups.keyval || groups.ipv4 || groups.ipv6) {
+    token = token.replace(TRAILING_JUNK_RE, '');
+  }
+  return token;
+}
+
+/**
+ * Technical tokens of one fence line, in order: the whole trimmed line for
+ * technical lines (commands, executable paths, UCI statements, config pairs,
+ * shell prompts), otherwise the URLs, addresses, paths, flags, KEY=value
+ * pairs, quoted labels, key names and numbers with units it contains.
+ */
+export function technicalLineTokens(line) {
+  const trimmed = line.trim();
+  if (isTechnicalLine(trimmed)) {
+    return [trimmed];
+  }
+  const tokens = [];
+  for (const match of trimmed.matchAll(TECH_TOKEN_RE)) {
+    const token = normalizeToken(match);
+    if (token) {
+      tokens.push(token);
+    }
+  }
+  return tokens;
+}
+
+/**
+ * Require the translated body of a prose fence to keep the technical tokens
+ * of every source line, in the same order (callers check the line count
+ * first, so both sides have the same number of lines).
+ */
+export function technicalTokensMatch(sourceInner, translatedInner) {
+  const sourceLines = sourceInner.split('\n');
+  const translatedLines = translatedInner.split('\n');
+  const count = Math.min(sourceLines.length, translatedLines.length);
+  for (let i = 0; i < count; i++) {
+    const sourceTokens = technicalLineTokens(sourceLines[i]);
+    const translatedTokens = technicalLineTokens(translatedLines[i]);
+    if (
+      sourceTokens.length !== translatedTokens.length ||
+      sourceTokens.some((token, j) => token !== translatedTokens[j])
+    ) {
+      return {
+        ok: false,
+        reason: `line ${i + 1} technical tokens changed (${sourceTokens.join(' ') || 'none'} vs ${
+          translatedTokens.join(' ') || 'none'
+        })`,
+      };
+    }
+  }
+  return { ok: true };
+}
+
+// --- Firmware/BIOS menu paths -----------------------------------------------
+
+/**
+ * Menu-path words: Title Case or acronyms (SATA, UEFI), with digits,
+ * apostrophes, hyphens and slashes inside (Backup/Flash, Don't).
+ */
+const MENU_WORD = "[A-Z][\\w'/-]*";
+const MENU_SEGMENT = `${MENU_WORD}(?:[ \\t]+${MENU_WORD})*`;
+const MENU_ARROW = '[ \\t]*(?:→|->|»|>)[ \\t]*';
+const MENU_PATH_RE = new RegExp(`${MENU_SEGMENT}(?:${MENU_ARROW}${MENU_SEGMENT})+`, 'g');
+// Quoted on-screen labels: first word capitalized, up to three more words,
+// optional trailing ! or ? and an optional parenthetical translation inside
+// the quotes ("Flash from file", "Flash!", "Restart (Reiniciar)").
+const QUOTED_MENU_LABEL_RE = new RegExp(
+  "([\"'])([A-Z][\\w'/-]*(?:[ \\t]+[\\w'/-]+){0,3}[!?]?)(?:[ \\t]*\\([^)\\n]{1,80}\\))?\\1",
+  'g'
+);
+// Firmware setting values after a labeled colon; reversing one (Enabled ->
+// Disabled) inverts the instruction, so they must survive translation. The
+// value must stand alone until the end of the line (an optional trailing
+// parenthetical is fine), so prose like "Budget: Performance-focused
+// investment" or "Throttling: Performance reduction" is not captured. On/Off
+// and bare numbers cover simple switch states ("Wake on LAN: On", "Core
+// Count: 4").
+const FIRMWARE_VALUE_RE =
+  /\b[A-Z][\w ./()+-]{0,40}: (Enabled|Disabled|Power On|Power Off|Auto|AHCI|RAID|RST|Quiet|Balanced|Performance|Silent|On|Off|\d+(?:[.,]\d+)?)(?=(?:[ \t]*\([^)\n]*\))?[ \t]*$)/gm;
+
+/**
+ * On-screen navigation labels of a text: menu paths (Title-Case word
+ * sequences joined by →, ->, > or »), quoted menu labels and firmware setting
+ * values. `**` emphasis is stripped and curly quotes are folded to straight
+ * quotes first, so bold menu paths and localized quote styles still compare
+ * cleanly (`»` stays: it is a menu arrow, not a quote).
+ */
+export function menuPathsIn(text) {
+  const clean = String(text).replace(/\*\*/g, '').replace(/[“”]/g, '"');
+  return [
+    ...[...clean.matchAll(MENU_PATH_RE)].map((match) => match[0]),
+    ...[...clean.matchAll(QUOTED_MENU_LABEL_RE)].map((match) => match[2]),
+    ...[...clean.matchAll(FIRMWARE_VALUE_RE)].map((match) => match[1]),
+  ];
+}
+
+/** Match `path` inside `text` at word boundaries (boundary added per word-char edge). */
+function containsAtWordBoundary(text, path) {
+  const escaped = path.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+  const lead = /[\w]/.test(path[0]) ? '\\b' : '';
+  const trail = /[\w]/.test(path[path.length - 1]) ? '\\b' : '';
+  return new RegExp(`${lead}${escaped}${trail}`).test(text);
+}
+
+/**
+ * Require every menu path, quoted menu label and firmware value of the source
+ * text to survive translation: users navigate an English firmware interface.
+ * The English label must still be present, but its surroundings are free — a
+ * translation in parentheses may come first ("Remover com segurança" (Safely
+ * Remove)) or after ("Safely Remove" (Remover com segurança)).
+ */
+export function menuPathsCovered(sourceText, translatedText) {
+  const translated = String(translatedText).replace(/\*\*/g, '').replace(/[“”]/g, '"');
+  for (const path of menuPathsIn(sourceText)) {
+    if (!containsAtWordBoundary(translated, path)) {
+      return { ok: false, reason: `menu path or quoted label changed ("${path}")` };
+    }
+  }
+  return { ok: true };
+}
+
+/** Firmware setting values of one line of text (bold stripped). */
+function firmwareValuesIn(text) {
+  return [...String(text).replace(/\*\*/g, '').matchAll(FIRMWARE_VALUE_RE)].map((match) => match[1]);
+}
+
+/** Accept the decimal comma pt/es translations write for decimal points. */
+function firmwareValuePresent(line, value) {
+  if (containsAtWordBoundary(line, value)) {
+    return true;
+  }
+  if (/^\d+[.,]\d+$/.test(value)) {
+    return containsAtWordBoundary(line, value.includes(',') ? value.replace(',', '.') : value.replace('.', ','));
+  }
+  return false;
+}
+
+/**
+ * Per-line firmware-value validation for untagged fences, where line counts
+ * are preserved: every `Setting: Value` of source line i must still be on
+ * translated line i. Presence anywhere in the block is not enough —
+ * `Enhanced Intel SpeedStep: Enabled` may not drift to `Disabled` just
+ * because `Turbo Mode: Enabled` keeps the word elsewhere in the block — and
+ * the value must survive outside parentheticals, which only ever hold the
+ * optional translation gloss (`Disabled (antes Enabled)` must not pass).
+ */
+export function firmwareValuesCoveredPerLine(sourceInner, translatedInner) {
+  const sourceLines = String(sourceInner).replace(/\*\*/g, '').split('\n');
+  const translatedLines = String(translatedInner)
+    .replace(/\*\*/g, '')
+    .split('\n')
+    .map((line) => line.replace(/\([^)\n]*\)/g, ''));
+  const count = Math.min(sourceLines.length, translatedLines.length);
+  for (let i = 0; i < count; i++) {
+    for (const value of firmwareValuesIn(sourceLines[i])) {
+      if (!firmwareValuePresent(translatedLines[i], value)) {
+        return { ok: false, reason: `line ${i + 1} firmware setting value changed ("${value}")` };
+      }
+    }
+  }
+  return { ok: true };
 }
 
 /**
@@ -257,8 +638,9 @@ const linkTargetsIn = (text) => [...text.matchAll(/\]\(([^)\n]*)\)/g)].map((m) =
 
 /**
  * Structural check for a translated prose-block inner content: same line
- * count, same leading indentation per line, no new code fences, and URLs and
- * link targets preserved.
+ * count, same leading indentation per line, no new code fences, identical
+ * per-line technical tokens, preserved menu paths, and URLs and link targets
+ * preserved.
  */
 export function validateProseBlock(sourceInner, translatedInner) {
   const fail = (reason) => ({ ok: false, reason });
@@ -274,6 +656,18 @@ export function validateProseBlock(sourceInner, translatedInner) {
     if (/^\s*(`{3,}|~{3,})/.test(translatedLines[i])) {
       return fail(`line ${i + 1} introduces a code fence`);
     }
+  }
+  const tokenCheck = technicalTokensMatch(sourceInner, translatedInner);
+  if (!tokenCheck.ok) {
+    return fail(tokenCheck.reason);
+  }
+  const firmwareCheck = firmwareValuesCoveredPerLine(sourceInner, translatedInner);
+  if (!firmwareCheck.ok) {
+    return fail(firmwareCheck.reason);
+  }
+  const menuCheck = menuPathsCovered(sourceInner, translatedInner);
+  if (!menuCheck.ok) {
+    return fail(menuCheck.reason);
   }
   if (urlsIn(sourceInner).join('\n') !== urlsIn(translatedInner).join('\n')) {
     return fail('URLs changed');
@@ -394,6 +788,10 @@ export function validate(sourceProtected, translatedProtected, sourceBlocks) {
   if (sourceLinks.length !== translatedLinks.length || sourceLinks.some((t, i) => t !== translatedLinks[i])) {
     return fail(`link targets mismatch (${sourceLinks.join(', ')} vs ${translatedLinks.join(', ')})`);
   }
+  const menuCheck = menuPathsCovered(sourceProtected, translatedProtected);
+  if (!menuCheck.ok) {
+    return fail(menuCheck.reason);
+  }
   const sourceRows = countTableRows(sourceFinal);
   const translatedRows = countTableRows(translatedFinal);
   if (sourceRows !== translatedRows) {
@@ -443,7 +841,9 @@ export function validate(sourceProtected, translatedProtected, sourceBlocks) {
 /**
  * Compare a translated file's own fenced blocks against the English source's.
  * Tagged (technical) blocks must be byte-identical; untagged prose blocks must
- * keep the source's fence lines and line count.
+ * keep the source's fence lines, line count, per-line leading indentation,
+ * per-line technical tokens, per-line firmware setting values and menu paths
+ * (the same checks validateProseBlock applies during translation).
  */
 export function compareBlocks(sourceBlocks, targetBlocks) {
   const fail = (reason) => ({ ok: false, reason });
@@ -461,6 +861,27 @@ export function compareBlocks(sourceBlocks, targetBlocks) {
       }
       if (sourceLines[0] !== targetLines[0] || sourceLines[sourceLines.length - 1] !== targetLines[targetLines.length - 1]) {
         return fail(`fenced block ${i} fence lines changed`);
+      }
+      const sourceInner = splitFencedBlock(source).inner;
+      const targetInner = splitFencedBlock(target).inner;
+      const sourceInnerLines = sourceInner.split('\n');
+      const targetInnerLines = targetInner.split('\n');
+      for (let j = 0; j < sourceInnerLines.length; j++) {
+        if (indentOf(sourceInnerLines[j]) !== indentOf(targetInnerLines[j])) {
+          return fail(`fenced block ${i} line ${j + 1} leading indentation changed`);
+        }
+      }
+      const tokenCheck = technicalTokensMatch(sourceInner, targetInner);
+      if (!tokenCheck.ok) {
+        return fail(`fenced block ${i}: ${tokenCheck.reason}`);
+      }
+      const firmwareCheck = firmwareValuesCoveredPerLine(sourceInner, targetInner);
+      if (!firmwareCheck.ok) {
+        return fail(`fenced block ${i}: ${firmwareCheck.reason}`);
+      }
+      const menuCheck = menuPathsCovered(sourceInner, targetInner);
+      if (!menuCheck.ok) {
+        return fail(`fenced block ${i}: ${menuCheck.reason}`);
       }
     } else if (source !== target) {
       return fail(`fenced block ${i} differs from the English source (tagged blocks must stay identical)`);
@@ -515,6 +936,11 @@ export function systemPrompt(languageName) {
     'image paths, HTML tags/attributes, table structure (same number of | per row), heading levels,',
     'list markers, product names (YunoHost, CasaOS, CapRover, Balena, ZimaBoard, Intel NUC,',
     'Raspberry Pi, LibreMesh, OpenWrt), units and numbers.',
+    'Firmware/BIOS and other on-screen menu paths — Title-Case words joined by →, ->, > or »',
+    '(e.g. Advanced → Security → Passwords) — quoted menu labels (e.g. "Flash from file") and firmware',
+    'setting values (Enabled, Disabled, Auto, Power On, AHCI, ...) are shown in English on the device:',
+    'keep them exactly as written; a translation may follow in parentheses after the English label,',
+    'e.g. Advanced → Power (Avançado → Energia) or "Restart" (Reiniciar) — never replace the English label.',
     'Translate link text, table cell text and alt text that are not inside `code` spans.',
   ].join(' ');
 }
@@ -691,16 +1117,33 @@ function batchProseCandidates(candidates) {
 
 /** One (retried) request per batch; null keeps the whole batch in English. */
 async function requestProseTranslations(batch, lang, cfg) {
-  const user = batch.map((candidate) => `@@BLOCK_${candidate.index}@@\n${candidate.inner}`).join('\n');
+  // Technical lines never reach the model: they leave as @@LINE_n@@ placeholders
+  // and are restored verbatim from the reply before any validation.
+  const prepared = batch.map((candidate) => {
+    const { text, lines } = protectTechnicalLines(candidate.inner);
+    return { index: candidate.index, requestText: text, technicalLines: lines };
+  });
+  const user = prepared.map((candidate) => `@@BLOCK_${candidate.index}@@\n${candidate.requestText}`).join('\n');
   for (let attempt = 1; attempt <= 2; attempt++) {
     try {
       const raw = await chatCompletion(cfg, [
         { role: 'system', content: proseBlockPrompt(LANGUAGES[lang]) },
         { role: 'user', content: user },
       ]);
-      const parsed = parseProseBlockResponse(raw, batch.map((candidate) => candidate.index));
+      const parsed = parseProseBlockResponse(raw, prepared.map((candidate) => candidate.index));
       if (parsed) {
-        return parsed; // per-block validation happens in applyProseTranslations
+        const restored = new Map();
+        for (const candidate of prepared) {
+          const inner = parsed.get(candidate.index);
+          if (inner === undefined) {
+            continue;
+          }
+          const result = restoreTechnicalLines(inner, candidate.technicalLines);
+          if (result.ok) {
+            restored.set(candidate.index, result.text);
+          }
+        }
+        return restored; // per-block validation happens in applyProseTranslations
       }
     } catch {
       // transport errors fall through to the retry / English fallback

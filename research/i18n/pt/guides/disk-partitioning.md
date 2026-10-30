@@ -5,48 +5,48 @@ sourceHash: 09359b725b9a277e
 translatedBy: glm-4.6
 ---
 
-# Guia Iniciante de Particionamento de Disco para Servidores Comunitários
+# Guia do Iniciante para Particionamento de Discos em Servidores Comunitários
 
-Este guia abrangente cobre os fundamentos do particionamento de disco usando ferramentas gráficas e de linha de comando, com recomendações específicas para implantações de servidores comunitários.
+Este guia abrangente cobre os fundamentos do particionamento de discos usando ferramentas gráficas e de linha de comando, com recomendações específicas para implantações de servidores comunitários.
 
-## Entendendo o Particionamento de Disco
+## Entendendo o Particionamento de Discos
 
-O particionamento de disco divide um dispositivo de armazenamento em seções separadas e independentes chamadas partições[16]. Cada partição pode ter seu próprio sistema de arquivos e serve a propósitos específicos em ambientes de servidor. Um particionamento adequado melhora o desempenho do sistema, simplifica backups e aprimora a segurança[17].
+O particionamento de discos divide um dispositivo de armazenamento em seções separadas e independentes chamadas partições[16]. Cada partição pode ter seu próprio sistema de arquivos e serve a propósitos específicos em ambientes de servidor. Um particionamento adequado melhora o desempenho do sistema, simplifica backups e aumenta a segurança[17].
 
 ### Por Que Particionar os Discos do Seu Servidor?
 
 1. **Separação de Responsabilidades**: Mantenha os arquivos do sistema separados dos dados dos usuários e logs[17]
-2. **Otimização de Desempenho**: Reduz a fragmentação do disco e a contenção de E/S[17]
-3. **Aprimoramento da Segurança**: Isola dados sensíveis e componentes do sistema
-4. **Eficiência de Backup**: Permite backups direcionados de tipos específicos de dados
-5. **Tolerância a Falhas**: Impede que uma partição cheia afete todo o sistema[17]
+2. **Otimização de Desempenho**: Reduza a fragmentação do disco e a contenção de E/S[17]
+3. **Aprimoramento da Segurança**: Isole dados sensíveis e componentes do sistema
+4. **Eficiência de Backup**: Permita backups direcionados de tipos específicos de dados
+5. **Tolerância a Falhas**: Evite que uma partição cheia afete todo o sistema[17]
 
 ## Layout de Partições Recomendado para Servidores Comunitários
 
 `[Partition Layout Example](partition-layout.png)`
 
-### Esquema de Partições Padrão
+### Esquema Padrão de Partições
 
 Para a maioria das implantações de servidores comunitários, considere este layout:
 
 | Partição | Ponto de Montagem | Tamanho | Sistema de Arquivos | Finalidade |
 |-----------|-------------|------|-------------|---------|
-| Boot | `/boot` | 1GB | ext4 | Arquivos do gerenciador de boot e kernels |
-| Root | `/` | 20-50GB | ext4 | Arquivos do sistema e aplicações |
+| Boot | `/boot` | 1GB | ext4 | Arquivos do carregador de inicialização e kernels |
+| Root | `/` | 20-50GB | ext4 | Arquivos do sistema e aplicativos |
 | Var | `/var` | 10-20GB | ext4 | Dados variáveis, arquivos temporários |
-| Var Log | `/var/log` | 5-10GB | ext4 | Logs do sistema e aplicações[17] |
+| Var Log | `/var/log` | 5-10GB | ext4 | Logs do sistema e aplicativos[17] |
 | Home | `/home` | 10-50GB | ext4 | Diretórios de usuários |
 | Tmp | `/tmp` | 2-5GB | ext4 | Arquivos temporários[17] |
-| Data | `/srv` ou `/data` | Espaço restante | ext4 | Dados de aplicações e serviços |
+| Data | `/srv` ou `/data` | Espaço restante | ext4 | Dados de aplicativos e serviços |
 | Swap | N/A | 1-2x RAM | swap | Memória virtual |
 
 > **💡 Melhor Prática**
 > 
-> Separar `/var/log` de `/var` evita que os arquivos de log encha a partição `/var` inteira e afetem a estabilidade do sistema[17].
+> Separar `/var/log` de `/var` evita que os arquivos de log encham toda a partição `/var` e afetem a estabilidade do sistema[17].
 
 ## Método 1: Particionamento Gráfico com GParted
 
-O GParted (GNOME Partition Editor) oferece uma interface intuitiva para gerenciar partições de disco[9].
+O GParted (GNOME Partition Editor) fornece uma interface intuitiva para gerenciar partições de disco[9].
 
 ### Instalando o GParted
 
@@ -64,18 +64,18 @@ sudo yum install gparted  # CentOS/RHEL
 
 ### Usando o GParted
 
-#### Passo 1: Iniciar o GParted
+#### Etapa 1: Iniciar o GParted
 
-1. Abra o GParted pelo menu de Aplicativos ou execute:
+1. Abra o GParted no menu de aplicativos ou execute:
    ```bash
    sudo gparted
    ```
 2. Digite sua senha de administrador quando solicitado
-3. O GParted irá escanear todos os dispositivos de armazenamento disponíveis
+3. O GParted examinará todos os dispositivos de armazenamento disponíveis
 
 `[GParted In Use](gparted-screenshot.png)`
 
-#### Passo 2: Selecionar o Disco de Destino
+#### Etapa 2: Selecionar o Disco de Destino
 
 1. Use o menu suspenso no canto superior direito para selecionar o disco de destino
 2. **Verifique o tamanho e o modelo do disco** para garantir que está trabalhando com o dispositivo correto
@@ -85,29 +85,29 @@ sudo yum install gparted  # CentOS/RHEL
 > 
 > Sempre verifique se você selecionou o disco correto. As operações de particionamento destruirão os dados existentes.
 
-#### Passo 3: Criar Tabela de Partições (se necessário)
+#### Etapa 3: Criar Tabela de Partições (se necessário)
 
 Para discos novos:
-1. Vá para **Dispositivo** → **Criar Tabela de Partições**
+1. Vá para **Device** → **Create Partition Table**
 2. Selecione **GPT** para discos maiores que 2TB ou sistemas modernos
 3. Selecione **MBR (msdos)** para compatibilidade com sistemas mais antigos[13]
-4. Clique em **Aplicar**
+4. Clique em **Apply**
 
-#### Passo 4: Criar Novas Partições
+#### Etapa 4: Criar Novas Partições
 
 1. Clique com o botão direito no espaço não alocado
-2. Selecione **Nova**
+2. Selecione **New**
 3. Configure as definições da partição:
-   - **Tamanho**: Especifique o tamanho da partição em MB ou GB
-   - **Criar como**: Escolha Primária, Estendida ou Lógica
-   - **Sistema de arquivos**: Selecione ext4 para partições Linux
-   - **Rótulo**: Adicione rótulos descritivos (ex.: "server-root", "data-storage")
-4. Clique em **Adicionar** para enfileirar a operação
+   - **Size**: Especifique o tamanho da partição em MB ou GB
+   - **Create as**: Escolha Primary, Extended ou Logical
+   - **File system**: Selecione ext4 para partições Linux
+   - **Label**: Adicione rótulos descritivos (por exemplo, "server-root", "data-storage")
+4. Clique em **Add** para enfileirar a operação
 
-#### Passo 5: Aplicar Alterações
+#### Etapa 5: Aplicar as Alterações
 
 1. Revise todas as operações enfileiradas na lista de operações pendentes
-2. Clique em **Aplicar** para executar todas as alterações
+2. Clique em **Apply** para executar todas as alterações
 3. Confirme a operação quando solicitado
 4. Aguarde a conclusão (isso pode levar vários minutos para partições grandes)
 
@@ -115,32 +115,32 @@ Para discos novos:
 
 #### Redimensionar Partições Existentes
 
-1. Clique com o botão direito na partição a redimensionar
-2. Selecione **Redimensionar/Mover**
+1. Clique com o botão direito na partição a ser redimensionada
+2. Selecione **Resize/Move**
 3. Arraste os limites da partição ou insira tamanhos específicos
 4. Aplique as alterações
 
 #### Mover Partições
 
-Use o diálogo **Redimensionar/Mover** para deslocar as posições das partições no disco[11]. Isso é útil para consolidar espaço livre.
+Use o diálogo **Resize/Move** para deslocar as localizações das partições no disco[11]. Isso é útil para consolidar espaço livre.
 
 ## Método 2: Particionamento por Linha de Comando
 
-As ferramentas de linha de comando oferecem mais controle e capacidades de automação para implantações de servidores.
+As ferramentas de linha de comando oferecem mais controle e recursos de automação para implantações de servidores.
 
-### Usando fdisk
+### Usando o fdisk
 
-O `fdisk` é uma poderosa ferramenta de particionamento por linha de comando disponível em todos os sistemas Linux[14][16].
+O `fdisk` é uma ferramenta de particionamento por linha de comando poderosa, disponível em todos os sistemas Linux[14][16].
 
-#### Passo 1: Identificar o Disco de Destino
+#### Etapa 1: Identificar o Disco de Destino
 
 ```bash
 sudo fdisk -l
 ```
 
-Este comando lista todos os discos e suas partições atuais[14]. Identifique seu disco de destino (ex.: `/dev/sdb`).
+Este comando lista todos os discos e suas partições atuais[14]. Identifique seu disco de destino (por exemplo, `/dev/sdb`).
 
-#### Passo 2: Iniciar o fdisk
+#### Etapa 2: Iniciar o fdisk
 
 ```bash
 sudo fdisk /dev/sdb
@@ -148,33 +148,33 @@ sudo fdisk /dev/sdb
 
 Substitua `/dev/sdb` pelo seu disco de destino[14].
 
-#### Passo 3: Criar Partições
+#### Etapa 3: Criar Partições
 
-Dentro do prompt do fdisk:
+No prompt do fdisk:
 
 1. **Criar nova partição**: Digite `n`
-2. **Selecionar tipo de partição**: 
+2. **Selecionar o tipo de partição**:
    - `p` para partição primária
    - `e` para partição estendida[14]
-3. **Escolher número da partição**: Aceite o padrão ou especifique (1-4 para primária)
-4. **Definir primeiro setor**: Aceite o padrão para alinhamento ideal
-5. **Definir último setor**: Especifique o tamanho usando o formato `+20G` para uma partição de 20GB[14]
+3. **Escolher o número da partição**: Aceite o padrão ou especifique (1-4 para primária)
+4. **Definir o primeiro setor**: Aceite o padrão para alinhamento ideal
+5. **Definir o último setor**: Especifique o tamanho usando o formato `+20G` para uma partição de 20GB[14]
 
-#### Passo 4: Definir Tipo da Partição
+#### Etapa 4: Definir o Tipo da Partição
 
 1. Digite `t` para alterar o tipo da partição
 2. Selecione o número da partição
 3. Digite o código do tipo:
    - `83` para Linux (ext4)
-   - `82` para swap Linux
+   - `82` para Linux swap
    - `8e` para Linux LVM[26]
 
-#### Passo 5: Gravar Alterações
+#### Etapa 5: Gravar as Alterações
 
 1. Digite `p` para visualizar a tabela de partições
 2. Digite `w` para gravar as alterações e sair[14]
 
-### Usando parted
+### Usando o parted
 
 O `parted` oferece recursos mais avançados e suporta tabelas de partições GPT[16].
 
@@ -276,20 +276,20 @@ sudo blkid
 - **Partição Boot**: 1GB ext4
 - **Considere LVM** para gerenciamento flexível de armazenamento[17]
 
-### Servidores Baseados em ARM
+### Servidores baseados em ARM
 
 - Consulte a documentação do fabricante para requisitos específicos de particionamento
-- Pode exigir partições de boot especiais ou seções de firmware
+- Pode exigir partições de boot ou seções de firmware especiais
 
 ## Gerenciamento de Volumes Lógicos (LVM)
 
-O LVM oferece capacidades avançadas de gerenciamento de armazenamento[17][24].
+O LVM fornece recursos avançados de gerenciamento de armazenamento[17][24].
 
 ### Benefícios do LVM
 
 1. **Redimensionamento Dinâmico**: Expandir ou reduzir volumes lógicos conforme necessário[24]
 2. **Agrupamento de Armazenamento**: Combinar múltiplos discos físicos[17]
-3. **Snapshots**: Criar backups em pontos específicos no tempo
+3. **Snapshots**: Criar backups de pontos no tempo
 4. **Striping**: Melhorar o desempenho em múltiplos discos
 
 ### Configuração Básica do LVM
@@ -320,13 +320,13 @@ sudo mkfs.ext4 /dev/server-vg/data
 ### Problemas Relacionados ao Tamanho
 
 - **Partição root muito pequena**: Mínimo de 20GB, preferencialmente 30-50GB
-- **Ausência de swap**: Sempre inclua swap, mesmo com RAM abundante
-- **Partição boot muito grande**: 1GB costuma ser suficiente
+- **Sem espaço swap**: Sempre inclua swap, mesmo com muita RAM
+- **Partição boot oversized**: 1GB geralmente é suficiente
 
 ### Escolhas de Sistema de Arquivos
 
 - **Usar FAT32 para sistemas Linux**: Use ext4 para melhor desempenho e recursos
-- **Tipos de partição incorretos**: Certifique-se dos códigos de tipo de partição adequados no fdisk
+- **Tipos de partição incorretos**: Certifique-se de usar os códigos de tipo de partição corretos no fdisk
 
 ### Falhas de Planejamento
 
@@ -348,7 +348,7 @@ sudo reboot
 ### Problemas de Alinhamento
 
 - Sempre aceite os setores iniciais padrão para alinhamento ideal de SSDs
-- Use `parted` com o comando `align-check` para verificar o alinhamento
+- Use o `parted` com o comando `align-check` para verificar o alinhamento
 
 ### Falhas de Montagem
 
@@ -384,8 +384,8 @@ sudo dd if=partition-table.backup of=/dev/sdb bs=512 count=1
 
 Após o particionamento:
 
-- **Próximo**: Configure os pontos de montagem e configure `/etc/fstab`
-- **Expansão de Armazenamento**: Veja [external-storage.md](external-storage.md) para adicionar mais discos
+- **Próximo**: Configure os pontos de montagem e o `/etc/fstab`
+- **Expansão de Armazenamento**: Consulte [external-storage.md](external-storage.md) para adicionar mais discos
 - **Configuração Inicial**: Conclua a instalação do sistema operacional usando seu novo layout de partições
 - **Monitoramento**: Configure o monitoramento de uso de disco para cada partição
 
@@ -398,6 +398,6 @@ Após o particionamento:
 
 ## Conclusão
 
-O particionamento adequado do disco é fundamental para servidores comunitários estáveis e de fácil manutenção. Use ferramentas gráficas como o GParted para simplicidade ou ferramentas de linha de comando para automação e recursos avançados. Sempre planeje os layouts de partições com base no seu caso de uso específico, mantenha backups e monitore o uso do disco regularmente.
+O particionamento adequado do disco é fundamental para servidores comunitários estáveis e de fácil manutenção. Use ferramentas gráficas como o GParted para simplicidade ou ferramentas de linha de comando para automação e recursos avançados. Sempre planeje o layout das partições com base no seu caso de uso específico, mantenha backups e monitore o uso do disco regularmente.
 
-O investimento em um particionamento adequado rende dividendos em estabilidade do sistema, desempenho e eficiência de manutenção ao longo do ciclo de vida do seu servidor.
+O investimento em um particionamento adequado traz retornos em estabilidade do sistema, desempenho e eficiência de manutenção ao longo do ciclo de vida do seu servidor.

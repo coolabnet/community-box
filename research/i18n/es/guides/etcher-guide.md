@@ -5,24 +5,24 @@ sourceHash: 8fd947e2e77f8345
 translatedBy: glm-4.6
 ---
 
-# Guía completa para usar Etcher para grabar imágenes de sistema operativo
+# Guía completa para usar Etcher para grabar imágenes de SO
 
-Esta guía proporciona instrucciones paso a paso para usar balenaEtcher y grabar de forma segura imágenes de sistemas operativos en tarjetas SD y unidades USB para implementaciones de servidores comunitarios.
+Esta guía proporciona instrucciones paso a paso para usar balenaEtcher y escribir de forma segura imágenes de sistemas operativos en tarjetas SD y unidades USB para implementaciones de servidores comunitarios.
 
 ## ¿Qué es Etcher?
 
-balenaEtcher es una herramienta gratuita, de código abierto y multiplataforma diseñada para grabar imágenes de sistemas operativos en tarjetas SD y unidades USB de forma segura y sencilla[1]. Es mantenida por balena y funciona en sistemas Windows, macOS y Linux[1]. Etcher proporciona validación integrada para garantizar una grabación sin errores y tiene una interfaz intuitiva de tres pasos[1].
+balenaEtcher es una herramienta gratuita, de código abierto y multiplataforma diseñada para grabar imágenes de SO en tarjetas SD y unidades USB de manera segura y sencilla[1]. Es mantenida por balena y funciona en sistemas Windows, macOS y Linux[1]. Etcher proporciona validación integrada para garantizar una grabación sin errores y tiene una interfaz intuitiva de tres pasos[1].
 
 ## Requisitos previos
 
-- Una computadora con Windows 10+, macOS 10.10+, o la mayoría de las distribuciones Linux[1]
+- Una computadora con Windows 10+, macOS 10.10+ o la mayoría de las distribuciones de Linux[1]
 - Una tarjeta SD o unidad USB (se recomienda un mínimo de 8GB de capacidad para la mayoría de las imágenes de SO)[2]
-- Archivo de imagen de SO descargado (.iso, .img, o formatos comprimidos)
+- Archivo de imagen de SO descargado (.iso, .img o formatos comprimidos)
 - Privilegios de administrador en tu computadora
 
 > **⚠️ Advertencia importante de seguridad**
 > 
-> Etcher borrará completamente todos los datos en la unidad de destino. Siempre verifica que hayas seleccionado la unidad correcta antes de grabar. Mantén tu medio original a salvo y crea copias de seguridad de los datos importantes[1].
+> Etcher borrará completamente todos los datos de la unidad de destino. Siempre verifica que hayas seleccionado la unidad correcta antes de grabar. Mantén tu medio original seguro y crea copias de seguridad de los datos importantes[1].
 
 ## Paso 1: Descargar e instalar Etcher
 
@@ -31,7 +31,7 @@ balenaEtcher es una herramienta gratuita, de código abierto y multiplataforma d
 1. Visita el sitio web oficial de balenaEtcher en https://etcher.balena.io/
 2. Haz clic en el botón verde "Download Etcher"
 3. Selecciona la versión para Windows (se recomienda 64 bits para sistemas modernos)[6]
-4. Una vez descargado, localiza el instalador en tu carpeta de Descargas
+4. Una vez descargado, ubica el instalador en tu carpeta de Descargas
 5. Haz doble clic en el archivo del instalador y sigue el asistente de configuración
 6. Acepta el acuerdo de licencia y completa la instalación[6]
 
@@ -40,7 +40,7 @@ balenaEtcher es una herramienta gratuita, de código abierto y multiplataforma d
 #### Método AppImage (Recomendado)
 1. Descarga el AppImage de Linux desde el sitio web oficial[3]
 2. Navega a tu carpeta de Descargas en la terminal
-3. Haz ejecutable el archivo:
+3. Haz el archivo ejecutable:
    ```bash
    chmod +x balena-etcher-*.AppImage
    ```
@@ -51,7 +51,7 @@ balenaEtcher es una herramienta gratuita, de código abierto y multiplataforma d
 
 #### Método de instalación por paquete
 Para sistemas Ubuntu/Debian:
-1. Descarga el paquete .deb desde la página de lanzamientos[3]
+1. Descarga el paquete .deb desde la página de versiones[3]
 2. Instala usando:
    ```bash
    sudo dpkg -i balena-etcher_*.deb
@@ -63,29 +63,29 @@ Para sistemas Ubuntu/Debian:
 1. Descarga la versión para macOS desde el sitio web oficial
 2. Abre el archivo .dmg descargado
 3. Arrastra Etcher a tu carpeta de Aplicaciones
-4. Inícialo desde Aplicaciones o Spotlight
+4. Ejecútalo desde Aplicaciones o Spotlight
 
 ## Paso 2: Preparar tu archivo de imagen
 
 Antes de grabar, asegúrate de que tu imagen de SO esté lista:
 
-1. **Verifica la imagen**: Siempre verifica el checksum de las imágenes descargadas para garantizar su integridad
-2. **Extrae si es necesario**: Si tu imagen está comprimida (.zip, .gz, .xz), es posible que necesites extraerla primero (aunque Etcher puede manejar muchos formatos comprimidos directamente)
+1. **Verifica la imagen**: Siempre verifica el checksum de las imágenes descargadas para asegurar su integridad
+2. **Extrae si es necesario**: Si tu imagen está comprimida (.zip, .gz, .xz), es posible que debas extraerla primero (aunque Etcher puede manejar directamente muchos formatos comprimidos)
 3. **Verifica el tamaño de la imagen**: Asegúrate de que tu unidad de destino tenga capacidad suficiente para la imagen
 
-> **💡 Consejo profesional**
+> **💡 Consejo útil**
 > 
-> Si estás descargando desde una URL y la grabación falla, intenta descargar el archivo localmente primero y grabar desde el archivo en su lugar[1].
+> Si estás descargando desde una URL y la grabación falla, intenta descargar el archivo localmente primero y grabar desde el archivo[1].
 
 ## Paso 3: Grabar tu imagen
 
 ### Descripción general de la interfaz principal
 
-Cuando abres Etcher, verás una interfaz limpia de tres pasos:
+Al abrir Etcher, verás una interfaz limpia de tres pasos:
 
 `[Etcher Main Screen](etcher-main-screen.png)`
 
-La interfaz consiste en tres secciones principales:
+La interfaz consta de tres secciones principales:
 1. **Flash from file** - Selecciona tu imagen de SO
 2. **Select target** - Elige tu tarjeta SD o unidad USB  
 3. **Flash!** - Inicia el proceso de grabación
@@ -95,7 +95,7 @@ La interfaz consiste en tres secciones principales:
 #### Paso 3.1: Selecciona tu imagen
 
 1. Haz clic en "Flash from file" (el primer botón)[6]
-2. Navega a tu archivo de imagen de SO descargado
+2. Navega hasta tu archivo de imagen de SO descargado
 3. Selecciona el archivo de imagen (.iso, .img, etc.)
 4. Etcher mostrará el nombre y tamaño del archivo seleccionado
 
@@ -107,13 +107,13 @@ La interfaz consiste en tres secciones principales:
 2. Etcher detectará automáticamente las unidades disponibles
 3. Haz clic en "Select target" si no se seleccionó automáticamente
 4. **CUIDADOSAMENTE** verifica que hayas seleccionado la unidad correcta
-5. Revisa el tamaño y nombre de la unidad para confirmar que es el dispositivo correcto
+5. Comprueba el tamaño y nombre de la unidad para confirmar que es el dispositivo correcto
 
 > **⚠️ Verificación crítica de seguridad**
 > 
-> Revisa dos veces la selección de la unidad de destino. Escribir en la unidad incorrecta destruirá tus datos permanentemente. Busca el tamaño, fabricante y modelo de la unidad para confirmar el dispositivo correcto.
+> Revisa dos veces la selección de la unidad de destino. Escribir en la unidad equivocada destruirá tus datos permanentemente. Busca el tamaño, fabricante y modelo de la unidad para confirmar el dispositivo correcto.
 
-#### Paso 3.3: Inicia la grabación
+#### Paso 3.3: Iniciar la grabación
 
 1. Haz clic en el botón "Flash!" para comenzar el proceso[6]
 2. Etcher solicitará la contraseña de administrador/sudo si es necesario[6]
@@ -126,9 +126,9 @@ La interfaz consiste en tres secciones principales:
 
 Durante la grabación, Etcher realiza varias operaciones:
 
-1. **Preparación**: Desmonta la unidad de destino y se prepara para escribir
+1. **Preparación**: Desmonta la unidad de destino y se prepara para la escritura
 2. **Grabación**: Escribe los datos de la imagen sector por sector
-3. **Verificación**: Lee los datos escritos para garantizar la precisión[1]
+3. **Verificación**: Lee de nuevo los datos escritos para asegurar su exactitud[1]
 4. **Finalización**: Expulsa la unidad de forma segura al terminar
 
 ## Paso 4: Verificación posterior a la grabación
@@ -136,8 +136,8 @@ Durante la grabación, Etcher realiza varias operaciones:
 Después de una grabación exitosa:
 
 1. **Verifica el mensaje de finalización**: Busca el mensaje "Flash Complete!"
-2. **Remueve de forma segura**: Usa la función "Quitar de forma segura" de tu sistema operativo[2]
-3. **Prueba la unidad**: Arranca desde la unidad en el hardware de destino para verificar su funcionalidad
+2. **Expulsión segura**: Usa la función "Safely Remove" de tu sistema operativo[2]
+3. **Prueba la unidad**: Arranca desde la unidad en el hardware de destino para verificar su funcionamiento
 
 ## Problemas comunes y solución de problemas
 
@@ -145,17 +145,17 @@ Después de una grabación exitosa:
 
 Si encuentras fallos de grabación[7]:
 
-1. **Prueba diferente hardware**: Prueba con otra tarjeta SD, unidad USB o puerto USB
+1. **Prueba otro hardware**: Prueba con otra tarjeta SD, unidad USB o puerto USB
 2. **Verifica la calidad de la unidad**: Las unidades o adaptadores defectuosos son causas comunes
 3. **Desactiva funciones de Windows** (usuarios de Windows):
-   - Desactiva la indexación de Búsqueda de Windows para unidades extraíbles
-   - Agrega la clave de registro `DisableRemovableDriveIndexing` para prevenir interferencias del sistema[5]
+   - Desactiva la indexación de Windows Search para unidades extraíbles
+   - Agrega la clave de registro `DisableRemovableDriveIndexing` para evitar interferencias del sistema[5]
 
 ### Fallos de verificación
 
 Si la verificación falla constantemente[5]:
 
-1. **Usa un adaptador diferente**: Prueba un adaptador USB o lector de tarjetas diferente
+1. **Usa otro adaptador**: Prueba con un adaptador USB o lector de tarjetas diferente
 2. **Verifica los recursos del sistema**: Asegúrate de tener suficiente RAM y CPU disponibles
 3. **Descarga una imagen nueva**: Vuelve a descargar la imagen del SO en caso de corrupción
 
@@ -173,7 +173,7 @@ Para un mejor rendimiento:
 
 ## Opciones avanzadas
 
-### Uso de línea de comandos
+### Uso de la línea de comandos
 
 Para usuarios avanzados, Etcher ofrece funcionalidad de línea de comandos:
 
@@ -184,12 +184,12 @@ etcher --image path/to/image.img --drive /dev/sdX --yes
 
 ### Grabación por lotes
 
-Etcher permite grabar en múltiples unidades simultáneamente cuando hay varias unidades compatibles conectadas.
+Etcher admite la grabación simultánea en varias unidades cuando hay varias unidades compatibles conectadas.
 
 ## Consideraciones de seguridad
 
 1. **Verifica las fuentes**: Descarga imágenes de SO solo de fuentes oficiales
-2. **Verifica los checksums**: Siempre verifica la integridad de la imagen antes de grabar
+2. **Comprueba los checksums**: Siempre verifica la integridad de la imagen antes de grabar
 3. **Eliminación segura**: Borra adecuadamente las unidades que contengan datos sensibles antes de reutilizarlas
 4. **Control de acceso**: Limita el acceso a las herramientas de grabación en entornos compartidos
 
@@ -205,7 +205,7 @@ Después de grabar exitosamente tu imagen de SO:
 
 1. **Estandariza las imágenes**: Usa imágenes de SO consistentes y probadas en todas las implementaciones
 2. **Etiqueta las unidades**: Etiqueta claramente las unidades grabadas con la versión del SO y la fecha
-3. **Prueba antes de implementar**: Realiza pruebas de arranque en cada unidad grabada antes de la implementación en campo
+3. **Prueba antes de implementar**: Prueba el arranque de cada unidad grabada antes de la implementación en campo
 4. **Mantén una biblioteca de imágenes**: Conserva un repositorio de imágenes de SO verificadas y actualizadas
 5. **Documenta las configuraciones**: Registra las versiones de las imágenes y las personalizaciones de cada implementación
 

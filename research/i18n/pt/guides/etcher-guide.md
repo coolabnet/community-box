@@ -136,7 +136,7 @@ Durante a gravação, o Etcher executa várias operações:
 Após uma gravação bem-sucedida:
 
 1. **Verifique a Mensagem de Conclusão**: Procure pela mensagem "Flash Complete!"
-2. **Remova com Segurança**: Use a função "Remover com Segurança" do seu sistema operacional[2]
+2. **Remova com Segurança**: Use a função "Safely Remove" (Remover com Segurança) do seu sistema operacional[2]
 3. **Teste a Unidade**: Inicialize a partir da unidade no hardware de destino para verificar a funcionalidade
 
 ## Problemas Comuns e Solução de Problemas

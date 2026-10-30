@@ -1,19 +1,15 @@
 ---
 title: Preparação
 sourcePath: guides/recycled-preparation.md
-sourceHash: 2530d2ef46d16ed1
+sourceHash: 1ba0219d4fcbd386
 translatedBy: glm-4.6
----
-
----
-title: Preparação
 ---
 
 # Guia de Preparação de Computadores Reciclados
 
 ## Visão Geral
 
-Este guia abrangente fornece instruções passo a passo para limpeza física, redefinição e preparação de computadores reciclados para implantação como servidores. A preparação adequada garante desempenho ideal, confiabilidade e longevidade do hardware reaproveitado.
+Este guia completo fornece instruções passo a passo para limpeza física, redefinição e preparação de computadores reciclados para implantação como servidores. Uma preparação adequada garante desempenho ideal, confiabilidade e longevidade do hardware reaproveitado.
 
 ## Precauções de Segurança
 
@@ -21,32 +17,32 @@ Este guia abrangente fornece instruções passo a passo para limpeza física, re
 - [ ] **Desligar Completamente**: Desligue o equipamento e desconecte da tomada
 - [ ] **Descarregar o Botão de Energia**: Pressione e segure o botão de energia por 10 segundos após desconectar
 - [ ] **Aguardar Descarga dos Capacitores**: Aguarde 5-10 minutos antes de abrir o gabinete
-- [ ] **Remover Bateria**: Desconecte a bateria do laptop, se aplicável
+- [ ] **Remover a Bateria**: Desconecte a bateria do laptop, se aplicável
 - [ ] **Usar Proteção Antiestática**: Pulseira antiestática ou aterramento frequente
 
 ### Segurança Física
-- [ ] **Área de Trabalho**: Espaço de trabalho limpo, bem iluminado e livre de estática
-- [ ] **Proteção Ocular**: Óculos de segurança ao usar ar comprimido
+- [ ] **Área de Trabalho**: Espaço limpo, bem iluminado e livre de eletricidade estática
+- [ ] **Proteção Ocular**: Use óculos de segurança ao usar ar comprimido
 - [ ] **Ventilação**: Fluxo de ar adequado para remoção de poeira
-- [ ] **Arestas Cortantes**: Tenha cuidado com as bordas metálicas do gabinete
-- [ ] **Levantamento**: Técnicas adequadas de levantamento para equipamentos pesados
+- [ ] **Bordas Cortantes**: Tenha cuidado com as bordas metálicas do gabinete
+- [ ] **Levantamento de Peso**: Use técnicas adequadas para equipamentos pesados
 
 ### Considerações Ambientais
 - [ ] **Limpeza ao Ar Livre**: Use ar comprimido ao ar livre quando possível
 - [ ] **Contenção de Poeira**: Cubra equipamentos próximos durante a limpeza
-- [ ] **Descarte**: Descarte adequado dos materiais de limpeza e componentes removidos
+- [ ] **Descarte**: Descarte adequadamente os materiais de limpeza e componentes removidos
 
 ## Ferramentas e Materiais Necessários
 
 ### Ferramentas Essenciais
-- **Chaves de Fenda**: Jogo de pontas Phillips (#0, #1, #2)
+- **Chaves de Fenda**: Jogo Phillips (#0, #1, #2)
 - **Ar Comprimido**: Várias latas ou compressor de ar elétrico
 - **Materiais de Limpeza**: Álcool isopropílico (90%+), panos de microfibra
-- **Equipamento de Segurança**: Pulseira antiestática, óculos de segurança
+- **Equipamentos de Segurança**: Pulseira antiestática, óculos de segurança
 - **Organização**: Recipientes pequenos para parafusos, etiquetas para cabos
 
 ### Ferramentas Opcionais
-- **Pasta Térmica**: Arctic MX-4 ou equivalente para reinstalar o CPU
+- **Pasta Térmica**: Arctic MX-4 ou equivalente para refixar o CPU
 - **Abraçadeiras de Cabo**: Para melhorar o gerenciamento de cabos
 - **Chaves Torx**: Para alguns modelos de laptop
 - **Ferramentas de Alavanca Plásticas**: Para desmontagem de laptops
@@ -57,8 +53,8 @@ Este guia abrangente fornece instruções passo a passo para limpeza física, re
 |----------|---------|--------------|
 | Álcool Isopropílico 90%+ | Limpeza de componentes | Área bem ventilada |
 | Panos de Microfibra | Limpeza de superfícies | Sem fiapos, antiestático |
-| Cotonetes | Limpeza detalhada | Sem fibras de algodão deixadas para trás |
-| Ar Comprimido | Remoção de poeira | Mantenha as latas na vertical, jatos curtos |
+| Cotonetes | Limpeza de detalhes | Não deixar fibras de algodão |
+| Ar Comprimido | Remoção de poeira | Segurar as latas na vertical, rajadas curtas |
 | Pincel de Cerdas Macias | Poeira persistente | Prefira pincéis antiestáticos |
 
 ## Documentação Pré-Desmontagem
@@ -80,27 +76,27 @@ lscpu > cpu_info.txt      # CPU information
 ### Documentação Física
 1. **Fotografia**:
    - Fotos gerais do sistema de vários ângulos
-   - Close-ups das conexões de cabos
+   - Detalhes das conexões de cabos
    - Posicionamento dos componentes antes da remoção
    - Quaisquer danos ou configurações incomuns
 
 2. **Etiquetas e Marcações**:
-   - Registre números de modelo e números de série
-   - Anote quaisquer modificações personalizadas
-   - Documente os percursos de passagem dos cabos
+   - Anote os números de modelo e números de série
+   - Registre quaisquer modificações personalizadas
+   - Documente os trajetos de passagem dos cabos
    - Identifique componentes proprietários
 
 ## Desmontagem de Computador de Mesa
 
 ### Etapa 1: Preparação Externa
-1. **Desconecte Todos os Cabos**:
+1. **Desconectar Todos os Cabos**:
    - Cabo de alimentação
    - Cabos do monitor (VGA/HDMI/DisplayPort)
    - Dispositivos USB (teclado, mouse, etc.)
    - Cabo de rede
    - Cabos de áudio
 
-2. **Remova Componentes Externos**:
+2. **Remover Componentes Externos**:
    - Mídias ópticas das unidades
    - Dispositivos USB e cartões SD
    - Quaisquer acessórios conectados
@@ -108,72 +104,72 @@ lscpu > cpu_info.txt      # CPU information
 ### Etapa 2: Abertura do Gabinete
 1. **Remoção do Painel Lateral**:
    ```
-   Maioria dos gabinetes: Remova 2-4 parafusos de aperto manual no painel traseiro
+   Na maioria dos gabinetes: Remova 2-4 parafusos de aperto manual no painel traseiro
    Gabinetes sem ferramentas: Pressione as travas e deslize o painel
    Gabinetes antigos: Parafusos Phillips no painel traseiro
    ```
 
 2. **Verificação de Acesso**:
    - Garanta acesso livre a todos os componentes
-   - Remova ambos os painéis laterais se necessário
+   - Remova ambos os painéis laterais, se necessário
    - Verifique se há painéis de acesso adicionais
 
 ### Etapa 3: Ordem de Remoção dos Componentes
 
-#### Fonte de Alimentação (se precisar de substituição)
-1. **Desconecte Todos os Cabos de Alimentação**:
+#### Fonte de Alimentação (se precisar ser substituída)
+1. **Desconectar Todos os Cabos de Alimentação**:
    - Conector de 24 pinos da placa-mãe
    - Conector de alimentação do CPU de 4/8 pinos
    - Conectores de alimentação PCIe
    - Conectores de alimentação SATA
    - Conectores Molex
 
-2. **Remova a Fonte**:
-   - Desparafuse os 4 parafusos da parte traseira do gabinete
-   - Remova cuidadosamente a unidade
+2. **Remover a Fonte**:
+   - Desparafuse os 4 parafusos na parte traseira do gabinete
+   - Remova a unidade com cuidado
    - Anote a orientação para reinstalação
 
 #### Unidades de Armazenamento
 1. **Remoção dos Cabos SATA/Alimentação**:
    - Desconecte delicadamente os cabos de dados SATA
    - Remova os conectores de alimentação SATA
-   - Anote o percurso dos cabos para remontagem
+   - Anote o trajeto dos cabos para a remontagem
 
 2. **Remoção das Unidades**:
    ```
    HDDs de 3.5": 4 parafusos nas laterais da gaiola da unidade
-   SSDs de 2.5": 4 parafusos do suporte de fixação
+   SSDs de 2.5": 4 parafusos do suporte de montagem
    Unidades M.2: Um único parafuso e levantamento suave
    ```
 
 #### Placas de Expansão
-1. **Remova em Ordem**:
+1. **Remover em Ordem**:
    - Desparafuse os parafusos do suporte
    - Destrave as presilhas de retenção PCIe
-   - Levante cuidadosamente as placas em linha reta para cima
+   - Levante as placas cuidadosamente em linha reta para cima
    - Armazene em sacos antiestáticos
 
 #### Memória (RAM)
 1. **Processo de Remoção**:
-   - Pressione para baixo as presilhas de retenção em ambas as extremidades
-   - Os módulos de RAM vão se soltar em ângulo de 30 graus
-   - Puxe delicadamente os módulos em linha reta para fora
+   - Pressione as presilhas de retenção nas duas extremidades
+   - Os módulos de RAM vão saltar em um ângulo de 30 graus
+   - Puxe os módulos delicadamente em linha reta
    - Manuseie apenas pelas bordas
 
-#### Dissipador do CPU (se limpeza/substituição)
-1. **Remoção de Soquete Intel**:
+#### Dissipador do CPU (se limpar/substituir)
+1. **Remoção em Soquete Intel**:
    ```
-   Coolers de pino-pressão: Gire os pinos 90° no sentido anti-horário, puxe para cima
-   Coolers aparafusados: Remova os parafusos em padrão X
-   ```
-
-2. **Remoção de Soquete AMD**:
-   ```
-   Retenção por clipe: Levante a alavanca de retenção, deslize o cooler para fora
-   Aparafusado: Remova os parafusos em padrão estrela
+   Coolers de pino de pressão: Gire os pinos 90° no sentido anti-horário, puxe para cima
+   Coolers parafusados: Remova os parafusos em padrão X
    ```
 
-**⚠️ Aviso**: O CPU pode ficar preso ao dissipador devido à pasta térmica
+2. **Remoção em Soquete AMD**:
+   ```
+   Retenção por clipe: Levante o braço de retenção, deslize o cooler para fora
+   Parafusado: Remova os parafusos em padrão estrela
+   ```
+
+**⚠️ Aviso**: O CPU pode ficar grudado no dissipador devido à pasta térmica
 
 ## Desmontagem de Laptop
 
@@ -186,44 +182,44 @@ lscpu > cpu_info.txt      # CPU information
 
 2. **Limpeza Externa**:
    - Remova quaisquer dispositivos conectados
-   - Limpe o exterior com pano de microfibra levemente umedecido
+   - Limpe o exterior com um pano de microfibra levemente umedecido
    - Preste atenção às áreas das portas
 
 ### Etapa 2: Remoção do Painel de Acesso
 1. **Acesso pelo Painel Inferior**:
    ```
    Notebooks modernos: Remova todos os parafusos visíveis da parte inferior
-   Notebooks antigos: Podem ter múltiplos painéis de acesso
-   Alguns modelos: Requerem remoção do teclado ou do descanso de palmas primeiro
+   Notebooks antigos: Podem ter vários painéis de acesso
+   Alguns modelos: Requerem remoção do teclado ou do repouso de palmas primeiro
    ```
 
 2. **Gerenciamento de Parafusos**:
-   - Use recipientes pequenos para diferentes tipos de parafusos
+   - Use recipientes pequenos para diferentes tipos de parafuso
    - Alguns laptops usam parafusos de comprimentos diferentes
-   - Tire fotos das posições dos parafusos
+   - Fotografe as posições dos parafusos
 
 ### Etapa 3: Acesso aos Componentes
 
 #### Memória e Armazenamento
 1. **Módulos de RAM**:
    - Geralmente acessíveis pelo painel inferior
-   - Solte as presilhas e os módulos se soltam em ângulo
+   - Libere as presilhas e os módulos saltam em ângulo
    - Remova com cuidado puxando pelas bordas
 
 2. **Unidades de Armazenamento**:
    ```
    SATA de 2.5": Remova os parafusos do suporte, desconecte o cabo
    M.2 NVMe: Remova o único parafuso, levante em ângulo
-   mSATA: Similar ao M.2, mas com formato menor
+   mSATA: Semelhante ao M.2, mas com formato menor
    ```
 
 #### Desmontagem Avançada (se necessário)
-**Observação**: Prossiga apenas se tiver experiência em reparo de laptops
+**Observação**: Prossiga apenas se tiver experiência com reparos em laptops
 
 1. **Remoção do Teclado**:
-   - Solte as presilhas ou remova os parafusos
+   - Libere as presilhas ou remova os parafusos
    - Desconecte os cabos flat com cuidado
-   - Alguns modelos exigem remover o descanso de palmas primeiro
+   - Alguns modelos exigem remover o apoio de palmas primeiro
 
 2. **Conjunto da Tela**:
    - Remova os parafusos das dobradiças
@@ -236,29 +232,29 @@ lscpu > cpu_info.txt      # CPU information
 1. **Preparação**:
    - Leve o equipamento para fora ou para uma área bem ventilada
    - Use óculos de segurança
-   - Mantenha as latas de ar comprimido na vertical
-   - Use jatos curtos (2-3 segundos)
+   - Segure as latas de ar comprimido na vertical
+   - Use rajadas curtas (2-3 segundos)
 
 2. **Ordem de Limpeza**:
    ```
    1. Fonte de alimentação (se acessível)
-   2. Dissipador e cooler do CPU
-   3. Dissipador e cooler da placa de vídeo
-   4. Cooler do gabinete (segure as pás do cooler enquanto sopra)
+   2. Dissipador e ventoinha do CPU
+   3. Dissipador e ventoinha da placa de vídeo
+   4. Ventoinhas do gabinete (segure as pás da ventoinha enquanto sopra ar)
    5. Componentes da placa-mãe
    6. Slots de placas de expansão
    7. Baias de unidades e conectores
    ```
 
-3. **Protocolo de Limpeza das Ventoinhas**:
+3. **Protocolo de Limpeza de Ventoinhas**:
    ```
-   ⚠️ CRÍTICO: Mantenha as pás do cooler paradas durante a limpeza
-   - Ar comprimido pode girar os coolers acima do RPM nominal
-   - Giro excessivo pode danificar os rolamentos
-   - Use um cotonete para segurar o centro do cooler se necessário
+   ⚠️ CRÍTICO: Mantenha as pás da ventoinha paradas durante a limpeza
+   - Ar comprimido pode girar as ventoinhas além do RPM nominal
+   - Girar demais pode danificar os rolamentos
+   - Use um cotonete para segurar o centro da ventoinha, se necessário
    ```
 
-### Limpeza Detalhada
+### Limpeza de Detalhes
 
 #### Limpeza da Placa-Mãe
 1. **Limpeza de Superfície**:
@@ -269,9 +265,9 @@ lscpu > cpu_info.txt      # CPU information
 
 2. **Limpeza de Conectores**:
    ```
-   Slots de RAM: Ar comprimido, escova macia
-   Slots PCIe: Somente ar comprimido
-   Soquete do CPU: Ar comprimido, extremo cuidado
+   Slots de RAM: Ar comprimido, escova suave
+   Slots PCIe: Apenas ar comprimido
+   Soquete do CPU: Ar comprimido, cuidado extremo
    Conectores de alimentação: Álcool isopropílico nos contatos
    ```
 
@@ -279,19 +275,19 @@ lscpu > cpu_info.txt      # CPU information
 1. **Remoção de Poeira**:
    - Ar comprimido de vários ângulos
    - Escove o acúmulo de poeira persistente
-   - Garanta que todas as passagens entre as aletas estejam livres
+   - Garanta que todas as passagens das aletas estejam livres
 
-2. **Remoção da Pasta Térmica** (se reinstalar o CPU):
+2. **Remoção da Pasta Térmica** (se refixar o CPU):
    ```
    Materiais: Álcool isopropílico 90%+, filtros de café
    Processo: 
    1. Remova a pasta antiga com espátula de plástico
    2. Limpe com pano embebido em álcool
    3. Limpeza final com filtro de café
-   4. Garanta que esteja completamente seco antes da nova pasta
+   4. Garanta secagem completa antes da nova pasta
    ```
 
-### Limpeza do Gabinete e Exterior
+### Limpeza do Gabinete e Externa
 
 #### Limpeza Interna do Gabinete
 1. **Remoção de Poeira**:
@@ -309,7 +305,7 @@ lscpu > cpu_info.txt      # CPU information
    ```
    Solução: Sabão neutro e água ou álcool isopropílico
    Método: Pano úmido, não encharcado
-   Secagem: Secagem imediata com pano limpo
+   Secagem: Secar imediatamente com pano limpo
    ```
 
 2. **Superfícies Metálicas**:
@@ -319,12 +315,12 @@ lscpu > cpu_info.txt      # CPU information
    Acabamento: Seque imediatamente para evitar manchas de água
    ```
 
-## Teste e Substituição de Componentes
+## Testes e Substituição de Componentes
 
 ### Testes de Componentes Antes da Limpeza
 1. **Inspeção Visual**:
    - Procure capacitores estufados
-   - Verifique marcas de queimadura ou descoloração
+   - Verifique marcas de queimado ou descoloração
    - Inspecione os cabos quanto a danos
    - Verifique a integridade das pás das ventoinhas
 
@@ -332,49 +328,49 @@ lscpu > cpu_info.txt      # CPU information
    - Teste a inicialização do sistema antes da desmontagem completa
    - Verifique se todas as ventoinhas giram
    - Verifique se há ruídos incomuns
-   - Monitore as temperaturas se possível
+   - Monitore as temperaturas, se possível
 
 ### Verificação Após a Limpeza
-1. **Reinstalação dos Componentes**:
+1. **Reencaixe de Componentes**:
    - RAM: Pressão firme e uniforme até as presilhas encaixarem
-   - Placas PCIe: Pressione para baixo até a presilha de retenção estalar
+   - Placas PCIe: Pressione para baixo até a presilha de retenção clicar
    - Conectores de alimentação: Conexão firme, presilhas de retenção encaixadas
-   - Cabos SATA: Conexão delicada, porém segura
+   - Cabos SATA: Conexão delicada, mas segura
 
 2. **Gerenciamento de Cabos**:
    - Afaste os cabos das ventoinhas
-   - Fixe os cabos soltos com abraçadeiras
+   - Prenda os cabos soltos com abraçadeiras
    - Garanta que nenhum cabo obstrua o fluxo de ar
-   - Verifique se todas as conexões estão seguras
+   - Verifique se todas as conexões estão firmes
 ## Procedimentos de Reset do BIOS/CMOS
 
 ### Quando Fazer Reset do BIOS
-- Senhas do BIOS desconhecidas
+- Senhas de BIOS desconhecidas
 - Configurações do BIOS corrompidas
 - Problemas de compatibilidade de hardware
-- Instabilidade após troca de componentes
+- Instabilidade após mudanças de componentes
 
 ### Substituição da Bateria CMOS
 1. **Localização da Bateria**:
    ```
-   Desktop: Normalmente visível na placa-mãe (CR2032)
-   Notebook: Pode estar sob o teclado ou em painel acessível
+   Desktop: Geralmente visível na placa-mãe (CR2032)
+   Notebook: Pode estar sob o teclado ou em um painel de acesso
    ```
 
 2. **Processo de Substituição**:
    ```
-   1. Desligue completamente e desconecte o sistema
+   1. Desligue completamente o sistema e desconecte da tomada
    2. Remova a bateria CMOS (observe a orientação)
    3. Aguarde 5-10 minutos para descarga completa
-   4. Instale a nova bateria (mantenha a orientação)
-   5. Ligue o sistema e configure a BIOS
+   4. Instale a bateria nova (respeitando a orientação)
+   5. Ligue o sistema e configure o BIOS
    ```
 
 ### Reset via Jumper CMOS (Desktop)
 1. **Localizar o Jumper CMOS**:
-   - Geralmente rotulado como "CLRTC", "CLEAR" ou "JBAT1"
-   - Próximo à bateria CMOS ou ao chip do BIOS
-   - Consulte o manual da placa-mãe em caso de dúvida
+   - Geralmente rotulado "CLRTC", "CLEAR", ou "JBAT1"
+   - Próximo à bateria CMOS ou chip do BIOS
+   - Consulte o manual da placa-mãe se houver dúvida
 
 2. **Processo de Reset**:
    ```
@@ -394,15 +390,15 @@ lscpu > cpu_info.txt      # CPU information
    4. Reinstale a bateria e ligue o sistema
    ```
 
-2. **Botão da Placa-Mãe** (sistemas mais novos):
-   - Algumas placas têm botão dedicado de reset do CMOS
+2. **Botão da Placa-Mãe** (sistemas mais recentes):
+   - Algumas placas possuem botão dedicado de reset do CMOS
    - Pressione o botão com o sistema desligado
-   - Não é necessária manipulação de jumpers
+   - Não é necessário manipular jumpers
 
 ## Checklist de Controle de Qualidade
 
 ### Verificação Prévia à Remontagem
-- [ ] Todos os componentes completamente limpos
+- [ ] Todos os componentes totalmente limpos
 - [ ] Nenhum componente danificado identificado
 - [ ] Pasta térmica substituída (se a CPU foi removida)
 - [ ] Todos os cabos e conectores limpos
@@ -410,17 +406,17 @@ lscpu > cpu_info.txt      # CPU information
 - [ ] Precauções antiestáticas mantidas
 
 ### Checklist de Remontagem
-- [ ] Componentes instalados em ordem inversa à remoção
-- [ ] Todos os parafusos devidamente apertados (sem apertar demais)
+- [ ] Componentes instalados na ordem inversa da remoção
+- [ ] Todos os parafusos corretamente apertados (sem apertar demais)
 - [ ] Cabos organizados para fluxo de ar otimizado
-- [ ] Nenhum cabo solto perto dos ventiladores
+- [ ] Nenhum cabo solto perto das ventoinhas
 - [ ] Todas as conexões de energia firmes
 - [ ] Memória RAM e placas de expansão totalmente encaixadas
 
-### Teste Inicial de Ligação
+### Teste Inicial de Ligamento
 - [ ] Sistema liga normalmente
-- [ ] Todos os ventiladores girando (CPU, gabinete, GPU)
-- [ ] Sem ruídos ou cheiros incomuns
+- [ ] Todas as ventoinhas girando (CPU, gabinete, GPU)
+- [ ] Nenhum ruído ou cheiro estranho
 - [ ] POST concluído com sucesso
 - [ ] Todos os componentes detectados no BIOS
 - [ ] Leituras de temperatura normais
@@ -428,7 +424,7 @@ lscpu > cpu_info.txt      # CPU information
 ## Problemas Comuns e Soluções
 
 ### Sistema Não Liga
-**Possíveis Causas**:
+**Causas Possíveis**:
 - Conexões de energia frouxas
 - RAM incorretamente encaixada
 - Conectores do painel frontal desconectados
@@ -441,32 +437,32 @@ lscpu > cpu_info.txt      # CPU information
 4. Teste com configuração mínima
 
 ### Superaquecimento Após a Limpeza
-**Possíveis Causas**:
+**Causas Possíveis**:
 - Pasta térmica não aplicada corretamente
-- Cooler da CPU não devidamente encaixado
-- Ventiladores não conectados
-- Caminhos de fluxo de ar bloqueados
+- Cooler da CPU não corretamente assentado
+- Ventoinhas não conectadas
+- Fluxo de ar bloqueado
 
 **Soluções**:
 1. Verifique a fixação do cooler da CPU
-2. Verifique a aplicação da pasta térmica
-3. Confirme todas as conexões dos ventiladores
-4. Verifique a orientação dos ventiladores do gabinete
+2. Confira a aplicação da pasta térmica
+3. Confirme todas as conexões das ventoinhas
+4. Verifique a orientação das ventoinhas do gabinete
 
 ### Problemas de Boot
-**Possíveis Causas**:
+**Causas Possíveis**:
 - Reset do BIOS necessário
 - Dispositivo de boot não detectado
 - Conexões de armazenamento frouxas
 - Setor de boot corrompido
 
 **Soluções**:
-1. Restaure o BIOS para os padrões
+1. Restaure o BIOS para os padrões de fábrica
 2. Verifique as conexões dos dispositivos de armazenamento
-3. Verifique a ordem de boot no BIOS
+3. Confira a ordem de boot no BIOS
 4. Teste com outro dispositivo de armazenamento
 
-## Documentação e Rotulagem
+## Documentação e Etiquetagem
 
 ### Documentação do Sistema
 1. **Criar Registro de Serviço**:
@@ -485,9 +481,9 @@ lscpu > cpu_info.txt      # CPU information
    - Fotos da configuração dos componentes
 
 ### Rastreamento de Componentes
-1. **Gerenciamento de Inventário**:
-   - Rotule os componentes removidos
-   - Rastreie os números de série dos componentes
+1. **Gestão de Inventário**:
+   - Etiquete os componentes removidos
+   - Registre os números de série dos componentes
    - Anote informações de compatibilidade
    - Registre os resultados dos testes de desempenho
 
@@ -501,17 +497,17 @@ lscpu > cpu_info.txt      # CPU information
 
 ### Otimização do Sistema
 1. **Configuração do BIOS**:
-   - Ative as configurações ideais para uso como servidor
+   - Ative as configurações otimizadas para uso como servidor
    - Configure as prioridades de boot
    - Ative os recursos de virtualização
    - Defina as opções de gerenciamento de energia
 
 2. **Burn-In de Hardware**:
    ```
-   Teste de Estresse do CPU: 4-8 horas com 100% de carga
-   Teste de Memória: Passagem completa no MemTest86+
-   Teste de Armazenamento: Teste de resistência de leitura/escrita
-   Monitoramento de Temperatura: Durante todos os testes
+   CPU Stress Test: 4-8 hours at 100% load
+   Memory Test: Full MemTest86+ pass
+   Storage Test: Read/write endurance test
+   Temperature Monitoring: Throughout all tests
    ```
 
 ### Preparação para Implantação
@@ -523,11 +519,11 @@ lscpu > cpu_info.txt      # CPU information
 
 ## Próximos Passos
 
-1. **Configuração do BIOS**: Configure as configurações de BIOS/UEFI para operação como servidor
+1. **Configuração do BIOS**: Configure as opções do BIOS/UEFI para operação como servidor
 2. **Verificação de Compatibilidade**: Consulte [Verificação de Compatibilidade de Hardware](hardware-compatibility-check.md)
 3. **Requisitos do Sistema**: Confirme [Requisitos para PCs Reciclados](recycled-pc-requirements.md)
 4. **Seleção de Modelos**: Consulte [Comparação de Modelos Reciclados](recycled-models-comparison.md)
 
 ---
 
-*Este guia de preparação garante que computadores reciclados sejam devidamente limpos, testados e estejam prontos para implantação confiável como servidor. Sempre priorize a segurança e dedique tempo para fazer o trabalho corretamente.*
+*Este guia de preparação garante que computadores reciclados estejam devidamente limpos, testados e prontos para implantação confiável como servidor. Sempre priorize a segurança e reserve tempo para fazer o trabalho corretamente.*

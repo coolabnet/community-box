@@ -1,5 +1,5 @@
 ---
-title: Verificación de compatibilidad
+title: Verificación de Compatibilidad
 sourcePath: guides/hardware-compatibility-check.md
 sourceHash: 19c6e673b1561c82
 translatedBy: glm-4.6
@@ -9,7 +9,7 @@ translatedBy: glm-4.6
 
 ## Descripción General
 
-Esta guía proporciona procedimientos completos para verificar y probar la compatibilidad de componentes en computadoras recicladas antes de desplegarlas como servidores comunitarios. Las pruebas adecuadas de compatibilidad previenen problemas de despliegue y garantizan un funcionamiento estable.
+Esta guía proporciona procedimientos completos para verificar y probar la compatibilidad de componentes en computadoras recicladas antes de desplegarlas como servidores comunitarios. Una prueba de compatibilidad adecuada previene problemas de despliegue y garantiza un funcionamiento estable.
 
 ## Preparación Prevía a las Pruebas
 
@@ -17,18 +17,18 @@ Esta guía proporciona procedimientos completos para verificar y probar la compa
 - [ ] Documentar todos los componentes de hardware visibles
 - [ ] Tomar fotos de la configuración actual
 - [ ] Registrar números de modelo y números de serie
-- [ ] Verificar si hay daños físicos evidentes
-- [ ] Comprobar que todos los cables y conexiones estén presentes
+- [ ] Revisar daños físicos evidentes
+- [ ] Verificar que todos los cables y conexiones estén presentes
 - [ ] Asegurar un espacio de trabajo adecuado y herramientas disponibles
 
 ### Herramientas y Software Requeridos
 - **Herramientas de Hardware**:
-  - Juego de destornilladores de cabeza Phillips
+  - Juego de destornilladores Phillips
   - Pulsera antiestática
   - Multímetro digital
-  - Lata de aire comprimido
-  - Pasta térmica (si es necesaria)
-  - Componentes de repuesto en buen estado conocidos para pruebas
+  - Aire comprimido en lata
+  - Pasta térmica (si es necesario)
+  - Componentes de repuesto en buen estado para pruebas
 
 - **Herramientas de Software**:
   - USB booteable con herramientas de diagnóstico
@@ -38,26 +38,26 @@ Esta guía proporciona procedimientos completos para verificar y probar la compa
   - Prime95 o software de pruebas de estrés
   - Utilidades de diagnóstico del fabricante del hardware
 
-## Verificación de Compatibilidad del CPU
+## Verificación de Compatibilidad de CPU
 
 ### Compatibilidad de Socket y Chipset
-1. **Identificar el CPU Actual**:
+1. **Identificar la CPU Actual**:
    - Usar CPU-Z para identificar el modelo exacto
    - Verificar el tipo de socket (LGA1151, AM4, etc.)
-   - Comprobar la compatibilidad del chipset
+   - Verificar la compatibilidad del chipset
 
-2. **Verificar Opciones de Actualización**:
+2. **Revisar Opciones de Actualización**:
    ```
-   Formato de búsqueda: "[Motherboard Model] CPU compatibility list"
-   Ejemplo: "Dell OptiPlex 7050 supported CPU list"
+   Search Format: "[Motherboard Model] CPU compatibility list"
+   Example: "Dell OptiPlex 7050 supported CPU list"
    ```
 
-3. **Verificación de Soporte del BIOS**:
-   - Verificar la versión actual del BIOS
-   - Comprobar si el CPU requiere actualización del BIOS
-   - Descargar el BIOS más reciente del fabricante
+3. **Verificación de Soporte de BIOS**:
+   - Revisar la versión actual del BIOS
+   - Verificar si la CPU requiere una actualización del BIOS
+   - Descargar el último BIOS del fabricante
 
-### Procedimiento de Prueba del CPU
+### Procedimiento de Prueba de CPU
 ```bash
 # Basic CPU Information
 lscpu                    # Linux command
@@ -70,9 +70,9 @@ stress -c 4 -t 1800     # Linux stress test
 
 ### Validación de Rendimiento
 - [ ] Todos los núcleos detectados correctamente
-- [ ] Frecuencias de operación dentro de las especificaciones
-- [ ] La temperatura se mantiene por debajo de 80°C bajo carga
-- [ ] No se detecta limitación térmica
+- [ ] Frecuencias de operación dentro de especificación
+- [ ] Temperatura por debajo de 80°C bajo carga
+- [ ] Sin throttling térmico detectado
 - [ ] Funciones de virtualización habilitadas (si es necesario)
 
 ## Pruebas de Compatibilidad de Memoria (RAM)
@@ -81,11 +81,11 @@ stress -c 4 -t 1800     # Linux stress test
 
 | Factor | Método de Verificación | Requisitos |
 |--------|--------------|--------------|
-| Tipo | Inspección física/CPU-Z | DDR3/DDR4 compatible con la placa madre |
-| Velocidad | Configuración BIOS/UEFI | Compatible con CPU y placa madre |
-| Capacidad | Propiedades del sistema | Dentro del máximo de la placa madre |
-| Temporización | Pruebas de estrés de memoria | Estable a las velocidades nominales |
-| ECC | Documentación del hardware | Compatible con soporte ECC de la placa madre |
+| Tipo | Inspección física/CPU-Z | DDR3/DDR4 que coincida con la placa base |
+| Velocidad | Configuración BIOS/UEFI | Compatible con CPU y placa base |
+| Capacidad | Propiedades del sistema | Dentro del máximo de la placa base |
+| Timing | Pruebas de estrés de memoria | Estable a las velocidades nominales |
+| ECC | Documentación del hardware | Compatible con soporte ECC de la placa base |
 
 ### Protocolo de Pruebas de Memoria
 
@@ -117,16 +117,16 @@ memtester 1024M 5    # Test 1GB, 5 iterations
 
 ### Matriz de Compatibilidad de Memoria
 
-| Generación de Placa Madre | Tipos Compatibles | Capacidad Máxima | Velocidades |
+| Generación de Placa Base | Tipos Compatibles | Capacidad Máxima | Velocidades |
 |----------------------|----------------|--------------|---------|
-| Intel 6ª-8ª Gen | DDR4 | 32-64 GB | 2133-2666 MHz |
-| Intel 4ª-5ª Gen | DDR3/DDR3L | 16-32 GB | 1333-1600 MHz |
+| Intel 6.ª-8.ª Gen | DDR4 | 32-64 GB | 2133-2666 MHz |
+| Intel 4.ª-5.ª Gen | DDR3/DDR3L | 16-32 GB | 1333-1600 MHz |
 | AMD AM4 | DDR4 | 64-128 GB | 2133-3200 MHz |
 | AMD FM2+ | DDR3 | 32 GB | 1333-2133 MHz |
 
 ## Evaluación de Compatibilidad de Almacenamiento
 
-### Verificación de Compatibilidad de Interfaz
+### Verificación de Compatibilidad de Interfaces
 
 #### Compatibilidad SATA
 ```bash
@@ -169,14 +169,14 @@ devmgmt.msc (Device Manager > IDE ATA/ATAPI controllers)
 
 ### Matriz de Compatibilidad de Almacenamiento
 
-| Interfaz | Velocidad | Intercambio en Caliente | Soporte de Arranque | Uso Recomendado |
+| Interfaz | Velocidad | Hot-Swap | Soporte de Arranque | Uso Recomendado |
 |-----------|--------|----------|--------------|-----------------|
 | SATA III | 6 Gbps | Sí* | Sí | Almacenamiento principal |
 | SATA II | 3 Gbps | Sí* | Sí | Almacenamiento secundario |
 | NVMe | 32 Gbps | No | Sí** | Unidad de arranque/sistema |
 | USB 3.0 | 5 Gbps | Sí | Limitado | Externo/respaldo |
 
-*Requiere un chasis con capacidad de intercambio en caliente
+*Requiere chasis con capacidad de hot-swap
 **Requiere firmware UEFI
 
 ## Pruebas de Componentes de Red
@@ -209,22 +209,22 @@ devmgmt.msc (Network adapters)
    ```
 
 ### Compatibilidad Inalámbrica (si aplica)
-- **Disponibilidad de Controladores**: Verificar soporte de controladores Linux/Windows
+- **Disponibilidad de Controladores**: Verificar soporte de drivers en Linux/Windows
 - **Soporte de Estándares**: 802.11n mínimo (802.11ac preferido)
-- **Funciones Empresariales**: Soporte WPA2-Enterprise, 802.1X
+- **Funciones Empresariales**: Soporte de WPA2-Enterprise, 802.1X
 
 ## Compatibilidad de la Fuente de Alimentación
 
 ### Cálculo de Requisitos de Energía
 
-| Componente | Consumo Típico | Consumo de Gama Alta |
+| Componente | Consumo Típico | Consumo de Alto Rendimiento |
 |-----------|-------------------|-------------------|
-| Intel i5 CPU | 65W | 95W |
-| Intel i7 CPU | 65W | 125W |
-| DDR4 RAM (8GB) | 3W | 5W |
+| CPU Intel i5 | 65W | 95W |
+| CPU Intel i7 | 65W | 125W |
+| RAM DDR4 (8GB) | 3W | 5W |
 | SSD 2.5" | 2W | 3W |
 | HDD 3.5" | 6W | 10W |
-| Placa madre | 25W | 35W |
+| Placa base | 25W | 35W |
 | Tarjeta de red | 5W | 10W |
 
 ### Protocolo de Pruebas de la PSU
@@ -244,8 +244,8 @@ devmgmt.msc (Network adapters)
 
 ### Requisitos de Compatibilidad de la PSU
 - **Potencia**: 150% del consumo máximo calculado
-- **Eficiencia**: 80 PLUS Bronze como mínimo
-- **Conectores**: Compatibles con los requisitos de la placa madre y el almacenamiento
+- **Eficiencia**: 80 PLUS Bronze mínimo
+- **Conectores**: Coincidir con los requisitos de la placa base y el almacenamiento
 - **Factor de Forma**: Compatibilidad ATX/SFX con el chasis
 
 ## Compatibilidad de Tarjetas de Expansión
@@ -263,26 +263,26 @@ lspci -vvv | grep LnkCap
 ### Pruebas de Tarjetas de Expansión Comunes
 
 #### Tarjetas de Interfaz de Red
-- **Compatibilidad de Controladores**: Soporte del sistema operativo
+- **Compatibilidad de Drivers**: Soporte del sistema operativo
 - **Rendimiento**: Gigabit como mínimo
-- **Funciones**: Soporte VLAN, jumbo frames
+- **Funciones**: Soporte de VLAN, jumbo frames
 
-#### Controladores de Almacenamiento
+#### Controladoras de Almacenamiento
 - **Soporte RAID**: RAID por hardware vs. software
 - **Compatibilidad de Unidades**: Matriz de soporte SATA/SAS
 - **Rendimiento**: Pruebas de referencia de IOPs y throughput
 
 ## Verificación de Gestión Térmica
 
-### Evaluación del Sistema de Enfriamiento
-1. **Verificación del Funcionamiento de los Ventiladores**:
+### Evaluación del Sistema de Refrigeración
+1. **Verificación del Funcionamiento de Ventiladores**:
    ```bash
    # Monitor fan speeds
    sensors
    pwmconfig          # Configure PWM fan control
    ```
 
-2. **Monitoreo de Temperatura**:
+2. **Monitoreo de Temperaturas**:
    ```bash
    # Continuous temperature monitoring
    watch sensors
@@ -290,10 +290,10 @@ lspci -vvv | grep LnkCap
    ```
 
 ### Protocolo de Pruebas Térmicas
-- **Temperaturas en Reposo**: < 40°C para el CPU
-- **Temperaturas bajo Carga**: < 80°C para el CPU bajo estrés
+- **Temperaturas en Reposo**: < 40°C para la CPU
+- **Temperaturas bajo Carga**: < 80°C para la CPU bajo estrés
 - **Respuesta de Ventiladores**: Ajuste automático de velocidad según la temperatura
-- **Limitación Térmica**: Sin throttling bajo cargas normales de servidor
+- **Throttling Térmico**: Sin throttling bajo cargas normales de servidor
 
 ## Automatización de Pruebas de Compatibilidad
 
@@ -351,119 +351,119 @@ Get-WmiObject -Class Win32_NetworkAdapter | Where-Object {$_.NetEnabled -eq $tru
 
 ### Plantilla de Resultados de Pruebas
 ```
-Resultados de Pruebas de Compatibilidad de Hardware
+Hardware Compatibility Test Results
 =====================================
-Fecha: ___________
-Técnico: ___________
-Modelo del Sistema: ___________
+Date: ___________
+Technician: ___________
+System Model: ___________
 
-Compatibilidad de CPU:
-[ ] Coincidencia de socket confirmada
-[ ] Soporte de BIOS verificado
-[ ] Prueba de estrés aprobada (30 min)
-[ ] Todos los núcleos operativos
-Notas: ________________________
+CPU Compatibility:
+[ ] Socket match confirmed
+[ ] BIOS support verified
+[ ] Stress test passed (30 min)
+[ ] All cores operational
+Notes: ________________________
 
-Compatibilidad de Memoria:
-[ ] Coincidencia de tipo (DDR3/DDR4)
-[ ] Velocidad soportada
-[ ] Todos los slots funcionales
-[ ] MemTest86+ aprobado (2 ciclos)
-Notas: ________________________
+Memory Compatibility:
+[ ] Type match (DDR3/DDR4)
+[ ] Speed supported
+[ ] All slots functional
+[ ] MemTest86+ passed (2 cycles)
+Notes: ________________________
 
-Compatibilidad de Almacenamiento:
-[ ] Interfaz soportada (SATA/NVMe)
-[ ] Soporte de arranque en BIOS
-[ ] Verificación de salud aprobada
-[ ] Rendimiento adecuado
-Notas: ________________________
+Storage Compatibility:
+[ ] Interface supported (SATA/NVMe)
+[ ] BIOS boot support
+[ ] Health check passed
+[ ] Performance adequate
+Notes: ________________________
 
-Compatibilidad de Red:
-[ ] Driver disponible
-[ ] Velocidad Gigabit confirmada
-[ ] Autonegociación funcionando
-[ ] Prueba de cable aprobada
-Notas: ________________________
+Network Compatibility:
+[ ] Driver available
+[ ] Gigabit speed confirmed
+[ ] Auto-negotiation working
+[ ] Cable test passed
+Notes: ________________________
 
-Fuente de Alimentación:
-[ ] Vataje adecuado
-[ ] Todos los voltajes estables
-[ ] Prueba de carga aprobada
-[ ] Eficiencia aceptable
-Notas: ________________________
+Power Supply:
+[ ] Wattage adequate
+[ ] All voltages stable
+[ ] Load test passed
+[ ] Efficiency acceptable
+Notes: ________________________
 
-Evaluación Final:
-[ ] Todos los componentes compatibles
-[ ] Sistema listo para implementación
-[ ] Requiere reemplazo de componente: ________
-[ ] No apto para uso como servidor
+Final Assessment:
+[ ] All components compatible
+[ ] System ready for deployment
+[ ] Requires component replacement: ________
+[ ] Not suitable for server use
 
-Firma: ___________________
+Signature: ___________________
 ```
 
 ## Solución de Problemas Comunes
 
 ### Problemas de Compatibilidad de Memoria
-**Síntomas**: El sistema no arranca, fallas aleatorias, pantallas azules
+**Síntomas**: El sistema no arranca, fallos aleatorios, pantallas azules
 **Soluciones**:
 - Probar los módulos de memoria individualmente
-- Verificar los tipos de memoria compatibles en el manual de la placa madre
-- Actualizar el BIOS a la versión más reciente
-- Ajustar la temporización de memoria en el BIOS
-- Usar memoria de la QVL (Qualified Vendor List) de la placa madre
+- Verificar los tipos de memoria compatibles en el manual de la placa base
+- Actualizar el BIOS a la última versión
+- Ajustar el timing de memoria en el BIOS
+- Usar memoria de la QVL (Qualified Vendor List) de la placa base
 
 ### Problemas de Compatibilidad de Almacenamiento
 **Síntomas**: Unidad no detectada, rendimiento lento, fallos de arranque
 **Soluciones**:
 - Verificar el modo SATA (AHCI vs IDE) en el BIOS
 - Revisar las conexiones de cables y probar diferentes puertos SATA
-- Actualizar los controladores del controlador de almacenamiento
+- Actualizar los controladores de la controladora de almacenamiento
 - Habilitar el soporte NVMe en el BIOS para unidades M.2
-- Buscar actualizaciones de firmware para los dispositivos de almacenamiento
+- Verificar actualizaciones de firmware en los dispositivos de almacenamiento
 
 ### Problemas de Compatibilidad de Red
-**Síntomas**: Sin conectividad de red, velocidades limitadas, problemas de controladores
+**Síntomas**: Sin conectividad de red, velocidades limitadas, problemas de drivers
 **Soluciones**:
-- Descargar e instalar los controladores de red más recientes
+- Descargar e instalar los últimos controladores de red
 - Revisar las conexiones de cable y puerto
-- Probar con un cable de red en buen estado conocido
+- Probar con un cable de red en buen estado
 - Verificar la configuración de red en el BIOS
 - Considerar una tarjeta de red adicional si la integrada falla
-## Lista de verificación de aseguramiento de calidad
+## Lista de Verificación de Control de Calidad
 
-### Verificación final de compatibilidad
-- [ ] Todos los componentes detectados correctamente por el sistema operativo
+### Verificación Final de Compatibilidad
+- [ ] Todos los componentes correctamente detectados por el sistema operativo
 - [ ] Sin conflictos de hardware en el Administrador de dispositivos
 - [ ] Sistema estable bajo carga durante más de 24 horas
 - [ ] Todas las funciones esperadas operativas
-- [ ] El rendimiento cumple los requisitos mínimos
+- [ ] El rendimiento cumple con los requisitos mínimos
 - [ ] Documentación completa y precisa
 
-### Protocolo de pruebas de rodaje (burn-in)
-1. **Prueba de estrés de 48 horas**:
+### Protocolo de Pruebas de Estrés Prolongado (Burn-in)
+1. **Prueba de Estrés de 48 Horas**:
    - CPU: carga al 100% durante 8 horas diarias
    - Memoria: rotación continua de pruebas
    - Almacenamiento: pruebas de ciclos de lectura/escritura
-   - Red: pruebas continuas de rendimiento
+   - Red: pruebas continuas de rendimiento de transferencia
 
-2. **Monitoreo de temperatura**:
+2. **Monitoreo de Temperatura**:
    - Registrar temperaturas durante todo el burn-in
-   - Verificar que no haya limitación térmica
-   - Confirmar el funcionamiento de los ventiladores en diversas cargas
+   - Verificar que no haya limitación térmica (thermal throttling)
+   - Confirmar el funcionamiento de los ventiladores con varias cargas
 
-3. **Verificación de estabilidad**:
+3. **Verificación de Estabilidad**:
    - Sin bloqueos ni congelamientos del sistema
    - Sin mensajes de error en los registros del sistema
-   - Todos los componentes mantienen el rendimiento nominal
+   - Todos los componentes mantienen su rendimiento nominal
 
-## Próximos pasos
+## Próximos Pasos
 
 Después de completar las pruebas de compatibilidad:
 
-1. **Documentar resultados**: Completar el informe de pruebas de compatibilidad
-2. **Preparación física**: Seguir la guía de [Recycled Preparation](recycled-preparation.md)
-3. **Sistema operativo**: Instalar y configurar el sistema operativo del servidor
-4. **Configuración de servicios**: Desplegar los servicios de servidor previstos
+1. **Documentar Resultados**: Completar el informe de pruebas de compatibilidad
+2. **Preparación Física**: Seguir la guía de [Recycled Preparation](recycled-preparation.md)
+3. **Sistema Operativo**: Instalar y configurar el sistema operativo del servidor
+4. **Configuración de Servicios**: Desplegar los servicios de servidor previstos
 
 ---
 

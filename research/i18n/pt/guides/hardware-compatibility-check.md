@@ -9,31 +9,31 @@ translatedBy: glm-4.6
 
 ## Visão Geral
 
-Este guia fornece procedimentos abrangentes para verificar e testar a compatibilidade de componentes em computadores reciclados antes de implantá-los como servidores comunitários. Testes adequados de compatibilidade evitam problemas de implantação e garantem operação estável.
+Este guia fornece procedimentos abrangentes para verificar e testar a compatibilidade de componentes em computadores reciclados antes de implantá-los como servidores comunitários. Testes adequados de compatibilidade evitam problemas na implantação e garantem operação estável.
 
-## Preparação para os Testes
+## Preparação Pré-Teste
 
 ### Lista de Verificação da Avaliação Inicial
 - [ ] Documentar todos os componentes de hardware visíveis
-- [ ] Tirar fotos da configuração atual
-- [ ] Registrar números de modelo e números de série
-- [ ] Verificar se há danos físicos evidentes
+- [ ] Fotografar a configuração atual
+- [ ] Anotar os números de modelo e números de série
+- [ ] Verificar danos físicos evidentes
 - [ ] Verificar se todos os cabos e conexões estão presentes
-- [ ] Garantir espaço de trabalho adequado e ferramentas disponíveis
+- [ ] Garantir espaço de trabalho e ferramentas adequados
 
 ### Ferramentas e Softwares Necessários
 - **Ferramentas de Hardware**:
-  - Conjunto de chaves de fenda Phillips
+  - Jogo de chaves de fenda Phillips
   - Pulseira antiestática
   - Multímetro digital
   - Lata de ar comprimido
   - Pasta térmica (se necessário)
-  - Componentes sobressalentes em bom estado para testes
+  - Componentes de reposição conhecidos como bons para testes
 
 - **Ferramentas de Software**:
   - USB inicializável com ferramentas de diagnóstico
   - CPU-Z para identificação de componentes
-  - MemTest86+ para teste de memória RAM
+  - MemTest86+ para teste de RAM
   - CrystalDiskInfo para saúde do armazenamento
   - Prime95 ou software de teste de estresse
   - Utilitários de diagnóstico do fabricante do hardware
@@ -48,14 +48,14 @@ Este guia fornece procedimentos abrangentes para verificar e testar a compatibil
 
 2. **Verificar Opções de Atualização**:
    ```
-   Formato de busca: "[Modelo da Placa-mãe] lista de compatibilidade de CPU"
-   Exemplo: "Dell OptiPlex 7050 lista de CPUs suportadas"
+   Formato de Busca: "[Motherboard Model] CPU compatibility list"
+   Exemplo: "Dell OptiPlex 7050 supported CPU list"
    ```
 
 3. **Verificação de Suporte da BIOS**:
    - Verifique a versão atual da BIOS
-   - Confirme se a CPU requer atualização da BIOS
-   - Baixe a versão mais recente da BIOS do fabricante
+   - Verifique se a CPU requer atualização da BIOS
+   - Baixe a BIOS mais recente do fabricante
 
 ### Procedimento de Teste da CPU
 ```bash
@@ -82,10 +82,10 @@ stress -c 4 -t 1800     # Linux stress test
 | Fator | Método de Verificação | Requisitos |
 |--------|--------------|--------------|
 | Tipo | Inspeção física/CPU-Z | DDR3/DDR4 compatível com a placa-mãe |
-| Velocidade | Configurações de BIOS/UEFI | Suportada pela CPU e pela placa-mãe |
+| Velocidade | Configurações BIOS/UEFI | Suportada tanto pela CPU quanto pela placa-mãe |
 | Capacidade | Propriedades do Sistema | Dentro do máximo da placa-mãe |
-| Timing | Teste de estresse da memória | Estável nas velocidades nominais |
-| ECC | Documentação do hardware | Compatível com suporte ECC da placa-mãe |
+| Timings | Teste de estresse da memória | Estável nas velocidades nominais |
+| ECC | Documentação do hardware | Compatível com o suporte a ECC da placa-mãe |
 
 ### Protocolo de Teste da Memória
 
@@ -100,13 +100,13 @@ dmidecode --type memory
 wmic memorychip get capacity,speed,memorytype
 ```
 
-#### Etapa 2: Teste Abrangente da Memória
-1. **Inicialize o MemTest86+** a partir do drive USB
+#### Etapa 2: Teste Abrangente de Memória
+1. **Inicie o MemTest86+** a partir do drive USB
 2. **Execute ciclos completos de teste** (mínimo 2 passagens)
 3. **Teste cada pente individualmente** se ocorrerem erros
 4. **Teste diferentes combinações de slots**
 
-#### Etapa 3: Teste de Memória do Sistema Operacional
+#### Etapa 3: Teste de Memória pelo Sistema Operacional
 ```bash
 # Windows Memory Diagnostic
 mdsched.exe
@@ -126,7 +126,7 @@ memtester 1024M 5    # Test 1GB, 5 iterations
 
 ## Avaliação de Compatibilidade de Armazenamento
 
-### Verificação de Compatibilidade de Interfaces
+### Verificação de Compatibilidade de Interface
 
 #### Compatibilidade SATA
 ```bash
@@ -141,7 +141,7 @@ devmgmt.msc (Device Manager > IDE ATA/ATAPI controllers)
 #### Compatibilidade NVMe
 - **Requisitos**: Slot M.2 PCIe 3.0+ com suporte a NVMe
 - **Configuração da BIOS**: Modo NVMe habilitado
-- **Suporte a Inicialização**: Firmware UEFI com capacidade de boot por NVMe
+- **Suporte a Boot**: Firmware UEFI com capacidade de boot NVMe
 
 ### Procedimentos de Teste de Armazenamento
 
@@ -157,7 +157,7 @@ devmgmt.msc (Device Manager > IDE ATA/ATAPI controllers)
    chkdsk C: /f
    ```
 
-2. **Teste de Desempenho**:
+2. **Testes de Desempenho**:
    ```bash
    # Sequential Read/Write Test
    dd if=/dev/zero of=/tmp/testfile bs=1G count=1 oflag=direct
@@ -193,7 +193,7 @@ ipconfig /all
 devmgmt.msc (Network adapters)
 ```
 
-### Teste de Desempenho de Rede
+### Testes de Desempenho de Rede
 1. **Verificação da Velocidade do Link**:
    ```bash
    # Check negotiated speed
@@ -201,14 +201,14 @@ devmgmt.msc (Network adapters)
    cat /sys/class/net/eth0/speed
    ```
 
-2. **Teste de Throughput**:
+2. **Testes de Throughput**:
    ```bash
    # iperf3 network performance test
    iperf3 -s                    # Server mode
    iperf3 -c [server_ip]        # Client mode
    ```
 
-### Compatibilidade sem Fio (se aplicável)
+### Compatibilidade Sem Fio (se aplicável)
 - **Disponibilidade de Drivers**: Verifique o suporte a drivers Linux/Windows
 - **Suporte a Padrões**: 802.11n no mínimo (802.11ac preferível)
 - **Recursos Corporativos**: Suporte a WPA2-Enterprise, 802.1X
@@ -222,12 +222,12 @@ devmgmt.msc (Network adapters)
 | CPU Intel i5 | 65W | 95W |
 | CPU Intel i7 | 65W | 125W |
 | RAM DDR4 (8GB) | 3W | 5W |
-| SSD 2,5" | 2W | 3W |
-| HDD 3,5" | 6W | 10W |
+| SSD 2.5" | 2W | 3W |
+| HDD 3.5" | 6W | 10W |
 | Placa-mãe | 25W | 35W |
 | Placa de Rede | 5W | 10W |
 
-### Protocolo de Teste da Fonte
+### Protocolo de Teste da Fonte (PSU)
 1. **Teste de Tensão**:
    ```bash
    # Check PSU voltages under load
@@ -242,11 +242,11 @@ devmgmt.msc (Network adapters)
    - Monitore as tensões durante todo o teste
    - Verifique a estabilidade do sistema sob carga máxima
 
-### Requisitos de Compatibilidade da Fonte
+### Requisitos de Compatibilidade da Fonte (PSU)
 - **Potência**: 150% do consumo máximo calculado
 - **Eficiência**: 80 PLUS Bronze no mínimo
-- **Conectores**: Compatíveis com os requisitos da placa-mãe e do armazenamento
-- **Fator de Forma**: Compatibilidade ATX/SFX com o gabinete
+- **Conectores**: Compatíveis com os requisitos da placa-mãe e armazenamento
+- **Formato**: Compatibilidade ATX/SFX com o gabinete
 
 ## Compatibilidade de Placas de Expansão
 
@@ -260,12 +260,12 @@ lspci | grep -i pci
 lspci -vvv | grep LnkCap
 ```
 
-### Teste de Placas de Expansão Comuns
+### Testes de Placas de Expansão Comuns
 
 #### Placas de Interface de Rede
 - **Compatibilidade de Drivers**: Suporte do sistema operacional
-- **Desempenho**: Gigabit como throughput mínimo
-- **Recursos**: Suporte a VLAN e jumbo frames
+- **Desempenho**: Throughput Gigabit no mínimo
+- **Recursos**: Suporte a VLAN, jumbo frames
 
 #### Controladores de Armazenamento
 - **Suporte a RAID**: RAID por hardware vs. software
@@ -274,7 +274,7 @@ lspci -vvv | grep LnkCap
 
 ## Verificação do Gerenciamento Térmico
 
-### Avaliação do Sistema de Resfriamento
+### Avaliação do Sistema de Refrigeração
 1. **Verificação do Funcionamento dos Ventiladores**:
    ```bash
    # Monitor fan speeds
@@ -290,10 +290,10 @@ lspci -vvv | grep LnkCap
    ```
 
 ### Protocolo de Teste Térmico
-- **Temperaturas em Repouso**: < 40°C para a CPU
+- **Temperaturas em Ocioso**: < 40°C para a CPU
 - **Temperaturas sob Carga**: < 80°C para a CPU sob estresse
 - **Resposta dos Ventiladores**: Ajuste automático de velocidade baseado na temperatura
-- **Throttling Térmico**: Nenhum throttling sob cargas normais de servidor
+- **Throttling Térmico**: Sem throttling sob cargas normais de servidor
 
 ## Automação de Testes de Compatibilidade
 
@@ -328,7 +328,7 @@ echo "=== Temperature Information ==="
 sensors 2>/dev/null || echo "lm-sensors not installed"
 ```
 
-### Script PowerShell para Windows
+### Script em Windows PowerShell
 ```powershell
 # Hardware compatibility check for Windows
 Write-Host "=== Hardware Compatibility Check ===" -ForegroundColor Green
@@ -351,117 +351,117 @@ Get-WmiObject -Class Win32_NetworkAdapter | Where-Object {$_.NetEnabled -eq $tru
 
 ### Modelo de Resultados de Teste
 ```
-Resultados do Teste de Compatibilidade de Hardware
+Hardware Compatibility Test Results
 =====================================
-Data: ___________
-Técnico: ___________
-Modelo do Sistema: ___________
+Date: ___________
+Technician: ___________
+System Model: ___________
 
-Compatibilidade de CPU:
-[ ] Soquete compatível confirmado
-[ ] Suporte na BIOS verificado
-[ ] Teste de estresse aprovado (30 min)
-[ ] Todos os núcleos operacionais
-Notas: ________________________
+CPU Compatibility:
+[ ] Socket match confirmed
+[ ] BIOS support verified
+[ ] Stress test passed (30 min)
+[ ] All cores operational
+Notes: ________________________
 
-Compatibilidade de Memória:
-[ ] Tipo compatível (DDR3/DDR4)
-[ ] Velocidade suportada
-[ ] Todos os slots funcionais
-[ ] MemTest86+ aprovado (2 ciclos)
-Notas: ________________________
+Memory Compatibility:
+[ ] Type match (DDR3/DDR4)
+[ ] Speed supported
+[ ] All slots functional
+[ ] MemTest86+ passed (2 cycles)
+Notes: ________________________
 
-Compatibilidade de Armazenamento:
-[ ] Interface suportada (SATA/NVMe)
-[ ] Suporte a boot na BIOS
-[ ] Verificação de saúde aprovada
-[ ] Desempenho adequado
-Notas: ________________________
+Storage Compatibility:
+[ ] Interface supported (SATA/NVMe)
+[ ] BIOS boot support
+[ ] Health check passed
+[ ] Performance adequate
+Notes: ________________________
 
-Compatibilidade de Rede:
-[ ] Driver disponível
-[ ] Velocidade Gigabit confirmada
-[ ] Auto-negociação funcionando
-[ ] Teste de cabo aprovado
-Notas: ________________________
+Network Compatibility:
+[ ] Driver available
+[ ] Gigabit speed confirmed
+[ ] Auto-negotiation working
+[ ] Cable test passed
+Notes: ________________________
 
-Fonte de Alimentação:
-[ ] Potência adequada
-[ ] Todas as tensões estáveis
-[ ] Teste de carga aprovado
-[ ] Eficiência aceitável
-Notas: ________________________
+Power Supply:
+[ ] Wattage adequate
+[ ] All voltages stable
+[ ] Load test passed
+[ ] Efficiency acceptable
+Notes: ________________________
 
-Avaliação Final:
-[ ] Todos os componentes compatíveis
-[ ] Sistema pronto para implantação
-[ ] Requer substituição de componente: ________
-[ ] Não adequado para uso como servidor
+Final Assessment:
+[ ] All components compatible
+[ ] System ready for deployment
+[ ] Requires component replacement: ________
+[ ] Not suitable for server use
 
-Assinatura: ___________________
+Signature: ___________________
 ```
 
 ## Solução de Problemas Comuns
 
 ### Problemas de Compatibilidade de Memória
-**Sintomas**: O sistema não inicializa, travamentos aleatórios, telas azuis
+**Sintomas**: Sistema não inicializa, travamentos aleatórios, telas azuis
 **Soluções**:
 - Teste os pentes de memória individualmente
 - Verifique os tipos de memória suportados no manual da placa-mãe
 - Atualize a BIOS para a versão mais recente
-- Ajuste o timing da memória na BIOS
+- Ajuste os timings da memória na BIOS
 - Use memória da QVL (Qualified Vendor List) da placa-mãe
 
 ### Problemas de Compatibilidade de Armazenamento
 **Sintomas**: Drive não detectado, desempenho lento, falhas de inicialização
 **Soluções**:
 - Verifique o modo SATA (AHCI vs IDE) na BIOS
-- Verifique as conexões dos cabos e tente diferentes portas SATA
+- Verifique as conexões dos cabos e teste diferentes portas SATA
 - Atualize os drivers do controlador de armazenamento
 - Habilite o suporte a NVMe na BIOS para drives M.2
-- Verifique se há atualizações de firmware nos dispositivos de armazenamento
+- Verifique atualizações de firmware nos dispositivos de armazenamento
 
 ### Problemas de Compatibilidade de Rede
 **Sintomas**: Sem conectividade de rede, velocidades limitadas, problemas de driver
 **Soluções**:
 - Baixe e instale os drivers de rede mais recentes
 - Verifique as conexões de cabo e porta
-- Teste com um cabo de rede em bom estado
+- Teste com um cabo de rede conhecido como bom
 - Verifique as configurações de rede na BIOS
 - Considere uma placa de rede adicional se a integrada falhar
-## Lista de Verificação de Garantia de Qualidade
+## Checklist de Garantia de Qualidade
 
 ### Verificação Final de Compatibilidade
 - [ ] Todos os componentes devidamente detectados pelo sistema operacional
-- [ ] Nenhum conflito de hardware no Gerenciador de Dispositivos
-- [ ] Sistema estável sob carga por mais de 24 horas
+- [ ] Sem conflitos de hardware no Device Manager (Gerenciador de Dispositivos)
+- [ ] Sistema estável sob carga por 24+ horas
 - [ ] Todos os recursos esperados funcionais
 - [ ] Desempenho atende aos requisitos mínimos
 - [ ] Documentação completa e precisa
 
-### Protocolo de Testes de Burn-in
+### Protocolo de Teste de Burn-in
 1. **Teste de Estresse de 48 Horas**:
-   - CPU: 100% de carga por 8 horas diárias
-   - Memória: Rotação contínua de testes
-   - Armazenamento: Testes de ciclos de leitura/gravação
-   - Rede: Testes contínuos de taxa de transferência
+   - CPU: carga de 100% por 8 horas diárias
+   - Memória: rotação contínua de testes
+   - Armazenamento: testes de ciclos de leitura/gravação
+   - Rede: testes contínuos de taxa de transferência
 
 2. **Monitoramento de Temperatura**:
    - Registrar temperaturas durante todo o burn-in
-   - Verificar ausência de limitação térmica (thermal throttling)
-   - Confirmar o funcionamento das ventoinhas em várias cargas
+   - Verificar ausência de thermal throttling (limitação térmica)
+   - Confirmar o funcionamento dos ventiladores em diversas cargas
 
 3. **Verificação de Estabilidade**:
-   - Nenhuma falha ou travamento do sistema
-   - Nenhuma mensagem de erro nos logs do sistema
-   - Todos os componentes mantêm o desempenho nominal
+   - Sem travamentos ou congelamentos do sistema
+   - Sem mensagens de erro nos logs do sistema
+   - Todos os componentes mantendo o desempenho nominal
 
 ## Próximos Passos
 
 Após concluir os testes de compatibilidade:
 
-1. **Documentar Resultados**: Concluir o relatório de testes de compatibilidade
-2. **Preparação Física**: Seguir o guia [Recycled Preparation](recycled-preparation.md)
+1. **Documentar os Resultados**: Preencher o relatório de testes de compatibilidade
+2. **Preparação Física**: Seguir o guia de [Preparação de Reciclados](recycled-preparation.md)
 3. **Sistema Operacional**: Instalar e configurar o sistema operacional do servidor
 4. **Configuração de Serviços**: Implantar os serviços de servidor pretendidos
 

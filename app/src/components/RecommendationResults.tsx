@@ -165,7 +165,7 @@ const RecommendationResults = ({
       await withTemplateInBody(pdfTemplateRef.current, element =>
         downloadPDF(element, {
           filename: 'community-box-recommendation.pdf',
-          quality: 2,
+          quality: 0.95,
           scale: 2
         })
       );
@@ -191,7 +191,7 @@ const RecommendationResults = ({
       await withTemplateInBody(pdfTemplateRef.current, element =>
         sharePDF(element, {
           filename: 'community-box-recommendation.pdf',
-          quality: 2,
+          quality: 0.95,
           scale: 2
         })
       );

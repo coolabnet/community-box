@@ -17,108 +17,108 @@ Esta guía aborda los problemas de hardware, software y compatibilidad más frec
 
 #### ZimaBoard No Enciende
 **Síntomas:**
-- El LED de encendido no se ilumina
+- No hay iluminación del LED de encendido
 - No hay salida de video
 - No hay actividad del ventilador (si hay una tarjeta PCIe con ventilador instalada)
 
 **Pasos de Diagnóstico:**
 1. **Verificar la Conexión de la Fuente de Alimentación**
    - Verifique que el adaptador de 12V/3A esté correctamente conectado
-   - Pruebe con un adaptador de corriente que se sepa que funciona
+   - Pruebe con un adaptador de corriente en buen estado conocido
    - Revise el cable de alimentación en busca de daños
 
-2. **Reinicio de la Batería CMOS**
-   - Apague completamente y desenchufe la alimentación
+2. **Restablecer la Batería CMOS**
+   - Apague completamente y desconecte la alimentación
    - Retire los tornillos del panel inferior
-   - Localice y retire la batería CMOS (pila de botón)
-   - Espere 2-3 minutos para que se descargue completamente
+   - Localice y retire la batería CMOS (pila tipo moneda)
+   - Espere 2-3 minutos para una descarga completa
    - Reinstale la batería y vuelva a armar el equipo
    - Esto resuelve la mayoría de los problemas de encendido después de instalar una tarjeta PCIe[29]
 
-3. **Inspección de Hardware**
+3. **Inspección del Hardware**
    - Revise si hay conexiones flojas
    - Verifique que no haya cortocircuitos causados por tarjetas PCIe
-   - Asegúrese de que las tarjetas de expansión estén correctamente insertadas
+   - Asegúrese de que las tarjetas de expansión estén correctamente asentadas
 
 **Prevención:**
 - Siempre apague el equipo antes de instalar tarjetas PCIe
 - Tome precauciones antiestáticas durante modificaciones de hardware
 - Mantenga una batería CMOS de repuesto para emergencias
 
-#### No se Puede Acceder al BIOS/Menú de Arranque
+#### No Se Puede Acceder al BIOS/Menú de Arranque
 **Síntomas:**
 - El sistema arranca directamente al sistema operativo
 - Las pulsaciones de teclas durante el arranque no tienen efecto
-- Falta la pantalla de inicio de ZimaBoard
+- No aparece la pantalla de inicio de ZimaBoard
 
 **Soluciones:**
 1. **Problemas de Conexión de Pantalla**
    - Pruebe con un adaptador/cable Mini-DP a HDMI diferente
-   - Pruebe con una pantalla diferente (TV vs monitor)
+   - Pruebe con otra pantalla (TV vs monitor)
    - Algunos adaptadores solo funcionan con tipos específicos de pantallas[59]
 
 2. **Métodos de Acceso al BIOS**
-   - Comience a presionar la tecla DEL inmediatamente después de conectar la alimentación
+   - Comience a presionar inmediatamente la tecla DEL al conectar la alimentación
    - Teclas alternativas: F2, F10, F11, ESC
    - F11 generalmente abre el menú de arranque con la opción de configuración del BIOS
 
 3. **Omitir el Arranque Rápido**
-   - El arranque rápido puede estar habilitado por defecto
-   - Se requiere acceso al BIOS para deshabilitarlo
+   - Es posible que Fast Boot esté habilitado de fábrica
+   - Requiere acceso al BIOS para deshabilitarlo
    - Una vez deshabilitado, aparecerán las pantallas normales de arranque
 
 **Notas Importantes:**
 - Diferentes pantallas pueden mostrar resultados distintos con el mismo adaptador
 - Los cables Mini-DP a HDMI suelen funcionar mejor que los adaptadores
-- Use siempre un teclado que se sepa que funciona para acceder al BIOS
+- Utilice siempre un teclado que funcione correctamente para acceder al BIOS
 
-### Problemas de Almacenamiento y Discos
+### Problemas de Almacenamiento y Unidades
 
-#### Discos SATA No Detectados
+#### Unidades SATA No Detectadas
 **Síntomas:**
-- Los discos conectados no aparecen en el sistema operativo
-- Detección inconsistente de discos
-- Discos detectados en el BIOS pero no en el sistema operativo
+- Las unidades conectadas no aparecen en el sistema operativo
+- Detección inconsistente de unidades
+- Unidades detectadas en el BIOS pero no en el sistema operativo
 
 **Pasos de Diagnóstico:**
 1. **Verificación de la Fuente de Alimentación**
-   - Compruebe si los discos giran durante el arranque
-   - Verifique que haya energía suficiente para el tipo de disco
-   - Un solo HDD de 3.5": Generalmente soportado
+   - Compruebe si las unidades giran durante el arranque
+   - Verifique que haya energía suficiente para el tipo de unidad
+   - Un solo HDD de 3.5": Generalmente compatible
    - Múltiples HDD de 3.5": A menudo requieren alimentación externa[41]
 
 2. **Prueba de Cables**
-   - Pruebe con diferentes cables SATA
-   - Verifique las conexiones del cable en Y si usa discos dobles
+   - Pruebe con cables SATA diferentes
+   - Verifique las conexiones del cable en Y si usa unidades dobles
    - Revise si hay pines doblados o dañados
 
-3. **Compatibilidad de Discos**
-   - Pruebe los discos individualmente
-   - Verifique la salud del disco en otro sistema
-   - Algunos discos más antiguos pueden tener problemas de compatibilidad
+3. **Compatibilidad de la Unidad**
+   - Pruebe las unidades individualmente
+   - Verifique el estado de la unidad en otro sistema
+   - Algunas unidades antiguas pueden tener problemas de compatibilidad
 
 **Soluciones:**
-- Use una fuente de alimentación externa para múltiples discos grandes
+- Use una fuente de alimentación externa para múltiples unidades grandes
 - Reemplace los cables SATA sospechosos
 - Actualice los controladores del controlador de almacenamiento
-- Consulte las listas de compatibilidad de discos
+- Consulte las listas de compatibilidad de unidades
 
 #### Tarjetas de Almacenamiento PCIe No Reconocidas
 **Síntomas:**
 - El controlador SATA PCIe no es detectado
-- Los discos NVMe en tarjetas PCIe son invisibles
+- Las unidades NVMe en tarjetas PCIe no son visibles
 - Inestabilidad del sistema con tarjetas de almacenamiento
 
 **Solución de Problemas:**
 1. **Instalación de la Tarjeta**
-   - Verifique que esté correctamente insertada en la ranura PCIe
-   - Revise si hay interferencia del soporte (puede requerir retirarlo)[62]
+   - Verifique que esté correctamente asentada en la ranura PCIe
+   - Revise si hay interferencia del soporte (puede ser necesario retirarlo)[62]
    - Asegúrese de que la tarjeta sea compatible con PCIe 2.0 x4
 
 2. **Requisitos de Energía**
    - Las tarjetas de expansión de almacenamiento a menudo necesitan alimentación externa
    - Consulte las especificaciones de la tarjeta para conocer sus necesidades de energía
-   - Verifique que todas las conexiones de alimentación estén firmes
+   - Verifique que todas las conexiones de alimentación estén seguras
 
 3. **Instalación de Controladores**
    - Instale los controladores apropiados para el controlador de almacenamiento
@@ -127,7 +127,7 @@ Esta guía aborda los problemas de hardware, software y compatibilidad más frec
 
 ### Problemas de Hardware de Red
 
-#### Puertos Ethernet que No Funcionan
+#### Puertos Ethernet No Funcionan
 **Síntomas:**
 - No hay luces de enlace en los puertos ethernet
 - Las interfaces de red no son detectadas
@@ -135,8 +135,8 @@ Esta guía aborda los problemas de hardware, software y compatibilidad más frec
 
 **Soluciones:**
 1. **Prueba de Cables y Puertos**
-   - Pruebe con cables ethernet que se sepan que funcionan
-   - Pruebe diferentes puertos (ZimaBoard tiene dos)
+   - Pruebe con cables ethernet en buen estado conocidos
+   - Pruebe con puertos diferentes (ZimaBoard tiene dos)
    - Pruebe con diferentes puertos del switch/router
 
 2. **Problemas de Controladores**
@@ -144,12 +144,12 @@ Esta guía aborda los problemas de hardware, software y compatibilidad más frec
    - Instale os-realtek-re para pfSense/OPNsense[45][47]
    - Considere una NIC Intel PCIe para mayor compatibilidad
 
-3. **Reinicio de Hardware**
-   - El reinicio de la batería CMOS puede resolver problemas de red
-   - Reinicie ciclicamente el equipo de red
+3. **Restablecimiento del Hardware**
+   - Restablecer la batería CMOS puede resolver problemas de red
+   - Reinicie (apague y encienda) el equipo de red
    - Revise si hay daños físicos en los puertos
 
-#### Tarjetas de Red PCIe que No Funcionan
+#### Tarjetas de Red PCIe No Funcionan
 **Síntomas:**
 - La tarjeta de red es detectada pero no hay conectividad
 - Fallos en la instalación de controladores
@@ -157,19 +157,19 @@ Esta guía aborda los problemas de hardware, software y compatibilidad más frec
 
 **Solución de Problemas:**
 1. **Verificación de Compatibilidad**
-   - Confirme que la tarjeta funciona en una PC estándar
-   - Revise los requisitos de lanes PCIe (ZimaBoard: máximo x4)
+   - Confirme que la tarjeta funcione en una PC estándar
+   - Verifique los requisitos de carriles PCIe (ZimaBoard: máximo x4)
    - Verifique el soporte de controladores del sistema operativo
 
 2. **Problemas de Instalación**
-   - Retire y vuelva a insertar la tarjeta firmemente
+   - Retire y vuelva a asentar firmemente la tarjeta
    - Revise si hay problemas de espacio con el soporte
    - Asegúrese de que se cumplan los requisitos de energía de la tarjeta
 ## Problemas de Software y Sistema Operativo
 
 ### Problemas de CasaOS
 
-#### CasaOS no se Actualiza
+#### CasaOS No Se Actualiza
 **Síntomas:**
 - El botón de actualización no hace nada
 - Carga infinita durante la actualización
@@ -184,7 +184,7 @@ Esta guía aborda los problemas de hardware, software y compatibilidad más frec
 
 2. **Problemas de Repositorios**
    - Actualizar los repositorios del gestor de paquetes
-   - Verificar la conectividad a internet
+   - Comprobar la conectividad a internet
    - Verificar la resolución DNS
 
 3. **Actualización Manual**
@@ -194,8 +194,8 @@ Esta guía aborda los problemas de hardware, software y compatibilidad más frec
 
 #### Problemas con Contenedores Docker
 **Síntomas:**
-- Las aplicaciones muestran "No compatible con el dispositivo"
-- Los contenedores fallan al iniciar
+- Las aplicaciones muestran "Not compatible with devices" (No compatible con dispositivos)
+- Los contenedores no se inician
 - Problemas de rendimiento con los contenedores
 
 **Soluciones:**
@@ -205,13 +205,13 @@ Esta guía aborda los problemas de hardware, software y compatibilidad más frec
    - Usar fuentes de contenedores oficiales o verificadas[31]
 
 2. **Asignación de Recursos**
-   - Verificar la RAM y el almacenamiento disponibles
-   - Monitorear el uso de CPU durante el arranque de los contenedores
+   - Comprobar la RAM y el almacenamiento disponibles
+   - Supervisar el uso de CPU durante el inicio de los contenedores
    - Ajustar los límites de recursos de los contenedores
 
 3. **Actualizaciones de Contenedores**
    - Actualizar las imágenes de los contenedores regularmente
-   - Limpiar la caché de contenedores si es necesario
+   - Limpiar la caché de los contenedores si es necesario
    - Reiniciar el servicio de Docker
 
 ### Problemas de Virtualización
@@ -220,69 +220,69 @@ Esta guía aborda los problemas de hardware, software y compatibilidad más frec
 **Síntomas:**
 - El instalador no arranca desde USB
 - La instalación se cuelga o falla
-- Mal rendimiento después de la instalación
+- Rendimiento deficiente después de la instalación
 
 **Soluciones:**
 1. **Medio de Instalación**
    - Usar una unidad USB de alta calidad (se recomienda USB 3.0)
-   - Verificar la integridad de la ISO antes de flashear
+   - Verificar la integridad de la ISO antes de grabar
    - Probar diferentes herramientas de creación de USB (Rufus, Etcher)
 
 2. **Configuración de BIOS**
    - Habilitar las funciones de virtualización (VT-x, VT-d)
-   - Desactivar el arranque rápido
-   - Configurar el USB como dispositivo de arranque principal
+   - Deshabilitar el arranque rápido
+   - Establecer el USB como dispositivo de arranque principal
 
 3. **Configuración de Almacenamiento**
    - Instalar en un SSD externo en lugar de eMMC
-   - Asignar suficiente almacenamiento para las VMs
-   - Considerar PCIe NVMe para un mejor rendimiento[54][56]
+   - Asignar almacenamiento suficiente para las VMs
+   - Considerar PCIe NVMe para mejor rendimiento[54][56]
 
 #### Problemas de Rendimiento de VMs
 **Síntomas:**
 - Arranque lento de las VMs
-- Mal rendimiento de red en las VMs
+- Rendimiento de red deficiente en las VMs
 - Alto uso de CPU con pocas VMs
 
 **Optimización:**
 1. **Asignación de Recursos**
-   - No sobreasignar RAM a las VMs
+   - No asignar en exceso la RAM a las VMs
    - Usar el controlador de memoria balloon
-   - Asignar los núcleos de CPU apropiados
+   - Asignar núcleos de CPU apropiados
 
 2. **Optimización de Almacenamiento**
    - Usar SSDs para el almacenamiento de las VMs
-   - Habilitar la caché de escritura diferida con precaución
+   - Habilitar la caché de escritura en memoria con precaución
    - Considerar RAID 0 para rendimiento (no para producción)
 
 3. **Configuración de Red**
    - Usar controladores de red VirtIO
    - Configurar correctamente los ajustes de VLAN
-   - Monitorear posibles cuellos de botella de red
+   - Supervisar posibles cuellos de botella de red
 
 ### Problemas de pfSense/OPNsense
 
-#### Mal Rendimiento de Red
+#### Rendimiento de Red Deficiente
 **Síntomas:**
 - Conexión Gigabit limitada a ~500 Mbps
-- Alto uso de CPU durante las transferencias de red
+- Alto uso de CPU durante transferencias de red
 - Rendimiento inconsistente
 
 **Soluciones:**
 1. **Instalación de Controladores**
-   - Instalar el complemento os-realtek-re
+   - Instalar el plugin os-realtek-re
    - Actualizar a la última versión del controlador
    - Considerar una NIC PCIe basada en Intel[45][47]
 
 2. **Ajuste de Rendimiento**
-   - Desactivar la descarga de checksum por hardware
+   - Deshabilitar la descarga de checksum por hardware
    - Habilitar el disco RAM
    - Configurar PowerD (modo HiAdaptive)
-   - Configurar la aceleración criptográfica a AES-NI
+   - Establecer la aceleración criptográfica en AES-NI
 
 3. **Consideraciones de Virtualización**
-   - La instalación nativa rinde mejor que la virtualizada
-   - Si se virtualiza, asignar suficientes recursos
+   - La instalación nativa funciona mejor que la virtualizada
+   - Si se virtualiza, asignar recursos suficientes
    - Usar controladores VirtIO para mejor rendimiento
 
 #### Problemas de Rendimiento de Suricata
@@ -294,19 +294,19 @@ Esta guía aborda los problemas de hardware, software y compatibilidad más frec
 **Optimización:**
 1. **Gestión de Reglas**
    - Habilitar solo las categorías de reglas necesarias
-   - Desactivar reglas para servicios no utilizados
+   - Deshabilitar reglas para servicios no utilizados
    - Actualizaciones y optimización regular de reglas
 
 2. **Asignación de Recursos**
    - Aumentar la asignación de memoria para Suricata
    - Ajustar la configuración de hilos
-   - Monitorear los patrones de uso de CPU[45]
+   - Supervisar los patrones de uso de CPU[45]
 
 ## Problemas de Compatibilidad de Hardware
 
 ### Compatibilidad de Tarjetas PCIe
 
-#### Las Tarjetas no Encajan Correctamente
+#### Las Tarjetas No Encajan Correctamente
 **Síntomas:**
 - Los soportes estándar interfieren con la carcasa
 - Las tarjetas no se asientan completamente
@@ -315,8 +315,8 @@ Esta guía aborda los problemas de hardware, software y compatibilidad más frec
 **Soluciones:**
 1. **Modificación de Soportes**
    - Retirar los soportes PCIe estándar si es necesario
-   - Usar soportes de perfil bajo cuando estén disponibles
-   - Considerar una instalación sin soporte para pruebas[62]
+   - Usar soportes de bajo perfil cuando estén disponibles
+   - Considerar la instalación sin soporte para pruebas[62]
 
 2. **Selección de Tarjetas**
    - Elegir tarjetas diseñadas específicamente para sistemas compactos
@@ -338,12 +338,12 @@ Esta guía aborda los problemas de hardware, software y compatibilidad más frec
 1. **Mejora de la Fuente de Alimentación**
    - Usar un adaptador de 12V de mayor capacidad
    - Considerar fuentes de 12V/5A o 12V/6A
-   - Asegurar una clasificación de corriente adecuada
+   - Asegurar una capacidad de corriente adecuada
 
 2. **Opciones de Alimentación Externa**
    - Usar tarjetas PCIe con conectores de alimentación externa
    - Añadir fuentes de alimentación externas para tarjetas específicas
-   - Monitorear el consumo de energía con un medidor kill-a-watt
+   - Supervisar el consumo de energía con un medidor kill-a-watt
 
 ### Compatibilidad de Almacenamiento
 
@@ -355,21 +355,21 @@ Esta guía aborda los problemas de hardware, software y compatibilidad más frec
 
 **Soluciones:**
 1. **Selección de Unidades**
-   - Usar modelos de unidades conocidos por ser compatibles
-   - Preferir unidades SATA más nuevas sobre las PATA más antiguas
+   - Usar modelos de unidades de compatibilidad conocida
+   - Preferir unidades SATA más nuevas sobre PATA antiguas
    - Consultar las listas de compatibilidad de la comunidad
 
 2. **Gestión de Energía**
-   - Desactivar la gestión de energía agresiva
+   - Deshabilitar la gestión de energía agresiva
    - Configurar las políticas de apagado de las unidades
-   - Monitorear las temperaturas de las unidades
+   - Supervisar las temperaturas de las unidades
 
 3. **Actualizaciones de Firmware**
-   - Actualizar el firmware de la unidad si está disponible
-   - Verificar si hay problemas conocidos con modelos específicos
+   - Actualizar el firmware de las unidades si está disponible
+   - Comprobar problemas conocidos con modelos específicos
    - Considerar el reemplazo de la unidad si la compatibilidad es deficiente
 
-## Optimización de Rendimiento
+## Optimización del Rendimiento
 
 ### Gestión Térmica
 
@@ -377,7 +377,7 @@ Esta guía aborda los problemas de hardware, software y compatibilidad más frec
 **Síntomas:**
 - El sistema reduce su rendimiento bajo carga
 - Apagados inesperados
-- Mal rendimiento con calor ambiente
+- Rendimiento deficiente con calor ambiental
 
 **Soluciones:**
 1. **Mejora del Flujo de Aire**
@@ -388,11 +388,11 @@ Esta guía aborda los problemas de hardware, software y compatibilidad más frec
 2. **Monitoreo Térmico**
    - Instalar software de monitoreo de temperatura
    - Configurar alertas térmicas
-   - Monitorear las temperaturas de la CPU y las unidades
+   - Supervisar las temperaturas de la CPU y las unidades
 
 3. **Gestión de la Carga de Trabajo**
-   - Reducir tareas concurrentes de alto uso de CPU
-   - Implementar políticas de reducción térmica de rendimiento
+   - Reducir tareas simultáneas de alto uso de CPU
+   - Implementar políticas de reducción térmica
    - Considerar refrigeración activa para cargas sostenidas
 
 ### Optimización de Memoria
@@ -400,95 +400,95 @@ Esta guía aborda los problemas de hardware, software y compatibilidad más frec
 #### Limitaciones de RAM
 **Síntomas:**
 - Lentitud del sistema con múltiples servicios
-- Errores de falta de memoria
-- Mal rendimiento de virtualización
+- Errores de memoria insuficiente
+- Rendimiento deficiente de virtualización
 
 **Soluciones:**
 1. **Optimización de Servicios**
-   - Desactivar servicios innecesarios
+   - Deshabilitar servicios innecesarios
    - Optimizar el uso de memoria de los contenedores
    - Usar alternativas ligeras cuando sea posible
 
 2. **Configuración de Swap**
-   - Configurar un espacio de swap apropiado
-   - Usar SSD para el swap y reducir la latencia
-   - Monitorear los patrones de uso del swap
+   - Configurar el espacio de intercambio apropiado
+   - Usar SSD para el swap para reducir la latencia
+   - Supervisar los patrones de uso del swap
 
-3. **Mejora del Modelo**
+3. **Actualización de Modelo**
    - Considerar actualizar a un modelo con más RAM
-   - ZimaBoard 832 ofrece el mejor margen de memoria
+   - ZimaBoard 832 ofrece el mayor margen de memoria
    - Planificar cuidadosamente la asignación de recursos
-## Mantenimiento preventivo
+## Mantenimiento Preventivo
 
-### Tareas de mantenimiento regular
+### Tareas de Mantenimiento Regular
 
-#### Revisiones mensuales
-- **Monitoreo de temperatura**: Verificar las temperaturas de operación
-- **Salud de las unidades**: Revisar los datos SMART para detectar advertencias tempranas
-- **Gestión de actualizaciones**: Aplicar actualizaciones de seguridad
-- **Verificación de copias de seguridad**: Probar los procedimientos de respaldo y restauración
+#### Verificaciones Mensuales
+- **Monitoreo de Temperatura**: Verificar temperaturas de funcionamiento
+- **Salud de las Unidades**: Revisar datos SMART para detectar advertencias tempranas
+- **Gestión de Actualizaciones**: Aplicar actualizaciones de seguridad
+- **Verificación de Respaldos**: Probar los procedimientos de respaldo y restauración
 
-#### Tareas trimestrales
-- **Inspección de hardware**: Revisar conexiones y cables
-- **Línea base de rendimiento**: Documentar las métricas de rendimiento normal
-- **Planificación de capacidad**: Monitorear el uso de almacenamiento y memoria
-- **Actualización de documentación**: Mantener los registros de configuración al día
+#### Tareas Trimestrales
+- **Inspección de Hardware**: Revisar conexiones y cables
+- **Línea Base de Rendimiento**: Documentar métricas de rendimiento normales
+- **Planificación de Capacidad**: Monitorear el uso de almacenamiento y memoria
+- **Actualización de Documentación**: Mantener los registros de configuración al día
 
-#### Tareas anuales
-- **Batería CMOS**: Reemplazarla si el sistema muestra desviación de hora
-- **Pasta térmica**: Considerar renovarla para mejorar la transferencia de calor
-- **Reemplazo de cables**: Reemplazar los cables SATA y de alimentación envejecidos
-- **Mejoras de capacidad**: Planificar la renovación o expansión del hardware
+#### Tareas Anuales
+- **Batería CMOS**: Reemplazar si el sistema muestra desviación de hora
+- **Pasta Térmica**: Considerar su renovación para mejorar la transferencia de calor
+- **Reemplazo de Cables**: Reemplazar cables SATA y de alimentación envejecidos
+- **Actualizaciones de Capacidad**: Planificar renovación o expansión de hardware
 
-### Copias de seguridad y recuperación
+### Respaldos y Recuperación
 
-#### Copia de seguridad de configuración
-- **Configuración del sistema**: Exportar la configuración antes de realizar cambios
-- **Datos de aplicaciones**: Respaldo regular de los servicios críticos
+#### Respaldo de Configuración
+- **Configuración del Sistema**: Exportar configuraciones antes de realizar cambios
+- **Datos de Aplicaciones**: Respaldo regular de servicios críticos
 - **Documentación**: Mantener notas de instalación y configuración
-- **Pruebas de recuperación**: Verificar que los procedimientos de restauración funcionen
+- **Pruebas de Recuperación**: Verificar que los procedimientos de restauración funcionen
 
-#### Repuestos de hardware
-- **Batería CMOS**: Tener una de repuesto para emergencias
-- **Cables SATA**: Contar con cables extra para reemplazo rápido
-- **Adaptador de corriente**: Considerar una fuente de alimentación de respaldo
+#### Repuestos de Hardware
+- **Batería CMOS**: Mantener una de repuesto para emergencias
+- **Cables SATA**: Tener cables adicionales para reemplazo rápido
+- **Adaptador de Corriente**: Considerar una fuente de alimentación de respaldo
 - **Tarjetas MicroSD**: Para instalación de emergencia del sistema operativo
 
-## Recursos de la comunidad
+## Recursos de la Comunidad
 
-### Obtener ayuda
-- **Discord oficial**: Servidor de la comunidad de IceWhale
-- **Reddit**: Subreddit r/ZimaBoard
+### Obtener Ayuda
+- **Discord Oficial**: Servidor de la comunidad IceWhale
+- **Reddit**: subreddit r/ZimaBoard
 - **GitHub**: Rastreador oficial de problemas
 - **Documentación**: Documentación oficial de ZimaSpace
 
-### Reportar problemas
-Al reportar problemas, incluir:
+### Reportar Problemas
+Al reportar problemas, incluye:
 - Modelo de ZimaBoard (216/432/832)
 - Sistema operativo y versión
 - Configuración de hardware (tarjetas PCIe, unidades)
-- Mensajes de error específicos o síntomas
+- Mensajes de error o síntomas específicos
 - Pasos para reproducir el problema
 
-### Contribuir con soluciones
+### Contribuir con Soluciones
 - Compartir configuraciones que funcionen
-- Documentar los pasos exitosos de resolución de problemas
+- Documentar pasos exitosos de solución de problemas
 - Contribuir a las wikis de la comunidad
 - Ayudar a otros usuarios con problemas similares
 
-## Recuperación de emergencia
+## Recuperación de Emergencia
 
-### Recuperación completa del sistema
-1. **Preparar el medio de recuperación**
-   - Crear un USB de arranque con un sistema operativo confiable
+### Recuperación Completa del Sistema
+1. **Preparar Medios de Recuperación**
+   - Crear un USB booteable con un sistema operativo confiable
    - Tener disponible la imagen de fábrica de ZimaBoard
-   - Preparar los controladores y herramientas esenciales
+   - Preparar controladores y herramientas esenciales
 
-2. **Pasos de recuperación**
+2. **Pasos de Recuperación**
    - Arrancar desde el medio de recuperación
-   - Respaldar los datos críticos si es posible
+   - Respaldar datos críticos si es posible
    - Reinstalar el sistema operativo
-   - Restaurar desde la copia de seguridad de configuración
+   - Restaurar desde el respaldo de configuración
    - Probar toda la funcionalidad antes del uso en producción
 
 3. **Prevención**
@@ -497,10 +497,10 @@ Al reportar problemas, incluir:
    - Probar los procedimientos de recuperación
    - Mantener componentes de hardware de repuesto
 
-## Documentación relacionada
+## Documentación Relacionada
 
-- [Descripción general de ZimaBoard](zima-overview.md) - Comprender la funcionalidad básica
-- [Comparación de modelos](zima-models-comparison.md) - Elegir el hardware adecuado
-- [Opciones de expansión](zima-expansion-options.md) - Agregar capacidades de manera segura
+- [Descripción General de ZimaBoard](zima-overview.md) - Comprender la funcionalidad básica
+- [Comparación de Modelos](zima-models-comparison.md) - Elegir el hardware adecuado
+- [Opciones de Expansión](zima-expansion-options.md) - Agregar capacidades de forma segura
 
-Recuerda que muchos problemas se pueden prevenir mediante una planificación cuidadosa, un mantenimiento regular y el seguimiento de las mejores prácticas para modificaciones de hardware y actualizaciones de software.
+Recuerda que muchos problemas pueden prevenirse mediante una planificación cuidadosa, mantenimiento regular y el seguimiento de las mejores prácticas para modificaciones de hardware y actualizaciones de software.

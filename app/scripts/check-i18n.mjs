@@ -8,7 +8,13 @@
 //   3. translated docs (research/i18n/<lang>/): missing files are errors,
 //      structural validation failures against the English source are errors,
 //      fenced blocks compared with the English source (tagged blocks must be
-//      byte-identical, untagged prose blocks must keep the source line count),
+//      byte-identical, untagged prose blocks must keep the source line count,
+//      per-line leading indentation, per-line technical tokens — whole
+//      technical lines such as commands (any lower-case-first line, not an
+//      allowlist), executable paths, UCI statements, config pairs and hosts
+//      entries must be byte-identical — plus per-line firmware setting values
+//      and firmware/BIOS menu paths and quoted on-screen labels, which must
+//      stay in English),
 //      outdated sourceHash values are warnings,
 //   4. docs paths referenced in SidebarMenu.tsx / DocsHome.tsx are all listed
 //      in research/i18n/manifest.json.
@@ -209,7 +215,7 @@ async function checkDocs(manifest) {
       // Re-run the same structural validation translate-docs.mjs applies,
       // against the current English source body, and compare the target's own
       // fenced blocks with the source's (tagged blocks byte-identical,
-      // untagged prose blocks same line count).
+      // untagged prose blocks same line count and technical tokens).
       const { body: sourceBody } = splitFrontmatter(raw);
       const { text: sourceProtected, blocks: sourceBlocks } = protectCode(sourceBody);
       const { text: targetProtected, blocks: targetBlocks } = protectCode(targetBody);

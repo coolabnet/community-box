@@ -1,4 +1,4 @@
-import { Link, useParams } from 'react-router-dom';
+import { Link, useLocation, useParams } from 'react-router-dom';
 import { useEffect, useReducer } from 'react';
 import { useTranslation } from 'react-i18next';
 import ReactMarkdown from 'react-markdown';
@@ -6,16 +6,17 @@ import remarkGfm from 'remark-gfm';
 import rehypeHighlight from 'rehype-highlight';
 import { getMarkdownContent, normalizeDocLang, type DocLang } from '@/lib/markdown';
 import { resolveDocLink } from '@/lib/docLinks';
+import { rehypeHeadingIds, slugifyHeadings } from '@/lib/headingIds';
 import { Loader2, AlertCircle } from 'lucide-react';
 
 type MarkdownState =
   | { status: 'idle' | 'loading' }
-  | { status: 'success'; content: string; lang: DocLang }
+  | { status: 'success'; content: string; lang: DocLang; headingSlugs?: string[] }
   | { status: 'error'; message: string };
 
 type MarkdownAction =
   | { type: 'load' }
-  | { type: 'success'; content: string; lang: DocLang }
+  | { type: 'success'; content: string; lang: DocLang; headingSlugs?: string[] }
   | { type: 'error'; message: string };
 
 const markdownReducer = (_state: MarkdownState, action: MarkdownAction): MarkdownState => {
@@ -23,7 +24,7 @@ const markdownReducer = (_state: MarkdownState, action: MarkdownAction): Markdow
     case 'load':
       return { status: 'loading' };
     case 'success':
-      return { status: 'success', content: action.content, lang: action.lang };
+      return { status: 'success', content: action.content, lang: action.lang, headingSlugs: action.headingSlugs };
     case 'error':
       return { status: 'error', message: action.message };
     default:
@@ -36,6 +37,7 @@ export default function MarkdownPage() {
   const { t, i18n } = useTranslation();
   const lang = normalizeDocLang(i18n.resolvedLanguage);
   const [state, dispatch] = useReducer(markdownReducer, { status: 'loading' } as MarkdownState);
+  const { hash } = useLocation();
 
   useEffect(() => {
     dispatch({ type: 'load' });
@@ -47,10 +49,12 @@ export default function MarkdownPage() {
 
     let active = true;
 
-    getMarkdownContent(splat, lang)
-      .then(({ content, lang: servedLang }) => {
+    // The English body supplies heading slugs so translated headings keep the English anchors
+    Promise.all([getMarkdownContent(splat, lang), lang === 'en' ? null : getMarkdownContent(splat, 'en')])
+      .then(([{ content, lang: servedLang }, english]) => {
         if (!active) return;
-        dispatch({ type: 'success', content, lang: servedLang });
+        const headingSlugs = servedLang !== 'en' && english ? slugifyHeadings(english.content) : undefined;
+        dispatch({ type: 'success', content, lang: servedLang, headingSlugs });
       })
       .catch(err => {
         console.error('Failed to load markdown:', err);
@@ -62,6 +66,19 @@ export default function MarkdownPage() {
       active = false;
     };
   }, [splat, lang, t]);
+
+  // After the content renders (or the hash changes), scroll to the heading named by the fragment
+  useEffect(() => {
+    if (state.status !== 'success' || !hash) return;
+    let id = hash.slice(1);
+    try {
+      id = decodeURIComponent(id);
+    } catch {
+      // Malformed escape: use the raw fragment
+    }
+    // Headings carry scroll-mt-24 so the sticky docs header does not cover them
+    document.getElementById(id)?.scrollIntoView({ block: 'start' });
+  }, [state, hash]);
 
   // Show the notice when the requested language was not served (no translation, or it failed to load)
   const showFallbackNotice = state.status === 'success' && state.lang !== lang;
@@ -130,26 +147,26 @@ export default function MarkdownPage() {
         >
           <ReactMarkdown
             remarkPlugins={[remarkGfm]}
-            rehypePlugins={[rehypeHighlight]}
+            rehypePlugins={[rehypeHighlight, [rehypeHeadingIds, state.headingSlugs]]}
             components={{
               // Custom heading components with anchor links
               h1: ({ children, ...props }) => (
-              <h1 className="text-4xl font-bold text-gray-900 mb-8 mt-0 border-b border-gray-200 pb-4 tracking-tight" {...props}>
+              <h1 className="scroll-mt-24 text-4xl font-bold text-gray-900 mb-8 mt-0 border-b border-gray-200 pb-4 tracking-tight" {...props}>
                 {children}
               </h1>
             ),
             h2: ({ children, ...props }) => (
-              <h2 className="text-2xl font-bold text-blue-900 mb-6 mt-10 tracking-tight" {...props}>
+              <h2 className="scroll-mt-24 text-2xl font-bold text-blue-900 mb-6 mt-10 tracking-tight" {...props}>
                 {children}
               </h2>
             ),
             h3: ({ children, ...props }) => (
-              <h3 className="text-xl font-bold text-blue-800 mb-4 mt-8 tracking-tight" {...props}>
+              <h3 className="scroll-mt-24 text-xl font-bold text-blue-800 mb-4 mt-8 tracking-tight" {...props}>
                 {children}
               </h3>
             ),
             h4: ({ children, ...props }) => (
-              <h4 className="text-lg font-bold text-blue-700 mb-3 mt-6 tracking-tight" {...props}>
+              <h4 className="scroll-mt-24 text-lg font-bold text-blue-700 mb-3 mt-6 tracking-tight" {...props}>
                 {children}
               </h4>
             ),
@@ -163,6 +180,17 @@ export default function MarkdownPage() {
             a: ({ href, children, ...props }) => {
               // Relative links point at other docs: resolve them against this doc's directory
               const resolved = resolveDocLink(href, splat ?? '');
+              // Same-page anchor: router link so the hash change is handled in-app, without a reload
+              if (href?.startsWith('#')) {
+                return (
+                  <Link
+                    to={{ hash: href }}
+                    className="text-blue-600 hover:text-blue-800 underline decoration-2 underline-offset-2 hover:decoration-blue-800 transition-colors font-medium"
+                  >
+                    {children}
+                  </Link>
+                );
+              }
               if (resolved?.kind === 'doc' || resolved?.kind === 'route') {
                 return (
                   <Link

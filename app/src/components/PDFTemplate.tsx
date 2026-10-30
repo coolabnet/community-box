@@ -123,7 +123,7 @@ const PDFTemplate = ({ recommendation, alternatives, answers }: PDFTemplateProps
       </div>
 
       {/* Top recommendation */}
-      <div className="pdf-recommendation mb-8 p-6 bg-primary/5 rounded-lg border border-primary/20">
+      <div data-pdf-block className="pdf-recommendation mb-8 p-6 bg-primary/5 rounded-lg border border-primary/20">
         <div className="flex items-start justify-between mb-4">
           <div className="flex items-center gap-4">
             <div className="p-3 bg-primary text-white rounded-full">
@@ -156,6 +156,7 @@ const PDFTemplate = ({ recommendation, alternatives, answers }: PDFTemplateProps
           {topRecommendation.strengths.map((strength) => (
             <div
               key={strength}
+              data-pdf-block
               className="flex items-center gap-3 p-3 bg-primary/10 rounded-lg"
             >
               <div className="text-primary">
@@ -198,7 +199,7 @@ const PDFTemplate = ({ recommendation, alternatives, answers }: PDFTemplateProps
           </div>
         </div>
 
-        <div className="mt-6 pt-4 border-t border-gray-200">
+        <div data-pdf-block className="mt-6 pt-4 border-t border-gray-200">
           <h4 className="font-medium mb-2 text-gray-800">{t('common.idealFor')}</h4>
           <p className="text-gray-700">{t(`questionnaire.questions.results.devices.${topRecommendation.device.key}.idealFor`)}</p>
         </div>
@@ -215,6 +216,7 @@ const PDFTemplate = ({ recommendation, alternatives, answers }: PDFTemplateProps
             {alternatives.slice(0, 2).map((alternative) => (
               <div
                 key={alternative.device.key}
+                data-pdf-block
                 className="p-4 bg-gray-50 rounded-lg border border-gray-200"
               >
                 <div className="flex items-center justify-between mb-2">
@@ -254,7 +256,7 @@ const PDFTemplate = ({ recommendation, alternatives, answers }: PDFTemplateProps
             {Object.entries(answers)
               .filter(([key]) => !['points', 'usage'].includes(key))
               .map(([key, value]) => (
-                <div key={key} className="p-3 bg-gray-50 rounded-lg border border-gray-200">
+                <div key={key} data-pdf-block className="p-3 bg-gray-50 rounded-lg border border-gray-200">
                   <div className="font-medium text-gray-800 mb-1">
                     {t(`questionnaire.questions.${key}.question`)}
                   </div>
@@ -267,7 +269,7 @@ const PDFTemplate = ({ recommendation, alternatives, answers }: PDFTemplateProps
 
           {/* Points allocation */}
           {answers.points && (
-            <div className="p-4 bg-gray-50 rounded-lg border border-gray-200">
+            <div data-pdf-block className="p-4 bg-gray-50 rounded-lg border border-gray-200">
               <h4 className="font-medium text-gray-800 mb-2">
                 {t('questionnaire.questions.points.question')}
               </h4>
@@ -292,7 +294,7 @@ const PDFTemplate = ({ recommendation, alternatives, answers }: PDFTemplateProps
 
           {/* Usage selection */}
           {answers.usage && (
-            <div className="p-4 bg-gray-50 rounded-lg border border-gray-200">
+            <div data-pdf-block className="p-4 bg-gray-50 rounded-lg border border-gray-200">
               <h4 className="font-medium text-gray-800 mb-2">
                 {t('questionnaire.questions.usage.question')}
               </h4>

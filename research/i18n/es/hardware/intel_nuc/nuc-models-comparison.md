@@ -5,17 +5,17 @@ sourceHash: 30aecd86774014b3
 translatedBy: glm-4.6
 ---
 
-# Comparación de Modelos Intel NUC para Implementación de Servidores
+# Comparación de Modelos Intel NUC para Despliegue de Servidores
 
-## Descripción general
+## Descripción General
 
-Esta comparación exhaustiva cubre los modelos Intel NUC adecuados para la implementación de servidores comunitarios, centrándose en las especificaciones relevantes para plataformas de autohospedaje como YunoHost, Caprover y CasaOS.
+Esta comparación exhaustiva cubre los modelos de Intel NUC adecuados para el despliegue de servidores comunitarios, enfocándose en las especificaciones relevantes para plataformas de auto-alojamiento como YunoHost, Caprover y CasaOS.
 
 ## Modelos de la Generación Actual (2024-2025)
 
 ### Modelos ASUS NUC (13.ª Generación)
 
-| Modelo | CPU | Núcleos/Hilos | GHz Base/Turbo | TDP | RAM Máx. | Almacenamiento | Red | Rango de Precio |
+| Modelo | CPU | Núcleos/Hilos | Base/Boost GHz | TDP | RAM Máx. | Almacenamiento | Red | Rango de Precio |
 |-------|-----|---------------|----------------|-----|---------|---------|-------------|-------------|
 | **NUC13ANHi3** | i3-1315U | 6 (2P+4E) / 8 | 1.2/4.5 | 15W | 64GB | M.2 + 2.5" | 2.5GbE | $300-400 |
 | **NUC13ANHi5** | i5-1340P | 12 (4P+8E) / 16 | 1.9/4.6 | 28W | 64GB | M.2 + 2.5" | 2.5GbE | $450-550 |
@@ -23,7 +23,7 @@ Esta comparación exhaustiva cubre los modelos Intel NUC adecuados para la imple
 | **NUC13ANKi5** | i5-1340P | 12 (4P+8E) / 16 | 1.9/4.6 | 28W | 64GB | 2x M.2 | 2.5GbE | $490-590 |
 | **NUC13ANKi7** | i7-1360P | 12 (4P+8E) / 16 | 2.2/5.0 | 28W | 64GB | 2x M.2 | 2.5GbE | $650-750 |
 
-### Modelos para Juegos ASUS ROG NUC (2025)
+### Modelos de Juego ASUS ROG NUC (2025)
 
 | Modelo | CPU | GPU | Núcleos/Hilos | TDP | RAM Máx. | Almacenamiento | Red | Rango de Precio |
 |-------|-----|-----|---------------|-----|---------|---------|-------------|-------------|
@@ -31,11 +31,11 @@ Esta comparación exhaustiva cubre los modelos Intel NUC adecuados para la imple
 
 ### Modelos Anteriores de Intel (12.ª Generación)
 
-| Modelo | CPU | Núcleos/Hilos | GHz Base/Turbo | TDP | RAM Máx. | Almacenamiento | Red | Estado |
+| Modelo | CPU | Núcleos/Hilos | Base/Boost GHz | TDP | RAM Máx. | Almacenamiento | Red | Estado |
 |-------|-----|---------------|----------------|-----|---------|---------|-------------|--------|
-| **NUC12WSHi3** | i3-1220P | 10 (2P+8E) / 12 | 1.1/4.4 | 28W | 64GB | M.2 + 2.5" | 1GbE | Anterior |
-| **NUC12WSHi5** | i5-1240P | 12 (4P+8E) / 16 | 1.7/4.4 | 28W | 64GB | M.2 + 2.5" | 1GbE | Anterior |
-| **NUC12WSHi7** | i7-1260P | 12 (4P+8E) / 16 | 2.1/4.7 | 28W | 64GB | M.2 + 2.5" | 1GbE | Anterior |
+| **NUC12WSHi3** | i3-1220P | 10 (2P+8E) / 12 | 1.1/4.4 | 28W | 64GB | M.2 + 2.5" | 1GbE | Legado |
+| **NUC12WSHi5** | i5-1240P | 12 (4P+8E) / 16 | 1.7/4.4 | 28W | 64GB | M.2 + 2.5" | 1GbE | Legado |
+| **NUC12WSHi7** | i7-1260P | 12 (4P+8E) / 16 | 2.1/4.7 | 28W | 64GB | M.2 + 2.5" | 1GbE | Legado |
 
 ## Comparación Detallada de Especificaciones
 
@@ -50,11 +50,11 @@ Esta comparación exhaustiva cubre los modelos Intel NUC adecuados para la imple
 | **NUC13ANKi7** | ~20,000 | Intel Iris Xe | 16 | TB4 (2x) | 6x USB 3.2 | 15W en reposo, 50W en carga |
 | **ROG NUC 2025** | ~35,000+ | RTX 5080 | 20 | TB4 (1x) | 7x USB 3.2 | 25W en reposo, 160W en carga |
 
-*Puntuaciones aproximadas - el rendimiento real puede variar
+*Puntuaciones aproximadas: el rendimiento real puede variar
 
 ### Detalles de Memoria y Almacenamiento
 
-| Modelo | Tipo de RAM | Capacidad Máx. | Ranuras de RAM | Ranuras de Almacenamiento | Almacenamiento Máx. | Opciones de Arranque |
+| Modelo | Tipo de RAM | Capacidad Máx. | Ranuras RAM | Ranuras de Almacenamiento | Almacenamiento Máx. | Opciones de Arranque |
 |-------|----------|--------------|-----------|---------------|-------------|--------------|
 | **NUC13ANHi3** | DDR4-3200 SO-DIMM | 64GB | 2x | M.2 + SATA | 4TB + 4TB | UEFI, Legacy |
 | **NUC13ANHi5** | DDR4-3200 SO-DIMM | 64GB | 2x | M.2 + SATA | 4TB + 4TB | UEFI, Legacy |
@@ -74,7 +74,7 @@ Esta comparación exhaustiva cubre los modelos Intel NUC adecuados para la imple
 | **NUC13ANKi7** | 2.5GbE | WiFi 6E | BT 5.3 | 2x TB4, 1x HDMI | 3.5mm | 117×117×35 |
 | **ROG NUC 2025** | 2.5GbE | WiFi 7 | BT 5.4 | 2x DP2.1, 2x HDMI2.1 | 3.5mm | 282×188×57 |
 
-## Matriz de Compatibilidad con Plataformas de Servidores
+## Matriz de Compatibilidad con Plataformas de Servidor
 
 ### Soporte de Sistemas Operativos
 
@@ -104,7 +104,7 @@ Esta comparación exhaustiva cubre los modelos Intel NUC adecuados para la imple
 **Recomendado: NUC13ANHi3**
 - **RAM**: 16GB (2x 8GB DDR4-3200)
 - **Almacenamiento**: SSD NVMe de 500GB + SSD SATA de 2TB
-- **Casos de Uso**: Compartición de archivos, transmisión básica de multimedia, nube personal
+- **Casos de Uso**: Compartición de archivos, transmisión básica de medios, nube personal
 - **Costo Estimado**: $400-500 (barebones + componentes)
 
 ### Servidor Doméstico Equilibrado (Uso Medio)
@@ -128,26 +128,26 @@ Esta comparación exhaustiva cubre los modelos Intel NUC adecuados para la imple
 - **Casos de Uso**: Servidores de juegos, computación con GPU, cargas de trabajo de IA
 - **Costo Estimado**: $3500+ (sistema completo)
 
-## Árbol de Decisión para la Selección de Modelos
+## Árbol de Decisión para la Selección del Modelo
 
 ```
-¿Necesitas aceleración por GPU o rendimiento para juegos?
-├─ SÍ → ROG NUC 2025
-└─ NO → Continuar
+Do you need GPU acceleration or gaming performance?
+├─ YES → ROG NUC 2025
+└─ NO → Continue
 
-¿La máxima flexibilidad de almacenamiento es importante?
-├─ SÍ → NUC13ANKi5/i7 (doble M.2, sin bahía de 2.5")
-└─ NO → Continuar
+Is maximum storage flexibility important?
+├─ YES → NUC13ANKi5/i7 (dual M.2, no 2.5" bay)
+└─ NO → Continue
 
-¿Cuál es tu requisito de rendimiento?
-├─ Básico (compartir archivos, servicios simples) → NUC13ANHi3
-├─ Medio (contenedores, múltiples servicios) → NUC13ANHi5
-└─ Alto (virtualización, cargas de trabajo pesadas) → NUC13ANHi7
+What's your performance requirement?
+├─ Basic (file sharing, simple services) → NUC13ANHi3
+├─ Medium (containers, multiple services) → NUC13ANHi5
+└─ High (virtualization, heavy workloads) → NUC13ANHi7
 ```
 
 ## Comparación de Eficiencia Energética
 
-| Modelo | Consumo en Reposo | Carga Típica | Consumo Máx. | Costo Anual Est.* |
+| Modelo | Consumo en Reposo | Carga Típica | Consumo Máx. | Costo Anual Estimado* |
 |-------|------------|--------------|-----------|------------------|
 | **NUC13ANHi3** | 5-8W | 15-25W | 35W | $15-30 |
 | **NUC13ANHi5** | 6-10W | 20-35W | 45W | $20-40 |
@@ -165,26 +165,26 @@ Esta comparación exhaustiva cubre los modelos Intel NUC adecuados para la imple
 - **Instalación**: Acceso sin herramientas en la mayoría de los modelos
 
 ### Expansión de Almacenamiento
-- **Modelos ANH**: 1x bahía M.2 2280 + 1x SATA de 2.5"
+- **Modelos ANH**: 1x M.2 2280 + 1x bahía SATA de 2.5"
 - **Modelos ANK**: 2x ranuras M.2 2280 (sin bahía de 2.5")
 - **ROG NUC**: 2x ranuras M.2 2280 + refrigeración avanzada
 
 ### Expansión de Conectividad
-- **Thunderbolt 4**: Soporta GPU externa, almacenamiento, redes
+- **Thunderbolt 4**: Soporta GPU externa, almacenamiento, red
 - **USB 3.2**: Múltiples puertos para periféricos adicionales
 - **Red**: Adaptadores USB a Ethernet para NICs adicionales
 
 ## Consideraciones sobre Modelos Anteriores
 
-### Cuándo Considerar Modelos Antiguos
+### Cuándo Considerar Modelos Anteriores
 - **Restricciones de presupuesto**: Los modelos NUC11/12 ofrecen buena relación calidad-precio
-- **Compatibilidad específica**: Algunos softwares funcionan mejor con hardware antiguo
-- **Inventario disponible**: Los modelos anteriores pueden estar con descuento
+- **Compatibilidad específica**: Algunos software funcionan mejor con hardware anterior
+- **Inventario disponible**: Los modelos anteriores pueden tener descuentos
 
 ### Ruta de Migración
-- Comienza con la generación actual para una mayor longevidad
-- Considera la ruta de actualización al planificar la configuración inicial
-- Ten en cuenta el cronograma de soporte de controladores
+- Comience con la generación actual para mayor longevidad
+- Considere la ruta de actualización al planificar la configuración inicial
+- Tenga en cuenta el cronograma de soporte de drivers
 
 ## Recomendaciones de Compra
 
@@ -192,17 +192,17 @@ Esta comparación exhaustiva cubre los modelos Intel NUC adecuados para la imple
 - **ASUS Direct**: Modelos más recientes, garantía completa
 - **Integradores de Sistemas**: Opciones preconfiguradas
 - **Grandes Minoristas**: Precios competitivos, políticas de devolución
-- **Mercado de Segunda Mano**: Modelos anteriores a precios reducidos
+- **Mercado de Usados**: Modelos anteriores a precios reducidos
 
 ### Qué Evitar
 - **Modelos muy antiguos** (NUC6 y anteriores): Soporte limitado de sistemas operativos modernos
 - **Vendedores desconocidos**: Preocupaciones de garantía y soporte
-- **Kits incompletos**: Asegúrate de que se incluyan todos los componentes necesarios
+- **Kits incompletos**: Asegúrese de que se incluyan todos los componentes necesarios
 
 ---
 
 **Próximos Pasos:**
-- Revisa [nuc-bios-setup.md](nuc-bios-setup.md) para conocer las pautas de configuración
-- Consulta [nuc-power-network.md](nuc-power-network.md) para conocer las mejores prácticas de configuración
+- Revise [nuc-bios-setup.md](nuc-bios-setup.md) para ver las pautas de configuración
+- Consulte [nuc-power-network.md](nuc-power-network.md) para ver las mejores prácticas de configuración
 
-*Las especificaciones están sujetas a cambios. Verifica siempre con la documentación del fabricante antes de comprar.*
+*Las especificaciones están sujetas a cambios. Siempre verifique con la documentación del fabricante antes de comprar.*

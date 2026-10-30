@@ -7,26 +7,26 @@ translatedBy: glm-4.6
 
 # Guia de Armazenamento Externo para Expansão de Servidor Comunitário
 
-Este guia cobre a conexão, formatação e montagem de dispositivos de armazenamento adicionais (USB, SATA, SSD) para expandir a capacidade e melhorar a resiliência dos dados em implantações de servidores comunitários.
+Este guia cobre a conexão, formatação e montagem de dispositivos de armazenamento adicionais (USB, SATA, SSD) para expandir capacidade e melhorar a resiliência de dados em implantações de servidores comunitários.
 
 ## Entendendo as Opções de Armazenamento Externo
 
-O armazenamento externo oferece recursos cruciais para servidores comunitários:
+O armazenamento externo oferece capacidades cruciais para servidores comunitários:
 
-- **Expansão de Capacidade**: Adicione armazenamento sem substituir as unidades existentes
-- **Redundância de Dados**: Crie cópias de backup em dispositivos físicos separados
-- **Aprimoramento de Desempenho**: Use SSDs para cargas de trabalho de alto desempenho
+- **Expansão de Capacidade**: Adicionar armazenamento sem substituir discos existentes
+- **Redundância de Dados**: Criar cópias de backup em dispositivos físicos separados
+- **Melhoria de Desempenho**: Usar SSDs para cargas de trabalho de alto desempenho
 - **Arquitetura Modular**: Adição e remoção fácil de armazenamento conforme as necessidades mudam
 
 ### Tipos de Conexão de Armazenamento
 
 | Tipo de Conexão | Velocidade | Melhor Caso de Uso | Compatibilidade |
 |----------------|-------|---------------|---------------|
-| USB 3.0/3.1 | 5-10 Gbps | Unidades de backup, armazenamento portátil | Universal |
+| USB 3.0/3.1 | 5-10 Gbps | Discos de backup, armazenamento portátil | Universal |
 | USB-C | Até 40 Gbps | SSDs externos de alta velocidade | Sistemas modernos |
 | eSATA | 6 Gbps | Armazenamento externo permanente | Sistemas desktop |
 | Thunderbolt | Até 40 Gbps | Cargas de trabalho profissionais | Mac/PC de alto desempenho |
-| SATA Interno | 6 Gbps | Expansão de armazenamento principal | Desktop/servidor |
+| SATA Interno | 6 Gbps | Expansão de armazenamento primário | Desktop/servidor |
 
 ## Preparação Pré-Conexão
 
@@ -48,35 +48,35 @@ sudo fdisk -l
 ### Verifique as Portas Disponíveis
 
 Identifique as portas de conexão disponíveis:
-- Portas USB 3.0+ (conectores azuis tipicamente)
+- Portas USB 3.0+ (normalmente conectores azuis)
 - Portas eSATA
 - Conexões SATA internas
-- Requisitos de energia para unidades de 3,5"
+- Requisitos de energia para discos de 3,5"
 
 > **⚠️ Requisitos de Energia**
 > 
-> Unidades SATA de 3,5" exigem conexões de energia separadas. Unidades de 2,5" podem tipicamente ser alimentadas via USB. Planeje sua infraestrutura de energia adequadamente.
+> Discos SATA de 3,5" requerem conexões de energia separadas. Discos de 2,5" normalmente podem ser alimentados via USB. Planeje sua infraestrutura de energia de acordo.
 
-## Etapa 1: Conexão Física
+## Passo 1: Conexão Física
 
-### Conexão de Unidade USB
+### Conexão de Disco USB
 
 `[Mounting External Drive](mounting-external-drive.png)`
 
 1. **Localize a porta USB apropriada** (USB 3.0+ recomendado para melhor desempenho)
-2. **Conecte a unidade** garantindo uma conexão segura
+2. **Conecte o disco** garantindo uma conexão segura
 3. **Para adaptadores USB-SATA**: Conecte os cabos USB e de energia, se necessário
-4. **Aguarde o reconhecimento** (tipicamente 5-10 segundos)
+4. **Aguarde o reconhecimento** (normalmente 5-10 segundos)
 
-### Conexão de Unidade SATA
+### Conexão de Disco SATA
 
 Para conexões SATA internas:
 
-1. **Desligue completamente o sistema**
+1. **Desligue o sistema completamente**
 2. **Conecte o cabo de dados SATA** à porta SATA da placa-mãe
 3. **Conecte o cabo de energia SATA** da fonte de alimentação
-4. **Fixe a unidade no suporte de montagem** se for instalação permanente
-5. **Ligue e verifique o BIOS/UEFI** para o reconhecimento da unidade
+4. **Fixe o disco no suporte de montagem** se for instalação permanente
+5. **Ligue e verifique BIOS/UEFI** para o reconhecimento do disco
 
 ### Verificação da Conexão Física
 
@@ -91,7 +91,7 @@ lsscsi
 sudo tail -f /var/log/syslog
 ```
 
-## Etapa 2: Detecção e Identificação da Unidade
+## Passo 2: Detecção e Identificação do Disco
 
 ### Detecção Automática
 
@@ -120,7 +120,7 @@ echo "- - -" | sudo tee /sys/class/scsi_host/host*/scan
 echo "1" | sudo tee /sys/class/block/sdX/device/rescan
 ```
 
-### Identificando Sua Nova Unidade
+### Identificando seu Novo Disco
 
 Procure o novo dispositivo na saída:
 
@@ -134,11 +134,11 @@ sda      8:0    0   10G  0 disk
 sdb      8:16   1  7.4G  0 disk  ← New USB drive
 ```
 
-## Etapa 3: Preparação e Formatação da Unidade
+## Passo 3: Preparação e Formatação do Disco
 
 ### Verifique o Sistema de Arquivos Existente
 
-Antes de formatar, verifique se a unidade já contém dados:
+Antes de formatar, verifique se o disco já contém dados:
 
 ```bash
 # Check for existing file systems
@@ -150,7 +150,7 @@ sudo file -s /dev/sdb1
 
 ### Crie Tabela de Partições (se necessário)
 
-Para unidades completamente novas:
+Para discos completamente novos:
 
 ```bash
 # Create GPT partition table (recommended for drives >2TB)
@@ -189,7 +189,7 @@ sudo fdisk /dev/sdb
 
 `[Filesystem Format Screenshot](format-drive-ui.png)`
 
-Escolha o sistema de arquivos apropriado com base nas suas necessidades:
+Escolha o sistema de arquivos apropriado conforme suas necessidades:
 
 #### ext4 (Recomendado para Linux)
 
@@ -211,7 +211,7 @@ sudo apt install ntfs-3g
 sudo mkfs.ntfs -f -L "shared-storage" /dev/sdb1
 ```
 
-#### exFAT (compatibilidade entre plataformas)
+#### exFAT (compatibilidade multiplataforma)
 
 ```bash
 # Install exFAT tools
@@ -231,7 +231,7 @@ sudo blkid /dev/sdb1
 sudo fsck /dev/sdb1
 ```
 
-## Etapa 4: Montagem do Armazenamento Externo
+## Passo 4: Montando o Armazenamento Externo
 
 ### Crie o Ponto de Montagem
 
@@ -260,9 +260,9 @@ mount | grep sdb1
 
 ### Montagem Permanente
 
-Para montagem automática na inicialização, edite `/etc/fstab`:
+Para montagem automática na inicialização, edite o `/etc/fstab`:
 
-#### Obtenha o UUID da Unidade
+#### Obtenha o UUID do Disco
 
 ```bash
 # Find the UUID of your partition
@@ -280,19 +280,19 @@ sudo cp /etc/fstab /etc/fstab.backup
 sudo nano /etc/fstab
 ```
 
-Adicione uma linha para sua nova unidade:
+Adicione uma linha para seu novo disco:
 
 ```
-# Armazenamento externo de backup
+# External backup storage
 UUID=12345678-1234-1234-1234-123456789012 /srv/backup-storage ext4 defaults,nofail 0 2
 ```
 
 #### Opções do fstab Explicadas
 
-- `defaults`: Use as opções de montagem padrão
-- `nofail`: Não falhe na inicialização se a unidade estiver ausente[20]
-- `0`: Não faça dump deste sistema de arquivos
-- `2`: Verifique o sistema de arquivos após a partição raiz
+- `defaults`: Usa as opções de montagem padrão
+- `nofail`: Não falha na inicialização se o disco estiver ausente[20]
+- `0`: Não faz dump deste sistema de arquivos
+- `2`: Verifica o sistema de arquivos após a partição raiz
 
 #### Teste a Entrada do fstab
 
@@ -304,7 +304,7 @@ sudo mount -a
 df -h
 ```
 
-## Etapa 5: Configuração de Permissões e Propriedade
+## Passo 5: Configurando Permissões e Propriedade
 
 ### Permissões Básicas
 
@@ -341,18 +341,18 @@ sudo chmod -R 775 /srv/backup-storage
 
 #### Opções de Montagem para SSDs
 
-Para unidades externas SSD, use opções de montagem otimizadas:
+Para discos externos SSD, use opções de montagem otimizadas:
 
 ```
 UUID=12345678-1234-1234-1234-123456789012 /srv/ssd-storage ext4 defaults,noatime,discard,nofail 0 2
 ```
 
-- `noatime`: Não atualize os tempos de acesso (melhora o desempenho)
-- `discard`: Habilite comandos TRIM para a saúde do SSD
+- `noatime`: Não atualiza tempos de acesso (melhora o desempenho)
+- `discard`: Habilita comandos TRIM para a saúde do SSD
 
 #### Agendamento de E/S
 
-Para unidades externas, considere os agendadores deadline ou noop:
+Para discos externos, considere os agendadores deadline ou noop:
 
 ```bash
 # Check current scheduler
@@ -384,7 +384,7 @@ sudo mkdir /mnt/encrypted-storage
 sudo mount /dev/mapper/encrypted-storage /mnt/encrypted-storage
 ```
 
-## Monitoramento da Saúde da Unidade
+## Monitoramento da Saúde do Disco
 
 ### Monitoramento S.M.A.R.T.
 
@@ -451,7 +451,7 @@ echo "Backup completed: $(date)" >> /var/log/backup.log
 
 ### Configuração de RAID
 
-Para múltiplas unidades externas, considere RAID por software:
+Para múltiplos discos externos, considere RAID por software:
 
 ```bash
 # Install mdadm
@@ -468,11 +468,11 @@ sudo mount /dev/md0 /srv/raid-storage
 
 ## Solução de Problemas Comuns
 
-### Unidade Não Detectada
+### Disco Não Detectado
 
 1. **Verifique as conexões físicas**
-2. **Verifique a fonte de alimentação** (especialmente para unidades de 3,5")
-3. **Tente uma porta USB diferente** ou cabo
+2. **Verifique a fonte de alimentação** (especialmente para discos de 3,5")
+3. **Experimente outra porta USB** ou cabo
 4. **Verifique os logs do sistema**:
    ```bash
    dmesg | grep -i error
@@ -530,8 +530,8 @@ sudo hdparm -tT /dev/sdb
 
 1. **Criptografe o armazenamento externo sensível**
 2. **Verificação regular de backups**
-3. **Descarte seguro** de unidades antigas
-4. **Registro de acessos**:
+3. **Descarte seguro** de discos antigos
+4. **Registro de acesso**:
    ```bash
    # Monitor file access
    tail -f /var/log/audit/audit.log | grep external-storage
@@ -571,33 +571,33 @@ sudo systemctl start mysql
 
 ### Tarefas Diárias
 
-- Monitore o status de montagem
-- Verifique o espaço disponível
-- Revise os logs do sistema em busca de erros
+- Monitorar o status de montagem
+- Verificar o espaço disponível
+- Revisar os logs do sistema em busca de erros
 
 ### Tarefas Semanais
 
-- Execute verificações do sistema de arquivos
-- Verifique a integridade dos backups
-- Atualize a documentação de uso
+- Executar verificações do sistema de arquivos
+- Verificar a integridade dos backups
+- Atualizar a documentação de uso
 
 ### Tarefas Mensais
 
-- Execute testes S.M.A.R.T.
-- Revise as métricas de desempenho
-- Planeje a expansão de capacidade
+- Executar testes S.M.A.R.T.
+- Revisar métricas de desempenho
+- Planejar expansão de capacidade
 
 ## Integração com Outros Guias
 
 Esta configuração de armazenamento externo complementa outras tarefas de gerenciamento de servidor:
 
 - **Após a Instalação do SO**: Siga o [etcher-guide.md](etcher-guide.md) para a configuração inicial do sistema
-- **Antes da Configuração do Armazenamento**: Complete o [disk-partitioning.md](disk-partitioning.md) para o layout principal do sistema
-- **Endurecimento de Segurança**: Implemente controles de acesso e criptografia
+- **Antes da Configuração de Armazenamento**: Complete o [disk-partitioning.md](disk-partitioning.md) para o layout principal do sistema
+- **Reforço de Segurança**: Implemente controles de acesso e criptografia
 - **Integração de Monitoramento**: Adicione métricas de armazenamento ao monitoramento do servidor
 
 ## Conclusão
 
-A expansão de armazenamento externo é crucial para implantações de servidores comunitários em crescimento. Planejamento, configuração e manutenção adequados garantem operação confiável e proteção de dados. Sempre priorize a segurança dos dados por meio de redundância, monitoramento e procedimentos regulares de manutenção.
+A expansão de armazenamento externo é crucial para o crescimento de implantações de servidores comunitários. Planejamento, configuração e manutenção adequados garantem operação confiável e proteção de dados. Sempre priorize a segurança dos dados por meio de redundância, monitoramento e procedimentos regulares de manutenção.
 
-A abordagem modular para armazenamento externo permite que os servidores comunitários escalem de forma eficiente, mantendo a consciência orçamentária e a simplicidade operacional.
+A abordagem modular do armazenamento externo permite que servidores comunitários escalem de forma eficiente, mantendo consciência orçamentária e simplicidade operacional.

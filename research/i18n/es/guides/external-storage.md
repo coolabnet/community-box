@@ -7,7 +7,7 @@ translatedBy: glm-4.6
 
 # Guía de Almacenamiento Externo para la Expansión de Servidores Comunitarios
 
-Esta guía cubre la conexión, el formateo y el montaje de dispositivos de almacenamiento adicionales (USB, SATA, SSD) para ampliar la capacidad y mejorar la resiliencia de los datos en despliegues de servidores comunitarios.
+Esta guía cubre la conexión, el formateo y el montaje de dispositivos de almacenamiento adicionales (USB, SATA, SSD) para expandir la capacidad y mejorar la resiliencia de los datos en despliegues de servidores comunitarios.
 
 ## Entendiendo las Opciones de Almacenamiento Externo
 
@@ -16,7 +16,7 @@ El almacenamiento externo proporciona capacidades cruciales para los servidores 
 - **Expansión de Capacidad**: Agregar almacenamiento sin reemplazar las unidades existentes
 - **Redundancia de Datos**: Crear copias de respaldo en dispositivos físicos separados
 - **Mejora del Rendimiento**: Usar SSDs para cargas de trabajo de alto rendimiento
-- **Arquitectura Modular**: Adición y eliminación sencilla de almacenamiento a medida que cambian las necesidades
+- **Arquitectura Modular**: Agregar y quitar almacenamiento fácilmente a medida que cambian las necesidades
 
 ### Tipos de Conexión de Almacenamiento
 
@@ -26,11 +26,11 @@ El almacenamiento externo proporciona capacidades cruciales para los servidores 
 | USB-C | Hasta 40 Gbps | SSDs externos de alta velocidad | Sistemas modernos |
 | eSATA | 6 Gbps | Almacenamiento externo permanente | Sistemas de escritorio |
 | Thunderbolt | Hasta 40 Gbps | Cargas de trabajo profesionales | Mac/PC de gama alta |
-| SATA interno | 6 Gbps | Expansión de almacenamiento principal | Escritorio/servidor |
+| SATA Interno | 6 Gbps | Expansión de almacenamiento principal | Escritorio/servidor |
 
 ## Preparación Previa a la Conexión
 
-### Inventariar el Almacenamiento Actual
+### Inventario del Almacenamiento Actual
 
 Antes de agregar almacenamiento externo, documente su configuración actual:
 
@@ -45,17 +45,17 @@ df -h
 sudo fdisk -l
 ```
 
-### Verificar los Puertos Disponibles
+### Verificación de Puertos Disponibles
 
 Identifique los puertos de conexión disponibles:
-- Puertos USB 3.0+ (generalmente conectores azules)
+- Puertos USB 3.0+ (típicamente conectores azules)
 - Puertos eSATA
 - Conexiones SATA internas
 - Requisitos de energía para unidades de 3.5"
 
 > **⚠️ Requisitos de Energía**
 > 
-> Las unidades SATA de 3.5" requieren conexiones de alimentación separadas. Las unidades de 2.5" generalmente pueden alimentarse a través de USB. Planifique su infraestructura de energía en consecuencia.
+> Las unidades SATA de 3.5" requieren conexiones de energía separadas. Las unidades de 2.5" generalmente pueden alimentarse mediante USB. Planifique su infraestructura de energía en consecuencia.
 
 ## Paso 1: Conexión Física
 
@@ -64,19 +64,19 @@ Identifique los puertos de conexión disponibles:
 `[Mounting External Drive](mounting-external-drive.png)`
 
 1. **Ubique el puerto USB apropiado** (se recomienda USB 3.0+ para un mejor rendimiento)
-2. **Conecte la unidad** asegurando una conexión firme
-3. **Para adaptadores USB-SATA**: Conecte tanto el cable USB como el de alimentación si es necesario
-4. **Espere el reconocimiento** (generalmente 5-10 segundos)
+2. **Conecte la unidad** asegurándose de que la conexión sea firme
+3. **Para adaptadores USB-SATA**: Conecte tanto el cable USB como el de energía si es necesario
+4. **Espere el reconocimiento** (típicamente 5-10 segundos)
 
 ### Conexión de Unidad SATA
 
 Para conexiones SATA internas:
 
-1. **Apague el sistema completamente**
+1. **Apague completamente el sistema**
 2. **Conecte el cable de datos SATA** al puerto SATA de la placa base
-3. **Conecte el cable de alimentación SATA** desde la fuente de alimentación
+3. **Conecte el cable de energía SATA** desde la fuente de alimentación
 4. **Fije la unidad en el soporte de montaje** si es una instalación permanente
-5. **Encienda y verifique en el BIOS/UEFI** el reconocimiento de la unidad
+5. **Encienda y verifique en BIOS/UEFI** el reconocimiento de la unidad
 
 ### Verificación de la Conexión Física
 
@@ -136,7 +136,7 @@ sdb      8:16   1  7.4G  0 disk  ← New USB drive
 
 ## Paso 3: Preparación y Formateo de la Unidad
 
-### Verificar el Sistema de Archivos Existente
+### Verificación del Sistema de Archivos Existente
 
 Antes de formatear, verifique si la unidad ya contiene datos:
 
@@ -148,7 +148,7 @@ sudo blkid /dev/sdb
 sudo file -s /dev/sdb1
 ```
 
-### Crear Tabla de Particiones (si es necesario)
+### Creación de la Tabla de Particiones (si es necesario)
 
 Para unidades completamente nuevas:
 
@@ -160,7 +160,7 @@ sudo parted /dev/sdb mklabel gpt
 sudo parted /dev/sdb mklabel msdos
 ```
 
-### Crear Particiones
+### Creación de Particiones
 
 #### Usando parted (recomendado)
 
@@ -185,7 +185,7 @@ sudo fdisk /dev/sdb
 # Write changes (w)
 ```
 
-### Formatear la Partición
+### Formateo de la Partición
 
 `[Filesystem Format Screenshot](format-drive-ui.png)`
 
@@ -221,7 +221,7 @@ sudo apt install exfat-fuse exfat-utils
 sudo mkfs.exfat -n "portable-storage" /dev/sdb1
 ```
 
-### Verificar el Formateo
+### Verificación del Formateo
 
 ```bash
 # Check the new file system
@@ -233,7 +233,7 @@ sudo fsck /dev/sdb1
 
 ## Paso 4: Montaje del Almacenamiento Externo
 
-### Crear Punto de Montaje
+### Creación del Punto de Montaje
 
 ```bash
 # Create directory for mount point
@@ -283,14 +283,14 @@ sudo nano /etc/fstab
 Agregue una línea para su nueva unidad:
 
 ```
-# Almacenamiento de respaldo externo
+# External backup storage
 UUID=12345678-1234-1234-1234-123456789012 /srv/backup-storage ext4 defaults,nofail 0 2
 ```
 
 #### Opciones de fstab Explicadas
 
-- `defaults`: Usar opciones de montaje predeterminadas
-- `nofail`: No fallar el arranque si falta la unidad[20]
+- `defaults`: Usar las opciones de montaje predeterminadas
+- `nofail`: No fallar el arranque si falta la unidad
 - `0`: No hacer dump de este sistema de archivos
 - `2`: Verificar el sistema de archivos después de la partición raíz
 
@@ -304,7 +304,7 @@ sudo mount -a
 df -h
 ```
 
-## Paso 5: Establecimiento de Permisos y Propiedad
+## Paso 5: Configuración de Permisos y Propiedad
 
 ### Permisos Básicos
 
@@ -402,7 +402,7 @@ sudo smartctl -a /dev/sdb
 sudo smartctl -t short /dev/sdb
 ```
 
-### Verificaciones de Salud Regulares
+### Verificaciones Regulares de Salud
 
 Cree un script de monitoreo:
 
@@ -529,7 +529,7 @@ sudo hdparm -tT /dev/sdb
 ### Protección de Datos
 
 1. **Cifre el almacenamiento externo sensible**
-2. **Verificación regular de respaldos**
+2. **Verificación regular de los respaldos**
 3. **Eliminación segura** de unidades antiguas
 4. **Registro de accesos**:
    ```bash
@@ -539,7 +539,7 @@ sudo hdparm -tT /dev/sdb
 
 ## Integración con Servicios del Servidor
 
-### Integración con Servidor Web
+### Integración con el Servidor Web
 
 ```bash
 # Create web-accessible storage directory
@@ -589,15 +589,15 @@ sudo systemctl start mysql
 
 ## Integración con Otras Guías
 
-Esta configuración de almacenamiento externo complementa otras tareas de administración del servidor:
+Esta configuración de almacenamiento externo complementa otras tareas de gestión del servidor:
 
 - **Después de la Instalación del SO**: Siga [etcher-guide.md](etcher-guide.md) para la configuración inicial del sistema
-- **Antes de la Configuración del Almacenamiento**: Complete [disk-partitioning.md](disk-partitioning.md) para la estructura del sistema principal
-- **Endurecimiento de Seguridad**: Implemente controles de acceso y cifrado
+- **Antes de la Configuración del Almacenamiento**: Complete [disk-partitioning.md](disk-partitioning.md) para la distribución principal del sistema
+- **Refuerzo de Seguridad**: Implemente controles de acceso y cifrado
 - **Integración de Monitoreo**: Agregue métricas de almacenamiento al monitoreo del servidor
 
 ## Conclusión
 
-La expansión del almacenamiento externo es crucial para el crecimiento de los despliegues de servidores comunitarios. Una planificación, configuración y mantenimiento adecuados garantizan una operación confiable y la protección de los datos. Siempre priorice la seguridad de los datos mediante la redundancia, el monitoreo y procedimientos de mantenimiento regulares.
+La expansión de almacenamiento externo es crucial para el crecimiento de los despliegues de servidores comunitarios. Una planificación, configuración y mantenimiento adecuados garantizan un funcionamiento confiable y la protección de los datos. Priorice siempre la seguridad de los datos mediante la redundancia, el monitoreo y procedimientos de mantenimiento regulares.
 
-El enfoque modular del almacenamiento externo permite a los servidores comunitarios escalar de manera eficiente manteniendo la conciencia presupuestaria y la simplicidad operativa.
+El enfoque modular del almacenamiento externo permite que los servidores comunitarios escalen eficientemente manteniendo la conciencia presupuestaria y la simplicidad operativa.

@@ -7,7 +7,7 @@ translatedBy: glm-4.6
 
 # Configuração de DNS para LibreMesh
 
-Este guia explica como configurar os serviços de DNS em redes LibreMesh para permitir acesso confiável a serviços locais, implementar cache e estabelecer nomenclatura de domínios dentro da rede mesh.
+Este guia explica como configurar serviços DNS em redes LibreMesh para permitir acesso confiável a serviços locais, implementar cache e estabelecer nomes de domínio dentro da rede mesh.
 
 ## Introdução ao DNS em Redes Mesh
 
@@ -18,36 +18,36 @@ O Sistema de Nomes de Domínio (DNS) é um componente crítico de qualquer rede,
 - **Operação Offline**: As redes devem funcionar mesmo sem conectividade com a internet
 - **Restrições de Recursos**: Hardware limitado exige soluções de DNS eficientes
 
-O LibreMesh usa o dnsmasq como seu serviço de DNS principal, fornecendo uma solução leve, porém poderosa, para redes mesh[36][37].
+O LibreMesh usa o dnsmasq como seu serviço DNS principal, fornecendo uma solução leve e poderosa para redes mesh[36][37].
 
 `[Network Diagram with Local DNS](local-dns-diagram.png) — Schematic showing flow of local DNS queries.]`
 
-## Arquitetura de DNS no LibreMesh
+## Arquitetura DNS no LibreMesh
 
 ### Visão Geral dos Componentes
 
-O sistema de DNS no LibreMesh consiste em vários componentes integrados[37][38][40]:
+O sistema DNS no LibreMesh consiste em vários componentes integrados[37][38][40]:
 
 1. **dnsmasq**: O servidor DNS principal e serviço DHCP
 2. **Estado Compartilhado**: Mecanismo para distribuir informações de DNS entre os nós
 3. **Configuração de Hosts**: Definições de nomes de host locais e em toda a rede
-4. **Configuração de Domínios**: Configurações para domínios locais dentro da mesh
+4. **Configuração de Domínio**: Configurações para domínios locais dentro da mesh
 
 ### Fluxo de Resolução
 
 Quando um cliente na rede mesh faz uma consulta DNS[41]:
 
 1. A solicitação primeiro vai para a instância local do dnsmasq no nó conectado
-2. Se o domínio for local da mesh, ele é resolvido usando registros locais
+2. Se o domínio for local à mesh, ele é resolvido usando registros locais
 3. Se for um domínio da internet e estiver em cache, o resultado em cache é retornado
 4. Caso contrário, a consulta é encaminhada aos servidores DNS upstream
-5. Se a conectividade com a internet não estiver disponível, apenas os domínios locais são resolvidos
+5. Se a conectividade com a internet estiver indisponível, apenas os domínios locais são resolvidos
 
 ## Configuração Básica de DNS
 
 ### Acessando as Configurações de DNS
 
-A configuração de DNS no LibreMesh pode ser modificada por vários métodos[55]:
+A configuração de DNS no LibreMesh pode ser modificada através de vários métodos[55]:
 
 1. **Interface Web**: Configurações limitadas de DNS estão disponíveis através da interface web do LibreMesh
 2. **Configuração UCI**: Edite as configurações usando UCI (Unified Configuration Interface)
@@ -59,23 +59,23 @@ Os principais arquivos de configuração para DNS no LibreMesh são[37][38]:
 
 - **/etc/config/dhcp**: Contém a configuração do dnsmasq
 - **/etc/config/lime**: Configuração principal do LibreMesh que afeta o comportamento do DNS
-- **/etc/hosts**: Definições de nomes de host locais
-- **/etc/dnsmasq.d/**: Fragmentos de configuração adicionais
+- **/etc/hosts**: Definições locais de nomes de host
+- **/etc/dnsmasq.d/**: Fragmentos adicionais de configuração
 
 `[LibreMesh DNS Config Screenshot](libremesh-dns-config.png) — Web UI or config file with DNS settings highlighted.]`
 
-## Configurando a Resolução DNS Local
+## Configurando Resolução DNS Local
 
 ### Configurando Hosts Estáticos
 
-Para adicionar entradas de host estáticas para serviços locais[36][38]:
+Para adicionar entradas de hosts estáticos para serviços locais[36][38]:
 
 1. **Via SSH**: Conecte-se ao nó LibreMesh via SSH:
    ```
    ssh root@thisnode.info
    ```
 
-2. **Edite o Arquivo de Hosts**: Adicione entradas ao `/etc/hosts`:
+2. **Editar Arquivo de Hosts**: Adicione entradas em `/etc/hosts`:
    ```
    vi /etc/hosts
    ```
@@ -86,28 +86,28 @@ Para adicionar entradas de host estáticas para serviços locais[36][38]:
    192.168.1.20   wiki.mesh
    ```
 
-3. **Reinicie o Serviço de DNS**:
+3. **Reiniciar o Serviço DNS**:
    ```
    /etc/init.d/dnsmasq restart
    ```
 
 ### Usando dnsmasq-distributed-hosts
 
-O LibreMesh inclui um pacote chamado dnsmasq-distributed-hosts que compartilha informações de nomes de host por toda a mesh[25]:
+O LibreMesh inclui um pacote chamado dnsmasq-distributed-hosts que compartilha informações de nomes de host pela mesh[25]:
 
-1. **Verifique a Instalação do Pacote**:
+1. **Verificar Instalação do Pacote**:
    ```
    opkg list-installed | grep dnsmasq-distributed
    ```
 
-2. **Configure a Distribuição de Hosts**:
+2. **Configurar a Distribuição de Hosts**:
    Edite `/etc/config/lime-community` para habilitar a distribuição de hosts:
    ```
    config lime network
        option dns_distributed_hosts '1'
    ```
 
-3. **Adicione Serviços Locais**: Registre os serviços locais em seus respectivos nós usando o arquivo de hosts
+3. **Adicionar Serviços Locais**: Registre serviços locais em seus respectivos nós usando o arquivo de hosts
 
 ## Implementando Aliases de Domínio
 
@@ -115,12 +115,12 @@ O LibreMesh inclui um pacote chamado dnsmasq-distributed-hosts que compartilha i
 
 Para criar nomes de domínio amigáveis para serviços locais[25]:
 
-1. **Crie a Configuração de Aliases de Domínio**:
+1. **Criar Configuração de Aliases de Domínio**:
    ```
    vi /etc/config/domain-aliases
    ```
 
-2. **Adicione Aliases de Domínio**:
+2. **Adicionar Aliases de Domínio**:
    ```
    config alias
        option domain 'community.portal'
@@ -131,7 +131,7 @@ Para criar nomes de domínio amigáveis para serviços locais[25]:
        option target '192.168.1.101'
    ```
 
-3. **Aplique a Configuração**:
+3. **Aplicar a Configuração**:
    ```
    /etc/init.d/domain-aliases restart
    ```
@@ -148,36 +148,36 @@ O LibreMesh normalmente usa estas extensões de domínio para serviços locais[4
 
 ### Otimizando as Configurações de Cache
 
-O cache DNS melhora o desempenho armazenando resultados de consultas recentes[38][40]:
+O cache DNS melhora o desempenho armazenando resultados recentes de consultas[38][40]:
 
-1. **Edite a Configuração do dnsmasq**:
+1. **Editar a Configuração do dnsmasq**:
    ```
    vi /etc/config/dhcp
    ```
 
-2. **Configure o Tamanho do Cache**:
+2. **Configurar o Tamanho do Cache**:
    ```
    config dnsmasq
        option cachesize '1000'
        option min_cache_ttl '3600'
    ```
 
-3. **Aplique as Alterações**:
+3. **Aplicar as Alterações**:
    ```
    /etc/init.d/dnsmasq restart
    ```
 
-### Cache DNS Local no Nó
+### NodeLocal DNS Cache
 
 Para implantações maiores, implemente um cache DNS local no nó para reduzir a latência das consultas[40]:
 
-1. **Instale os Pacotes Necessários**:
+1. **Instalar os Pacotes Necessários**:
    ```
    opkg update
    opkg install dns-cache-local
    ```
 
-2. **Configure o Encaminhamento**:
+2. **Configurar o Encaminhamento**:
    ```
    vi /etc/config/dns-cache-local
    ```
@@ -189,7 +189,7 @@ Para implantações maiores, implemente um cache DNS local no nó para reduzir a
        option cache_size '10000'
    ```
 
-3. **Reinicie os Serviços**:
+3. **Reiniciar os Serviços**:
    ```
    /etc/init.d/dns-cache-local restart
    ```
@@ -200,7 +200,7 @@ Para implantações maiores, implemente um cache DNS local no nó para reduzir a
 
 Configure o DNS para operar de forma confiável sem conectividade com a internet[41]:
 
-1. **Configure o Domínio Local**:
+1. **Configurar o Domínio Local**:
    ```
    vi /etc/config/dhcp
    ```
@@ -213,13 +213,13 @@ Configure o DNS para operar de forma confiável sem conectividade com a internet
        option expandhosts '1'
    ```
 
-2. **Defina o Modo Autoritativo**:
+2. **Definir Modo Autoritativo**:
    ```
    config dnsmasq
        option authoritative '1'
    ```
 
-3. **Desative o Encaminhamento DNS Quando Offline**:
+3. **Desabilitar o Encaminhamento DNS Quando Offline**:
    ```
    config dnsmasq
        option nonwildcard '1'
@@ -232,7 +232,7 @@ Configure o DNS para operar de forma confiável sem conectividade com a internet
 
 Para suportar múltiplos domínios locais[36]:
 
-1. **Configure as Definições de Domínio**:
+1. **Configurar as Definições de Domínio**:
    ```
    config dnsmasq
        list local '/mesh/'
@@ -240,7 +240,7 @@ Para suportar múltiplos domínios locais[36]:
        list local '/services/'
    ```
 
-2. **Configure o Comportamento do Domínio**:
+2. **Configurar o Comportamento do Domínio**:
    ```
    config dnsmasq
        option domain 'mesh'
@@ -252,14 +252,14 @@ Para suportar múltiplos domínios locais[36]:
 
 Para redes com conectividade com a internet[38]:
 
-1. **Configure os Servidores DNS Upstream**:
+1. **Configurar os Servidores DNS Upstream**:
    ```
    config dnsmasq
        list server '8.8.8.8'
        list server '1.1.1.1'
    ```
 
-2. **Configure o Encaminhamento Inteligente**:
+2. **Configurar o Encaminhamento Inteligente**:
    ```
    config dnsmasq
        option all_servers '1'
@@ -280,13 +280,13 @@ O LibreMesh implementa um domínio especial chamado "thisnode.info" que sempre r
 
 O LibreMesh usa um sistema de estado compartilhado para distribuir informações de DNS[37]:
 
-1. **Habilite o Estado Compartilhado**:
+1. **Habilitar o Estado Compartilhado**:
    ```
    config lime network
        option use_shared_state '1'
    ```
 
-2. **Configure o Compartilhamento de Estado**:
+2. **Configurar o Compartilhamento de Estado**:
    ```
    config lime shared_state
        option sharing_strategy 'all'
@@ -299,57 +299,57 @@ O LibreMesh usa um sistema de estado compartilhado para distribuir informações
 
 #### Nomes de Domínio Não Resolvem
 
-1. **Verifique o Serviço dnsmasq**:
+1. **Verificar o Serviço dnsmasq**:
    ```
    /etc/init.d/dnsmasq status
    ```
 
-2. **Verifique a Configuração**:
+2. **Verificar a Configuração**:
    ```
    cat /etc/config/dhcp
    ```
 
-3. **Teste a Resolução**:
+3. **Testar a Resolução**:
    ```
    nslookup local.service 127.0.0.1
    ```
 
-4. **Verifique os Logs**:
+4. **Verificar os Logs**:
    ```
    logread | grep dnsmasq
    ```
 
 #### Problemas de Propagação de DNS
 
-Se as entradas de DNS não estão se propagando pela mesh:
+Se as entradas de DNS não estiverem se propagando pela mesh:
 
-1. **Verifique o Estado Compartilhado**:
+1. **Verificar o Estado Compartilhado**:
    ```
    cat /tmp/shared-state/dnsmasq-hosts
    ```
 
-2. **Verifique a Conectividade da Mesh**:
+2. **Verificar a Conectividade da Mesh**:
    ```
    ping othernode.mesh
    ```
 
-3. **Reinicie o Serviço de Estado Compartilhado**:
+3. **Reiniciar o Serviço de Estado Compartilhado**:
    ```
    /etc/init.d/shared-state restart
    ```
 
 #### Resolução Lenta
 
-Para resolução de DNS lenta:
+Para resolução DNS lenta:
 
-1. **Otimize as Configurações de Cache**:
+1. **Otimizar as Configurações de Cache**:
    ```
    config dnsmasq
        option cachesize '2000'
        option min_cache_ttl '7200'
    ```
 
-2. **Verifique Vazamentos de DNS**:
+2. **Verificar Vazamentos de DNS**:
    ```
    tcpdump -i any port 53
    ```
@@ -358,23 +358,23 @@ Para resolução de DNS lenta:
 
 O LibreMesh atualmente usa o dnsmasq tanto para DNS quanto para DHCP, mas há planos para separar essas funções[37]:
 
-1. **Status Atual**: o dnsmasq gerencia tanto DNS quanto DHCP nas versões atuais do LibreMesh
-2. **Planos Futuros**: o odhcpd pode substituir a funcionalidade DHCP enquanto mantém o dnsmasq para DNS
-3. **Compatibilidade**: Quaisquer alterações manterão compatibilidade retroativa com as configurações existentes
+1. **Status Atual**: o dnsmasq gerencia tanto o DNS quanto o DHCP nas versões atuais do LibreMesh
+2. **Planos Futuros**: o odhcpd pode substituir a funcionalidade de DHCP, mantendo o dnsmasq para DNS
+3. **Compatibilidade**: Quaisquer alterações manterão a compatibilidade retroativa com as configurações existentes
 
 ## Melhores Práticas para DNS no LibreMesh
 
 ### Otimização de Desempenho
 
-1. **Dimensione o Cache Adequadamente**: Ajuste o tamanho do cache com base na memória do nó (maior para nós de gateway)
-2. **Minimize Substituições de TTL**: Substitua o TTL apenas para recursos acessados com frequência
-3. **Use Domínios Locais**: Mantenha os serviços específicos da mesh sob nomes de domínio consistentes
+1. **Dimensionar o Cache Adequadamente**: Ajuste o tamanho do cache com base na memória do nó (maior para nós de gateway)
+2. **Minimizar Sobrescritas de TTL**: Sobrescreva o TTL apenas para recursos frequentemente acessados
+3. **Usar Domínios Locais**: Mantenha os serviços específicos da mesh sob nomes de domínio consistentes
 
 ### Considerações de Segurança
 
-1. **Restrinje Transferências de Zona**: Limite as transferências de zona apenas aos nós da mesh
-2. **Implemente Filtragem de DNS**: Considere filtragem de conteúdo baseada em DNS para políticas comunitárias
-3. **Proteja os Arquivos de Configuração**: Proteja a configuração de DNS contra alterações não autorizadas
+1. **Restringir Transferências de Zona**: Limite as transferências de zona apenas aos nós da mesh
+2. **Implementar Filtragem DNS**: Considere filtragem de conteúdo baseada em DNS para políticas da comunidade
+3. **Proteger os Arquivos de Configuração**: Proteja a configuração de DNS contra alterações não autorizadas
 
 ### Planejamento de Escalabilidade
 
@@ -386,7 +386,7 @@ O LibreMesh atualmente usa o dnsmasq tanto para DNS quanto para DHCP, mas há pl
 
 ### Rede Comunitária Pequena
 
-Para uma rede de 5-10 nós:
+Para uma rede de 5 a 10 nós:
 ```
 config dnsmasq
     option domain 'ourcomm.mesh'
@@ -397,7 +397,7 @@ config dnsmasq
 
 ### Rede Comunitária Média
 
-Para uma rede de 20-50 nós:
+Para uma rede de 20 a 50 nós:
 ```
 config dnsmasq
     option domain 'communitynet.mesh'
@@ -410,13 +410,13 @@ config dnsmasq
 
 ### Rede Comunitária Grande
 
-Para uma rede de 100+ nós, implemente DNS hierárquico com servidores DNS primário e secundário em nós mais potentes.
+Para uma rede de 100+ nós, implemente um DNS hierárquico com servidores DNS primário e secundário em nós mais potentes.
 ## Próximos Passos
 
-Para o desenvolvimento contínuo da sua rede LibreMesh:
+Para continuar o desenvolvimento da sua rede LibreMesh:
 
 - Consulte [libremesh-overview.md](./libremesh-overview.md) para um contexto mais amplo
-- Veja [mesh-network-basics.md](./mesh-network-basics.md) para fundamentos de redes
-- Siga [libremesh-installation.md](./libremesh-installation.md) para orientações sobre hardware e configuração
+- Veja [mesh-network-basics.md](./mesh-network-basics.md) para os fundamentos de redes
+- Siga [libremesh-installation.md](./libremesh-installation.md) para orientações de hardware e configuração
 
-Ao implementar um sistema DNS bem configurado, você melhorará a usabilidade, o desempenho e a resiliência da sua rede LibreMesh, permitindo acesso contínuo tanto a recursos locais quanto à internet.
+Ao implementar um sistema de DNS bem configurado, você melhorará a usabilidade, o desempenho e a resiliência da sua rede LibreMesh, possibilitando acesso contínuo tanto a recursos locais quanto à internet.

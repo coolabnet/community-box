@@ -1,12 +1,8 @@
 ---
 title: Comparação de Modelos
 sourcePath: guides/recycled-models-comparison.md
-sourceHash: a501e94e94649752
+sourceHash: 18fe0d027293d41e
 translatedBy: glm-4.6
----
-
----
-title: Comparação de Modelos
 ---
 
 # Comparação de Modelos de PCs/Notebooks Reciclados para Servidores Comunitários
