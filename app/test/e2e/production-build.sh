@@ -4,8 +4,11 @@ set -e
 # Production uses /community-box basename
 BASE_URL="${BASE_URL:-http://localhost:4173/community-box}"
 SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
-GHPAGES_PORT="${GHPAGES_PORT:-4174}"
-GHPAGES_BASE="http://localhost:${GHPAGES_PORT}/community-box"
+APP_DIR="$(cd "$SCRIPT_DIR/../.." && pwd)"
+GHPAGES_PORT="${GHPAGES_PORT:-4179}"
+GHPAGES_BASE="http://127.0.0.1:${GHPAGES_PORT}/community-box"
+# Dedicated agent-browser session so this run never touches other browser sessions.
+export AGENT_BROWSER_SESSION="cb-prod-e2e-$$"
 
 # Parse arguments
 DRY_RUN=false
@@ -19,12 +22,17 @@ done
 
 PREVIEW_PID=""
 GHPAGES_PID=""
+BROWSER_OPENED=false
 cleanup() {
   # Dry run starts no servers and must not touch the browser.
   if [ "$DRY_RUN" = true ]; then
     return 0
   fi
-  npx agent-browser close 2>/dev/null || true
+  # Close only the browser this run opened.
+  if [ "$BROWSER_OPENED" = true ]; then
+    npx agent-browser close 2>/dev/null || true
+    BROWSER_OPENED=false
+  fi
   # Servers run in their own process group (set -m), so kill the whole group:
   # killing npm alone leaves the vite child running.
   [ -n "$PREVIEW_PID" ] && { kill -- -"$PREVIEW_PID" 2>/dev/null || kill "$PREVIEW_PID" 2>/dev/null || true; }
@@ -90,6 +98,7 @@ else
   echo -n "Testing: /community-box/ (home) ... "
   # Pin English for the whole run: the existing greps expect English strings.
   npx agent-browser open "$BASE_URL/" 2>/dev/null
+  BROWSER_OPENED=true
   npx agent-browser eval "localStorage.setItem('i18nextLng','en')" 2>/dev/null || true
   npx agent-browser open "$BASE_URL/" 2>/dev/null
   npx agent-browser wait 3000 2>/dev/null || true
@@ -141,31 +150,91 @@ else
   # serves dist/404.html, so the checks above cannot exercise the
   # 404.html -> /?/path -> receiver round trip. ghpages-server.mjs serves
   # dist/404.html on misses, like GitHub Pages does.
-  echo "🚀 Starting GitHub Pages mimic server on port $GHPAGES_PORT..."
+  echo "🚀 Starting GitHub Pages mimic server on 127.0.0.1:$GHPAGES_PORT..."
   set -m
   node "$SCRIPT_DIR/ghpages-server.mjs" &
   GHPAGES_PID=$!
   set +m
+
+  # Readiness means a known-missing path returns 404 with the 404.html marker.
+  # Vite preview answers unknown paths with index.html (200), so a taken port fails here.
+  GHPAGES_404_MARKER="pathSegmentsToKeep"
+  ghpages_probe_ok() {
+    local url="${GHPAGES_BASE}/__ghpages_probe__"
+    local status body
+    status=$(curl -s -o /dev/null -w '%{http_code}' "$url" 2>/dev/null || echo 000)
+    [ "$status" = "404" ] || return 1
+    body=$(curl -s "$url" 2>/dev/null || true)
+    echo "$body" | grep -q "$GHPAGES_404_MARKER"
+  }
   MAX_WAIT=30
   ELAPSED=0
-  until curl -s -o /dev/null "$GHPAGES_BASE/" 2>/dev/null; do
+  until ghpages_probe_ok; do
+    if ! kill -0 "$GHPAGES_PID" 2>/dev/null; then
+      echo "❌ GitHub Pages mimic server exited (port $GHPAGES_PORT in use?)"
+      exit 1
+    fi
     if [ $ELAPSED -ge $MAX_WAIT ]; then
-      echo "❌ GitHub Pages mimic server failed to start within ${MAX_WAIT}s (port $GHPAGES_PORT)"
+      echo "❌ GitHub Pages mimic server did not answer the 404 probe with the 404.html marker within ${MAX_WAIT}s (port $GHPAGES_PORT)"
       exit 1
     fi
     sleep 1
     ELAPSED=$((ELAPSED + 1))
   done
-  echo "✅ GitHub Pages mimic server ready"
+  if ! kill -0 "$GHPAGES_PID" 2>/dev/null; then
+    echo "❌ GitHub Pages mimic server exited after readiness (port $GHPAGES_PORT)"
+    exit 1
+  fi
+  echo "✅ GitHub Pages mimic server ready (404 probe verified)"
 
   # Set English on this origin for the next load. Assertions do not depend on language.
   npx agent-browser open "$GHPAGES_BASE/" 2>/dev/null
   npx agent-browser eval "localStorage.setItem('i18nextLng','en')" 2>/dev/null || true
 
+  # Expected values are read at runtime from the repo, so the checks follow content changes.
+  # Doc H1 comes from research/guides/etcher-guide.md; question and error strings from en.json.
+  DOC_JS=$(APP_DIR="$APP_DIR" node -e '
+const fs = require("fs");
+const path = require("path");
+const app = process.env.APP_DIR;
+const en = JSON.parse(fs.readFileSync(path.join(app, "src/i18n/locales/en.json"), "utf8"));
+const errs = JSON.stringify(Object.values(en.errors || {}).filter((v) => typeof v === "string" && !v.includes("{{")));
+const md = fs.readFileSync(path.join(app, "../research/guides/etcher-guide.md"), "utf8");
+const h1 = md.split("\n").find((l) => /^# /.test(l)).slice(2).trim();
+process.stdout.write("(() => { const ERRS = " + errs + "; const EXPECTED = " + JSON.stringify(h1) + "; " +
+  "if (location.pathname !== \x27/community-box/docs/guides/etcher-guide\x27) return \x27FAIL pathname=\x27 + location.pathname; " +
+  "if (location.hash !== \x27#top\x27) return \x27FAIL hash=\x27 + location.hash; " +
+  "const h1 = document.querySelector(\x27h1\x27); const text = h1 ? h1.textContent.trim() : \x27\x27; " +
+  "if (text !== EXPECTED) return \x27FAIL h1=\x27 + text.slice(0, 80); " +
+  "const heads = Array.from(document.querySelectorAll(\x27h1,h2,h3\x27)).map((e) => e.textContent.trim()); " +
+  "if (heads.some((t) => /404|not found/i.test(t))) return \x27FAIL not-found heading\x27; " +
+  "if (document.querySelector(\x27h2.text-red-600\x27)) return \x27FAIL doc-not-found marker\x27; " +
+  "const body = document.body ? document.body.innerText : \x27\x27; " +
+  "if (ERRS.some((s) => body.includes(s))) return \x27FAIL error boundary text\x27; " +
+  "return \x27PASS\x27; })()");
+') || { echo "❌ Could not build doc assertions"; exit 1; }
+  QS_JS=$(APP_DIR="$APP_DIR" node -e '
+const fs = require("fs");
+const path = require("path");
+const app = process.env.APP_DIR;
+const en = JSON.parse(fs.readFileSync(path.join(app, "src/i18n/locales/en.json"), "utf8"));
+const errs = JSON.stringify(Object.values(en.errors || {}).filter((v) => typeof v === "string" && !v.includes("{{")));
+const question = en.questionnaire.questions.growth.question;
+process.stdout.write("(() => { const ERRS = " + errs + "; const QUESTION = " + JSON.stringify(question) + "; " +
+  "if (location.pathname !== \x27/community-box/questionnaire\x27) return \x27FAIL pathname=\x27 + location.pathname; " +
+  "const sp = new URLSearchParams(location.search); " +
+  "if (sp.get(\x27step\x27) !== \x272\x27 || sp.get(\x27electricity\x27) !== \x27yes\x27 || sp.get(\x27users\x27) !== \x271-2\x27) return \x27FAIL search=\x27 + location.search; " +
+  "const heads = Array.from(document.querySelectorAll(\x27h1,h2,h3\x27)).map((e) => e.textContent.trim()); " +
+  "if (!heads.includes(QUESTION)) return \x27FAIL question heading missing\x27; " +
+  "const body = document.body ? document.body.innerText : \x27\x27; " +
+  "if (ERRS.some((s) => body.includes(s))) return \x27FAIL error boundary text\x27; " +
+  "return \x27PASS\x27; })()");
+') || { echo "❌ Could not build questionnaire assertions"; exit 1; }
+
   echo -n "Testing: deep link /docs/guides/etcher-guide#top (404.html redirect) ... "
   npx agent-browser open "$GHPAGES_BASE/docs/guides/etcher-guide#top" 2>/dev/null
   npx agent-browser wait 3000 2>/dev/null || true
-  RESULT=$(npx agent-browser eval "(() => { const p = location.pathname; const h = location.hash; const h1 = document.querySelector('h1'); const t = h1 ? h1.textContent.trim() : ''; if (p !== '/community-box/docs/guides/etcher-guide') return 'FAIL pathname=' + p; if (h !== '#top') return 'FAIL hash=' + h; if (!t) return 'FAIL no h1 text'; if (document.querySelector('h2.text-red-600')) return 'FAIL doc-not-found marker'; return 'PASS h1=' + t.slice(0, 60); })()" 2>/dev/null || echo "ERROR")
+  RESULT=$(npx agent-browser eval "$DOC_JS" 2>/dev/null || echo "ERROR")
   if echo "$RESULT" | grep -q "PASS"; then
     echo "✅ PASSED"
   else
@@ -177,7 +246,7 @@ else
   echo -n "Testing: deep link /questionnaire?step=2&electricity=yes&users=1-2 ... "
   npx agent-browser open "$GHPAGES_BASE/questionnaire?step=2&electricity=yes&users=1-2" 2>/dev/null
   npx agent-browser wait 3000 2>/dev/null || true
-  RESULT=$(npx agent-browser eval "(() => { const p = location.pathname; const s = location.search; if (p !== '/community-box/questionnaire') return 'FAIL pathname=' + p; if (s.indexOf('step=2') < 0 || s.indexOf('electricity=yes') < 0 || s.indexOf('users=1-2') < 0) return 'FAIL search=' + s; const btns = Array.from(document.querySelectorAll('button')).filter((b) => b.getClientRects().length > 0); if (btns.length === 0) return 'FAIL no visible button'; return 'PASS buttons=' + btns.length; })()" 2>/dev/null || echo "ERROR")
+  RESULT=$(npx agent-browser eval "$QS_JS" 2>/dev/null || echo "ERROR")
   if echo "$RESULT" | grep -q "PASS"; then
     echo "✅ PASSED"
   else
@@ -187,7 +256,10 @@ else
   fi
 fi
 
-npx agent-browser close 2>/dev/null || true
+if [ "$BROWSER_OPENED" = true ]; then
+  npx agent-browser close 2>/dev/null || true
+  BROWSER_OPENED=false
+fi
 
 if [ $FAILED -eq 1 ]; then
   echo -e "\n❌ Production build tests failed:$FAILED_ROUTES"
