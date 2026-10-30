@@ -1,0 +1,158 @@
+# TASKS.md
+
+Local task tracker for Community Box work coming from the GG2026 backlog
+Google Doc (`1ykEG-oIuH6ncJ1jmqws2ZBN9-3y-TCDxDulesV11c3U`) and GitHub issues.
+Items that need a human or partner decision live in `gg2026-decisions.html`,
+not here.
+
+Item IDs: `T1-11` = Google Doc table 1, row `#11`. `T2-*` = guiding
+questions table, `T3-*` = software/hardware table, `M*` = "Suggestions for
+the Hamburger menu" section, `O*` = "Other aspects" section.
+
+## Process (start every item here)
+
+Run every item through this loop. Do not skip steps for "small" items.
+
+1. **Pick and report.** Take the top `TODO` item. Set it to `DOING` here.
+   Report progress with `herdr-projects report` (see the harness hook).
+2. **Locate with xerj.** Before touching unfamiliar code, run
+   `xerj def "<symbol>"` or `xerj search "<plain words>"`. Cite `file:line`.
+   Index with `xerj autoindex .` if the index is stale.
+3. **Decide with clef.** Use clef (skill `clef`, token from
+   `~/Dev/AI/clef/.env`, send `User-Agent: curl/8.5.0`) for typed triage
+   decisions: is it doable now or blocked on a human, which junior fits,
+   is a draft good enough. The senior can override clef; record why.
+4. **Plan (senior).** A senior writes a short plan with acceptance tests:
+   Opus subagent, or `codex exec -m gpt-6.1-sol --config
+   model_reasoning_effort=low -s read-only "<question>" < /dev/null`.
+   Get a critique from gpt-6.1-sol before dispatch on non-trivial items.
+5. **Implement (juniors).** Brief a junior with files allowed, files
+   forbidden, acceptance tests, and validation commands:
+   - `glm -p "<brief>" --dangerously-skip-permissions < /dev/null`
+     (GLM-5.3) for multi-file work and translation runs.
+   - `glm-flash -p ...` for mechanical edits.
+   - Haiku subagent (Agent tool, model `haiku`) for scoped `app/src/` work.
+   Run juniors on disjoint files in parallel. The Z.AI quota is shared, so
+   run translation jobs with `--concurrency 1` and not beside GLM juniors
+   that also call Z.AI. GLM has a 5-hour usage cap (HTTP 429 code 1308);
+   when it hits, reassign the brief to a Haiku subagent.
+6. **Review (senior).** Read the diff yourself. Then gate with
+   `codex exec -m gpt-6.1-terra --config model_reasoning_effort=max -s
+   read-only "<gate brief>" < /dev/null`. It answers `SHIP` or `BLOCK`.
+   Loop junior fixes until `SHIP`.
+7. **Validate.** From `app/`: `npm run lint`, `npx vitest run`,
+   `npm run build`, `bun install --frozen-lockfile`. For docs:
+   `npm run translate:docs -- --provider zai --concurrency 1`, then
+   `npm run check:i18n` (0 errors) and
+   `node scripts/translate-docs.mjs --dry-run` (0 to translate).
+   Finish with `git diff --check`.
+8. **Publish.** Commit with a Conventional Commit message (why, what,
+   validation). Stage only task files; leave the user's uncommitted
+   `AGENTS.md` hunk out. `git fetch`; if behind, stash `AGENTS.md`, rebase
+   onto `origin/main`, pop. Push to `main`, watch `deploy-page.yml`
+   (`gh run watch`), and check the live site.
+9. **Close the loop.** Only after the fix is live:
+   - Google Doc: update the item in place with the `gdocs-tracker` skill
+     (`set-cell` Status to `Done`, `note` a one-line summary in Comments).
+   - GitHub: comment on and close the linked issue.
+   - Here: move the item to `Done` with the commit hash.
+
+Pitfalls seen so far: memory is tight (about 3 GB free), so do not run
+heavy jobs in parallel; ask before restarting a job the system killed. Never
+print API keys. Do not `rm` files to fix problems.
+
+## Parallel PR cycle
+
+Use this when working several TODO items at once.
+
+- Run at most 3 items at a time. Each item gets its own git worktree and
+  branch from `origin/main` (`git worktree add ../cb-<item> -b
+  <type>/<item>-<slug> origin/main`). Start the next item when one PR
+  merges or parks for QA.
+- Each item follows the Process above inside its worktree, then opens a PR
+  with `gh pr create`. Link the GitHub issue and the doc item ID.
+- PR cycle: the senior gate (`gpt-6.1-terra`, max) reviews the PR diff.
+  The junior fixes until `SHIP`, CI is green, and validation passes.
+- Auto-merge (`gh pr merge --squash --delete-branch`) only when: gate
+  `SHIP`, all checks pass, and the PR changes no user-facing copy we
+  drafted or visual design. Fixes, links, wording taken word-for-word
+  from the doc, research docs and catalog entries qualify.
+- Otherwise label the PR `needs-human-qa`, comment what to check, and
+  move on. Add a question to `gg2026-decisions.html` in the main
+  checkout (`/home/luandro/Dev/coolab/community-box/`, local file, not
+  committed).
+- Any other human decision found mid-item also goes into that HTML file;
+  park the item under Blocked here.
+- After merge: deploy check, Google Doc row update, issue close, and a
+  `Done` entry here (step 9), then remove the worktree with
+  `git worktree remove`.
+
+## TODO (doable now)
+
+Verify first:
+
+- `T1-4` / `M2` / `M5` — 404s: crawl the live site (menu links, Hardware
+  Questionnaire from the menu, `community.directory.json`) and fix any
+  broken route or asset. Issues #11, #52.
+- `T1-5` — Cache between searches: confirm "start again" clears state on
+  the live site; close as Solved if so.
+- `M1` — Menu on the landing page: confirm it opens (#17 closed); close
+  if so.
+
+Content and questionnaire:
+
+- `T1-3` — Briefing/FAQ on the landing page: draft short explainer with
+  expandable detail (decision Q02). Hero text waits on Q29. Issues #14,
+  #19.
+- `T2-1` — Electricity question: add contextual link to the solar
+  calculator (decision Q26). Issue #53.
+- `T2-3`, `T2-5`, `T2-7` — Wording fixes from the doc (growth "Not sure",
+  "set up a computer as a server", points sentence). Issue #54.
+- `T2-7` — Importance-points contrast to 4.5:1 in both themes (Q28).
+  Issue #55.
+- `T2-4` — Reusable computer: add minimum-requirements sentence and a
+  link to `guides/hardware-compatibility-check`. Issue #15.
+- `T2-8` — Main-use wording "Select all local services that are relevant
+  to your community". Category expansion follows `#57`. Issue #22.
+- `T2-9` — New access-devices question, suggestions only (Q25). Include
+  shared devices: telecentre, cybercafe. Issue #56.
+- `M3` — Research paper: fill Hardware Analysis and OpenWRT One gaps,
+  rewrite item 5 "Community AI Considerations" in plain words. Issue #30.
+- `O1` — Router Setup: align link text with the "Router Selection" page
+  and fix the missing PNGs. Issues #16, #66.
+- `O2` — Download images: add a context page; link upstream with
+  versions and checksums (Q07). Issue #25.
+
+Service catalog (start with the schema):
+
+- `#57` — Extend the catalog schema with links and requirements (Q11,
+  Q16). Do this before the entries below.
+- `T3-1` — DeltaChat and local messaging. The transport detail waits on
+  Q20. Issue #58.
+- `T3-2`, `T3-12`, `T3-23` — ButterBox, Proxmox, BlankOn. Issue #59.
+- `T3-13`, `T3-14` — 2FA and local games as guides, not catalog entries
+  (Q14, Q21). Issue #60.
+- `T3-7`, `T3-16`, `T3-17` — Ooni as a companion app (Q19), CoopCloud,
+  Starlink VPN note. Issue #64.
+- `T3-9` — Local-language Wikipedia packs via Kiwix (Q24). Issue #65.
+- `T3-6` — Whisper feasibility note (hardware tiers). Scope waits on Q17.
+  Issue #63.
+- `T3-15`, `T3-18` — SDR, CCTV and local radio use-case research notes.
+  Issue #58.
+- `T3-8` — Sosuite research note, labelled beta (Q13). Issue #59.
+
+## Blocked (see `gg2026-decisions.html`)
+
+`T1-2` (Q29), `T1-7` (resolved Q03, then scope), `T1-8` (Q05), `T1-9`
+(Q09 partner), `T1-10` (Q10), `T1-12` (Q08), `T1-14` (Q06), `T1-15` (Q30),
+`T2-2` (Q31), `T3-3`, `T3-5`, `T3-11`, `T3-19`, `T3-20`, `T3-22` (Q15 tool
+names; `T3-5` also Q22), `T3-4` (Q18), `T3-10` (Q23), `T3-21` (Q33),
+`M6` (Q32). `M4` is Phase 2 (#26).
+
+## Done
+
+- `T1-13` — Whole app and docs translated to pt/es. Commits `0282037`,
+  `0c71969`. Google Doc already marked Done.
+- `T1-11` — PDF export fixed (renderer and paging). Commits `0282037`,
+  `0c71969`. Google Doc row set to Done in place on 2026-10-30 (#48).
+- `T1-1`, `T1-6` — Marked Done/Solved in the Google Doc.
