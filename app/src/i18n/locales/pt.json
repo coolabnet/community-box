@@ -229,6 +229,19 @@
         "shareText": "Confira minha recomendação de Caixa Comunitária",
         "emailSubject": "Minha Recomendação de Caixa Comunitária",
         "emailBody": "Recebi uma recomendação para um {{device}} para as necessidades da minha caixa comunitária!",
+        "catalog": {
+          "requirements": "Requisitos",
+          "ram": "{{value}} GB de RAM",
+          "storage": "{{value}} GB de armazenamento",
+          "needsInternet": "Requer internet",
+          "links": {
+            "website": "Site",
+            "docs": "Documentação",
+            "guide": "Guia",
+            "source": "Código-fonte",
+            "download": "Baixar"
+          }
+        },
         "services": {
           "title": "Serviços Recomendados",
           "description": "Software auto-hospedado para sua Caixa Comunitária",

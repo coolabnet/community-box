@@ -11,7 +11,7 @@ import type {
 } from '@/types/questionnaire';
 
 // Service definitions — names and descriptions use i18n keys
-const services: Record<ServiceKey, ServiceSuggestion> = {
+export const services: Record<ServiceKey, ServiceSuggestion> = {
   nextcloud: {
     key: 'nextcloud',
     name: 'services.nextcloud.name',
@@ -57,7 +57,7 @@ const services: Record<ServiceKey, ServiceSuggestion> = {
 };
 
 // OS definitions — names and descriptions use i18n keys
-const operatingSystems: Record<OSKey, OSSuggestion> = {
+export const operatingSystems: Record<OSKey, OSSuggestion> = {
   ubuntuServer: {
     key: 'ubuntuServer',
     name: 'os.ubuntuServer.name',

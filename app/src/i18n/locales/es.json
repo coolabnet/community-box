@@ -229,6 +229,19 @@
         "shareText": "Revisa mi recomendación de Caja Comunitaria",
         "emailSubject": "Mi Recomendación de Caja Comunitaria",
         "emailBody": "¡Recibí una recomendación para un {{device}} para las necesidades de mi caja comunitaria!",
+        "catalog": {
+          "requirements": "Requisitos",
+          "ram": "{{value}} GB de RAM",
+          "storage": "{{value}} GB de almacenamiento",
+          "needsInternet": "Requiere internet",
+          "links": {
+            "website": "Sitio web",
+            "docs": "Documentación",
+            "guide": "Guía",
+            "source": "Código fuente",
+            "download": "Descarga"
+          }
+        },
         "services": {
           "title": "Servicios Recomendados",
           "description": "Software autohospedado para tu Caja Comunitaria",

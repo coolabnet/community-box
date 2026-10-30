@@ -229,6 +229,19 @@
         "shareText": "Check out my Community Box recommendation",
         "emailSubject": "My Community Box Recommendation",
         "emailBody": "I got a recommendation for a {{device}} for my community box needs!",
+        "catalog": {
+          "requirements": "Requirements",
+          "ram": "{{value}} GB RAM",
+          "storage": "{{value}} GB storage",
+          "needsInternet": "Needs internet",
+          "links": {
+            "website": "Website",
+            "docs": "Documentation",
+            "guide": "Guide",
+            "source": "Source code",
+            "download": "Download"
+          }
+        },
         "services": {
           "title": "Recommended Services",
           "description": "Self-hosted software for your Community Box",
