@@ -1,5 +1,6 @@
 
 import { useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import { useQuestionnaire } from '@/context/QuestionnaireContext';
 import ProgressBar from './ProgressBar';
 import QuestionCard from './QuestionCard';
@@ -65,7 +66,7 @@ const Questionnaire = () => {
         <Trans
           i18nKey="questionnaire.questions.reuse.help"
           components={{
-            a: <a href={`${import.meta.env.BASE_URL}docs/guides/recycled-pc-requirements`} target="_blank" rel="noopener noreferrer" className={helpLinkClass} />,
+            a: <Link to="/docs/guides/recycled-pc-requirements" target="_blank" rel="noopener noreferrer" className={helpLinkClass} />,
           }}
         />
       ),
