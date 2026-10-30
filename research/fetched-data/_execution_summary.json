@@ -1,19 +1,19 @@
 {
-  "timestamp": "2026-10-30T16:52:49.882Z",
+  "timestamp": "2026-10-30T20:22:17.456Z",
   "script": "run-all.js",
   "note": "Summary of all data fetching script executions",
   "data": {
-    "execution_time": "2026-10-30T16:52:49.882Z",
+    "execution_time": "2026-10-30T20:22:17.456Z",
     "total_scripts": 6,
     "successful": 6,
     "failed": 0,
-    "total_duration_ms": 25508,
+    "total_duration_ms": 18371,
     "continue_on_error": true,
     "results": [
       {
         "name": "CapRover UI Translations",
         "success": true,
-        "duration": 350,
+        "duration": 284,
         "result": [
           "ar-EG",
           "de-DE",
@@ -36,7 +36,7 @@
       {
         "name": "CasaOS UI Translations",
         "success": true,
-        "duration": 176,
+        "duration": 140,
         "result": [
           "ca_ES",
           "cs_CZ",
@@ -71,7 +71,7 @@
       {
         "name": "YunoHost Apps",
         "success": true,
-        "duration": 20201,
+        "duration": 16099,
         "result": {
           "count": 1029,
           "apps": [
@@ -2590,7 +2590,7 @@
               "url": "https://github.com/YunoHost-Apps/fail2ban-web_ynh",
               "stars": 3,
               "forks": 0,
-              "updated_at": "2026-01-03T10:28:03Z",
+              "updated_at": "2026-10-30T19:34:25Z",
               "language": "Shell",
               "archived": false
             },
@@ -11414,7 +11414,7 @@
       {
         "name": "YunoHost Docs Translations",
         "success": true,
-        "duration": 152,
+        "duration": 141,
         "result": [
           "de",
           "docs",
@@ -11431,7 +11431,7 @@
       {
         "name": "YunoHost UI Translations",
         "success": true,
-        "duration": 4193,
+        "duration": 1311,
         "result": [
           {
             "language": "French",
@@ -11439,7 +11439,7 @@
             "translated_percent": 100,
             "translated_words": 11608,
             "total_words": 11608,
-            "last_change": "2026-10-30T15:31:55.102071Z"
+            "last_change": "2026-10-30T19:32:45.744418Z"
           },
           {
             "language": "German",
@@ -11838,7 +11838,7 @@
       {
         "name": "Zimaboard Shipping Areas",
         "success": true,
-        "duration": 436,
+        "duration": 396,
         "result": [
           "Argentina",
           "Australia",

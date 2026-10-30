@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-10-30T16:52:45.099Z",
+  "timestamp": "2026-10-30T20:22:15.603Z",
   "script": "run-all.js",
   "source": "YunoHost-Apps GitHub Organization",
   "url": "https://github.com/YunoHost-Apps",
@@ -2536,7 +2536,7 @@
       "url": "https://github.com/YunoHost-Apps/fail2ban-web_ynh",
       "stars": 3,
       "forks": 0,
-      "updated_at": "2026-01-03T10:28:03Z",
+      "updated_at": "2026-10-30T19:34:25Z",
       "language": "Shell",
       "archived": false
     },
