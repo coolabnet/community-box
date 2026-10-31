@@ -18,8 +18,6 @@ Before diving into detailed specifications, use this matrix to quickly determine
 | Ethernet Ports | 1 LAN | 4 LAN + 1 WAN | 5+ Gigabit |
 | Chipset | Any OpenWrt-supported | Atheros/MediaTek | Atheros ath9k/ath10k |
 
-*`[Router Hardware Lineup](router-lineup.png)` — Photo showcasing several recommended router models side-by-side, including TP-Link, GL.iNet, and Asus models.*
-
 ## Hardware Requirements Deep Dive
 
 ### Memory Specifications
@@ -33,8 +31,6 @@ Before diving into detailed specifications, use this matrix to quickly determine
 - **64 MB minimum**: Basic mesh operation with limited concurrent connections
 - **128 MB recommended**: Stable performance with 20-50 devices
 - **256+ MB ideal**: High-capacity nodes supporting 100+ devices and advanced features
-
-*`[Specs Label Closeup](router-specs-label.png)` — Close-up of a router's sticker showing relevant specs/labels including memory specifications and model information.*
 
 > **💡 Tip**: Look for the specifications label on the bottom or back of the router. Memory specifications are often listed as "Flash: XXX MB" and "RAM: XXX MB".
 

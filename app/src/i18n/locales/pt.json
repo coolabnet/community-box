@@ -7,7 +7,8 @@
           "yes": "Sim, energia confiável",
           "sometimes": "Às vezes instável",
           "no": "Quedas frequentes"
-        }
+        },
+        "help": "Planeja energia solar ou de bateria? Use a <a>calculadora solar da Coolab</a> para estimar o que você precisa. Ela abre em uma nova aba e precisa de internet."
       },
       "users": {
         "question": "Quantos usuários compartilharão este computador?",
@@ -17,8 +18,21 @@
           "6+": "6+ usuários"
         }
       },
+      "accessDevices": {
+        "question": "Como as pessoas acessam o conteúdo no servidor local?",
+        "description": "Selecione todas as opções que se aplicam",
+        "help": "Sua resposta só ajusta as dicas de conexão. Ela não altera a lista de serviços.",
+        "options": {
+          "smartphones": "Smartphones ou celulares",
+          "laptops": "Notebooks",
+          "desktops": "Computadores de mesa",
+          "shared": "Dispositivos compartilhados (telecentro, lan house, laboratório escolar)"
+        },
+        "continue": "Continuar"
+      },
       "growth": {
-        "question": "Crescimento esperado da comunidade nos próximos 2 anos?",
+        "question": "Você espera um aumento no uso do computador compartilhado nos próximos 2 anos?",
+        "help": "Crescimento significa mais pessoas, dispositivos ou serviços usando o computador compartilhado ao longo do tempo, por exemplo uma escola com mais turmas ou mais famílias entrando na rede. Se não tiver certeza, escolha “Não sei”: ele é pontuado igual ao crescimento moderado.",
         "options": {
           "low": "Crescimento mínimo",
           "medium": "Crescimento moderado",
@@ -28,17 +42,27 @@
       },
       "reuse": {
         "question": "Você tem um computador disponível para reutilização?",
+        "help": "Um computador reaproveitado deve ter pelo menos um processador de 64 bits (x86_64), 4 GB de RAM (8 GB recomendados) e um SSD de 120 GB. Veja os <a>requisitos para PCs reciclados</a> para mais detalhes.",
         "options": {
           "yes": "Sim",
           "no": "Não"
         }
       },
       "format": {
-        "question": "Você consegue formatar e configurar um computador?",
+        "question": "Você consegue formatar e configurar um computador como servidor?",
         "options": {
           "yes": "Sim, com confiança",
           "maybe": "Com orientação",
           "no": "Não"
+        }
+      },
+      "techSupport": {
+        "question": "Há alguém que possa ajudar a instalar e manter o servidor?",
+        "help": "Por exemplo, uma pessoa da comunidade, um técnico local ou uma organização parceira. Sua resposta só ajusta as dicas de instalação. Ela não altera a recomendação.",
+        "options": {
+          "community": "Sim, alguém da comunidade",
+          "external": "Sim, alguém de fora da comunidade",
+          "no": "Ainda não"
         }
       },
       "price": {
@@ -51,7 +75,7 @@
       },
       "points": {
         "question": "Atribua 5 pontos de importância",
-        "description": "Distribua 5 pontos entre essas prioridades com base na importância para você",
+        "description": "Você tem um total de 5 pontos para distribuir, escolhendo uma ou mais prioridades para a sua solução local.",
         "options": {
           "skip": "Continuar"
         },
@@ -92,7 +116,7 @@
         }
       },
       "usage": {
-        "question": "Para que sua comunidade usará isto primeiro?",
+        "question": "Selecione todos os serviços locais relevantes para a sua comunidade.",
         "description": "Selecione todas as opções que se aplicam",
         "options": {
           "news": {
@@ -302,9 +326,27 @@
             "intermediate": "Intermediário",
             "advanced": "Avançado"
           }
+        },
+        "supportTips": {
+          "title": "Dicas de instalação e suporte",
+          "items": {
+            "community": "Envolva essa pessoa desde o início, para que ela instale o sistema e ensine outras pessoas a mantê-lo funcionando.",
+            "external": "Planeje a instalação para a visita dessa pessoa e anote cada passo, para que a comunidade consiga manter o sistema depois.",
+            "no": "Comece pelas opções mais fáceis para iniciantes e procure uma rede comunitária próxima ou uma organização parceira que possa ajudar."
+          }
+        },
+        "accessTips": {
+          "title": "Dicas sobre como as pessoas se conectam",
+          "items": {
+            "smartphones": "Escolha serviços com páginas web adaptadas para celular e teste-os nos telefones que as pessoas realmente usam.",
+            "laptops": "Notebooks podem usar aplicativos web completos e clientes de sincronização, como o cliente de desktop do Nextcloud.",
+            "desktops": "Computadores de mesa em um espaço compartilhado funcionam bem para telas maiores, como editar documentos ou navegar em bibliotecas offline.",
+            "shared": "Em dispositivos compartilhados, use contas de usuário separadas, saia da conta após o uso e evite salvar senhas no navegador."
+          }
         }
       }
     },
+    "moreInformation": "Mais informações",
     "buttons": {
       "next": "Próximo",
       "back": "Voltar"
@@ -353,8 +395,7 @@
       "zimaOverview": "Visão Geral do ZimaBoard",
       "libremeshOverview": "Visão Geral do LibreMesh",
       "meshBasics": "Noções Básicas de Redes em Malha",
-      "routerSetup": "Configuração do Roteador",
-      "globalNetworks": "Redes Comunitárias Globais"
+      "communityMap": "Mapa das Redes Comunitárias"
     },
     "cards": {
       "paper": {
@@ -426,7 +467,8 @@
     "caseStudies": "📖 Estudos de Caso",
     "solarCalculator": "☀️ Calculadora Solar",
     "community": "🌍 Comunidade",
-    "about": "ℹ️ Sobre"
+    "about": "ℹ️ Sobre",
+    "communityMap": "Mapa das Redes Comunitárias"
   },
   "landing": {
     "title": "Caixa Comunitária",
@@ -435,5 +477,84 @@
     "browseGuides": "Ver Guias",
     "altHeroImage": "Colaboração comunitária",
     "footer": "Projeto Caixa Comunitária"
+  },
+  "directory": {
+    "title": "Mapa das Redes Comunitárias",
+    "intro": "Explore as redes comunitárias (RCs) ao redor do mundo. Países com preenchimento colorido têm pelo menos uma rede listada: selecione um país no mapa ou nos filtros para ver suas redes.",
+    "source": "Dados do diretório CCCI, obtidos em {{date}}",
+    "curatedNote": "O Community Box também mantém uma lista curada de redes, a partir de sua própria pesquisa.",
+    "loading": "Carregando redes comunitárias…",
+    "error": "Não foi possível carregar o mapa das redes comunitárias. Tente novamente mais tarde.",
+    "stats": {
+      "networks_one": "Rede listada",
+      "networks_other": "Redes listadas",
+      "countries_one": "País",
+      "countries_other": "Países",
+      "active_one": "Rede ativa",
+      "active_other": "Redes ativas"
+    },
+    "map": {
+      "label": "Mapa-múndi das redes comunitárias",
+      "legendTitle": "Redes por país",
+      "tier1": "1",
+      "tier2": "2–5",
+      "tier3": "6–20",
+      "tier4": "21+",
+      "smallIslandsNote": "Ilhas pequenas são marcadas pela bolha com o número de redes. Passe o cursor ou selecione um país para ver o nome.",
+      "zoomIn": "Aproximar",
+      "zoomOut": "Afastar",
+      "reset": "Mostrar o mundo inteiro",
+      "hint": "Role ou faça pinça para dar zoom, arraste para mover, clique em um país para ver suas redes",
+      "bubbleLegend": "Círculo = número de redes"
+    },
+    "networkCount_one": "{{count}} rede",
+    "networkCount_other": "{{count}} redes",
+    "results_one": "{{count}} rede encontrada",
+    "results_other": "{{count}} redes encontradas",
+    "filters": {
+      "country": "País",
+      "allCountries": "Todos os países",
+      "status": "Situação",
+      "allStatuses": "Todas as situações",
+      "search": "Buscar por nome",
+      "searchPlaceholder": "Digite o nome de uma rede…",
+      "clear": "Limpar filtros",
+      "clearCountry": "Remover o filtro de país: {{country}}"
+    },
+    "showMore": "Mostrar mais",
+    "empty": "Nenhuma rede corresponde a esses filtros.",
+    "emptyHint": "Tente outro país, status ou nome.",
+    "website": "Site",
+    "websiteLabel": "Site de {{name}} (abre em uma nova aba)",
+    "showOnMap": "Mostrar {{country}} no mapa",
+    "backgroundLink": "Leia o contexto sobre redes comunitárias",
+    "sources": {
+      "ccci": "Diretório CCCI",
+      "communityBox": "Pesquisa Community Box"
+    },
+    "status": {
+      "active": "Ativa",
+      "inactive": "Inativa",
+      "inProgress": "Em andamento",
+      "dormant": "Em hibernação",
+      "pilot": "Piloto",
+      "planned": "Planejada",
+      "ceased": "Encerrada",
+      "unknown": "Situação não informada"
+    },
+    "services": {
+      "internet": "Acesso à internet",
+      "voice": "Voz",
+      "offline": "Offline / rede local",
+      "localServices": "Serviços locais",
+      "financial": "Serviços financeiros",
+      "support": "Suporte pessoal",
+      "literacy": "Alfabetização digital",
+      "radio": "Rádio",
+      "schools": "Conectividade escolar",
+      "cybercafe": "Cibercafé",
+      "environmental": "Ambiental",
+      "charging": "Carregamento de dispositivos"
+    }
   }
 }

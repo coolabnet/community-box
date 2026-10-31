@@ -26,12 +26,14 @@ interface Priority {
 const MAX_POINTS = 5;
 
 // Define priority colors
+// Text tones are chosen for WCAG AA (4.5:1) on the card background in light and dark themes.
+// badge is the solid fill behind white point counts (white on fill must reach 4.5:1).
 const priorityColors = {
-  easyToUse: { bg: 'bg-blue-100 dark:bg-blue-900/30', text: 'text-blue-600 dark:text-blue-500', fill: 'bg-blue-500' },
-  lowPower: { bg: 'bg-green-100 dark:bg-green-900/30', text: 'text-green-600 dark:text-green-500', fill: 'bg-green-500' },
-  language: { bg: 'bg-purple-100 dark:bg-purple-900/30', text: 'text-purple-600 dark:text-purple-500', fill: 'bg-purple-500' },
-  scalable: { bg: 'bg-orange-100 dark:bg-orange-900/30', text: 'text-orange-600 dark:text-orange-500', fill: 'bg-orange-500' },
-  lowCost: { bg: 'bg-rose-100 dark:bg-rose-900/30', text: 'text-rose-600 dark:text-rose-500', fill: 'bg-rose-500' },
+  easyToUse: { bg: 'bg-blue-100 dark:bg-blue-900/30', text: 'text-blue-700 dark:text-blue-400', fill: 'bg-blue-500', badge: 'bg-blue-700' },
+  lowPower: { bg: 'bg-green-100 dark:bg-green-900/30', text: 'text-green-800 dark:text-green-400', fill: 'bg-green-500', badge: 'bg-green-700' },
+  language: { bg: 'bg-purple-100 dark:bg-purple-900/30', text: 'text-purple-700 dark:text-purple-400', fill: 'bg-purple-500', badge: 'bg-purple-700' },
+  scalable: { bg: 'bg-orange-100 dark:bg-orange-900/30', text: 'text-orange-700 dark:text-orange-400', fill: 'bg-orange-500', badge: 'bg-orange-700' },
+  lowCost: { bg: 'bg-rose-100 dark:bg-rose-900/30', text: 'text-rose-700 dark:text-rose-400', fill: 'bg-rose-500', badge: 'bg-rose-700' },
 };
 
 interface PointsAllocationProps {
@@ -204,7 +206,7 @@ const PointsAllocation = ({ onNext, onBack }: PointsAllocationProps) => {
                     <h3 className={cn("font-medium text-lg", colors.text)}>
                       {t(`questionnaire.questions.points.priorities.${priority.key}.title`)}
                     </h3>
-                    <p className="text-sm text-muted-foreground">
+                    <p className="text-sm text-foreground">
                       {t(`questionnaire.questions.points.priorities.${priority.key}.description`)}
                     </p>
                   </div>
@@ -235,8 +237,8 @@ const PointsAllocation = ({ onNext, onBack }: PointsAllocationProps) => {
                       key={priority.points}
                       className={cn(
                         "w-9 h-9 flex items-center justify-center rounded-full font-bold text-lg",
-                        priority.points > 0 ? colors.fill : "bg-secondary",
-                        priority.points > 0 ? "text-white" : "text-muted-foreground"
+                        priority.points > 0 ? colors.badge : "bg-secondary",
+                        priority.points > 0 ? "text-white" : "text-foreground"
                       )}
                       initial={{ scale: 0.8, opacity: 0 }}
                       animate={{ scale: 1, opacity: 1 }}
@@ -331,7 +333,7 @@ const PointsAllocation = ({ onNext, onBack }: PointsAllocationProps) => {
         >
           <Button
             onClick={handleContinue}
-            className="px-8 py-6 text-lg bg-gradient-to-r from-indigo-500 to-purple-500 hover:from-indigo-600 hover:to-purple-600 text-white shadow-lg"
+            className="px-8 py-6 text-lg bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-700 hover:to-purple-700 text-white shadow-lg"
           >
             <Sparkles className="mr-2 h-5 w-5" />
             {t('questionnaire.questions.points.continue')}

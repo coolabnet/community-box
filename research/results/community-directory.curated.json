@@ -1,0 +1,138 @@
+{
+  "note": "Community networks curated by Community Box (from research/results/global-community-networks-directory.md). Merged with the CCCI directory by scripts/fetch-data/get-ccci-directory.js.",
+  "networks": [
+    {
+      "name": "Freifunk",
+      "country": "DE",
+      "region": "europe",
+      "website": "https://freifunk.net/en/"
+    },
+    {
+      "name": "Guifi.net",
+      "aliases": ["Guifi"],
+      "country": "ES",
+      "region": "europe",
+      "website": "https://guifi.net"
+    },
+    {
+      "name": "Athens Wireless Metropolitan Network (AWMN)",
+      "country": "GR",
+      "region": "europe",
+      "website": "http://www.awmn.net"
+    },
+    {
+      "name": "Sarantaporo.gr",
+      "aliases": ["Sarantaporo.gr Community Network"],
+      "country": "GR",
+      "region": "europe",
+      "website": "https://sarantaporo.gr"
+    },
+    {
+      "name": "Ninux",
+      "country": "IT",
+      "region": "europe",
+      "website": "http://ninux.org"
+    },
+    {
+      "name": "wlan slovenija",
+      "country": "SI",
+      "region": "europe",
+      "website": "https://wlan.si"
+    },
+    {
+      "name": "Wireless Leiden",
+      "country": "NL",
+      "region": "europe",
+      "website": "https://wirelessleiden.nl"
+    },
+    {
+      "name": "CRCWN (Cavan Rural Community Wireless Network)",
+      "country": "IE",
+      "region": "europe",
+      "website": "https://www.crcwn.online"
+    },
+    {
+      "name": "NYC Mesh",
+      "country": "US",
+      "region": "northAmerica",
+      "website": "https://nycmesh.net"
+    },
+    {
+      "name": "People's Open Network",
+      "country": "US",
+      "region": "northAmerica",
+      "website": "https://peoplesopen.net"
+    },
+    {
+      "name": "Personal Telco Project (PTP)",
+      "country": "US",
+      "region": "northAmerica",
+      "website": "https://personaltelco.net"
+    },
+    {
+      "name": "Toronto Mesh",
+      "country": "CA",
+      "region": "northAmerica",
+      "website": "https://tomesh.net"
+    },
+    {
+      "name": "Portal Sem Porteiras (PSP)",
+      "aliases": ["Coolabs/Souzas, Associação Portal Sem Porteiras, Monteiro Lobato, Sao Paulo State, Brasil"],
+      "country": "BR",
+      "region": "lac",
+      "website": "https://portalsemporteiras.github.io"
+    },
+    {
+      "name": "Colnodo & RedINC Network",
+      "country": "CO",
+      "region": "lac",
+      "website": "https://colnodo.apc.org"
+    },
+    {
+      "name": "Altermundi",
+      "country": "AR",
+      "region": "lac"
+    },
+    {
+      "name": "Rhizomatica",
+      "aliases": ["REDES A.C., Rhizomatica and Colectivo Ik'ta K'op"],
+      "country": "MX",
+      "region": "lac",
+      "website": "https://rhizomatica.org"
+    },
+    {
+      "name": "Zenzeleni Community Networks",
+      "country": "ZA",
+      "region": "africa",
+      "website": "https://zenzeleni.net"
+    },
+    {
+      "name": "TunapandaNET",
+      "aliases": ["TunapandaNET, Kiberia, Nairobi, Kenya"],
+      "country": "KE",
+      "region": "africa"
+    },
+    {
+      "name": "Nepal Wireless Networking Project",
+      "country": "NP",
+      "region": "asia",
+      "website": "http://nepwireless.net"
+    },
+    {
+      "name": "Melbourne Wireless",
+      "country": "AU",
+      "region": "oceania",
+      "website": "https://melbournewireless.org.au"
+    },
+    {
+      "name": "Air Stream Wireless",
+      "country": "AU",
+      "region": "oceania"
+    },
+    {
+      "name": "TasWireless",
+      "country": "AU",
+      "region": "oceania"
+    }
+  ]
+}

@@ -17,7 +17,7 @@ import {
 } from 'lucide-react';
 import { useIsMobile } from '@/hooks/use-mobile';
 import { getPdfDownloadUrl } from '@/lib/github';
-import { getMarkdownTitle, deslugify, normalizeDocLang, type DocLang } from '@/lib/markdown';
+import { resolveTitle, normalizeDocLang, type DocLang } from '@/lib/markdown';
 
 type MenuItem = {
   title?: string;       // For dynamic content (markdown titles)
@@ -27,12 +27,6 @@ type MenuItem = {
   icon?: React.ReactNode;
   children?: MenuItem[];
 };
-
-// Resolve title from path for the given language, falling back to the English frontmatter
-// title and then to a de-slugified filename
-function resolveTitle(path: string, lang: DocLang): string {
-  return getMarkdownTitle(path, lang) || deslugify(path);
-}
 
 // Helper function to get display title
 function getDisplayTitle(item: MenuItem, t: (key: string) => string): string {
@@ -155,6 +149,7 @@ const createMenu = (pdfUrl: string, lang: DocLang): MenuItem[] => [
     titleKey: 'sidebar.community',
     icon: <Users size={16} />,
     children: [
+      { titleKey: 'sidebar.communityMap', to: 'directory' },
       { title: resolveTitle('results/global-community-networks-directory', lang), to: 'results/global-community-networks-directory' }
     ]
   },

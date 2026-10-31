@@ -244,8 +244,12 @@ async function checkDocs(manifest) {
 
 // --- 4. Docs paths referenced by the UI -------------------------------------
 
+// Docs-section app routes (React pages, not markdown docs) that the sidebar
+// and DocsHome may link to without a manifest entry.
+const APP_DOC_ROUTES = new Set(['directory']);
+
 async function checkReferencedPaths(manifest) {
-  const known = new Set(manifest);
+  const known = new Set([...manifest, ...APP_DOC_ROUTES]);
   const sidebarFile = path.join(APP_ROOT, 'src', 'components', 'SidebarMenu.tsx');
   const docsHomeFile = path.join(APP_ROOT, 'src', 'pages', 'DocsHome.tsx');
   const sidebar = await readFile(sidebarFile, 'utf8').catch(() => null);

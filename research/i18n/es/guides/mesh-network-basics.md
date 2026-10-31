@@ -1,7 +1,7 @@
 ---
 title: Conceptos básicos de Mesh
 sourcePath: guides/mesh-network-basics.md
-sourceHash: 7c2ff6e29116e57c
+sourceHash: 123cc9f6ca89b677
 translatedBy: glm-4.6
 ---
 
@@ -10,8 +10,6 @@ translatedBy: glm-4.6
 ## Introducción a las Redes Mesh
 
 Las redes mesh representan un enfoque fundamentalmente diferente de la arquitectura de red en comparación con los modelos tradicionales de tipo hub-and-spoke. En las redes mesh, los dispositivos (nodos) se conectan de manera directa, dinámica y no jerárquica a tantos otros nodos como sea posible, creando múltiples rutas para la transmisión de datos[13]. Esta estructura descentralizada ofrece varias ventajas sobre las redes convencionales, particularmente en despliegues comunitarios.
-
-`[Wireless Channel Map](wireless-channel-map.png) — Example showing proper channel selections to reduce interference.]`
 
 ## Conceptos Clave de Redes para LibreMesh
 
@@ -43,8 +41,6 @@ Las redes mesh pueden implementar diferentes estructuras de topología según la
 - **Malla Parcial (Partial Mesh)**: Los nodos se comunican principalmente con nodos cercanos, y los datos "saltan" a través de múltiples nodos para llegar a destinos lejanos
 
 LibreMesh admite ambas configuraciones, siendo la malla parcial más común en despliegues grandes por razones de eficiencia.
-
-`[Node Discovery UI Screenshot](node-discovery-ui.png) — LibreMesh's interface showing known nodes.]`
 
 ### Configuración Automática
 

@@ -8,8 +8,6 @@ title: Mesh Basics
 
 Mesh networks represent a fundamentally different approach to network architecture compared to traditional hub-and-spoke models. In mesh networking, devices (nodes) connect directly, dynamically, and non-hierarchically to as many other nodes as possible, creating multiple paths for data transmission[13]. This decentralized structure provides several advantages over conventional networks, particularly in community deployments.
 
-`[Wireless Channel Map](wireless-channel-map.png) — Example showing proper channel selections to reduce interference.]`
-
 ## Key Networking Concepts for LibreMesh
 
 ### Routing in Mesh Networks
@@ -40,8 +38,6 @@ Mesh networks can implement different topology structures depending on needs[18]
 - **Partial Mesh**: Nodes communicate primarily with nearby nodes, with data "hopping" across multiple nodes to reach distant destinations
 
 LibreMesh supports both configurations, with partial mesh being more common in larger deployments for efficiency.
-
-`[Node Discovery UI Screenshot](node-discovery-ui.png) — LibreMesh's interface showing known nodes.]`
 
 ### Automatic Configuration
 
