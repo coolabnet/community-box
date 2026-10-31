@@ -80,6 +80,14 @@ describe('getOSSuggestions with platform entries', () => {
     expect(keys('education', 'yes', 'reusedPC')).toEqual(['ubuntuServer', 'truenas', 'openmediavault']);
   });
 
+  // Examples documented in research/software/os-recommendations.md.
+  it('matches the documented examples', () => {
+    expect(keys('business', 'maybe', 'intelNUC')).toEqual(['ubuntuServer', 'debian', 'truenas', 'openmediavault']);
+    expect(keys('business', 'no', 'intelNUC')).toEqual(['ubuntuServer', 'openmediavault']);
+    expect(keys('education', 'yes', 'raspberryPi')).toEqual(['raspbian', 'openmediavault', 'butterbox']);
+    expect(keys('personal', 'no', 'raspberryPi')).toEqual(['raspbian', 'butterbox']);
+  });
+
   it('never returns more than four OS entries', () => {
     for (const mainUse of ['education', 'business', 'personal'] as const) {
       for (const device of [undefined, 'raspberryPi', 'zimaBoard', 'intelNUC', 'reusedPC'] as const) {
