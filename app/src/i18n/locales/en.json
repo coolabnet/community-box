@@ -7,7 +7,8 @@
           "yes": "Yes, reliable power",
           "sometimes": "Sometimes unreliable",
           "no": "Frequent outages"
-        }
+        },
+        "help": "Planning solar or battery power? Use the <a>Coolab solar calculator</a> to estimate what you need. It opens in a new tab and needs internet."
       },
       "users": {
         "question": "How many users will share this computer?",
@@ -18,7 +19,8 @@
         }
       },
       "growth": {
-        "question": "Expected community growth in the next 2 years?",
+        "question": "Do you expect a growing usage of the shared computer in the next 2 years?",
+        "help": "Growth means more people, devices or services using the shared computer over time, for example a school adding classes or more families joining the network. If you are not sure, choose “Not sure”: it is scored the same as moderate growth.",
         "options": {
           "low": "Minimal growth",
           "medium": "Moderate growth",
@@ -28,13 +30,14 @@
       },
       "reuse": {
         "question": "Do you have a computer available for reuse?",
+        "help": "A reused computer should have at least a 64-bit (x86_64) processor, 4 GB of RAM (8 GB recommended) and a 120 GB SSD. See <a>recycled PC requirements</a> for details.",
         "options": {
           "yes": "Yes",
           "no": "No"
         }
       },
       "format": {
-        "question": "Can you format and set up a computer?",
+        "question": "Can you format and set up a computer as a server?",
         "options": {
           "yes": "Yes, confidently",
           "maybe": "With guidance",
@@ -51,7 +54,7 @@
       },
       "points": {
         "question": "Allocate 5 importance points",
-        "description": "Distribute 5 points among these priorities based on importance to you",
+        "description": "You have a total of 5 points to grant, choosing one or more priorities for your local solution.",
         "options": {
           "skip": "Continue"
         },
@@ -92,7 +95,7 @@
         }
       },
       "usage": {
-        "question": "What will your community use this for first?",
+        "question": "Select all local services that are relevant to your community.",
         "description": "Select all that apply",
         "options": {
           "news": {
@@ -305,6 +308,7 @@
         }
       }
     },
+    "moreInformation": "More information",
     "buttons": {
       "next": "Next",
       "back": "Back"

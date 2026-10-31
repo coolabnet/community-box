@@ -1,12 +1,19 @@
 
+import type { ReactNode } from 'react';
 import { motion } from 'framer-motion';
 import { Button } from '@/components/ui/button';
+import {
+  Collapsible,
+  CollapsibleContent,
+  CollapsibleTrigger,
+} from '@/components/ui/collapsible';
 import { cn } from '@/lib/utils';
 import { useTranslation } from 'react-i18next';
-import { ArrowLeft } from 'lucide-react';
+import { ArrowLeft, ChevronDown } from 'lucide-react';
 
 interface QuestionCardProps {
   question: string;
+  help?: ReactNode;
   options?: { label: string; value: string | number }[];
   onSelect?: (value: string | number) => void;
   selectedValue?: string | number;
@@ -18,6 +25,7 @@ interface QuestionCardProps {
 
 const QuestionCard = ({
   question,
+  help,
   options,
   onSelect,
   selectedValue,
@@ -39,6 +47,18 @@ const QuestionCard = ({
       )}
     >
       <h2 className="text-3xl font-bold mb-8 text-center">{question}</h2>
+
+      {help && (
+        <Collapsible className="-mt-6 mb-8 max-w-xl mx-auto">
+          <CollapsibleTrigger className="mx-auto flex items-center gap-1 rounded-md px-2 py-1 text-sm font-medium text-muted-foreground hover:text-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring [&[data-state=open]>svg]:rotate-180">
+            {t('questionnaire.moreInformation')}
+            <ChevronDown className="h-4 w-4 transition-transform duration-200" />
+          </CollapsibleTrigger>
+          <CollapsibleContent className="mt-3 rounded-lg bg-muted p-4 text-left text-sm text-foreground [&_a]:font-medium [&_a]:underline [&_a]:underline-offset-4">
+            {help}
+          </CollapsibleContent>
+        </Collapsible>
+      )}
 
       {type === 'options' && options && (
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8">
