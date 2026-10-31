@@ -4,7 +4,7 @@ title: Local Messaging with Delta Chat
 
 # Local Messaging with Delta Chat
 
-This guide explains Delta Chat and its relay network. It shows what the official docs describe for offline use. It compares three options for a Community Box.
+This guide explains Delta Chat and its relay network. It shows what the official docs describe for offline use. It compares four options for a Community Box.
 
 ## What Delta Chat Is
 
@@ -61,15 +61,15 @@ Option (a) fits a site with internet access. Option (b) fits a site that can hos
 
 ButterBox is the offline option in this review. It broadcasts its own Wi-Fi network. [Butter Box](https://likebutter.app/) says it works without internet. Users join a public chatroom or create a private one. The site lists encrypted chat as a feature. It says everything is stored on the box. The [docs](https://likebutter.app/docs) describe the box as a hotspot with local content.
 
-Option (d) is the concrete offline Delta Chat setup. The [Secure Messenger page](https://likebutter.app/docs/services/secure-messenger) says people on the same Butter Box can send messages to each other without internet. The [ButterBox Delta Chat post](https://likebutter.app/blog/butterbox-deltachat) says the box runs a local MadMail server, an open-source chatmail server. The app on each device is set up with that local server. The post calls a single ButterBox an asynchronous messaging hub. It says the Android app and MadMail ship in the base firmware. It also says desktop and local web support are future plans, and early testing is promising. Treat this as a single-box setup that is not yet complete. This guide has not tested it.
+Option (d) is the concrete offline Delta Chat setup. The [Secure Messenger page](https://likebutter.app/docs/services/secure-messenger) says people on the same Butter Box can send messages to each other without internet. The [ButterBox Delta Chat post](https://likebutter.app/blog/butterbox-deltachat) says the box runs a local MadMail server, an open-source chatmail server. The app on each device is set up with that local server. The post calls a single ButterBox an asynchronous messaging hub. It says the Android app and MadMail ship in the base firmware. It shows a Linux desktop client working, but says bundling the desktop app and local web support are future plans. Early testing is described as promising. Treat this as a single-box setup that is not yet complete. This guide has not tested it.
 
 Community feedback from GG2026 says Delta Chat and ButterBox both worked on a local network. This is not verified, so no option is recommended from it. The same feedback says AIR and DashChat plan local-server support and lack committed funding or a roadmap. This is not verified either. The [FIFAfrica 2026 report](https://likebutter.app/blog/fifafrica-2026) describes an offline DashChat demonstration. DashChat ran offline with a Butter Box as its server, and its local message hub was added to Butter Box. The report does not mention AIR. Neither AIR nor DashChat is recommended yet.
 
 ## Privacy Notes
 
-Delta Chat servers see sender and receiver addresses and message size ([FAQ](https://delta.chat/en/help)). Addresses are random by default. All other contact and group data is encrypted on the devices. Relays also see the IP address of each user, because they need it to deliver messages ([FAQ](https://delta.chat/en/help)).
+Delta Chat servers see sender and receiver addresses and message size ([FAQ](https://delta.chat/en/help)). Addresses are random by default. Other contact and group data travels end-to-end encrypted inside messages and is kept on the devices. Relays also see the IP address of each user, because they need it to deliver messages ([FAQ](https://delta.chat/en/help)).
 
-For sensitive use, create a separate profile with a random address. The FAQ recommends this for protection against metadata collection and device seizure.
+For sensitive use, create a separate profile with a random address. The FAQ recommends this to limit metadata collection. A separate profile does not by itself protect data on a phone or computer that is taken. Turn on the device's own disk encryption and screen lock as well. A [Delta Chat developer note](https://support.delta.chat/t/researching-a-zero-trust-storage-layer-for-deltachat-core-rust-thoughts/4554/6) recommends relying on operating system encryption for stored data.
 
 Relay operators run their own servers. Public relays are run by different groups and people ([relays page](https://chatmail.at/relays)). The relay docs describe a goal of collecting no private data or metadata ([relay repository](https://github.com/chatmail/relay)). That is a design goal, not an audit result.
 
