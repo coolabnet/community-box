@@ -33,7 +33,7 @@ If you are not sure of your processor type, check the hardware guide for your de
 
 Use Balena Etcher for computers, SD cards, and USB drives. Follow the step-by-step instructions in [etcher-guide.md](etcher-guide.md).
 
-Router firmware is not written this way. A LibreMesh router image is installed through the router's own web interface or recovery mode, in one of two ways: a factory image for the first install on stock firmware, or a sysupgrade image when the router already runs OpenWrt. Follow [libremesh-installation.md](libremesh-installation.md) and the [LibreMesh getting started page](https://libremesh.org/getting-started.html).
+Router firmware is not written this way. A LibreMesh router image is installed through the router's own web interface or recovery mode, in one of two ways: a factory image for the first install on stock firmware, or a sysupgrade image when the router already runs OpenWrt. For a first install, follow [libremesh-installation.md](libremesh-installation.md), which walks through flashing a factory image. To upgrade a router that already runs OpenWrt, follow the [OpenWrt sysupgrade instructions](https://openwrt.org/docs/guide-user/installation/generic.sysupgrade) and the [LibreMesh getting started page](https://libremesh.org/getting-started.html).
 
 Writing a disk erases everything on the target drive. Check the drive letter or size before you start.
 
@@ -56,7 +56,7 @@ Each row links to the project's own download page. A row with no checksum means 
 | Platform | Type | Architectures | Download | Checksums |
 |---|---|---|---|---|
 | Debian 13 | Installer ISO | amd64, arm64 | [debian.org](https://www.debian.org/distrib/netinst) | [amd64](https://cdimage.debian.org/debian-cd/current/amd64/iso-cd/SHA256SUMS), [arm64](https://cdimage.debian.org/debian-cd/current/arm64/iso-cd/SHA256SUMS) |
-| Debian 12 (for YunoHost) | Installer ISO | amd64, arm64 | [Debian 12 archive](https://cdimage.debian.org/cdimage/archive/12.15.0/amd64/iso-cd/) (3) | [amd64](https://cdimage.debian.org/cdimage/archive/12.15.0/amd64/iso-cd/SHA256SUMS), [arm64](https://cdimage.debian.org/cdimage/archive/12.15.0/arm64/iso-cd/SHA256SUMS) |
+| Debian 12 (for YunoHost) | Installer ISO | amd64, arm64 | [amd64](https://cdimage.debian.org/cdimage/archive/12.15.0/amd64/iso-cd/), [arm64](https://cdimage.debian.org/cdimage/archive/12.15.0/arm64/iso-cd/) (3) | [amd64](https://cdimage.debian.org/cdimage/archive/12.15.0/amd64/iso-cd/SHA256SUMS), [arm64](https://cdimage.debian.org/cdimage/archive/12.15.0/arm64/iso-cd/SHA256SUMS) |
 | Ubuntu Server | Live server ISO | amd64, arm64 | [ubuntu.com](https://ubuntu.com/download/server) | amd64 [releases](https://releases.ubuntu.com/26.04/SHA256SUMS), arm64 [cdimage](https://cdimage.ubuntu.com/ubuntu/releases/26.04/release/SHA256SUMS) |
 | Raspberry Pi OS | Image or live ISO | arm64, armhf; amd64 for Desktop | [raspberrypi.com](https://www.raspberrypi.com/software/operating-systems/) | On download page (2) |
 | YunoHost | Install script on Debian 12 | Follows Debian 12 (x86, ARM) | [install.yunohost.org](https://install.yunohost.org) (1) | None for script (4) |
