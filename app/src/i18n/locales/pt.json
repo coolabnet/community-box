@@ -476,7 +476,19 @@
     "startButton": "Começar",
     "browseGuides": "Ver Guias",
     "altHeroImage": "Colaboração comunitária",
-    "footer": "Projeto Caixa Comunitária"
+    "footer": "Projeto Caixa Comunitária",
+    "explainer": {
+      "heading": "Sobre esta ferramenta",
+      "intro": "A ferramenta de recomendação Caixa Comunitária ajuda você a escolher uma configuração de servidor local para a sua comunidade. O resultado é a sua Caixa Comunitária: o hardware, o sistema operacional e os serviços que funcionam na rede local.",
+      "whatTitle": "O que é uma Caixa Comunitária?",
+      "whatBody": "Uma Caixa Comunitária é um computador na comunidade que hospeda serviços e aplicativos locais ou offline-first, como compartilhamento de arquivos, sites locais, bibliotecas offline, mídia e plataformas de aprendizagem. As pessoas podem acessá-la pela rede local, mesmo sem internet.",
+      "toolTitle": "Para que serve esta ferramenta?",
+      "toolBody": "Ela faz algumas perguntas curtas sobre a sua comunidade, como energia elétrica, número de usuários e uso principal. Em seguida, recomenda hardware, um sistema operacional e serviços, além de guias para seguir. Você pode salvar a recomendação de hardware e as suas respostas em PDF. Leva alguns minutos. A ferramenta não tem contas nem banco de dados: as suas respostas ficam no seu navegador e no endereço da página, então quem receber o link pode vê-las.",
+      "canTitle": "O que ela pode e não pode fazer",
+      "canBody": "Ela pode sugerir uma configuração inicial e indicar guias úteis. Ela não pode comprar nem instalar nada por você, substituir o suporte técnico local nem garantir resultados. Alguém precisa configurar e manter a caixa.",
+      "helpTitle": "Onde encontro ajuda?",
+      "helpBody": "Veja os <guides>guias</guides> para ajuda na configuração. Para encontrar redes perto de você, veja o <directory>diretório de comunidades</directory>."
+    }
   },
   "directory": {
     "title": "Mapa das Redes Comunitárias",

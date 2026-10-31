@@ -476,7 +476,19 @@
     "startButton": "Start",
     "browseGuides": "Browse Guides",
     "altHeroImage": "Community collaboration",
-    "footer": "Community Box Project"
+    "footer": "Community Box Project",
+    "explainer": {
+      "heading": "About this tool",
+      "intro": "The Community Box recommendation tool helps you choose a local-server setup for your community. The result is your Community Box: the hardware, operating system and services that run on your local network.",
+      "whatTitle": "What is a Community Box?",
+      "whatBody": "A Community Box is computer hardware in your community that hosts local or offline-first services and apps, such as file sharing, local websites, offline libraries, media and learning platforms. People can reach it over the local network, even without internet.",
+      "toolTitle": "What does this tool do?",
+      "toolBody": "It asks a few short questions about your community, such as electricity, number of users and main use. It then recommends hardware, an operating system and services, plus guides to follow. You can save the hardware recommendation and your answers as a PDF. It takes a few minutes. The tool has no accounts or database: your answers are kept in your browser and in the page address, so anyone you share the link with can see them.",
+      "canTitle": "What it can and cannot do",
+      "canBody": "It can suggest a starting setup and link you to useful guides. It cannot buy or install anything for you, replace local technical help or guarantee results. Someone needs to set up and maintain the box.",
+      "helpTitle": "Where do I find help?",
+      "helpBody": "Browse the <guides>guides</guides> for setup help. To find networks near you, see the <directory>community directory</directory>."
+    }
   },
   "directory": {
     "title": "Community Networks Map",
