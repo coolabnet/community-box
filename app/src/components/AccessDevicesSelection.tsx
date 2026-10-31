@@ -40,6 +40,8 @@ const AccessDevicesSelection = ({ onNext, onBack }: AccessDevicesSelectionProps)
   ]);
 
   const [showSuccessAnimation, setShowSuccessAnimation] = useState(false);
+  // True from Continue until the delayed advance fires or Back cancels it
+  const isPending = showSuccessAnimation;
 
   // Pending delayed advance to the next step; cleared on Back and unmount
   const advanceTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
@@ -64,6 +66,10 @@ const AccessDevicesSelection = ({ onNext, onBack }: AccessDevicesSelectionProps)
 
   // Toggle selection for an option
   const toggleOption = (index: number) => {
+    // Ignore changes while advancing so the submitted values match what is shown
+    if (advanceTimerRef.current !== null) {
+      return;
+    }
     setDeviceOptions(prev => {
       const updated = [...prev];
       updated[index] = { ...updated[index], selected: !updated[index].selected };
@@ -129,6 +135,8 @@ const AccessDevicesSelection = ({ onNext, onBack }: AccessDevicesSelectionProps)
             <motion.button
               type="button"
               key={option.key}
+              disabled={isPending}
+              aria-disabled={isPending}
               aria-pressed={option.selected}
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
