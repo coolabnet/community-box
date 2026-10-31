@@ -89,7 +89,6 @@ Use this when working several TODO items at once.
 
 ## In review (PRs)
 
-- `O2` — PR #72, gate SHIP, parked `needs-human-qa` (Q36).
 - `T1-3` — landing explainer, PR #74, gate SHIP, parked `needs-human-qa`
   (Q38).
 - `T3-2`, `T3-12` — ButterBox and Proxmox VE OS entries, PR #76, gate SHIP,
@@ -111,6 +110,11 @@ taxonomy), `#57` taxonomy and PDF sections. `M4` is Phase 2 (#26).
 
 ## Done
 
+- `O2` — Download Images menu item now opens a guide (images vs scripts,
+  hardware fit, writing, checksums, official download links), live 2026-10-31
+  (PR #72, `70c2f18`). Gate SHIP after router-step fixes; junior browser QA
+  passed en/pt/es (Q36). #25 closed; doc note under Other aspects 2.
+  Follow-up: #81 (older LibreMesh install guide).
 - `O1` — router and networks-directory names unified on docs home and menu,
   broken image placeholders removed from all guides, live 2026-10-31 (PR #70,
   `f08d309`). Browser QA by junior passed en/pt/es (Q35). #16 #66 closed; doc
