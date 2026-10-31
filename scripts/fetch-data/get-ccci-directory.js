@@ -381,6 +381,8 @@ function mergeCurated(networks, curated) {
       matched += 1;
       if (!hit.sources.includes('communityBox')) hit.sources.push('communityBox');
       if (!hit.website && website) hit.website = website;
+      // Keep the curated spelling searchable when it differs from the CCCI name
+      if (nameKey(name) !== nameKey(hit.name)) hit.aliases = (hit.aliases || []).concat(name);
       return;
     }
 

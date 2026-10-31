@@ -228,7 +228,7 @@ export default function WorldMap({ counts, selected, onSelect }: WorldMapProps) 
   const draggedRef = useRef(false);
   const refocusRef = useRef<string | null>(null);
   // View before an ocean click reset it, so a double-click zooms from where the user was.
-  const preClickRef = useRef<{ view: ViewBox; target: ViewBox } | null>(null);
+  const preClickRef = useRef<ViewBox | null>(null);
 
   const bounds = useMemo<MapBounds>(
     () => (geometry ? { width: geometry.width, height: geometry.height } : DEFAULT_BOUNDS),
@@ -425,12 +425,18 @@ export default function WorldMap({ counts, selected, onSelect }: WorldMapProps) 
           x: gesture.lastMidX - rect.left,
           y: gesture.lastMidY - rect.top,
         });
-        const zoomed = zoomAt(current, distance / gesture.lastDistance, point, bounds, currentAspect);
-        const zoomedPpu = pixelsPerUnit(zoomed, rect.width, rect.height);
-        const next = panBy(
-          zoomed,
-          -(midX - gesture.lastMidX) / zoomedPpu,
-          -(midY - gesture.lastMidY) / zoomedPpu,
+        // Compose zoom and pan before clamping, so a clamp does not drift the anchor.
+        const { w, h } = zoomAt(current, distance / gesture.lastDistance, point, bounds, currentAspect);
+        const zoomedPpu = pixelsPerUnit({ x: 0, y: 0, w, h }, rect.width, rect.height);
+        const offsetX = (rect.width - w * zoomedPpu) / 2;
+        const offsetY = (rect.height - h * zoomedPpu) / 2;
+        const next = clampViewBox(
+          {
+            x: point.x - (midX - rect.left - offsetX) / zoomedPpu,
+            y: point.y - (midY - rect.top - offsetY) / zoomedPpu,
+            w,
+            h,
+          },
           bounds,
           currentAspect,
         );
@@ -486,21 +492,21 @@ export default function WorldMap({ counts, selected, onSelect }: WorldMapProps) 
       preClickRef.current = null;
       toggle(code);
     } else {
-      preClickRef.current = { view: viewRef.current, target: targetRef.current };
+      preClickRef.current = viewRef.current;
       showWorld();
     }
   };
 
   const handleDoubleClick = (event: MouseEvent<SVGSVGElement>) => {
     const rect = event.currentTarget.getBoundingClientRect();
-    const before = preClickRef.current;
+    // Zoom the view the user saw, so the clicked point stays under the cursor.
+    const base = preClickRef.current ?? viewRef.current;
     preClickRef.current = null;
-    const target = before ? before.target : targetRef.current;
-    const point = clientToMap(before ? before.view : viewRef.current, rect.width, rect.height, {
+    const point = clientToMap(base, rect.width, rect.height, {
       x: event.clientX - rect.left,
       y: event.clientY - rect.top,
     });
-    animateTo(zoomAt(target, 2, point, bounds, aspect));
+    animateTo(zoomAt(base, 2, point, bounds, aspect));
   };
 
   const handleBubbleKeyDown = (event: KeyboardEvent<SVGGElement>, code: string) => {

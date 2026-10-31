@@ -31,6 +31,8 @@ export interface CommunityNetwork {
   status: NetworkStatus;
   services: NetworkService[];
   website?: string;
+  // Other names for the same network (curated spellings), searchable but not shown.
+  aliases?: string[];
   sources: NetworkSource[];
 }
 
@@ -148,7 +150,9 @@ export function filterNetworks(networks: CommunityNetwork[], filters: NetworkFil
   return networks.filter((network) => {
     if (filters.country && network.country !== filters.country) return false;
     if (filters.status && network.status !== filters.status) return false;
-    if (query && !normalizeText(network.name).includes(query)) return false;
+    if (query && ![network.name, ...(network.aliases ?? [])].some((name) => normalizeText(name).includes(query))) {
+      return false;
+    }
     return true;
   });
 }

@@ -1,12 +1,12 @@
 {
-  "timestamp": "2026-10-31T11:56:51.481Z",
+  "timestamp": "2026-10-31T12:05:30.845Z",
   "script": "get-ccci-directory.js",
   "data": {
     "source": {
       "name": "CCCI directory (Colnodo / APC)",
       "url": "https://app.agenteccci.colnodo.org/explore",
       "exportUrl": "https://app.agenteccci.colnodo.org/explore/export",
-      "retrievedAt": "2026-10-31T11:56:50.254Z",
+      "retrievedAt": "2026-10-31T12:05:29.060Z",
       "rows": 428
     },
     "curatedSource": "research/results/community-directory.curated.json",
@@ -968,7 +968,10 @@
           "ccci",
           "communityBox"
         ],
-        "website": "https://portalsemporteiras.github.io"
+        "website": "https://portalsemporteiras.github.io",
+        "aliases": [
+          "Portal Sem Porteiras (PSP)"
+        ]
       },
       {
         "id": "CCCI-0072",
@@ -1428,7 +1431,10 @@
           "ccci",
           "communityBox"
         ],
-        "website": "https://guifi.net"
+        "website": "https://guifi.net",
+        "aliases": [
+          "Guifi.net"
+        ]
       },
       {
         "id": "CCCI-0107",
@@ -4798,7 +4804,10 @@
           "ccci",
           "communityBox"
         ],
-        "website": "https://rhizomatica.org"
+        "website": "https://rhizomatica.org",
+        "aliases": [
+          "Rhizomatica"
+        ]
       },
       {
         "id": "CCCI-0333",
@@ -4948,7 +4957,10 @@
           "ccci",
           "communityBox"
         ],
-        "website": "https://sarantaporo.gr"
+        "website": "https://sarantaporo.gr",
+        "aliases": [
+          "Sarantaporo.gr"
+        ]
       },
       {
         "id": "CCCI-0344",
@@ -5743,6 +5755,9 @@
         "sources": [
           "ccci",
           "communityBox"
+        ],
+        "aliases": [
+          "TunapandaNET"
         ]
       },
       {

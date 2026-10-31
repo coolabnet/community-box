@@ -61,6 +61,13 @@ describe('filterNetworks', () => {
     expect(filterNetworks(networks, { query: 'paulo' }).map((n) => n.id)).toEqual(['1']);
   });
 
+  it('matches curated aliases', () => {
+    const aliased: CommunityNetwork[] = [
+      { id: 'a', name: 'Guifi', aliases: ['Guifi.net'], country: 'ES', status: 'unknown', services: [], sources: ['ccci'] },
+    ];
+    expect(filterNetworks(aliased, { query: 'guifi.net' }).map((n) => n.id)).toEqual(['a']);
+  });
+
   it('ignores blank queries and null filters', () => {
     expect(filterNetworks(networks, { query: '   ', country: null, status: null })).toHaveLength(5);
   });

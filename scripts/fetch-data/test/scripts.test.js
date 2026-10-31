@@ -568,6 +568,7 @@ runner.test('CCCI merge matches curated aliases within the same country', async 
   const es = merged.find(n => n.id === 'CCCI-1');
   assert(es.website === 'https://guifi.net' && es.sources.includes('communityBox'), 'alias match did not enrich the CCCI record');
   assert(!merged.find(n => n.id === 'CCCI-2').website, 'alias matched across countries');
+  assert(JSON.stringify(es.aliases) === '["Guifi.net"]', `curated name not kept as alias: ${JSON.stringify(es.aliases)}`);
 });
 
 runner.test('CCCI snapshot summary counts CCCI-sourced networks only', async () => {
