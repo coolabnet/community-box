@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-10-31T18:16:06.348Z",
+  "timestamp": "2026-10-31T19:56:44.265Z",
   "script": "run-all.js",
   "source": "YunoHost-Apps GitHub Organization",
   "url": "https://github.com/YunoHost-Apps",
@@ -4263,7 +4263,7 @@
       "url": "https://github.com/YunoHost-Apps/invoiceninja5_ynh",
       "stars": 12,
       "forks": 7,
-      "updated_at": "2026-10-26T13:25:19Z",
+      "updated_at": "2026-10-31T18:35:31Z",
       "language": "Shell",
       "archived": false
     },
