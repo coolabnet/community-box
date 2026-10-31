@@ -27,7 +27,7 @@ A community can run its own relay. The [relay repository](https://github.com/cha
 - Control of a domain through a DNS provider.
 - A build machine with SSH key access to the server root user.
 
-The setup needs DNS A and AAAA records for the domain. Domains that start with an underscore use self-signed certificates instead of Let's Encrypt.
+The setup needs a DNS A record for the domain. The [setup guide](https://chatmail.at/doc/relay/getting_started.html) encourages IPv6 when it is available, so it also shows an AAAA record. The AAAA record is recommended, not required. Domains that start with an underscore use self-signed certificates instead of Let's Encrypt.
 
 The docs describe an experimental IP-only relay. It needs no domain and can use an IPv4 address on a local network. The [IP-only page](https://chatmail.at/doc/relay/iponly.html) states three limits:
 
@@ -46,7 +46,7 @@ The official docs describe these local features:
 - **Face-to-face contact.** A QR code adds a member in person ([FAQ](https://delta.chat/en/help)).
 - **In-chat apps.** Webxdc apps are zip files that run inside chats ([webxdc FAQ](https://delta.chat/en/help)).
 
-The docs do not describe a LAN-only chat mode. The docs do not say chat works without a relay. No official source in this review confirms offline chat between two Delta Chat apps.
+The docs do not describe a LAN-only chat mode. The docs do not say chat works without a relay. The official docs do not confirm offline chat between two Delta Chat apps. ButterBox describes an offline setup in its own blog, covered below.
 
 ## Options for a Community Box
 
@@ -54,17 +54,20 @@ The docs do not describe a LAN-only chat mode. The docs do not say chat works wi
 |---|---|---|---|
 | (a) Public chatmail relays | Yes | No | Low: install the app and pick a relay |
 | (b) Self-host a chatmail relay | Yes for public use. LAN-only use is undocumented | Yes for the standard setup. The IP-only option is experimental | High: Debian 12 server, DNS, SSH, deploy tools |
-| (c) ButterBox on a Raspberry Pi | No | No | Medium: build or obtain the box |
+| (c) ButterBox on a Raspberry Pi, chat only | No | No | Medium: build or obtain the box |
+| (d) Delta Chat through one ButterBox | No | No | Medium: same box as (c), plus the Delta Chat setup |
 
-Option (a) fits a site with internet access. Option (b) fits a site that can host a server with public DNS.
+Option (a) fits a site with internet access. Option (b) fits a site that can host a server with public DNS. Option (b) includes the experimental IP-only relay. That relay is separate from option (d). Option (d) uses a relay that runs on the box itself.
 
 ButterBox is the offline option in this review. It broadcasts its own Wi-Fi network. [Butter Box](https://likebutter.app/) says it works without internet. Users join a public chatroom or create a private one. The site lists encrypted chat as a feature. It says everything is stored on the box. The [docs](https://likebutter.app/docs) describe the box as a hotspot with local content.
 
-At GG2026, Delta Chat and ButterBox both worked on a local network, according to community feedback. AIR and DashChat promised local-server support. They have no committed funding or roadmap, so they are not recommended yet.
+Option (d) is the concrete offline Delta Chat setup. The [Secure Messenger page](https://likebutter.app/docs/services/secure-messenger) says people on the same Butter Box can send messages to each other without internet. The [ButterBox Delta Chat post](https://likebutter.app/blog/butterbox-deltachat) says the box runs a local MadMail server, an open-source chatmail server. The app on each device is set up with that local server. The post calls a single ButterBox an asynchronous messaging hub. It says the Android app and MadMail ship in the base firmware. It also says desktop and local web support are future plans, and early testing is promising. Treat this as a single-box setup that is not yet complete. This guide has not tested it.
+
+Community feedback from GG2026 says Delta Chat and ButterBox both worked on a local network. This is not verified, so no option is recommended from it. The same feedback says AIR and DashChat plan local-server support and lack committed funding or a roadmap. This is not verified either. The [FIFAfrica 2026 report](https://likebutter.app/blog/fifafrica-2026) describes an offline DashChat demonstration. DashChat ran offline with a Butter Box as its server, and its local message hub was added to Butter Box. The report does not mention AIR. Neither AIR nor DashChat is recommended yet.
 
 ## Privacy Notes
 
-Delta Chat servers see sender and receiver addresses and message size ([FAQ](https://delta.chat/en/help)). Addresses are random by default. All other contact and group data is encrypted on the devices.
+Delta Chat servers see sender and receiver addresses and message size ([FAQ](https://delta.chat/en/help)). Addresses are random by default. All other contact and group data is encrypted on the devices. Relays also see the IP address of each user, because they need it to deliver messages ([FAQ](https://delta.chat/en/help)).
 
 For sensitive use, create a separate profile with a random address. The FAQ recommends this for protection against metadata collection and device seizure.
 
@@ -72,12 +75,11 @@ Relay operators run their own servers. Public relays are run by different groups
 
 The docs do not list message timing as visible to relays. Relays likely see when messages arrive (inferred).
 
-The ButterBox site says only that it has encrypted chat. It has no security page in the sources reviewed.
+**Warning: change the ButterBox default credentials before you deploy it.** The box ships with documented default credentials for three accounts: the OS user, the access point admin, and the chat admin. The Wi-Fi network is open by default, with no password. Anyone nearby can join the network. Anyone who knows the chat admin default can take chat admin. Change all three credentials, and add a Wi-Fi password, before the box serves users. The [ButterBox security guide](https://likebutter.app/docs/security) lists the steps. The [quick start](https://likebutter.app/docs/quick-start) says the Wi-Fi network is open by default and shows how to add a Wi-Fi password in Admin Settings.
 
 ## Open Questions
 
-- Which local setup Delta Chat used at GG2026 is not yet documented. This guide will add it once the demonstrator confirms it.
+- Which local setup Delta Chat used at GG2026 is not confirmed. ButterBox's Delta Chat setup is a likely candidate (inferred).
 - Whether a self-hosted or IP-only relay works with no internet link is unknown. The docs are silent.
-- Whether two Delta Chat apps can chat on a LAN with no relay is unknown (inferred: a relay is needed).
 - Whether Autocrypt v2 has shipped is unknown.
 - ButterBox chat encryption details are unknown. The sources reviewed do not describe them.
