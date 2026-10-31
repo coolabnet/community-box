@@ -18,6 +18,18 @@
           "6+": "6+ usuarios"
         }
       },
+      "accessDevices": {
+        "question": "¿Cómo acceden las personas al contenido del servidor local?",
+        "description": "Seleccione todas las opciones que correspondan",
+        "help": "Esto no cambia la recomendación de hardware. Nos ayuda a sugerir servicios y consejos de configuración que se ajusten a cómo se conectan las personas.",
+        "options": {
+          "smartphones": "Teléfonos inteligentes o celulares",
+          "laptops": "Portátiles",
+          "desktops": "Computadoras de escritorio",
+          "shared": "Dispositivos compartidos (telecentro, cibercafé, laboratorio escolar)"
+        },
+        "continue": "Continuar"
+      },
       "growth": {
         "question": "¿Espera un mayor uso de la computadora compartida en los próximos 2 años?",
         "help": "El crecimiento significa más personas, dispositivos o servicios que usan la computadora compartida con el tiempo, por ejemplo una escuela que agrega clases o más familias que se unen a la red. Si no está seguro, elija “No estoy seguro”: se puntúa igual que el crecimiento moderado.",
@@ -291,6 +303,15 @@
             "beginner": "Principiante",
             "intermediate": "Intermedio",
             "advanced": "Avanzado"
+          }
+        },
+        "accessTips": {
+          "title": "Consejos sobre cómo se conectan las personas",
+          "items": {
+            "smartphones": "Elija servicios con páginas web adaptadas a móviles y pruébelos en los teléfonos que las personas realmente usan.",
+            "laptops": "Los portátiles pueden usar aplicaciones web completas y clientes de sincronización, como el cliente de escritorio de Nextcloud.",
+            "desktops": "Las computadoras de escritorio en un espacio compartido funcionan bien para pantallas más grandes, como editar documentos o navegar por bibliotecas sin conexión.",
+            "shared": "En dispositivos compartidos, use cuentas de usuario separadas, cierre la sesión después de usarlos y evite guardar contraseñas en el navegador."
           }
         }
       }

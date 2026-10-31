@@ -18,6 +18,18 @@
           "6+": "6+ usuários"
         }
       },
+      "accessDevices": {
+        "question": "Como as pessoas acessam o conteúdo no servidor local?",
+        "description": "Selecione todas as opções que se aplicam",
+        "help": "Isso não altera a recomendação de hardware. Ajuda a sugerir serviços e dicas de configuração adequados à forma como as pessoas se conectam.",
+        "options": {
+          "smartphones": "Smartphones ou celulares",
+          "laptops": "Notebooks",
+          "desktops": "Computadores de mesa",
+          "shared": "Dispositivos compartilhados (telecentro, lan house, laboratório escolar)"
+        },
+        "continue": "Continuar"
+      },
       "growth": {
         "question": "Você espera um aumento no uso do computador compartilhado nos próximos 2 anos?",
         "help": "Crescimento significa mais pessoas, dispositivos ou serviços usando o computador compartilhado ao longo do tempo, por exemplo uma escola com mais turmas ou mais famílias entrando na rede. Se não tiver certeza, escolha “Não sei”: ele é pontuado igual ao crescimento moderado.",
@@ -291,6 +303,15 @@
             "beginner": "Iniciante",
             "intermediate": "Intermediário",
             "advanced": "Avançado"
+          }
+        },
+        "accessTips": {
+          "title": "Dicas sobre como as pessoas se conectam",
+          "items": {
+            "smartphones": "Escolha serviços com páginas web adaptadas para celular e teste-os nos telefones que as pessoas realmente usam.",
+            "laptops": "Notebooks podem usar aplicativos web completos e clientes de sincronização, como o cliente de desktop do Nextcloud.",
+            "desktops": "Computadores de mesa em um espaço compartilhado funcionam bem para telas maiores, como editar documentos ou navegar em bibliotecas offline.",
+            "shared": "Em dispositivos compartilhados, use contas de usuário separadas, saia da conta após o uso e evite salvar senhas no navegador."
           }
         }
       }

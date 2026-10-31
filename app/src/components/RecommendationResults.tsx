@@ -33,6 +33,7 @@ import {
   HardDrive,
   Settings,
   Package,
+  Lightbulb,
 } from 'lucide-react';
 
 // Import PDF utilities
@@ -42,6 +43,7 @@ import { copyUrlToClipboard, shareUrl } from '@/utils/statePersistence';
 import { getRecommendations } from '@/utils/recommendations';
 import { normalizeUserAnswers, calculateDeviceScores } from '@/utils/deviceScoring';
 import type {
+  AccessDeviceKey,
   AttributeKey,
   DeviceKey,
   DeviceScore,
@@ -49,6 +51,9 @@ import type {
   ServiceSuggestion,
   OSSuggestion,
 } from '@/types/questionnaire';
+
+// Access device keys in display order, used for the connection tips
+const accessDeviceKeys: AccessDeviceKey[] = ['smartphones', 'laptops', 'desktops', 'shared'];
 
 // Map attribute keys to icons
 const attributeIcons: Record<AttributeKey, ReactNode> = {
@@ -144,6 +149,9 @@ const RecommendationResults = ({
 
     return () => clearTimeout(timer);
   }, [answers]);
+
+  // Connection tips for the devices people use (suggestions only, not scored)
+  const accessTipKeys = accessDeviceKeys.filter(key => answers.accessDevices?.[key]);
 
   // Get the top recommendation
   const topRecommendation = deviceScores[0];
@@ -571,6 +579,27 @@ const RecommendationResults = ({
                   transition={{ delay: 0.65 }}
                   className="space-y-8 mb-8"
                 >
+                  {/* Connection tips Section */}
+                  {accessTipKeys.length > 0 && (
+                    <div className="bg-card rounded-xl border border-border overflow-hidden">
+                      <div className="bg-primary/10 p-4">
+                        <div className="flex items-center gap-3">
+                          <div className="p-2 rounded-lg bg-primary text-primary-foreground">
+                            <Lightbulb className="h-5 w-5" />
+                          </div>
+                          <h3 className="text-lg font-bold">
+                            {t('questionnaire.questions.results.accessTips.title')}
+                          </h3>
+                        </div>
+                      </div>
+                      <ul className="p-4 space-y-3 list-disc pl-10 text-sm">
+                        {accessTipKeys.map(key => (
+                          <li key={key}>{t(`questionnaire.questions.results.accessTips.items.${key}`)}</li>
+                        ))}
+                      </ul>
+                    </div>
+                  )}
+
                   {/* Services Section */}
                   {serviceSuggestions.length > 0 && (
                     <div className="bg-card rounded-xl border border-border overflow-hidden">

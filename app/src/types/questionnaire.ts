@@ -2,11 +2,13 @@ import type { ReactNode } from 'react';
 
 export type PriorityKey = 'easyToUse' | 'lowPower' | 'language' | 'scalable' | 'lowCost';
 export type UsageKey = 'news' | 'files' | 'education' | 'media' | 'other';
+export type AccessDeviceKey = 'smartphones' | 'laptops' | 'desktops' | 'shared';
 export type DeviceKey = 'raspberryPi' | 'zimaBoard' | 'intelNUC' | 'reusedPC';
 export type AttributeKey = 'energy' | 'concurrency' | 'growth' | 'reusable' | 'formatEase' | 'cost';
 
 export type PriorityAllocation = Partial<Record<PriorityKey, number>>;
 export type UsageSelectionValues = Partial<Record<UsageKey, true | string>>;
+export type AccessDeviceValues = Partial<Record<AccessDeviceKey, true>>;
 
 export interface DeviceAttributes {
   key: DeviceKey;
@@ -70,6 +72,7 @@ export interface UserAnswers {
   price?: PriceAnswer;
   points?: PriorityAllocation;
   usage?: UsageSelectionValues;
+  accessDevices?: AccessDeviceValues;
   mainUse?: MainUseAnswer;
   [key: string]: unknown;
 }

@@ -18,6 +18,18 @@
           "6+": "6+ users"
         }
       },
+      "accessDevices": {
+        "question": "How do people access the content on the local server?",
+        "description": "Select all that apply",
+        "help": "This does not change the hardware recommendation. It helps us suggest services and setup tips that suit how people connect.",
+        "options": {
+          "smartphones": "Smartphones or cellphones",
+          "laptops": "Laptops",
+          "desktops": "Desktop computers",
+          "shared": "Shared devices (telecentre, cybercafe, school lab)"
+        },
+        "continue": "Continue"
+      },
       "growth": {
         "question": "Do you expect a growing usage of the shared computer in the next 2 years?",
         "help": "Growth means more people, devices or services using the shared computer over time, for example a school adding classes or more families joining the network. If you are not sure, choose “Not sure”: it is scored the same as moderate growth.",
@@ -291,6 +303,15 @@
             "beginner": "Beginner",
             "intermediate": "Intermediate",
             "advanced": "Advanced"
+          }
+        },
+        "accessTips": {
+          "title": "Tips for how people connect",
+          "items": {
+            "smartphones": "Choose services with mobile-friendly web pages, and test them on the phones people actually use.",
+            "laptops": "Laptops can use full web apps and sync clients, such as Nextcloud desktop.",
+            "desktops": "Desktop computers in a shared space work well for larger screens, like editing documents or browsing offline libraries.",
+            "shared": "On shared devices, use separate user accounts, log out after use, and avoid saving passwords in the browser."
           }
         }
       }
