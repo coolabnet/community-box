@@ -89,15 +89,13 @@ Use this when working several TODO items at once.
 
 ## In review (PRs)
 
-- `T2-1`, `T2-3`, `T2-4`, `T2-5`, `T2-7`, `T2-8` — PR #68, gate SHIP,
-  parked `needs-human-qa` (Q34).
 - `O1` — PR #70, gate SHIP, parked `needs-human-qa` (Q35).
 - `O2` — PR #72, gate SHIP, parked `needs-human-qa` (Q36).
 - `T1-3` — landing explainer, PR #74, gate SHIP, parked `needs-human-qa`
   (Q38).
 - `T3-2`, `T3-12` — ButterBox and Proxmox VE OS entries, PR #76, gate SHIP,
   parked `needs-human-qa` (Q41). `T3-23` BlankOn waits on Q39.
-- `T2-9` — access-devices question, PR #77 (stacked on #68), gate SHIP,
+- `T2-9` — access-devices question, PR #77 (now based on main), gate SHIP,
   parked `needs-human-qa` (Q42).
 
 ## TODO (doable now)
@@ -116,6 +114,11 @@ taxonomy), `#57` taxonomy and PDF sections. `M4` is Phase 2 (#26).
 
 ## Done
 
+- `T2-1`, `T2-3`, `T2-4`, `T2-5`, `T2-7`, `T2-8` — guiding-question help
+  texts, wording and points contrast live 2026-10-31 (PR #68, `58d56e8`),
+  mobile QA passed (Q34). Services title padding fixed. #53 #54 #55 #15
+  closed; #22 stays open for categories (#57 taxonomy). Doc rows Done,
+  item 8 Partial.
 - CI: weekly Monday redeploy from the data-fetch workflow (PR #80), so the
   directory retrieval date and other fetched data stay fresh on the site.
 - `M6` / #27 — Community Networks Map live 2026-10-31 at `/docs/directory`
