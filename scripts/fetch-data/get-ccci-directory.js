@@ -21,6 +21,8 @@ const MIN_VALID_ROWS = 50;
 const MAX_UNMAPPED_COUNTRY_RATIO = 0.05;
 const MAX_NULL_COUNTRY_RATIO = 0.05;
 const MIN_RETAINED_RATIO = 0.8; // valid rows and mapped countries vs the previous snapshot
+const MIN_COLUMN_BASELINE = 20; // a column is guarded only if it had this many networks before
+const MIN_COLUMN_RETAINED_RATIO = 0.5;
 const OUTPUT_PATH = path.resolve(__dirname, '../../research/fetched-data', OUTPUT_FILE);
 
 // Fixed output order; each key maps to a CSV column that must read "Yes".
@@ -403,20 +405,49 @@ function mergeCurated(networks, curated) {
 }
 
 /**
+ * Per-column CCCI network counts: "status" (status not unknown) and each
+ * service key. Only networks sourced from CCCI are counted.
+ * @param {Object[]} networks
+ * @returns {Object<string, number>}
+ */
+function ccciColumnCounts(networks) {
+  const counts = { status: 0 };
+  SERVICE_COLUMNS.forEach(([key]) => { counts[key] = 0; });
+  networks.forEach(network => {
+    if (network.status !== 'unknown') counts.status += 1;
+    network.services.forEach(key => { counts[key] += 1; });
+  });
+  return counts;
+}
+
+/**
+ * Summarize a saved ccci-directory.json for the regression guards.
+ * Country and column counts use CCCI-sourced networks only.
+ * @param {Object} previous - Parsed snapshot file
+ * @returns {{rows: number|null, distinctCountries: number|null, columns: Object|null}}
+ */
+function summarizeSnapshot(previous) {
+  const data = previous && previous.data;
+  const rows = data && data.source && Number.isFinite(data.source.rows) ? data.source.rows : null;
+  const networks = data && Array.isArray(data.networks) ? data.networks : null;
+  const ccci = networks
+    ? networks.filter(n => Array.isArray(n.sources) && n.sources.includes('ccci'))
+    : null;
+  return {
+    rows,
+    distinctCountries: ccci ? new Set(ccci.map(n => n.country).filter(Boolean)).size : null,
+    columns: ccci ? ccciColumnCounts(ccci) : null
+  };
+}
+
+/**
  * Summary of the currently saved snapshot, or null when there is none.
- * @returns {{rows: number|null, distinctCountries: number|null}|null}
+ * @returns {{rows: number|null, distinctCountries: number|null, columns: Object|null}|null}
  */
 function readPreviousSnapshot() {
   if (!fs.existsSync(OUTPUT_PATH)) return null;
   try {
-    const previous = JSON.parse(fs.readFileSync(OUTPUT_PATH, 'utf8'));
-    const data = previous && previous.data;
-    const rows = data && data.source && Number.isFinite(data.source.rows) ? data.source.rows : null;
-    const networks = data && Array.isArray(data.networks) ? data.networks : null;
-    const distinctCountries = networks
-      ? new Set(networks.map(n => n.country).filter(Boolean)).size
-      : null;
-    return { rows, distinctCountries };
+    return summarizeSnapshot(JSON.parse(fs.readFileSync(OUTPUT_PATH, 'utf8')));
   } catch (error) {
     console.warn(`Could not read previous snapshot ${OUTPUT_PATH}: ${error.message}`);
     return null;
@@ -430,7 +461,7 @@ function readPreviousSnapshot() {
  * @param {Object} [options]
  * @param {string} [options.csvText] - CSV text to use instead of downloading (tests)
  * @param {() => Promise<string>} [options.fetchText] - Replaces the HTTP download (tests)
- * @param {{rows: number|null, distinctCountries: number|null}|null} [options.previousSnapshot]
+ * @param {{rows: number|null, distinctCountries: number|null, columns: Object|null}|null} [options.previousSnapshot]
  *   Saved snapshot summary; null skips the 80% checks; default reads the current output file
  * @returns {Promise<Object>} The `data` object for ccci-directory.json
  */
@@ -533,6 +564,21 @@ async function getCcciDirectory(options = {}) {
     );
   }
 
+  if (previousSnapshot && previousSnapshot.columns) {
+    const current = ccciColumnCounts(ccciNetworks);
+    const labels = { status: 'Project status' };
+    SERVICE_COLUMNS.forEach(([key, column]) => { labels[key] = column; });
+    for (const [key, label] of Object.entries(labels)) {
+      const before = previousSnapshot.columns[key];
+      if (before >= MIN_COLUMN_BASELINE && current[key] < MIN_COLUMN_RETAINED_RATIO * before) {
+        throw new Error(
+          `CCCI export column "${label}" fell from ${before} to ${current[key]} CCCI networks ` +
+          `(below ${MIN_COLUMN_RETAINED_RATIO * 100}% of the saved snapshot); export rejected`
+        );
+      }
+    }
+  }
+
   if (ccciNetworks.length < MIN_VALID_ROWS) {
     throw new Error(
       `CCCI export has only ${ccciNetworks.length} valid rows (minimum ${MIN_VALID_ROWS}); existing output kept`
@@ -608,4 +654,4 @@ Examples:
   runScript(fetchCcciDirectory, 'CCCI Directory');
 }
 
-module.exports = { parseCsv, normalizeRows, mergeCurated, getCcciDirectory, fetchCcciDirectory };
+module.exports = { parseCsv, normalizeRows, mergeCurated, getCcciDirectory, fetchCcciDirectory, summarizeSnapshot };

@@ -3,7 +3,7 @@
 const fs = require('fs');
 const path = require('path');
 const { SCRIPTS } = require('../run-all');
-const { parseCsv, normalizeRows, mergeCurated, getCcciDirectory, fetchCcciDirectory } = require('../get-ccci-directory');
+const { parseCsv, normalizeRows, mergeCurated, getCcciDirectory, fetchCcciDirectory, summarizeSnapshot } = require('../get-ccci-directory');
 const { ccciChanged } = require('../ccci-changed');
 
 /**
@@ -503,6 +503,59 @@ runner.test('CCCI save boundary: all countries blank is not saved', async () => 
   const { saved, error } = await runCcciWithCsv(ccciCsv(records));
   assert(error && /no country/.test(error.message), `expected null-country error, got: ${error && error.message}`);
   assert(saved.length === 0, 'save called with blank countries');
+});
+
+// Snapshot with 60 CCCI networks where status and Internet access were populated.
+const fullSnapshot = (overrides = {}) => ({
+  rows: 60,
+  distinctCountries: 1,
+  columns: { status: 60, internet: 60, ...overrides }
+});
+
+runner.test('CCCI column guard: all statuses blank is not saved', async () => {
+  const records = validCcciRecords(60);
+  records.forEach(r => { r['Project status'] = ''; });
+  const { saved, error } = await runCcciWithCsv(ccciCsv(records), fullSnapshot());
+  assert(error && /"Project status" fell from 60 to 0/.test(error.message), `expected status guard, got: ${error && error.message}`);
+  assert(saved.length === 0, 'save called with all statuses blank');
+});
+
+runner.test('CCCI column guard: Internet access blank is not saved', async () => {
+  const records = validCcciRecords(60);
+  records.forEach(r => { r['Internet access'] = ''; });
+  const { saved, error } = await runCcciWithCsv(ccciCsv(records), fullSnapshot());
+  assert(error && /"Internet access" fell from 60 to 0/.test(error.message), `expected internet guard, got: ${error && error.message}`);
+  assert(saved.length === 0, 'save called with Internet access blank');
+});
+
+runner.test('CCCI column guard: moderate change (10% of statuses) still saves', async () => {
+  const records = validCcciRecords(60);
+  for (let i = 0; i < 6; i++) records[i]['Project status'] = ''; // 60 -> 54
+  const { saved, error } = await runCcciWithCsv(ccciCsv(records), fullSnapshot());
+  assert(!error && saved.length === 1, `moderate change should save, got: ${error && error.message}`);
+});
+
+runner.test('CCCI column guard: small baselines are not guarded', async () => {
+  const records = validCcciRecords(60);
+  records.forEach(r => { r['Project status'] = ''; });
+  const { saved, error } = await runCcciWithCsv(ccciCsv(records), fullSnapshot({ status: 19 }));
+  assert(!error && saved.length === 1, `baseline below 20 should not guard: ${error && error.message}`);
+});
+
+runner.test('CCCI snapshot summary counts CCCI-sourced networks only', async () => {
+  const summary = summarizeSnapshot({
+    data: {
+      source: { rows: 3 },
+      networks: [
+        { country: 'KE', status: 'active', services: ['internet'], sources: ['ccci'] },
+        { country: 'UG', status: 'unknown', services: [], sources: ['ccci'] },
+        { country: 'DE', status: 'unknown', services: ['internet'], sources: ['communityBox'] }
+      ]
+    }
+  });
+  assert(summary.rows === 3, 'rows not read');
+  assert(summary.distinctCountries === 2, `CCCI-only countries wrong: ${summary.distinctCountries}`);
+  assert(summary.columns.status === 1 && summary.columns.internet === 1, `CCCI-only columns wrong: ${JSON.stringify(summary.columns)}`);
 });
 
 runner.test('CCCI save boundary: drop in mapped countries versus snapshot is not saved', async () => {
