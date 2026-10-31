@@ -36,7 +36,14 @@ export type PriceAnswer = 'low' | 'medium' | 'high';
 export type MainUseAnswer = 'education' | 'business' | 'personal';
 
 export type ServiceKey = 'nextcloud' | 'jellyfin' | 'moodle' | 'wordpress' | 'kiwix' | 'ubuntumm';
-export type OSKey = 'ubuntuServer' | 'debian' | 'raspbian' | 'truenas' | 'openmediavault';
+export type OSKey =
+  | 'ubuntuServer'
+  | 'debian'
+  | 'raspbian'
+  | 'truenas'
+  | 'openmediavault'
+  | 'butterbox'
+  | 'proxmox';
 
 export type ResourceLinkKind = 'website' | 'docs' | 'guide' | 'source' | 'download';
 
