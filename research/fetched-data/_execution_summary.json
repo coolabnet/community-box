@@ -1,19 +1,19 @@
 {
-  "timestamp": "2026-10-31T11:56:27.960Z",
+  "timestamp": "2026-10-31T12:45:33.501Z",
   "script": "run-all.js",
   "note": "Summary of all data fetching script executions",
   "data": {
-    "execution_time": "2026-10-31T11:56:27.960Z",
-    "total_scripts": 6,
-    "successful": 6,
+    "execution_time": "2026-10-31T12:45:33.501Z",
+    "total_scripts": 7,
+    "successful": 7,
     "failed": 0,
-    "total_duration_ms": 18483,
+    "total_duration_ms": 15854,
     "continue_on_error": true,
     "results": [
       {
         "name": "CapRover UI Translations",
         "success": true,
-        "duration": 406,
+        "duration": 277,
         "result": [
           "ar-EG",
           "de-DE",
@@ -36,7 +36,7 @@
       {
         "name": "CasaOS UI Translations",
         "success": true,
-        "duration": 169,
+        "duration": 106,
         "result": [
           "ca_ES",
           "cs_CZ",
@@ -71,7 +71,7 @@
       {
         "name": "YunoHost Apps",
         "success": true,
-        "duration": 11505,
+        "duration": 11391,
         "result": {
           "count": 1029,
           "apps": [
@@ -11414,7 +11414,7 @@
       {
         "name": "YunoHost Docs Translations",
         "success": true,
-        "duration": 155,
+        "duration": 110,
         "result": [
           "de",
           "docs",
@@ -11431,7 +11431,7 @@
       {
         "name": "YunoHost UI Translations",
         "success": true,
-        "duration": 5888,
+        "duration": 2587,
         "result": [
           {
             "language": "French",
@@ -11838,7 +11838,7 @@
       {
         "name": "Zimaboard Shipping Areas",
         "success": true,
-        "duration": 360,
+        "duration": 342,
         "result": [
           "Argentina",
           "Australia",
@@ -11934,6 +11934,16 @@
           "Zambia",
           "Zimbabwe"
         ]
+      },
+      {
+        "name": "CCCI Directory",
+        "success": true,
+        "duration": 1041,
+        "result": {
+          "rows": 428,
+          "count": 443,
+          "unmatchedCountries": 0
+        }
       }
     ]
   }
