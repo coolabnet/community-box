@@ -95,8 +95,6 @@ Use this when working several TODO items at once.
   (Q38).
 - `T3-2`, `T3-12` — ButterBox and Proxmox VE OS entries, PR #76, gate SHIP,
   parked `needs-human-qa` (Q41). `T3-23` BlankOn waits on Q39.
-- `T2-9` — access-devices question, PR #77 (now based on main), gate SHIP,
-  parked `needs-human-qa` (Q42).
 
 ## TODO (doable now)
 
@@ -114,6 +112,10 @@ taxonomy), `#57` taxonomy and PDF sections. `M4` is Phase 2 (#26).
 
 ## Done
 
+- `T2-9` — access-devices question plus technical-support question
+  (owner-approved), tips only, live 2026-10-31 (PR #77, `c8223f7`), remote QA
+  passed (Q42). Single-choice answers now show a check mark and
+  `aria-pressed`. #56 closed; doc row Done.
 - `T2-1`, `T2-3`, `T2-4`, `T2-5`, `T2-7`, `T2-8` — guiding-question help
   texts, wording and points contrast live 2026-10-31 (PR #68, `58d56e8`),
   mobile QA passed (Q34). Services title padding fixed. #53 #54 #55 #15
