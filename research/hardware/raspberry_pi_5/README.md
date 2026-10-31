@@ -16,7 +16,7 @@ RAM options have changed since the repo research. The current Raspberry Pi produ
 ## Limits
 
 - The comparison calls 4 GB the sweet spot for most community server applications ([models comparison](https://github.com/coolabnet/community-box/blob/main/research/hardware/raspberry_pi_5/rpi-models-comparison.md)).
-- Slower than x86 CPUs for heavy compute, compiling, and video work ([overview](https://github.com/coolabnet/community-box/blob/main/research/hardware/raspberry_pi_5/rpi-overview.md)).
+- Slower than current desktop and mini-PC x86 CPUs (such as the Intel NUC) for heavy compute, compiling, and video work, though faster than older low-power x86 boards ([overview](https://github.com/coolabnet/community-box/blob/main/research/hardware/raspberry_pi_5/rpi-overview.md)).
 - SD cards are slow and wear out. Boot from a USB SSD or NVMe SSD instead ([overview](https://github.com/coolabnet/community-box/blob/main/research/hardware/raspberry_pi_5/rpi-overview.md)).
 - One Gigabit Ethernet port and no built-in redundancy ([overview](https://github.com/coolabnet/community-box/blob/main/research/hardware/raspberry_pi_5/rpi-overview.md)).
 - Sustained load can cause thermal throttling. Use a heatsink or active cooling ([overview](https://github.com/coolabnet/community-box/blob/main/research/hardware/raspberry_pi_5/rpi-overview.md)).
