@@ -21,7 +21,7 @@
       "accessDevices": {
         "question": "How do people access the content on the local server?",
         "description": "Select all that apply",
-        "help": "This does not change the hardware recommendation. It helps us suggest services and setup tips that suit how people connect.",
+        "help": "Your answer only adjusts the connection tips. It does not change the service list.",
         "options": {
           "smartphones": "Smartphones or cellphones",
           "laptops": "Laptops",

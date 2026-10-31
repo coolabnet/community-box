@@ -1,4 +1,4 @@
-import { useState, type ReactNode } from 'react';
+import { useEffect, useRef, useState, type ReactNode } from 'react';
 import { useTranslation } from 'react-i18next';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Button } from '@/components/ui/button';
@@ -41,6 +41,27 @@ const AccessDevicesSelection = ({ onNext, onBack }: AccessDevicesSelectionProps)
 
   const [showSuccessAnimation, setShowSuccessAnimation] = useState(false);
 
+  // Pending delayed advance to the next step; cleared on Back and unmount
+  const advanceTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
+
+  useEffect(() => {
+    return () => {
+      if (advanceTimerRef.current !== null) {
+        clearTimeout(advanceTimerRef.current);
+        advanceTimerRef.current = null;
+      }
+    };
+  }, []);
+
+  const handleBack = () => {
+    if (advanceTimerRef.current !== null) {
+      clearTimeout(advanceTimerRef.current);
+      advanceTimerRef.current = null;
+    }
+    setShowSuccessAnimation(false);
+    onBack?.();
+  };
+
   // Toggle selection for an option
   const toggleOption = (index: number) => {
     setDeviceOptions(prev => {
@@ -55,7 +76,7 @@ const AccessDevicesSelection = ({ onNext, onBack }: AccessDevicesSelectionProps)
 
   // Handle continue button click
   const handleContinue = () => {
-    if (!hasSelection) {
+    if (!hasSelection || advanceTimerRef.current !== null) {
       return;
     }
 
@@ -63,7 +84,9 @@ const AccessDevicesSelection = ({ onNext, onBack }: AccessDevicesSelectionProps)
     setShowSuccessAnimation(true);
 
     // Prepare data for submission
-    setTimeout(() => {
+    advanceTimerRef.current = setTimeout(() => {
+      advanceTimerRef.current = null;
+
       const values = deviceOptions.reduce<AccessDeviceValues>((acc, option) => {
         if (option.selected) {
           acc[option.key] = true;
@@ -103,46 +126,48 @@ const AccessDevicesSelection = ({ onNext, onBack }: AccessDevicesSelectionProps)
         {/* Options grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8">
           {deviceOptions.map((option, index) => (
-            <motion.div
+            <motion.button
+              type="button"
               key={option.key}
+              aria-pressed={option.selected}
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: index * 0.1 + 0.2 }}
               whileHover={{ scale: 1.02 }}
               whileTap={{ scale: 0.98 }}
               className={cn(
-                "relative p-6 rounded-xl border-2 cursor-pointer transition-all",
+                "relative w-full text-left p-6 rounded-xl border-2 cursor-pointer transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 ring-offset-background",
                 option.selected
                   ? "border-primary bg-primary/5 shadow-md"
                   : "border-border bg-card hover:border-primary/30"
               )}
               onClick={() => toggleOption(index)}
             >
-              <div className="flex items-start gap-4">
-                <div className={cn(
-                  "p-3 rounded-lg transition-colors",
+              <span className="flex items-start gap-4">
+                <span className={cn(
+                  "inline-flex p-3 rounded-lg transition-colors",
                   option.selected ? "bg-primary text-primary-foreground" : "bg-muted text-muted-foreground"
                 )}>
                   {option.icon}
-                </div>
+                </span>
 
-                <div className="flex-1">
-                  <h3 className="text-xl font-medium mb-1">
+                <span className="flex-1">
+                  <span className="block text-xl font-medium mb-1">
                     {t(`questionnaire.questions.accessDevices.options.${option.key}`)}
-                  </h3>
-                </div>
+                  </span>
+                </span>
 
                 {/* Selection indicator */}
-                <div className={cn(
+                <span className={cn(
                   "absolute top-4 right-4 h-6 w-6 rounded-full flex items-center justify-center transition-all",
                   option.selected
                     ? "bg-primary text-primary-foreground"
                     : "bg-muted text-muted-foreground"
                 )}>
                   {option.selected && <Check className="h-4 w-4" />}
-                </div>
-              </div>
-            </motion.div>
+                </span>
+              </span>
+            </motion.button>
           ))}
         </div>
 
@@ -159,7 +184,7 @@ const AccessDevicesSelection = ({ onNext, onBack }: AccessDevicesSelectionProps)
           {onBack && (
             <Button
               variant="outline"
-              onClick={onBack}
+              onClick={handleBack}
               className="py-6 text-lg flex-1"
               size="lg"
             >
@@ -169,7 +194,7 @@ const AccessDevicesSelection = ({ onNext, onBack }: AccessDevicesSelectionProps)
           )}
           <Button
             onClick={handleContinue}
-            disabled={!hasSelection}
+            disabled={!hasSelection || showSuccessAnimation}
             className="py-6 text-lg relative overflow-hidden flex-1"
             size="lg"
           >

@@ -21,7 +21,7 @@
       "accessDevices": {
         "question": "Como as pessoas acessam o conteúdo no servidor local?",
         "description": "Selecione todas as opções que se aplicam",
-        "help": "Isso não altera a recomendação de hardware. Ajuda a sugerir serviços e dicas de configuração adequados à forma como as pessoas se conectam.",
+        "help": "Sua resposta só ajusta as dicas de conexão. Ela não altera a lista de serviços.",
         "options": {
           "smartphones": "Smartphones ou celulares",
           "laptops": "Notebooks",
