@@ -1,7 +1,7 @@
 ---
 title: Opciones de expansión
 sourcePath: hardware/zimaboard/zima-expansion-options.md
-sourceHash: 538a84a3e8a13d80
+sourceHash: edc3042376d08aa7
 translatedBy: glm-4.6
 ---
 
@@ -48,9 +48,6 @@ ZimaBoard incluye dos puertos SATA de 6.0 Gb/s que admiten unidades tanto de 2.5
 - **JBOD**: unidades individuales para capacidad máxima
 - **ZFS**: almacenamiento definido por software con funciones avanzadas
 
-*[Imagen: Instalación del cable Y SATA - muestra la conexión a la interfaz de alimentación de ZimaBoard]*
-*[Nota: Imagen no disponible - consulta la documentación oficial de ZimaBoard para fotos de instalación]*
-
 #### Expansión SATA avanzada vía PCIe
 
 **Controladores SATA PCIe:**
@@ -87,9 +84,6 @@ Hay varias tarjetas de expansión SATA PCIe disponibles para ZimaBoard:
 - Agrega múltiples SSD NVMe mediante una sola ranura PCIe
 - Útiles para caché y almacenamiento en niveles
 - Algunas tarjetas incluyen funciones adicionales (puertos de red, etc.)
-
-*[Imagen: Expansión de almacenamiento PCIe - muestra tarjetas M.2 instaladas en la ranura PCIe]*
-*[Nota: Imagen no disponible - las fotos de instalación se pueden encontrar en los foros oficiales de la comunidad de ZimaBoard]*
 
 ## Capacidades de expansión PCIe
 
@@ -140,9 +134,6 @@ Hay varias tarjetas de expansión SATA PCIe disponibles para ZimaBoard:
 - Considera los requisitos de alimentación y la gestión térmica
 - Prueba el rendimiento bajo las cargas de trabajo esperadas
 
-*[Imagen: Expansión de red - muestra tarjetas de red PCIe instaladas]*
-*[Nota: Imagen no disponible - consulta las listas de compatibilidad de hardware para tarjetas compatibles]*
-
 ### Expansión USB
 
 #### Controladores USB PCIe
@@ -185,9 +176,6 @@ Hay varias tarjetas de expansión SATA PCIe disponibles para ZimaBoard:
 - Soportes y bases personalizados impresos en 3D
 - Jaulas de unidades estándar de PC modificadas para ZimaBoard
 - Soluciones de apilamiento estilo NAS
-
-*[Imagen: Soluciones de montaje de unidades - muestra varias opciones de montaje]*
-*[Nota: Imagen no disponible - diseños de impresión 3D disponibles en Thingiverse]*
 
 ### Refrigeración y gestión térmica
 
