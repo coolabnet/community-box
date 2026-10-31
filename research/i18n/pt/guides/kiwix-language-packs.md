@@ -1,5 +1,5 @@
 ---
-title: Kiwix Pacotes de Idiomas
+title: Pacotes de Idiomas do Kiwix
 sourcePath: guides/kiwix-language-packs.md
 sourceHash: 954e4018e548143a
 translatedBy: glm-4.6
