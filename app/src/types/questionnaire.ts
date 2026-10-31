@@ -34,6 +34,7 @@ export type UsersAnswer = '1-2' | '3-5' | '6+';
 export type GrowthAnswer = 'low' | 'medium' | 'high' | 'notSure';
 export type ReuseAnswer = 'yes' | 'no';
 export type FormatAnswer = 'yes' | 'maybe' | 'no';
+export type TechSupportAnswer = 'community' | 'external' | 'no';
 export type PriceAnswer = 'low' | 'medium' | 'high';
 export type MainUseAnswer = 'education' | 'business' | 'personal';
 
@@ -89,6 +90,7 @@ export interface UserAnswers {
   growth?: GrowthAnswer;
   reuse?: ReuseAnswer;
   format?: FormatAnswer;
+  techSupport?: TechSupportAnswer;
   price?: PriceAnswer;
   points?: PriorityAllocation;
   usage?: UsageSelectionValues;

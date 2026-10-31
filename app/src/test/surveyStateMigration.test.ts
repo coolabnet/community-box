@@ -33,10 +33,19 @@ describe('survey state version migration (URL)', () => {
   });
 
   it('maps a legacy results step to the new results index', () => {
-    // Version 1 had results at index 9; version 2 has it at index 10
+    // Version 1 had results at index 9; version 2 has it at index 11
     stubLocation('?step=9&electricity=yes');
 
-    expect(decodeStateFromUrl()?.currentStep).toBe(10);
+    expect(decodeStateFromUrl()?.currentStep).toBe(11);
+  });
+
+  it('maps legacy steps around the techSupport insert point', () => {
+    // Version 1 format (4) stays before techSupport; price (5) moves after it
+    stubLocation('?step=4&format=yes');
+    expect(decodeStateFromUrl()?.currentStep).toBe(5);
+
+    stubLocation('?step=5&format=yes');
+    expect(decodeStateFromUrl()?.currentStep).toBe(7);
   });
 
   it('maps a legacy step at the insert point to the shifted index', () => {
@@ -82,7 +91,7 @@ describe('survey state version migration (localStorage)', () => {
 
     const loaded = loadStateFromStorage();
 
-    expect(loaded?.currentStep).toBe(10);
+    expect(loaded?.currentStep).toBe(11);
     expect(loaded?.answers).toEqual({ mainUse: 'business' });
   });
 

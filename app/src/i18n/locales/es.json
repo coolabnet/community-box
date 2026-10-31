@@ -56,6 +56,15 @@
           "no": "No"
         }
       },
+      "techSupport": {
+        "question": "¿Hay alguien que pueda ayudar a instalar y mantener el servidor?",
+        "help": "Por ejemplo, una persona de la comunidad, un técnico local o una organización aliada. Su respuesta solo ajusta los consejos de instalación. No cambia la recomendación.",
+        "options": {
+          "community": "Sí, alguien de la comunidad",
+          "external": "Sí, alguien de fuera de la comunidad",
+          "no": "Todavía no"
+        }
+      },
       "price": {
         "question": "¿Cuál es su rango de presupuesto?",
         "options": {
@@ -316,6 +325,14 @@
             "beginner": "Principiante",
             "intermediate": "Intermedio",
             "advanced": "Avanzado"
+          }
+        },
+        "supportTips": {
+          "title": "Consejos de instalación y soporte",
+          "items": {
+            "community": "Involucre a esa persona desde el inicio, para que instale el sistema y enseñe a otras personas a mantenerlo funcionando.",
+            "external": "Planifique la instalación para la visita de esa persona y anote cada paso, para que la comunidad pueda mantener el sistema después.",
+            "no": "Empiece por las opciones más fáciles para principiantes y busque una red comunitaria cercana o una organización aliada que pueda ayudar."
           }
         },
         "accessTips": {

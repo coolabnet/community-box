@@ -56,6 +56,15 @@
           "no": "No"
         }
       },
+      "techSupport": {
+        "question": "Is there someone who can help you set up and maintain the server?",
+        "help": "For example, a community member, a local technician or a partner organization. Your answer only adjusts the setup tips. It does not change the recommendation.",
+        "options": {
+          "community": "Yes, someone in the community",
+          "external": "Yes, from outside the community",
+          "no": "No, not yet"
+        }
+      },
       "price": {
         "question": "What is your budget range?",
         "options": {
@@ -316,6 +325,14 @@
             "beginner": "Beginner",
             "intermediate": "Intermediate",
             "advanced": "Advanced"
+          }
+        },
+        "supportTips": {
+          "title": "Tips for setup and support",
+          "items": {
+            "community": "Involve them from the start, so they can install the system and teach others to keep it running.",
+            "external": "Plan the setup around their visit, and write down each step so people in the community can maintain it afterwards.",
+            "no": "Start with the most beginner-friendly options, and look for a nearby community network or partner organization that can help."
           }
         },
         "accessTips": {

@@ -93,6 +93,17 @@ const Questionnaire = () => {
       ],
     },
     {
+      id: 'techSupport',
+      question: t('questionnaire.questions.techSupport.question'),
+      help: <Trans i18nKey="questionnaire.questions.techSupport.help" />,
+      type: 'options',
+      options: [
+        { label: t('questionnaire.questions.techSupport.options.community'), value: 'community' },
+        { label: t('questionnaire.questions.techSupport.options.external'), value: 'external' },
+        { label: t('questionnaire.questions.techSupport.options.no'), value: 'no' },
+      ],
+    },
+    {
       id: 'price',
       question: t('questionnaire.questions.price.question'),
       type: 'options',

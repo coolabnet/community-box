@@ -47,6 +47,15 @@ describe('accessDevices does not affect scoring', () => {
   });
 });
 
+describe('techSupport does not affect scoring', () => {
+  it.each(['community', 'external', 'no'] as const)(
+    'returns identical device scores and recommendations with techSupport=%s',
+    (techSupport) => {
+      expect(scoreFor({ ...baseAnswers, techSupport })).toEqual(scoreFor(baseAnswers));
+    }
+  );
+});
+
 describe('accessDevices state persistence', () => {
   const originalWindow = globalThis.window;
   const originalLocalStorage = globalThis.localStorage;

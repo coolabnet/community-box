@@ -6,12 +6,15 @@
 const STORAGE_KEY = 'community-box-survey-state';
 
 /**
- * Version 2 inserted the accessDevices question at ACCESS_DEVICES_STEP.
- * State without a version was saved by version 1, whose steps at or after
- * that index are shifted by one.
+ * Version 2 inserted the accessDevices and techSupport questions before the
+ * version 1 steps listed in LEGACY_INSERT_STEPS. State without a version was
+ * saved by version 1, so each of its steps shifts by one per insert at or
+ * before it.
  */
 export const SURVEY_STATE_VERSION = 2;
 export const ACCESS_DEVICES_STEP = 2;
+// Version 1 indices: accessDevices before growth (2), techSupport before price (5)
+const LEGACY_INSERT_STEPS = [ACCESS_DEVICES_STEP, 5];
 const URL_VERSION_PARAM = 'v';
 
 // Types
@@ -25,7 +28,9 @@ export interface SurveyState {
  * Map a step saved by an older state version to the current step index
  */
 const migrateStep = (step: number, version: number | undefined): number =>
-  version === undefined && step >= ACCESS_DEVICES_STEP ? step + 1 : step;
+  version === undefined
+    ? step + LEGACY_INSERT_STEPS.filter(insertStep => step >= insertStep).length
+    : step;
 
 /**
  * Encode survey state to URL query parameters

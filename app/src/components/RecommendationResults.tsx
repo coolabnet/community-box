@@ -45,6 +45,7 @@ import { getRecommendations } from '@/utils/recommendations';
 import { normalizeUserAnswers, calculateDeviceScores } from '@/utils/deviceScoring';
 import type {
   AccessDeviceKey,
+  TechSupportAnswer,
   AttributeKey,
   DeviceKey,
   DeviceScore,
@@ -55,6 +56,7 @@ import type {
 
 // Access device keys in display order, used for the connection tips
 const accessDeviceKeys: AccessDeviceKey[] = ['smartphones', 'laptops', 'desktops', 'shared'];
+const techSupportKeys: TechSupportAnswer[] = ['community', 'external', 'no'];
 
 // Map attribute keys to icons
 const attributeIcons: Record<AttributeKey, ReactNode> = {
@@ -153,6 +155,9 @@ const RecommendationResults = ({
 
   // Connection tips for the devices people use (suggestions only, not scored)
   const accessTipKeys = accessDeviceKeys.filter(key => answers.accessDevices?.[key]);
+
+  // Setup tip for the support people have (suggestion only, not scored)
+  const supportTipKey = techSupportKeys.find(key => key === answers.techSupport);
 
   // Get the top recommendation
   const topRecommendation = deviceScores[0];
@@ -598,6 +603,25 @@ const RecommendationResults = ({
                           <li key={key}>{t(`questionnaire.questions.results.accessTips.items.${key}`)}</li>
                         ))}
                       </ul>
+                    </div>
+                  )}
+
+                  {/* Setup support tip Section */}
+                  {supportTipKey && (
+                    <div className="bg-card rounded-xl border border-border overflow-hidden">
+                      <div className="bg-primary/10 p-4">
+                        <div className="flex items-center gap-3">
+                          <div className="p-2 rounded-lg bg-primary text-primary-foreground">
+                            <Lightbulb className="h-5 w-5" />
+                          </div>
+                          <h3 className="text-lg font-bold">
+                            {t('questionnaire.questions.results.supportTips.title')}
+                          </h3>
+                        </div>
+                      </div>
+                      <p className="p-4 text-sm">
+                        {t(`questionnaire.questions.results.supportTips.items.${supportTipKey}`)}
+                      </p>
                     </div>
                   )}
 
