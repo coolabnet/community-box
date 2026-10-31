@@ -35,7 +35,12 @@ Use Balena Etcher for computers, SD cards, and USB drives. Follow the step-by-st
 Router firmware is not written this way. It is installed through the router's own web interface or recovery mode, and the steps depend on the model. Read the [OpenWrt wiki page](https://openwrt.org/toh/start) for your router first.
 
 - **Router on its original (stock) firmware:** install OpenWrt first. Download the factory image for your model from the [OpenWrt Firmware Selector](https://firmware-selector.openwrt.org/) and follow the [OpenWrt first-time installation](https://openwrt.org/docs/guide-quick-start/factory_installation) steps. Check that the router boots and works.
-- **Router already running OpenWrt:** first save its settings: in the OpenWrt web interface (LuCI), open **System > Backup / Flash Firmware** and click **Download backup**. Then get the LibreMesh image for your exact model from the [LibreMesh firmware selector](https://firmware-selector.libremesh.org/). Pick the file marked sysupgrade; its file extension varies by model. On the same page, click **Flash image...** under **Flash new firmware image**, choose the file, and untick **Keep settings and retain the current configuration** so LibreMesh starts from its own defaults. This erases the router's current settings.
+- **Router already running OpenWrt:** upgrade it to LibreMesh. This erases the router's current settings.
+  1. Get the LibreMesh image for your exact model from the [LibreMesh firmware selector](https://firmware-selector.libremesh.org/). Pick the file marked sysupgrade; its file extension varies by model.
+  2. Open the OpenWrt web interface (LuCI) and go to **System > Backup / Flash Firmware**.
+  3. Save the current settings: next to **Download backup**, click **Generate archive** and keep the file.
+  4. Under **Flash new firmware image**, click **Flash image...**, then **Browse…** to choose the LibreMesh file, then **Upload**.
+  5. In the window that opens, untick **Keep settings and retain the current configuration** so LibreMesh starts from its own defaults. Click **Continue** to start flashing. Do not unplug the router until it restarts.
 
 The [LibreMesh getting started page](https://libremesh.org/getting-started.html) describes this flow, including an SSH method. If a router no longer starts, follow the recovery steps on its OpenWrt wiki page.
 
@@ -119,6 +124,7 @@ Fetched 2026-10-30; LibreMesh, OpenWrt, Ubuntu and Raspberry Pi rows rechecked 2
 - https://openwrt.org/toh/start
 - https://openwrt.org/docs/guide-quick-start/factory_installation
 - https://github.com/openwrt/luci/blob/master/modules/luci-mod-system/htdocs/luci-static/resources/view/system/flash.js
+- https://github.com/openwrt/luci/blob/master/modules/luci-base/htdocs/luci-static/resources/ui.js
 - https://libremesh.org/getting-started.html
 - https://raw.githubusercontent.com/libremesh/firmware-selector-openwrt-org/main/www/js/images.js
 - https://downloads.openwrt.org/
