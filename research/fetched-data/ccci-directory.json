@@ -1,12 +1,12 @@
 {
-  "timestamp": "2026-10-31T12:05:30.845Z",
+  "timestamp": "2026-10-31T12:12:08.219Z",
   "script": "get-ccci-directory.js",
   "data": {
     "source": {
       "name": "CCCI directory (Colnodo / APC)",
       "url": "https://app.agenteccci.colnodo.org/explore",
       "exportUrl": "https://app.agenteccci.colnodo.org/explore/export",
-      "retrievedAt": "2026-10-31T12:05:29.060Z",
+      "retrievedAt": "2026-10-31T12:12:06.454Z",
       "rows": 428
     },
     "curatedSource": "research/results/community-directory.curated.json",
@@ -4804,10 +4804,7 @@
           "ccci",
           "communityBox"
         ],
-        "website": "https://rhizomatica.org",
-        "aliases": [
-          "Rhizomatica"
-        ]
+        "website": "https://rhizomatica.org"
       },
       {
         "id": "CCCI-0333",
@@ -4957,10 +4954,7 @@
           "ccci",
           "communityBox"
         ],
-        "website": "https://sarantaporo.gr",
-        "aliases": [
-          "Sarantaporo.gr"
-        ]
+        "website": "https://sarantaporo.gr"
       },
       {
         "id": "CCCI-0344",
@@ -5755,9 +5749,6 @@
         "sources": [
           "ccci",
           "communityBox"
-        ],
-        "aliases": [
-          "TunapandaNET"
         ]
       },
       {

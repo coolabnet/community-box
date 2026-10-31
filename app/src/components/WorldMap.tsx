@@ -227,7 +227,7 @@ export default function WorldMap({ counts, selected, onSelect }: WorldMapProps) 
   const gestureRef = useRef({ startX: 0, startY: 0, moved: false, lastDistance: 0, lastMidX: 0, lastMidY: 0 });
   const draggedRef = useRef(false);
   const refocusRef = useRef<string | null>(null);
-  // View before an ocean click reset it, so a double-click zooms from where the user was.
+  // View before a click moved it, so a double-click zooms from where the user was.
   const preClickRef = useRef<ViewBox | null>(null);
 
   const bounds = useMemo<MapBounds>(
@@ -398,6 +398,13 @@ export default function WorldMap({ counts, selected, onSelect }: WorldMapProps) 
         lastMidY: 0,
       };
       draggedRef.current = false;
+    } else if (pointersRef.current.size === 2) {
+      // Start the pinch from here, so its first movement already zooms.
+      const [a, b] = [...pointersRef.current.values()];
+      const gesture = gestureRef.current;
+      gesture.lastDistance = Math.hypot(a.x - b.x, a.y - b.y);
+      gesture.lastMidX = (a.x + b.x) / 2;
+      gesture.lastMidY = (a.y + b.y) / 2;
     }
   };
 
@@ -488,13 +495,9 @@ export default function WorldMap({ counts, selected, onSelect }: WorldMapProps) 
     if (event.detail > 1) return; // The second click of a double-click only zooms.
     const target = (event.target as Element).closest('[data-code]');
     const code = target?.getAttribute('data-code');
-    if (code && counts[code] > 0) {
-      preClickRef.current = null;
-      toggle(code);
-    } else {
-      preClickRef.current = viewRef.current;
-      showWorld();
-    }
+    preClickRef.current = viewRef.current;
+    if (code && counts[code] > 0) toggle(code);
+    else showWorld();
   };
 
   const handleDoubleClick = (event: MouseEvent<SVGSVGElement>) => {

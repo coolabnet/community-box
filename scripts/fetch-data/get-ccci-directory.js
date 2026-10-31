@@ -350,6 +350,11 @@ function normalizeRows(rows) {
  * @param {Object|Object[]} curated - Curated file content or its networks array
  * @returns {{networks: Object[], matched: number, added: number}}
  */
+// Same folding as normalizeText in app/src/utils/communityDirectory.ts
+function searchKey(value) {
+  return String(value).normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase().trim();
+}
+
 function mergeCurated(networks, curated) {
   const list = Array.isArray(curated) ? curated : ((curated && curated.networks) || []);
   const index = new Map();
@@ -381,8 +386,8 @@ function mergeCurated(networks, curated) {
       matched += 1;
       if (!hit.sources.includes('communityBox')) hit.sources.push('communityBox');
       if (!hit.website && website) hit.website = website;
-      // Keep the curated spelling searchable when it differs from the CCCI name
-      if (nameKey(name) !== nameKey(hit.name)) hit.aliases = (hit.aliases || []).concat(name);
+      // Keep the curated spelling searchable when the app search would not find it in the CCCI name
+      if (!searchKey(hit.name).includes(searchKey(name))) hit.aliases = (hit.aliases || []).concat(name);
       return;
     }
 

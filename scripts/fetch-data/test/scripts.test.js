@@ -361,6 +361,7 @@ runner.test('CCCI merge dedupes accent/punctuation-insensitive and adds website 
   assert(ninux.website === 'http://ninux.org' && ninux.sources[0] === 'communityBox', 'curated website/source wrong');
   const bad = merged.find(n => n.name === 'Bad Site');
   assert(bad.website === undefined, 'non-http website kept');
+  assert(JSON.stringify(sar.aliases) === '["Sarantaporo GR"]', `curated spelling not searchable: ${JSON.stringify(sar.aliases)}`);
 });
 
 // CSV fixture builder: every row gets exactly one value per header column.
