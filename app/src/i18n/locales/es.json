@@ -445,11 +445,11 @@
       "whatTitle": "¿Qué es una Caja Comunitaria?",
       "whatBody": "Una Caja Comunitaria es un equipo de cómputo en la comunidad que aloja servicios y aplicaciones locales o offline-first, como compartir archivos, sitios web locales, bibliotecas sin conexión, multimedia y plataformas de aprendizaje. Las personas pueden acceder a ella por la red local, incluso sin internet.",
       "toolTitle": "¿Qué hace esta herramienta?",
-      "toolBody": "Hace 9 preguntas cortas sobre tu comunidad, como electricidad, número de usuarios y uso principal. Después recomienda hardware, un sistema operativo y servicios, además de guías para seguir. Puedes exportar el resultado en PDF. Toma unos minutos. Tus respuestas se quedan en tu navegador y no se suben a ningún servidor.",
+      "toolBody": "Hace 9 preguntas cortas sobre tu comunidad, como electricidad, número de usuarios y uso principal. Después recomienda hardware, un sistema operativo y servicios, además de guías para seguir. Puedes guardar la recomendación de hardware y tus respuestas en PDF. Toma unos minutos. La herramienta no tiene cuentas ni base de datos: tus respuestas se guardan en tu navegador y en la dirección de la página, así que quien reciba el enlace puede verlas.",
       "canTitle": "Qué puede y qué no puede hacer",
       "canBody": "Puede sugerir una configuración inicial y enlazar guías útiles. No puede comprar ni instalar nada por ti, reemplazar la ayuda técnica local ni garantizar resultados. Alguien debe configurar y mantener la caja.",
       "helpTitle": "¿Dónde encuentro ayuda?",
-      "helpBody": "Abre las <guides>Guías de inicio rápido</guides> desde el menú. Para encontrar redes cerca de ti, consulta el <directory>directorio comunitario</directory>."
+      "helpBody": "Consulta las <guides>guías</guides> para obtener ayuda con la configuración. Para encontrar redes cerca de ti, consulta el <directory>directorio comunitario</directory>."
     }
   }
 }
