@@ -44,7 +44,7 @@ Memory need grows with model size. A device with 2 GB of RAM may run tiny or bas
 
 ## Hardware Tiers
 
-We found only one cited benchmark on a small board. It is a whisper.cpp results page, with times in milliseconds ([whisper.cpp issue 89](https://github.com/ggml-org/whisper.cpp/issues/89)). The page does not state the length of the audio clip. Treat all times below as relative only.
+We found only one cited benchmark on a small board. It is a whisper.cpp results page, with times in milliseconds ([whisper.cpp issue 89](https://github.com/ggml-org/whisper.cpp/issues/89)). The page does not state the length of the audio clip. The whisper.cpp bench tool times only the encoder, on random data, not a full transcription of real audio ([bench README](https://github.com/ggml-org/whisper.cpp/blob/master/examples/bench/README.md)). Treat all times below as relative only, and do not read them as full transcription time.
 
 - **Raspberry Pi 5:** no benchmark was found for this board. The only Pi row is a Raspberry Pi 4. Its encode time was about 13.8 seconds for tiny and about 30.6 seconds for base. (inferred for Pi 5: expect results at least as good as Pi 4, but test it)
 - **ZimaBoard and Intel N-series:** no benchmark was found for these boards. The page has no N-series rows. Test before you plan on them.

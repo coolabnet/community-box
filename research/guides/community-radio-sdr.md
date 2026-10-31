@@ -28,12 +28,16 @@ Meshtastic is an open-source project that runs on LoRa radios. Its [documentatio
 
 - A message payload is at most 239 bytes. The client limits messages to about 200 bytes.
 - Each relay reduces the hop limit by one. A node with hop limit 0 does not repeat the message.
-- A client app is still needed. It connects to the node by Bluetooth, Wi-Fi, Ethernet, or serial.
+- A client app is usually needed. It connects to the node by Bluetooth, Wi-Fi, Ethernet, or serial. Some devices have an on-device screen UI instead ([Meshtastic device UI](https://meshtastic.org/docs/configuration/device-uis/meshtasticui/)).
 - Internet is optional. It is used only for MQTT, which connects a node to the internet.
 
 The firmware repository lists a GPL-3.0 license ([meshtastic/firmware](https://github.com/meshtastic/firmware)).
 
-This fits small text messages and sensor readings. It does not fit photos, video, or large files. Keep each message short and fixed in form. For example, a water reading might follow this pattern: site code, date, time, reading, and reader initials. Use the same pattern each time so that the receiver can parse it by hand.
+This fits small text messages and sensor readings. It does not fit photos, video, or large files. Keep each message short and fixed in form, so that the receiver can parse it by hand.
+
+Privacy warning: the default (LongFast) channel uses a publicly known key, so anyone with a Meshtastic radio can read messages on it. Do not send names, initials, or locations on the default channel. Use a private channel with its own key. Even on a private channel, packet metadata such as the sender node ID, timing, and hop count is visible to anyone who receives the packets ([Meshtastic encryption](https://meshtastic.org/docs/overview/encryption/)).
+
+On a private channel, a water reading might follow this pattern: site code, date, time, reading, and reader initials. Use the same pattern each time.
 
 The overview does not name supported boards. This note does not recommend one.
 
@@ -75,5 +79,7 @@ Fetched 2026-10-30.
 - https://lora-alliance.org/about-lorawan/ (LoRa and LoRaWAN, unlicensed bands)
 - https://meshtastic.org/docs/ (Meshtastic overview, no phone needed for mesh messages)
 - https://meshtastic.org/docs/overview/ (payload size, hop limit, client connection, MQTT is optional)
+- https://meshtastic.org/docs/overview/encryption/ (default channel key is public; private channels expose packet metadata)
+- https://meshtastic.org/docs/configuration/device-uis/meshtasticui/ (on-device screen UI on some devices)
 - https://github.com/meshtastic/firmware (GPL-3.0 license)
 - https://www.edpb.europa.eu/sites/default/files/files/file1/edpb_guidelines_201903_video_devices_en_0.pdf (warning signs, first layer information, storage limits)

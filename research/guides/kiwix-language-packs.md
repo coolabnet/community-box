@@ -26,11 +26,11 @@ The raw file listing is at [download.kiwix.org](https://lb.download.kiwix.org/zi
 
 Each Wikipedia language has up to three variants in the file listing: nopic, mini, and maxi.
 
-- **nopic** keeps the articles and drops most pictures. It is the usual choice for offline use.
-- **mini** seems to hold only article intros. (inferred from the file sizes)
-- **maxi** is the largest. It holds the most content and pictures.
+The Kiwix FAQ defines them ([Kiwix FAQ: what mini, nopic and maxi mean](https://get.kiwix.org/en/faq-items/what-do-mini-nopic-and-maxi-mean-in-the-wikipedia-zim-files/)):
 
-We could not confirm these meanings on a Kiwix page. Treat the descriptions above as inferred until you check the Kiwix documentation.
+- **maxi** is the default full version. It holds full articles with images. (the FAQ says nopic drops images, so maxi keeps them)
+- **nopic** holds full articles without images. It is the usual choice for offline use.
+- **mini** holds only the introduction of each article plus the infobox.
 
 ## Example Sizes
 
@@ -50,8 +50,9 @@ We did not check packs for Asian languages. See Open Questions.
 
 ## Planning Storage
 
-- Start with the file size, then add free space for the reader and for copying. Plan for about 20 percent extra. (inferred; test on your device)
-- Size the disk for all packs you plan to keep. Example: Spanish nopic plus Portuguese maxi is about 31 GB before extra space.
+- Size the disk for all packs you plan to keep, plus the largest replacement file you download alongside them during an update. The old file stays until the new one is checked, so both exist at once.
+- Example: Spanish nopic (12 GB) plus Portuguese maxi (19 GB) is 31 GB. Updating the 19 GB Portuguese maxi pack means about 50 GB during the update (31 GB retained plus a 19 GB replacement). (arithmetic from the example sizes above)
+- Add some free space on top for the reader's own files and for copying. This margin is not tested. (inferred; test on your device)
 - Copy files over your local network when you can. Download once on a fast link, then share. See the external storage guide in this folder for disk choices.
 
 ## Updating Packs
@@ -68,7 +69,6 @@ Using Wikipedia text to train or tune a local AI model is a different topic. It 
 ## Open Questions
 
 - The exact catalog filter steps on library.kiwix.org. (inferred; the site blocked automated access)
-- The meaning of nopic, mini, and maxi on an official Kiwix page. (inferred)
 - Whether packs exist for Asian languages used in your region. Not checked.
 - Whether the download listing offers checksum files for verifying copies. Not checked.
 - Whether the Kiwix reader runs well on your target device. Not tested.
