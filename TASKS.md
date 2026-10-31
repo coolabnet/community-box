@@ -89,7 +89,6 @@ Use this when working several TODO items at once.
 
 ## In review (PRs)
 
-- `O1` — PR #70, gate SHIP, parked `needs-human-qa` (Q35).
 - `O2` — PR #72, gate SHIP, parked `needs-human-qa` (Q36).
 - `T1-3` — landing explainer, PR #74, gate SHIP, parked `needs-human-qa`
   (Q38).
@@ -112,6 +111,10 @@ taxonomy), `#57` taxonomy and PDF sections. `M4` is Phase 2 (#26).
 
 ## Done
 
+- `O1` — router and networks-directory names unified on docs home and menu,
+  broken image placeholders removed from all guides, live 2026-10-31 (PR #70,
+  `f08d309`). Browser QA by junior passed en/pt/es (Q35). #16 #66 closed; doc
+  note added under Other aspects 1.
 - `T2-9` — access-devices question plus technical-support question
   (owner-approved), tips only, live 2026-10-31 (PR #77, `c8223f7`), remote QA
   passed (Q42). Single-choice answers now show a check mark and
