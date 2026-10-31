@@ -354,7 +354,8 @@
       "libremeshOverview": "Visão Geral do LibreMesh",
       "meshBasics": "Noções Básicas de Redes em Malha",
       "routerSetup": "Configuração do Roteador",
-      "globalNetworks": "Redes Comunitárias Globais"
+      "globalNetworks": "Redes Comunitárias Globais",
+      "communityMap": "Mapa das Redes Comunitárias"
     },
     "cards": {
       "paper": {
@@ -430,7 +431,8 @@
     "caseStudies": "📖 Estudos de Caso",
     "solarCalculator": "☀️ Calculadora Solar",
     "community": "🌍 Comunidade",
-    "about": "ℹ️ Sobre"
+    "about": "ℹ️ Sobre",
+    "communityMap": "Mapa das Redes Comunitárias"
   },
   "landing": {
     "title": "Caixa Comunitária",
@@ -439,5 +441,67 @@
     "browseGuides": "Ver Guias",
     "altHeroImage": "Colaboração comunitária",
     "footer": "Projeto Caixa Comunitária"
+  },
+  "directory": {
+    "title": "Mapa das Redes Comunitárias",
+    "intro": "Explore as redes comunitárias (RCs) ao redor do mundo. Países com preenchimento colorido têm pelo menos uma rede listada: selecione um país no mapa ou nos filtros para ver suas redes.",
+    "source": "Dados do diretório CCCI, obtidos em {{date}}",
+    "curatedNote": "O Community Box também mantém uma lista curada de redes, a partir de sua própria pesquisa.",
+    "loading": "Carregando redes comunitárias…",
+    "error": "Não foi possível carregar o mapa das redes comunitárias. Tente novamente mais tarde.",
+    "map": {
+      "label": "Mapa-múndi das redes comunitárias",
+      "legendTitle": "Redes por país",
+      "tier1": "1",
+      "tier2": "2–5",
+      "tier3": "6–20",
+      "tier4": "21+",
+      "smallIslandsNote": "Ilhas pequenas são marcadas pela bolha com o número de redes. Passe o cursor ou selecione um país para ver o nome."
+    },
+    "networkCount_one": "{{count}} rede",
+    "networkCount_other": "{{count}} redes",
+    "results_one": "{{count}} rede encontrada",
+    "results_other": "{{count}} redes encontradas",
+    "filters": {
+      "country": "País",
+      "allCountries": "Todos os países",
+      "status": "Situação",
+      "allStatuses": "Todas as situações",
+      "search": "Buscar por nome",
+      "searchPlaceholder": "Digite o nome de uma rede…",
+      "clear": "Limpar filtros"
+    },
+    "showMore": "Mostrar mais",
+    "empty": "Nenhuma rede corresponde a esses filtros.",
+    "website": "Site",
+    "backgroundLink": "Leia o contexto sobre redes comunitárias",
+    "sources": {
+      "ccci": "Diretório CCCI",
+      "communityBox": "Pesquisa Community Box"
+    },
+    "status": {
+      "active": "Ativa",
+      "inactive": "Inativa",
+      "inProgress": "Em andamento",
+      "dormant": "Em hibernação",
+      "pilot": "Piloto",
+      "planned": "Planejada",
+      "ceased": "Encerrada",
+      "unknown": "Situação não informada"
+    },
+    "services": {
+      "internet": "Internet",
+      "voice": "Voz",
+      "offline": "Conteúdo offline",
+      "localServices": "Serviços locais",
+      "financial": "Serviços financeiros",
+      "support": "Suporte técnico",
+      "literacy": "Alfabetização digital",
+      "radio": "Rádio comunitária",
+      "schools": "Escolas",
+      "cybercafe": "Cibercafé",
+      "environmental": "Monitoramento ambiental",
+      "charging": "Carregamento de dispositivos"
+    }
   }
 }
