@@ -36,7 +36,9 @@ The recommendation tool suggests up to 4 operating systems. It uses three answer
 
 ## Notes
 
-- **Proxmox VE** runs virtual machines and containers. It needs a 64-bit x86 (amd64) processor with hardware virtualization turned on. Its 2 GB minimum RAM covers only the host; each virtual machine needs its own memory. ZimaBoard is not listed.
-- **ButterBox** is an offline server image from the Guardian Project for Raspberry Pi. It runs its own Wi-Fi network and works without internet access.
+- **Proxmox VE** runs virtual machines and containers. It needs a 64-bit x86 (amd64) processor with hardware virtualization turned on. Its 2 GB minimum RAM covers only the host; each virtual machine needs its own memory. Proxmox also has an arm64 build for some ARM servers, but it does not support Raspberry Pi. ZimaBoard is not listed.
+- **ButterBox** is an offline server image from the Guardian Project for Raspberry Pi Zero 2 W and Pi 4. It runs its own Wi-Fi network and works without internet access.
 
 The rules live in `getOSSuggestions` in `app/src/utils/recommendations.ts`. The tests in `app/src/test/osSuggestions.test.ts` check each example above.
+
+See [Download Images](../guides/download-images.md) for the official download link of each system.

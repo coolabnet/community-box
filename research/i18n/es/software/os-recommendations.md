@@ -1,13 +1,13 @@
 ---
 title: Cómo la herramienta elige un sistema operativo
 sourcePath: software/os-recommendations.md
-sourceHash: f7eccefa1e50b07a
+sourceHash: 6397ff7216c900d3
 translatedBy: glm-4.6
 ---
 
 # Cómo la herramienta elige un sistema operativo
 
-La herramienta de recomendación sugiere hasta 4 sistemas operativos. Utiliza tres respuestas: el uso principal del servidor, si puedes formatear (borrar y reinstalar) el dispositivo, y la recomendación principal de hardware.
+La herramienta de recomendación sugiere hasta 4 sistemas operativos. Utiliza tres respuestas: el uso principal del servidor, si puedes formatear (borrar y reinstalar) el dispositivo y la recomendación principal de hardware.
 
 ## Pasos
 
@@ -31,15 +31,17 @@ La herramienta de recomendación sugiere hasta 4 sistemas operativos. Utiliza tr
 
 ## Ejemplos
 
-- **Negocio, Intel NUC o PC reutilizada, puedes formatear:** Proxmox VE, Ubuntu Server, Debian, TrueNAS. OpenMediaVault se descarta debido al límite de 4.
-- **Negocio, Intel NUC o PC reutilizada, no estás seguro del formateo:** Ubuntu Server, Debian, TrueNAS, OpenMediaVault.
+- **Negocio, Intel NUC o PC reutilizada, puedes formatear:** Proxmox VE, Ubuntu Server, Debian, TrueNAS. OpenMediaVault queda fuera por el límite de 4.
+- **Negocio, Intel NUC o PC reutilizada, no estás seguro sobre el formateo:** Ubuntu Server, Debian, TrueNAS, OpenMediaVault.
 - **Negocio, Intel NUC o PC reutilizada, no puedes formatear:** Ubuntu Server, OpenMediaVault.
 - **Educación, Raspberry Pi:** Raspberry Pi OS, OpenMediaVault, ButterBox.
 - **Personal, Raspberry Pi, no puedes formatear:** Raspberry Pi OS, ButterBox.
 
 ## Notas
 
-- **Proxmox VE** ejecuta máquinas virtuales y contenedores. Requiere un procesador x86 de 64 bits (amd64) con la virtualización por hardware activada. Sus 2 GB mínimos de RAM solo cubren el host; cada máquina virtual necesita su propia memoria. ZimaBoard no está en la lista.
-- **ButterBox** es una imagen de servidor fuera de línea del Guardian Project para Raspberry Pi. Crea su propia red Wi-Fi y funciona sin acceso a internet.
+- **Proxmox VE** ejecuta máquinas virtuales y contenedores. Requiere un procesador x86 de 64 bits (amd64) con virtualización por hardware activada. Sus 2 GB mínimos de RAM cubren solo el host; cada máquina virtual necesita su propia memoria. Proxmox también tiene una compilación arm64 para algunos servidores ARM, pero no es compatible con Raspberry Pi. ZimaBoard no está en la lista.
+- **ButterBox** es una imagen de servidor sin conexión del Guardian Project para Raspberry Pi Zero 2 W y Pi 4. Crea su propia red Wi-Fi y funciona sin acceso a internet.
 
-Las reglas se encuentran en `getOSSuggestions` en `app/src/utils/recommendations.ts`. Las pruebas en `app/src/test/osSuggestions.test.ts` verifican cada uno de los ejemplos anteriores.
+Las reglas están en `getOSSuggestions` en `app/src/utils/recommendations.ts`. Las pruebas en `app/src/test/osSuggestions.test.ts` verifican cada ejemplo anterior.
+
+Consulta [Descargar imágenes](../guides/download-images.md) para el enlace oficial de descarga de cada sistema.

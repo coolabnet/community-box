@@ -322,7 +322,7 @@
             },
             "butterbox": {
               "name": "ButterBox",
-              "description": "Caixa de compartilhamento offline que cria a própria rede Wi-Fi e funciona sem acesso à internet"
+              "description": "Caixa de compartilhamento offline para Raspberry Pi Zero 2 W ou Pi 4 que cria a própria rede Wi-Fi e funciona sem acesso à internet"
             },
             "proxmox": {
               "name": "Proxmox VE",

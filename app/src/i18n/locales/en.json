@@ -322,7 +322,7 @@
             },
             "butterbox": {
               "name": "ButterBox",
-              "description": "Offline sharing box that runs its own Wi-Fi network and works without internet access"
+              "description": "Offline sharing box for Raspberry Pi Zero 2 W or Pi 4 that runs its own Wi-Fi network and works without internet access"
             },
             "proxmox": {
               "name": "Proxmox VE",

@@ -322,7 +322,7 @@
             },
             "butterbox": {
               "name": "ButterBox",
-              "description": "Caja de intercambio sin conexión que crea su propia red Wi-Fi y funciona sin acceso a internet"
+              "description": "Caja de intercambio sin conexión para Raspberry Pi Zero 2 W o Pi 4 que crea su propia red Wi-Fi y funciona sin acceso a internet"
             },
             "proxmox": {
               "name": "Proxmox VE",
