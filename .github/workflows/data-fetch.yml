@@ -53,9 +53,18 @@ jobs:
             git push
           fi
 
-      - name: Deploy page after CCCI directory refresh
+      - name: Check for weekly redeploy
+        id: weekly
+        # Monday scheduled runs redeploy even without a CCCI change, so the
+        # retrieval date and other fetched data on the site are at most a week old.
+        run: |
+          if [ "${{ github.event_name }}" = "schedule" ] && [ "$(date -u +%u)" = "1" ]; then
+            echo "redeploy=true" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Deploy page after CCCI directory refresh or weekly
         # Pushes made with GITHUB_TOKEN do not trigger deploy-page.yml, so dispatch it explicitly.
-        if: steps.commit.outputs.ccci_changed == 'true'
+        if: steps.commit.outputs.ccci_changed == 'true' || steps.weekly.outputs.redeploy == 'true'
         run: gh workflow run deploy-page.yml --ref main
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}

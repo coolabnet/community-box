@@ -56,11 +56,14 @@ npm test
    - Only translatable/structured fields are kept: id, name, ISO 3166-1 alpha-2 country, status, Yes-only service keys, website (http(s) only) and sources (`ccci`, `communityBox`). Free-text columns (goals, nature, category, region, area type) are dropped.
    - Safety: if the download fails, the header lacks ID/Name/Country, or fewer than 50 valid rows parse, the script throws and leaves the existing output unchanged.
    - Country names not in the explicit mapping are set to `null` and listed in `unmatchedCountries` (with a console warning). `Global` and empty countries are `null` without being listed.
+   - Curated entries may list `aliases` (other spellings of the same network in the same country) so they merge into the CCCI record instead of appearing twice.
+   - Publishing: the site bundles this file at build time. The daily `Fetch Latest Data` workflow dispatches a deploy when the directory changes, and every Monday regardless.
+   - Republishing the CCCI export was authorized by Colnodo / APC on 2026-10-31.
 
    Sample run (abridged):
    ```
    $ node get-ccci-directory.js
-   CCCI rows: 428, networks: 428, curated matched: 2, curated added: 20, unmatched countries: 0
+   CCCI rows: 428, networks: 428, curated matched: 7, curated added: 15, unmatched countries: 0
    Saved data items to: .../research/fetched-data/ccci-directory.json
    ✅ CCCI Directory completed in 1729ms
    ```
