@@ -550,6 +550,26 @@ runner.test('CCCI column guard: emptied sparse column is not saved', async () =>
   assert(saved.length === 0, 'save called with an emptied sparse column');
 });
 
+runner.test('CCCI column guard: emptied sparse service column is not saved', async () => {
+  const records = validCcciRecords(60); // no Environmental entries in the export
+  const { saved, error } = await runCcciWithCsv(ccciCsv(records), fullSnapshot({ environmental: 11 }));
+  assert(error && /"Environmental" fell from 11 to 0/.test(error.message), `expected emptied service error, got: ${error && error.message}`);
+  assert(saved.length === 0, 'save called with an emptied sparse service column');
+});
+
+runner.test('CCCI merge matches curated aliases within the same country', async () => {
+  const { networks } = normalizeRows([
+    ccciRecord({ ID: 'CCCI-1', Name: 'Guifi', Country: 'Spain', 'Project status': 'Active' }),
+    ccciRecord({ ID: 'CCCI-2', Name: 'Guifi', Country: 'Kenya' })
+  ]);
+  const curated = { networks: [{ name: 'Guifi.net', aliases: ['Guifi'], country: 'ES', website: 'https://guifi.net' }] };
+  const { networks: merged, matched, added } = mergeCurated(networks, curated);
+  assert(matched === 1 && added === 0 && merged.length === 2, `alias not matched: matched=${matched} added=${added}`);
+  const es = merged.find(n => n.id === 'CCCI-1');
+  assert(es.website === 'https://guifi.net' && es.sources.includes('communityBox'), 'alias match did not enrich the CCCI record');
+  assert(!merged.find(n => n.id === 'CCCI-2').website, 'alias matched across countries');
+});
+
 runner.test('CCCI snapshot summary counts CCCI-sourced networks only', async () => {
   const summary = summarizeSnapshot({
     data: {

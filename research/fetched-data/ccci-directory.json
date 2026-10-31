@@ -1,16 +1,16 @@
 {
-  "timestamp": "2026-10-31T10:45:08.766Z",
+  "timestamp": "2026-10-31T11:56:51.481Z",
   "script": "get-ccci-directory.js",
   "data": {
     "source": {
       "name": "CCCI directory (Colnodo / APC)",
       "url": "https://app.agenteccci.colnodo.org/explore",
       "exportUrl": "https://app.agenteccci.colnodo.org/explore/export",
-      "retrievedAt": "2026-10-31T10:45:06.834Z",
+      "retrievedAt": "2026-10-31T11:56:50.254Z",
       "rows": 428
     },
     "curatedSource": "research/results/community-directory.curated.json",
-    "count": 448,
+    "count": 443,
     "unmatchedCountries": [],
     "networks": [
       {
@@ -965,8 +965,10 @@
         "status": "unknown",
         "services": [],
         "sources": [
-          "ccci"
-        ]
+          "ccci",
+          "communityBox"
+        ],
+        "website": "https://portalsemporteiras.github.io"
       },
       {
         "id": "CCCI-0072",
@@ -1423,19 +1425,10 @@
         "status": "unknown",
         "services": [],
         "sources": [
-          "ccci"
-        ]
-      },
-      {
-        "id": "cb-guifi-net",
-        "name": "Guifi.net",
-        "country": "ES",
-        "status": "unknown",
-        "services": [],
-        "website": "https://guifi.net",
-        "sources": [
+          "ccci",
           "communityBox"
-        ]
+        ],
+        "website": "https://guifi.net"
       },
       {
         "id": "CCCI-0107",
@@ -4656,17 +4649,6 @@
         ]
       },
       {
-        "id": "cb-portal-sem-porteiras-psp",
-        "name": "Portal Sem Porteiras (PSP)",
-        "country": "BR",
-        "status": "unknown",
-        "services": [],
-        "website": "https://portalsemporteiras.github.io",
-        "sources": [
-          "communityBox"
-        ]
-      },
-      {
         "id": "CCCI-0322",
         "name": "Pulo Aceh (SIK)",
         "country": "ID",
@@ -4813,8 +4795,10 @@
         "status": "unknown",
         "services": [],
         "sources": [
-          "ccci"
-        ]
+          "ccci",
+          "communityBox"
+        ],
+        "website": "https://rhizomatica.org"
       },
       {
         "id": "CCCI-0333",
@@ -4870,17 +4854,6 @@
         ],
         "sources": [
           "ccci"
-        ]
-      },
-      {
-        "id": "cb-rhizomatica",
-        "name": "Rhizomatica",
-        "country": "MX",
-        "status": "unknown",
-        "services": [],
-        "website": "https://rhizomatica.org",
-        "sources": [
-          "communityBox"
         ]
       },
       {
@@ -4960,17 +4933,6 @@
         ]
       },
       {
-        "id": "cb-sarantaporo-gr",
-        "name": "Sarantaporo.gr",
-        "country": "GR",
-        "status": "unknown",
-        "services": [],
-        "website": "https://sarantaporo.gr",
-        "sources": [
-          "communityBox"
-        ]
-      },
-      {
         "id": "CCCI-0343",
         "name": "Sarantaporo.gr Community Network",
         "country": "GR",
@@ -4983,8 +4945,10 @@
           "literacy"
         ],
         "sources": [
-          "ccci"
-        ]
+          "ccci",
+          "communityBox"
+        ],
+        "website": "https://sarantaporo.gr"
       },
       {
         "id": "CCCI-0344",
@@ -5771,23 +5735,14 @@
         ]
       },
       {
-        "id": "cb-tunapandanet",
-        "name": "TunapandaNET",
-        "country": "KE",
-        "status": "unknown",
-        "services": [],
-        "sources": [
-          "communityBox"
-        ]
-      },
-      {
         "id": "CCCI-0395",
         "name": "TunapandaNET, Kiberia, Nairobi, Kenya",
         "country": "KE",
         "status": "unknown",
         "services": [],
         "sources": [
-          "ccci"
+          "ccci",
+          "communityBox"
         ]
       },
       {

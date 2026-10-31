@@ -21,7 +21,7 @@ const MIN_VALID_ROWS = 50;
 const MAX_UNMAPPED_COUNTRY_RATIO = 0.05;
 const MAX_NULL_COUNTRY_RATIO = 0.05;
 const MIN_RETAINED_RATIO = 0.8; // valid rows and mapped countries vs the previous snapshot
-const MIN_COLUMN_BASELINE = 20; // a column is guarded only if it had this many networks before
+const MIN_COLUMN_BASELINE = 20; // partial declines are guarded only from this many networks; emptying any column is always rejected
 const MIN_COLUMN_RETAINED_RATIO = 0.5;
 const OUTPUT_PATH = path.resolve(__dirname, '../../research/fetched-data', OUTPUT_FILE);
 
@@ -369,8 +369,13 @@ function mergeCurated(networks, curated) {
 
     const country = entry.country ? String(entry.country).trim().toUpperCase() : null;
     const website = normalizeWebsite(entry.website);
-    const key = `${country || ''}|${nameKey(name)}`;
-    const hit = nameKey(name) ? index.get(key) : undefined;
+    // Aliases match CCCI records that spell the same network differently
+    const names = [name].concat(Array.isArray(entry.aliases) ? entry.aliases : []);
+    const hit = names
+      .map((candidate) => nameKey(candidate))
+      .filter(Boolean)
+      .map((candidateKey) => index.get(`${country || ''}|${candidateKey}`))
+      .find(Boolean);
 
     if (hit) {
       matched += 1;
@@ -398,7 +403,7 @@ function mergeCurated(networks, curated) {
     network.sources = ['communityBox'];
 
     merged.push(network);
-    if (nameKey(name)) index.set(key, network);
+    if (nameKey(name)) index.set(`${country || ''}|${nameKey(name)}`, network);
   });
 
   return { networks: merged, matched, added };

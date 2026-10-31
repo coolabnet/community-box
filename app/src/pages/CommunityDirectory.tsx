@@ -154,7 +154,7 @@ export default function CommunityDirectory() {
   // Invalid URL values are ignored, not written back.
   const rawCountry = searchParams.get('country');
   const rawStatus = searchParams.get('status');
-  const country = rawCountry && counts[rawCountry] ? rawCountry : null;
+  const country = rawCountry && Object.prototype.hasOwnProperty.call(counts, rawCountry) ? rawCountry : null;
   const status = rawStatus && presentStatuses.includes(rawStatus as NetworkStatus) ? rawStatus : null;
   const query = searchParams.get('q') ?? '';
 

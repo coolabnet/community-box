@@ -227,6 +227,8 @@ export default function WorldMap({ counts, selected, onSelect }: WorldMapProps) 
   const gestureRef = useRef({ startX: 0, startY: 0, moved: false, lastDistance: 0, lastMidX: 0, lastMidY: 0 });
   const draggedRef = useRef(false);
   const refocusRef = useRef<string | null>(null);
+  // View before an ocean click reset it, so a double-click zooms from where the user was.
+  const preClickRef = useRef<{ view: ViewBox; target: ViewBox } | null>(null);
 
   const bounds = useMemo<MapBounds>(
     () => (geometry ? { width: geometry.width, height: geometry.height } : DEFAULT_BOUNDS),
@@ -418,7 +420,11 @@ export default function WorldMap({ counts, selected, onSelect }: WorldMapProps) 
       const midY = (a.y + b.y) / 2;
       if (gesture.lastDistance > 0) {
         cancelAnimation();
-        const point = clientToMap(current, rect.width, rect.height, { x: midX - rect.left, y: midY - rect.top });
+        // Anchor on the previous midpoint, then pan by its movement, so the map stays under the fingers.
+        const point = clientToMap(current, rect.width, rect.height, {
+          x: gesture.lastMidX - rect.left,
+          y: gesture.lastMidY - rect.top,
+        });
         const zoomed = zoomAt(current, distance / gesture.lastDistance, point, bounds, currentAspect);
         const zoomedPpu = pixelsPerUnit(zoomed, rect.width, rect.height);
         const next = panBy(
@@ -476,14 +482,21 @@ export default function WorldMap({ counts, selected, onSelect }: WorldMapProps) 
     if (event.detail > 1) return; // The second click of a double-click only zooms.
     const target = (event.target as Element).closest('[data-code]');
     const code = target?.getAttribute('data-code');
-    if (code && counts[code] > 0) toggle(code);
-    else showWorld();
+    if (code && counts[code] > 0) {
+      preClickRef.current = null;
+      toggle(code);
+    } else {
+      preClickRef.current = { view: viewRef.current, target: targetRef.current };
+      showWorld();
+    }
   };
 
   const handleDoubleClick = (event: MouseEvent<SVGSVGElement>) => {
     const rect = event.currentTarget.getBoundingClientRect();
-    const target = targetRef.current;
-    const point = clientToMap(viewRef.current, rect.width, rect.height, {
+    const before = preClickRef.current;
+    preClickRef.current = null;
+    const target = before ? before.target : targetRef.current;
+    const point = clientToMap(before ? before.view : viewRef.current, rect.width, rect.height, {
       x: event.clientX - rect.left,
       y: event.clientY - rect.top,
     });
