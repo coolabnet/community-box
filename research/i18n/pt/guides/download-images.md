@@ -1,7 +1,7 @@
 ---
 title: Baixar Imagens
 sourcePath: guides/download-images.md
-sourceHash: 9bfe7520db4d3c79
+sourceHash: bfe9eecc3342302c
 translatedBy: glm-4.6
 ---
 
@@ -90,7 +90,7 @@ Cada linha leva à própria página de downloads do projeto. Uma linha sem check
 6. O seletor cria uma imagem personalizada para o seu roteador. Quando a build fornece um checksum, o seletor o mostra como sha256sum ao lado da imagem. O código-fonte do seletor mostra esse comportamento; não o confirmamos em uma build ao vivo. Se nenhum checksum for exibido, mantenha o arquivo que o seletor lhe entrega. Não substitua pelos checksums do OpenWrt padrão; eles cobrem imagens diferentes.
 7. O download do TrueNAS pede inscrição em um boletim informativo. O valor SHA256 e os arquivos `.sha256` e `.gpg` ficam ao lado de cada ISO.
 8. O Ubuntu publica um lançamento de suporte de longo prazo (LTS), como o 26.04, e um lançamento intermediário mais curto, como o 26.10. Use a versão LTS para um servidor comunitário. Abra a pasta da versão que você baixou; o arquivo SHA256SUMS dela está dentro (para arm64, na subpasta `release`).
-9. O Proxmox VE apaga o disco inteiro. Em um PC ou Intel NUC, use a ISO padrão (amd64); o processador precisa ter Intel VT ou AMD-V ativados. A ISO arm64 é apenas para alguns servidores ARM; o Proxmox não oferece suporte ao Raspberry Pi. O valor SHA256 está listado ao lado de cada ISO.
+9. Proxmox VE: em um PC, Intel NUC ou ZimaBoard, use a ISO padrão (amd64); o processador precisa ter Intel VT ou AMD-V ativados. A ISO arm64 é apenas para alguns servidores ARM; o Proxmox não oferece suporte ao Raspberry Pi. O valor SHA256 está listado ao lado de cada ISO.
 10. O ButterBox roda no Raspberry Pi Zero 2 W e no Pi 4. Sua página de instalação aponta para o download da imagem; escolha a versão mais recente e descompacte-a antes de gravá-la com o Raspberry Pi Imager. O projeto não publica checksum, então verifique se o tamanho do arquivo corresponde ao tamanho exibido na página de download do Dropbox. Uma versão para PC está listada como em breve.
 
 ## Fontes

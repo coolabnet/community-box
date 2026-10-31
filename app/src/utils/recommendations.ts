@@ -116,8 +116,8 @@ export const operatingSystems: Record<OSKey, OSSuggestion> = {
     name: 'os.proxmox.name',
     description: 'os.proxmox.description',
     recommendedFor: ['business'],
-    difficulty: 'intermediate',
-    supportedHardware: ['intelNUC', 'reusedPC'],
+    difficulty: 'advanced',
+    supportedHardware: ['intelNUC', 'zimaBoard', 'reusedPC'],
     links: [
       { kind: 'docs', url: 'https://pve.proxmox.com/pve-docs/' },
       { kind: 'download', url: 'https://www.proxmox.com/en/downloads' },
@@ -128,9 +128,6 @@ export const operatingSystems: Record<OSKey, OSSuggestion> = {
     },
   },
 };
-
-// OSes offered only when the user can format the device (format === 'yes').
-const FORMAT_YES_ONLY: OSKey[] = ['proxmox'];
 
 /**
  * Get service suggestions based on usage selections
@@ -198,13 +195,12 @@ export const getOSSuggestions = (
     osList = osList.filter(os => os.difficulty === 'beginner');
   }
 
-  // Format-gated OSes are dropped unless the user can format. When offered, they go
-  // first so the 4-item cap below cannot push them out of the list.
-  const gated = osList.filter(os => FORMAT_YES_ONLY.includes(os.key));
-  const ungated = osList.filter(os => !FORMAT_YES_ONLY.includes(os.key));
-  osList = format === 'yes' ? [...gated, ...ungated] : ungated;
+  // Advanced OSes are only for users who set up servers confidently. They go last
+  // but keep a place under the 4-item cap.
+  const advanced = format === 'yes' ? osList.filter(os => os.difficulty === 'advanced') : [];
+  const others = osList.filter(os => os.difficulty !== 'advanced');
 
-  return osList.slice(0, 4);
+  return [...others.slice(0, 4 - advanced.length), ...advanced].slice(0, 4);
 };
 
 /**

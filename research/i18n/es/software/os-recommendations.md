@@ -1,21 +1,20 @@
 ---
 title: Cómo la herramienta elige un sistema operativo
 sourcePath: software/os-recommendations.md
-sourceHash: a56c6442c12e7fd1
+sourceHash: fa35769ce23271ea
 translatedBy: glm-4.6
 ---
 
 # Cómo la herramienta elige un sistema operativo
 
-La herramienta de recomendación sugiere hasta 4 sistemas operativos. Utiliza tres respuestas: el uso principal del servidor, si puedes formatear (borrar y reinstalar) el dispositivo y la recomendación principal de hardware.
+La herramienta de recomendación sugiere hasta 4 sistemas operativos. Usa tres respuestas: el uso principal del servidor, tu confianza al configurar una computadora como servidor (*Sí, con confianza*, *Con guía* o *No*), y la recomendación principal de hardware. Cada sistema en esta página se instala borrando el dispositivo, por lo que la respuesta de configuración mide la habilidad, no si puedes borrarlo.
 
 ## Pasos
 
-1. **Uso principal.** Conserva solo los sistemas pensados para ese uso (educación, negocio o personal). Si no hay respuesta, la herramienta usa educación.
-2. **Hardware.** Conserva solo los sistemas que funcionan en el dispositivo recomendado principal. Si ninguno es compatible, la herramienta no muestra ningún sistema operativo en lugar de uno incompatible.
-3. **Formateo.** Si no puedes formatear el dispositivo, conserva solo los sistemas para principiantes.
-4. **Formateo requerido.** Proxmox VE reemplaza todo el disco, por lo que la herramienta solo lo ofrece cuando respondes que puedes formatear. Cuando se ofrece, va primero en la lista.
-5. **Límite.** Muestra los primeros 4 sistemas que quedan.
+1. **Uso principal.** Se conservan solo los sistemas pensados para ese uso (educación, negocio o personal). Si no hay respuesta, la herramienta usa educación.
+2. **Hardware.** Se conservan solo los sistemas que funcionan en el dispositivo recomendado principal. Si ninguno es compatible, la herramienta no muestra ningún sistema operativo en lugar de mostrar uno incompatible.
+3. **Habilidad de configuración.** Si respondes *No*, se conservan solo los sistemas para principiantes. Los sistemas avanzados (Proxmox VE) aparecen solo si respondes *Sí, con confianza*.
+4. **Límite.** Se muestran hasta 4 sistemas en orden de catálogo. Un sistema avanzado va al final pero conserva su lugar, por lo que expulsa al cuarto sistema en su lugar.
 
 ## Catálogo
 
@@ -27,21 +26,21 @@ La herramienta de recomendación sugiere hasta 4 sistemas operativos. Utiliza tr
 | TrueNAS | negocio, educación | intermedio | Intel NUC, ZimaBoard, PC reutilizada |
 | OpenMediaVault | educación, negocio | principiante | Intel NUC, ZimaBoard, PC reutilizada, Raspberry Pi |
 | ButterBox | educación, personal | principiante | Raspberry Pi |
-| Proxmox VE | negocio (solo si puedes formatear) | intermedio | Intel NUC, PC reutilizada (solo amd64) |
+| Proxmox VE | negocio | avanzado | Intel NUC, ZimaBoard, PC reutilizada (solo amd64) |
 
 ## Ejemplos
 
-- **Negocio, Intel NUC o PC reutilizada, puedes formatear:** Proxmox VE, Ubuntu Server, Debian, TrueNAS. OpenMediaVault queda fuera por el límite de 4.
-- **Negocio, Intel NUC o PC reutilizada, no estás seguro sobre el formateo:** Ubuntu Server, Debian, TrueNAS, OpenMediaVault.
-- **Negocio, Intel NUC o PC reutilizada, no puedes formatear:** Ubuntu Server, OpenMediaVault.
+- **Negocio, Intel NUC, ZimaBoard o PC reutilizada, *Sí, con confianza*:** Ubuntu Server, Debian, TrueNAS, Proxmox VE. OpenMediaVault queda fuera; TrueNAS cubre la misma función de almacenamiento para un usuario con confianza.
+- **Negocio, Intel NUC, ZimaBoard o PC reutilizada, *Con guía*:** Ubuntu Server, Debian, TrueNAS, OpenMediaVault.
+- **Negocio, Intel NUC, ZimaBoard o PC reutilizada, *No*:** Ubuntu Server, OpenMediaVault.
 - **Educación, Raspberry Pi:** Raspberry Pi OS, OpenMediaVault, ButterBox.
-- **Personal, Raspberry Pi, no puedes formatear:** Raspberry Pi OS, ButterBox.
+- **Personal, Raspberry Pi, *No*:** Raspberry Pi OS, ButterBox.
 
 ## Notas
 
-- **Proxmox VE** ejecuta máquinas virtuales y contenedores. En las PC e Intel NUC que recomienda la herramienta, requiere un procesador x86 de 64 bits (amd64) con virtualización por hardware activada. Sus 2 GB mínimos de RAM cubren solo el host; cada máquina virtual necesita su propia memoria. Proxmox también tiene una compilación arm64 para algunos servidores ARM, pero no es compatible con Raspberry Pi. ZimaBoard no está en la lista.
+- **Proxmox VE** ejecuta máquinas virtuales y contenedores, por lo que un solo equipo puede alojar varios sistemas a la vez. Está marcado como avanzado porque gestionas el host y cada máquina virtual. En las PC, Intel NUC y ZimaBoard que recomienda la herramienta, necesita un procesador x86 de 64 bits (amd64) con la virtualización por hardware activada. Sus 2 GB mínimos de RAM cubren solo el host; cada máquina virtual necesita su propia memoria. En ZimaBoard, usa el modelo de 8 GB (832) e instala en un SSD SATA, no en la eMMC integrada (ver [Solución de problemas de ZimaBoard](../hardware/zimaboard/zima-troubleshooting.md)). Proxmox también tiene una versión arm64 para algunos servidores ARM, pero no es compatible con Raspberry Pi.
 - **ButterBox** es una imagen de servidor sin conexión del Guardian Project para Raspberry Pi Zero 2 W y Pi 4. Crea su propia red Wi-Fi y funciona sin acceso a internet.
 
 Las reglas están en `getOSSuggestions` en `app/src/utils/recommendations.ts`. Las pruebas en `app/src/test/osSuggestions.test.ts` verifican cada ejemplo anterior.
 
-Consulta [Descargar imágenes](../guides/download-images.md) para el enlace oficial de descarga de cada sistema.
+Consulta [Descargar imágenes](../guides/download-images.md) para el enlace de descarga oficial de cada sistema.

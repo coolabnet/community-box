@@ -1,7 +1,7 @@
 ---
 title: Descargar imágenes
 sourcePath: guides/download-images.md
-sourceHash: 9bfe7520db4d3c79
+sourceHash: bfe9eecc3342302c
 translatedBy: glm-4.6
 ---
 
@@ -90,7 +90,7 @@ Cada fila enlaza a la propia página de descargas del proyecto. Una fila sin che
 6. El selector compila una imagen personalizada para tu router. Cuando la compilación proporciona un checksum, el selector lo muestra como sha256sum junto a la imagen. El código fuente del selector muestra este comportamiento; no lo confirmamos en una compilación en vivo. Si no se muestra ningún checksum, conserva el archivo que te entrega el selector. No sustituyas los checksums del OpenWrt estándar; corresponden a imágenes diferentes.
 7. La descarga de TrueNAS pide suscribirse a un boletín. El valor SHA256 y los archivos `.sha256` y `.gpg` están junto a cada ISO.
 8. Ubuntu publica una versión de soporte a largo plazo (LTS), como 26.04, y una versión interina más corta, como 26.10. Usa la versión LTS para un servidor comunitario. Abre la carpeta de la versión que descargaste; su archivo SHA256SUMS está dentro (para arm64, en la subcarpeta `release`).
-9. Proxmox VE borra todo el disco. En una PC o Intel NUC, usa la ISO estándar (amd64); el procesador necesita Intel VT o AMD-V activados. La ISO arm64 es solo para algunos servidores ARM; Proxmox no es compatible con Raspberry Pi. El valor SHA256 aparece listado junto a cada ISO.
+9. Proxmox VE: en una PC, Intel NUC o ZimaBoard, usa la ISO estándar (amd64); el procesador necesita Intel VT o AMD-V activados. La ISO arm64 es solo para algunos servidores ARM; Proxmox no es compatible con Raspberry Pi. El valor SHA256 aparece listado junto a cada ISO.
 10. ButterBox funciona en Raspberry Pi Zero 2 W y Pi 4. Su página de instalación enlaza la descarga de la imagen; elige la versión más reciente y descomprímela antes de grabarla con Raspberry Pi Imager. El proyecto no publica ningún checksum, así que comprueba que el tamaño del archivo coincida con el tamaño mostrado en la página de descarga de Dropbox. Hay una versión para PC listada como próximamente.
 
 ## Fuentes

@@ -35,39 +35,25 @@ describe('getOSSuggestions with platform entries', () => {
     expect(keys('education', 'yes', 'raspberryPi')).toEqual(['raspbian', 'openmediavault', 'butterbox']);
   });
 
-  it('never suggests Proxmox for Raspberry Pi or ZimaBoard', () => {
-    for (const device of ['raspberryPi', 'zimaBoard'] as const) {
-      for (const format of ['yes', 'maybe', 'no'] as const) {
-        expect(keys('business', format, device)).not.toContain('proxmox');
-      }
+  it('never suggests Proxmox for Raspberry Pi', () => {
+    for (const format of ['yes', 'maybe', 'no'] as const) {
+      expect(keys('business', format, 'raspberryPi')).not.toContain('proxmox');
     }
   });
 
-  it('suggests Proxmox for x86 business profiles only when the user can format', () => {
-    for (const device of ['intelNUC', 'reusedPC'] as const) {
-      expect(keys('business', 'yes', device)[0]).toBe('proxmox');
+  it('suggests Proxmox for x86 business profiles only to confident users', () => {
+    for (const device of ['intelNUC', 'zimaBoard', 'reusedPC'] as const) {
+      expect(keys('business', 'yes', device)).toContain('proxmox');
       expect(keys('business', 'maybe', device)).not.toContain('proxmox');
       expect(keys('business', 'no', device)).not.toContain('proxmox');
+      expect(keys('business', undefined, device)).not.toContain('proxmox');
     }
   });
 
-  it('pins the full x86 business list when Proxmox displaces a NAS option', () => {
-    expect(keys('business', 'yes', 'intelNUC')).toMatchInlineSnapshot(`
-      [
-        "proxmox",
-        "ubuntuServer",
-        "debian",
-        "truenas",
-      ]
-    `);
-    expect(keys('business', 'yes', 'reusedPC')).toMatchInlineSnapshot(`
-      [
-        "proxmox",
-        "ubuntuServer",
-        "debian",
-        "truenas",
-      ]
-    `);
+  it('lists Proxmox last for confident x86 business users', () => {
+    for (const device of ['intelNUC', 'zimaBoard', 'reusedPC'] as const) {
+      expect(keys('business', 'yes', device)).toEqual(['ubuntuServer', 'debian', 'truenas', 'proxmox']);
+    }
   });
 
   it('does not suggest Proxmox outside business', () => {

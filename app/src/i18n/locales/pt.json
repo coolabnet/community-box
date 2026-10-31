@@ -326,7 +326,7 @@
             },
             "proxmox": {
               "name": "Proxmox VE",
-              "description": "Plataforma de virtualização de código aberto para executar máquinas virtuais e contêineres em um servidor; requer CPU de 64 bits com Intel VT-x ou AMD-V; os 2 GB de RAM são só para o host, as máquinas virtuais precisam de memória própria"
+              "description": "Plataforma de virtualização de código aberto para executar máquinas virtuais e contêineres em um servidor; requer CPU de 64 bits com Intel VT-x ou AMD-V; os 2 GB de RAM são só para o host, as máquinas virtuais precisam de memória própria; no ZimaBoard, use o modelo de 8 GB e instale em um SSD SATA, não no eMMC interno"
             }
           },
           "difficulty": {
