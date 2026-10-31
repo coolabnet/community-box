@@ -14,7 +14,9 @@ import {
   easeInOutCubic,
   fitBox,
   flagEmoji,
+  hitRadii,
   interpolateViewBox,
+  markerOrder,
   panBy,
   pathBounds,
   pixelsPerUnit,
@@ -183,5 +185,32 @@ describe('mapZoom helpers', () => {
     expect(flagEmoji('B1')).toBe('');
     expect(flagEmoji('BRA')).toBe('');
     expect(flagEmoji(null)).toBe('');
+  });
+
+  it('draws larger counts first and the selected marker last', () => {
+    const counts = { VU: 2, SB: 3, BR: 16, AU: 3 };
+    expect(markerOrder(['VU', 'SB', 'BR', 'AU'], counts, null)).toEqual(['BR', 'AU', 'SB', 'VU']);
+    expect(markerOrder(['VU', 'SB', 'BR', 'AU'], counts, 'SB')).toEqual(['BR', 'AU', 'VU', 'SB']);
+    expect(markerOrder(['VU', 'SB'], counts, 'XX')).toEqual(['SB', 'VU']);
+  });
+
+  it('keeps hit areas off the visible circle of markers drawn underneath', () => {
+    // Solomon Islands drawn first, Vanuatu (selected) on top, 9px apart.
+    const radii = hitRadii([
+      { code: 'SB', x: 0, y: 0, r: 11 },
+      { code: 'VU', x: 9, y: 0, r: 11 },
+    ]);
+    expect(radii.SB).toBe(17);
+    expect(radii.VU).toBe(11);
+    const apart = hitRadii([
+      { code: 'A', x: 0, y: 0, r: 10 },
+      { code: 'B', x: 30, y: 0, r: 10 },
+    ]);
+    expect(apart.B).toBe(16);
+    const near = hitRadii([
+      { code: 'A', x: 0, y: 0, r: 10 },
+      { code: 'B', x: 24, y: 0, r: 10 },
+    ]);
+    expect(near.B).toBe(14);
   });
 });

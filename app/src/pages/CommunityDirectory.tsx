@@ -160,6 +160,13 @@ export default function CommunityDirectory() {
 
   // Local draft keeps the input responsive while the URL catches up.
   const [queryDraft, setQueryDraft] = useState(query);
+  // Follow q when it changes from outside (sidebar link, back button). Typing
+  // writes the same value to the URL, so this never fights the input.
+  const [syncedQuery, setSyncedQuery] = useState(query);
+  if (query !== syncedQuery) {
+    setSyncedQuery(query);
+    if (query !== queryDraft) setQueryDraft(query);
+  }
 
   const filtered = useMemo(
     () => filterNetworks(networks, { country, status, query }),

@@ -23,10 +23,13 @@ import {
 import {
   MAX_ZOOM,
   bubbleRadius,
+  clampViewBox,
   clientToMap,
   easeInOutCubic,
   fitBox,
+  hitRadii,
   interpolateViewBox,
+  markerOrder,
   panBy,
   pathBounds,
   pixelsPerUnit,
@@ -91,8 +94,8 @@ function countryView(country: WorldMapCountry, bounds: MapBounds, aspect: number
   const minY = Math.min(box.y, country.y);
   const maxX = Math.max(box.x + box.width, country.x);
   const maxY = Math.max(box.y + box.height, country.y);
-  // Tiny islands stop at about 8x.
-  return fitBox({ x: minX, y: minY, width: maxX - minX, height: maxY - minY }, aspect, bounds.width / 8, bounds);
+  // Tiny islands stop at about 5x so neighbouring islands stay in view.
+  return fitBox({ x: minX, y: minY, width: maxX - minX, height: maxY - minY }, aspect, bounds.width / 5, bounds);
 }
 
 interface LandLayerProps {
@@ -223,6 +226,7 @@ export default function WorldMap({ counts, selected, onSelect }: WorldMapProps) 
   const pointersRef = useRef(new Map<number, { x: number; y: number }>());
   const gestureRef = useRef({ startX: 0, startY: 0, moved: false, lastDistance: 0, lastMidX: 0, lastMidY: 0 });
   const draggedRef = useRef(false);
+  const refocusRef = useRef<string | null>(null);
 
   const bounds = useMemo<MapBounds>(
     () => (geometry ? { width: geometry.width, height: geometry.height } : DEFAULT_BOUNDS),
@@ -320,7 +324,52 @@ export default function WorldMap({ counts, selected, onSelect }: WorldMapProps) 
     return () => svg.removeEventListener('wheel', handleWheel);
   }, [geometry, bounds, applyView, cancelAnimation]);
 
+  // Clear pointer state even when the button is released outside the map.
+  useEffect(() => {
+    const release = (event: globalThis.PointerEvent) => {
+      const pointers = pointersRef.current;
+      if (!pointers.delete(event.pointerId)) return;
+      if (pointers.size < 2) gestureRef.current.lastDistance = 0;
+      if (pointers.size === 0) setDragging(false);
+    };
+    window.addEventListener('pointerup', release);
+    window.addEventListener('pointercancel', release);
+    return () => {
+      window.removeEventListener('pointerup', release);
+      window.removeEventListener('pointercancel', release);
+    };
+  }, []);
+
+  // The selected marker moves to the end of the layer; keep keyboard focus on it.
+  useEffect(() => {
+    const code = refocusRef.current;
+    refocusRef.current = null;
+    if (!code) return;
+    const element = svgRef.current?.querySelector<SVGGElement>(`[role="button"][data-code="${code}"]`);
+    if (element && document.activeElement !== element) element.focus();
+  }, [selected]);
+
   const handleHover = useCallback((code: string | null) => setHovered(code), []);
+
+  // Pan so a keyboard-focused marker outside the view becomes visible.
+  const revealMarker = (code: string) => {
+    const country = geometry?.countries[code];
+    if (!country) return;
+    const target = targetRef.current;
+    const inside =
+      country.x >= target.x &&
+      country.x <= target.x + target.w &&
+      country.y >= target.y &&
+      country.y <= target.y + target.h;
+    if (inside) return;
+    animateTo(
+      clampViewBox(
+        { x: country.x - target.w / 2, y: country.y - target.h / 2, w: target.w, h: target.h },
+        bounds,
+        aspect,
+      ),
+    );
+  };
 
   const showWorld = () => {
     if (selected) onSelect(null);
@@ -444,6 +493,7 @@ export default function WorldMap({ counts, selected, onSelect }: WorldMapProps) 
   const handleBubbleKeyDown = (event: KeyboardEvent<SVGGElement>, code: string) => {
     if (event.key === 'Enter' || event.key === ' ') {
       event.preventDefault();
+      refocusRef.current = code;
       toggle(code);
     }
   };
@@ -504,9 +554,21 @@ export default function WorldMap({ counts, selected, onSelect }: WorldMapProps) 
     // Markers are drawn in screen pixels, a little smaller on phones.
     const sizeFactor = size.width ? Math.min(1, Math.max(0.75, size.width / 900)) : 1;
     const scale = sizeFactor / ppu;
-    const markerCodes = Object.keys(counts)
-      .filter((code) => counts[code] > 0 && countries[code])
-      .sort((a, b) => counts[b] - counts[a]);
+    const markerCodes = markerOrder(
+      Object.keys(counts).filter((code) => counts[code] > 0 && countries[code]),
+      counts,
+      selected,
+    );
+    // Hit areas in marker drawing units, so a marker never steals clicks from
+    // the visible part of one drawn underneath it.
+    const hitRadius = hitRadii(
+      markerCodes.map((code) => ({
+        code,
+        x: (countries[code].x - view.x) / scale,
+        y: (countries[code].y - view.y) / scale,
+        r: bubbleRadius(counts[code]),
+      })),
+    );
     const markerTransform = (code: string) =>
       `translate(${countries[code].x} ${countries[code].y}) scale(${scale})`;
     const inView = (code: string) => {
@@ -516,9 +578,8 @@ export default function WorldMap({ counts, selected, onSelect }: WorldMapProps) 
     const hotCodes = [...new Set([selected, hovered, focused])].filter(
       (code): code is string => Boolean(code) && markerCodes.includes(code as string),
     );
-    const overlayCodes = [...new Set([selected, hovered])].filter(
-      (code): code is string => Boolean(code) && markerCodes.includes(code as string),
-    );
+    // The selected marker is already drawn last; only a hovered one is redrawn on top.
+    const overlayCodes = hovered && hovered !== selected && markerCodes.includes(hovered) ? [hovered] : [];
     const denseLabelCodes =
       k >= DENSE_LABEL_ZOOM ? markerCodes.filter((code) => inView(code) && !hotCodes.includes(code)) : [];
 
@@ -534,6 +595,7 @@ export default function WorldMap({ counts, selected, onSelect }: WorldMapProps) 
         onPointerMove={handlePointerMove}
         onPointerUp={handlePointerEnd}
         onPointerCancel={handlePointerEnd}
+        onLostPointerCapture={handlePointerEnd}
         onClick={handleClick}
         onDoubleClick={handleDoubleClick}
       >
@@ -579,12 +641,24 @@ export default function WorldMap({ counts, selected, onSelect }: WorldMapProps) 
                 onPointerLeave={() => setHovered((current) => (current === code ? null : current))}
                 onFocus={(event) => {
                   // Ring only for keyboard focus, not after a mouse click.
-                  if (event.currentTarget.matches(':focus-visible')) setFocused(code);
+                  if (event.currentTarget.matches(':focus-visible')) {
+                    setFocused(code);
+                    revealMarker(code);
+                  }
                 }}
                 onBlur={() => setFocused((current) => (current === code ? null : current))}
               >
                 <title>{label}</title>
-                <circle r={bubbleRadius(count) + 6} fill="transparent" />
+                <circle r={hitRadius[code]} fill="transparent" />
+                {selected === code && (
+                  <circle
+                    r={bubbleRadius(count)}
+                    className="pointer-events-none fill-none stroke-amber-500 motion-safe:animate-ping"
+                    style={{ transformBox: 'fill-box', transformOrigin: 'center' }}
+                    strokeWidth={3}
+                    vectorEffect="non-scaling-stroke"
+                  />
+                )}
                 <BubbleVisual
                   count={count}
                   isSelected={selected === code}
@@ -617,23 +691,14 @@ export default function WorldMap({ counts, selected, onSelect }: WorldMapProps) 
           </g>
         )}
 
-        {/* Hovered and selected bubbles redrawn on top, plus their name pills. */}
+        {/* A hovered bubble redrawn on top, plus the name pills. */}
         <g aria-hidden="true" className="pointer-events-none">
           {overlayCodes.map((code) => (
             <g key={code} transform={markerTransform(code)}>
-              {selected === code && (
-                <circle
-                  r={bubbleRadius(counts[code])}
-                  className="fill-none stroke-amber-500 motion-safe:animate-ping"
-                  style={{ transformBox: 'fill-box', transformOrigin: 'center' }}
-                  strokeWidth={3}
-                  vectorEffect="non-scaling-stroke"
-                />
-              )}
               <BubbleVisual
                 count={counts[code]}
-                isSelected={selected === code}
-                isHot={hovered === code}
+                isSelected={false}
+                isHot
                 isFocused={focused === code}
               />
             </g>

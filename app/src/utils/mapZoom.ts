@@ -166,3 +166,37 @@ export function flagEmoji(code: string | null | undefined): string {
   if (!code || !/^[A-Za-z]{2}$/.test(code)) return '';
   return String.fromCodePoint(...code.toUpperCase().split('').map((char) => 0x1f1e6 + char.charCodeAt(0) - 65));
 }
+
+// Draw order for count bubbles: larger counts first (underneath), the
+// selected marker last so the bubble on top is also the one that gets clicks.
+export function markerOrder(codes: string[], counts: Record<string, number>, selected: string | null): string[] {
+  return [...codes].sort((a, b) => {
+    if (a === selected) return 1;
+    if (b === selected) return -1;
+    return counts[b] - counts[a] || a.localeCompare(b);
+  });
+}
+
+export interface MarkerCircle {
+  code: string;
+  x: number;
+  y: number;
+  r: number;
+}
+
+// Hit radius per marker, given in draw order. A marker gets `pad` extra room
+// around its circle, but never so much that it covers the visible circle of a
+// marker drawn underneath it.
+export function hitRadii(markers: MarkerCircle[], pad = 6): Record<string, number> {
+  const radii: Record<string, number> = {};
+  markers.forEach((marker, index) => {
+    let hit = marker.r + pad;
+    for (let below = 0; below < index; below += 1) {
+      const other = markers[below];
+      const distance = Math.hypot(marker.x - other.x, marker.y - other.y);
+      if (distance - other.r < hit) hit = Math.max(marker.r, distance - other.r);
+    }
+    radii[marker.code] = hit;
+  });
+  return radii;
+}
