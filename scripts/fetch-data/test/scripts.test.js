@@ -388,13 +388,13 @@ function validCcciRecords(count) {
 }
 
 // Runs fetchCcciDirectory with an injected fetch and save; returns the save calls.
-async function runCcciWithCsv(csvText, previousRows = null) {
+async function runCcciWithCsv(csvText, previousSnapshot = null) {
   const saved = [];
   let error = null;
   try {
     await fetchCcciDirectory({
       fetchText: async () => csvText,
-      previousRows,
+      previousSnapshot,
       save: (filename, data, metadata) => saved.push({ filename, data, metadata })
     });
   } catch (e) {
@@ -406,7 +406,7 @@ async function runCcciWithCsv(csvText, previousRows = null) {
 runner.test('CCCI getCcciDirectory rejects export with fewer than 50 rows', async () => {
   let message = null;
   try {
-    await getCcciDirectory({ csvText: ccciCsv(validCcciRecords(10)), previousRows: null });
+    await getCcciDirectory({ csvText: ccciCsv(validCcciRecords(10)), previousSnapshot: null });
   } catch (e) {
     message = e.message;
   }
@@ -467,25 +467,61 @@ runner.test('CCCI save boundary: duplicate header names are not saved', async ()
   assert(saved.length === 0, 'save called with duplicate headers');
 });
 
-runner.test('CCCI save boundary: more than 5% rows without ID or Name is not saved', async () => {
+runner.test('CCCI save boundary: a single row with a missing ID is not saved', async () => {
   const records = validCcciRecords(60);
-  for (let i = 0; i < 4; i++) records[i].ID = ''; // 4/60 = 6.7% lost
-  const rejected = await runCcciWithCsv(ccciCsv(records));
-  assert(rejected.error && /no ID or Name/.test(rejected.error.message), `expected row-loss error, got: ${rejected.error && rejected.error.message}`);
-  assert(rejected.saved.length === 0, 'save called after row loss');
+  records[0].ID = '';
+  const { saved, error } = await runCcciWithCsv(ccciCsv(records));
+  assert(error && /empty ID or Name/.test(error.message), `expected missing-ID error, got: ${error && error.message}`);
+  assert(saved.length === 0, 'save called with a missing ID');
+});
 
-  records[3].ID = 'CCCI-0004'; // 3/60 = 5% is allowed
-  const accepted = await runCcciWithCsv(ccciCsv(records));
-  assert(!accepted.error && accepted.saved.length === 1, 'exactly 5% skipped should be saved');
+runner.test('CCCI save boundary: a single row with a missing Name is not saved', async () => {
+  const records = validCcciRecords(60);
+  records[1].Name = '   ';
+  const { saved, error } = await runCcciWithCsv(ccciCsv(records));
+  assert(error && /empty ID or Name/.test(error.message), `expected missing-Name error, got: ${error && error.message}`);
+  assert(saved.length === 0, 'save called with a missing Name');
+});
+
+runner.test('CCCI save boundary: duplicate IDs are not saved', async () => {
+  const records = validCcciRecords(60);
+  records.forEach(r => { r.ID = 'CCCI-0001'; });
+  const { saved, error } = await runCcciWithCsv(ccciCsv(records));
+  assert(error && /duplicate ID/.test(error.message), `expected duplicate-ID error, got: ${error && error.message}`);
+  assert(saved.length === 0, 'save called with duplicate IDs');
+
+  const caseOnly = validCcciRecords(60);
+  caseOnly[1].ID = 'ccci-0001';
+  caseOnly[0].ID = 'CCCI-0001';
+  const caseResult = await runCcciWithCsv(ccciCsv(caseOnly));
+  assert(caseResult.error && /duplicate ID/.test(caseResult.error.message), 'case-only duplicate ID not rejected');
+});
+
+runner.test('CCCI save boundary: all countries blank is not saved', async () => {
+  const records = validCcciRecords(60);
+  records.forEach(r => { r.Country = ''; });
+  const { saved, error } = await runCcciWithCsv(ccciCsv(records));
+  assert(error && /no country/.test(error.message), `expected null-country error, got: ${error && error.message}`);
+  assert(saved.length === 0, 'save called with blank countries');
+});
+
+runner.test('CCCI save boundary: drop in mapped countries versus snapshot is not saved', async () => {
+  const csv = ccciCsv(validCcciRecords(60)); // one mapped country (Kenya)
+  const dropped = await runCcciWithCsv(csv, { rows: 60, distinctCountries: 10 });
+  assert(dropped.error && /mapped countries/.test(dropped.error.message), `expected country-drop error, got: ${dropped.error && dropped.error.message}`);
+  assert(dropped.saved.length === 0, 'save called after mapped-country drop');
+
+  const kept = await runCcciWithCsv(csv, { rows: 60, distinctCountries: 1 });
+  assert(!kept.error && kept.saved.length === 1, 'unchanged country count should be saved');
 });
 
 runner.test('CCCI save boundary: valid count below 80% of saved snapshot is not saved', async () => {
   const csv = ccciCsv(validCcciRecords(60));
-  const shrunk = await runCcciWithCsv(csv, 100); // 60 < 80
+  const shrunk = await runCcciWithCsv(csv, { rows: 100, distinctCountries: null }); // 60 < 80
   assert(shrunk.error && /below 80%/.test(shrunk.error.message), `expected snapshot error, got: ${shrunk.error && shrunk.error.message}`);
   assert(shrunk.saved.length === 0, 'save called after snapshot shrink');
 
-  const retained = await runCcciWithCsv(csv, 70); // 60 >= 56
+  const retained = await runCcciWithCsv(csv, { rows: 70, distinctCountries: null }); // 60 >= 56
   assert(!retained.error && retained.saved.length === 1, 'retained count should be saved');
 });
 

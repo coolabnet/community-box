@@ -19,8 +19,8 @@ const OUTPUT_FILE = 'ccci-directory.json';
 // Refuse to publish a suspiciously small or malformed export.
 const MIN_VALID_ROWS = 50;
 const MAX_UNMAPPED_COUNTRY_RATIO = 0.05;
-const MAX_SKIPPED_ROW_RATIO = 0.05;
-const MIN_RETAINED_RATIO = 0.8; // valid rows vs the previous saved snapshot
+const MAX_NULL_COUNTRY_RATIO = 0.05;
+const MIN_RETAINED_RATIO = 0.8; // valid rows and mapped countries vs the previous snapshot
 const OUTPUT_PATH = path.resolve(__dirname, '../../research/fetched-data', OUTPUT_FILE);
 
 // Fixed output order; each key maps to a CSV column that must read "Yes".
@@ -403,15 +403,20 @@ function mergeCurated(networks, curated) {
 }
 
 /**
- * Row count of the currently saved snapshot, or null when there is none.
- * @returns {number|null}
+ * Summary of the currently saved snapshot, or null when there is none.
+ * @returns {{rows: number|null, distinctCountries: number|null}|null}
  */
-function readPreviousRows() {
+function readPreviousSnapshot() {
   if (!fs.existsSync(OUTPUT_PATH)) return null;
   try {
     const previous = JSON.parse(fs.readFileSync(OUTPUT_PATH, 'utf8'));
-    const rows = previous && previous.data && previous.data.source && previous.data.source.rows;
-    return Number.isFinite(rows) ? rows : null;
+    const data = previous && previous.data;
+    const rows = data && data.source && Number.isFinite(data.source.rows) ? data.source.rows : null;
+    const networks = data && Array.isArray(data.networks) ? data.networks : null;
+    const distinctCountries = networks
+      ? new Set(networks.map(n => n.country).filter(Boolean)).size
+      : null;
+    return { rows, distinctCountries };
   } catch (error) {
     console.warn(`Could not read previous snapshot ${OUTPUT_PATH}: ${error.message}`);
     return null;
@@ -425,8 +430,8 @@ function readPreviousRows() {
  * @param {Object} [options]
  * @param {string} [options.csvText] - CSV text to use instead of downloading (tests)
  * @param {() => Promise<string>} [options.fetchText] - Replaces the HTTP download (tests)
- * @param {number|null} [options.previousRows] - Rows in the saved snapshot; null skips the
- *   80% check; default reads the current output file
+ * @param {{rows: number|null, distinctCountries: number|null}|null} [options.previousSnapshot]
+ *   Saved snapshot summary; null skips the 80% checks; default reads the current output file
  * @returns {Promise<Object>} The `data` object for ccci-directory.json
  */
 async function getCcciDirectory(options = {}) {
@@ -483,12 +488,18 @@ async function getCcciDirectory(options = {}) {
 
   const { networks: ccciNetworks, unmatchedCountries, unmappedRows, skippedRows } = normalizeRows(records);
 
-  if (records.length > 0 && skippedRows / records.length > MAX_SKIPPED_ROW_RATIO) {
-    throw new Error(
-      `CCCI export: ${skippedRows} of ${records.length} rows have no ID or Name ` +
-      `(limit ${MAX_SKIPPED_ROW_RATIO * 100}%); export rejected`
-    );
+  if (skippedRows > 0) {
+    throw new Error(`CCCI export: ${skippedRows} row(s) have an empty ID or Name; export rejected`);
   }
+
+  const ids = new Set();
+  ccciNetworks.forEach(network => {
+    const key = network.id.toLowerCase();
+    if (ids.has(key)) {
+      throw new Error(`CCCI export: duplicate ID ${network.id}; export rejected`);
+    }
+    ids.add(key);
+  });
 
   if (records.length > 0 && unmappedRows / records.length > MAX_UNMAPPED_COUNTRY_RATIO) {
     throw new Error(
@@ -497,11 +508,28 @@ async function getCcciDirectory(options = {}) {
     );
   }
 
-  const previousRows = options.previousRows !== undefined ? options.previousRows : readPreviousRows();
-  if (previousRows && ccciNetworks.length < MIN_RETAINED_RATIO * previousRows) {
+  const nullCountryRows = ccciNetworks.filter(network => network.country === null).length;
+  if (records.length > 0 && nullCountryRows / records.length > MAX_NULL_COUNTRY_RATIO) {
+    throw new Error(
+      `CCCI export: ${nullCountryRows} of ${records.length} rows have no country (empty, Global or unmapped); ` +
+      `limit ${MAX_NULL_COUNTRY_RATIO * 100}%; export rejected`
+    );
+  }
+
+  const distinctCountries = new Set(ccciNetworks.map(n => n.country).filter(Boolean)).size;
+  const previousSnapshot = options.previousSnapshot !== undefined ? options.previousSnapshot : readPreviousSnapshot();
+  if (previousSnapshot && previousSnapshot.rows &&
+      ccciNetworks.length < MIN_RETAINED_RATIO * previousSnapshot.rows) {
     throw new Error(
       `CCCI export has ${ccciNetworks.length} valid rows, below ${MIN_RETAINED_RATIO * 100}% of the ` +
-      `${previousRows} rows in the saved snapshot; export rejected`
+      `${previousSnapshot.rows} rows in the saved snapshot; export rejected`
+    );
+  }
+  if (previousSnapshot && previousSnapshot.distinctCountries &&
+      distinctCountries < MIN_RETAINED_RATIO * previousSnapshot.distinctCountries) {
+    throw new Error(
+      `CCCI export has ${distinctCountries} mapped countries, below ${MIN_RETAINED_RATIO * 100}% of the ` +
+      `${previousSnapshot.distinctCountries} in the saved snapshot; export rejected`
     );
   }
 
