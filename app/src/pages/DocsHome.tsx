@@ -48,6 +48,7 @@ const quickLinks: QuickLinkSection[] = [
     descKey: 'docsHome.sections.community.description',
     icon: <Users className="h-8 w-8" />,
     links: [
+      { titleKey: 'docsHome.links.communityMap', to: '/docs/directory' },
       { titleKey: 'docsHome.links.globalNetworks', to: '/docs/results/global-community-networks-directory' }
     ]
   }

@@ -354,7 +354,8 @@
       "libremeshOverview": "LibreMesh Overview",
       "meshBasics": "Mesh Network Basics",
       "routerSetup": "Router Setup",
-      "globalNetworks": "Global Community Networks"
+      "globalNetworks": "Global Community Networks",
+      "communityMap": "Community Networks Map"
     },
     "cards": {
       "paper": {
@@ -430,7 +431,8 @@
     "caseStudies": "📖 Case Studies",
     "solarCalculator": "☀️ Solar Calculator",
     "community": "🌍 Community",
-    "about": "ℹ️ About"
+    "about": "ℹ️ About",
+    "communityMap": "Community Networks Map"
   },
   "landing": {
     "title": "Community Box",
@@ -439,5 +441,84 @@
     "browseGuides": "Browse Guides",
     "altHeroImage": "Community collaboration",
     "footer": "Community Box Project"
+  },
+  "directory": {
+    "title": "Community Networks Map",
+    "intro": "Explore community networks (CNs) around the world. Countries with a colored fill have at least one listed network: select a country on the map or in the filters to see its networks.",
+    "source": "Data from the CCCI directory, retrieved {{date}}",
+    "curatedNote": "Community Box also keeps a curated list of networks from its own research.",
+    "loading": "Loading community networks…",
+    "error": "Could not load the community networks map. Please try again later.",
+    "stats": {
+      "networks_one": "Network listed",
+      "networks_other": "Networks listed",
+      "countries_one": "Country",
+      "countries_other": "Countries",
+      "active_one": "Active network",
+      "active_other": "Active networks"
+    },
+    "map": {
+      "label": "World map of community networks",
+      "legendTitle": "Networks per country",
+      "tier1": "1",
+      "tier2": "2–5",
+      "tier3": "6–20",
+      "tier4": "21+",
+      "smallIslandsNote": "Small islands are marked by their count bubble. Hover or select a country to see its name.",
+      "zoomIn": "Zoom in",
+      "zoomOut": "Zoom out",
+      "reset": "Show the whole world",
+      "hint": "Scroll or pinch to zoom, drag to move, click a country to see its networks",
+      "bubbleLegend": "Circle = number of networks"
+    },
+    "networkCount_one": "{{count}} network",
+    "networkCount_other": "{{count}} networks",
+    "results_one": "{{count}} network found",
+    "results_other": "{{count}} networks found",
+    "filters": {
+      "country": "Country",
+      "allCountries": "All countries",
+      "status": "Status",
+      "allStatuses": "All statuses",
+      "search": "Search by name",
+      "searchPlaceholder": "Type a network name…",
+      "clear": "Clear filters",
+      "clearCountry": "Remove the country filter: {{country}}"
+    },
+    "showMore": "Show more",
+    "empty": "No networks match these filters.",
+    "emptyHint": "Try another country, status or name.",
+    "website": "Website",
+    "websiteLabel": "Website of {{name}} (opens in a new tab)",
+    "showOnMap": "Show {{country}} on the map",
+    "backgroundLink": "Read the background on community networks",
+    "sources": {
+      "ccci": "CCCI directory",
+      "communityBox": "Community Box research"
+    },
+    "status": {
+      "active": "Active",
+      "inactive": "Inactive",
+      "inProgress": "In progress",
+      "dormant": "Dormant",
+      "pilot": "Pilot",
+      "planned": "Planned",
+      "ceased": "Ceased",
+      "unknown": "Status not reported"
+    },
+    "services": {
+      "internet": "Internet access",
+      "voice": "Voice",
+      "offline": "Offline / local network",
+      "localServices": "Local services",
+      "financial": "Financial services",
+      "support": "Personal support",
+      "literacy": "Digital literacy",
+      "radio": "Radio",
+      "schools": "School connectivity",
+      "cybercafe": "Cybercafé",
+      "environmental": "Environmental",
+      "charging": "Device charging"
+    }
   }
 }
