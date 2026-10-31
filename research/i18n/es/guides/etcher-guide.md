@@ -1,7 +1,7 @@
 ---
 title: Etcher
 sourcePath: guides/etcher-guide.md
-sourceHash: 8fd947e2e77f8345
+sourceHash: 00e99adb07d1374c
 translatedBy: glm-4.6
 ---
 
@@ -83,8 +83,6 @@ Antes de grabar, asegúrate de que tu imagen de SO esté lista:
 
 Al abrir Etcher, verás una interfaz limpia de tres pasos:
 
-`[Etcher Main Screen](etcher-main-screen.png)`
-
 La interfaz consta de tres secciones principales:
 1. **Flash from file** - Selecciona tu imagen de SO
 2. **Select target** - Elige tu tarjeta SD o unidad USB  
@@ -98,8 +96,6 @@ La interfaz consta de tres secciones principales:
 2. Navega hasta tu archivo de imagen de SO descargado
 3. Selecciona el archivo de imagen (.iso, .img, etc.)
 4. Etcher mostrará el nombre y tamaño del archivo seleccionado
-
-`[Selecting Image and Target](etcher-select-image.png)`
 
 #### Paso 3.2: Selecciona la unidad de destino
 

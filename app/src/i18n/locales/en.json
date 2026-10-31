@@ -7,7 +7,8 @@
           "yes": "Yes, reliable power",
           "sometimes": "Sometimes unreliable",
           "no": "Frequent outages"
-        }
+        },
+        "help": "Planning solar or battery power? Use the <a>Coolab solar calculator</a> to estimate what you need. It opens in a new tab and needs internet."
       },
       "users": {
         "question": "How many users will share this computer?",
@@ -17,8 +18,21 @@
           "6+": "6+ users"
         }
       },
+      "accessDevices": {
+        "question": "How do people access the content on the local server?",
+        "description": "Select all that apply",
+        "help": "Your answer only adjusts the connection tips. It does not change the service list.",
+        "options": {
+          "smartphones": "Smartphones or cellphones",
+          "laptops": "Laptops",
+          "desktops": "Desktop computers",
+          "shared": "Shared devices (telecentre, cybercafe, school lab)"
+        },
+        "continue": "Continue"
+      },
       "growth": {
-        "question": "Expected community growth in the next 2 years?",
+        "question": "Do you expect a growing usage of the shared computer in the next 2 years?",
+        "help": "Growth means more people, devices or services using the shared computer over time, for example a school adding classes or more families joining the network. If you are not sure, choose “Not sure”: it is scored the same as moderate growth.",
         "options": {
           "low": "Minimal growth",
           "medium": "Moderate growth",
@@ -28,17 +42,27 @@
       },
       "reuse": {
         "question": "Do you have a computer available for reuse?",
+        "help": "A reused computer should have at least a 64-bit (x86_64) processor, 4 GB of RAM (8 GB recommended) and a 120 GB SSD. See <a>recycled PC requirements</a> for details.",
         "options": {
           "yes": "Yes",
           "no": "No"
         }
       },
       "format": {
-        "question": "Can you format and set up a computer?",
+        "question": "Can you format and set up a computer as a server?",
         "options": {
           "yes": "Yes, confidently",
           "maybe": "With guidance",
           "no": "No"
+        }
+      },
+      "techSupport": {
+        "question": "Is there someone who can help you set up and maintain the server?",
+        "help": "For example, a community member, a local technician or a partner organization. Your answer only adjusts the setup tips. It does not change the recommendation.",
+        "options": {
+          "community": "Yes, someone in the community",
+          "external": "Yes, from outside the community",
+          "no": "No, not yet"
         }
       },
       "price": {
@@ -51,7 +75,7 @@
       },
       "points": {
         "question": "Allocate 5 importance points",
-        "description": "Distribute 5 points among these priorities based on importance to you",
+        "description": "You have a total of 5 points to grant, choosing one or more priorities for your local solution.",
         "options": {
           "skip": "Continue"
         },
@@ -92,7 +116,7 @@
         }
       },
       "usage": {
-        "question": "What will your community use this for first?",
+        "question": "Select all local services that are relevant to your community.",
         "description": "Select all that apply",
         "options": {
           "news": {
@@ -310,9 +334,27 @@
             "intermediate": "Intermediate",
             "advanced": "Advanced"
           }
+        },
+        "supportTips": {
+          "title": "Tips for setup and support",
+          "items": {
+            "community": "Involve them from the start, so they can install the system and teach others to keep it running.",
+            "external": "Plan the setup around their visit, and write down each step so people in the community can maintain it afterwards.",
+            "no": "Start with the most beginner-friendly options, and look for a nearby community network or partner organization that can help."
+          }
+        },
+        "accessTips": {
+          "title": "Tips for how people connect",
+          "items": {
+            "smartphones": "Choose services with mobile-friendly web pages, and test them on the phones people actually use.",
+            "laptops": "Laptops can use full web apps and sync clients, such as Nextcloud desktop.",
+            "desktops": "Desktop computers in a shared space work well for larger screens, like editing documents or browsing offline libraries.",
+            "shared": "On shared devices, use separate user accounts, log out after use, and avoid saving passwords in the browser."
+          }
         }
       }
     },
+    "moreInformation": "More information",
     "buttons": {
       "next": "Next",
       "back": "Back"
@@ -361,8 +403,7 @@
       "zimaOverview": "ZimaBoard Overview",
       "libremeshOverview": "LibreMesh Overview",
       "meshBasics": "Mesh Network Basics",
-      "routerSetup": "Router Setup",
-      "globalNetworks": "Global Community Networks"
+      "communityMap": "Community Networks Map"
     },
     "cards": {
       "paper": {
@@ -410,7 +451,6 @@
     "copyright": "© {{year}} Community Box Project",
     "pointAllocation": "Point allocation",
     "usageSelection": "Usage selection",
-    "imagesNotBuiltYet": "Images not built yet",
     "openMenu": "Open menu",
     "closeMenu": "Close menu",
     "toggleSidebar": "Toggle sidebar",
@@ -421,9 +461,6 @@
     "setupWizard": "🧭 Setup Wizard",
     "downloadResearchPaper": "📄 Download Research Paper",
     "downloadImages": "💿 Download Images",
-    "operatingSystemsX86": "Operating Systems (x86)",
-    "operatingSystemsARM64": "Operating Systems (ARM64)",
-    "networking": "Networking",
     "libreMeshImageFinder": "LibreMesh Image Finder",
     "quickstartGuides": "📚 Quickstart Guides",
     "hardwareGuides": "🖥️ Hardware Guides",
@@ -438,7 +475,8 @@
     "caseStudies": "📖 Case Studies",
     "solarCalculator": "☀️ Solar Calculator",
     "community": "🌍 Community",
-    "about": "ℹ️ About"
+    "about": "ℹ️ About",
+    "communityMap": "Community Networks Map"
   },
   "landing": {
     "title": "Community Box",
@@ -446,6 +484,97 @@
     "startButton": "Start",
     "browseGuides": "Browse Guides",
     "altHeroImage": "Community collaboration",
-    "footer": "Community Box Project"
+    "footer": "Community Box Project",
+    "explainer": {
+      "heading": "About this tool",
+      "intro": "The Community Box recommendation tool helps you choose a local-server setup for your community. The result is your Community Box: the hardware, operating system and services that run on your local network.",
+      "whatTitle": "What is a Community Box?",
+      "whatBody": "A Community Box is computer hardware in your community that hosts local or offline-first services and apps, such as file sharing, local websites, offline libraries, media and learning platforms. People can reach it over the local network, even without internet.",
+      "toolTitle": "What does this tool do?",
+      "toolBody": "It asks a few short questions about your community, such as electricity, number of users and main use. It then recommends hardware, an operating system and services, plus guides to follow. You can save the hardware recommendation and your answers as a PDF. It takes a few minutes. The tool has no accounts or database: your answers are kept in your browser and in the page address, so anyone you share the link with can see them.",
+      "canTitle": "What it can and cannot do",
+      "canBody": "It can suggest a starting setup and link you to useful guides. It cannot buy or install anything for you, replace local technical help or guarantee results. Someone needs to set up and maintain the box.",
+      "helpTitle": "Where do I find help?",
+      "helpBody": "Browse the <guides>guides</guides> for setup help. To find networks near you, see the <directory>community directory</directory>."
+    }
+  },
+  "directory": {
+    "title": "Community Networks Map",
+    "intro": "Explore community networks (CNs) around the world. Countries with a colored fill have at least one listed network: select a country on the map or in the filters to see its networks.",
+    "source": "Data from the CCCI directory, retrieved {{date}}",
+    "curatedNote": "Community Box also keeps a curated list of networks from its own research.",
+    "loading": "Loading community networks…",
+    "error": "Could not load the community networks map. Please try again later.",
+    "stats": {
+      "networks_one": "Network listed",
+      "networks_other": "Networks listed",
+      "countries_one": "Country",
+      "countries_other": "Countries",
+      "active_one": "Active network",
+      "active_other": "Active networks"
+    },
+    "map": {
+      "label": "World map of community networks",
+      "legendTitle": "Networks per country",
+      "tier1": "1",
+      "tier2": "2–5",
+      "tier3": "6–20",
+      "tier4": "21+",
+      "smallIslandsNote": "Small islands are marked by their count bubble. Hover or select a country to see its name.",
+      "zoomIn": "Zoom in",
+      "zoomOut": "Zoom out",
+      "reset": "Show the whole world",
+      "hint": "Scroll or pinch to zoom, drag to move, click a country to see its networks",
+      "bubbleLegend": "Circle = number of networks"
+    },
+    "networkCount_one": "{{count}} network",
+    "networkCount_other": "{{count}} networks",
+    "results_one": "{{count}} network found",
+    "results_other": "{{count}} networks found",
+    "filters": {
+      "country": "Country",
+      "allCountries": "All countries",
+      "status": "Status",
+      "allStatuses": "All statuses",
+      "search": "Search by name",
+      "searchPlaceholder": "Type a network name…",
+      "clear": "Clear filters",
+      "clearCountry": "Remove the country filter: {{country}}"
+    },
+    "showMore": "Show more",
+    "empty": "No networks match these filters.",
+    "emptyHint": "Try another country, status or name.",
+    "website": "Website",
+    "websiteLabel": "Website of {{name}} (opens in a new tab)",
+    "showOnMap": "Show {{country}} on the map",
+    "backgroundLink": "Read the background on community networks",
+    "sources": {
+      "ccci": "CCCI directory",
+      "communityBox": "Community Box research"
+    },
+    "status": {
+      "active": "Active",
+      "inactive": "Inactive",
+      "inProgress": "In progress",
+      "dormant": "Dormant",
+      "pilot": "Pilot",
+      "planned": "Planned",
+      "ceased": "Ceased",
+      "unknown": "Status not reported"
+    },
+    "services": {
+      "internet": "Internet access",
+      "voice": "Voice",
+      "offline": "Offline / local network",
+      "localServices": "Local services",
+      "financial": "Financial services",
+      "support": "Personal support",
+      "literacy": "Digital literacy",
+      "radio": "Radio",
+      "schools": "School connectivity",
+      "cybercafe": "Cybercafé",
+      "environmental": "Environmental",
+      "charging": "Device charging"
+    }
   }
 }

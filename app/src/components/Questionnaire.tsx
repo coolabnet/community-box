@@ -1,24 +1,36 @@
 
 import { useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import { useQuestionnaire } from '@/context/QuestionnaireContext';
 import ProgressBar from './ProgressBar';
 import QuestionCard from './QuestionCard';
 import PointsAllocation from './PointsAllocation';
 import UsageSelection from './UsageSelection';
+import AccessDevicesSelection from './AccessDevicesSelection';
 import RecommendationResults from './RecommendationResults';
 import ErrorBoundary from './ErrorBoundary';
 import { AnimatePresence } from 'framer-motion';
-import { useTranslation } from 'react-i18next';
-import type { PriorityAllocation, UsageSelectionValues, UserAnswers } from '@/types/questionnaire';
+import { Trans, useTranslation } from 'react-i18next';
+import type { AccessDeviceValues, PriorityAllocation, UsageSelectionValues, UserAnswers } from '@/types/questionnaire';
 
 const Questionnaire = () => {
   const { t } = useTranslation();
   const { currentStep, setCurrentStep, answers, setAnswer, goBack, resetSurvey, setTotalSteps } = useQuestionnaire();
 
+  const helpLinkClass = 'font-medium underline underline-offset-4 hover:text-primary';
+
   const questions = [
     {
       id: 'electricity',
       question: t('questionnaire.questions.electricity.question'),
+      help: (
+        <Trans
+          i18nKey="questionnaire.questions.electricity.help"
+          components={{
+            a: <a href="https://solar.coolab.org/" target="_blank" rel="noopener noreferrer" className={helpLinkClass} />,
+          }}
+        />
+      ),
       type: 'options',
       options: [
         { label: t('questionnaire.questions.electricity.options.yes'), value: 'yes' },
@@ -37,8 +49,14 @@ const Questionnaire = () => {
       ],
     },
     {
+      id: 'accessDevices',
+      question: t('questionnaire.questions.accessDevices.question'),
+      type: 'custom',
+    },
+    {
       id: 'growth',
       question: t('questionnaire.questions.growth.question'),
+      help: <Trans i18nKey="questionnaire.questions.growth.help" />,
       type: 'options',
       options: [
         { label: t('questionnaire.questions.growth.options.low'), value: 'low' },
@@ -50,6 +68,14 @@ const Questionnaire = () => {
     {
       id: 'reuse',
       question: t('questionnaire.questions.reuse.question'),
+      help: (
+        <Trans
+          i18nKey="questionnaire.questions.reuse.help"
+          components={{
+            a: <Link to="/docs/guides/recycled-pc-requirements" target="_blank" rel="noopener noreferrer" className={helpLinkClass} />,
+          }}
+        />
+      ),
       type: 'options',
       options: [
         { label: t('questionnaire.questions.reuse.options.yes'), value: 'yes' },
@@ -64,6 +90,17 @@ const Questionnaire = () => {
         { label: t('questionnaire.questions.format.options.yes'), value: 'yes' },
         { label: t('questionnaire.questions.format.options.maybe'), value: 'maybe' },
         { label: t('questionnaire.questions.format.options.no'), value: 'no' },
+      ],
+    },
+    {
+      id: 'techSupport',
+      question: t('questionnaire.questions.techSupport.question'),
+      help: <Trans i18nKey="questionnaire.questions.techSupport.help" />,
+      type: 'options',
+      options: [
+        { label: t('questionnaire.questions.techSupport.options.community'), value: 'community' },
+        { label: t('questionnaire.questions.techSupport.options.external'), value: 'external' },
+        { label: t('questionnaire.questions.techSupport.options.no'), value: 'no' },
       ],
     },
     {
@@ -134,6 +171,12 @@ const Questionnaire = () => {
     handleNext();
   };
 
+  // Handle access device selection
+  const handleAccessDevicesSelection = (values: AccessDeviceValues) => {
+    setAnswer('accessDevices', values);
+    handleNext();
+  };
+
   // Handle start over (reset questionnaire)
   const handleStartOver = () => {
     // Use the context's reset function
@@ -158,6 +201,14 @@ const Questionnaire = () => {
           onBack={handleBack}
         />
       );
+    } else if (currentQuestion.id === 'accessDevices') {
+      return (
+        <AccessDevicesSelection
+          key="access-devices-selection"
+          onNext={handleAccessDevicesSelection}
+          onBack={handleBack}
+        />
+      );
     } else if (currentQuestion.id === 'results') {
       return (
         <ErrorBoundary resetLabel={t('errors.tryAgain')} onReset={resetSurvey}>
@@ -173,6 +224,7 @@ const Questionnaire = () => {
         <QuestionCard
           key={currentQuestion.id}
           question={currentQuestion.question}
+          help={currentQuestion.help}
           options={currentQuestion.options}
           type={currentQuestion.type as 'options' | 'slider' | 'boolean'}
           selectedValue={answers[currentQuestion.id]}

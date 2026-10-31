@@ -1,7 +1,7 @@
 ---
 title: Particionamiento
 sourcePath: guides/disk-partitioning.md
-sourceHash: 09359b725b9a277e
+sourceHash: 6a63f9256d463c4c
 translatedBy: glm-4.6
 ---
 
@@ -22,8 +22,6 @@ El particionamiento de discos divide un dispositivo de almacenamiento en seccion
 5. **Tolerancia a fallos**: Evita que una partición llena afecte a todo el sistema[17]
 
 ## Esquema de particiones recomendado para servidores comunitarios
-
-`[Partition Layout Example](partition-layout.png)`
 
 ### Esquema de particiones estándar
 
@@ -72,8 +70,6 @@ sudo yum install gparted  # CentOS/RHEL
    ```
 2. Introduce tu contraseña de administrador cuando se solicite
 3. GParted escaneará todos los dispositivos de almacenamiento disponibles
-
-`[GParted In Use](gparted-screenshot.png)`
 
 #### Paso 2: Seleccionar el disco de destino
 

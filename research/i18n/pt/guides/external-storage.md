@@ -1,7 +1,7 @@
 ---
 title: Armazenamento Externo
 sourcePath: guides/external-storage.md
-sourceHash: d3eeb09683b95b52
+sourceHash: 32d256e985b282f9
 translatedBy: glm-4.6
 ---
 
@@ -60,8 +60,6 @@ Identifique as portas de conexão disponíveis:
 ## Passo 1: Conexão Física
 
 ### Conexão de Disco USB
-
-`[Mounting External Drive](mounting-external-drive.png)`
 
 1. **Localize a porta USB apropriada** (USB 3.0+ recomendado para melhor desempenho)
 2. **Conecte o disco** garantindo uma conexão segura
@@ -186,8 +184,6 @@ sudo fdisk /dev/sdb
 ```
 
 ### Formate a Partição
-
-`[Filesystem Format Screenshot](format-drive-ui.png)`
 
 Escolha o sistema de arquivos apropriado conforme suas necessidades:
 

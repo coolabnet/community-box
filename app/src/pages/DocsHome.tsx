@@ -3,12 +3,14 @@ import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import { BookOpen, HardDrive, Settings, Network, Users, FileText } from 'lucide-react';
+import { normalizeDocLang, resolveTitle } from '@/lib/markdown';
 
 type QuickLinkSection = {
   titleKey: string;
   descKey: string;
   icon: ReactNode;
-  links: { titleKey?: string; title?: string; to: string }[];
+  // docPath: title resolved like the sidebar (doc frontmatter / translation); titleKey: i18n label
+  links: { titleKey?: string; docPath?: string; title?: string; to: string }[];
 };
 
 const quickLinks: QuickLinkSection[] = [
@@ -40,7 +42,7 @@ const quickLinks: QuickLinkSection[] = [
     links: [
       { titleKey: 'docsHome.links.libremeshOverview', to: '/docs/guides/libremesh-overview' },
       { titleKey: 'docsHome.links.meshBasics', to: '/docs/guides/mesh-network-basics' },
-      { titleKey: 'docsHome.links.routerSetup', to: '/docs/guides/router-selection-guide' }
+      { docPath: 'guides/router-selection-guide', to: '/docs/guides/router-selection-guide' }
     ]
   },
   {
@@ -48,13 +50,15 @@ const quickLinks: QuickLinkSection[] = [
     descKey: 'docsHome.sections.community.description',
     icon: <Users className="h-8 w-8" />,
     links: [
-      { titleKey: 'docsHome.links.globalNetworks', to: '/docs/results/global-community-networks-directory' }
+      { titleKey: 'docsHome.links.communityMap', to: '/docs/directory' },
+      { docPath: 'results/global-community-networks-directory', to: '/docs/results/global-community-networks-directory' }
     ]
   }
 ];
 
 export default function DocsHome() {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
+  const lang = normalizeDocLang(i18n.resolvedLanguage);
 
   return (
     <div className="max-w-6xl mx-auto">
@@ -106,7 +110,7 @@ export default function DocsHome() {
                   to={link.to}
                   className="block text-blue-600 hover:text-blue-800 text-sm hover:underline"
                 >
-                  → {link.titleKey ? t(link.titleKey) : link.title}
+                  → {link.docPath ? resolveTitle(link.docPath, lang) : link.titleKey ? t(link.titleKey) : link.title}
                 </Link>
               ))}
             </div>

@@ -254,7 +254,7 @@ const PDFTemplate = ({ recommendation, alternatives, answers }: PDFTemplateProps
           {/* Basic questions */}
           <div className="grid grid-cols-2 gap-4">
             {Object.entries(answers)
-              .filter(([key]) => !['points', 'usage'].includes(key))
+              .filter(([key]) => !['points', 'usage', 'accessDevices'].includes(key))
               .map(([key, value]) => (
                 <div key={key} data-pdf-block className="p-3 bg-gray-50 rounded-lg border border-gray-200">
                   <div className="font-medium text-gray-800 mb-1">
@@ -315,6 +315,23 @@ const PDFTemplate = ({ recommendation, alternatives, answers }: PDFTemplateProps
                   </div>
                   );
                 })}
+              </div>
+            </div>
+          )}
+
+          {/* Access devices */}
+          {answers.accessDevices && (
+            <div data-pdf-block className="p-4 bg-gray-50 rounded-lg border border-gray-200">
+              <h4 className="font-medium text-gray-800 mb-2">
+                {t('questionnaire.questions.accessDevices.question')}
+              </h4>
+
+              <div className="grid grid-cols-2 gap-3">
+                {Object.keys(answers.accessDevices).map((key) => (
+                  <div key={key} className="text-gray-800">
+                    {t(`questionnaire.questions.accessDevices.options.${key}`)}
+                  </div>
+                ))}
               </div>
             </div>
           )}

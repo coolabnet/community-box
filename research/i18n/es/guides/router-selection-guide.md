@@ -1,7 +1,7 @@
 ---
 title: Selección de Router
 sourcePath: guides/router-selection-guide.md
-sourceHash: 71ea6aa25cbec92a
+sourceHash: 561fe8f7603030d2
 translatedBy: glm-4.6
 ---
 
@@ -21,8 +21,6 @@ Antes de adentrarte en las especificaciones detalladas, usa esta matriz para det
 | Puertos Ethernet | 1 LAN | 4 LAN + 1 WAN | 5+ Gigabit |
 | Chipset | Cualquiera compatible con OpenWrt | Atheros/MediaTek | Atheros ath9k/ath10k |
 
-*`[Router Hardware Lineup](router-lineup.png)` — Foto que muestra varios modelos de routers recomendados lado a lado, incluyendo modelos de TP-Link, GL.iNet y Asus.*
-
 ## Análisis Profundo de los Requisitos de Hardware
 
 ### Especificaciones de Memoria
@@ -36,8 +34,6 @@ Antes de adentrarte en las especificaciones detalladas, usa esta matriz para det
 - **64 MB mínimo**: Operación básica de malla con conexiones concurrentes limitadas
 - **128 MB recomendado**: Rendimiento estable con 20-50 dispositivos
 - **256+ MB ideal**: Nodos de alta capacidad que soportan 100+ dispositivos y funciones avanzadas
-
-*`[Specs Label Closeup](router-specs-label.png)` — Primer plano de la etiqueta de un router que muestra especificaciones/etiquetas relevantes, incluyendo especificaciones de memoria e información del modelo.*
 
 > **💡 Consejo**: Busca la etiqueta de especificaciones en la parte inferior o posterior del router. Las especificaciones de memoria suelen aparecer como "Flash: XXX MB" y "RAM: XXX MB".
 
