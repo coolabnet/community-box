@@ -570,7 +570,9 @@ async function getCcciDirectory(options = {}) {
     SERVICE_COLUMNS.forEach(([key, column]) => { labels[key] = column; });
     for (const [key, label] of Object.entries(labels)) {
       const before = previousSnapshot.columns[key];
-      if (before >= MIN_COLUMN_BASELINE && current[key] < MIN_COLUMN_RETAINED_RATIO * before) {
+      // Sparse columns are too small for a ratio, but emptying one entirely is still a reshaped export
+      const emptied = before > 0 && current[key] === 0;
+      if (emptied || (before >= MIN_COLUMN_BASELINE && current[key] < MIN_COLUMN_RETAINED_RATIO * before)) {
         throw new Error(
           `CCCI export column "${label}" fell from ${before} to ${current[key]} CCCI networks ` +
           `(below ${MIN_COLUMN_RETAINED_RATIO * 100}% of the saved snapshot); export rejected`

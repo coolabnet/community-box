@@ -535,11 +535,19 @@ runner.test('CCCI column guard: moderate change (10% of statuses) still saves', 
   assert(!error && saved.length === 1, `moderate change should save, got: ${error && error.message}`);
 });
 
-runner.test('CCCI column guard: small baselines are not guarded', async () => {
+runner.test('CCCI column guard: small baselines allow partial declines', async () => {
+  const records = validCcciRecords(60);
+  for (let i = 0; i < 50; i++) records[i]['Project status'] = ''; // 60 -> 10, baseline 19
+  const { saved, error } = await runCcciWithCsv(ccciCsv(records), fullSnapshot({ status: 19 }));
+  assert(!error && saved.length === 1, `partial decline below baseline 20 should save: ${error && error.message}`);
+});
+
+runner.test('CCCI column guard: emptied sparse column is not saved', async () => {
   const records = validCcciRecords(60);
   records.forEach(r => { r['Project status'] = ''; });
-  const { saved, error } = await runCcciWithCsv(ccciCsv(records), fullSnapshot({ status: 19 }));
-  assert(!error && saved.length === 1, `baseline below 20 should not guard: ${error && error.message}`);
+  const { saved, error } = await runCcciWithCsv(ccciCsv(records), fullSnapshot({ status: 11 }));
+  assert(error && /"Project status" fell from 11 to 0/.test(error.message), `expected emptied-column error, got: ${error && error.message}`);
+  assert(saved.length === 0, 'save called with an emptied sparse column');
 });
 
 runner.test('CCCI snapshot summary counts CCCI-sourced networks only', async () => {
