@@ -4,75 +4,77 @@ title: OONI Network Testing
 
 # OONI Probe: Testing Whether Websites Are Blocked
 
-OONI Probe is a free app. It checks whether websites and apps are blocked on a network. A member runs it on their own phone or computer. It is not a server, and it does not run on the Community Box.
-
-This guide explains what OONI Probe does, where its results go, and what risks a member should consider before running it.
+OONI Probe is a free tool. It checks whether websites and apps are blocked on a network. It runs on a member's phone or computer. It is not a server service. This guide recommends personal devices as the deployment choice. The OONI command-line tool can also run on Linux and Raspberry Pi, but this guide does not recommend installing it on a Community Box or any shared server.
 
 ## What OONI Probe Does
 
-OONI Probe runs tests from the device where it is installed. It can test whether a website or app is blocked. It can also measure network speed and performance. The OONI project describes it as a way to [test the blocking of websites and apps](https://ooni.org/).
+OONI Probe runs tests from the device where it is installed. It can test whether a website or app is blocked. It can also measure network speed and performance. The [OONI home page](https://ooni.org/) describes it as a tool to test the blocking of websites and apps.
 
 OONI Probe is available in these forms:
 
 - **Mobile:** Android and iOS. The app is on Google Play, the App Store, and F-Droid ([install page](https://ooni.org/install)).
 - **Desktop:** Windows and macOS ([install page](https://ooni.org/install)).
-- **Command line:** Linux and macOS ([install page](https://ooni.org/install), with instructions at [ooni.org/install/cli](https://ooni.org/install/cli)).
+- **Command line:** Linux and macOS on the install page. The [CLI guide](https://ooni.org/support/ooni-probe-cli) lists macOS, Debian/Ubuntu, and Raspberry Pi as supported platforms.
 
-Each form has its own user guide on the OONI support site.
+## What Gets Published
 
-## Where Results Go
+The [OONI data policy](https://ooni.org/about/data-policy/) describes what is collected by default, unless you opt out of sending measurements:
 
-OONI publishes test results. The OONI Explorer site shows the data as [open data on internet censorship](https://explorer.ooni.org/). The Explorer page says the data was collected by the global OONI community, and it asks users to install OONI Probe and run tests to add to it.
+- the date and time of each measurement, which cannot be turned off,
+- a country code, derived from your IP address, which cannot be turned off,
+- your network (ASN) and network type, such as Wi-Fi or mobile data, which cannot be turned off,
+- the operating system (apps) or browser name,
+- the measurements from the tests you run.
 
-By default, OONI sends each measurement to its collector. The collector publishes it on OONI Explorer and through the OONI API. A user can opt out in the app settings ([OONI risks page](https://ooni.org/about/risks/)).
+The policy says OONI does not aim to store IP addresses and removes them where it can. It also says the probe may send data that contains identifying information, such as IP addresses or HTTP headers.
 
-The OONI risks page says published data includes:
+[OONI Explorer](https://explorer.ooni.org/) publishes this open data. The [risks page](https://ooni.org/about/risks/) says measurements are published by default and that you can opt out in the app settings.
 
-- your approximate location,
-- the network (ASN) you connect from,
-- the time you ran the test.
+**Performance tests are different.** The data policy says that if you run the performance tests, M-Lab collects and publishes your IP address whatever your OONI Probe settings are. Opting out of OONI does not stop this. Do not run performance tests unless you accept that your IP address will be published.
 
-OONI says it does not deliberately collect your IP address. The page also says an IP address may still appear in HTTP headers or other metadata.
+## Automated Tests on Linux Installs
+
+The [CLI guide](https://ooni.org/support/ooni-probe-cli) says that on Debian/Ubuntu and Raspberry Pi, automated testing is performed by default after install. These automated runs execute as the `ooniprobe` user, not as your login user.
+
+To review results from those automated runs, the guide uses the `OONI_HOME` setting. For example:
+
+- `sudo OONI_HOME=/var/lib/ooniprobe -u ooniprobe ooniprobe list`
+- `sudo OONI_HOME=/var/lib/ooniprobe -u ooniprobe ooniprobe show <measurement-id>`
+
+The guide documents the `ooniprobe autorun` commands (start, stop, status, and log commands), but it says these work only on macOS. It does not document how to disable automated tests on Debian/Ubuntu or Raspberry Pi. The config key `sharing.upload_results` controls uploads, not scheduling.
+
+For that reason, do not install the CLI on Debian/Ubuntu or Raspberry Pi unless you have a tested way to stop automated runs. Check the current OONI documentation or ask the project before you install it there.
 
 ## Legal and Safety Risks
 
-OONI's own risks page is the main source for this section. Read it in full before you install the app.
+OONI's own [risks page](https://ooni.org/about/risks/) is the main source for this section. Read it in full before you install the app.
 
-Key points from that page:
-
-- Legal risk varies by country. OONI advises members to [consult a lawyer licensed in their country](https://ooni.org/about/risks/) before they install or run OONI Probe.
+- Legal risk varies by country. OONI advises members to consult a lawyer licensed in their country before they install or run OONI Probe.
 - In some countries, active network measurement may be illegal. The page says it may be treated as a form of espionage.
 - Anyone who watches your internet traffic, such as an ISP, a government, or an employer, can see that you run OONI Probe.
 - The Web Connectivity test contacts a wide range of sites. Some may be objectionable or illegal in some countries.
-- OONI states that users run the software at their own risk.
+- OONI says users run the software at their own risk.
 
 This guide does not give legal advice. Each member must decide for themselves, with a local lawyer if possible. The community should not push members to run the tests.
 
 ## Fit With a Community Network
 
-OONI Probe fits as a companion app. Members install it on their own devices. The community does not need to host anything.
-
-Network needs:
-
-- The tests contact websites, so the device needs a connection while the test runs.
-- Results are uploaded to OONI. The risks page describes this upload as the default path.
-- On a network with no internet, the tests cannot reach the sites they check. A member can still install the app ahead of time.
-
-A community network with weak or no internet should not plan on regular OONI runs. A member with a usable connection may run tests on the community's behalf, but only if that member accepts the risks above.
+OONI Probe fits as a companion app on members' own devices. The community does not need to host anything. The tests contact websites, so a device needs a connection while a test runs. On a network with no internet, the tests cannot reach the sites they check. A community with weak or no internet should not plan on regular OONI runs.
 
 ## Open Questions
 
-- (inferred) The CLI may hold results until a connection returns. The docs fetched for this guide did not confirm this. Check the [CLI user guide](https://ooni.org/support/ooni-probe-cli) before relying on it.
+- (inferred) The CLI may hold results until a connection returns. The fetched CLI guide did not confirm this.
 - (inferred) Older phones may not run the mobile app well. Not tested or verified here.
-- The OONI Probe software license is linked from the risks page as [github.com/ooni/license](https://github.com/ooni/license). The text was not checked for this guide.
+- The OONI software license is linked from the risks page as [github.com/ooni/license](https://github.com/ooni/license). The text was not checked for this guide.
+- The guide does not document how to disable automated CLI tests on Debian/Ubuntu or Raspberry Pi. Verify with OONI before relying on any method.
 
 ## Sources
 
 Fetched 2026-10-30.
 
 - https://ooni.org/ (OONI home page: what the project and app do)
-- https://ooni.org/install (platforms: Android, iOS, Windows, macOS, Linux CLI)
-- https://ooni.org/install/cli (linked from the install page; not fetched directly)
-- https://ooni.org/support/ooni-probe-cli (linked from the install page; not fetched directly)
-- https://ooni.org/about/risks/ (publication default, published fields, legal and safety risks, software license link)
-- https://explorer.ooni.org/ (OONI Explorer: open data, contribution by running tests)
+- https://ooni.org/install (platforms: Android, iOS, Windows, macOS, Linux and macOS CLI)
+- https://ooni.org/support/ooni-probe-cli (CLI platforms, automated tests by default on Debian/Ubuntu and Raspberry Pi, OONI_HOME review commands, autorun macOS only, sharing.upload_results)
+- https://ooni.org/about/data-policy/ (default collected fields, M-Lab IP publication for performance tests)
+- https://ooni.org/about/risks/ (publication default, opt-out, legal and safety risks, software license link)
+- https://explorer.ooni.org/ (OONI Explorer: open data)

@@ -25,7 +25,7 @@ Anything that needs a live internet service to play does not meet the offline te
 Use these questions before you add anything:
 
 - **License:** Is the code or content under a free or open license? Read the license file. Do not rely on a summary.
-- **Offline use:** Does it run with no internet after setup? Test it with the router unplugged.
+- **Offline use:** Does it run with no internet after setup? Test it by disconnecting the internet uplink only. Keep the local network powered, so the server and Wi-Fi stay up.
 - **Resources:** Will it run on the hardware you have? Test on the weakest device you plan to use.
 - **Languages:** Is the interface, or the content, in a language the members read?
 - **Age fit:** Check the rating or content notes. Mixed-age groups need extra care.
@@ -39,7 +39,7 @@ Each example below was checked on its official site or repository. None was test
 
 **2. Jellyfin (local media server).** Jellyfin describes itself as [free software](https://jellyfin.org/) that lets you collect, manage, and stream your media from a server you run. A community could host films, music, and other media it has rights to. Check the content rights and the server's resource needs before you plan.
 
-**3. Kiwix (offline reading library).** The Kiwix tools repository describes [kiwix-serve and kiwix-manage](https://github.com/Kiwix/kiwix-tools) as command-line Kiwix tools. Its topics include "offline" and "zim". Kiwix is reading material, not a game. Include it only if the community sees offline reading as entertainment. The project site also offers [hotspot devices](https://kiwix.org/).
+**3. Kiwix (offline reading library).** The Kiwix tools repository describes [kiwix-serve and kiwix-manage](https://github.com/Kiwix/kiwix-tools) as command-line Kiwix tools. Its repository topics include offline use and the ZIM format. Kiwix is reading material, not a game. Include it only if the community sees offline reading as entertainment. The project site also offers [hotspot devices](https://kiwix.org/).
 
 Two more candidate types were considered but not verified here:
 
