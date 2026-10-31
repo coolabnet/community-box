@@ -44,17 +44,11 @@ jobs:
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
           git add research/fetched-data/
+          # Writes ccci_changed to $GITHUB_OUTPUT: parsed JSON vs HEAD, ignoring timestamp/retrievedAt.
+          node scripts/fetch-data/ccci-changed.js
           if git diff --staged --quiet; then
             echo "No data changes to commit"
-            echo "ccci_changed=false" >> "$GITHUB_OUTPUT"
           else
-            # CCCI directory changed beyond its timestamp/retrievedAt lines?
-            CCCI_CHANGES=$(git diff --staged -U0 -- research/fetched-data/ccci-directory.json | grep '^[+-] ' | grep -v -E 'timestamp|retrievedAt' || true)
-            if [ -n "$CCCI_CHANGES" ]; then
-              echo "ccci_changed=true" >> "$GITHUB_OUTPUT"
-            else
-              echo "ccci_changed=false" >> "$GITHUB_OUTPUT"
-            fi
             git commit -m "chore: update fetched data [skip ci]"
             git push
           fi

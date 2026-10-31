@@ -19,6 +19,9 @@ const OUTPUT_FILE = 'ccci-directory.json';
 // Refuse to publish a suspiciously small or malformed export.
 const MIN_VALID_ROWS = 50;
 const MAX_UNMAPPED_COUNTRY_RATIO = 0.05;
+const MAX_SKIPPED_ROW_RATIO = 0.05;
+const MIN_RETAINED_RATIO = 0.8; // valid rows vs the previous saved snapshot
+const OUTPUT_PATH = path.resolve(__dirname, '../../research/fetched-data', OUTPUT_FILE);
 
 // Fixed output order; each key maps to a CSV column that must read "Yes".
 const SERVICE_COLUMNS = [
@@ -160,7 +163,16 @@ function parseCsv(text) {
   let row = [];
   let field = '';
   let inQuotes = false;
+  let atFieldStart = true; // a quote may open a quoted field only here
+  let afterQuote = false;  // a closing quote was just read
   let i = 0;
+
+  const endField = () => {
+    row.push(field);
+    field = '';
+    atFieldStart = true;
+    afterQuote = false;
+  };
 
   while (i < src.length) {
     const c = src[i];
@@ -172,6 +184,7 @@ function parseCsv(text) {
           i += 2;
         } else {
           inQuotes = false;
+          afterQuote = true;
           i += 1;
         }
       } else {
@@ -181,21 +194,28 @@ function parseCsv(text) {
       continue;
     }
 
+    if (afterQuote && c !== ',' && c !== '\r' && c !== '\n') {
+      throw new Error(`Malformed CSV at offset ${i}: text after closing quote`);
+    }
+
     if (c === '"') {
+      if (!atFieldStart) {
+        throw new Error(`Malformed CSV at offset ${i}: quote inside unquoted field`);
+      }
       inQuotes = true;
+      atFieldStart = false;
       i += 1;
     } else if (c === ',') {
-      row.push(field);
-      field = '';
+      endField();
       i += 1;
     } else if (c === '\r' || c === '\n') {
-      row.push(field);
+      endField();
       rows.push(row);
       row = [];
-      field = '';
       i += (c === '\r' && src[i + 1] === '\n') ? 2 : 1;
     } else {
       field += c;
+      atFieldStart = false;
       i += 1;
     }
   }
@@ -203,8 +223,8 @@ function parseCsv(text) {
   if (inQuotes) {
     throw new Error('Malformed CSV: unterminated quoted field');
   }
-  if (field !== '' || row.length > 0) {
-    row.push(field);
+  if (field !== '' || row.length > 0 || afterQuote) {
+    endField();
     rows.push(row);
   }
 
@@ -262,12 +282,13 @@ function normalizeWebsite(value) {
  * Turn CSV records (objects keyed by header) into normalized networks.
  * Rows without ID or Name are skipped.
  * @param {Object[]} rows
- * @returns {{networks: Object[], unmatchedCountries: string[], unmappedRows: number}}
+ * @returns {{networks: Object[], unmatchedCountries: string[], unmappedRows: number, skippedRows: number}}
  */
 function normalizeRows(rows) {
   const networks = [];
   const unmatched = new Set();
   let unmappedRows = 0;
+  let skippedRows = 0;
 
   for (const record of rows) {
     const r = {};
@@ -277,7 +298,10 @@ function normalizeRows(rows) {
 
     const id = r.id;
     const name = r.name;
-    if (!id || !name) continue;
+    if (!id || !name) {
+      skippedRows += 1;
+      continue;
+    }
 
     const country = mapCountry(r.country);
     if (!country.known) {
@@ -311,7 +335,7 @@ function normalizeRows(rows) {
     console.warn(`CCCI country not mapped to ISO code: "${name}" (country set to null)`);
   }
 
-  return { networks, unmatchedCountries, unmappedRows };
+  return { networks, unmatchedCountries, unmappedRows, skippedRows };
 }
 
 /**
@@ -379,12 +403,30 @@ function mergeCurated(networks, curated) {
 }
 
 /**
+ * Row count of the currently saved snapshot, or null when there is none.
+ * @returns {number|null}
+ */
+function readPreviousRows() {
+  if (!fs.existsSync(OUTPUT_PATH)) return null;
+  try {
+    const previous = JSON.parse(fs.readFileSync(OUTPUT_PATH, 'utf8'));
+    const rows = previous && previous.data && previous.data.source && previous.data.source.rows;
+    return Number.isFinite(rows) ? rows : null;
+  } catch (error) {
+    console.warn(`Could not read previous snapshot ${OUTPUT_PATH}: ${error.message}`);
+    return null;
+  }
+}
+
+/**
  * Download (or take csvText), normalize and merge the CCCI directory.
  * Throws without returning data when the export is unusable, so callers
  * never overwrite the existing output.
  * @param {Object} [options]
  * @param {string} [options.csvText] - CSV text to use instead of downloading (tests)
  * @param {() => Promise<string>} [options.fetchText] - Replaces the HTTP download (tests)
+ * @param {number|null} [options.previousRows] - Rows in the saved snapshot; null skips the
+ *   80% check; default reads the current output file
  * @returns {Promise<Object>} The `data` object for ccci-directory.json
  */
 async function getCcciDirectory(options = {}) {
@@ -410,6 +452,13 @@ async function getCcciDirectory(options = {}) {
 
   const header = table[0].map(h => h.trim());
   const keys = header.map(headerKey);
+  const seen = new Set();
+  keys.forEach((key, i) => {
+    if (seen.has(key)) {
+      throw new Error(`CCCI export has duplicate column "${header[i]}"; export rejected`);
+    }
+    seen.add(key);
+  });
   const missing = REQUIRED_COLUMNS.filter(c => !keys.includes(headerKey(c)));
   if (missing.length > 0) {
     throw new Error(`CCCI export header missing required column(s): ${missing.join(', ')}`);
@@ -432,12 +481,27 @@ async function getCcciDirectory(options = {}) {
     Object.fromEntries(header.map((h, i) => [h, row[i] ?? '']))
   );
 
-  const { networks: ccciNetworks, unmatchedCountries, unmappedRows } = normalizeRows(records);
+  const { networks: ccciNetworks, unmatchedCountries, unmappedRows, skippedRows } = normalizeRows(records);
+
+  if (records.length > 0 && skippedRows / records.length > MAX_SKIPPED_ROW_RATIO) {
+    throw new Error(
+      `CCCI export: ${skippedRows} of ${records.length} rows have no ID or Name ` +
+      `(limit ${MAX_SKIPPED_ROW_RATIO * 100}%); export rejected`
+    );
+  }
 
   if (records.length > 0 && unmappedRows / records.length > MAX_UNMAPPED_COUNTRY_RATIO) {
     throw new Error(
       `CCCI export: ${unmappedRows} of ${records.length} rows have a country with no ISO code ` +
       `(limit ${MAX_UNMAPPED_COUNTRY_RATIO * 100}%); export rejected`
+    );
+  }
+
+  const previousRows = options.previousRows !== undefined ? options.previousRows : readPreviousRows();
+  if (previousRows && ccciNetworks.length < MIN_RETAINED_RATIO * previousRows) {
+    throw new Error(
+      `CCCI export has ${ccciNetworks.length} valid rows, below ${MIN_RETAINED_RATIO * 100}% of the ` +
+      `${previousRows} rows in the saved snapshot; export rejected`
     );
   }
 

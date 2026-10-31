@@ -4,6 +4,7 @@ const fs = require('fs');
 const path = require('path');
 const { SCRIPTS } = require('../run-all');
 const { parseCsv, normalizeRows, mergeCurated, getCcciDirectory, fetchCcciDirectory } = require('../get-ccci-directory');
+const { ccciChanged } = require('../ccci-changed');
 
 /**
  * Simple test framework for data fetching scripts
@@ -276,6 +277,21 @@ runner.test('CCCI parseCsv rejects unterminated quoted field', async () => {
   assert(threw, 'expected unterminated quote error');
 });
 
+runner.test('CCCI parseCsv rejects a quote inside an unquoted field', async () => {
+  let message = null;
+  try { parseCsv('ID,Name\nCCCI-1,Y"e"s'); } catch (e) { message = e.message; }
+  assert(message && /quote inside unquoted field/.test(message), `expected quote error, got: ${message}`);
+});
+
+runner.test('CCCI parseCsv rejects text after a closing quote', async () => {
+  let message = null;
+  try { parseCsv('ID,Name\nCCCI-1,"a"b'); } catch (e) { message = e.message; }
+  assert(message && /after closing quote/.test(message), `expected closing-quote error, got: ${message}`);
+  // A closing quote followed by comma, newline or end of input is fine.
+  const rows = parseCsv('a,"b",c\n"d"\r\n"e"');
+  assert(rows[0][1] === 'b' && rows[1][0] === 'd' && rows[2][0] === 'e', 'valid closing quotes rejected');
+});
+
 runner.test('CCCI status mapping', async () => {
   const cases = { Active: 'active', Inactive: 'inactive', Inprogress: 'inProgress', 'In progress': 'inProgress',
     Dormant: 'dormant', Pilot: 'pilot', Planned: 'planned', Ceased: 'ceased', '': 'unknown', Weird: 'unknown' };
@@ -372,12 +388,13 @@ function validCcciRecords(count) {
 }
 
 // Runs fetchCcciDirectory with an injected fetch and save; returns the save calls.
-async function runCcciWithCsv(csvText) {
+async function runCcciWithCsv(csvText, previousRows = null) {
   const saved = [];
   let error = null;
   try {
     await fetchCcciDirectory({
       fetchText: async () => csvText,
+      previousRows,
       save: (filename, data, metadata) => saved.push({ filename, data, metadata })
     });
   } catch (e) {
@@ -389,7 +406,7 @@ async function runCcciWithCsv(csvText) {
 runner.test('CCCI getCcciDirectory rejects export with fewer than 50 rows', async () => {
   let message = null;
   try {
-    await getCcciDirectory({ csvText: ccciCsv(validCcciRecords(10)) });
+    await getCcciDirectory({ csvText: ccciCsv(validCcciRecords(10)), previousRows: null });
   } catch (e) {
     message = e.message;
   }
@@ -440,6 +457,45 @@ runner.test('CCCI save boundary: unterminated quote is not saved', async () => {
   const { saved, error } = await runCcciWithCsv(lines.join('\n'));
   assert(error && /unterminated/.test(error.message), `expected unterminated error, got: ${error && error.message}`);
   assert(saved.length === 0, 'save called for unterminated quote');
+});
+
+runner.test('CCCI save boundary: duplicate header names are not saved', async () => {
+  const header = CCCI_HEADER.replace('Project status', 'Project status,PROJECT STATUS');
+  const records = validCcciRecords(60);
+  const { saved, error } = await runCcciWithCsv(ccciCsv(records.map(r => ({ ...r, 'PROJECT STATUS': 'Active' })), header));
+  assert(error && /duplicate column/.test(error.message), `expected duplicate error, got: ${error && error.message}`);
+  assert(saved.length === 0, 'save called with duplicate headers');
+});
+
+runner.test('CCCI save boundary: more than 5% rows without ID or Name is not saved', async () => {
+  const records = validCcciRecords(60);
+  for (let i = 0; i < 4; i++) records[i].ID = ''; // 4/60 = 6.7% lost
+  const rejected = await runCcciWithCsv(ccciCsv(records));
+  assert(rejected.error && /no ID or Name/.test(rejected.error.message), `expected row-loss error, got: ${rejected.error && rejected.error.message}`);
+  assert(rejected.saved.length === 0, 'save called after row loss');
+
+  records[3].ID = 'CCCI-0004'; // 3/60 = 5% is allowed
+  const accepted = await runCcciWithCsv(ccciCsv(records));
+  assert(!accepted.error && accepted.saved.length === 1, 'exactly 5% skipped should be saved');
+});
+
+runner.test('CCCI save boundary: valid count below 80% of saved snapshot is not saved', async () => {
+  const csv = ccciCsv(validCcciRecords(60));
+  const shrunk = await runCcciWithCsv(csv, 100); // 60 < 80
+  assert(shrunk.error && /below 80%/.test(shrunk.error.message), `expected snapshot error, got: ${shrunk.error && shrunk.error.message}`);
+  assert(shrunk.saved.length === 0, 'save called after snapshot shrink');
+
+  const retained = await runCcciWithCsv(csv, 70); // 60 >= 56
+  assert(!retained.error && retained.saved.length === 1, 'retained count should be saved');
+});
+
+runner.test('CCCI ccciChanged ignores timestamp and retrievedAt only', async () => {
+  const base = { timestamp: 'a', script: 'x.js', data: { source: { retrievedAt: 'r1', rows: 5 }, count: 5, networks: [1] } };
+  const sameExceptRun = { ...base, timestamp: 'b', data: { ...base.data, source: { retrievedAt: 'r2', rows: 5 } } };
+  const changedCount = { ...base, data: { ...base.data, count: 6 } };
+  assert(ccciChanged(JSON.stringify(base), JSON.stringify(sameExceptRun)) === false, 'run-only fields counted as change');
+  assert(ccciChanged(JSON.stringify(base), JSON.stringify(changedCount)) === true, 'real change not detected');
+  assert(ccciChanged(null, JSON.stringify(base)) === true, 'missing HEAD file should count as change');
 });
 
 runner.test('CCCI save boundary: more than 5% unmapped countries is not saved', async () => {
