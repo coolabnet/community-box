@@ -20,18 +20,23 @@ for arg in "$@"; do
   esac
 done
 
+# Trim whitespace and surrounding quotes from an agent-browser result (last line only).
+normalize_result() {
+  printf '%s' "$1" | tail -n 1 | tr -d '"\r' | sed 's/^[[:space:]]*//;s/[[:space:]]*$//'
+}
+
 PREVIEW_PID=""
 GHPAGES_PID=""
-BROWSER_OPENED=false
+BROWSER_OPENED=0
 cleanup() {
   # Dry run starts no servers and must not touch the browser.
   if [ "$DRY_RUN" = true ]; then
     return 0
   fi
-  # Close only the browser this run opened.
-  if [ "$BROWSER_OPENED" = true ]; then
+  # Close only the browser this run opened (session is isolated above).
+  if [ "$BROWSER_OPENED" = 1 ]; then
     npx agent-browser close 2>/dev/null || true
-    BROWSER_OPENED=false
+    BROWSER_OPENED=0
   fi
   # Servers run in their own process group (set -m), so kill the whole group:
   # killing npm alone leaves the vite child running.
@@ -66,7 +71,7 @@ else
   INTERVAL=1
   ELAPSED=0
   while [ $ELAPSED -lt $MAX_WAIT ]; do
-    if curl -s "$BASE_URL" > /dev/null 2>&1; then
+    if curl -s --max-time 5 "$BASE_URL" > /dev/null 2>&1; then
       echo "✅ Preview server ready"
       break
     fi
@@ -97,13 +102,13 @@ if [ "$DRY_RUN" = true ]; then
 else
   echo -n "Testing: /community-box/ (home) ... "
   # Pin English for the whole run: the existing greps expect English strings.
-  npx agent-browser open "$BASE_URL/" 2>/dev/null
-  BROWSER_OPENED=true
+  BROWSER_OPENED=1
+  npx agent-browser open "$BASE_URL/" 2>/dev/null || true
   npx agent-browser eval "localStorage.setItem('i18nextLng','en')" 2>/dev/null || true
-  npx agent-browser open "$BASE_URL/" 2>/dev/null
+  npx agent-browser open "$BASE_URL/" 2>/dev/null || true
   npx agent-browser wait 3000 2>/dev/null || true
   SNAPSHOT=$(npx agent-browser snapshot 2>/dev/null || echo "ERROR")
-  if echo "$SNAPSHOT" | grep -qi "Community Box\|Hardware\|Software" ; then
+  if [ "$SNAPSHOT" != "ERROR" ] && echo "$SNAPSHOT" | grep -qi "Community Box\|Hardware\|Software" ; then
     echo "✅ PASSED"
   else
     echo "❌ FAILED"
@@ -112,32 +117,32 @@ else
   fi
 
   echo -n "Testing: /questionnaire ... "
-  npx agent-browser open "$BASE_URL/questionnaire" 2>/dev/null
+  npx agent-browser open "$BASE_URL/questionnaire" 2>/dev/null || true
   npx agent-browser wait 3000 2>/dev/null || true
   SNAPSHOT=$(npx agent-browser snapshot 2>/dev/null || echo "ERROR")
-  if echo "$SNAPSHOT" | grep -qi "404\|Not Found" ; then
+  if [ "$SNAPSHOT" != "ERROR" ] && ! echo "$SNAPSHOT" | grep -qi "404\|Not Found" ; then
+    echo "✅ PASSED"
+  else
     echo "❌ FAILED"
     FAILED=1
     FAILED_ROUTES="$FAILED_ROUTES\n  - /community-box/questionnaire"
-  else
-    echo "✅ PASSED"
   fi
 
   echo -n "Testing: /docs/results/global-community-networks-directory ... "
-  npx agent-browser open "$BASE_URL/docs/results/global-community-networks-directory" 2>/dev/null
+  npx agent-browser open "$BASE_URL/docs/results/global-community-networks-directory" 2>/dev/null || true
   npx agent-browser wait 3000 2>/dev/null || true
   SNAPSHOT=$(npx agent-browser snapshot 2>/dev/null || echo "ERROR")
-  if echo "$SNAPSHOT" | grep -qi "Document Not Found\|404" ; then
+  if [ "$SNAPSHOT" != "ERROR" ] && ! echo "$SNAPSHOT" | grep -qi "Document Not Found\|404" ; then
+    echo "✅ PASSED"
+  else
     echo "❌ FAILED"
     FAILED=1
     FAILED_ROUTES="$FAILED_ROUTES\n  - /community-box/docs/results/global-community-networks-directory"
-  else
-    echo "✅ PASSED"
   fi
 
   # Test JSON file with basename
   echo -n "Testing: /research/results/community-directory.json ... "
-  STATUS=$(curl -s -o /dev/null -w "%{http_code}" "$BASE_URL/research/results/community-directory.json" 2>/dev/null || echo "000")
+  STATUS=$(curl -s --max-time 5 -o /dev/null -w "%{http_code}" "$BASE_URL/research/results/community-directory.json" 2>/dev/null || echo "000")
   if [ "$STATUS" = "200" ]; then
     echo "✅ PASSED"
   else
@@ -150,32 +155,25 @@ else
   # serves dist/404.html, so the checks above cannot exercise the
   # 404.html -> /?/path -> receiver round trip. ghpages-server.mjs serves
   # dist/404.html on misses, like GitHub Pages does.
-  echo "🚀 Starting GitHub Pages mimic server on 127.0.0.1:$GHPAGES_PORT..."
+  GHPAGES_LOG_DIR="$(mktemp -d "${TMPDIR:-/tmp}/cb-ghpages-XXXXXX")"
+  GHPAGES_LOG="$GHPAGES_LOG_DIR/ghpages.log"
+  echo "🚀 Starting GitHub Pages mimic server on 127.0.0.1:$GHPAGES_PORT (log: $GHPAGES_LOG)..."
   set -m
-  node "$SCRIPT_DIR/ghpages-server.mjs" &
+  node "$SCRIPT_DIR/ghpages-server.mjs" >"$GHPAGES_LOG" 2>&1 &
   GHPAGES_PID=$!
   set +m
 
-  # Readiness means a known-missing path returns 404 with the 404.html marker.
-  # Vite preview answers unknown paths with index.html (200), so a taken port fails here.
-  GHPAGES_404_MARKER="pathSegmentsToKeep"
-  ghpages_probe_ok() {
-    local url="${GHPAGES_BASE}/__ghpages_probe__"
-    local status body
-    status=$(curl -s -o /dev/null -w '%{http_code}' "$url" 2>/dev/null || echo 000)
-    [ "$status" = "404" ] || return 1
-    body=$(curl -s "$url" 2>/dev/null || true)
-    echo "$body" | grep -q "$GHPAGES_404_MARKER"
-  }
+  # Readiness comes only from our child: its listen callback prints GHPAGES_READY <port> <pid>.
   MAX_WAIT=30
   ELAPSED=0
-  until ghpages_probe_ok; do
+  until grep -qxF "GHPAGES_READY $GHPAGES_PORT $GHPAGES_PID" "$GHPAGES_LOG" 2>/dev/null; do
     if ! kill -0 "$GHPAGES_PID" 2>/dev/null; then
-      echo "❌ GitHub Pages mimic server exited (port $GHPAGES_PORT in use?)"
+      echo "❌ GitHub Pages mimic server exited before readiness (port $GHPAGES_PORT in use?)"
+      tail -n 3 "$GHPAGES_LOG" 2>/dev/null || true
       exit 1
     fi
     if [ $ELAPSED -ge $MAX_WAIT ]; then
-      echo "❌ GitHub Pages mimic server did not answer the 404 probe with the 404.html marker within ${MAX_WAIT}s (port $GHPAGES_PORT)"
+      echo "❌ GitHub Pages mimic server printed no GHPAGES_READY line within ${MAX_WAIT}s (port $GHPAGES_PORT)"
       exit 1
     fi
     sleep 1
@@ -185,14 +183,26 @@ else
     echo "❌ GitHub Pages mimic server exited after readiness (port $GHPAGES_PORT)"
     exit 1
   fi
-  echo "✅ GitHub Pages mimic server ready (404 probe verified)"
+
+  # Probe: a known-missing path must return 404 with the marker from dist/404.html.
+  # Vite preview answers unknown paths with index.html (200), so a foreign server fails here.
+  GHPAGES_404_MARKER="pathSegmentsToKeep"
+  PROBE_URL="${GHPAGES_BASE}/__ghpages_probe__"
+  PROBE_STATUS=$(curl -s --max-time 5 -o /dev/null -w '%{http_code}' "$PROBE_URL" 2>/dev/null || echo 000)
+  PROBE_BODY=$(curl -s --max-time 5 "$PROBE_URL" 2>/dev/null || true)
+  if [ "$PROBE_STATUS" != "404" ] || ! echo "$PROBE_BODY" | grep -q "$GHPAGES_404_MARKER"; then
+    echo "❌ 404 probe failed on port $GHPAGES_PORT (HTTP $PROBE_STATUS, marker missing)"
+    exit 1
+  fi
+  echo "✅ GitHub Pages mimic server ready (pid $GHPAGES_PID, 404 probe verified)"
 
   # Set English on this origin for the next load. Assertions do not depend on language.
-  npx agent-browser open "$GHPAGES_BASE/" 2>/dev/null
+  npx agent-browser open "$GHPAGES_BASE/" 2>/dev/null || true
   npx agent-browser eval "localStorage.setItem('i18nextLng','en')" 2>/dev/null || true
 
   # Expected values are read at runtime from the repo, so the checks follow content changes.
   # Doc H1 comes from research/guides/etcher-guide.md; question and error strings from en.json.
+  # Each generated script returns exactly OK on success or FAIL <reason>.
   DOC_JS=$(APP_DIR="$APP_DIR" node -e '
 const fs = require("fs");
 const path = require("path");
@@ -211,7 +221,7 @@ process.stdout.write("(() => { const ERRS = " + errs + "; const EXPECTED = " + J
   "if (document.querySelector(\x27h2.text-red-600\x27)) return \x27FAIL doc-not-found marker\x27; " +
   "const body = document.body ? document.body.innerText : \x27\x27; " +
   "if (ERRS.some((s) => body.includes(s))) return \x27FAIL error boundary text\x27; " +
-  "return \x27PASS\x27; })()");
+  "return \x27OK\x27; })()");
 ') || { echo "❌ Could not build doc assertions"; exit 1; }
   QS_JS=$(APP_DIR="$APP_DIR" node -e '
 const fs = require("fs");
@@ -228,14 +238,14 @@ process.stdout.write("(() => { const ERRS = " + errs + "; const QUESTION = " + J
   "if (!heads.includes(QUESTION)) return \x27FAIL question heading missing\x27; " +
   "const body = document.body ? document.body.innerText : \x27\x27; " +
   "if (ERRS.some((s) => body.includes(s))) return \x27FAIL error boundary text\x27; " +
-  "return \x27PASS\x27; })()");
+  "return \x27OK\x27; })()");
 ') || { echo "❌ Could not build questionnaire assertions"; exit 1; }
 
   echo -n "Testing: deep link /docs/guides/etcher-guide#top (404.html redirect) ... "
-  npx agent-browser open "$GHPAGES_BASE/docs/guides/etcher-guide#top" 2>/dev/null
+  npx agent-browser open "$GHPAGES_BASE/docs/guides/etcher-guide#top" 2>/dev/null || true
   npx agent-browser wait 3000 2>/dev/null || true
-  RESULT=$(npx agent-browser eval "$DOC_JS" 2>/dev/null || echo "ERROR")
-  if echo "$RESULT" | grep -q "PASS"; then
+  RESULT=$(normalize_result "$(npx agent-browser eval "$DOC_JS" 2>/dev/null || echo "ERROR")")
+  if [ "$RESULT" = "OK" ]; then
     echo "✅ PASSED"
   else
     echo "❌ FAILED ($RESULT)"
@@ -244,10 +254,10 @@ process.stdout.write("(() => { const ERRS = " + errs + "; const QUESTION = " + J
   fi
 
   echo -n "Testing: deep link /questionnaire?step=2&electricity=yes&users=1-2 ... "
-  npx agent-browser open "$GHPAGES_BASE/questionnaire?step=2&electricity=yes&users=1-2" 2>/dev/null
+  npx agent-browser open "$GHPAGES_BASE/questionnaire?step=2&electricity=yes&users=1-2" 2>/dev/null || true
   npx agent-browser wait 3000 2>/dev/null || true
-  RESULT=$(npx agent-browser eval "$QS_JS" 2>/dev/null || echo "ERROR")
-  if echo "$RESULT" | grep -q "PASS"; then
+  RESULT=$(normalize_result "$(npx agent-browser eval "$QS_JS" 2>/dev/null || echo "ERROR")")
+  if [ "$RESULT" = "OK" ]; then
     echo "✅ PASSED"
   else
     echo "❌ FAILED ($RESULT)"
@@ -256,9 +266,9 @@ process.stdout.write("(() => { const ERRS = " + errs + "; const QUESTION = " + J
   fi
 fi
 
-if [ "$BROWSER_OPENED" = true ]; then
+if [ "$BROWSER_OPENED" = 1 ]; then
   npx agent-browser close 2>/dev/null || true
-  BROWSER_OPENED=false
+  BROWSER_OPENED=0
 fi
 
 if [ $FAILED -eq 1 ]; then

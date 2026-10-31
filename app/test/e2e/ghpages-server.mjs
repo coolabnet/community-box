@@ -65,7 +65,18 @@ async function resolveInsideDist(candidate, realDist) {
   return info.isFile() ? real : null;
 }
 
-const REAL_DIST = await realpath(DIST_DIR);
+// Refuse to start unless dist and its 404.html resolve inside the real dist directory.
+let REAL_DIST;
+try {
+  REAL_DIST = await realpath(DIST_DIR);
+  const real404 = await realpath(path.join(DIST_DIR, '404.html'));
+  if (!real404.startsWith(REAL_DIST + path.sep)) {
+    throw new Error(`404.html resolves outside dist: ${real404}`);
+  }
+} catch (err) {
+  console.error(`ghpages-server refused to start: ${err.message}`);
+  process.exit(1);
+}
 
 const server = createServer(async (req, res) => {
   try {
@@ -115,4 +126,6 @@ server.on('error', (err) => {
 
 server.listen(PORT, HOST, () => {
   console.log(`ghpages-server listening on http://${HOST}:${PORT}${PREFIX}/ (dist: ${REAL_DIST})`);
+  // Readiness marker: the e2e script waits for this exact line from its own child.
+  console.log(`GHPAGES_READY ${PORT} ${process.pid}`);
 });
