@@ -1,73 +1,77 @@
 ---
-title: Compartiendo Starlink con una VPN
+title: Compartir Starlink con una VPN
 sourcePath: guides/starlink-sharing-vpn.md
-sourceHash: 9380975334445211
+sourceHash: 4f2438bb31534309
 translatedBy: glm-4.6
 ---
 
-# Compartir una Conexión Starlink a Través de una Red Comunitaria
+# Compartir una Conexión Starlink en una Red Comunitaria
 
-Algunas redes comunitarias usan una conexión Starlink como su enlace a internet. Esta guía explica una configuración básica para compartir ese enlace. También explica por qué los miembros fuera de la red pueden no alcanzar un servidor en el sitio. Se mantiene conceptual. No es una configuración paso a paso.
+Algunas redes comunitarias usan una conexión Starlink como su enlace a internet. Esta guía explica una configuración básica para compartir ese enlace, y por qué los miembros fuera de la red pueden no alcanzar un servidor en el sitio. Es conceptual, no una configuración paso a paso.
 
-## El Problema Central: CGNAT y Acceso Entrante
+## IPv4 Está Bloqueado de Entrada; IPv6 Es Diferente
 
-El centro de ayuda de Starlink dice que su configuración IPv4 predeterminada usa NAT de nivel de operador (CGNAT). CGNAT permite que muchos clientes compartan una dirección pública. Las conexiones entrantes están bloqueadas, por lo que un servidor detrás de la configuración predeterminada no puede ser alcanzado desde el exterior ([Ayuda de Starlink: dirección IP](https://starlink.com/support/article/1192f3ef-2a17-31d9-261a-a59d215629f4)).
+La configuración IPv4 predeterminada de Starlink usa NAT de nivel de operador (CGNAT), que comparte una dirección pública entre muchos clientes. Las conexiones IPv4 entrantes están bloqueadas ([ayuda de Starlink](https://starlink.com/support/article/1192f3ef-2a17-31d9-261a-a59d215629f4)).
 
-Puntos de ese centro de ayuda para verificar en las páginas en vivo:
+Starlink también ofrece IPv6 nativo en sus planes, con un /64 para el lado WAN y un /56 para el lado LAN ([mismo artículo](https://starlink.com/support/article/1192f3ef-2a17-31d9-261a-a59d215629f4); [FAQ Enterprise](https://starlink.com/na/support/article/4c4d6571-065f-f12a-648a-581aac7a9ef8)). El IPv6 entrante aún necesita una regla de router o firewall para el host y puerto específicos. Los routers Wi-Fi propios de Starlink no ofrecen reenvío de puertos ni reglas de firewall, por lo que un router de terceros es la opción habitual. IPv4 público es una opción aparte, disponible solo en algunos planes.
 
-- Una dirección IPv4 pública depende del plan. El centro de ayuda menciona los planes Local y Global Priority.
-- Los routers Wi-Fi propios de Starlink no admiten reenvío de puertos ni reglas de firewall para IPv4 o IPv6.
-- A los miembros que necesitan acceso entrante se les indica usar un router de terceros o un plan con una opción de IPv4 pública.
+Muchas redes donde se conectan los miembros aún carecen de IPv6 (inferido). Así que una VPN o overlay sigue siendo la opción más portable.
 
-IPv6 puede ofrecer otra ruta hacia el acceso entrante. Confirma para tu plan si se proporciona IPv6 nativo y si tu router lo deja pasar. Ver Preguntas Abiertas.
+## Por Qué un Overlay Ayuda
 
-## Por Qué Ayuda una Superposición (Overlay)
+Una VPN u overlay da a cada dispositivo una dirección privada y un túnel cifrado. El túnel todavía necesita una ruta que ambos lados puedan alcanzar.
 
-Una VPN o red de superposición le da a cada dispositivo una dirección privada y un túnel cifrado hacia los demás. El túnel aún necesita una ruta que ambos lados puedan alcanzar. Esa ruta es la parte difícil detrás de CGNAT.
+- **WireGuard** es un [túnel VPN rápido, moderno y seguro](https://www.wireguard.com/). Su [guía de inicio rápido](https://www.wireguard.com/quickstart/) configura cada par con un endpoint y rangos de IP permitidas. Un par debe ser alcanzable en una dirección conocida. Si ambos lados están detrás de CGNAT IPv4, se necesita un tercer host con una dirección alcanzable, como un pequeño servidor alquilado o una ruta IPv6. La guía de inicio rápido no dice qué sucede cuando ambos lados son inalcanzables.
+- **Tailscale** funciona sobre WireGuard. Los nodos se inician a través de servidores DERP, que les ayudan a encontrarse entre sí. Tailscale luego intenta una conexión directa. Los relés DERP transportan tráfico solo cuando ninguna ruta directa funciona. El tráfico retransmitido permanece cifrado de extremo a extremo ([tipos de conexión](https://tailscale.com/docs/reference/connection-types)).
+- **Headscale** es un servidor de control autoalojado para clientes de Tailscale. Intercambia claves públicas de WireGuard y asigna direcciones ([README](https://github.com/juanfont/headscale)). No retransmite tráfico por sí mismo. Tiene un servidor DERP incorporado, deshabilitado por defecto, que retransmite tráfico entre nodos cuando no se puede realizar una conexión directa ([documentación DERP de Headscale](https://headscale.net/stable/ref/derp/)). Una configuración con Headscale puede retransmitir, pero solo si habilitas y alojas ese componente.
 
-- **WireGuard** es un [túnel VPN rápido, moderno y seguro](https://www.wireguard.com/). Su [inicio rápido](https://www.wireguard.com/quickstart/) configura cada par con una dirección de endpoint y rangos de IP permitidos. WireGuard simple necesita un par que el otro lado pueda alcanzar en una dirección conocida. Si el servidor y el cliente están ambos detrás de CGNAT, ninguno puede aceptar la conexión. Entonces se necesita un tercer host con una dirección pública, como un pequeño servidor alquilado. Los paquetes keepalive ayudan a mantener abiertos los mapeos NAT. El inicio rápido no describe qué sucede cuando ambos lados son inalcanzables.
-- **Tailscale** funciona sobre WireGuard. Su [página de tipos de conexión](https://tailscale.com/docs/reference/connection-types) dice que los dispositivos primero intentan conexiones directas sobre UDP. Cuando no funciona ninguna ruta directa, el tráfico pasa por servidores de relé DERP, y el tráfico retransmitido permanece cifrado de extremo a extremo con WireGuard.
-- **Headscale no es un relé.** [Headscale](https://github.com/juanfont/headscale) es un servidor de control autoalojado para clientes de Tailscale. Su README dice que el servidor de control intercambia claves públicas de WireGuard entre nodos y asigna direcciones. No transporta tráfico de miembros. Una configuración de Headscale detrás de CGNAT aún necesita una ruta que funcione. Consulta la documentación propia de Headscale para opciones de relé (inferido).
+## Alcanzar un Servidor en la Red Local
 
-## Protocolos que CGNAT Descarta
+Un túnel en la puerta de enlace no hace, por sí solo, que un servidor LAN sea alcanzable. Dos opciones:
 
-El artículo de Starlink sobre sitio a sitio enumera los protocolos que CGNAT descarta: protocolo IP 47 (GRE), 50 (ESP), 51 (AH) y 115 (L2TP) ([Ayuda de Starlink: VPN sitio a sitio](https://starlink.com/gu/support/article/aa5aecf3-e97c-e84e-3f87-8d2ecdfde857)). El protocolo 115 es un número de protocolo IP. No es lo mismo que L2TP sobre UDP. Prueba tu túnel elegido en el enlace Starlink real antes de salir en vivo.
+- **El servidor ejecuta el cliente del túnel.** Obtiene su propia dirección de túnel, y los miembros lo alcanzan directamente. Esta es la opción más simple.
+- **La puerta de enlace anuncia la subred LAN.** Esto es un router de subred. Un administrador aprueba la ruta anunciada, y la puerta de enlace reenvía paquetes entre interfaces. Las reglas de firewall deben permitir el tráfico hacia el servidor. Las respuestas deben regresar por la puerta de enlace (inferido). La [guía de router de subred de Tailscale](https://tailscale.com/docs/features/subnet-routers/how-to/setup) cubre anunciar, aprobar y reenviar. No cubre completamente el enrutamiento de retorno, así que pruébalo en tu red.
+
+Con WireGuard, el equivalente son los rangos de IP permitidas del par más las reglas de reenvío y firewall en la puerta de enlace.
+
+## Protocolos Que CGNAT Descarta
+
+El artículo de Starlink sitio a sitio enumera los protocolos que CGNAT descarta: protocolo IP 47 (GRE), 50 (ESP), 51 (AH) y 115 (L2TP) ([ayuda de Starlink](https://starlink.com/gu/support/article/aa5aecf3-e97c-e84e-3f87-8d2ecdfde857)). El protocolo 115 es un número de protocolo IP, no L2TP sobre UDP. Prueba tu túnel en el enlace real antes de ponerlo en producción.
 
 ## Topología Básica
 
 1. La antena y el router de Starlink proporcionan el enlace a internet.
-2. Una puerta de enlace que ejecuta OpenWrt o LibreMesh se conecta al router de Starlink. LibreMesh es un [framework de firmware basado en OpenWrt para nodos de malla inalámbrica](https://libremesh.org/).
-3. La puerta de enlace comparte el enlace con los nodos de la malla.
-4. Un cliente de túnel en la puerta de enlace o un servidor se conecta a un par o relé alcanzable.
-5. Los miembros alcanzan el servidor comunitario a través de ese túnel. El servidor en sí permanece detrás de CGNAT.
+2. Una puerta de enlace con OpenWrt o [LibreMesh](https://libremesh.org/) se conecta al router de Starlink y comparte el enlace con los nodos de la mesh.
+3. Un cliente de túnel en la puerta de enlace o en el servidor se conecta a un par o relé alcanzable.
+4. Los miembros alcanzan el servidor comunitario a través del túnel, usando una de las opciones de enrutamiento anteriores.
 
-La puerta de enlace es un único punto de fallo. Planifica una ruta de respaldo o un fallback claro.
+La puerta de enlace es un único punto de fallo. Planifica una ruta de respaldo o una alternativa.
 
-## Ancho de Banda y Uso Justo
+## Ancho de Banda, Términos y Uso Justo
 
-Un enlace compartido tiene capacidad fija, y muchos miembros pueden ralentizarse entre sí. Decide quién puede usar el enlace y para qué. Supervisa el uso durante unas semanas. Da prioridad a los servicios que la comunidad más necesita. Los límites de datos y las reglas de uso justo de Starlink difieren según el plan y no fueron verificados aquí.
+Un enlace compartido tiene una capacidad fija. Decide quién puede usarlo y para qué, y da prioridad a los servicios que la comunidad más necesita. Los límites de datos y las reglas de uso justo de Starlink varían según el plan, y esta guía no los verificó.
 
-## Términos de Reventa y Compartición
-
-Los términos de servicio de Starlink rigen si puedes compartir o revender la conexión. La página de términos no se renderizó en la obtención usada para esta guía. No asumas que compartir está permitido. Lee los términos y pregunta al soporte de Starlink por escrito antes de compartir el enlace con una comunidad.
+Los términos de servicio de Starlink rigen si puedes compartir o revender la conexión. La página de términos no se renderizó en la obtención usada para esta guía. No asumas que compartir está permitido. Consulta primero por escrito al soporte de Starlink.
 
 ## Preguntas Abiertas
 
 - Las reglas de compartición y reventa en los términos de servicio de Starlink no fueron verificadas.
-- Si Starlink proporciona IPv6 nativo en tu plan, y si un router de terceros puede pasar IPv6 entrante a un servidor. Confirma en las páginas en vivo.
-- (inferido) Si las afirmaciones anteriores aún coinciden con las páginas de ayuda en vivo.
-- (inferido) Cómo clasifica el artículo de Starlink a L2TP sobre UDP, que usa UDP en lugar del protocolo IP 115. Confirma con Starlink.
-- Si la dirección IPv4 pública funciona para todos los dispositivos de la comunidad. No probado.
+- Si el IPv6 entrante funciona a través de tu router y plan. Pruébalo.
+- (inferido) Qué tan lejos llega un servidor solo-IPv6, dado cuántas redes de clientes carecen de IPv6.
+- (inferido) Detalles de ruta de retorno y NAT para un router de subred.
+- (inferido) Cómo clasifica el artículo de Starlink el L2TP sobre UDP, que usa UDP en lugar del protocolo IP 115.
 
 ## Fuentes
 
-Obtenido el 2026-10-30. WebFetch de las páginas del centro de ayuda de Starlink devolvió solo la palabra "Starlink", por lo que las afirmaciones de Starlink anteriores provienen de extractos de búsqueda de esas mismas URL. Verifícalas en las páginas en vivo antes de confiar en ellas.
+Obtenido el 2026-10-30. WebFetch de las páginas del centro de ayuda de Starlink devolvió solo la palabra "Starlink," así que las afirmaciones sobre Starlink provienen de extractos de búsqueda de las URLs siguientes. Verifícalas en las páginas en vivo.
 
-- https://starlink.com/support/article/1192f3ef-2a17-31d9-261a-a59d215629f4 (dirección IP y CGNAT; solo extracto)
-- https://starlink.com/gu/support/article/aa5aecf3-e97c-e84e-3f87-8d2ecdfde857 (VPN sitio a sitio, lista de protocolos; solo extracto)
-- https://www.wireguard.com/ (descripción de WireGuard)
-- https://www.wireguard.com/quickstart/ (endpoints de pares, rangos de IP permitidos, keepalives)
-- https://tailscale.com/docs/reference/connection-types (conexiones directas, fallback de relé DERP, cifrado)
-- https://github.com/juanfont/headscale (rol de servidor de control, no es un relé)
+- https://starlink.com/support/article/1192f3ef-2a17-31d9-261a-a59d215629f4 (CGNAT, prefijos IPv6; extracto)
+- https://starlink.com/na/support/article/4c4d6571-065f-f12a-648a-581aac7a9ef8 (FAQ Enterprise, prefijo IPv6; extracto)
+- https://starlink.com/gu/support/article/aa5aecf3-e97c-e84e-3f87-8d2ecdfde857 (lista de protocolos; extracto)
+- https://www.wireguard.com/ y https://www.wireguard.com/quickstart/ (descripción de WireGuard, configuración de pares)
+- https://tailscale.com/docs/reference/connection-types (DERP primero, conexión directa, cifrado)
+- https://tailscale.com/docs/features/subnet-routers/how-to/setup (anuncio y aprobación de rutas, reenvío)
+- https://github.com/juanfont/headscale (rol del servidor de control)
+- https://headscale.net/stable/ref/derp/ (DERP incorporado, deshabilitado por defecto)
 - https://libremesh.org/ (descripción de LibreMesh)
-- https://www.starlink.com/legal/documents/DOC-1020-91087-61/Starlink-Terms-of-Service (no se renderizó; listado para la verificación de términos)
+- https://www.starlink.com/legal/documents/DOC-1020-91087-61/Starlink-Terms-of-Service (no se renderizó)

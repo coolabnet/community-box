@@ -4,67 +4,71 @@ title: Sharing Starlink with a VPN
 
 # Sharing One Starlink Connection Across a Community Network
 
-Some community networks use a Starlink connection as their internet link. This guide explains a basic setup for sharing that link. It also explains why members outside the network may not reach a server at the site. It stays conceptual. It is not a step-by-step configuration.
+Some community networks use a Starlink connection as their internet link. This guide explains a basic setup for sharing that link, and why members outside the network may not reach a server at the site. It is conceptual, not a step-by-step configuration.
 
-## The Core Problem: CGNAT and Inbound Access
+## IPv4 Is Blocked Inbound; IPv6 Is Different
 
-Starlink's help center says its default IPv4 setup uses carrier-grade NAT (CGNAT). CGNAT lets many customers share one public address. Inbound connections are blocked, so a server behind the default setup cannot be reached from outside ([Starlink help: IP address](https://starlink.com/support/article/1192f3ef-2a17-31d9-261a-a59d215629f4)).
+Starlink's default IPv4 setup uses carrier-grade NAT (CGNAT), which shares one public address among many customers. Inbound IPv4 connections are blocked ([Starlink help](https://starlink.com/support/article/1192f3ef-2a17-31d9-261a-a59d215629f4)).
 
-Points from that help center to check on the live pages:
+Starlink also provides native IPv6 on its plans, with a /64 for the WAN side and a /56 for the LAN side ([same article](https://starlink.com/support/article/1192f3ef-2a17-31d9-261a-a59d215629f4); [Enterprise FAQ](https://starlink.com/na/support/article/4c4d6571-065f-f12a-648a-581aac7a9ef8)). Inbound IPv6 still needs a router or firewall rule for the specific host and port. Starlink's own Wi-Fi routers do not offer port forwarding or firewall rules, so a third-party router is the common choice. Public IPv4 is a separate option, available only on some plans.
 
-- A public IPv4 address depends on the plan. The help center names the Local and Global Priority plans.
-- Starlink's own Wi-Fi routers do not support port forwarding or firewall rules for IPv4 or IPv6.
-- Members who need inbound access are pointed to a third-party router or a plan with a public IPv4 option.
-
-IPv6 may offer another route to inbound access. Confirm for your plan whether native IPv6 is provided and whether your router passes it through. See Open Questions.
+Many networks where members connect still lack IPv6 (inferred). So a VPN or overlay remains the most portable option.
 
 ## Why an Overlay Helps
 
-A VPN or overlay network gives each device a private address and an encrypted tunnel to the others. The tunnel still needs a path that both sides can reach. That path is the hard part behind CGNAT.
+A VPN or overlay gives each device a private address and an encrypted tunnel. The tunnel still needs a path both sides can reach.
 
-- **WireGuard** is a [fast, modern, secure VPN tunnel](https://www.wireguard.com/). Its [quick start](https://www.wireguard.com/quickstart/) configures each peer with an endpoint address and allowed IP ranges. Plain WireGuard needs a peer the other side can reach at a known address. If the server and the client are both behind CGNAT, neither can accept the connection. A third host with a public address, such as a small rented server, is then needed. Keepalive packets help keep NAT mappings open. The quick start does not describe what happens when both sides are unreachable.
-- **Tailscale** runs on WireGuard. Its [connection types page](https://tailscale.com/docs/reference/connection-types) says devices first try direct connections over UDP. When no direct path works, traffic goes through DERP relay servers, and relayed traffic stays end-to-end encrypted with WireGuard.
-- **Headscale is not a relay.** [Headscale](https://github.com/juanfont/headscale) is a self-hosted control server for Tailscale clients. Its README says the control server exchanges WireGuard public keys between nodes and assigns addresses. It does not carry member traffic. A Headscale setup behind CGNAT still needs a path that works. Check Headscale's own docs for relay options (inferred).
+- **WireGuard** is a [fast, modern, secure VPN tunnel](https://www.wireguard.com/). Its [quick start](https://www.wireguard.com/quickstart/) configures each peer with an endpoint and allowed IP ranges. A peer must be reachable at a known address. If both sides are behind IPv4 CGNAT, a third host with a reachable address is needed, such as a small rented server or an IPv6 path. The quick start does not say what happens when both sides are unreachable.
+- **Tailscale** runs on WireGuard. Nodes start through DERP servers, which help them find each other. Tailscale then tries a direct connection. DERP relays carry traffic only when no direct path works. Relayed traffic stays end-to-end encrypted ([connection types](https://tailscale.com/docs/reference/connection-types)).
+- **Headscale** is a self-hosted control server for Tailscale clients. It exchanges WireGuard public keys and assigns addresses ([README](https://github.com/juanfont/headscale)). It does not relay traffic by itself. It has an embedded DERP server, disabled by default, that relays traffic between nodes when no direct connection can be made ([Headscale DERP docs](https://headscale.net/stable/ref/derp/)). A Headscale setup can relay, but only if you enable and host that component.
+
+## Reaching a Server on the Local Network
+
+A tunnel on the gateway does not, by itself, make a LAN server reachable. Two options:
+
+- **The server runs the tunnel client.** It gets its own tunnel address, and members reach it directly. This is the simplest option.
+- **The gateway advertises the LAN subnet.** This is a subnet router. An admin approves the advertised route, and the gateway forwards packets between interfaces. Firewall rules must allow the traffic to the server. Replies must return through the gateway (inferred). The [Tailscale subnet router guide](https://tailscale.com/docs/features/subnet-routers/how-to/setup) covers advertising, approving, and forwarding. It does not fully cover return routing, so test that on your network.
+
+With WireGuard, the equivalent is the peer's allowed IP ranges plus forwarding and firewall rules on the gateway.
 
 ## Protocols That CGNAT Drops
 
-The Starlink site-to-site article lists protocols that CGNAT drops: IP protocol 47 (GRE), 50 (ESP), 51 (AH), and 115 (L2TP) ([Starlink help: site-to-site VPN](https://starlink.com/gu/support/article/aa5aecf3-e97c-e84e-3f87-8d2ecdfde857)). Protocol 115 is an IP protocol number. It is not the same as L2TP over UDP. Test your chosen tunnel on the actual Starlink link before you go live.
+The Starlink site-to-site article lists protocols CGNAT drops: IP protocol 47 (GRE), 50 (ESP), 51 (AH), and 115 (L2TP) ([Starlink help](https://starlink.com/gu/support/article/aa5aecf3-e97c-e84e-3f87-8d2ecdfde857)). Protocol 115 is an IP protocol number, not L2TP over UDP. Test your tunnel on the actual link before you go live.
 
 ## Basic Topology
 
 1. The Starlink dish and router provide the internet link.
-2. A gateway running OpenWrt or LibreMesh connects to the Starlink router. LibreMesh is a [framework for OpenWrt-based firmware for wireless mesh nodes](https://libremesh.org/).
-3. The gateway shares the link with the mesh nodes.
-4. A tunnel client on the gateway or a server connects to a reachable peer or relay.
-5. Members reach the community server through that tunnel. The server itself stays behind CGNAT.
+2. A gateway running OpenWrt or [LibreMesh](https://libremesh.org/) connects to the Starlink router and shares the link with mesh nodes.
+3. A tunnel client on the gateway or the server connects to a reachable peer or relay.
+4. Members reach the community server through the tunnel, using one of the routing options above.
 
-The gateway is a single point of failure. Plan a spare path or a clear fallback.
+The gateway is a single point of failure. Plan a spare path or a fallback.
 
-## Bandwidth and Fair Use
+## Bandwidth, Terms, and Fair Use
 
-A shared link has fixed capacity, and many members can slow each other down. Decide who may use the link and for what. Watch usage for a few weeks. Give priority to the services the community needs most. Starlink's data limits and fair-use rules differ by plan and were not verified here.
+A shared link has fixed capacity. Decide who may use it and for what, and give priority to the services the community needs most. Starlink's data limits and fair-use rules differ by plan, and this guide did not verify them.
 
-## Resale and Sharing Terms
-
-Starlink's terms of service govern whether you may share or resell the connection. The terms page did not render in the fetch used for this guide. Do not assume sharing is allowed. Read the terms and ask Starlink support in writing before you share the link with a community.
+Starlink's terms of service govern whether you may share or resell the connection. The terms page did not render in the fetch used for this guide. Do not assume sharing is allowed. Ask Starlink support in writing first.
 
 ## Open Questions
 
 - Sharing and resale rules in Starlink's terms of service were not verified.
-- Whether Starlink provides native IPv6 on your plan, and whether a third-party router can pass inbound IPv6 to a server. Confirm on the live pages.
-- (inferred) Whether the statements above still match the live help pages.
-- (inferred) How the Starlink article classifies L2TP over UDP, which uses UDP rather than IP protocol 115. Confirm with Starlink.
-- Whether the public IPv4 address works for all community devices. Not tested.
+- Whether inbound IPv6 works through your router and plan. Test it.
+- (inferred) How far an IPv6-only server reaches, given how many client networks lack IPv6.
+- (inferred) Return-path and NAT details for a subnet router.
+- (inferred) How the Starlink article classifies L2TP over UDP, which uses UDP rather than IP protocol 115.
 
 ## Sources
 
-Fetched 2026-10-30. WebFetch of the Starlink help-center pages returned only the word "Starlink," so the Starlink statements above come from search excerpts of those same URLs. Verify them on the live pages before you rely on them.
+Fetched 2026-10-30. WebFetch of the Starlink help-center pages returned only the word "Starlink," so the Starlink statements come from search excerpts of the URLs below. Verify them on the live pages.
 
-- https://starlink.com/support/article/1192f3ef-2a17-31d9-261a-a59d215629f4 (IP address and CGNAT; excerpt only)
-- https://starlink.com/gu/support/article/aa5aecf3-e97c-e84e-3f87-8d2ecdfde857 (site-to-site VPN, protocol list; excerpt only)
-- https://www.wireguard.com/ (WireGuard description)
-- https://www.wireguard.com/quickstart/ (peer endpoints, allowed IP ranges, keepalives)
-- https://tailscale.com/docs/reference/connection-types (direct connections, DERP relay fallback, encryption)
-- https://github.com/juanfont/headscale (control server role, not a relay)
+- https://starlink.com/support/article/1192f3ef-2a17-31d9-261a-a59d215629f4 (CGNAT, IPv6 prefixes; excerpt)
+- https://starlink.com/na/support/article/4c4d6571-065f-f12a-648a-581aac7a9ef8 (Enterprise FAQ, IPv6 prefix; excerpt)
+- https://starlink.com/gu/support/article/aa5aecf3-e97c-e84e-3f87-8d2ecdfde857 (protocol list; excerpt)
+- https://www.wireguard.com/ and https://www.wireguard.com/quickstart/ (WireGuard description, peer configuration)
+- https://tailscale.com/docs/reference/connection-types (DERP first, direct connection, encryption)
+- https://tailscale.com/docs/features/subnet-routers/how-to/setup (advertising and approving routes, forwarding)
+- https://github.com/juanfont/headscale (control server role)
+- https://headscale.net/stable/ref/derp/ (embedded DERP, disabled by default)
 - https://libremesh.org/ (LibreMesh description)
-- https://www.starlink.com/legal/documents/DOC-1020-91087-61/Starlink-Terms-of-Service (did not render; listed for the terms check)
+- https://www.starlink.com/legal/documents/DOC-1020-91087-61/Starlink-Terms-of-Service (did not render)
