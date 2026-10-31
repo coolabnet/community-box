@@ -92,10 +92,10 @@ Use this when working several TODO items at once.
 - `T2-1`, `T2-3`, `T2-4`, `T2-5`, `T2-7`, `T2-8` — PR #68, gate SHIP,
   parked `needs-human-qa` (Q34).
 - `O1` — PR #70, gate SHIP, parked `needs-human-qa` (Q35).
-- `M3` — PR #71, gate loop.
-- `O2` — download-images page, in progress.
-- `T3-7`, `T3-13`, `T3-14`, `T3-16`, `T3-17` — network/security guides,
-  in progress.
+- `O2` — PR #72, gate SHIP, parked `needs-human-qa` (Q36).
+- `T3-6`, `T3-8`, `T3-9`, `T3-15`, `T3-18` — research notes, in progress.
+- `T3-2`, `T3-12`, `T3-23` — OS/platform catalog entries, in progress.
+- `T1-3` — landing explainer, in progress.
 
 ## TODO (doable now)
 
@@ -112,10 +112,6 @@ Service catalog (start with the schema):
 - `T3-1` — DeltaChat and local messaging. The transport detail waits on
   Q20. Issue #58.
 - `T3-2`, `T3-12`, `T3-23` — ButterBox, Proxmox, BlankOn. Issue #59.
-- `T3-13`, `T3-14` — 2FA and local games as guides, not catalog entries
-  (Q14, Q21). Issue #60.
-- `T3-7`, `T3-16`, `T3-17` — Ooni as a companion app (Q19), CoopCloud,
-  Starlink VPN note. Issue #64.
 - `T3-9` — Local-language Wikipedia packs via Kiwix (Q24). Issue #65.
 - `T3-6` — Whisper feasibility note (hardware tiers). Scope waits on Q17.
   Issue #63.
@@ -141,6 +137,10 @@ names; `T3-5` also Q22), `T3-4` (Q18), `T3-10` (Q23), `T3-21` (Q33),
 - `M1` — Menu opens on the landing page (verified live 2026-10-30).
 - `#57` (schema part) — Optional catalog `links`/`requirements`, PR #67
   (`25eb22b`). Taxonomy and PDF sections still open on #57.
+- `M3` — Research paper gaps filled, PR #71 (`1175959`), #30 closed. The
+  downloadable PDF updates on the next release (Q37). No doc table row.
+- `T3-7`, `T3-13`, `T3-14`, `T3-16`, `T3-17` — Guides (OONI, 2FA, local
+  games, Co-op Cloud, Starlink VPN), PR #73, #64 closed. Doc rows Done.
 
 - `T1-13` — Whole app and docs translated to pt/es. Commits `0282037`,
   `0c71969`. Google Doc already marked Done.
