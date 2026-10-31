@@ -57,32 +57,7 @@ const createMenu = (pdfUrl: string, lang: DocLang): MenuItem[] => [
   {
     titleKey: 'sidebar.downloadImages',
     icon: <Download size={16} />,
-    children: [
-      {
-        titleKey: 'sidebar.operatingSystemsX86',
-        children: [
-          // { title: 'YunoHost-x86_64-v11.2.iso', href: '#' },
-          // { title: 'Caprover-ubuntu-x86_64-v2.iso', href: '#' },
-          // { title: 'CasaOS-debian-x86_64-v0.4.8.img', href: '#' }
-          { titleKey: 'common.imagesNotBuiltYet', href: '#' }
-        ]
-      },
-      {
-        titleKey: 'sidebar.operatingSystemsARM64',
-        children: [
-          // { title: 'YunoHost-rpi-arm64-v11.2.img', href: '#' },
-          // { title: 'Caprover-ubuntu-arm64-v2.img', href: '#' },
-          // { title: 'CasaOS-rpi-arm64-v0.4.8.img', href: '#' }
-          { titleKey: 'common.imagesNotBuiltYet', href: '#' }
-        ]
-      },
-      {
-        titleKey: 'sidebar.networking',
-        children: [
-          { titleKey: 'sidebar.libreMeshImageFinder', href: 'https://firmware-selector.libremesh.org/' }
-        ]
-      }
-    ]
+    to: 'guides/download-images'
   },
   {
     titleKey: 'sidebar.quickstartGuides',
@@ -149,7 +124,8 @@ const createMenu = (pdfUrl: string, lang: DocLang): MenuItem[] => [
         titleKey: 'sidebar.networkConfiguration',
         children: [
           { title: resolveTitle('guides/router-selection-guide', lang), to: 'guides/router-selection-guide' },
-          { title: resolveTitle('guides/libremesh-installation', lang), to: 'guides/libremesh-installation' }
+          { title: resolveTitle('guides/libremesh-installation', lang), to: 'guides/libremesh-installation' },
+          { titleKey: 'sidebar.libreMeshImageFinder', href: 'https://firmware-selector.libremesh.org/' }
         ]
       },
       {
