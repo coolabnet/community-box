@@ -1,19 +1,19 @@
 {
-  "timestamp": "2026-10-31T13:55:48.220Z",
+  "timestamp": "2026-10-31T16:40:34.152Z",
   "script": "run-all.js",
   "note": "Summary of all data fetching script executions",
   "data": {
-    "execution_time": "2026-10-31T13:55:48.220Z",
+    "execution_time": "2026-10-31T16:40:34.152Z",
     "total_scripts": 7,
     "successful": 7,
     "failed": 0,
-    "total_duration_ms": 16591,
+    "total_duration_ms": 22001,
     "continue_on_error": true,
     "results": [
       {
         "name": "CapRover UI Translations",
         "success": true,
-        "duration": 321,
+        "duration": 246,
         "result": [
           "ar-EG",
           "de-DE",
@@ -36,7 +36,7 @@
       {
         "name": "CasaOS UI Translations",
         "success": true,
-        "duration": 154,
+        "duration": 141,
         "result": [
           "ca_ES",
           "cs_CZ",
@@ -71,7 +71,7 @@
       {
         "name": "YunoHost Apps",
         "success": true,
-        "duration": 12991,
+        "duration": 11766,
         "result": {
           "count": 1029,
           "apps": [
@@ -1655,7 +1655,7 @@
               "url": "https://github.com/YunoHost-Apps/davis_ynh",
               "stars": 1,
               "forks": 4,
-              "updated_at": "2026-10-26T10:36:09Z",
+              "updated_at": "2026-10-31T15:24:42Z",
               "language": "Shell",
               "archived": false
             },
@@ -4944,7 +4944,7 @@
               "url": "https://github.com/YunoHost-Apps/leantime_ynh",
               "stars": 3,
               "forks": 5,
-              "updated_at": "2026-10-26T13:24:44Z",
+              "updated_at": "2026-10-31T15:24:22Z",
               "language": "Shell",
               "archived": false
             },
@@ -6484,7 +6484,7 @@
               "url": "https://github.com/YunoHost-Apps/n8n_ynh",
               "stars": 21,
               "forks": 22,
-              "updated_at": "2026-10-23T11:25:39Z",
+              "updated_at": "2026-10-31T15:25:14Z",
               "language": "Shell",
               "archived": false
             },
@@ -6868,7 +6868,7 @@
               "description": "User-friendly AI Interface (Supports Ollama, OpenAI API, ...)",
               "url": "https://github.com/YunoHost-Apps/open-webui_ynh",
               "stars": 5,
-              "forks": 3,
+              "forks": 4,
               "updated_at": "2026-09-04T15:18:30Z",
               "language": "Shell",
               "archived": false
@@ -7210,7 +7210,7 @@
               "url": "https://github.com/YunoHost-Apps/paperless-ngx_ynh",
               "stars": 14,
               "forks": 14,
-              "updated_at": "2026-10-23T09:47:17Z",
+              "updated_at": "2026-10-31T15:56:07Z",
               "language": "Shell",
               "archived": false
             },
@@ -8024,7 +8024,7 @@
               "url": "https://github.com/YunoHost-Apps/prosody_ynh",
               "stars": 9,
               "forks": 8,
-              "updated_at": "2026-10-23T14:35:42Z",
+              "updated_at": "2026-10-31T14:38:43Z",
               "language": "Shell",
               "archived": false
             },
@@ -10851,7 +10851,7 @@
               "url": "https://github.com/YunoHost-Apps/woodpecker_ynh",
               "stars": 2,
               "forks": 2,
-              "updated_at": "2026-10-12T09:27:59Z",
+              "updated_at": "2026-10-31T15:25:22Z",
               "language": "Shell",
               "archived": false
             },
@@ -11414,7 +11414,7 @@
       {
         "name": "YunoHost Docs Translations",
         "success": true,
-        "duration": 115,
+        "duration": 166,
         "result": [
           "de",
           "docs",
@@ -11431,7 +11431,7 @@
       {
         "name": "YunoHost UI Translations",
         "success": true,
-        "duration": 1858,
+        "duration": 8360,
         "result": [
           {
             "language": "French",
@@ -11838,7 +11838,7 @@
       {
         "name": "Zimaboard Shipping Areas",
         "success": true,
-        "duration": 337,
+        "duration": 389,
         "result": [
           "Argentina",
           "Australia",
@@ -11938,7 +11938,7 @@
       {
         "name": "CCCI Directory",
         "success": true,
-        "duration": 815,
+        "duration": 933,
         "result": {
           "rows": 428,
           "count": 443,

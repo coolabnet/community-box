@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-10-31T13:55:45.093Z",
+  "timestamp": "2026-10-31T16:40:24.301Z",
   "script": "run-all.js",
   "source": "YunoHost-Apps GitHub Organization",
   "url": "https://github.com/YunoHost-Apps",
@@ -1601,7 +1601,7 @@
       "url": "https://github.com/YunoHost-Apps/davis_ynh",
       "stars": 1,
       "forks": 4,
-      "updated_at": "2026-10-26T10:36:09Z",
+      "updated_at": "2026-10-31T15:24:42Z",
       "language": "Shell",
       "archived": false
     },
@@ -4890,7 +4890,7 @@
       "url": "https://github.com/YunoHost-Apps/leantime_ynh",
       "stars": 3,
       "forks": 5,
-      "updated_at": "2026-10-26T13:24:44Z",
+      "updated_at": "2026-10-31T15:24:22Z",
       "language": "Shell",
       "archived": false
     },
@@ -6430,7 +6430,7 @@
       "url": "https://github.com/YunoHost-Apps/n8n_ynh",
       "stars": 21,
       "forks": 22,
-      "updated_at": "2026-10-23T11:25:39Z",
+      "updated_at": "2026-10-31T15:25:14Z",
       "language": "Shell",
       "archived": false
     },
@@ -6814,7 +6814,7 @@
       "description": "User-friendly AI Interface (Supports Ollama, OpenAI API, ...)",
       "url": "https://github.com/YunoHost-Apps/open-webui_ynh",
       "stars": 5,
-      "forks": 3,
+      "forks": 4,
       "updated_at": "2026-09-04T15:18:30Z",
       "language": "Shell",
       "archived": false
@@ -7156,7 +7156,7 @@
       "url": "https://github.com/YunoHost-Apps/paperless-ngx_ynh",
       "stars": 14,
       "forks": 14,
-      "updated_at": "2026-10-23T09:47:17Z",
+      "updated_at": "2026-10-31T15:56:07Z",
       "language": "Shell",
       "archived": false
     },
@@ -7970,7 +7970,7 @@
       "url": "https://github.com/YunoHost-Apps/prosody_ynh",
       "stars": 9,
       "forks": 8,
-      "updated_at": "2026-10-23T14:35:42Z",
+      "updated_at": "2026-10-31T14:38:43Z",
       "language": "Shell",
       "archived": false
     },
@@ -10797,7 +10797,7 @@
       "url": "https://github.com/YunoHost-Apps/woodpecker_ynh",
       "stars": 2,
       "forks": 2,
-      "updated_at": "2026-10-12T09:27:59Z",
+      "updated_at": "2026-10-31T15:25:22Z",
       "language": "Shell",
       "archived": false
     },
