@@ -1,19 +1,19 @@
 {
-  "timestamp": "2026-10-31T05:35:28.838Z",
+  "timestamp": "2026-10-31T11:56:27.960Z",
   "script": "run-all.js",
   "note": "Summary of all data fetching script executions",
   "data": {
-    "execution_time": "2026-10-31T05:35:28.838Z",
+    "execution_time": "2026-10-31T11:56:27.960Z",
     "total_scripts": 6,
     "successful": 6,
     "failed": 0,
-    "total_duration_ms": 18993,
+    "total_duration_ms": 18483,
     "continue_on_error": true,
     "results": [
       {
         "name": "CapRover UI Translations",
         "success": true,
-        "duration": 348,
+        "duration": 406,
         "result": [
           "ar-EG",
           "de-DE",
@@ -36,7 +36,7 @@
       {
         "name": "CasaOS UI Translations",
         "success": true,
-        "duration": 139,
+        "duration": 169,
         "result": [
           "ca_ES",
           "cs_CZ",
@@ -71,7 +71,7 @@
       {
         "name": "YunoHost Apps",
         "success": true,
-        "duration": 12192,
+        "duration": 11505,
         "result": {
           "count": 1029,
           "apps": [
@@ -2590,7 +2590,7 @@
               "url": "https://github.com/YunoHost-Apps/fail2ban-web_ynh",
               "stars": 3,
               "forks": 0,
-              "updated_at": "2026-10-30T19:34:25Z",
+              "updated_at": "2026-10-31T07:18:21Z",
               "language": "Shell",
               "archived": false
             },
@@ -2777,7 +2777,7 @@
               "url": "https://github.com/YunoHost-Apps/findmydevice_ynh",
               "stars": 3,
               "forks": 2,
-              "updated_at": "2026-10-25T22:45:52Z",
+              "updated_at": "2026-10-31T06:54:38Z",
               "language": "Shell",
               "archived": false
             },
@@ -4119,7 +4119,7 @@
               "url": "https://github.com/YunoHost-Apps/humhub_ynh",
               "stars": 3,
               "forks": 7,
-              "updated_at": "2026-10-26T13:25:56Z",
+              "updated_at": "2026-10-31T11:09:36Z",
               "language": "Shell",
               "archived": false
             },
@@ -5340,7 +5340,7 @@
               "url": "https://github.com/YunoHost-Apps/loops_ynh",
               "stars": 3,
               "forks": 2,
-              "updated_at": "2026-10-27T10:27:36Z",
+              "updated_at": "2026-10-31T08:57:08Z",
               "language": "Shell",
               "archived": false
             },
@@ -7780,9 +7780,9 @@
               "name": "plume",
               "description": "Federated blogging application for YunoHost",
               "url": "https://github.com/YunoHost-Apps/plume_ynh",
-              "stars": 15,
+              "stars": 14,
               "forks": 2,
-              "updated_at": "2026-10-05T19:10:01Z",
+              "updated_at": "2026-10-31T09:31:43Z",
               "language": "Shell",
               "archived": false
             },
@@ -11414,7 +11414,7 @@
       {
         "name": "YunoHost Docs Translations",
         "success": true,
-        "duration": 141,
+        "duration": 155,
         "result": [
           "de",
           "docs",
@@ -11431,7 +11431,7 @@
       {
         "name": "YunoHost UI Translations",
         "success": true,
-        "duration": 5731,
+        "duration": 5888,
         "result": [
           {
             "language": "French",
@@ -11838,7 +11838,7 @@
       {
         "name": "Zimaboard Shipping Areas",
         "success": true,
-        "duration": 442,
+        "duration": 360,
         "result": [
           "Argentina",
           "Australia",
