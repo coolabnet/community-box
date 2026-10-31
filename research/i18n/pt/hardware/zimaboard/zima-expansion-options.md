@@ -1,7 +1,7 @@
 ---
 title: Opções de Expansão
 sourcePath: hardware/zimaboard/zima-expansion-options.md
-sourceHash: 538a84a3e8a13d80
+sourceHash: edc3042376d08aa7
 translatedBy: glm-4.6
 ---
 
@@ -48,9 +48,6 @@ O ZimaBoard inclui duas portas SATA de 6.0 Gb/s compatíveis com unidades de 2.5
 - **JBOD**: unidades individuais para capacidade máxima
 - **ZFS**: armazenamento definido por software com recursos avançados
 
-*[Imagem: Instalação do Cabo Y SATA - mostrando a conexão à interface de alimentação do ZimaBoard]*
-*[Nota: Imagem não disponível - consulte a documentação oficial do ZimaBoard para fotos de instalação]*
-
 #### Expansão SATA Avançada via PCIe
 
 **Controladores SATA PCIe:**
@@ -87,9 +84,6 @@ Vários cartões de expansão SATA PCIe estão disponíveis para o ZimaBoard:
 - Adiciona múltiplos SSDs NVMe via um único slot PCIe
 - Útil para cache e armazenamento em camadas
 - Alguns cartões incluem recursos adicionais (portas de rede, etc.)
-
-*[Imagem: Expansão de Armazenamento PCIe - mostrando cartões M.2 instalados no slot PCIe]*
-*[Nota: Imagem não disponível - fotos de instalação podem ser encontradas nos fóruns oficiais da comunidade ZimaBoard]*
 
 ## Capacidades de Expansão PCIe
 
@@ -140,9 +134,6 @@ Vários cartões de expansão SATA PCIe estão disponíveis para o ZimaBoard:
 - Considere os requisitos de energia e o gerenciamento térmico
 - Teste o desempenho sob as cargas de trabalho esperadas
 
-*[Imagem: Expansão de Rede - mostrando cartões de rede PCIe instalados]*
-*[Nota: Imagem não disponível - consulte as listas de compatibilidade de hardware para cartões suportados]*
-
 ### Expansão USB
 
 #### Controladores USB PCIe
@@ -185,9 +176,6 @@ Vários cartões de expansão SATA PCIe estão disponíveis para o ZimaBoard:
 - Suportes e bases personalizados impressos em 3D
 - Gaiolas de unidades padrão de PC modificadas para o ZimaBoard
 - Soluções de empilhamento estilo NAS
-
-*[Imagem: Soluções de Montagem de Unidades - mostrando várias opções de montagem]*
-*[Nota: Imagem não disponível - designs de impressão 3D disponíveis no Thingiverse]*
 
 ### Refrigeração e Gerenciamento Térmico
 

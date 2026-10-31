@@ -395,8 +395,6 @@
       "zimaOverview": "ZimaBoard Overview",
       "libremeshOverview": "LibreMesh Overview",
       "meshBasics": "Mesh Network Basics",
-      "routerSetup": "Router Setup",
-      "globalNetworks": "Global Community Networks",
       "communityMap": "Community Networks Map"
     },
     "cards": {

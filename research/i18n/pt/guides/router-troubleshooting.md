@@ -1,7 +1,7 @@
 ---
 title: Solução de Problemas do Roteador
 sourcePath: guides/router-troubleshooting.md
-sourceHash: cce5d4c4d3a82707
+sourceHash: 1051e6af1d28ccd4
 translatedBy: glm-4.6
 ---
 
@@ -26,8 +26,6 @@ Este guia fornece procedimentos sistemáticos de solução de problemas para que
 ## Procedimentos de Reset por Hardware
 
 ### Método Universal do Botão de Reset
-
-*`[Reset Button Location](router-reset-button.png)` — Foto destacada de um botão de reset de hardware típico em um roteador, mostrando a localização do botão e os indicadores ao redor.*
 
 **Procedimento Básico de Reset**:
 1. **Localize o botão de reset**: Geralmente um furo recuado identificado como "RESET"
@@ -183,8 +181,6 @@ Indicador: LED de energia âmbar indica modo TFTP ativo
 
 ### Configuração do Hardware do Console Serial
 
-*`[Serial Console Hookup](router-serial-console.png)` — Foto ou diagrama de conexão dos cabos seriais para recuperação avançada, mostrando os pontos de conexão e o roteamento dos cabos.*
-
 **Equipamento Necessário**:
 - **Adaptador USB-para-TTL**: Níveis lógicos de 3,3V (NÃO RS232)
 - **Fios jumper**: Fêmea-para-macho ou conectores apropriados
@@ -254,8 +250,6 @@ reset
 ## Procedimentos de Restauração de Firmware
 
 ### Restaurando o Firmware Original
-
-*`[Restoring Firmware Process](restoring-firmware.png)` — Série ou diagrama mostrando as etapas de recuperação de uma instalação malsucedida, incluindo conexões de cabos e capturas de tela da interface.*
 
 **Quando Restaurar o Firmware Original**:
 - A instalação do LibreMesh falhou
