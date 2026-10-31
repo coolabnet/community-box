@@ -7,7 +7,7 @@ A reused PC is an office desktop, mini PC, or laptop that a community repurposes
 ## Strengths
 
 - Much more CPU, RAM, and storage room than a single-board computer ([requirements](https://github.com/coolabnet/community-box/blob/main/research/guides/recycled-pc-requirements.md)).
-- Standard x86 software. Any Linux distribution, Docker, and most server apps run without changes ([requirements](https://github.com/coolabnet/community-box/blob/main/research/guides/recycled-pc-requirements.md)).
+- x86-64 hardware, so x86-64 server software is a natural fit. The requirements guide asks for a 64-bit x86 CPU with virtualization support ([requirements](https://github.com/coolabnet/community-box/blob/main/research/guides/recycled-pc-requirements.md)). Confirm that your chosen OS and apps support the exact model before you install.
 - Business models are rated as reliable. The comparison estimates 5-7 years for Dell OptiPlex and HP EliteDesk ([models comparison](https://github.com/coolabnet/community-box/blob/main/research/guides/recycled-models-comparison.md)).
 - Upgradable RAM and storage. Desktop towers rate best for upgrades ([models comparison](https://github.com/coolabnet/community-box/blob/main/research/guides/recycled-models-comparison.md)).
 - Low cost. Basic servers cost $100-200 ([requirements](https://github.com/coolabnet/community-box/blob/main/research/guides/recycled-pc-requirements.md)).
@@ -16,8 +16,7 @@ A reused PC is an office desktop, mini PC, or laptop that a community repurposes
 
 - Power use is high for desktop towers. Idle draw is 60-80 W ([models comparison](https://github.com/coolabnet/community-box/blob/main/research/guides/recycled-models-comparison.md)).
 - Laptops and mini PCs have little room to expand ([models comparison](https://github.com/coolabnet/community-box/blob/main/research/guides/recycled-models-comparison.md)).
-- Some Wi-Fi and BIOS features need checking before use ([requirements](https://github.com/coolabnet/community-box/blob/main/research/guides/recycled-pc-requirements.md)).
-- Used hardware varies. Each unit needs a cleaning, a BIOS reset, and a component test ([preparation](https://github.com/coolabnet/community-box/blob/main/research/guides/recycled-preparation.md)).
+- Used hardware varies. Check BIOS settings, and reset them when needed. The preparation guide lists unknown BIOS passwords, corrupted settings, compatibility problems, and instability after component changes as reasons to reset ([preparation](https://github.com/coolabnet/community-box/blob/main/research/guides/recycled-preparation.md)).
 
 ## Minimum specs
 
@@ -27,7 +26,7 @@ From the requirements guide ([requirements](https://github.com/coolabnet/communi
 - RAM: 4 GB absolute minimum, 8 GB recommended, 16 GB optimal.
 - Storage: 120 GB SSD minimum, 256 GB recommended. Add a 1 TB HDD for file storage.
 - Network: Gigabit Ethernet required.
-- Power supply: 300 W minimum, 80 PLUS Bronze or better.
+- Power supply: the requirements guide gives 300 W minimum, 80 PLUS Bronze or better ([requirements](https://github.com/coolabnet/community-box/blob/main/research/guides/recycled-pc-requirements.md)). That figure fits full desktops with several drives. Size small machines to their own adapter. Lenovo's ThinkCentre M920 Tiny, a recommended model in the comparison, ships with 65 W, 90 W, or 135 W adapters ([Lenovo PSREF](https://psref.lenovo.com/syspool/Sys/PDF/ThinkCentre/ThinkCentre_M920_Tiny/ThinkCentre_M920_Tiny_Spec.html), fetched 2026-10-30).
 
 Exclude 32-bit CPUs, machines with less than 4 GB maximum RAM, and 100 Mbps network ports ([requirements](https://github.com/coolabnet/community-box/blob/main/research/guides/recycled-pc-requirements.md)).
 
