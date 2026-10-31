@@ -34,7 +34,7 @@ describe('QuestionCard option selection state', () => {
     const html = render('no');
 
     expect(html).toMatch(/aria-pressed="false"[^>]*>Community</);
-    expect(html).toMatch(/aria-pressed="true"[^>]*>Not yet</);
+    expect(html).toMatch(/aria-pressed="true"[^>]*><svg[^>]*aria-hidden="true"[^>]*>.*<\/svg>Not yet</);
   });
 
   it('marks no option pressed before a choice', () => {

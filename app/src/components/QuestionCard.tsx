@@ -9,7 +9,7 @@ import {
 } from '@/components/ui/collapsible';
 import { cn } from '@/lib/utils';
 import { useTranslation } from 'react-i18next';
-import { ArrowLeft, ChevronDown } from 'lucide-react';
+import { ArrowLeft, Check, ChevronDown } from 'lucide-react';
 
 interface QuestionCardProps {
   question: string;
@@ -69,13 +69,15 @@ const QuestionCard = ({
               aria-pressed={selectedValue === option.value}
               onClick={() => onSelect?.(option.value)}
               className={cn(
-                'p-6 rounded-xl text-lg transition-all duration-200',
+                'inline-flex items-center justify-center gap-2 p-6 rounded-xl text-lg transition-all duration-200',
                 'hover:shadow-lg hover:scale-105',
                 selectedValue === option.value
                   ? 'bg-primary text-white'
                   : 'bg-secondary hover:bg-secondary/80'
               )}
             >
+              {/* The check mark shows the choice without relying on color (e.g. forced-colors mode) */}
+              {selectedValue === option.value && <Check className="h-5 w-5 shrink-0" aria-hidden="true" />}
               {option.label}
             </button>
           ))}
