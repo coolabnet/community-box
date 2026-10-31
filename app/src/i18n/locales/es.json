@@ -302,7 +302,7 @@
             },
             "proxmox": {
               "name": "Proxmox VE",
-              "description": "Plataforma de virtualización de código abierto para ejecutar máquinas virtuales y contenedores en un servidor"
+              "description": "Plataforma de virtualización de código abierto para ejecutar máquinas virtuales y contenedores en un servidor; requiere una CPU de 64 bits con Intel VT-x o AMD-V"
             }
           },
           "difficulty": {

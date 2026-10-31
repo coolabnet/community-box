@@ -51,6 +51,25 @@ describe('getOSSuggestions with platform entries', () => {
     }
   });
 
+  it('pins the full x86 business list when Proxmox displaces a NAS option', () => {
+    expect(keys('business', 'yes', 'intelNUC')).toMatchInlineSnapshot(`
+      [
+        "proxmox",
+        "ubuntuServer",
+        "debian",
+        "truenas",
+      ]
+    `);
+    expect(keys('business', 'yes', 'reusedPC')).toMatchInlineSnapshot(`
+      [
+        "proxmox",
+        "ubuntuServer",
+        "debian",
+        "truenas",
+      ]
+    `);
+  });
+
   it('does not suggest Proxmox outside business', () => {
     expect(keys('education', 'yes', 'intelNUC')).not.toContain('proxmox');
     expect(keys('personal', 'yes', 'reusedPC')).not.toContain('proxmox');

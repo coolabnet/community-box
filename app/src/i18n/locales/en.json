@@ -302,7 +302,7 @@
             },
             "proxmox": {
               "name": "Proxmox VE",
-              "description": "Open-source virtualization platform for running virtual machines and containers on one server"
+              "description": "Open-source virtualization platform for running virtual machines and containers on one server; needs a 64-bit CPU with Intel VT-x or AMD-V"
             }
           },
           "difficulty": {
