@@ -1,7 +1,7 @@
 ---
 title: Cómo la herramienta elige un sistema operativo
 sourcePath: software/os-recommendations.md
-sourceHash: 6397ff7216c900d3
+sourceHash: a56c6442c12e7fd1
 translatedBy: glm-4.6
 ---
 
@@ -39,7 +39,7 @@ La herramienta de recomendación sugiere hasta 4 sistemas operativos. Utiliza tr
 
 ## Notas
 
-- **Proxmox VE** ejecuta máquinas virtuales y contenedores. Requiere un procesador x86 de 64 bits (amd64) con virtualización por hardware activada. Sus 2 GB mínimos de RAM cubren solo el host; cada máquina virtual necesita su propia memoria. Proxmox también tiene una compilación arm64 para algunos servidores ARM, pero no es compatible con Raspberry Pi. ZimaBoard no está en la lista.
+- **Proxmox VE** ejecuta máquinas virtuales y contenedores. En las PC e Intel NUC que recomienda la herramienta, requiere un procesador x86 de 64 bits (amd64) con virtualización por hardware activada. Sus 2 GB mínimos de RAM cubren solo el host; cada máquina virtual necesita su propia memoria. Proxmox también tiene una compilación arm64 para algunos servidores ARM, pero no es compatible con Raspberry Pi. ZimaBoard no está en la lista.
 - **ButterBox** es una imagen de servidor sin conexión del Guardian Project para Raspberry Pi Zero 2 W y Pi 4. Crea su propia red Wi-Fi y funciona sin acceso a internet.
 
 Las reglas están en `getOSSuggestions` en `app/src/utils/recommendations.ts`. Las pruebas en `app/src/test/osSuggestions.test.ts` verifican cada ejemplo anterior.

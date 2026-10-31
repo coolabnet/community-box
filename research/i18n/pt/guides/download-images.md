@@ -1,13 +1,13 @@
 ---
 title: Baixar Imagens
 sourcePath: guides/download-images.md
-sourceHash: d35ac3a88864e72b
+sourceHash: 9bfe7520db4d3c79
 translatedBy: glm-4.6
 ---
 
 # Baixar Imagens
 
-Este guia explica o que é uma imagem de sistema operacional, qual escolher para o seu hardware, como verificar se o arquivo baixado está intacto e onde obter cada um a partir de sua fonte oficial. Linkamos para os projetos originais em vez de hospedar cópias, para que você sempre obtenha a versão atual e os checksums do próprio projeto.
+Este guia explica o que é uma imagem de sistema operacional, qual escolher para o seu hardware, como verificar se o arquivo baixado está intacto e onde obter cada um a partir de sua fonte oficial. Incluímos links para os projetos originais em vez de hospedar cópias, para que você sempre obtenha a versão atual e os checksums do próprio projeto.
 
 ## O que é uma imagem
 
@@ -24,7 +24,7 @@ Alguns projetos não fornecem uma imagem. Em vez disso, fornecem um **script de 
 
 | Seu hardware | O que usar |
 |---|---|
-| PC x86, Intel NUC, ZimaBoard, desktop ou laptop reaproveitado | Uma ISO x86 (amd64) ou script de instalação |
+| PC x86, Intel NUC, ZimaBoard, desktop ou laptop reutilizado | Uma ISO x86 (amd64) ou script de instalação |
 | Raspberry Pi 3, 4, 5 ou Zero 2 W | Imagem do Raspberry Pi OS 64 bits (arm64) |
 | Raspberry Pi original, Pi 2 ou Pi Zero | Imagem do Raspberry Pi OS 32 bits (armhf) (2) |
 | Roteador para LibreMesh | Firmware do roteador para o seu modelo exato (6) |
@@ -88,10 +88,10 @@ Cada linha leva à própria página de downloads do projeto. Uma linha sem check
 4. Um script de instalação ou contêiner não tem arquivo para verificar. Revise o script antes de executá-lo.
 5. A página do balena.io não exibe checksum. Consulte a documentação do balena para ver um checksum publicado antes de gravar a imagem.
 6. O seletor cria uma imagem personalizada para o seu roteador. Quando a build fornece um checksum, o seletor o mostra como sha256sum ao lado da imagem. O código-fonte do seletor mostra esse comportamento; não o confirmamos em uma build ao vivo. Se nenhum checksum for exibido, mantenha o arquivo que o seletor lhe entrega. Não substitua pelos checksums do OpenWrt padrão; eles cobrem imagens diferentes.
-7. O download do TrueNAS pede inscrição em um boletim informativo. Os arquivos de valor SHA256, `.sha256` e `.gpg` ficam ao lado de cada ISO.
+7. O download do TrueNAS pede inscrição em um boletim informativo. O valor SHA256 e os arquivos `.sha256` e `.gpg` ficam ao lado de cada ISO.
 8. O Ubuntu publica um lançamento de suporte de longo prazo (LTS), como o 26.04, e um lançamento intermediário mais curto, como o 26.10. Use a versão LTS para um servidor comunitário. Abra a pasta da versão que você baixou; o arquivo SHA256SUMS dela está dentro (para arm64, na subpasta `release`).
 9. O Proxmox VE apaga o disco inteiro. Em um PC ou Intel NUC, use a ISO padrão (amd64); o processador precisa ter Intel VT ou AMD-V ativados. A ISO arm64 é apenas para alguns servidores ARM; o Proxmox não oferece suporte ao Raspberry Pi. O valor SHA256 está listado ao lado de cada ISO.
-10. O ButterBox roda no Raspberry Pi Zero 2 W e no Pi 4. Sua página de instalação aponta para o download da imagem; escolha a versão mais recente e descompacte-a antes de gravá-la com o Raspberry Pi Imager. O projeto não publica checksum, então verifique se o tamanho do arquivo corresponde ao tamanho exibido na página de download. Uma versão para PC está listada como em breve.
+10. O ButterBox roda no Raspberry Pi Zero 2 W e no Pi 4. Sua página de instalação aponta para o download da imagem; escolha a versão mais recente e descompacte-a antes de gravá-la com o Raspberry Pi Imager. O projeto não publica checksum, então verifique se o tamanho do arquivo corresponde ao tamanho exibido na página de download do Dropbox. Uma versão para PC está listada como em breve.
 
 ## Fontes
 

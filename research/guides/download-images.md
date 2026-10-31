@@ -89,7 +89,7 @@ Each row links to the project's own download page. A row with no checksum means 
 7. The TrueNAS download asks for a newsletter sign-up. Its SHA256 value, `.sha256`, and `.gpg` files are next to each ISO.
 8. Ubuntu publishes a long-term support (LTS) release, such as 26.04, and a shorter interim release, such as 26.10. Use the LTS release for a community server. Open the folder for the release you downloaded; its SHA256SUMS file is inside (for arm64, in the `release` subfolder).
 9. Proxmox VE erases the whole disk. On a PC or Intel NUC, use the standard (amd64) ISO; the processor needs Intel VT or AMD-V turned on. The arm64 ISO is for some ARM servers only; Proxmox does not support Raspberry Pi. The SHA256 value is listed beside each ISO.
-10. ButterBox runs on Raspberry Pi Zero 2 W and Pi 4. Its install page links the image download; pick the latest version and unzip it before you write it with Raspberry Pi Imager. The project publishes no checksum, so check that the file size matches the size shown on the download page. A PC version is listed as coming soon.
+10. ButterBox runs on Raspberry Pi Zero 2 W and Pi 4. Its install page links the image download; pick the latest version and unzip it before you write it with Raspberry Pi Imager. The project publishes no checksum, so check that the file size matches the size shown on the Dropbox download page. A PC version is listed as coming soon.
 
 ## Sources
 
