@@ -1,19 +1,19 @@
 {
-  "timestamp": "2026-10-31T19:56:50.368Z",
+  "timestamp": "2026-10-31T20:31:18.672Z",
   "script": "run-all.js",
   "note": "Summary of all data fetching script executions",
   "data": {
-    "execution_time": "2026-10-31T19:56:50.368Z",
+    "execution_time": "2026-10-31T20:31:18.672Z",
     "total_scripts": 7,
     "successful": 7,
     "failed": 0,
-    "total_duration_ms": 19242,
+    "total_duration_ms": 16404,
     "continue_on_error": true,
     "results": [
       {
         "name": "CapRover UI Translations",
         "success": true,
-        "duration": 353,
+        "duration": 236,
         "result": [
           "ar-EG",
           "de-DE",
@@ -36,7 +36,7 @@
       {
         "name": "CasaOS UI Translations",
         "success": true,
-        "duration": 214,
+        "duration": 158,
         "result": [
           "ca_ES",
           "cs_CZ",
@@ -71,7 +71,7 @@
       {
         "name": "YunoHost Apps",
         "success": true,
-        "duration": 12575,
+        "duration": 11962,
         "result": {
           "count": 1029,
           "apps": [
@@ -7705,7 +7705,7 @@
               "url": "https://github.com/YunoHost-Apps/plakar_ynh",
               "stars": 2,
               "forks": 3,
-              "updated_at": "2026-07-30T06:33:43Z",
+              "updated_at": "2026-10-31T20:09:14Z",
               "language": "Shell",
               "archived": false
             },
@@ -11414,7 +11414,7 @@
       {
         "name": "YunoHost Docs Translations",
         "success": true,
-        "duration": 176,
+        "duration": 112,
         "result": [
           "de",
           "docs",
@@ -11431,7 +11431,7 @@
       {
         "name": "YunoHost UI Translations",
         "success": true,
-        "duration": 4449,
+        "duration": 2532,
         "result": [
           {
             "language": "French",
@@ -11838,7 +11838,7 @@
       {
         "name": "Zimaboard Shipping Areas",
         "success": true,
-        "duration": 414,
+        "duration": 283,
         "result": [
           "Argentina",
           "Australia",
@@ -11938,7 +11938,7 @@
       {
         "name": "CCCI Directory",
         "success": true,
-        "duration": 1061,
+        "duration": 1121,
         "result": {
           "rows": 428,
           "count": 443,

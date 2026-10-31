@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-10-31T19:56:44.265Z",
+  "timestamp": "2026-10-31T20:31:14.620Z",
   "script": "run-all.js",
   "source": "YunoHost-Apps GitHub Organization",
   "url": "https://github.com/YunoHost-Apps",
@@ -7651,7 +7651,7 @@
       "url": "https://github.com/YunoHost-Apps/plakar_ynh",
       "stars": 2,
       "forks": 3,
-      "updated_at": "2026-07-30T06:33:43Z",
+      "updated_at": "2026-10-31T20:09:14Z",
       "language": "Shell",
       "archived": false
     },
