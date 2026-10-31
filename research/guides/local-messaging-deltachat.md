@@ -76,7 +76,7 @@ The ButterBox site says only that it has encrypted chat. It has no security page
 
 ## Open Questions
 
-- Which local transport worked at GG2026 is unknown. This is pending decision Q20. Confirm with the demonstrator before publishing.
+- Which local setup Delta Chat used at GG2026 is not yet documented. This guide will add it once the demonstrator confirms it.
 - Whether a self-hosted or IP-only relay works with no internet link is unknown. The docs are silent.
 - Whether two Delta Chat apps can chat on a LAN with no relay is unknown (inferred: a relay is needed).
 - Whether Autocrypt v2 has shipped is unknown.
