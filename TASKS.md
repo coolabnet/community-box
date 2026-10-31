@@ -99,9 +99,6 @@ Use this when working several TODO items at once.
   parked `needs-human-qa` (Q41). `T3-23` BlankOn waits on Q39.
 - `T2-9` — access-devices question, PR #77 (stacked on #68), gate SHIP,
   parked `needs-human-qa` (Q42).
-- `M6` / #27 — Community Networks Map (CCCI directory merged with our
-  list, zoomable world map), PR #79, gate SHIP, parked `needs-human-qa`
-  (Q43). Licence confirmation with Colnodo / APC still open.
 
 ## TODO (doable now)
 
@@ -119,6 +116,11 @@ taxonomy), `#57` taxonomy and PDF sections. `M4` is Phase 2 (#26).
 
 ## Done
 
+- `M6` / #27 — Community Networks Map live 2026-10-31 at `/docs/directory`
+  (PR #79, `070ff3e`): CCCI directory merged with our list (443 networks),
+  zoomable world map with country filter, daily guarded refresh. Mobile QA
+  passed; all 9 review threads resolved. #27 closed. Licence confirmation
+  with Colnodo / APC still open (Q43).
 - `T1-4` / `M2` / `M5` — 404s verified gone live 2026-10-30 (33 menu
   pages en/pt, deep links, directory JSON). Regression test PR #69
   (`b53b06a`), #52 closed. Doc row set Done.
