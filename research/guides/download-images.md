@@ -35,9 +35,9 @@ Use Balena Etcher for computers, SD cards, and USB drives. Follow the step-by-st
 Router firmware is not written this way. It is installed through the router's own web interface or recovery mode, and the steps depend on the model. Read the [OpenWrt wiki page](https://openwrt.org/toh/start) for your router first.
 
 - **Router on its original (stock) firmware:** install OpenWrt first. Download the factory image for your model from the [OpenWrt Firmware Selector](https://firmware-selector.openwrt.org/) and follow the [OpenWrt first-time installation](https://openwrt.org/docs/guide-quick-start/factory_installation) steps. Check that the router boots and works.
-- **Router already running OpenWrt:** download the LibreMesh `squashfs-sysupgrade.bin` image from the firmware selector. Upload it in the OpenWrt web interface (LuCI) under **System > Backup / Flash Firmware**, or run `sysupgrade -n firmware.bin` over SSH.
+- **Router already running OpenWrt:** first save its settings: in the OpenWrt web interface (LuCI), open **System > Backup / Flash Firmware** and click **Download backup**. Then get the LibreMesh image for your exact model from the [LibreMesh firmware selector](https://firmware-selector.libremesh.org/). Pick the file marked sysupgrade; its file extension varies by model. On the same page, click **Flash image...** under **Flash new firmware image**, choose the file, and untick **Keep settings and retain the current configuration** so LibreMesh starts from its own defaults. This erases the router's current settings.
 
-The [LibreMesh getting started page](https://libremesh.org/getting-started.html) describes this flow. For recovery and troubleshooting, see [LibreMesh installation guide](libremesh-installation.md).
+The [LibreMesh getting started page](https://libremesh.org/getting-started.html) describes this flow, including an SSH method. If a router no longer starts, follow the recovery steps on its OpenWrt wiki page.
 
 Writing a disk erases everything on the target drive. Check the drive letter or size before you start.
 
@@ -118,6 +118,7 @@ Fetched 2026-10-30; LibreMesh, OpenWrt, Ubuntu and Raspberry Pi rows rechecked 2
 - https://firmware-selector.openwrt.org/
 - https://openwrt.org/toh/start
 - https://openwrt.org/docs/guide-quick-start/factory_installation
+- https://github.com/openwrt/luci/blob/master/modules/luci-mod-system/htdocs/luci-static/resources/view/system/flash.js
 - https://libremesh.org/getting-started.html
 - https://raw.githubusercontent.com/libremesh/firmware-selector-openwrt-org/main/www/js/images.js
 - https://downloads.openwrt.org/
