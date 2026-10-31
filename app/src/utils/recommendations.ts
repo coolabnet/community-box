@@ -98,7 +98,39 @@ export const operatingSystems: Record<OSKey, OSSuggestion> = {
     difficulty: 'beginner',
     supportedHardware: ['intelNUC', 'zimaBoard', 'reusedPC', 'raspberryPi'],
   },
+  butterbox: {
+    key: 'butterbox',
+    name: 'os.butterbox.name',
+    description: 'os.butterbox.description',
+    recommendedFor: ['education', 'personal'],
+    difficulty: 'beginner',
+    supportedHardware: ['raspberryPi'],
+    links: [
+      { kind: 'website', url: 'https://likebutter.app' },
+      { kind: 'docs', url: 'https://likebutter.app/docs/' },
+      { kind: 'source', url: 'https://guardianproject.dev/butter' },
+    ],
+  },
+  proxmox: {
+    key: 'proxmox',
+    name: 'os.proxmox.name',
+    description: 'os.proxmox.description',
+    recommendedFor: ['business'],
+    difficulty: 'intermediate',
+    supportedHardware: ['intelNUC', 'reusedPC'],
+    links: [
+      { kind: 'docs', url: 'https://pve.proxmox.com/pve-docs/' },
+      { kind: 'download', url: 'https://www.proxmox.com/en/downloads' },
+    ],
+    requirements: {
+      minRamGb: 2,
+      architectures: ['amd64', 'arm64'],
+    },
+  },
 };
+
+// OSes offered only when the user can format the device (format === 'yes').
+const FORMAT_YES_ONLY: OSKey[] = ['proxmox'];
 
 /**
  * Get service suggestions based on usage selections
@@ -165,6 +197,12 @@ export const getOSSuggestions = (
   if (format === 'no') {
     osList = osList.filter(os => os.difficulty === 'beginner');
   }
+
+  // Format-gated OSes are dropped unless the user can format. When offered, they go
+  // first so the 4-item cap below cannot push them out of the list.
+  const gated = osList.filter(os => FORMAT_YES_ONLY.includes(os.key));
+  const ungated = osList.filter(os => !FORMAT_YES_ONLY.includes(os.key));
+  osList = format === 'yes' ? [...gated, ...ungated] : ungated;
 
   return osList.slice(0, 4);
 };

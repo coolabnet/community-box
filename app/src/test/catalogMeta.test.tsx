@@ -162,11 +162,27 @@ describe('CatalogMeta', () => {
 
 describe('real catalogs', () => {
   // RecommendationResults fills its lists in a 1.5s effect and no DOM env is installed,
-  // so it cannot be rendered in this suite. Every real entry must render no catalog markup.
-  it('renders no catalog markup for any real service or OS entry', () => {
+  // so it cannot be rendered in this suite. Entries with metadata must render it;
+  // entries without metadata must render nothing.
+  it('renders catalog markup only for real entries that have metadata', () => {
     for (const entry of [...Object.values(services), ...Object.values(operatingSystems)]) {
-      expect(render(entry), entry.key).toBe('');
+      const html = render(entry);
+      if (hasCatalogMeta(entry)) {
+        expect(html, entry.key).not.toBe('');
+      } else {
+        expect(html, entry.key).toBe('');
+      }
     }
+  });
+
+  it('renders links and requirements for the Proxmox VE entry', () => {
+    const html = render(operatingSystems.proxmox);
+    expect(html).toContain('Requirements: 2 GB RAM · amd64 / arm64');
+    expect(html).toContain('href="https://pve.proxmox.com/pve-docs/"');
+  });
+
+  it('renders no requirements block for entries without verified requirements', () => {
+    expect(render(operatingSystems.butterbox)).not.toContain('Requirements');
   });
 
   it.each([

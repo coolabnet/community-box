@@ -295,6 +295,14 @@
             "openmediavault": {
               "name": "OpenMediaVault",
               "description": "Solución de almacenamiento conectado en red con gestión basada en web"
+            },
+            "butterbox": {
+              "name": "ButterBox",
+              "description": "Caja de intercambio sin conexión que crea su propia red Wi-Fi y funciona sin acceso a internet"
+            },
+            "proxmox": {
+              "name": "Proxmox VE",
+              "description": "Plataforma de virtualización de código abierto para ejecutar máquinas virtuales y contenedores en un servidor"
             }
           },
           "difficulty": {

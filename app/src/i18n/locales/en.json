@@ -295,6 +295,14 @@
             "openmediavault": {
               "name": "OpenMediaVault",
               "description": "Network-attached storage solution with web-based management"
+            },
+            "butterbox": {
+              "name": "ButterBox",
+              "description": "Offline sharing box that runs its own Wi-Fi network and works without internet access"
+            },
+            "proxmox": {
+              "name": "Proxmox VE",
+              "description": "Open-source virtualization platform for running virtual machines and containers on one server"
             }
           },
           "difficulty": {
