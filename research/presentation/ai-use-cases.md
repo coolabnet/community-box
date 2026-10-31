@@ -1,6 +1,6 @@
-# 5.2 Use Cases
+# 5.3 Use Cases
 
-- Processing sensitive documentation privately
-- Deep research capabilities previously requiring professional expertise
-- Document creation (reports, grants) including foreign language support
-- Potential for training models in indigenous languages and dialects
+- **Processing sensitive documents privately.** A community can run a small model on its own box to summarize a family's medical or land records. The records stay local only if the whole workflow does. That includes the interface, the logs, the backups, and any connected services. Check each part before using real records.
+- **Deep research that once needed an expert.** A community can ask an AI tool to explain a law, a grant rule, or a technical manual in plain words. People without a specialist can then follow the main points.
+- **Writing reports and grant proposals, including in other languages.** A community group can draft a report in its own words and ask the tool to translate it. For example, a cooperative can write a grant application in Portuguese and have it in Spanish for a partner.
+- **Training models in Indigenous languages and dialects.** Some languages have little text online. A community can build a model from its own recordings and texts. The community keeps control only if training, storage, and access stay with the community, or under terms the community has agreed to in writing. Otherwise the data may leave its hands. This takes time and skilled help.

@@ -1,0 +1,6384 @@
+{
+  "timestamp": "2026-10-31T13:55:48.220Z",
+  "script": "get-ccci-directory.js",
+  "data": {
+    "source": {
+      "name": "CCCI directory (Colnodo / APC)",
+      "url": "https://app.agenteccci.colnodo.org/explore",
+      "exportUrl": "https://app.agenteccci.colnodo.org/explore/export",
+      "retrievedAt": "2026-10-31T13:55:47.405Z",
+      "rows": 428
+    },
+    "curatedSource": "research/results/community-directory.curated.json",
+    "count": 443,
+    "unmatchedCountries": [],
+    "networks": [
+      {
+        "id": "CCCI-0001",
+        "name": "1 Waiwoi Falls",
+        "country": "PG",
+        "status": "active",
+        "services": [
+          "internet",
+          "charging"
+        ],
+        "sources": [
+          "ccci"
+        ]
+      },
+      {
+        "id": "CCCI-0002",
+        "name": "10 Wipim",
+        "country": "PG",
+        "status": "active",
+        "services": [
+          "internet",
+          "charging"
+        ],
+        "sources": [
+          "ccci"
+        ]
+      },
+      {
+        "id": "CCCI-0003",
+        "name": "13 Nomad River",
+        "country": "PG",
+        "status": "active",
+        "services": [
+          "internet",
+          "charging"
+        ],
+        "sources": [
+          "ccci"
+        ]
+      },
+      {
+        "id": "CCCI-0004",
+        "name": "14 Mapodo",
+        "country": "PG",
+        "status": "active",
+        "services": [
+          "internet",
+          "charging"
+        ],
+        "sources": [
+          "ccci"
+        ]
+      },
+      {
+        "id": "CCCI-0005",
+        "name": "23 Morehead",
+        "country": "PG",
+        "status": "active",
+        "services": [
+          "internet",
+          "charging"
+        ],
+        "sources": [
+          "ccci"
+        ]
+      },
+      {
+        "id": "CCCI-0006",
+        "name": "24 Dewara",
+        "country": "PG",
+        "status": "active",
+        "services": [
+          "internet",
+          "charging"
+        ],
+        "sources": [
+          "ccci"
+        ]
+      },
+      {
+        "id": "CCCI-0007",
+        "name": "25 Sasereme",
+        "country": "PG",
+        "status": "active",
+        "services": [
+          "internet",
+          "charging"
+        ],
+        "sources": [
+          "ccci"
+        ]
+      },
+      {
+        "id": "CCCI-0008",
+        "name": "28 Lake Campbell",
+        "country": "PG",
+        "status": "active",
+        "services": [
+          "internet",
+          "charging"
+        ],
+        "sources": [
+          "ccci"
+        ]
+      },
+      {
+        "id": "CCCI-0009",
+        "name": "2G Mobile Community Networks",
+        "country": "MX",
+        "status": "unknown",
+        "services": [],
+        "sources": [
+          "ccci"
+        ]
+      },
+      {
+        "id": "CCCI-0010",
+        "name": "3 Hesalibi",
+        "country": "PG",
+        "status": "active",
+        "services": [
+          "internet",
+          "charging"
+        ],
+        "sources": [
+          "ccci"
+        ]
+      },
+      {
+        "id": "CCCI-0011",
+        "name": "3Link Office HQ",
+        "country": "VU",
+        "status": "active",
+        "services": [
+          "internet",
+          "charging"
+        ],
+        "sources": [
+          "ccci"
+        ]
+      },
+      {
+        "id": "CCCI-0012",
+        "name": "4 Fuma",
+        "country": "PG",
+        "status": "active",
+        "services": [
+          "internet",
+          "charging"
+        ],
+        "sources": [
+          "ccci"
+        ]
+      },
+      {
+        "id": "CCCI-0013",
+        "name": "48percent",
+        "country": "IN",
+        "status": "inProgress",
+        "services": [
+          "internet",
+          "localServices",
+          "financial",
+          "support",
+          "literacy",
+          "cybercafe"
+        ],
+        "sources": [
+          "ccci"
+        ]
+      },
+      {
+        "id": "CCCI-0014",
+        "name": "5 Daru (exArufi)",
+        "country": "PG",
+        "status": "active",
+        "services": [
+          "internet",
+          "charging"
+        ],
+        "sources": [
+          "ccci"
+        ]
+      },
+      {
+        "id": "CCCI-0015",
+        "name": "6 Wasua",
+        "country": "PG",
+        "status": "active",
+        "services": [
+          "internet",
+          "charging"
+        ],
+        "sources": [
+          "ccci"
+        ]
+      },
+      {
+        "id": "CCCI-0016",
+        "name": "7 Upiara",
+        "country": "PG",
+        "status": "active",
+        "services": [
+          "internet",
+          "charging"
+        ],
+        "sources": [
+          "ccci"
+        ]
+      },
+      {
+        "id": "CCCI-0017",
+        "name": "8 Kapal",
+        "country": "PG",
+        "status": "active",
+        "services": [
+          "internet",
+          "charging"
+        ],
+        "sources": [
+          "ccci"
+        ]
+      },
+      {
+        "id": "CCCI-0018",
+        "name": "9 Balimo",
+        "country": "PG",
+        "status": "active",
+        "services": [
+          "internet",
+          "charging"
+        ],
+        "sources": [
+          "ccci"
+        ]
+      },
+      {
+        "id": "CCCI-0019",
+        "name": "Adyel Boarding Primary School",
+        "country": "UG",
+        "status": "active",
+        "services": [
+          "internet",
+          "support",
+          "literacy",
+          "schools",
+          "charging"
+        ],
+        "sources": [
+          "ccci"
+        ]
+      },
+      {
+        "id": "CCCI-0020",
+        "name": "Africa Higher Education Research Institute",
+        "country": "KE",
+        "status": "unknown",
+        "services": [],
+        "sources": [
+          "ccci"
+        ]
+      },
+      {
+        "id": "CCCI-0021",
+        "name": "AfricaConnect2 Project - Tanzania Education & Research Network (TERNET)",
+        "country": "TZ",
+        "status": "unknown",
+        "services": [],
+        "sources": [
+          "ccci"
+        ]
+      },
+      {
+        "id": "CCCI-0022",
+        "name": "AheriNet",
+        "country": "KE",
+        "status": "unknown",
+        "services": [],
+        "sources": [
+          "ccci"
+        ]
+      },
+      {
+        "id": "cb-air-stream-wireless",
+        "name": "Air Stream Wireless",
+        "country": "AU",
+        "status": "unknown",
+        "services": [],
+        "sources": [
+          "communityBox"
+        ]
+      },
+      {
+        "id": "CCCI-0023",
+        "name": "Airbus Zephyr",
+        "country": null,
+        "status": "unknown",
+        "services": [],
+        "sources": [
+          "ccci"
+        ]
+      },
+      {
+        "id": "CCCI-0024",
+        "name": "AirJaldi (Airband)",
+        "country": "IN",
+        "status": "unknown",
+        "services": [],
+        "sources": [
+          "ccci"
+        ]
+      },
+      {
+        "id": "CCCI-0025",
+        "name": "ALINet Community Network",
+        "country": "KE",
+        "status": "unknown",
+        "services": [],
+        "sources": [
+          "ccci"
+        ]
+      },
+      {
+        "id": "CCCI-0026",
+        "name": "Allband, Merit and Gigabit Libraries Network (Airband)",
+        "country": "US",
+        "status": "unknown",
+        "services": [],
+        "sources": [
+          "ccci"
+        ]
+      },
+      {
+        "id": "CCCI-0027",
+        "name": "AlterMundi",
+        "country": "AR",
+        "status": "unknown",
+        "services": [],
+        "sources": [
+          "ccci",
+          "communityBox"
+        ]
+      },
+      {
+        "id": "CCCI-0028",
+        "name": "Amadib Community Network",
+        "country": "ZA",
+        "status": "unknown",
+        "services": [],
+        "sources": [
+          "ccci"
+        ]
+      },
+      {
+        "id": "CCCI-0029",
+        "name": "Amadiba Community Network",
+        "country": "ZA",
+        "status": "active",
+        "services": [
+          "internet",
+          "localServices",
+          "literacy",
+          "schools",
+          "cybercafe",
+          "charging"
+        ],
+        "sources": [
+          "ccci"
+        ]
+      },
+      {
+        "id": "CCCI-0030",
+        "name": "Angaza Community Network",
+        "country": "KE",
+        "status": "unknown",
+        "services": [],
+        "sources": [
+          "ccci"
+        ]
+      },
+      {
+        "id": "CCCI-0032",
+        "name": "APC",
+        "country": "IN",
+        "status": "inactive",
+        "services": [
+          "internet",
+          "localServices",
+          "financial",
+          "support",
+          "literacy",
+          "cybercafe"
+        ],
+        "sources": [
+          "ccci"
+        ]
+      },
+      {
+        "id": "CCCI-0031",
+        "name": "APC",
+        "country": "IN",
+        "status": "active",
+        "services": [
+          "internet",
+          "localServices",
+          "financial",
+          "support",
+          "literacy",
+          "cybercafe"
+        ],
+        "sources": [
+          "ccci"
+        ]
+      },
+      {
+        "id": "CCCI-0033",
+        "name": "Ateker Community Network",
+        "country": "KE",
+        "status": "unknown",
+        "services": [],
+        "sources": [
+          "ccci"
+        ]
+      },
+      {
+        "id": "cb-athens-wireless-metropolitan-network-awmn",
+        "name": "Athens Wireless Metropolitan Network (AWMN)",
+        "country": "GR",
+        "status": "unknown",
+        "services": [],
+        "website": "http://www.awmn.net",
+        "sources": [
+          "communityBox"
+        ]
+      },
+      {
+        "id": "CCCI-0034",
+        "name": "Athi Community Network CBO Meru County",
+        "country": "KE",
+        "status": "unknown",
+        "services": [],
+        "sources": [
+          "ccci"
+        ]
+      },
+      {
+        "id": "CCCI-0035",
+        "name": "Atoifi School of Nursing",
+        "country": "SB",
+        "status": "active",
+        "services": [
+          "internet",
+          "schools",
+          "charging"
+        ],
+        "sources": [
+          "ccci"
+        ]
+      },
+      {
+        "id": "CCCI-0036",
+        "name": "Auona Health Centre",
+        "country": "PG",
+        "status": "active",
+        "services": [
+          "internet",
+          "charging"
+        ],
+        "sources": [
+          "ccci"
+        ]
+      },
+      {
+        "id": "CCCI-0037",
+        "name": "Awach Central Primary School",
+        "country": "UG",
+        "status": "active",
+        "services": [
+          "internet",
+          "support",
+          "literacy",
+          "schools",
+          "charging"
+        ],
+        "sources": [
+          "ccci"
+        ]
+      },
+      {
+        "id": "CCCI-0038",
+        "name": "AWB",
+        "country": "PH",
+        "status": "active",
+        "services": [
+          "internet",
+          "charging"
+        ],
+        "sources": [
+          "ccci"
+        ]
+      },
+      {
+        "id": "CCCI-0039",
+        "name": "Badaharbhanjyang Hello Hub",
+        "country": "NP",
+        "status": "active",
+        "services": [
+          "internet",
+          "literacy",
+          "schools",
+          "charging"
+        ],
+        "sources": [
+          "ccci"
+        ]
+      },
+      {
+        "id": "CCCI-0040",
+        "name": "Barakala Sub-County",
+        "country": "UG",
+        "status": "active",
+        "services": [
+          "internet",
+          "support",
+          "literacy",
+          "charging"
+        ],
+        "sources": [
+          "ccci"
+        ]
+      },
+      {
+        "id": "CCCI-0041",
+        "name": "Bekabeka Adventist College",
+        "country": "SB",
+        "status": "active",
+        "services": [
+          "internet",
+          "schools",
+          "charging"
+        ],
+        "sources": [
+          "ccci"
+        ]
+      },
+      {
+        "id": "CCCI-0042",
+        "name": "BEU",
+        "country": "ZA",
+        "status": "unknown",
+        "services": [],
+        "sources": [
+          "ccci"
+        ]
+      },
+      {
+        "id": "CCCI-0043",
+        "name": "BLK Don Bosco Budi Daya.",
+        "country": "ID",
+        "status": "unknown",
+        "services": [],
+        "sources": [
+          "ccci"
+        ]
+      },
+      {
+        "id": "CCCI-0044",
+        "name": "BlueTown",
+        "country": "IN",
+        "status": "unknown",
+        "services": [],
+        "sources": [
+          "ccci"
+        ]
+      },
+      {
+        "id": "CCCI-0045",
+        "name": "BOSCO Uganda",
+        "country": "UG",
+        "status": "active",
+        "services": [
+          "internet",
+          "localServices",
+          "literacy",
+          "radio",
+          "schools",
+          "cybercafe"
+        ],
+        "sources": [
+          "ccci"
+        ]
+      },
+      {
+        "id": "CCCI-0046",
+        "name": "Brightwave (Airband)",
+        "country": "ZA",
+        "status": "unknown",
+        "services": [],
+        "sources": [
+          "ccci"
+        ]
+      },
+      {
+        "id": "CCCI-0047",
+        "name": "Bugabwe P/S",
+        "country": "UG",
+        "status": "active",
+        "services": [
+          "internet",
+          "support",
+          "literacy",
+          "schools",
+          "charging"
+        ],
+        "sources": [
+          "ccci"
+        ]
+      },
+      {
+        "id": "CCCI-0048",
+        "name": "Building Community Networks",
+        "country": "MW",
+        "status": "active",
+        "services": [
+          "internet",
+          "schools"
+        ],
+        "sources": [
+          "ccci"
+        ]
+      },
+      {
+        "id": "CCCI-0049",
+        "name": "Buwamwangu P/S",
+        "country": "UG",
+        "status": "active",
+        "services": [
+          "internet",
+          "support",
+          "literacy",
+          "schools",
+          "charging"
+        ],
+        "sources": [
+          "ccci"
+        ]
+      },
+      {
+        "id": "CCCI-0050",
+        "name": "Case studies - Peru",
+        "country": "PE",
+        "status": "unknown",
+        "services": [],
+        "sources": [
+          "ccci"
+        ]
+      },
+      {
+        "id": "CCCI-0051",
+        "name": "Case Study 2: Community Networks in the Amazon",
+        "country": "BR",
+        "status": "unknown",
+        "services": [],
+        "sources": [
+          "ccci"
+        ]
+      },
+      {
+        "id": "CCCI-0052",
+        "name": "Case Study 3: Smart Livestock Farming Based on the Internet of Things",
+        "country": "BR",
+        "status": "unknown",
+        "services": [],
+        "sources": [
+          "ccci"
+        ]
+      },
+      {
+        "id": "CCCI-0053",
+        "name": "Case Study from Brazil 1: Incentives for Mobile Broadband Deployment in Remote, Unserved and Underserved Areas",
+        "country": "BR",
+        "status": "unknown",
+        "services": [],
+        "sources": [
+          "ccci"
+        ]
+      },
+      {
+        "id": "CCCI-0054",
+        "name": "Cauca Network, Buenos Aires, Colombia",
+        "country": "CO",
+        "status": "unknown",
+        "services": [],
+        "sources": [
+          "ccci"
+        ]
+      },
+      {
+        "id": "CCCI-0055",
+        "name": "Cellular Community Networks in Brazilian Amazon: CELCOM Project",
+        "country": "BR",
+        "status": "unknown",
+        "services": [],
+        "sources": [
+          "ccci"
+        ]
+      },
+      {
+        "id": "CCCI-0056",
+        "name": "Chaturale Hello Hub",
+        "country": "NP",
+        "status": "active",
+        "services": [
+          "internet",
+          "literacy",
+          "schools",
+          "charging"
+        ],
+        "sources": [
+          "ccci"
+        ]
+      },
+      {
+        "id": "CCCI-0057",
+        "name": "Chauthe Hello Hub",
+        "country": "NP",
+        "status": "active",
+        "services": [
+          "internet",
+          "literacy",
+          "schools",
+          "charging"
+        ],
+        "sources": [
+          "ccci"
+        ]
+      },
+      {
+        "id": "CCCI-0058",
+        "name": "CignalTV",
+        "country": "PH",
+        "status": "active",
+        "services": [
+          "internet",
+          "charging"
+        ],
+        "sources": [
+          "ccci"
+        ]
+      },
+      {
+        "id": "CCCI-0059",
+        "name": "Ciptagelar (SIK)",
+        "country": "ID",
+        "status": "active",
+        "services": [
+          "internet",
+          "localServices",
+          "financial",
+          "support",
+          "literacy",
+          "schools"
+        ],
+        "sources": [
+          "ccci"
+        ]
+      },
+      {
+        "id": "CCCI-0060",
+        "name": "Ciracap (SIK)",
+        "country": "ID",
+        "status": "active",
+        "services": [
+          "internet",
+          "financial",
+          "literacy",
+          "schools"
+        ],
+        "sources": [
+          "ccci"
+        ]
+      },
+      {
+        "id": "CCCI-0061",
+        "name": "Colectiva Diversa espacio LGTBIQ+",
+        "country": "MX",
+        "status": "active",
+        "services": [
+          "internet",
+          "voice"
+        ],
+        "sources": [
+          "ccci"
+        ]
+      },
+      {
+        "id": "cb-colnodo-redinc-network",
+        "name": "Colnodo & RedINC Network",
+        "country": "CO",
+        "status": "unknown",
+        "services": [],
+        "website": "https://colnodo.apc.org",
+        "sources": [
+          "communityBox"
+        ]
+      },
+      {
+        "id": "CCCI-0062",
+        "name": "Commonly known as: Katine Community Information Center (KCIC), Also Known as \"The CowHorn Network\", established under the project: Building Women's Resilience to Improve Adaptation to COVID-19 using Community Networks",
+        "country": "UG",
+        "status": "pilot",
+        "services": [
+          "internet",
+          "localServices",
+          "support",
+          "literacy",
+          "schools",
+          "cybercafe",
+          "charging"
+        ],
+        "sources": [
+          "ccci"
+        ]
+      },
+      {
+        "id": "CCCI-0063",
+        "name": "Community Mobile Networks, Aurora, Philippines",
+        "country": "PH",
+        "status": "unknown",
+        "services": [],
+        "sources": [
+          "ccci"
+        ]
+      },
+      {
+        "id": "CCCI-0064",
+        "name": "Community Network",
+        "country": "NG",
+        "status": "active",
+        "services": [
+          "internet",
+          "voice",
+          "localServices",
+          "support",
+          "literacy",
+          "radio",
+          "schools",
+          "cybercafe",
+          "charging"
+        ],
+        "sources": [
+          "ccci"
+        ]
+      },
+      {
+        "id": "CCCI-0065",
+        "name": "Community Network - Connecting the Community and the School.",
+        "country": "BR",
+        "status": "active",
+        "services": [
+          "internet",
+          "offline",
+          "localServices",
+          "support",
+          "literacy",
+          "schools",
+          "cybercafe",
+          "environmental"
+        ],
+        "sources": [
+          "ccci"
+        ]
+      },
+      {
+        "id": "CCCI-0066",
+        "name": "Community-based Co-design of Community Networks",
+        "country": "MY",
+        "status": "pilot",
+        "services": [
+          "internet",
+          "voice",
+          "support",
+          "literacy"
+        ],
+        "sources": [
+          "ccci"
+        ]
+      },
+      {
+        "id": "CCCI-0067",
+        "name": "Conecta bv",
+        "country": "BR",
+        "status": "dormant",
+        "services": [
+          "internet",
+          "schools"
+        ],
+        "sources": [
+          "ccci"
+        ]
+      },
+      {
+        "id": "CCCI-0068",
+        "name": "Connecting Everyone",
+        "country": "KE",
+        "status": "active",
+        "services": [
+          "internet",
+          "offline",
+          "literacy",
+          "radio",
+          "schools",
+          "cybercafe",
+          "environmental"
+        ],
+        "sources": [
+          "ccci"
+        ]
+      },
+      {
+        "id": "CCCI-0069",
+        "name": "Connecting local Communities",
+        "country": "ZA",
+        "status": "active",
+        "services": [
+          "internet"
+        ],
+        "sources": [
+          "ccci"
+        ]
+      },
+      {
+        "id": "CCCI-0070",
+        "name": "Connecting the Underserved",
+        "country": "NG",
+        "status": "active",
+        "services": [
+          "internet",
+          "financial",
+          "cybercafe",
+          "environmental"
+        ],
+        "sources": [
+          "ccci"
+        ]
+      },
+      {
+        "id": "CCCI-0071",
+        "name": "Coolabs/Souzas, Associação Portal Sem Porteiras, Monteiro Lobato, Sao Paulo State, Brasil",
+        "country": "BR",
+        "status": "unknown",
+        "services": [],
+        "sources": [
+          "ccci",
+          "communityBox"
+        ],
+        "website": "https://portalsemporteiras.github.io",
+        "aliases": [
+          "Portal Sem Porteiras (PSP)"
+        ]
+      },
+      {
+        "id": "CCCI-0072",
+        "name": "CoWMesh",
+        "country": "IN",
+        "status": "active",
+        "services": [
+          "internet",
+          "voice",
+          "offline",
+          "localServices",
+          "literacy",
+          "radio",
+          "schools",
+          "cybercafe",
+          "environmental",
+          "charging"
+        ],
+        "sources": [
+          "ccci"
+        ]
+      },
+      {
+        "id": "CCCI-0073",
+        "name": "CR Bolo",
+        "country": "IN",
+        "status": "active",
+        "services": [
+          "internet",
+          "voice",
+          "offline",
+          "literacy",
+          "radio"
+        ],
+        "sources": [
+          "ccci"
+        ]
+      },
+      {
+        "id": "CCCI-0074",
+        "name": "CR Bolo: An IVR enabled hybrid model for rural connectivity in Orissa",
+        "country": "IN",
+        "status": "active",
+        "services": [
+          "internet",
+          "voice",
+          "offline",
+          "localServices",
+          "financial",
+          "literacy",
+          "radio",
+          "schools"
+        ],
+        "sources": [
+          "ccci"
+        ]
+      },
+      {
+        "id": "cb-crcwn-cavan-rural-community-wireless-network",
+        "name": "CRCWN (Cavan Rural Community Wireless Network)",
+        "country": "IE",
+        "status": "unknown",
+        "services": [],
+        "website": "https://www.crcwn.online",
+        "sources": [
+          "communityBox"
+        ]
+      },
+      {
+        "id": "CCCI-0075",
+        "name": "CVISNET",
+        "country": "PH",
+        "status": "unknown",
+        "services": [],
+        "sources": [
+          "ccci"
+        ]
+      },
+      {
+        "id": "CCCI-0076",
+        "name": "Dakwa community network",
+        "country": "NG",
+        "status": "active",
+        "services": [
+          "internet"
+        ],
+        "sources": [
+          "ccci"
+        ]
+      },
+      {
+        "id": "CCCI-0077",
+        "name": "Data Garden",
+        "country": "SB",
+        "status": "active",
+        "services": [
+          "internet",
+          "voice",
+          "financial",
+          "schools",
+          "charging"
+        ],
+        "sources": [
+          "ccci"
+        ]
+      },
+      {
+        "id": "CCCI-0078",
+        "name": "Declaration Networks / Redline Communications (Airband)",
+        "country": "US",
+        "status": "unknown",
+        "services": [],
+        "sources": [
+          "ccci"
+        ]
+      },
+      {
+        "id": "CCCI-0079",
+        "name": "Desa Adat Ngata Toro",
+        "country": "ID",
+        "status": "unknown",
+        "services": [],
+        "sources": [
+          "ccci"
+        ]
+      },
+      {
+        "id": "CCCI-0080",
+        "name": "Desa Mata Redi",
+        "country": "ID",
+        "status": "unknown",
+        "services": [],
+        "sources": [
+          "ccci"
+        ]
+      },
+      {
+        "id": "CCCI-0081",
+        "name": "Desa Sukadana",
+        "country": "ID",
+        "status": "unknown",
+        "services": [],
+        "sources": [
+          "ccci"
+        ]
+      },
+      {
+        "id": "CCCI-0082",
+        "name": "Desa Tae",
+        "country": "ID",
+        "status": "unknown",
+        "services": [],
+        "sources": [
+          "ccci"
+        ]
+      },
+      {
+        "id": "CCCI-0083",
+        "name": "Desa Tembok",
+        "country": "ID",
+        "status": "unknown",
+        "services": [],
+        "sources": [
+          "ccci"
+        ]
+      },
+      {
+        "id": "CCCI-0084",
+        "name": "Digital Community Networks Cooperative Societies",
+        "country": "TZ",
+        "status": "active",
+        "services": [
+          "internet",
+          "offline",
+          "literacy",
+          "schools"
+        ],
+        "sources": [
+          "ccci"
+        ]
+      },
+      {
+        "id": "CCCI-0085",
+        "name": "Dikgatlong Community Network",
+        "country": "ZA",
+        "status": "unknown",
+        "services": [],
+        "sources": [
+          "ccci"
+        ]
+      },
+      {
+        "id": "CCCI-0086",
+        "name": "Diodio",
+        "country": "PG",
+        "status": "active",
+        "services": [
+          "internet",
+          "charging"
+        ],
+        "sources": [
+          "ccci"
+        ]
+      },
+      {
+        "id": "CCCI-0087",
+        "name": "Direct Engineering Assistance (DEA) - Research and Education Network for Uganda (RENU)",
+        "country": "UG",
+        "status": "unknown",
+        "services": [],
+        "sources": [
+          "ccci"
+        ]
+      },
+      {
+        "id": "CCCI-0088",
+        "name": "DRC - Gilat Telecom - SES",
+        "country": "CD",
+        "status": "unknown",
+        "services": [],
+        "sources": [
+          "ccci"
+        ]
+      },
+      {
+        "id": "CCCI-0089",
+        "name": "Dunia Moja Community Network",
+        "country": "KE",
+        "status": "unknown",
+        "services": [],
+        "sources": [
+          "ccci"
+        ]
+      },
+      {
+        "id": "CCCI-0090",
+        "name": "e-Schools - Croatian Academic and Research Network (CARNET)",
+        "country": "HR",
+        "status": "unknown",
+        "services": [],
+        "sources": [
+          "ccci"
+        ]
+      },
+      {
+        "id": "CCCI-0091",
+        "name": "EduSpot - Somali Research & Education Network (SOMALIREN)",
+        "country": "SO",
+        "status": "unknown",
+        "services": [],
+        "sources": [
+          "ccci"
+        ]
+      },
+      {
+        "id": "CCCI-0092",
+        "name": "EF Vila Numbatu Jim Kava",
+        "country": "VU",
+        "status": "active",
+        "services": [
+          "internet",
+          "charging"
+        ],
+        "sources": [
+          "ccci"
+        ]
+      },
+      {
+        "id": "CCCI-0093",
+        "name": "Elia Community Center (Youth Centre (NCYC))",
+        "country": "VU",
+        "status": "active",
+        "services": [
+          "internet",
+          "charging"
+        ],
+        "sources": [
+          "ccci"
+        ]
+      },
+      {
+        "id": "CCCI-0094",
+        "name": "ENTEL-Axesat-SES",
+        "country": "PE",
+        "status": "unknown",
+        "services": [],
+        "sources": [
+          "ccci"
+        ]
+      },
+      {
+        "id": "CCCI-0095",
+        "name": "Esa'ala District Admin",
+        "country": "PG",
+        "status": "active",
+        "services": [
+          "internet",
+          "charging"
+        ],
+        "sources": [
+          "ccci"
+        ]
+      },
+      {
+        "id": "CCCI-0096",
+        "name": "F A C E Bangladesh : \"Foundation for Architecture Community Equity\"",
+        "country": "BD",
+        "status": "dormant",
+        "services": [
+          "internet",
+          "voice"
+        ],
+        "sources": [
+          "ccci"
+        ]
+      },
+      {
+        "id": "CCCI-0097",
+        "name": "Fantsuam / ZittNet",
+        "country": "NG",
+        "status": "active",
+        "services": [
+          "internet",
+          "voice",
+          "financial",
+          "literacy",
+          "schools",
+          "cybercafe",
+          "charging"
+        ],
+        "sources": [
+          "ccci"
+        ]
+      },
+      {
+        "id": "CCCI-0098",
+        "name": "Fournisseur d'accès Internet alternatif et associatif",
+        "country": "FR",
+        "status": "active",
+        "services": [
+          "internet",
+          "literacy",
+          "radio"
+        ],
+        "sources": [
+          "ccci"
+        ]
+      },
+      {
+        "id": "CCCI-0099",
+        "name": "Frank King Community Centre - (Freshwota Women Shelter Family Health)",
+        "country": "VU",
+        "status": "active",
+        "services": [
+          "internet",
+          "charging"
+        ],
+        "sources": [
+          "ccci"
+        ]
+      },
+      {
+        "id": "CCCI-0100",
+        "name": "Free Community Nework",
+        "country": "CD",
+        "status": "dormant",
+        "services": [
+          "internet",
+          "localServices",
+          "literacy",
+          "schools",
+          "cybercafe"
+        ],
+        "sources": [
+          "ccci"
+        ]
+      },
+      {
+        "id": "cb-freifunk",
+        "name": "Freifunk",
+        "country": "DE",
+        "status": "unknown",
+        "services": [],
+        "website": "https://freifunk.net/en/",
+        "sources": [
+          "communityBox"
+        ]
+      },
+      {
+        "id": "CCCI-0101",
+        "name": "Gabon Project",
+        "country": "GA",
+        "status": "unknown",
+        "services": [],
+        "sources": [
+          "ccci"
+        ]
+      },
+      {
+        "id": "CCCI-0102",
+        "name": "Geya Primary School",
+        "country": "UG",
+        "status": "active",
+        "services": [
+          "internet",
+          "support",
+          "literacy",
+          "schools",
+          "charging"
+        ],
+        "sources": [
+          "ccci"
+        ]
+      },
+      {
+        "id": "CCCI-0103",
+        "name": "Global innovation valley-GIV CN, Kenya",
+        "country": "KE",
+        "status": "unknown",
+        "services": [],
+        "sources": [
+          "ccci"
+        ]
+      },
+      {
+        "id": "CCCI-0104",
+        "name": "Gram Marg, Indian Institute of Technology, Maharashtra, India",
+        "country": "IN",
+        "status": "unknown",
+        "services": [],
+        "sources": [
+          "ccci"
+        ]
+      },
+      {
+        "id": "CCCI-0105",
+        "name": "Groot Aub Women Community Network",
+        "country": "NA",
+        "status": "active",
+        "services": [
+          "internet",
+          "localServices",
+          "literacy",
+          "cybercafe"
+        ],
+        "sources": [
+          "ccci"
+        ]
+      },
+      {
+        "id": "CCCI-0106",
+        "name": "Guifi",
+        "country": "ES",
+        "status": "unknown",
+        "services": [],
+        "sources": [
+          "ccci",
+          "communityBox"
+        ],
+        "website": "https://guifi.net",
+        "aliases": [
+          "Guifi.net"
+        ]
+      },
+      {
+        "id": "CCCI-0107",
+        "name": "Guleguleu",
+        "country": "PG",
+        "status": "active",
+        "services": [
+          "internet",
+          "charging"
+        ],
+        "sources": [
+          "ccci"
+        ]
+      },
+      {
+        "id": "CCCI-0108",
+        "name": "Hauna Fode",
+        "country": "PG",
+        "status": "active",
+        "services": [
+          "internet",
+          "charging"
+        ],
+        "sources": [
+          "ccci"
+        ]
+      },
+      {
+        "id": "CCCI-0109",
+        "name": "HAWAIN TECHNICAL HIGH SCHOOL",
+        "country": "PG",
+        "status": "active",
+        "services": [
+          "internet",
+          "schools",
+          "charging"
+        ],
+        "sources": [
+          "ccci"
+        ]
+      },
+      {
+        "id": "CCCI-0110",
+        "name": "Hiu Island Community",
+        "country": "VU",
+        "status": "active",
+        "services": [
+          "internet",
+          "charging"
+        ],
+        "sources": [
+          "ccci"
+        ]
+      },
+      {
+        "id": "CCCI-0111",
+        "name": "Hokua SSEN",
+        "country": "VU",
+        "status": "active",
+        "services": [
+          "internet",
+          "charging"
+        ],
+        "sources": [
+          "ccci"
+        ]
+      },
+      {
+        "id": "CCCI-0112",
+        "name": "Hovi Adventist High School",
+        "country": "SB",
+        "status": "active",
+        "services": [
+          "internet",
+          "schools",
+          "charging"
+        ],
+        "sources": [
+          "ccci"
+        ]
+      },
+      {
+        "id": "CCCI-0113",
+        "name": "Huawei",
+        "country": "CN",
+        "status": "unknown",
+        "services": [],
+        "sources": [
+          "ccci"
+        ]
+      },
+      {
+        "id": "CCCI-0114",
+        "name": "Hughes Express Wi-Fi",
+        "country": "MX",
+        "status": "unknown",
+        "services": [],
+        "sources": [
+          "ccci"
+        ]
+      },
+      {
+        "id": "CCCI-0115",
+        "name": "Iganga Boys P/S",
+        "country": "UG",
+        "status": "active",
+        "services": [
+          "internet",
+          "support",
+          "literacy",
+          "schools",
+          "charging"
+        ],
+        "sources": [
+          "ccci"
+        ]
+      },
+      {
+        "id": "CCCI-0116",
+        "name": "Intelsat Community Wi-Fi for Refugee Camp",
+        "country": "GH",
+        "status": "unknown",
+        "services": [],
+        "sources": [
+          "ccci"
+        ]
+      },
+      {
+        "id": "CCCI-0117",
+        "name": "Internet for All Pilot Project (Intelsat)",
+        "country": "ZA",
+        "status": "unknown",
+        "services": [],
+        "sources": [
+          "ccci"
+        ]
+      },
+      {
+        "id": "CCCI-0118",
+        "name": "Internet para Todos",
+        "country": "PE",
+        "status": "unknown",
+        "services": [],
+        "sources": [
+          "ccci"
+        ]
+      },
+      {
+        "id": "CCCI-0171",
+        "name": "Internet Roshni",
+        "country": "IN",
+        "status": "active",
+        "services": [
+          "internet",
+          "localServices",
+          "financial",
+          "support",
+          "literacy",
+          "cybercafe"
+        ],
+        "sources": [
+          "ccci"
+        ]
+      },
+      {
+        "id": "CCCI-0172",
+        "name": "Internet Roshni",
+        "country": "IN",
+        "status": "active",
+        "services": [
+          "internet",
+          "localServices",
+          "financial",
+          "support",
+          "literacy",
+          "cybercafe"
+        ],
+        "sources": [
+          "ccci"
+        ]
+      },
+      {
+        "id": "CCCI-0173",
+        "name": "Internet Roshni",
+        "country": "IN",
+        "status": "active",
+        "services": [
+          "internet",
+          "localServices",
+          "financial",
+          "support",
+          "literacy",
+          "cybercafe"
+        ],
+        "sources": [
+          "ccci"
+        ]
+      },
+      {
+        "id": "CCCI-0174",
+        "name": "Internet Roshni",
+        "country": "IN",
+        "status": "active",
+        "services": [
+          "internet",
+          "localServices",
+          "financial",
+          "support",
+          "literacy",
+          "cybercafe"
+        ],
+        "sources": [
+          "ccci"
+        ]
+      },
+      {
+        "id": "CCCI-0175",
+        "name": "Internet Roshni",
+        "country": "IN",
+        "status": "active",
+        "services": [
+          "internet",
+          "localServices",
+          "financial",
+          "support",
+          "literacy",
+          "cybercafe"
+        ],
+        "sources": [
+          "ccci"
+        ]
+      },
+      {
+        "id": "CCCI-0176",
+        "name": "Internet Roshni",
+        "country": "IN",
+        "status": "active",
+        "services": [
+          "internet",
+          "localServices",
+          "financial",
+          "support",
+          "literacy",
+          "cybercafe"
+        ],
+        "sources": [
+          "ccci"
+        ]
+      },
+      {
+        "id": "CCCI-0177",
+        "name": "Internet Roshni",
+        "country": "IN",
+        "status": "active",
+        "services": [
+          "internet",
+          "localServices",
+          "financial",
+          "support",
+          "literacy",
+          "cybercafe"
+        ],
+        "sources": [
+          "ccci"
+        ]
+      },
+      {
+        "id": "CCCI-0178",
+        "name": "Internet Roshni",
+        "country": "IN",
+        "status": "active",
+        "services": [
+          "internet",
+          "localServices",
+          "financial",
+          "support",
+          "literacy",
+          "cybercafe"
+        ],
+        "sources": [
+          "ccci"
+        ]
+      },
+      {
+        "id": "CCCI-0179",
+        "name": "Internet Roshni",
+        "country": "IN",
+        "status": "active",
+        "services": [
+          "internet",
+          "localServices",
+          "financial",
+          "support",
+          "literacy",
+          "cybercafe"
+        ],
+        "sources": [
+          "ccci"
+        ]
+      },
+      {
+        "id": "CCCI-0180",
+        "name": "Internet Roshni",
+        "country": "IN",
+        "status": "active",
+        "services": [
+          "internet",
+          "localServices",
+          "financial",
+          "support",
+          "literacy",
+          "cybercafe"
+        ],
+        "sources": [
+          "ccci"
+        ]
+      },
+      {
+        "id": "CCCI-0182",
+        "name": "Internet Roshni",
+        "country": "IN",
+        "status": "active",
+        "services": [
+          "internet",
+          "localServices",
+          "financial",
+          "support",
+          "literacy",
+          "cybercafe"
+        ],
+        "sources": [
+          "ccci"
+        ]
+      },
+      {
+        "id": "CCCI-0183",
+        "name": "Internet Roshni",
+        "country": "IN",
+        "status": "active",
+        "services": [
+          "internet",
+          "localServices",
+          "financial",
+          "support",
+          "literacy",
+          "cybercafe"
+        ],
+        "sources": [
+          "ccci"
+        ]
+      },
+      {
+        "id": "CCCI-0184",
+        "name": "Internet Roshni",
+        "country": "IN",
+        "status": "active",
+        "services": [
+          "internet",
+          "localServices",
+          "financial",
+          "support",
+          "literacy",
+          "cybercafe"
+        ],
+        "sources": [
+          "ccci"
+        ]
+      },
+      {
+        "id": "CCCI-0185",
+        "name": "Internet Roshni",
+        "country": "IN",
+        "status": "active",
+        "services": [
+          "internet",
+          "localServices",
+          "financial",
+          "support",
+          "literacy",
+          "cybercafe"
+        ],
+        "sources": [
+          "ccci"
+        ]
+      },
+      {
+        "id": "CCCI-0186",
+        "name": "Internet Roshni",
+        "country": "IN",
+        "status": "active",
+        "services": [
+          "internet",
+          "localServices",
+          "financial",
+          "support",
+          "literacy",
+          "cybercafe"
+        ],
+        "sources": [
+          "ccci"
+        ]
+      },
+      {
+        "id": "CCCI-0187",
+        "name": "Internet Roshni",
+        "country": "IN",
+        "status": "active",
+        "services": [
+          "internet",
+          "localServices",
+          "financial",
+          "support",
+          "literacy",
+          "cybercafe"
+        ],
+        "sources": [
+          "ccci"
+        ]
+      },
+      {
+        "id": "CCCI-0188",
+        "name": "Internet Roshni",
+        "country": "IN",
+        "status": "active",
+        "services": [
+          "internet",
+          "localServices",
+          "financial",
+          "support",
+          "literacy",
+          "cybercafe"
+        ],
+        "sources": [
+          "ccci"
+        ]
+      },
+      {
+        "id": "CCCI-0189",
+        "name": "Internet Roshni",
+        "country": "IN",
+        "status": "active",
+        "services": [
+          "internet",
+          "localServices",
+          "financial",
+          "support",
+          "literacy",
+          "cybercafe"
+        ],
+        "sources": [
+          "ccci"
+        ]
+      },
+      {
+        "id": "CCCI-0190",
+        "name": "Internet Roshni",
+        "country": "IN",
+        "status": "active",
+        "services": [
+          "internet",
+          "localServices",
+          "financial",
+          "support",
+          "literacy",
+          "cybercafe"
+        ],
+        "sources": [
+          "ccci"
+        ]
+      },
+      {
+        "id": "CCCI-0191",
+        "name": "Internet Roshni",
+        "country": "IN",
+        "status": "active",
+        "services": [
+          "internet",
+          "localServices",
+          "financial",
+          "support",
+          "literacy",
+          "cybercafe"
+        ],
+        "sources": [
+          "ccci"
+        ]
+      },
+      {
+        "id": "CCCI-0192",
+        "name": "Internet Roshni",
+        "country": "IN",
+        "status": "active",
+        "services": [
+          "internet",
+          "localServices",
+          "financial",
+          "support",
+          "literacy",
+          "cybercafe"
+        ],
+        "sources": [
+          "ccci"
+        ]
+      },
+      {
+        "id": "CCCI-0193",
+        "name": "Internet Roshni",
+        "country": "IN",
+        "status": "active",
+        "services": [
+          "internet",
+          "localServices",
+          "financial",
+          "support",
+          "literacy",
+          "cybercafe"
+        ],
+        "sources": [
+          "ccci"
+        ]
+      },
+      {
+        "id": "CCCI-0194",
+        "name": "Internet Roshni",
+        "country": "IN",
+        "status": "active",
+        "services": [
+          "internet",
+          "localServices",
+          "financial",
+          "support",
+          "literacy",
+          "cybercafe"
+        ],
+        "sources": [
+          "ccci"
+        ]
+      },
+      {
+        "id": "CCCI-0195",
+        "name": "Internet Roshni",
+        "country": "IN",
+        "status": "active",
+        "services": [
+          "internet",
+          "localServices",
+          "financial",
+          "support",
+          "literacy",
+          "cybercafe"
+        ],
+        "sources": [
+          "ccci"
+        ]
+      },
+      {
+        "id": "CCCI-0196",
+        "name": "Internet Roshni",
+        "country": "IN",
+        "status": "active",
+        "services": [
+          "internet",
+          "localServices",
+          "financial",
+          "support",
+          "literacy",
+          "cybercafe"
+        ],
+        "sources": [
+          "ccci"
+        ]
+      },
+      {
+        "id": "CCCI-0197",
+        "name": "Internet Roshni",
+        "country": "IN",
+        "status": "active",
+        "services": [
+          "internet",
+          "localServices",
+          "financial",
+          "support",
+          "literacy",
+          "cybercafe"
+        ],
+        "sources": [
+          "ccci"
+        ]
+      },
+      {
+        "id": "CCCI-0198",
+        "name": "Internet Roshni",
+        "country": "IN",
+        "status": "active",
+        "services": [
+          "internet",
+          "localServices",
+          "financial",
+          "support",
+          "literacy",
+          "cybercafe"
+        ],
+        "sources": [
+          "ccci"
+        ]
+      },
+      {
+        "id": "CCCI-0200",
+        "name": "Internet Roshni",
+        "country": "IN",
+        "status": "active",
+        "services": [
+          "internet",
+          "localServices",
+          "financial",
+          "support",
+          "literacy",
+          "cybercafe"
+        ],
+        "sources": [
+          "ccci"
+        ]
+      },
+      {
+        "id": "CCCI-0201",
+        "name": "Internet Roshni",
+        "country": "IN",
+        "status": "active",
+        "services": [
+          "internet",
+          "localServices",
+          "financial",
+          "support",
+          "literacy",
+          "cybercafe"
+        ],
+        "sources": [
+          "ccci"
+        ]
+      },
+      {
+        "id": "CCCI-0202",
+        "name": "Internet Roshni",
+        "country": "IN",
+        "status": "active",
+        "services": [
+          "internet",
+          "localServices",
+          "financial",
+          "support",
+          "literacy",
+          "cybercafe"
+        ],
+        "sources": [
+          "ccci"
+        ]
+      },
+      {
+        "id": "CCCI-0203",
+        "name": "Internet Roshni",
+        "country": "IN",
+        "status": "active",
+        "services": [
+          "internet",
+          "localServices",
+          "financial",
+          "support",
+          "literacy",
+          "cybercafe"
+        ],
+        "sources": [
+          "ccci"
+        ]
+      },
+      {
+        "id": "CCCI-0204",
+        "name": "Internet Roshni",
+        "country": "IN",
+        "status": "active",
+        "services": [
+          "internet",
+          "localServices",
+          "financial",
+          "support",
+          "literacy",
+          "cybercafe"
+        ],
+        "sources": [
+          "ccci"
+        ]
+      },
+      {
+        "id": "CCCI-0205",
+        "name": "Internet Roshni",
+        "country": "IN",
+        "status": "active",
+        "services": [
+          "internet",
+          "localServices",
+          "financial",
+          "support",
+          "literacy",
+          "cybercafe"
+        ],
+        "sources": [
+          "ccci"
+        ]
+      },
+      {
+        "id": "CCCI-0206",
+        "name": "Internet Roshni",
+        "country": "IN",
+        "status": "active",
+        "services": [
+          "internet",
+          "localServices",
+          "financial",
+          "support",
+          "literacy",
+          "cybercafe"
+        ],
+        "sources": [
+          "ccci"
+        ]
+      },
+      {
+        "id": "CCCI-0208",
+        "name": "Internet Roshni",
+        "country": "IN",
+        "status": "active",
+        "services": [
+          "internet",
+          "localServices",
+          "financial",
+          "support",
+          "literacy",
+          "cybercafe"
+        ],
+        "sources": [
+          "ccci"
+        ]
+      },
+      {
+        "id": "CCCI-0210",
+        "name": "Internet Roshni",
+        "country": "IN",
+        "status": "active",
+        "services": [
+          "internet",
+          "localServices",
+          "financial",
+          "support",
+          "literacy",
+          "cybercafe"
+        ],
+        "sources": [
+          "ccci"
+        ]
+      },
+      {
+        "id": "CCCI-0211",
+        "name": "Internet Roshni",
+        "country": "IN",
+        "status": "active",
+        "services": [
+          "internet",
+          "localServices",
+          "financial",
+          "support",
+          "literacy",
+          "cybercafe"
+        ],
+        "sources": [
+          "ccci"
+        ]
+      },
+      {
+        "id": "CCCI-0212",
+        "name": "Internet Roshni",
+        "country": "IN",
+        "status": "active",
+        "services": [
+          "internet",
+          "localServices",
+          "financial",
+          "support",
+          "literacy",
+          "cybercafe"
+        ],
+        "sources": [
+          "ccci"
+        ]
+      },
+      {
+        "id": "CCCI-0213",
+        "name": "Internet Roshni",
+        "country": "IN",
+        "status": "active",
+        "services": [
+          "internet",
+          "localServices",
+          "financial",
+          "support",
+          "literacy",
+          "cybercafe"
+        ],
+        "sources": [
+          "ccci"
+        ]
+      },
+      {
+        "id": "CCCI-0209",
+        "name": "Internet Roshni",
+        "country": "IN",
+        "status": "active",
+        "services": [
+          "internet",
+          "localServices",
+          "financial",
+          "support",
+          "literacy",
+          "cybercafe"
+        ],
+        "sources": [
+          "ccci"
+        ]
+      },
+      {
+        "id": "CCCI-0125",
+        "name": "Internet Roshni",
+        "country": "IN",
+        "status": "active",
+        "services": [
+          "internet",
+          "localServices",
+          "financial",
+          "support",
+          "literacy",
+          "cybercafe"
+        ],
+        "sources": [
+          "ccci"
+        ]
+      },
+      {
+        "id": "CCCI-0126",
+        "name": "Internet Roshni",
+        "country": "IN",
+        "status": "active",
+        "services": [
+          "internet",
+          "localServices",
+          "financial",
+          "support",
+          "literacy",
+          "cybercafe"
+        ],
+        "sources": [
+          "ccci"
+        ]
+      },
+      {
+        "id": "CCCI-0127",
+        "name": "Internet Roshni",
+        "country": "IN",
+        "status": "active",
+        "services": [
+          "internet",
+          "localServices",
+          "financial",
+          "support",
+          "literacy",
+          "cybercafe"
+        ],
+        "sources": [
+          "ccci"
+        ]
+      },
+      {
+        "id": "CCCI-0128",
+        "name": "Internet Roshni",
+        "country": "IN",
+        "status": "active",
+        "services": [
+          "internet",
+          "localServices",
+          "financial",
+          "support",
+          "literacy",
+          "cybercafe"
+        ],
+        "sources": [
+          "ccci"
+        ]
+      },
+      {
+        "id": "CCCI-0130",
+        "name": "Internet Roshni",
+        "country": "IN",
+        "status": "active",
+        "services": [
+          "internet",
+          "localServices",
+          "financial",
+          "support",
+          "literacy",
+          "cybercafe"
+        ],
+        "sources": [
+          "ccci"
+        ]
+      },
+      {
+        "id": "CCCI-0131",
+        "name": "Internet Roshni",
+        "country": "IN",
+        "status": "active",
+        "services": [
+          "internet",
+          "localServices",
+          "financial",
+          "support",
+          "literacy",
+          "cybercafe"
+        ],
+        "sources": [
+          "ccci"
+        ]
+      },
+      {
+        "id": "CCCI-0132",
+        "name": "Internet Roshni",
+        "country": "IN",
+        "status": "active",
+        "services": [
+          "internet",
+          "localServices",
+          "financial",
+          "support",
+          "literacy",
+          "cybercafe"
+        ],
+        "sources": [
+          "ccci"
+        ]
+      },
+      {
+        "id": "CCCI-0133",
+        "name": "Internet Roshni",
+        "country": "IN",
+        "status": "active",
+        "services": [
+          "internet",
+          "localServices",
+          "financial",
+          "support",
+          "literacy",
+          "cybercafe"
+        ],
+        "sources": [
+          "ccci"
+        ]
+      },
+      {
+        "id": "CCCI-0144",
+        "name": "Internet Roshni",
+        "country": "IN",
+        "status": "active",
+        "services": [
+          "internet",
+          "localServices",
+          "financial",
+          "support",
+          "literacy",
+          "cybercafe"
+        ],
+        "sources": [
+          "ccci"
+        ]
+      },
+      {
+        "id": "CCCI-0145",
+        "name": "Internet Roshni",
+        "country": "IN",
+        "status": "active",
+        "services": [
+          "internet",
+          "localServices",
+          "financial",
+          "support",
+          "literacy",
+          "cybercafe"
+        ],
+        "sources": [
+          "ccci"
+        ]
+      },
+      {
+        "id": "CCCI-0146",
+        "name": "Internet Roshni",
+        "country": "IN",
+        "status": "active",
+        "services": [
+          "internet",
+          "localServices",
+          "financial",
+          "support",
+          "literacy",
+          "cybercafe"
+        ],
+        "sources": [
+          "ccci"
+        ]
+      },
+      {
+        "id": "CCCI-0147",
+        "name": "Internet Roshni",
+        "country": "IN",
+        "status": "active",
+        "services": [
+          "internet",
+          "localServices",
+          "financial",
+          "support",
+          "literacy",
+          "cybercafe"
+        ],
+        "sources": [
+          "ccci"
+        ]
+      },
+      {
+        "id": "CCCI-0148",
+        "name": "Internet Roshni",
+        "country": "IN",
+        "status": "active",
+        "services": [
+          "internet",
+          "localServices",
+          "financial",
+          "support",
+          "literacy",
+          "cybercafe"
+        ],
+        "sources": [
+          "ccci"
+        ]
+      },
+      {
+        "id": "CCCI-0149",
+        "name": "Internet Roshni",
+        "country": "IN",
+        "status": "active",
+        "services": [
+          "internet",
+          "localServices",
+          "financial",
+          "support",
+          "literacy",
+          "cybercafe"
+        ],
+        "sources": [
+          "ccci"
+        ]
+      },
+      {
+        "id": "CCCI-0150",
+        "name": "Internet Roshni",
+        "country": "IN",
+        "status": "active",
+        "services": [
+          "internet",
+          "localServices",
+          "financial",
+          "support",
+          "literacy",
+          "cybercafe"
+        ],
+        "sources": [
+          "ccci"
+        ]
+      },
+      {
+        "id": "CCCI-0151",
+        "name": "Internet Roshni",
+        "country": "IN",
+        "status": "active",
+        "services": [
+          "internet",
+          "localServices",
+          "financial",
+          "support",
+          "literacy",
+          "cybercafe"
+        ],
+        "sources": [
+          "ccci"
+        ]
+      },
+      {
+        "id": "CCCI-0152",
+        "name": "Internet Roshni",
+        "country": "IN",
+        "status": "active",
+        "services": [
+          "internet",
+          "localServices",
+          "financial",
+          "support",
+          "literacy",
+          "cybercafe"
+        ],
+        "sources": [
+          "ccci"
+        ]
+      },
+      {
+        "id": "CCCI-0153",
+        "name": "Internet Roshni",
+        "country": "IN",
+        "status": "active",
+        "services": [
+          "internet",
+          "localServices",
+          "financial",
+          "support",
+          "literacy",
+          "cybercafe"
+        ],
+        "sources": [
+          "ccci"
+        ]
+      },
+      {
+        "id": "CCCI-0154",
+        "name": "Internet Roshni",
+        "country": "IN",
+        "status": "active",
+        "services": [
+          "internet",
+          "localServices",
+          "financial",
+          "support",
+          "literacy",
+          "cybercafe"
+        ],
+        "sources": [
+          "ccci"
+        ]
+      },
+      {
+        "id": "CCCI-0155",
+        "name": "Internet Roshni",
+        "country": "IN",
+        "status": "active",
+        "services": [
+          "internet",
+          "localServices",
+          "financial",
+          "support",
+          "literacy",
+          "cybercafe"
+        ],
+        "sources": [
+          "ccci"
+        ]
+      },
+      {
+        "id": "CCCI-0156",
+        "name": "Internet Roshni",
+        "country": "IN",
+        "status": "active",
+        "services": [
+          "internet",
+          "localServices",
+          "financial",
+          "support",
+          "literacy",
+          "cybercafe"
+        ],
+        "sources": [
+          "ccci"
+        ]
+      },
+      {
+        "id": "CCCI-0157",
+        "name": "Internet Roshni",
+        "country": "IN",
+        "status": "active",
+        "services": [
+          "internet",
+          "localServices",
+          "financial",
+          "support",
+          "literacy",
+          "cybercafe"
+        ],
+        "sources": [
+          "ccci"
+        ]
+      },
+      {
+        "id": "CCCI-0159",
+        "name": "Internet Roshni",
+        "country": "IN",
+        "status": "active",
+        "services": [
+          "internet",
+          "localServices",
+          "financial",
+          "support",
+          "literacy",
+          "cybercafe"
+        ],
+        "sources": [
+          "ccci"
+        ]
+      },
+      {
+        "id": "CCCI-0160",
+        "name": "Internet Roshni",
+        "country": "IN",
+        "status": "active",
+        "services": [
+          "internet",
+          "localServices",
+          "financial",
+          "support",
+          "literacy",
+          "cybercafe"
+        ],
+        "sources": [
+          "ccci"
+        ]
+      },
+      {
+        "id": "CCCI-0161",
+        "name": "Internet Roshni",
+        "country": "IN",
+        "status": "active",
+        "services": [
+          "internet",
+          "localServices",
+          "financial",
+          "support",
+          "literacy",
+          "cybercafe"
+        ],
+        "sources": [
+          "ccci"
+        ]
+      },
+      {
+        "id": "CCCI-0162",
+        "name": "Internet Roshni",
+        "country": "IN",
+        "status": "active",
+        "services": [
+          "internet",
+          "localServices",
+          "financial",
+          "support",
+          "literacy",
+          "cybercafe"
+        ],
+        "sources": [
+          "ccci"
+        ]
+      },
+      {
+        "id": "CCCI-0166",
+        "name": "Internet Roshni",
+        "country": "IN",
+        "status": "active",
+        "services": [
+          "internet",
+          "localServices",
+          "financial",
+          "support",
+          "literacy",
+          "cybercafe"
+        ],
+        "sources": [
+          "ccci"
+        ]
+      },
+      {
+        "id": "CCCI-0167",
+        "name": "Internet Roshni",
+        "country": "IN",
+        "status": "active",
+        "services": [
+          "internet",
+          "localServices",
+          "financial",
+          "support",
+          "literacy",
+          "cybercafe"
+        ],
+        "sources": [
+          "ccci"
+        ]
+      },
+      {
+        "id": "CCCI-0168",
+        "name": "Internet Roshni",
+        "country": "IN",
+        "status": "active",
+        "services": [
+          "internet",
+          "localServices",
+          "financial",
+          "support",
+          "literacy",
+          "cybercafe"
+        ],
+        "sources": [
+          "ccci"
+        ]
+      },
+      {
+        "id": "CCCI-0169",
+        "name": "Internet Roshni",
+        "country": "IN",
+        "status": "active",
+        "services": [
+          "internet",
+          "localServices",
+          "financial",
+          "support",
+          "literacy",
+          "cybercafe"
+        ],
+        "sources": [
+          "ccci"
+        ]
+      },
+      {
+        "id": "CCCI-0170",
+        "name": "Internet Roshni",
+        "country": "IN",
+        "status": "active",
+        "services": [
+          "internet",
+          "localServices",
+          "financial",
+          "support",
+          "literacy",
+          "cybercafe"
+        ],
+        "sources": [
+          "ccci"
+        ]
+      },
+      {
+        "id": "CCCI-0124",
+        "name": "Internet Roshni",
+        "country": "IN",
+        "status": "active",
+        "services": [
+          "internet",
+          "localServices",
+          "financial",
+          "support",
+          "literacy",
+          "cybercafe"
+        ],
+        "sources": [
+          "ccci"
+        ]
+      },
+      {
+        "id": "CCCI-0123",
+        "name": "Internet Roshni",
+        "country": "IN",
+        "status": "active",
+        "services": [
+          "internet",
+          "localServices",
+          "financial",
+          "support",
+          "literacy",
+          "cybercafe"
+        ],
+        "sources": [
+          "ccci"
+        ]
+      },
+      {
+        "id": "CCCI-0122",
+        "name": "Internet Roshni",
+        "country": "IN",
+        "status": "active",
+        "services": [
+          "internet",
+          "localServices",
+          "financial",
+          "support",
+          "literacy",
+          "cybercafe"
+        ],
+        "sources": [
+          "ccci"
+        ]
+      },
+      {
+        "id": "CCCI-0121",
+        "name": "Internet Roshni",
+        "country": "IN",
+        "status": "active",
+        "services": [
+          "internet",
+          "localServices",
+          "financial",
+          "support",
+          "literacy",
+          "cybercafe"
+        ],
+        "sources": [
+          "ccci"
+        ]
+      },
+      {
+        "id": "CCCI-0120",
+        "name": "Internet Roshni",
+        "country": "IN",
+        "status": "active",
+        "services": [
+          "internet",
+          "localServices",
+          "financial",
+          "support",
+          "literacy",
+          "cybercafe"
+        ],
+        "sources": [
+          "ccci"
+        ]
+      },
+      {
+        "id": "CCCI-0119",
+        "name": "Internet Roshni",
+        "country": "IN",
+        "status": "active",
+        "services": [
+          "internet",
+          "localServices",
+          "financial",
+          "support",
+          "literacy",
+          "cybercafe"
+        ],
+        "sources": [
+          "ccci"
+        ]
+      },
+      {
+        "id": "CCCI-0140",
+        "name": "Internet Roshni",
+        "country": "IN",
+        "status": "active",
+        "services": [
+          "internet",
+          "localServices",
+          "financial",
+          "support",
+          "literacy",
+          "cybercafe"
+        ],
+        "sources": [
+          "ccci"
+        ]
+      },
+      {
+        "id": "CCCI-0139",
+        "name": "Internet Roshni",
+        "country": "IN",
+        "status": "active",
+        "services": [
+          "internet",
+          "localServices",
+          "financial",
+          "support",
+          "literacy",
+          "cybercafe"
+        ],
+        "sources": [
+          "ccci"
+        ]
+      },
+      {
+        "id": "CCCI-0138",
+        "name": "Internet Roshni",
+        "country": "IN",
+        "status": "active",
+        "services": [
+          "internet",
+          "localServices",
+          "financial",
+          "support",
+          "literacy",
+          "cybercafe"
+        ],
+        "sources": [
+          "ccci"
+        ]
+      },
+      {
+        "id": "CCCI-0137",
+        "name": "Internet Roshni",
+        "country": "IN",
+        "status": "active",
+        "services": [
+          "internet",
+          "localServices",
+          "financial",
+          "support",
+          "literacy",
+          "cybercafe"
+        ],
+        "sources": [
+          "ccci"
+        ]
+      },
+      {
+        "id": "CCCI-0136",
+        "name": "Internet Roshni",
+        "country": "IN",
+        "status": "active",
+        "services": [
+          "internet",
+          "localServices",
+          "financial",
+          "support",
+          "literacy",
+          "cybercafe"
+        ],
+        "sources": [
+          "ccci"
+        ]
+      },
+      {
+        "id": "CCCI-0135",
+        "name": "Internet Roshni",
+        "country": "IN",
+        "status": "active",
+        "services": [
+          "internet",
+          "localServices",
+          "financial",
+          "support",
+          "literacy",
+          "cybercafe"
+        ],
+        "sources": [
+          "ccci"
+        ]
+      },
+      {
+        "id": "CCCI-0134",
+        "name": "Internet Roshni",
+        "country": "IN",
+        "status": "active",
+        "services": [
+          "internet",
+          "localServices",
+          "financial",
+          "support",
+          "literacy",
+          "cybercafe"
+        ],
+        "sources": [
+          "ccci"
+        ]
+      },
+      {
+        "id": "CCCI-0143",
+        "name": "Internet Roshni",
+        "country": "IN",
+        "status": "active",
+        "services": [
+          "internet",
+          "localServices",
+          "financial",
+          "support",
+          "literacy",
+          "cybercafe"
+        ],
+        "sources": [
+          "ccci"
+        ]
+      },
+      {
+        "id": "CCCI-0142",
+        "name": "Internet Roshni",
+        "country": "IN",
+        "status": "active",
+        "services": [
+          "internet",
+          "localServices",
+          "financial",
+          "support",
+          "literacy",
+          "cybercafe"
+        ],
+        "sources": [
+          "ccci"
+        ]
+      },
+      {
+        "id": "CCCI-0141",
+        "name": "Internet Roshni",
+        "country": "IN",
+        "status": "active",
+        "services": [
+          "internet",
+          "localServices",
+          "financial",
+          "support",
+          "literacy",
+          "cybercafe"
+        ],
+        "sources": [
+          "ccci"
+        ]
+      },
+      {
+        "id": "CCCI-0214",
+        "name": "Internet Society Wireless for Communities (W4C)",
+        "country": "PK",
+        "status": "unknown",
+        "services": [],
+        "sources": [
+          "ccci"
+        ]
+      },
+      {
+        "id": "CCCI-0215",
+        "name": "ISEA, Sources for Action",
+        "country": "CN",
+        "status": "active",
+        "services": [
+          "internet",
+          "localServices"
+        ],
+        "sources": [
+          "ccci"
+        ]
+      },
+      {
+        "id": "CCCI-0216",
+        "name": "ISLET Connect Project",
+        "country": "PH",
+        "status": "unknown",
+        "services": [],
+        "sources": [
+          "ccci"
+        ]
+      },
+      {
+        "id": "CCCI-0219",
+        "name": "ISOC",
+        "country": "IN",
+        "status": "inactive",
+        "services": [
+          "internet",
+          "localServices",
+          "financial",
+          "support",
+          "literacy",
+          "cybercafe"
+        ],
+        "sources": [
+          "ccci"
+        ]
+      },
+      {
+        "id": "CCCI-0220",
+        "name": "ISOC",
+        "country": "IN",
+        "status": "inProgress",
+        "services": [
+          "internet",
+          "localServices",
+          "financial",
+          "support",
+          "literacy",
+          "cybercafe"
+        ],
+        "sources": [
+          "ccci"
+        ]
+      },
+      {
+        "id": "CCCI-0218",
+        "name": "ISOC",
+        "country": "IN",
+        "status": "inactive",
+        "services": [
+          "internet",
+          "localServices",
+          "financial",
+          "support",
+          "literacy",
+          "cybercafe"
+        ],
+        "sources": [
+          "ccci"
+        ]
+      },
+      {
+        "id": "CCCI-0217",
+        "name": "ISOC",
+        "country": "IN",
+        "status": "inProgress",
+        "services": [
+          "internet",
+          "localServices",
+          "financial",
+          "support",
+          "literacy",
+          "cybercafe"
+        ],
+        "sources": [
+          "ccci"
+        ]
+      },
+      {
+        "id": "CCCI-0241",
+        "name": "ISOC",
+        "country": "IN",
+        "status": "active",
+        "services": [
+          "internet",
+          "localServices",
+          "financial",
+          "support",
+          "literacy",
+          "cybercafe"
+        ],
+        "sources": [
+          "ccci"
+        ]
+      },
+      {
+        "id": "CCCI-0240",
+        "name": "ISOC",
+        "country": "IN",
+        "status": "inactive",
+        "services": [
+          "internet",
+          "localServices",
+          "financial",
+          "support",
+          "literacy",
+          "cybercafe"
+        ],
+        "sources": [
+          "ccci"
+        ]
+      },
+      {
+        "id": "CCCI-0239",
+        "name": "ISOC",
+        "country": "IN",
+        "status": "inactive",
+        "services": [
+          "internet",
+          "voice",
+          "offline",
+          "localServices"
+        ],
+        "sources": [
+          "ccci"
+        ]
+      },
+      {
+        "id": "CCCI-0238",
+        "name": "ISOC",
+        "country": "IN",
+        "status": "inProgress",
+        "services": [
+          "internet",
+          "localServices",
+          "financial",
+          "support",
+          "literacy",
+          "cybercafe"
+        ],
+        "sources": [
+          "ccci"
+        ]
+      },
+      {
+        "id": "CCCI-0237",
+        "name": "ISOC",
+        "country": "IN",
+        "status": "active",
+        "services": [
+          "internet",
+          "localServices",
+          "financial",
+          "support",
+          "literacy",
+          "cybercafe"
+        ],
+        "sources": [
+          "ccci"
+        ]
+      },
+      {
+        "id": "CCCI-0236",
+        "name": "ISOC",
+        "country": "IN",
+        "status": "inProgress",
+        "services": [
+          "internet",
+          "localServices",
+          "financial",
+          "support",
+          "literacy",
+          "cybercafe"
+        ],
+        "sources": [
+          "ccci"
+        ]
+      },
+      {
+        "id": "CCCI-0234",
+        "name": "ISOC",
+        "country": "IN",
+        "status": "inactive",
+        "services": [
+          "internet",
+          "localServices",
+          "financial",
+          "support",
+          "literacy",
+          "cybercafe"
+        ],
+        "sources": [
+          "ccci"
+        ]
+      },
+      {
+        "id": "CCCI-0233",
+        "name": "ISOC",
+        "country": "IN",
+        "status": "inProgress",
+        "services": [
+          "internet",
+          "localServices",
+          "financial",
+          "support",
+          "literacy",
+          "cybercafe"
+        ],
+        "sources": [
+          "ccci"
+        ]
+      },
+      {
+        "id": "CCCI-0232",
+        "name": "ISOC",
+        "country": "IN",
+        "status": "inProgress",
+        "services": [
+          "internet",
+          "localServices",
+          "financial",
+          "support",
+          "literacy",
+          "cybercafe"
+        ],
+        "sources": [
+          "ccci"
+        ]
+      },
+      {
+        "id": "CCCI-0231",
+        "name": "ISOC",
+        "country": "IN",
+        "status": "inactive",
+        "services": [
+          "internet",
+          "localServices",
+          "financial",
+          "support",
+          "literacy",
+          "cybercafe"
+        ],
+        "sources": [
+          "ccci"
+        ]
+      },
+      {
+        "id": "CCCI-0230",
+        "name": "ISOC",
+        "country": "IN",
+        "status": "inactive",
+        "services": [
+          "internet",
+          "localServices",
+          "financial",
+          "support",
+          "literacy",
+          "cybercafe"
+        ],
+        "sources": [
+          "ccci"
+        ]
+      },
+      {
+        "id": "CCCI-0229",
+        "name": "ISOC",
+        "country": "IN",
+        "status": "inactive",
+        "services": [
+          "internet",
+          "localServices",
+          "financial",
+          "support",
+          "literacy",
+          "cybercafe"
+        ],
+        "sources": [
+          "ccci"
+        ]
+      },
+      {
+        "id": "CCCI-0235",
+        "name": "ISOC",
+        "country": "IN",
+        "status": "inProgress",
+        "services": [
+          "internet",
+          "localServices",
+          "financial",
+          "support",
+          "literacy",
+          "cybercafe"
+        ],
+        "sources": [
+          "ccci"
+        ]
+      },
+      {
+        "id": "CCCI-0228",
+        "name": "ISOC",
+        "country": "IN",
+        "status": "inactive",
+        "services": [
+          "internet",
+          "localServices",
+          "financial",
+          "support",
+          "literacy",
+          "cybercafe"
+        ],
+        "sources": [
+          "ccci"
+        ]
+      },
+      {
+        "id": "CCCI-0227",
+        "name": "ISOC",
+        "country": "IN",
+        "status": "inactive",
+        "services": [
+          "internet",
+          "localServices",
+          "financial",
+          "support",
+          "literacy",
+          "cybercafe"
+        ],
+        "sources": [
+          "ccci"
+        ]
+      },
+      {
+        "id": "CCCI-0226",
+        "name": "ISOC",
+        "country": "IN",
+        "status": "inactive",
+        "services": [
+          "internet",
+          "localServices",
+          "financial",
+          "support",
+          "literacy",
+          "cybercafe"
+        ],
+        "sources": [
+          "ccci"
+        ]
+      },
+      {
+        "id": "CCCI-0225",
+        "name": "ISOC",
+        "country": "IN",
+        "status": "inactive",
+        "services": [
+          "internet",
+          "localServices",
+          "financial",
+          "support",
+          "literacy",
+          "cybercafe"
+        ],
+        "sources": [
+          "ccci"
+        ]
+      },
+      {
+        "id": "CCCI-0224",
+        "name": "ISOC",
+        "country": "IN",
+        "status": "inProgress",
+        "services": [
+          "internet",
+          "localServices",
+          "financial",
+          "support",
+          "literacy",
+          "cybercafe"
+        ],
+        "sources": [
+          "ccci"
+        ]
+      },
+      {
+        "id": "CCCI-0223",
+        "name": "ISOC",
+        "country": "IN",
+        "status": "inactive",
+        "services": [
+          "internet",
+          "localServices",
+          "financial",
+          "support",
+          "literacy",
+          "cybercafe"
+        ],
+        "sources": [
+          "ccci"
+        ]
+      },
+      {
+        "id": "CCCI-0222",
+        "name": "ISOC",
+        "country": "IN",
+        "status": "inactive",
+        "services": [
+          "internet",
+          "localServices",
+          "financial",
+          "support",
+          "literacy",
+          "cybercafe"
+        ],
+        "sources": [
+          "ccci"
+        ]
+      },
+      {
+        "id": "CCCI-0221",
+        "name": "ISOC",
+        "country": "IN",
+        "status": "inProgress",
+        "services": [
+          "internet",
+          "localServices",
+          "financial",
+          "support",
+          "literacy",
+          "cybercafe"
+        ],
+        "sources": [
+          "ccci"
+        ]
+      },
+      {
+        "id": "CCCI-0242",
+        "name": "Jama'are Community network",
+        "country": "NG",
+        "status": "active",
+        "services": [
+          "internet",
+          "voice",
+          "literacy"
+        ],
+        "sources": [
+          "ccci"
+        ]
+      },
+      {
+        "id": "CCCI-0243",
+        "name": "Jnoptik Intrabach",
+        "country": "MX",
+        "status": "active",
+        "services": [
+          "offline",
+          "localServices",
+          "literacy",
+          "schools"
+        ],
+        "sources": [
+          "ccci"
+        ]
+      },
+      {
+        "id": "CCCI-0244",
+        "name": "Kabazana Womens Center Hub",
+        "country": "UG",
+        "status": "active",
+        "services": [
+          "internet",
+          "support",
+          "literacy",
+          "schools",
+          "charging"
+        ],
+        "sources": [
+          "ccci"
+        ]
+      },
+      {
+        "id": "CCCI-0245",
+        "name": "KabunaTab-North",
+        "country": "KI",
+        "status": "active",
+        "services": [
+          "internet",
+          "charging"
+        ],
+        "sources": [
+          "ccci"
+        ]
+      },
+      {
+        "id": "CCCI-0246",
+        "name": "Kashojwa Fishing Village Hub",
+        "country": "UG",
+        "status": "active",
+        "services": [
+          "internet",
+          "support",
+          "literacy",
+          "schools",
+          "charging"
+        ],
+        "sources": [
+          "ccci"
+        ]
+      },
+      {
+        "id": "CCCI-0247",
+        "name": "Kereabu Community Centre (Kereabu Dispensary W Santo 33)",
+        "country": "VU",
+        "status": "active",
+        "services": [
+          "internet",
+          "charging"
+        ],
+        "sources": [
+          "ccci"
+        ]
+      },
+      {
+        "id": "CCCI-0248",
+        "name": "Kerembei Health Centre",
+        "country": "VU",
+        "status": "active",
+        "services": [
+          "internet",
+          "charging"
+        ],
+        "sources": [
+          "ccci"
+        ]
+      },
+      {
+        "id": "CCCI-0249",
+        "name": "Kerewai 1 @ Sulimauri SSEN",
+        "country": "VU",
+        "status": "active",
+        "services": [
+          "internet",
+          "charging"
+        ],
+        "sources": [
+          "ccci"
+        ]
+      },
+      {
+        "id": "CCCI-0250",
+        "name": "Kerewai 2 SSEN",
+        "country": "VU",
+        "status": "active",
+        "services": [
+          "internet",
+          "charging"
+        ],
+        "sources": [
+          "ccci"
+        ]
+      },
+      {
+        "id": "CCCI-0251",
+        "name": "Kijiji Yeetu (KijiTech)",
+        "country": "KE",
+        "status": "unknown",
+        "services": [
+          "internet",
+          "voice",
+          "localServices",
+          "radio",
+          "cybercafe",
+          "environmental"
+        ],
+        "sources": [
+          "ccci"
+        ]
+      },
+      {
+        "id": "CCCI-0252",
+        "name": "KijiTech",
+        "country": "KE",
+        "status": "ceased",
+        "services": [
+          "internet",
+          "literacy",
+          "schools"
+        ],
+        "sources": [
+          "ccci"
+        ]
+      },
+      {
+        "id": "CCCI-0253",
+        "name": "Kosrae Cwifi - Lelu 2",
+        "country": "FM",
+        "status": "active",
+        "services": [
+          "internet",
+          "charging"
+        ],
+        "sources": [
+          "ccci"
+        ]
+      },
+      {
+        "id": "CCCI-0254",
+        "name": "Kosrae Cwifi - Malem 1",
+        "country": "FM",
+        "status": "active",
+        "services": [
+          "internet",
+          "charging"
+        ],
+        "sources": [
+          "ccci"
+        ]
+      },
+      {
+        "id": "CCCI-0255",
+        "name": "Kosrae Cwifi - Malem 2",
+        "country": "FM",
+        "status": "active",
+        "services": [
+          "internet",
+          "charging"
+        ],
+        "sources": [
+          "ccci"
+        ]
+      },
+      {
+        "id": "CCCI-0256",
+        "name": "Kosrae Cwifi - Utwe 1",
+        "country": "FM",
+        "status": "active",
+        "services": [
+          "internet",
+          "charging"
+        ],
+        "sources": [
+          "ccci"
+        ]
+      },
+      {
+        "id": "CCCI-0257",
+        "name": "KosraeCwifi - Lelu 1",
+        "country": "FM",
+        "status": "active",
+        "services": [
+          "internet",
+          "charging"
+        ],
+        "sources": [
+          "ccci"
+        ]
+      },
+      {
+        "id": "CCCI-0258",
+        "name": "KUK I NET Muri 1 Wifi Hotspot",
+        "country": "CK",
+        "status": "active",
+        "services": [
+          "internet",
+          "charging"
+        ],
+        "sources": [
+          "ccci"
+        ]
+      },
+      {
+        "id": "CCCI-0259",
+        "name": "KUK I NET Wifi Hotspot Islander",
+        "country": "CK",
+        "status": "active",
+        "services": [
+          "internet",
+          "charging"
+        ],
+        "sources": [
+          "ccci"
+        ]
+      },
+      {
+        "id": "CCCI-0260",
+        "name": "KUK I NET Wifi Hotspot Market",
+        "country": "CK",
+        "status": "active",
+        "services": [
+          "internet",
+          "charging"
+        ],
+        "sources": [
+          "ccci"
+        ]
+      },
+      {
+        "id": "CCCI-0261",
+        "name": "KUK I NET Wifi Hotspot Muri Market",
+        "country": "CK",
+        "status": "active",
+        "services": [
+          "internet",
+          "charging"
+        ],
+        "sources": [
+          "ccci"
+        ]
+      },
+      {
+        "id": "CCCI-0262",
+        "name": "KUK I NET Wifi Hotspot Pukapuka Hostel",
+        "country": "CK",
+        "status": "active",
+        "services": [
+          "internet",
+          "charging"
+        ],
+        "sources": [
+          "ccci"
+        ]
+      },
+      {
+        "id": "CCCI-0263",
+        "name": "KUK I NET Wifi Hotspot Vakaroa Muri",
+        "country": "CK",
+        "status": "active",
+        "services": [
+          "internet",
+          "charging"
+        ],
+        "sources": [
+          "ccci"
+        ]
+      },
+      {
+        "id": "CCCI-0264",
+        "name": "Kukele Adventist High School",
+        "country": "SB",
+        "status": "active",
+        "services": [
+          "internet",
+          "schools",
+          "charging"
+        ],
+        "sources": [
+          "ccci"
+        ]
+      },
+      {
+        "id": "CCCI-0265",
+        "name": "Lanet Umoja Community Network",
+        "country": "KE",
+        "status": "unknown",
+        "services": [],
+        "sources": [
+          "ccci"
+        ]
+      },
+      {
+        "id": "CCCI-0266",
+        "name": "Lavazza (Airband)",
+        "country": "CO",
+        "status": "unknown",
+        "services": [],
+        "sources": [
+          "ccci"
+        ]
+      },
+      {
+        "id": "CCCI-0267",
+        "name": "Linking artisans and women with digital networks and ICT tools",
+        "country": "IN",
+        "status": "active",
+        "services": [
+          "localServices",
+          "literacy",
+          "schools"
+        ],
+        "sources": [
+          "ccci"
+        ]
+      },
+      {
+        "id": "CCCI-0268",
+        "name": "LinkNet/Macha Works, Macha, Zambia",
+        "country": "ZM",
+        "status": "unknown",
+        "services": [],
+        "sources": [
+          "ccci"
+        ]
+      },
+      {
+        "id": "CCCI-0269",
+        "name": "Lobe Town Council",
+        "country": "UG",
+        "status": "active",
+        "services": [
+          "internet",
+          "support",
+          "literacy",
+          "charging"
+        ],
+        "sources": [
+          "ccci"
+        ]
+      },
+      {
+        "id": "CCCI-0270",
+        "name": "Lolowai Hospital",
+        "country": "VU",
+        "status": "active",
+        "services": [
+          "internet",
+          "charging"
+        ],
+        "sources": [
+          "ccci"
+        ]
+      },
+      {
+        "id": "CCCI-0271",
+        "name": "LTE 250 Mhz for Agribusiness in Brazil",
+        "country": "BR",
+        "status": "unknown",
+        "services": [],
+        "sources": [
+          "ccci"
+        ]
+      },
+      {
+        "id": "CCCI-0272",
+        "name": "Luganville Chapui",
+        "country": "VU",
+        "status": "active",
+        "services": [
+          "internet",
+          "charging"
+        ],
+        "sources": [
+          "ccci"
+        ]
+      },
+      {
+        "id": "CCCI-0273",
+        "name": "M-Kopa (Airband)",
+        "country": "KE",
+        "status": "unknown",
+        "services": [],
+        "sources": [
+          "ccci"
+        ]
+      },
+      {
+        "id": "CCCI-0274",
+        "name": "Maewo Naviso Clinic",
+        "country": "VU",
+        "status": "active",
+        "services": [
+          "internet",
+          "charging"
+        ],
+        "sources": [
+          "ccci"
+        ]
+      },
+      {
+        "id": "CCCI-0275",
+        "name": "Majuwa Hello Hub",
+        "country": "NP",
+        "status": "dormant",
+        "services": [
+          "internet",
+          "literacy",
+          "schools",
+          "charging"
+        ],
+        "sources": [
+          "ccci"
+        ]
+      },
+      {
+        "id": "CCCI-0276",
+        "name": "Malampa NE Malekula Ecole Primaire de Vao Mission Catholique (VN MK Malekula Lakatoro Park)",
+        "country": "VU",
+        "status": "active",
+        "services": [
+          "internet",
+          "charging"
+        ],
+        "sources": [
+          "ccci"
+        ]
+      },
+      {
+        "id": "CCCI-0277",
+        "name": "Malawi SimbaNET",
+        "country": "MW",
+        "status": "unknown",
+        "services": [],
+        "sources": [
+          "ccci"
+        ]
+      },
+      {
+        "id": "CCCI-0278",
+        "name": "Mapamoiwa",
+        "country": "PG",
+        "status": "active",
+        "services": [
+          "internet",
+          "charging"
+        ],
+        "sources": [
+          "ccci"
+        ]
+      },
+      {
+        "id": "CCCI-0279",
+        "name": "MARIENBERG TECHNICAL HIGH SCHOOL",
+        "country": "PG",
+        "status": "active",
+        "services": [
+          "internet",
+          "schools",
+          "charging"
+        ],
+        "sources": [
+          "ccci"
+        ]
+      },
+      {
+        "id": "CCCI-0280",
+        "name": "Martin School-Hiu Island, Vanuatu",
+        "country": "VU",
+        "status": "active",
+        "services": [
+          "internet",
+          "schools",
+          "charging"
+        ],
+        "sources": [
+          "ccci"
+        ]
+      },
+      {
+        "id": "CCCI-0281",
+        "name": "Masaba P/S",
+        "country": "UG",
+        "status": "active",
+        "services": [
+          "internet",
+          "support",
+          "literacy",
+          "schools",
+          "charging"
+        ],
+        "sources": [
+          "ccci"
+        ]
+      },
+      {
+        "id": "CCCI-0282",
+        "name": "Mashema Community Network",
+        "country": "NG",
+        "status": "active",
+        "services": [
+          "internet",
+          "localServices",
+          "support",
+          "literacy",
+          "radio",
+          "schools",
+          "charging"
+        ],
+        "sources": [
+          "ccci"
+        ]
+      },
+      {
+        "id": "CCCI-0283",
+        "name": "Maternal Child Health Clinic (MCH)",
+        "country": "VU",
+        "status": "active",
+        "services": [
+          "internet",
+          "charging"
+        ],
+        "sources": [
+          "ccci"
+        ]
+      },
+      {
+        "id": "CCCI-0284",
+        "name": "Matevulu College (Matevulu College Clinic)",
+        "country": "VU",
+        "status": "active",
+        "services": [
+          "internet",
+          "schools",
+          "charging"
+        ],
+        "sources": [
+          "ccci"
+        ]
+      },
+      {
+        "id": "CCCI-0285",
+        "name": "Maurifanga (Imere) Health Centre",
+        "country": "VU",
+        "status": "active",
+        "services": [
+          "internet",
+          "charging"
+        ],
+        "sources": [
+          "ccci"
+        ]
+      },
+      {
+        "id": "CCCI-0286",
+        "name": "Mawingu Networks (Airband)",
+        "country": "KE",
+        "status": "unknown",
+        "services": [],
+        "sources": [
+          "ccci"
+        ]
+      },
+      {
+        "id": "cb-melbourne-wireless",
+        "name": "Melbourne Wireless",
+        "country": "AU",
+        "status": "unknown",
+        "services": [],
+        "website": "https://melbournewireless.org.au",
+        "sources": [
+          "communityBox"
+        ]
+      },
+      {
+        "id": "CCCI-0287",
+        "name": "Mem-Chemfre & Bruben Community Network",
+        "country": "GH",
+        "status": "active",
+        "services": [
+          "internet",
+          "localServices",
+          "literacy",
+          "radio",
+          "schools"
+        ],
+        "sources": [
+          "ccci"
+        ]
+      },
+      {
+        "id": "CCCI-0288",
+        "name": "Membangun Infrastruktur Jaringan Internet",
+        "country": "ID",
+        "status": "active",
+        "services": [
+          "internet",
+          "literacy"
+        ],
+        "sources": [
+          "ccci"
+        ]
+      },
+      {
+        "id": "CCCI-0289",
+        "name": "Mexico Red Compartida",
+        "country": "MX",
+        "status": "unknown",
+        "services": [],
+        "sources": [
+          "ccci"
+        ]
+      },
+      {
+        "id": "CCCI-0290",
+        "name": "Microsoft",
+        "country": "IN",
+        "status": "inactive",
+        "services": [
+          "internet",
+          "localServices",
+          "financial",
+          "support",
+          "literacy",
+          "cybercafe"
+        ],
+        "sources": [
+          "ccci"
+        ]
+      },
+      {
+        "id": "CCCI-0291",
+        "name": "Militantes Del Pueblo",
+        "country": "AR",
+        "status": "unknown",
+        "services": [],
+        "sources": [
+          "ccci"
+        ]
+      },
+      {
+        "id": "CCCI-0292",
+        "name": "Mphasis",
+        "country": "IN",
+        "status": "inactive",
+        "services": [
+          "internet",
+          "localServices",
+          "financial",
+          "support",
+          "literacy",
+          "cybercafe"
+        ],
+        "sources": [
+          "ccci"
+        ]
+      },
+      {
+        "id": "CCCI-0293",
+        "name": "Mphasis",
+        "country": "IN",
+        "status": "inactive",
+        "services": [
+          "internet",
+          "localServices",
+          "financial",
+          "support",
+          "literacy",
+          "cybercafe"
+        ],
+        "sources": [
+          "ccci"
+        ]
+      },
+      {
+        "id": "CCCI-0295",
+        "name": "Mphasis",
+        "country": "IN",
+        "status": "inactive",
+        "services": [
+          "internet",
+          "localServices",
+          "financial",
+          "support",
+          "literacy",
+          "cybercafe"
+        ],
+        "sources": [
+          "ccci"
+        ]
+      },
+      {
+        "id": "CCCI-0296",
+        "name": "Mphasis",
+        "country": "IN",
+        "status": "inactive",
+        "services": [
+          "internet",
+          "localServices",
+          "financial",
+          "support",
+          "literacy",
+          "cybercafe"
+        ],
+        "sources": [
+          "ccci"
+        ]
+      },
+      {
+        "id": "CCCI-0294",
+        "name": "Mphasis",
+        "country": "IN",
+        "status": "inactive",
+        "services": [
+          "internet",
+          "localServices",
+          "financial",
+          "support",
+          "literacy",
+          "cybercafe"
+        ],
+        "sources": [
+          "ccci"
+        ]
+      },
+      {
+        "id": "CCCI-0297",
+        "name": "Mugenyi Community",
+        "country": "UG",
+        "status": "active",
+        "services": [
+          "internet",
+          "support",
+          "literacy",
+          "charging"
+        ],
+        "sources": [
+          "ccci"
+        ]
+      },
+      {
+        "id": "CCCI-0298",
+        "name": "Murambinda Community Network and Kyleview CN",
+        "country": "ZW",
+        "status": "active",
+        "services": [
+          "internet",
+          "offline",
+          "localServices",
+          "financial",
+          "support",
+          "literacy",
+          "schools",
+          "cybercafe"
+        ],
+        "sources": [
+          "ccci"
+        ]
+      },
+      {
+        "id": "CCCI-0299",
+        "name": "Mutua Community Network",
+        "country": "KE",
+        "status": "unknown",
+        "services": [],
+        "sources": [
+          "ccci"
+        ]
+      },
+      {
+        "id": "CCCI-0300",
+        "name": "Nakawuka Community",
+        "country": "UG",
+        "status": "active",
+        "services": [
+          "internet",
+          "support",
+          "literacy",
+          "schools",
+          "charging"
+        ],
+        "sources": [
+          "ccci"
+        ]
+      },
+      {
+        "id": "CCCI-0301",
+        "name": "Namelok Wireless /Kisamis",
+        "country": "KE",
+        "status": "unknown",
+        "services": [],
+        "sources": [
+          "ccci"
+        ]
+      },
+      {
+        "id": "CCCI-0302",
+        "name": "Napo River Network/Tucan3G, Peru",
+        "country": "PE",
+        "status": "unknown",
+        "services": [],
+        "sources": [
+          "ccci"
+        ]
+      },
+      {
+        "id": "cb-nepal-wireless-networking-project",
+        "name": "Nepal Wireless Networking Project",
+        "country": "NP",
+        "status": "unknown",
+        "services": [],
+        "website": "http://nepwireless.net",
+        "sources": [
+          "communityBox"
+        ]
+      },
+      {
+        "id": "CCCI-0303",
+        "name": "Network name: FOCUS. School supoort project name: Beyond School Borders",
+        "country": "ZA",
+        "status": "active",
+        "services": [
+          "internet",
+          "offline",
+          "radio",
+          "schools"
+        ],
+        "sources": [
+          "ccci"
+        ]
+      },
+      {
+        "id": "CCCI-0304",
+        "name": "Ngoniahau Adventist High School",
+        "country": "SB",
+        "status": "active",
+        "services": [
+          "internet",
+          "schools",
+          "charging"
+        ],
+        "sources": [
+          "ccci"
+        ]
+      },
+      {
+        "id": "CCCI-0305",
+        "name": "NICHE Project - Zambia Research & Education Network (ZAMREN)",
+        "country": "ZM",
+        "status": "unknown",
+        "services": [],
+        "sources": [
+          "ccci"
+        ]
+      },
+      {
+        "id": "CCCI-0306",
+        "name": "Nigale Hello Hub",
+        "country": "NP",
+        "status": "active",
+        "services": [
+          "internet",
+          "literacy",
+          "schools",
+          "charging"
+        ],
+        "sources": [
+          "ccci"
+        ]
+      },
+      {
+        "id": "cb-ninux",
+        "name": "Ninux",
+        "country": "IT",
+        "status": "unknown",
+        "services": [],
+        "website": "http://ninux.org",
+        "sources": [
+          "communityBox"
+        ]
+      },
+      {
+        "id": "CCCI-0307",
+        "name": "Northern Provincial Hospital",
+        "country": "VU",
+        "status": "active",
+        "services": [
+          "internet",
+          "charging"
+        ],
+        "sources": [
+          "ccci"
+        ]
+      },
+      {
+        "id": "cb-nyc-mesh",
+        "name": "NYC Mesh",
+        "country": "US",
+        "status": "unknown",
+        "services": [],
+        "website": "https://nycmesh.net",
+        "sources": [
+          "communityBox"
+        ]
+      },
+      {
+        "id": "CCCI-0308",
+        "name": "Olaka Child Care Primary School",
+        "country": "UG",
+        "status": "active",
+        "services": [
+          "internet",
+          "support",
+          "literacy",
+          "schools",
+          "charging"
+        ],
+        "sources": [
+          "ccci"
+        ]
+      },
+      {
+        "id": "CCCI-0309",
+        "name": "Orange Backhaul Capacity Through Satellite (SES)",
+        "country": "CF",
+        "status": "unknown",
+        "services": [],
+        "sources": [
+          "ccci"
+        ]
+      },
+      {
+        "id": "CCCI-0311",
+        "name": "Our Innitiave is Ngikeyoko CN, Located in Kenya, Turkana county in Kakuma",
+        "country": "KE",
+        "status": "unknown",
+        "services": [],
+        "sources": [
+          "ccci"
+        ]
+      },
+      {
+        "id": "CCCI-0312",
+        "name": "Packerland Broadband (Airband)",
+        "country": "US",
+        "status": "unknown",
+        "services": [],
+        "sources": [
+          "ccci"
+        ]
+      },
+      {
+        "id": "CCCI-0313",
+        "name": "Pamoja Net",
+        "country": "CD",
+        "status": "unknown",
+        "services": [
+          "internet",
+          "voice",
+          "offline",
+          "localServices",
+          "cybercafe",
+          "environmental"
+        ],
+        "sources": [
+          "ccci"
+        ]
+      },
+      {
+        "id": "CCCI-0314",
+        "name": "Panykworo Primary School",
+        "country": "UG",
+        "status": "active",
+        "services": [
+          "internet",
+          "support",
+          "literacy",
+          "schools",
+          "charging"
+        ],
+        "sources": [
+          "ccci"
+        ]
+      },
+      {
+        "id": "CCCI-0315",
+        "name": "Pasepa community network",
+        "country": "NG",
+        "status": "planned",
+        "services": [
+          "internet",
+          "voice",
+          "literacy",
+          "schools",
+          "cybercafe",
+          "charging"
+        ],
+        "sources": [
+          "ccci"
+        ]
+      },
+      {
+        "id": "CCCI-0316",
+        "name": "PATHARDHI COMMUNITY NETWORK",
+        "country": "IN",
+        "status": "dormant",
+        "services": [
+          "financial",
+          "support",
+          "literacy"
+        ],
+        "sources": [
+          "ccci"
+        ]
+      },
+      {
+        "id": "CCCI-0317",
+        "name": "Patle Chautari Hub",
+        "country": "NP",
+        "status": "unknown",
+        "services": [],
+        "sources": [
+          "ccci"
+        ]
+      },
+      {
+        "id": "CCCI-0318",
+        "name": "Patupaele Adventist High School",
+        "country": "SB",
+        "status": "active",
+        "services": [
+          "internet",
+          "schools",
+          "charging"
+        ],
+        "sources": [
+          "ccci"
+        ]
+      },
+      {
+        "id": "cb-people-s-open-network",
+        "name": "People's Open Network",
+        "country": "US",
+        "status": "unknown",
+        "services": [],
+        "website": "https://peoplesopen.net",
+        "sources": [
+          "communityBox"
+        ]
+      },
+      {
+        "id": "cb-personal-telco-project-ptp",
+        "name": "Personal Telco Project (PTP)",
+        "country": "US",
+        "status": "unknown",
+        "services": [],
+        "website": "https://personaltelco.net",
+        "sources": [
+          "communityBox"
+        ]
+      },
+      {
+        "id": "CCCI-0319",
+        "name": "Peru RNDFO Project",
+        "country": "PE",
+        "status": "unknown",
+        "services": [],
+        "sources": [
+          "ccci"
+        ]
+      },
+      {
+        "id": "CCCI-0320",
+        "name": "Philippine Rural Reconstruction Movement",
+        "country": "PH",
+        "status": "pilot",
+        "services": [
+          "internet",
+          "voice",
+          "offline",
+          "localServices",
+          "financial",
+          "support",
+          "literacy",
+          "radio",
+          "schools",
+          "cybercafe"
+        ],
+        "sources": [
+          "ccci"
+        ]
+      },
+      {
+        "id": "CCCI-0321",
+        "name": "POBUMA MANUS",
+        "country": "PG",
+        "status": "active",
+        "services": [
+          "internet",
+          "charging"
+        ],
+        "sources": [
+          "ccci"
+        ]
+      },
+      {
+        "id": "CCCI-0322",
+        "name": "Pulo Aceh (SIK)",
+        "country": "ID",
+        "status": "active",
+        "services": [
+          "internet",
+          "financial",
+          "literacy",
+          "schools"
+        ],
+        "sources": [
+          "ccci"
+        ]
+      },
+      {
+        "id": "CCCI-0323",
+        "name": "Quilombola Community Network, Penalva, Brazil",
+        "country": "BR",
+        "status": "unknown",
+        "services": [],
+        "sources": [
+          "ccci"
+        ]
+      },
+      {
+        "id": "CCCI-0324",
+        "name": "Rd Kalunga Livre",
+        "country": "BR",
+        "status": "active",
+        "services": [
+          "internet",
+          "offline",
+          "localServices",
+          "radio",
+          "cybercafe",
+          "charging"
+        ],
+        "sources": [
+          "ccci"
+        ]
+      },
+      {
+        "id": "CCCI-0325",
+        "name": "Red Kwechi",
+        "country": "MX",
+        "status": "active",
+        "services": [
+          "internet"
+        ],
+        "sources": [
+          "ccci"
+        ]
+      },
+      {
+        "id": "CCCI-0326",
+        "name": "Redcross HQ (Vules Epe Health Centre C Santo 25)",
+        "country": "VU",
+        "status": "active",
+        "services": [
+          "internet",
+          "charging"
+        ],
+        "sources": [
+          "ccci"
+        ]
+      },
+      {
+        "id": "CCCI-0327",
+        "name": "Rede comunitária Base Comum - tecnologias para o bem comum",
+        "country": "BR",
+        "status": "planned",
+        "services": [
+          "voice",
+          "offline",
+          "localServices",
+          "literacy",
+          "radio"
+        ],
+        "sources": [
+          "ccci"
+        ]
+      },
+      {
+        "id": "CCCI-0328",
+        "name": "Rede Comunitária Novo Futuro",
+        "country": "BR",
+        "status": "pilot",
+        "services": [
+          "internet",
+          "offline",
+          "localServices",
+          "literacy"
+        ],
+        "sources": [
+          "ccci"
+        ]
+      },
+      {
+        "id": "CCCI-0329",
+        "name": "Rede Comunitária Ribeirão Grande/Terra Seca",
+        "country": "BR",
+        "status": "active",
+        "services": [
+          "internet",
+          "localServices"
+        ],
+        "sources": [
+          "ccci"
+        ]
+      },
+      {
+        "id": "CCCI-0330",
+        "name": "Rede Moinho",
+        "country": "BR",
+        "status": "dormant",
+        "services": [
+          "internet",
+          "localServices",
+          "literacy"
+        ],
+        "sources": [
+          "ccci"
+        ]
+      },
+      {
+        "id": "CCCI-0331",
+        "name": "redeEsperansa.tl",
+        "country": "TL",
+        "status": "active",
+        "services": [
+          "internet",
+          "localServices",
+          "literacy",
+          "schools"
+        ],
+        "sources": [
+          "ccci"
+        ]
+      },
+      {
+        "id": "CCCI-0332",
+        "name": "REDES A.C., Rhizomatica and Colectivo Ik'ta K'op",
+        "country": "MX",
+        "status": "unknown",
+        "services": [],
+        "sources": [
+          "ccci",
+          "communityBox"
+        ],
+        "website": "https://rhizomatica.org"
+      },
+      {
+        "id": "CCCI-0333",
+        "name": "Redes Comunitarias Colombia",
+        "country": "CO",
+        "status": "active",
+        "services": [
+          "internet",
+          "offline",
+          "localServices",
+          "literacy",
+          "schools",
+          "environmental"
+        ],
+        "sources": [
+          "ccci"
+        ]
+      },
+      {
+        "id": "CCCI-0334",
+        "name": "RelawanTIK, Pangkarit & Bandung, Indonesia",
+        "country": "ID",
+        "status": "unknown",
+        "services": [],
+        "sources": [
+          "ccci"
+        ]
+      },
+      {
+        "id": "CCCI-0335",
+        "name": "Reshape tomorrow",
+        "country": "KE",
+        "status": "active",
+        "services": [
+          "internet",
+          "literacy",
+          "schools"
+        ],
+        "sources": [
+          "ccci"
+        ]
+      },
+      {
+        "id": "CCCI-0336",
+        "name": "Resilient Education Information Infrastructure for the New Normal (REIINN)",
+        "country": "PH",
+        "status": "active",
+        "services": [
+          "internet",
+          "localServices",
+          "literacy",
+          "schools"
+        ],
+        "sources": [
+          "ccci"
+        ]
+      },
+      {
+        "id": "CCCI-0337",
+        "name": "Robin School-Loh Island, Vanuatu",
+        "country": "VU",
+        "status": "active",
+        "services": [
+          "internet",
+          "schools",
+          "charging"
+        ],
+        "sources": [
+          "ccci"
+        ]
+      },
+      {
+        "id": "CCCI-0338",
+        "name": "Rubondo primary school",
+        "country": "UG",
+        "status": "active",
+        "services": [
+          "internet",
+          "support",
+          "literacy",
+          "schools",
+          "charging"
+        ],
+        "sources": [
+          "ccci"
+        ]
+      },
+      {
+        "id": "CCCI-0339",
+        "name": "Rural Campuses Connections Project (RCCP) - South African National Research Network (SANREN)",
+        "country": "ZA",
+        "status": "unknown",
+        "services": [],
+        "sources": [
+          "ccci"
+        ]
+      },
+      {
+        "id": "CCCI-0340",
+        "name": "Ruralstar (Huawei)",
+        "country": "GH",
+        "status": "unknown",
+        "services": [],
+        "sources": [
+          "ccci"
+        ]
+      },
+      {
+        "id": "CCCI-0341",
+        "name": "Sarakata Clinic (Port Olry Health Center)",
+        "country": "VU",
+        "status": "active",
+        "services": [
+          "internet",
+          "charging"
+        ],
+        "sources": [
+          "ccci"
+        ]
+      },
+      {
+        "id": "CCCI-0342",
+        "name": "Saramauri Dispensary Big Bay Insland Santo 20",
+        "country": "VU",
+        "status": "active",
+        "services": [
+          "internet",
+          "charging"
+        ],
+        "sources": [
+          "ccci"
+        ]
+      },
+      {
+        "id": "CCCI-0343",
+        "name": "Sarantaporo.gr Community Network",
+        "country": "GR",
+        "status": "active",
+        "services": [
+          "internet",
+          "voice",
+          "localServices",
+          "support",
+          "literacy"
+        ],
+        "sources": [
+          "ccci",
+          "communityBox"
+        ],
+        "website": "https://sarantaporo.gr"
+      },
+      {
+        "id": "CCCI-0344",
+        "name": "School of Community Networks",
+        "country": "ID",
+        "status": "active",
+        "services": [
+          "internet",
+          "support",
+          "literacy",
+          "schools",
+          "environmental"
+        ],
+        "sources": [
+          "ccci"
+        ]
+      },
+      {
+        "id": "CCCI-0345",
+        "name": "Schools Connectivity Initiative (SCI) - Kenya Education Network (KENET)",
+        "country": "KE",
+        "status": "unknown",
+        "services": [],
+        "sources": [
+          "ccci"
+        ]
+      },
+      {
+        "id": "CCCI-0346",
+        "name": "Sekolah Internet Komunitas Jayapura (School of Community Networks Jayapura)",
+        "country": "ID",
+        "status": "active",
+        "services": [
+          "internet",
+          "literacy"
+        ],
+        "sources": [
+          "ccci"
+        ]
+      },
+      {
+        "id": "CCCI-0347",
+        "name": "Sekolah Internet Komunitas Tae (School of Networks Community Tae)",
+        "country": "ID",
+        "status": "active",
+        "services": [
+          "internet",
+          "localServices",
+          "literacy",
+          "radio",
+          "schools"
+        ],
+        "sources": [
+          "ccci"
+        ]
+      },
+      {
+        "id": "CCCI-0348",
+        "name": "SES & Burkina Faso",
+        "country": "BF",
+        "status": "unknown",
+        "services": [],
+        "sources": [
+          "ccci"
+        ]
+      },
+      {
+        "id": "CCCI-0349",
+        "name": "Siaya Community Library",
+        "country": "KE",
+        "status": "unknown",
+        "services": [],
+        "sources": [
+          "ccci"
+        ]
+      },
+      {
+        "id": "CCCI-0364",
+        "name": "Smartpur",
+        "country": "IN",
+        "status": "active",
+        "services": [
+          "internet",
+          "localServices",
+          "financial",
+          "support",
+          "literacy",
+          "cybercafe"
+        ],
+        "sources": [
+          "ccci"
+        ]
+      },
+      {
+        "id": "CCCI-0367",
+        "name": "Smartpur",
+        "country": "IN",
+        "status": "active",
+        "services": [
+          "internet",
+          "localServices",
+          "financial",
+          "support",
+          "literacy",
+          "cybercafe"
+        ],
+        "sources": [
+          "ccci"
+        ]
+      },
+      {
+        "id": "CCCI-0350",
+        "name": "Smartpur",
+        "country": "IN",
+        "status": "active",
+        "services": [
+          "internet",
+          "localServices",
+          "financial",
+          "support",
+          "literacy",
+          "cybercafe"
+        ],
+        "sources": [
+          "ccci"
+        ]
+      },
+      {
+        "id": "CCCI-0357",
+        "name": "Smartpur",
+        "country": "IN",
+        "status": "active",
+        "services": [
+          "internet",
+          "localServices",
+          "financial",
+          "support",
+          "literacy",
+          "cybercafe"
+        ],
+        "sources": [
+          "ccci"
+        ]
+      },
+      {
+        "id": "CCCI-0366",
+        "name": "Smartpur",
+        "country": "IN",
+        "status": "active",
+        "services": [
+          "internet",
+          "localServices",
+          "financial",
+          "support",
+          "literacy",
+          "cybercafe"
+        ],
+        "sources": [
+          "ccci"
+        ]
+      },
+      {
+        "id": "CCCI-0356",
+        "name": "Smartpur",
+        "country": "IN",
+        "status": "active",
+        "services": [
+          "internet",
+          "localServices",
+          "financial",
+          "support",
+          "literacy",
+          "cybercafe"
+        ],
+        "sources": [
+          "ccci"
+        ]
+      },
+      {
+        "id": "CCCI-0355",
+        "name": "Smartpur",
+        "country": "IN",
+        "status": "active",
+        "services": [
+          "internet",
+          "localServices",
+          "financial",
+          "support",
+          "literacy",
+          "cybercafe"
+        ],
+        "sources": [
+          "ccci"
+        ]
+      },
+      {
+        "id": "CCCI-0365",
+        "name": "Smartpur",
+        "country": "IN",
+        "status": "active",
+        "services": [
+          "internet",
+          "localServices",
+          "financial",
+          "support",
+          "literacy",
+          "cybercafe"
+        ],
+        "sources": [
+          "ccci"
+        ]
+      },
+      {
+        "id": "CCCI-0351",
+        "name": "Smartpur",
+        "country": "IN",
+        "status": "active",
+        "services": [
+          "internet",
+          "localServices",
+          "financial",
+          "support",
+          "literacy",
+          "cybercafe"
+        ],
+        "sources": [
+          "ccci"
+        ]
+      },
+      {
+        "id": "CCCI-0352",
+        "name": "Smartpur",
+        "country": "IN",
+        "status": "active",
+        "services": [
+          "internet",
+          "localServices",
+          "financial",
+          "support",
+          "literacy",
+          "cybercafe"
+        ],
+        "sources": [
+          "ccci"
+        ]
+      },
+      {
+        "id": "CCCI-0353",
+        "name": "Smartpur",
+        "country": "IN",
+        "status": "active",
+        "services": [
+          "internet",
+          "localServices",
+          "financial",
+          "support",
+          "literacy",
+          "cybercafe"
+        ],
+        "sources": [
+          "ccci"
+        ]
+      },
+      {
+        "id": "CCCI-0354",
+        "name": "Smartpur",
+        "country": "IN",
+        "status": "active",
+        "services": [
+          "internet",
+          "localServices",
+          "financial",
+          "support",
+          "literacy",
+          "cybercafe"
+        ],
+        "sources": [
+          "ccci"
+        ]
+      },
+      {
+        "id": "CCCI-0358",
+        "name": "Smartpur",
+        "country": "IN",
+        "status": "active",
+        "services": [
+          "internet",
+          "localServices",
+          "financial",
+          "support",
+          "literacy",
+          "cybercafe"
+        ],
+        "sources": [
+          "ccci"
+        ]
+      },
+      {
+        "id": "CCCI-0359",
+        "name": "Smartpur",
+        "country": "IN",
+        "status": "active",
+        "services": [
+          "internet",
+          "localServices",
+          "financial",
+          "support",
+          "literacy",
+          "cybercafe"
+        ],
+        "sources": [
+          "ccci"
+        ]
+      },
+      {
+        "id": "CCCI-0360",
+        "name": "Smartpur",
+        "country": "IN",
+        "status": "active",
+        "services": [
+          "internet",
+          "localServices",
+          "financial",
+          "support",
+          "literacy",
+          "cybercafe"
+        ],
+        "sources": [
+          "ccci"
+        ]
+      },
+      {
+        "id": "CCCI-0361",
+        "name": "Smartpur",
+        "country": "IN",
+        "status": "active",
+        "services": [
+          "internet",
+          "localServices",
+          "financial",
+          "support",
+          "literacy",
+          "cybercafe"
+        ],
+        "sources": [
+          "ccci"
+        ]
+      },
+      {
+        "id": "CCCI-0362",
+        "name": "Smartpur",
+        "country": "IN",
+        "status": "active",
+        "services": [
+          "internet",
+          "localServices",
+          "financial",
+          "support",
+          "literacy",
+          "cybercafe"
+        ],
+        "sources": [
+          "ccci"
+        ]
+      },
+      {
+        "id": "CCCI-0363",
+        "name": "Smartpur",
+        "country": "IN",
+        "status": "active",
+        "services": [
+          "internet",
+          "localServices",
+          "financial",
+          "support",
+          "literacy",
+          "cybercafe"
+        ],
+        "sources": [
+          "ccci"
+        ]
+      },
+      {
+        "id": "CCCI-0368",
+        "name": "SN Malo East Rustron Clinic",
+        "country": "VU",
+        "status": "active",
+        "services": [
+          "internet",
+          "charging"
+        ],
+        "sources": [
+          "ccci"
+        ]
+      },
+      {
+        "id": "CCCI-0369",
+        "name": "Soweto Wireless User Group",
+        "country": "ZA",
+        "status": "unknown",
+        "services": [],
+        "sources": [
+          "ccci"
+        ]
+      },
+      {
+        "id": "CCCI-0370",
+        "name": "stories and sweets run locally at the village level and also on the web",
+        "country": "IN",
+        "status": "active",
+        "services": [
+          "internet",
+          "voice",
+          "offline",
+          "localServices",
+          "literacy",
+          "radio",
+          "schools",
+          "environmental"
+        ],
+        "sources": [
+          "ccci"
+        ]
+      },
+      {
+        "id": "CCCI-0371",
+        "name": "Strengthening Women's Access to Enhanced Rural Broad Band Connectivity in Uganda.",
+        "country": "UG",
+        "status": "planned",
+        "services": [
+          "internet",
+          "literacy",
+          "schools"
+        ],
+        "sources": [
+          "ccci"
+        ]
+      },
+      {
+        "id": "CCCI-0372",
+        "name": "SunCulture (Airband)",
+        "country": "KE",
+        "status": "unknown",
+        "services": [],
+        "sources": [
+          "ccci"
+        ]
+      },
+      {
+        "id": "CCCI-0373",
+        "name": "Syangu Hello Hub",
+        "country": "NP",
+        "status": "dormant",
+        "services": [
+          "internet",
+          "literacy",
+          "schools",
+          "charging"
+        ],
+        "sources": [
+          "ccci"
+        ]
+      },
+      {
+        "id": "CCCI-0374",
+        "name": "Taknet/Net2Home, Tak Province, Thailand",
+        "country": "TH",
+        "status": "unknown",
+        "services": [],
+        "sources": [
+          "ccci"
+        ]
+      },
+      {
+        "id": "CCCI-0375",
+        "name": "Talakali Adventist High School",
+        "country": "SB",
+        "status": "active",
+        "services": [
+          "internet",
+          "schools",
+          "charging"
+        ],
+        "sources": [
+          "ccci"
+        ]
+      },
+      {
+        "id": "CCCI-0376",
+        "name": "Taliabu (SIK)",
+        "country": "ID",
+        "status": "active",
+        "services": [
+          "internet",
+          "literacy",
+          "schools"
+        ],
+        "sources": [
+          "ccci"
+        ]
+      },
+      {
+        "id": "CCCI-0377",
+        "name": "Tanda Community Network",
+        "country": "KE",
+        "status": "active",
+        "services": [
+          "internet",
+          "localServices",
+          "literacy",
+          "schools",
+          "environmental"
+        ],
+        "sources": [
+          "ccci"
+        ]
+      },
+      {
+        "id": "CCCI-0378",
+        "name": "Tangolo Aid Post",
+        "country": "PG",
+        "status": "active",
+        "services": [
+          "internet",
+          "charging"
+        ],
+        "sources": [
+          "ccci"
+        ]
+      },
+      {
+        "id": "cb-taswireless",
+        "name": "TasWireless",
+        "country": "AU",
+        "status": "unknown",
+        "services": [],
+        "sources": [
+          "communityBox"
+        ]
+      },
+      {
+        "id": "CCCI-0386",
+        "name": "Tata Trust",
+        "country": "IN",
+        "status": "inactive",
+        "services": [
+          "internet",
+          "localServices",
+          "financial",
+          "support",
+          "literacy",
+          "cybercafe"
+        ],
+        "sources": [
+          "ccci"
+        ]
+      },
+      {
+        "id": "CCCI-0385",
+        "name": "Tata Trust",
+        "country": "IN",
+        "status": "inactive",
+        "services": [
+          "internet",
+          "localServices",
+          "financial",
+          "support",
+          "literacy",
+          "cybercafe"
+        ],
+        "sources": [
+          "ccci"
+        ]
+      },
+      {
+        "id": "CCCI-0384",
+        "name": "Tata Trust",
+        "country": "IN",
+        "status": "inactive",
+        "services": [
+          "internet",
+          "localServices",
+          "financial",
+          "support",
+          "literacy",
+          "cybercafe"
+        ],
+        "sources": [
+          "ccci"
+        ]
+      },
+      {
+        "id": "CCCI-0381",
+        "name": "Tata Trust",
+        "country": "IN",
+        "status": "inactive",
+        "services": [
+          "internet",
+          "localServices",
+          "financial",
+          "support",
+          "literacy",
+          "cybercafe"
+        ],
+        "sources": [
+          "ccci"
+        ]
+      },
+      {
+        "id": "CCCI-0387",
+        "name": "Tata Trust",
+        "country": "IN",
+        "status": "inactive",
+        "services": [
+          "internet",
+          "localServices",
+          "financial",
+          "support",
+          "literacy",
+          "cybercafe"
+        ],
+        "sources": [
+          "ccci"
+        ]
+      },
+      {
+        "id": "CCCI-0380",
+        "name": "Tata Trust",
+        "country": "IN",
+        "status": "inactive",
+        "services": [
+          "internet",
+          "localServices",
+          "financial",
+          "support",
+          "literacy",
+          "cybercafe"
+        ],
+        "sources": [
+          "ccci"
+        ]
+      },
+      {
+        "id": "CCCI-0382",
+        "name": "Tata Trust",
+        "country": "IN",
+        "status": "inactive",
+        "services": [
+          "internet",
+          "localServices",
+          "financial",
+          "support",
+          "literacy",
+          "cybercafe"
+        ],
+        "sources": [
+          "ccci"
+        ]
+      },
+      {
+        "id": "CCCI-0383",
+        "name": "Tata Trust",
+        "country": "IN",
+        "status": "inactive",
+        "services": [
+          "internet",
+          "localServices",
+          "financial",
+          "support",
+          "literacy",
+          "cybercafe"
+        ],
+        "sources": [
+          "ccci"
+        ]
+      },
+      {
+        "id": "CCCI-0379",
+        "name": "Tata Trust",
+        "country": "IN",
+        "status": "inactive",
+        "services": [
+          "internet",
+          "localServices",
+          "financial",
+          "support",
+          "literacy",
+          "cybercafe"
+        ],
+        "sources": [
+          "ccci"
+        ]
+      },
+      {
+        "id": "CCCI-0388",
+        "name": "Tauma Tab-North",
+        "country": "KI",
+        "status": "active",
+        "services": [
+          "internet",
+          "charging"
+        ],
+        "sources": [
+          "ccci"
+        ]
+      },
+      {
+        "id": "CCCI-0389",
+        "name": "Tawataha Rural Training Center",
+        "country": "SB",
+        "status": "active",
+        "services": [
+          "internet",
+          "schools",
+          "charging"
+        ],
+        "sources": [
+          "ccci"
+        ]
+      },
+      {
+        "id": "CCCI-0390",
+        "name": "Telecomunicaciones Indígenas Comunitarias (TIC AC), Oaxaca, Mexico",
+        "country": "MX",
+        "status": "unknown",
+        "services": [],
+        "sources": [
+          "ccci"
+        ]
+      },
+      {
+        "id": "CCCI-0391",
+        "name": "Teleglobal-Bakti Project (SES)",
+        "country": "ID",
+        "status": "unknown",
+        "services": [],
+        "sources": [
+          "ccci"
+        ]
+      },
+      {
+        "id": "CCCI-0392",
+        "name": "Tenakoga Adventist High School",
+        "country": "SB",
+        "status": "active",
+        "services": [
+          "internet",
+          "schools",
+          "charging"
+        ],
+        "sources": [
+          "ccci"
+        ]
+      },
+      {
+        "id": "CCCI-0393",
+        "name": "Tigo Chad - SES",
+        "country": "TD",
+        "status": "unknown",
+        "services": [],
+        "sources": [
+          "ccci"
+        ]
+      },
+      {
+        "id": "cb-toronto-mesh",
+        "name": "Toronto Mesh",
+        "country": "CA",
+        "status": "unknown",
+        "services": [],
+        "website": "https://tomesh.net",
+        "sources": [
+          "communityBox"
+        ]
+      },
+      {
+        "id": "CCCI-0394",
+        "name": "Tulia",
+        "country": "ZA",
+        "status": "unknown",
+        "services": [],
+        "sources": [
+          "ccci"
+        ]
+      },
+      {
+        "id": "CCCI-0395",
+        "name": "TunapandaNET, Kiberia, Nairobi, Kenya",
+        "country": "KE",
+        "status": "unknown",
+        "services": [],
+        "sources": [
+          "ccci",
+          "communityBox"
+        ]
+      },
+      {
+        "id": "CCCI-0396",
+        "name": "Ungu Cell, Bonkondini, West Papua, Indonesia",
+        "country": "ID",
+        "status": "unknown",
+        "services": [],
+        "sources": [
+          "ccci"
+        ]
+      },
+      {
+        "id": "CCCI-0397",
+        "name": "Unitech PNG",
+        "country": "PG",
+        "status": "active",
+        "services": [
+          "internet",
+          "schools",
+          "charging"
+        ],
+        "sources": [
+          "ccci"
+        ]
+      },
+      {
+        "id": "CCCI-0398",
+        "name": "Uvumbuzi CN",
+        "country": "KE",
+        "status": "unknown",
+        "services": [],
+        "sources": [
+          "ccci"
+        ]
+      },
+      {
+        "id": "CCCI-0400",
+        "name": "V-NET",
+        "country": "ZA",
+        "status": "unknown",
+        "services": [],
+        "sources": [
+          "ccci"
+        ]
+      },
+      {
+        "id": "CCCI-0399",
+        "name": "V-NET",
+        "country": "ZA",
+        "status": "active",
+        "services": [
+          "internet",
+          "literacy",
+          "cybercafe"
+        ],
+        "sources": [
+          "ccci"
+        ]
+      },
+      {
+        "id": "CCCI-0401",
+        "name": "Vasalea Community Center",
+        "country": "VU",
+        "status": "active",
+        "services": [
+          "internet",
+          "charging"
+        ],
+        "sources": [
+          "ccci"
+        ]
+      },
+      {
+        "id": "CCCI-0402",
+        "name": "VBTS",
+        "country": "PH",
+        "status": "unknown",
+        "services": [],
+        "sources": [
+          "ccci"
+        ]
+      },
+      {
+        "id": "CCCI-0403",
+        "name": "Viasat in Mexico",
+        "country": "MX",
+        "status": "unknown",
+        "services": [],
+        "sources": [
+          "ccci"
+        ]
+      },
+      {
+        "id": "CCCI-0404",
+        "name": "Viasat, Telebras, Brazil",
+        "country": "BR",
+        "status": "unknown",
+        "services": [],
+        "sources": [
+          "ccci"
+        ]
+      },
+      {
+        "id": "CCCI-0405",
+        "name": "VN SN Luganville Belbarav",
+        "country": "VU",
+        "status": "active",
+        "services": [
+          "internet",
+          "charging"
+        ],
+        "sources": [
+          "ccci"
+        ]
+      },
+      {
+        "id": "CCCI-0409",
+        "name": "W4C",
+        "country": "IN",
+        "status": "inactive",
+        "services": [
+          "internet",
+          "localServices",
+          "financial",
+          "support",
+          "literacy",
+          "cybercafe"
+        ],
+        "sources": [
+          "ccci"
+        ]
+      },
+      {
+        "id": "CCCI-0420",
+        "name": "W4C",
+        "country": "IN",
+        "status": "active",
+        "services": [
+          "internet",
+          "localServices",
+          "financial",
+          "support",
+          "literacy",
+          "cybercafe"
+        ],
+        "sources": [
+          "ccci"
+        ]
+      },
+      {
+        "id": "CCCI-0419",
+        "name": "W4C",
+        "country": "IN",
+        "status": "inactive",
+        "services": [
+          "internet",
+          "localServices",
+          "financial",
+          "support",
+          "literacy",
+          "cybercafe"
+        ],
+        "sources": [
+          "ccci"
+        ]
+      },
+      {
+        "id": "CCCI-0418",
+        "name": "W4C",
+        "country": "IN",
+        "status": "inactive",
+        "services": [
+          "internet",
+          "localServices",
+          "financial",
+          "support",
+          "literacy",
+          "cybercafe"
+        ],
+        "sources": [
+          "ccci"
+        ]
+      },
+      {
+        "id": "CCCI-0417",
+        "name": "W4C",
+        "country": "IN",
+        "status": "inactive",
+        "services": [
+          "internet",
+          "localServices",
+          "financial",
+          "support",
+          "literacy",
+          "cybercafe"
+        ],
+        "sources": [
+          "ccci"
+        ]
+      },
+      {
+        "id": "CCCI-0416",
+        "name": "W4C",
+        "country": "IN",
+        "status": "inactive",
+        "services": [
+          "internet",
+          "localServices",
+          "financial",
+          "support",
+          "literacy",
+          "cybercafe"
+        ],
+        "sources": [
+          "ccci"
+        ]
+      },
+      {
+        "id": "CCCI-0415",
+        "name": "W4C",
+        "country": "IN",
+        "status": "inactive",
+        "services": [
+          "internet",
+          "localServices",
+          "financial",
+          "support",
+          "literacy",
+          "cybercafe"
+        ],
+        "sources": [
+          "ccci"
+        ]
+      },
+      {
+        "id": "CCCI-0414",
+        "name": "W4C",
+        "country": "IN",
+        "status": "inactive",
+        "services": [
+          "internet",
+          "localServices",
+          "financial",
+          "support",
+          "literacy",
+          "cybercafe"
+        ],
+        "sources": [
+          "ccci"
+        ]
+      },
+      {
+        "id": "CCCI-0413",
+        "name": "W4C",
+        "country": "IN",
+        "status": "inactive",
+        "services": [
+          "internet",
+          "localServices",
+          "financial",
+          "support",
+          "literacy",
+          "cybercafe"
+        ],
+        "sources": [
+          "ccci"
+        ]
+      },
+      {
+        "id": "CCCI-0412",
+        "name": "W4C",
+        "country": "IN",
+        "status": "inactive",
+        "services": [
+          "internet",
+          "localServices",
+          "financial",
+          "support",
+          "literacy",
+          "cybercafe"
+        ],
+        "sources": [
+          "ccci"
+        ]
+      },
+      {
+        "id": "CCCI-0411",
+        "name": "W4C",
+        "country": "IN",
+        "status": "inactive",
+        "services": [
+          "internet",
+          "localServices",
+          "financial",
+          "support",
+          "literacy",
+          "cybercafe"
+        ],
+        "sources": [
+          "ccci"
+        ]
+      },
+      {
+        "id": "CCCI-0410",
+        "name": "W4C",
+        "country": "IN",
+        "status": "inactive",
+        "services": [
+          "internet",
+          "localServices",
+          "financial",
+          "support",
+          "literacy",
+          "cybercafe"
+        ],
+        "sources": [
+          "ccci"
+        ]
+      },
+      {
+        "id": "CCCI-0408",
+        "name": "W4C",
+        "country": "IN",
+        "status": "inactive",
+        "services": [
+          "internet",
+          "localServices",
+          "financial",
+          "support",
+          "literacy",
+          "cybercafe"
+        ],
+        "sources": [
+          "ccci"
+        ]
+      },
+      {
+        "id": "CCCI-0407",
+        "name": "W4C",
+        "country": "IN",
+        "status": "inactive",
+        "services": [
+          "internet",
+          "localServices",
+          "financial",
+          "support",
+          "literacy",
+          "cybercafe"
+        ],
+        "sources": [
+          "ccci"
+        ]
+      },
+      {
+        "id": "CCCI-0406",
+        "name": "W4C",
+        "country": "IN",
+        "status": "inactive",
+        "services": [
+          "internet",
+          "localServices",
+          "financial",
+          "support",
+          "literacy",
+          "cybercafe"
+        ],
+        "sources": [
+          "ccci"
+        ]
+      },
+      {
+        "id": "CCCI-0421",
+        "name": "W4C",
+        "country": "IN",
+        "status": "inactive",
+        "services": [
+          "internet",
+          "localServices",
+          "financial",
+          "support",
+          "literacy",
+          "cybercafe"
+        ],
+        "sources": [
+          "ccci"
+        ]
+      },
+      {
+        "id": "CCCI-0422",
+        "name": "WANG LAB OF INNOVATION (WALI) Community Network",
+        "country": "PK",
+        "status": "active",
+        "services": [
+          "internet",
+          "localServices",
+          "support",
+          "literacy",
+          "cybercafe"
+        ],
+        "sources": [
+          "ccci"
+        ]
+      },
+      {
+        "id": "CCCI-0423",
+        "name": "Watuluma",
+        "country": "PG",
+        "status": "active",
+        "services": [
+          "internet",
+          "charging"
+        ],
+        "sources": [
+          "ccci"
+        ]
+      },
+      {
+        "id": "CCCI-0424",
+        "name": "West Coast Tasmate Clinic",
+        "country": "VU",
+        "status": "active",
+        "services": [
+          "internet",
+          "charging"
+        ],
+        "sources": [
+          "ccci"
+        ]
+      },
+      {
+        "id": "CCCI-0425",
+        "name": "Wiki Katat Operador Móvil Virtual indígena Social y Comunitario. (Ven, Ven en nahuatl y totonaku)",
+        "country": "MX",
+        "status": "active",
+        "services": [
+          "internet",
+          "voice",
+          "localServices",
+          "literacy",
+          "radio",
+          "schools"
+        ],
+        "sources": [
+          "ccci"
+        ]
+      },
+      {
+        "id": "CCCI-0426",
+        "name": "Wireless for Communities (W4C)",
+        "country": "IN",
+        "status": "active",
+        "services": [
+          "internet",
+          "offline",
+          "localServices",
+          "financial",
+          "support",
+          "literacy",
+          "radio",
+          "schools",
+          "cybercafe",
+          "environmental",
+          "charging"
+        ],
+        "sources": [
+          "ccci"
+        ]
+      },
+      {
+        "id": "CCCI-0427",
+        "name": "Wireless for Communities (W4C), Digital Empowerment Foundation (DEF), India",
+        "country": "IN",
+        "status": "unknown",
+        "services": [],
+        "sources": [
+          "ccci"
+        ]
+      },
+      {
+        "id": "cb-wireless-leiden",
+        "name": "Wireless Leiden",
+        "country": "NL",
+        "status": "unknown",
+        "services": [],
+        "website": "https://wirelessleiden.nl",
+        "sources": [
+          "communityBox"
+        ]
+      },
+      {
+        "id": "cb-wlan-slovenija",
+        "name": "wlan slovenija",
+        "country": "SI",
+        "status": "unknown",
+        "services": [],
+        "website": "https://wlan.si",
+        "sources": [
+          "communityBox"
+        ]
+      },
+      {
+        "id": "CCCI-0428",
+        "name": "World Telecom Labs - Gabon",
+        "country": "GA",
+        "status": "unknown",
+        "services": [],
+        "sources": [
+          "ccci"
+        ]
+      },
+      {
+        "id": "CCCI-0429",
+        "name": "World Telecom Labs - Morocco",
+        "country": "MA",
+        "status": "unknown",
+        "services": [],
+        "sources": [
+          "ccci"
+        ]
+      },
+      {
+        "id": "CCCI-0430",
+        "name": "World Telecom Labs - Tanzania",
+        "country": "TZ",
+        "status": "unknown",
+        "services": [],
+        "sources": [
+          "ccci"
+        ]
+      },
+      {
+        "id": "CCCI-0431",
+        "name": "Wunavae Community Center (Tiroas Dispensary)",
+        "country": "VU",
+        "status": "active",
+        "services": [
+          "internet",
+          "charging"
+        ],
+        "sources": [
+          "ccci"
+        ]
+      },
+      {
+        "id": "CCCI-0432",
+        "name": "Wunpuku Community Centre (Wunpuku Dispensary NW Santo 30)",
+        "country": "VU",
+        "status": "active",
+        "services": [
+          "internet",
+          "charging"
+        ],
+        "sources": [
+          "ccci"
+        ]
+      },
+      {
+        "id": "CCCI-0433",
+        "name": "Wusi (Limarua School) (Wusi (Ioseph Mape) Dispensary W Santo 27)",
+        "country": "VU",
+        "status": "active",
+        "services": [
+          "internet",
+          "charging"
+        ],
+        "sources": [
+          "ccci"
+        ]
+      },
+      {
+        "id": "CCCI-0434",
+        "name": "Xamoneta",
+        "country": "MX",
+        "status": "pilot",
+        "services": [
+          "offline",
+          "localServices",
+          "literacy"
+        ],
+        "sources": [
+          "ccci"
+        ]
+      },
+      {
+        "id": "CCCI-0435",
+        "name": "Xmass JSS",
+        "country": "KI",
+        "status": "active",
+        "services": [
+          "internet",
+          "charging"
+        ],
+        "sources": [
+          "ccci"
+        ]
+      },
+      {
+        "id": "CCCI-0436",
+        "name": "Yoyo secondary school",
+        "country": "UG",
+        "status": "active",
+        "services": [
+          "internet",
+          "support",
+          "literacy",
+          "schools",
+          "charging"
+        ],
+        "sources": [
+          "ccci"
+        ]
+      },
+      {
+        "id": "CCCI-0437",
+        "name": "Zenzeleni Community Networks",
+        "country": "ZA",
+        "status": "active",
+        "services": [
+          "internet",
+          "literacy",
+          "schools",
+          "cybercafe"
+        ],
+        "sources": [
+          "ccci",
+          "communityBox"
+        ],
+        "website": "https://zenzeleni.net"
+      }
+    ]
+  }
+}

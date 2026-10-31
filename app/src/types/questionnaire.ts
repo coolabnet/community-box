@@ -40,12 +40,30 @@ export type MainUseAnswer = 'education' | 'business' | 'personal';
 export type ServiceKey = 'nextcloud' | 'jellyfin' | 'moodle' | 'wordpress' | 'kiwix' | 'ubuntumm';
 export type OSKey = 'ubuntuServer' | 'debian' | 'raspbian' | 'truenas' | 'openmediavault';
 
+export type ResourceLinkKind = 'website' | 'docs' | 'guide' | 'source' | 'download';
+
+export interface ResourceLink {
+  kind: ResourceLinkKind;
+  url: string;
+}
+
+export type Architecture = 'amd64' | 'arm64' | 'armhf';
+
+export interface Requirements {
+  minRamGb?: number;
+  minStorageGb?: number;
+  architectures?: Architecture[];
+  needsInternet?: boolean;
+}
+
 export interface ServiceSuggestion {
   key: ServiceKey;
   name: string;
   description: string;
   category: string[];
   icon: string;
+  links?: ResourceLink[];
+  requirements?: Requirements;
 }
 
 export interface OSSuggestion {
@@ -55,6 +73,8 @@ export interface OSSuggestion {
   recommendedFor: string[];
   difficulty: 'beginner' | 'intermediate' | 'advanced';
   supportedHardware?: DeviceKey[];
+  links?: ResourceLink[];
+  requirements?: Requirements;
 }
 
 export interface Recommendations {

@@ -11,7 +11,8 @@
     "get-casaos-translations": "node get-casaos-ui-translations.js",
     "get-yunohost-apps": "node get-yunohost-apps.js",
     "get-yunohost-docs": "node get-yunohost-docs-translations.js",
-    "get-yunohost-ui": "node get-yunohost-ui-translations.js"
+    "get-yunohost-ui": "node get-yunohost-ui-translations.js",
+    "get-ccci-directory": "node get-ccci-directory.js"
   },
   "dependencies": {
     "axios": "^1.6.0",
