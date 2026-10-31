@@ -22,18 +22,22 @@ Some projects do not provide an image at all. Instead they provide an **install 
 | Your hardware | What to use |
 |---|---|
 | x86 PC, Intel NUC, ZimaBoard, reused desktop or laptop | An x86 (amd64) ISO or install script |
-| Raspberry Pi 3, 4, or 5 | 64-bit (arm64) Raspberry Pi OS image |
+| Raspberry Pi 3, 4, 5, or Zero 2 W | 64-bit (arm64) Raspberry Pi OS image |
 | Original Raspberry Pi, Pi 2, or Pi Zero | 32-bit (armhf) Raspberry Pi OS image (2) |
-| Raspberry Pi Zero 2 W | Check the model page first (2) |
-| Router running LibreMesh | Router firmware for your exact model (6) |
+| Router for LibreMesh | Router firmware for your exact model (6) |
 
 If you are not sure of your processor type, check the hardware guide for your device before you download anything. A file built for the wrong architecture will not start.
 
 ## How to write an image
 
-Use Balena Etcher for computers, SD cards, and USB drives. Follow the step-by-step instructions in [etcher-guide.md](etcher-guide.md).
+Use Balena Etcher for computers, SD cards, and USB drives. Follow the step-by-step instructions in [Etcher guide](etcher-guide.md).
 
-Router firmware is not written this way. A LibreMesh router image is installed through the router's own web interface or recovery mode, in one of two ways: a factory image for the first install on stock firmware, or a sysupgrade image when the router already runs OpenWrt. For a first install, follow [libremesh-installation.md](libremesh-installation.md), which walks through flashing a factory image. To upgrade a router that already runs OpenWrt, follow the [OpenWrt sysupgrade instructions](https://openwrt.org/docs/guide-user/installation/generic.sysupgrade) and the [LibreMesh getting started page](https://libremesh.org/getting-started.html).
+Router firmware is not written this way. It is installed through the router's own web interface or recovery mode, and the steps depend on the model. Read the [OpenWrt wiki page](https://openwrt.org/toh/start) for your router first.
+
+- **Router on its original (stock) firmware:** install OpenWrt first. Download the factory image for your model from the [OpenWrt Firmware Selector](https://firmware-selector.openwrt.org/) and follow the [OpenWrt first-time installation](https://openwrt.org/docs/guide-quick-start/factory_installation) steps. Check that the router boots and works.
+- **Router already running OpenWrt:** download the LibreMesh `squashfs-sysupgrade.bin` image from the firmware selector. Upload it in the OpenWrt web interface (LuCI) under **System > Backup / Flash Firmware**, or run `sysupgrade -n firmware.bin` over SSH.
+
+The [LibreMesh getting started page](https://libremesh.org/getting-started.html) describes this flow. For recovery and troubleshooting, see [LibreMesh installation guide](libremesh-installation.md).
 
 Writing a disk erases everything on the target drive. Check the drive letter or size before you start.
 
@@ -57,7 +61,7 @@ Each row links to the project's own download page. A row with no checksum means 
 |---|---|---|---|---|
 | Debian 13 | Installer ISO | amd64, arm64 | [debian.org](https://www.debian.org/distrib/netinst) | [amd64](https://cdimage.debian.org/debian-cd/current/amd64/iso-cd/SHA256SUMS), [arm64](https://cdimage.debian.org/debian-cd/current/arm64/iso-cd/SHA256SUMS) |
 | Debian 12 (for YunoHost) | Installer ISO | amd64, arm64 | [amd64](https://cdimage.debian.org/cdimage/archive/12.15.0/amd64/iso-cd/), [arm64](https://cdimage.debian.org/cdimage/archive/12.15.0/arm64/iso-cd/) (3) | [amd64](https://cdimage.debian.org/cdimage/archive/12.15.0/amd64/iso-cd/SHA256SUMS), [arm64](https://cdimage.debian.org/cdimage/archive/12.15.0/arm64/iso-cd/SHA256SUMS) |
-| Ubuntu Server | Live server ISO | amd64, arm64 | [ubuntu.com](https://ubuntu.com/download/server) | amd64 [releases](https://releases.ubuntu.com/26.04/SHA256SUMS), arm64 [cdimage](https://cdimage.ubuntu.com/ubuntu/releases/26.04/release/SHA256SUMS) |
+| Ubuntu Server | Live server ISO | amd64, arm64 | [ubuntu.com](https://ubuntu.com/download/server) | [amd64](https://releases.ubuntu.com/), [arm64](https://cdimage.ubuntu.com/ubuntu/releases/) (8) |
 | Raspberry Pi OS | Image or live ISO | arm64, armhf; amd64 for Desktop | [raspberrypi.com](https://www.raspberrypi.com/software/operating-systems/) | On download page (2) |
 | YunoHost | Install script on Debian 12 | Follows Debian 12 (x86, ARM) | [install.yunohost.org](https://install.yunohost.org) (1) | None for script (4) |
 | CasaOS | Install script | amd64, armv7, arm64 | [casaos.zimaspace.com](https://casaos.zimaspace.com/) | None for script (4) |
@@ -70,16 +74,17 @@ Each row links to the project's own download page. A row with no checksum means 
 ### Notes
 
 1. YunoHost needs Debian 12 (Bookworm) as its base, not Debian 13. The [YunoHost on top of Debian guide](https://doc.yunohost.org/admin/get_started/install_on/on_top_of_debian) says to download Bookworm (Debian 12). The image download is marked broken in the upstream docs, so use the install script.
-2. Raspberry Pi: 64-bit for Pi 3, 4, and 5; 32-bit for the original Pi, Pi 2, and Pi Zero. The official page does not name Zero 2 W, so check the model page. The Desktop ISO is a live image that runs from a USB stick without installing.
+2. Raspberry Pi: 64-bit for Pi 3, 4, 5, and Zero 2 W; 32-bit for the original Pi, Pi 2, and Pi Zero. The Desktop ISO is a live image that runs from a USB stick without installing.
 3. Debian archive: the SHA256SUMS file sits beside each ISO in its own directory. Check the matching line with the commands above. The 12.15.0 directory is the last Debian 12 point release listed in the archive; use the newest 12.x directory if it changes. Debian also documents this at [Debian CD verification](https://www.debian.org/CD/verify.html).
 4. An install script or container has no file to check. Review the script before you run it.
 5. The balena.io page shows no checksum. Check the balena documentation for a published checksum before you write the image.
 6. The selector builds a custom image for your router. When the build provides a checksum, the selector shows it as sha256sum beside the image. The selector source shows this behavior; we did not confirm it on a live build. If no checksum is shown, keep the file the selector gives you. Do not substitute stock OpenWrt checksums; they cover different images.
 7. The TrueNAS download asks for a newsletter sign-up. Its SHA256 value, `.sha256`, and `.gpg` files are next to each ISO.
+8. Ubuntu publishes a long-term support (LTS) release, such as 26.04, and a shorter interim release, such as 26.10. Use the LTS release for a community server. Open the folder for the release you downloaded; its SHA256SUMS file is inside (for arm64, in the `release` subfolder).
 
 ## Sources
 
-Fetched 2026-10-30.
+Fetched 2026-10-30; LibreMesh, OpenWrt, Ubuntu and Raspberry Pi rows rechecked 2026-10-31.
 
 - https://www.debian.org/distrib/netinst
 - https://cdimage.debian.org/debian-cd/current/amd64/iso-cd/SHA256SUMS
@@ -91,7 +96,9 @@ Fetched 2026-10-30.
 - https://www.debian.org/CD/verify.html
 - https://ubuntu.com/download/server
 - https://releases.ubuntu.com/26.04/SHA256SUMS
+- https://releases.ubuntu.com/26.10/SHA256SUMS
 - https://cdimage.ubuntu.com/ubuntu/releases/26.04/release/SHA256SUMS
+- https://cdimage.ubuntu.com/ubuntu/releases/26.10/release/SHA256SUMS
 - https://www.raspberrypi.com/software/operating-systems/
 - https://www.raspberrypi.com/documentation/computers/os.html
 - https://www.raspberrypi.com/news/raspberry-pi-desktop-now-available-for-pc-and-mac/
@@ -107,6 +114,10 @@ Fetched 2026-10-30.
 - https://www.truenas.com/download-truenas-scale/
 - https://firmware-selector.libremesh.org/
 - https://libremesh.org/build/
+- https://libremesh.org/getting-started.html
+- https://firmware-selector.openwrt.org/
+- https://openwrt.org/toh/start
+- https://openwrt.org/docs/guide-quick-start/factory_installation
 - https://libremesh.org/getting-started.html
 - https://raw.githubusercontent.com/libremesh/firmware-selector-openwrt-org/main/www/js/images.js
 - https://downloads.openwrt.org/
