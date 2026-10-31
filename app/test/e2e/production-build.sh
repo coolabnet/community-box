@@ -116,10 +116,22 @@ else
     FAILED_ROUTES="$FAILED_ROUTES\n  - /community-box/"
   fi
 
+  # Open a route and confirm the browser actually landed on it (a failed
+  # open must not leave the previous page in place and pass).
+  open_route() {
+    local path="$1" got
+    npx agent-browser open "$BASE_URL$path" 2>/dev/null || return 1
+    npx agent-browser wait 3000 2>/dev/null || true
+    got=$(npx agent-browser eval "location.pathname" 2>/dev/null | tr -d '"[:space:]')
+    [ "$got" = "/${BASE_URL#*://*/}$path" ]
+  }
+
   echo -n "Testing: /questionnaire ... "
-  npx agent-browser open "$BASE_URL/questionnaire" 2>/dev/null || true
-  npx agent-browser wait 3000 2>/dev/null || true
-  SNAPSHOT=$(npx agent-browser snapshot 2>/dev/null || echo "ERROR")
+  if open_route "/questionnaire"; then
+    SNAPSHOT=$(npx agent-browser snapshot 2>/dev/null || echo "ERROR")
+  else
+    SNAPSHOT="ERROR"
+  fi
   if [ "$SNAPSHOT" != "ERROR" ] && ! echo "$SNAPSHOT" | grep -qi "404\|Not Found" ; then
     echo "✅ PASSED"
   else
@@ -129,9 +141,11 @@ else
   fi
 
   echo -n "Testing: /docs/results/global-community-networks-directory ... "
-  npx agent-browser open "$BASE_URL/docs/results/global-community-networks-directory" 2>/dev/null || true
-  npx agent-browser wait 3000 2>/dev/null || true
-  SNAPSHOT=$(npx agent-browser snapshot 2>/dev/null || echo "ERROR")
+  if open_route "/docs/results/global-community-networks-directory"; then
+    SNAPSHOT=$(npx agent-browser snapshot 2>/dev/null || echo "ERROR")
+  else
+    SNAPSHOT="ERROR"
+  fi
   if [ "$SNAPSHOT" != "ERROR" ] && ! echo "$SNAPSHOT" | grep -qi "Document Not Found\|404" ; then
     echo "✅ PASSED"
   else
