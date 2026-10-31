@@ -111,7 +111,8 @@ const AccessDevicesSelection = ({ onNext, onBack }: AccessDevicesSelectionProps)
       exit={{ opacity: 0 }}
       className="fixed inset-0 flex flex-col bg-background"
     >
-      <div className="flex-1 flex flex-col p-6 overflow-auto">
+      {/* Top padding clears the floating menu button and progress bar */}
+      <div className="flex-1 flex flex-col px-6 pb-6 pt-20 overflow-auto">
         <motion.div
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
