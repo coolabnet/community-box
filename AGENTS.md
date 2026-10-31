@@ -76,3 +76,10 @@ Operational instructions for coding agents working in this repository.
 - Re-read this file and any deeper `AGENTS.md` in the target subtree.
 - Ask for clarification instead of making broad assumptions.
 - Propose the smallest safe next step and its validation command.
+
+## XERJ (code search)
+
+This project uses XERJ for reference coding. Before writing code that touches
+unfamiliar territory: `xerj def "<symbol>"` for go-to-definition, or
+`xerj search "<plain words>"` for ranked, definition-first passages.
+Index a repo with `xerj autoindex <folder>`. Cite file:line for anything you rely on.

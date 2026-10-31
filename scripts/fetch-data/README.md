@@ -57,7 +57,7 @@ npm test
    - Safety: if the download fails, the header lacks ID/Name/Country, or fewer than 50 valid rows parse, the script throws and leaves the existing output unchanged.
    - Country names not in the explicit mapping are set to `null` and listed in `unmatchedCountries` (with a console warning). `Global` and empty countries are `null` without being listed.
    - Curated entries may list `aliases` (other spellings of the same network in the same country) so they merge into the CCCI record instead of appearing twice.
-   - Publishing: the site bundles this file at build time. The daily `Fetch Latest Data` workflow dispatches a deploy when the directory changes, and every Monday regardless.
+   - Publishing: the site bundles this file at build time. The daily `Fetch Latest Data` workflow dispatches a deploy when the directory changes, and on its Monday schedule regardless (best effort: a failed fetch or deploy run skips that week).
    - Republishing the CCCI export was authorized by Colnodo / APC on 2026-10-31.
 
    Sample run (abridged):
