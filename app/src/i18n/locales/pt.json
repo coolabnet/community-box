@@ -302,7 +302,7 @@
             },
             "proxmox": {
               "name": "Proxmox VE",
-              "description": "Plataforma de virtualização de código aberto para executar máquinas virtuais e contêineres em um servidor; requer CPU de 64 bits com Intel VT-x ou AMD-V"
+              "description": "Plataforma de virtualização de código aberto para executar máquinas virtuais e contêineres em um servidor; requer CPU de 64 bits com Intel VT-x ou AMD-V; os 2 GB de RAM são só para o host, as máquinas virtuais precisam de memória própria"
             }
           },
           "difficulty": {

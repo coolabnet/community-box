@@ -124,7 +124,7 @@ export const operatingSystems: Record<OSKey, OSSuggestion> = {
     ],
     requirements: {
       minRamGb: 2,
-      architectures: ['amd64', 'arm64'],
+      architectures: ['amd64'],
     },
   },
 };

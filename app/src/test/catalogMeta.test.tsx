@@ -177,7 +177,7 @@ describe('real catalogs', () => {
 
   it('renders links and requirements for the Proxmox VE entry', () => {
     const html = render(operatingSystems.proxmox);
-    expect(html).toContain('Requirements: 2 GB RAM · amd64 / arm64');
+    expect(html).toContain('Requirements: 2 GB RAM · amd64');
     expect(html).toContain('href="https://pve.proxmox.com/pve-docs/"');
   });
 
