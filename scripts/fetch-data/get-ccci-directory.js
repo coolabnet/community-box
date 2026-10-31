@@ -1,0 +1,479 @@
+#!/usr/bin/env node
+
+const fs = require('fs');
+const path = require('path');
+const { fetchWithRetry, saveToJson, runScript } = require('./utils/common');
+
+/**
+ * CCCI community-network directory (Colnodo / APC) merged with the
+ * Community Box curated list. Output: research/fetched-data/ccci-directory.json
+ */
+
+const SOURCE_NAME = 'CCCI directory (Colnodo / APC)';
+const SOURCE_URL = 'https://app.agenteccci.colnodo.org/explore';
+const EXPORT_URL = 'https://app.agenteccci.colnodo.org/explore/export';
+const CURATED_REL = 'research/results/community-directory.curated.json';
+const CURATED_PATH = path.resolve(__dirname, '../..', CURATED_REL);
+const OUTPUT_FILE = 'ccci-directory.json';
+
+// Refuse to publish a suspiciously small or malformed export.
+const MIN_VALID_ROWS = 50;
+const REQUIRED_COLUMNS = ['id', 'name', 'country'];
+
+// Fixed output order; each key maps to a CSV column that must read "Yes".
+const SERVICE_COLUMNS = [
+  ['internet', 'Internet access'],
+  ['voice', 'Voice'],
+  ['offline', 'Offline / local network'],
+  ['localServices', 'Local services'],
+  ['financial', 'Financial services'],
+  ['support', 'Personal support'],
+  ['literacy', 'Digital literacy'],
+  ['radio', 'Radio'],
+  ['schools', 'School connectivity'],
+  ['cybercafe', 'Cybercafé'],
+  ['environmental', 'Environmental'],
+  ['charging', 'Device charging']
+];
+
+const STATUS_MAP = {
+  active: 'active',
+  inactive: 'inactive',
+  inprogress: 'inProgress',
+  'in progress': 'inProgress',
+  dormant: 'dormant',
+  pilot: 'pilot',
+  planned: 'planned',
+  ceased: 'ceased'
+};
+
+// Country names as they appear in the CCCI export, plus common aliases.
+const COUNTRY_TABLE = {
+  'India': 'IN',
+  'Vanuatu': 'VU',
+  'Papua New Guinea': 'PG',
+  'Kenya': 'KE',
+  'Uganda': 'UG',
+  'Indonesia': 'ID',
+  'Brazil': 'BR',
+  'South Africa': 'ZA',
+  'Mexico': 'MX',
+  'Solomon Islands': 'SB',
+  'Philippines': 'PH',
+  'Nepal': 'NP',
+  'Nigeria': 'NG',
+  'Cook Islands': 'CK',
+  'Peru': 'PE',
+  'Federated States of Micronesia': 'FM',
+  'Tanzania': 'TZ',
+  'USA': 'US',
+  'Colombia': 'CO',
+  'DRC': 'CD',
+  'Ghana': 'GH',
+  'Kiribati': 'KI',
+  'Argentina': 'AR',
+  'Malawi': 'MW',
+  'Gabon': 'GA',
+  'China': 'CN',
+  'Pakistan': 'PK',
+  'Zambia': 'ZM',
+  'Malaysia': 'MY',
+  'Croatia': 'HR',
+  'Somalia': 'SO',
+  'Bangladesh': 'BD',
+  'France': 'FR',
+  'Namibia': 'NA',
+  'Spain': 'ES',
+  'Zimbabwe': 'ZW',
+  'Central African Republic': 'CF',
+  'Timor-Leste': 'TL',
+  'Greece': 'GR',
+  'Burkina Faso': 'BF',
+  'Thailand': 'TH',
+  'Chad': 'TD',
+  'Morocco': 'MA',
+  'United States': 'US',
+  'United States of America': 'US',
+  'Democratic Republic of the Congo': 'CD',
+  'Micronesia': 'FM',
+  'East Timor': 'TL',
+  'Tanzania United Republic of': 'TZ',
+  'Tanzania, United Republic of': 'TZ'
+};
+
+const COUNTRY_CODES = new Map(
+  Object.entries(COUNTRY_TABLE).map(([name, code]) => [countryKey(name), code])
+);
+const NO_COUNTRY = new Set(['global', '']);
+
+/**
+ * Lowercase, strip accents, collapse whitespace.
+ * @param {string} value
+ * @returns {string}
+ */
+function countryKey(value) {
+  return String(value || '')
+    .normalize('NFD')
+    .replace(/\p{M}/gu, '')
+    .toLowerCase()
+    .replace(/\s+/g, ' ')
+    .trim();
+}
+
+/**
+ * Column header to lookup key (accent and case insensitive).
+ * @param {string} header
+ * @returns {string}
+ */
+function headerKey(header) {
+  return countryKey(String(header).replace(/^﻿/, ''));
+}
+
+/**
+ * Name to match key: accents, case and punctuation removed.
+ * @param {string} name
+ * @returns {string}
+ */
+function nameKey(name) {
+  return String(name || '')
+    .normalize('NFD')
+    .replace(/\p{M}/gu, '')
+    .toLowerCase()
+    .replace(/[^\p{L}\p{N}]+/gu, '');
+}
+
+/**
+ * Parse RFC 4180 CSV. Strips a leading BOM, handles quoted fields, "" escapes,
+ * commas and newlines inside quotes, and CRLF/LF line endings.
+ * @param {string} text
+ * @returns {string[][]} Rows of raw field strings (header included)
+ */
+function parseCsv(text) {
+  const src = String(text).replace(/^﻿/, '');
+  const rows = [];
+  let row = [];
+  let field = '';
+  let inQuotes = false;
+  let i = 0;
+
+  while (i < src.length) {
+    const c = src[i];
+
+    if (inQuotes) {
+      if (c === '"') {
+        if (src[i + 1] === '"') {
+          field += '"';
+          i += 2;
+        } else {
+          inQuotes = false;
+          i += 1;
+        }
+      } else {
+        field += c;
+        i += 1;
+      }
+      continue;
+    }
+
+    if (c === '"') {
+      inQuotes = true;
+      i += 1;
+    } else if (c === ',') {
+      row.push(field);
+      field = '';
+      i += 1;
+    } else if (c === '\r' || c === '\n') {
+      row.push(field);
+      rows.push(row);
+      row = [];
+      field = '';
+      i += (c === '\r' && src[i + 1] === '\n') ? 2 : 1;
+    } else {
+      field += c;
+      i += 1;
+    }
+  }
+
+  if (inQuotes) {
+    throw new Error('Malformed CSV: unterminated quoted field');
+  }
+  if (field !== '' || row.length > 0) {
+    row.push(field);
+    rows.push(row);
+  }
+
+  // Drop blank lines.
+  return rows.filter(r => !(r.length === 1 && r[0] === ''));
+}
+
+/**
+ * Map a CCCI country name to ISO 3166-1 alpha-2.
+ * @param {string} name
+ * @returns {{code: string|null, known: boolean}} known=false means unmapped
+ */
+function mapCountry(name) {
+  const key = countryKey(name);
+  if (NO_COUNTRY.has(key)) return { code: null, known: true };
+  const code = COUNTRY_CODES.get(key);
+  return code ? { code, known: true } : { code: null, known: false };
+}
+
+/**
+ * Map CCCI "Project status" to the app status vocabulary.
+ * @param {string} value
+ * @returns {string}
+ */
+function mapStatus(value) {
+  return STATUS_MAP[String(value || '').trim().toLowerCase()] || 'unknown';
+}
+
+/**
+ * Keep only http(s) URLs; bare domains such as www.example.org get https://.
+ * @param {string} value
+ * @returns {string|undefined}
+ */
+function normalizeWebsite(value) {
+  const s = String(value || '').trim();
+  if (!s) return undefined;
+
+  let candidate = null;
+  if (/^[a-z][a-z0-9+.-]*:\/\//i.test(s)) {
+    candidate = s;
+  } else if (/^[a-z0-9-]+(\.[a-z0-9-]+)+(\/\S*)?$/i.test(s)) {
+    candidate = `https://${s}`;
+  }
+  if (!candidate) return undefined;
+
+  try {
+    const url = new URL(candidate);
+    return (url.protocol === 'http:' || url.protocol === 'https:') ? candidate : undefined;
+  } catch {
+    return undefined;
+  }
+}
+
+/**
+ * Turn CSV records (objects keyed by header) into normalized networks.
+ * Rows without ID or Name are skipped.
+ * @param {Object[]} rows
+ * @returns {{networks: Object[], unmatchedCountries: string[]}}
+ */
+function normalizeRows(rows) {
+  const networks = [];
+  const unmatched = new Set();
+
+  for (const record of rows) {
+    const r = {};
+    for (const [key, value] of Object.entries(record)) {
+      r[headerKey(key)] = String(value ?? '').trim();
+    }
+
+    const id = r.id;
+    const name = r.name;
+    if (!id || !name) continue;
+
+    const country = mapCountry(r.country);
+    if (!country.known) unmatched.add(r.country);
+
+    const services = SERVICE_COLUMNS
+      .filter(([, column]) => (r[headerKey(column)] || '').toLowerCase() === 'yes')
+      .map(([key]) => key);
+
+    const network = {
+      id,
+      name,
+      country: country.code,
+      status: mapStatus(r['project status']),
+      services
+    };
+
+    const website = normalizeWebsite(r.website);
+    if (website) network.website = website;
+
+    network.sources = ['ccci'];
+    networks.push(network);
+  }
+
+  const unmatchedCountries = [...unmatched].sort((a, b) =>
+    a.localeCompare(b, 'en', { sensitivity: 'base' })
+  );
+  for (const name of unmatchedCountries) {
+    console.warn(`CCCI country not mapped to ISO code: "${name}" (country set to null)`);
+  }
+
+  return { networks, unmatchedCountries };
+}
+
+/**
+ * Merge curated networks into the CCCI list.
+ * A curated entry matches a CCCI network with the same country and the same
+ * normalized name; matches gain the "communityBox" source and a website if
+ * CCCI has none. Unmatched curated entries are added with status "unknown"
+ * and no services.
+ * @param {Object[]} networks - Normalized CCCI networks (mutated)
+ * @param {Object|Object[]} curated - Curated file content or its networks array
+ * @returns {{networks: Object[], matched: number, added: number}}
+ */
+function mergeCurated(networks, curated) {
+  const list = Array.isArray(curated) ? curated : ((curated && curated.networks) || []);
+  const index = new Map();
+
+  for (const network of networks) {
+    const key = `${network.country || ''}|${nameKey(network.name)}`;
+    if (nameKey(network.name) && !index.has(key)) index.set(key, network);
+  }
+
+  const merged = networks.slice();
+  let matched = 0;
+  let added = 0;
+
+  list.forEach((entry, i) => {
+    const name = String(entry.name || '').trim();
+    if (!name) return;
+
+    const country = entry.country ? String(entry.country).trim().toUpperCase() : null;
+    const website = normalizeWebsite(entry.website);
+    const key = `${country || ''}|${nameKey(name)}`;
+    const hit = nameKey(name) ? index.get(key) : undefined;
+
+    if (hit) {
+      matched += 1;
+      if (!hit.sources.includes('communityBox')) hit.sources.push('communityBox');
+      if (!hit.website && website) hit.website = website;
+      return;
+    }
+
+    added += 1;
+    const slug = name
+      .normalize('NFD')
+      .replace(/\p{M}/gu, '')
+      .toLowerCase()
+      .replace(/[^\p{L}\p{N}]+/gu, '-')
+      .replace(/^-+|-+$/g, '') || String(i + 1);
+
+    const network = {
+      id: `cb-${slug}`,
+      name,
+      country,
+      status: 'unknown',
+      services: []
+    };
+    if (website) network.website = website;
+    network.sources = ['communityBox'];
+
+    merged.push(network);
+    if (nameKey(name)) index.set(key, network);
+  });
+
+  return { networks: merged, matched, added };
+}
+
+/**
+ * Download (or take csvText), normalize and merge the CCCI directory.
+ * Throws without returning data when the export is unusable, so callers
+ * never overwrite the existing output.
+ * @param {Object} [options]
+ * @param {string} [options.csvText] - CSV text to use instead of downloading (tests)
+ * @returns {Promise<Object>} The `data` object for ccci-directory.json
+ */
+async function getCcciDirectory(options = {}) {
+  const retrievedAt = new Date().toISOString();
+
+  const text = options.csvText !== undefined
+    ? options.csvText
+    : await fetchWithRetry(EXPORT_URL, { headers: { Accept: 'text/csv' } });
+
+  if (typeof text !== 'string') {
+    throw new Error('CCCI export did not return CSV text');
+  }
+
+  const table = parseCsv(text);
+  if (table.length === 0) {
+    throw new Error('CCCI export is empty');
+  }
+
+  const header = table[0].map(h => h.trim());
+  const keys = header.map(headerKey);
+  const missing = REQUIRED_COLUMNS.filter(c => !keys.includes(c));
+  if (missing.length > 0) {
+    throw new Error(`CCCI export header missing required column(s): ${missing.join(', ')}`);
+  }
+
+  const records = table.slice(1).map(row =>
+    Object.fromEntries(header.map((h, i) => [h, row[i] ?? '']))
+  );
+
+  const { networks: ccciNetworks, unmatchedCountries } = normalizeRows(records);
+
+  if (ccciNetworks.length < MIN_VALID_ROWS) {
+    throw new Error(
+      `CCCI export has only ${ccciNetworks.length} valid rows (minimum ${MIN_VALID_ROWS}); existing output kept`
+    );
+  }
+
+  const curated = JSON.parse(fs.readFileSync(CURATED_PATH, 'utf8'));
+  const { networks, matched, added } = mergeCurated(ccciNetworks, curated);
+
+  networks.sort((a, b) => a.name.localeCompare(b.name, 'en', { sensitivity: 'base' }));
+
+  console.log(
+    `CCCI rows: ${records.length}, networks: ${ccciNetworks.length}, ` +
+    `curated matched: ${matched}, curated added: ${added}, ` +
+    `unmatched countries: ${unmatchedCountries.length}`
+  );
+
+  return {
+    source: {
+      name: SOURCE_NAME,
+      url: SOURCE_URL,
+      exportUrl: EXPORT_URL,
+      retrievedAt,
+      rows: records.length
+    },
+    curatedSource: CURATED_REL,
+    count: networks.length,
+    unmatchedCountries,
+    networks
+  };
+}
+
+/**
+ * Fetch, normalize and save ccci-directory.json.
+ * @returns {Promise<Object>} Small summary (full data is in the output file)
+ */
+async function fetchCcciDirectory() {
+  const data = await getCcciDirectory();
+  saveToJson(OUTPUT_FILE, data, {});
+
+  return {
+    rows: data.source.rows,
+    count: data.count,
+    unmatchedCountries: data.unmatchedCountries.length
+  };
+}
+
+// CLI interface
+if (require.main === module) {
+  const args = process.argv.slice(2);
+
+  if (args.includes('--help') || args.includes('-h')) {
+    console.log(`
+Usage: node get-ccci-directory.js [options]
+
+Downloads the CCCI community-network directory CSV, normalizes it, merges
+the Community Box curated list and writes research/fetched-data/ccci-directory.json.
+If the download or validation fails, the existing output file is left unchanged.
+
+Options:
+  --help, -h         Show this help
+
+Examples:
+  node get-ccci-directory.js
+`);
+    process.exit(0);
+  }
+
+  runScript(fetchCcciDirectory, 'CCCI Directory');
+}
+
+module.exports = { parseCsv, normalizeRows, mergeCurated, getCcciDirectory, fetchCcciDirectory };

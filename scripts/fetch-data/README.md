@@ -49,6 +49,22 @@ npm test
    - Source: Web scraping (zimaspace.com)
    - Output: `zimaboard-shipping-areas.json`
 
+7. **CCCI Directory** (`get-ccci-directory.js`)
+   - Downloads the CCCI (Colnodo / APC) community-network directory CSV and merges it with the Community Box curated list (`research/results/community-directory.curated.json`)
+   - Source: https://app.agenteccci.colnodo.org/explore (export: https://app.agenteccci.colnodo.org/explore/export)
+   - Output: `ccci-directory.json`
+   - Only translatable/structured fields are kept: id, name, ISO 3166-1 alpha-2 country, status, Yes-only service keys, website (http(s) only) and sources (`ccci`, `communityBox`). Free-text columns (goals, nature, category, region, area type) are dropped.
+   - Safety: if the download fails, the header lacks ID/Name/Country, or fewer than 50 valid rows parse, the script throws and leaves the existing output unchanged.
+   - Country names not in the explicit mapping are set to `null` and listed in `unmatchedCountries` (with a console warning). `Global` and empty countries are `null` without being listed.
+
+   Sample run (abridged):
+   ```
+   $ node get-ccci-directory.js
+   CCCI rows: 428, networks: 428, curated matched: 2, curated added: 20, unmatched countries: 0
+   Saved data items to: .../research/fetched-data/ccci-directory.json
+   ✅ CCCI Directory completed in 1729ms
+   ```
+
 ### Master Script
 
 - **Run All** (`run-all.js`)
@@ -69,6 +85,7 @@ npm run get-yunohost-apps
 npm run get-yunohost-docs
 npm run get-yunohost-ui
 npm run get-shipping-areas
+npm run get-ccci-directory
 
 # Run tests
 npm test

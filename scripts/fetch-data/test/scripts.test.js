@@ -3,6 +3,7 @@
 const fs = require('fs');
 const path = require('path');
 const { SCRIPTS } = require('../run-all');
+const { parseCsv, normalizeRows, mergeCurated, getCcciDirectory } = require('../get-ccci-directory');
 
 /**
  * Simple test framework for data fetching scripts
@@ -108,6 +109,10 @@ function assertValidJSON(filePath) {
   }
 }
 
+function assert(condition, message) {
+  if (!condition) throw new Error(message);
+}
+
 function assertDataNotEmpty(data) {
   if (!data.data) {
     throw new Error('Data field is missing');
@@ -163,7 +168,8 @@ const expectedFiles = [
   'yunohost-apps.json',
   'yunohost-docs-translations.json',
   'yunohost-ui-translations.json',
-  'zimaboard-shipping-areas.json'
+  'zimaboard-shipping-areas.json',
+  'ccci-directory.json'
 ];
 
 expectedFiles.forEach(filename => {
@@ -236,6 +242,130 @@ runner.test('All JSON files have consistent structure', async () => {
       throw new Error(`${file}: Invalid timestamp format`);
     }
   }
+});
+
+// CCCI directory (offline: no network calls)
+const CCCI_HEADER = 'ID,Name,Country,Region,Project status,Area type,Nature of initiative,CN category,Primary goals,Main services,Internet access,Voice,Offline / local network,Local services,Financial services,Personal support,Digital literacy,Radio,School connectivity,Cybercafé,Environmental,Device charging,Other services';
+
+function ccciRecord(overrides = {}) {
+  const base = {
+    ID: 'CCCI-0001', Name: 'Test Network', Country: 'Kenya', Region: 'Africa',
+    'Project status': 'Active', 'Area type': 'Rural', 'Nature of initiative': 'Community',
+    'CN category': '', 'Primary goals': '', 'Main services': '', 'Internet access': 'Yes',
+    Voice: 'No', 'Offline / local network': 'No', 'Local services': '', 'Financial services': '',
+    'Personal support': '', 'Digital literacy': '', Radio: '', 'School connectivity': '',
+    Cybercafé: '', Environmental: '', 'Device charging': '', 'Other services': ''
+  };
+  return { ...base, ...overrides };
+}
+
+runner.test('CCCI parseCsv handles BOM, quotes, escaped quotes, commas and newlines', async () => {
+  const text = '﻿ID,Name,Notes\r\nCCCI-1,"Net, Inc.","He said ""hi""\nline2"\r\nCCCI-2,Plain,\r\n';
+  const rows = parseCsv(text);
+  assert(rows.length === 3, `expected 3 rows, got ${rows.length}`);
+  assert(rows[0][0] === 'ID', 'BOM not stripped');
+  assert(rows[1][1] === 'Net, Inc.', 'comma inside quotes not kept');
+  assert(rows[1][2] === 'He said "hi"\nline2', 'escaped quote or newline inside quotes wrong');
+  assert(rows[2].length === 3 && rows[2][2] === '', 'trailing empty field lost');
+});
+
+runner.test('CCCI parseCsv rejects unterminated quoted field', async () => {
+  let threw = false;
+  try { parseCsv('ID,Name\nCCCI-1,"open'); } catch (e) { threw = /unterminated/.test(e.message); }
+  assert(threw, 'expected unterminated quote error');
+});
+
+runner.test('CCCI status mapping', async () => {
+  const cases = { Active: 'active', Inactive: 'inactive', Inprogress: 'inProgress', 'In progress': 'inProgress',
+    Dormant: 'dormant', Pilot: 'pilot', Planned: 'planned', Ceased: 'ceased', '': 'unknown', Weird: 'unknown' };
+  const rows = Object.keys(cases).map((status, i) =>
+    ccciRecord({ ID: `CCCI-${i}`, 'Project status': status }));
+  const { networks } = normalizeRows(rows);
+  Object.keys(cases).forEach((status, i) => {
+    assert(networks[i].status === cases[status], `status "${status}" -> ${networks[i].status}`);
+  });
+});
+
+runner.test('CCCI services keep fixed order and only Yes columns', async () => {
+  const row = ccciRecord({
+    'Device charging': 'yes', Radio: ' YES ', 'Internet access': 'Yes', Voice: 'No', Cybercafé: 'Yes', 'Digital literacy': 'Yes'
+  });
+  const { networks } = normalizeRows([row]);
+  assert(JSON.stringify(networks[0].services) === JSON.stringify(['internet', 'literacy', 'radio', 'cybercafe', 'charging']),
+    `services order wrong: ${JSON.stringify(networks[0].services)}`);
+  assert(!('Area type' in networks[0]) && !('region' in networks[0]), 'free-text columns leaked');
+});
+
+runner.test('CCCI country mapping: aliases, Global, empty and unmatched', async () => {
+  const rows = [
+    ccciRecord({ ID: 'CCCI-1', Country: 'USA' }),
+    ccciRecord({ ID: 'CCCI-2', Country: 'United States of America' }),
+    ccciRecord({ ID: 'CCCI-3', Country: 'Micronesia' }),
+    ccciRecord({ ID: 'CCCI-4', Country: 'Global' }),
+    ccciRecord({ ID: 'CCCI-5', Country: '' }),
+    ccciRecord({ ID: 'CCCI-6', Country: 'Atlantis' }),
+    ccciRecord({ ID: 'CCCI-7', Country: 'Atlantis' }),
+    ccciRecord({ ID: 'CCCI-8', Country: 'DRC' })
+  ];
+  const { networks, unmatchedCountries } = normalizeRows(rows);
+  const codes = networks.map(n => n.country);
+  assert(JSON.stringify(codes) === JSON.stringify(['US', 'US', 'FM', null, null, null, null, 'CD']),
+    `country codes wrong: ${JSON.stringify(codes)}`);
+  assert(JSON.stringify(unmatchedCountries) === JSON.stringify(['Atlantis']),
+    `unmatched wrong: ${JSON.stringify(unmatchedCountries)}`);
+});
+
+runner.test('CCCI normalizeRows skips rows without ID or Name', async () => {
+  const rows = [ccciRecord({ Name: '   ' }), ccciRecord({ ID: '' }), ccciRecord({ ID: 'CCCI-9' })];
+  const { networks } = normalizeRows(rows);
+  assert(networks.length === 1 && networks[0].id === 'CCCI-9', 'invalid rows not skipped');
+});
+
+runner.test('CCCI merge dedupes accent/punctuation-insensitive and adds website and sources', async () => {
+  const { networks } = normalizeRows([
+    ccciRecord({ ID: 'CCCI-1', Name: 'Sarantáporo.gr ', Country: 'Greece' }),
+    ccciRecord({ ID: 'CCCI-2', Name: 'Other', Country: 'Greece' })
+  ]);
+  const curated = {
+    networks: [
+      { name: 'Sarantaporo GR', country: 'GR', region: 'europe', website: 'sarantaporo.gr' },
+      { name: 'Ninux', country: 'IT', region: 'europe', website: 'http://ninux.org' },
+      { name: 'Bad Site', country: 'XX', website: 'javascript:alert(1)' }
+    ]
+  };
+  // CCCI name has accent and trailing dot; curated has space and different case.
+  const { networks: merged, matched, added } = mergeCurated(networks, curated);
+  const sar = merged.find(n => n.id === 'CCCI-1');
+  assert(sar.sources.includes('communityBox'), 'communityBox source not added on match');
+  assert(sar.website === 'https://sarantaporo.gr', `bare domain not prefixed: ${sar.website}`);
+  assert(matched === 1 && added === 2, `counts matched=${matched} added=${added}`);
+  const ninux = merged.find(n => n.name === 'Ninux');
+  assert(ninux.id === 'cb-ninux' && ninux.status === 'unknown' && ninux.services.length === 0, 'curated add shape wrong');
+  assert(ninux.website === 'http://ninux.org' && ninux.sources[0] === 'communityBox', 'curated website/source wrong');
+  const bad = merged.find(n => n.name === 'Bad Site');
+  assert(bad.website === undefined, 'non-http website kept');
+});
+
+runner.test('CCCI getCcciDirectory rejects export with fewer than 50 rows', async () => {
+  const lines = [CCCI_HEADER];
+  for (let i = 1; i <= 10; i++) lines.push(`CCCI-${String(i).padStart(4, '0')},Net ${i},Kenya,Africa,Active,,,,,,Yes,,,,,,,,,,,`);
+  let message = null;
+  try {
+    await getCcciDirectory({ csvText: lines.join('\n') });
+  } catch (e) {
+    message = e.message;
+  }
+  assert(message && /only 10 valid rows/.test(message), `expected under-50 error, got: ${message}`);
+});
+
+runner.test('CCCI getCcciDirectory rejects header without ID, Name and Country', async () => {
+  let message = null;
+  try {
+    await getCcciDirectory({ csvText: '<html>Not a CSV</html>\n1,2,3' });
+  } catch (e) {
+    message = e.message;
+  }
+  assert(message && /missing required column/.test(message), `expected header error, got: ${message}`);
 });
 
 // Run tests
