@@ -49,6 +49,25 @@ npm test
    - Source: Web scraping (zimaspace.com)
    - Output: `zimaboard-shipping-areas.json`
 
+7. **CCCI Directory** (`get-ccci-directory.js`)
+   - Downloads the CCCI (Colnodo / APC) community-network directory CSV and merges it with the Community Box curated list (`research/results/community-directory.curated.json`)
+   - Source: https://app.agenteccci.colnodo.org/explore (export: https://app.agenteccci.colnodo.org/explore/export)
+   - Output: `ccci-directory.json`
+   - Only translatable/structured fields are kept: id, name, ISO 3166-1 alpha-2 country, status, Yes-only service keys, website (http(s) only) and sources (`ccci`, `communityBox`). Free-text columns (goals, nature, category, region, area type) are dropped.
+   - Safety: if the download fails, the header lacks ID/Name/Country, or fewer than 50 valid rows parse, the script throws and leaves the existing output unchanged.
+   - Country names not in the explicit mapping are set to `null` and listed in `unmatchedCountries` (with a console warning). `Global` and empty countries are `null` without being listed.
+   - Curated entries may list `aliases` (other spellings of the same network in the same country) so they merge into the CCCI record instead of appearing twice.
+   - Publishing: the site bundles this file at build time. The daily `Fetch Latest Data` workflow dispatches a deploy when the directory changes, and on its Monday schedule regardless (best effort: a failed fetch or deploy run skips that week).
+   - Republishing the CCCI export was authorized by Colnodo / APC on 2026-10-31.
+
+   Sample run (abridged):
+   ```
+   $ node get-ccci-directory.js
+   CCCI rows: 428, networks: 428, curated matched: 7, curated added: 15, unmatched countries: 0
+   Saved data items to: .../research/fetched-data/ccci-directory.json
+   ✅ CCCI Directory completed in 1729ms
+   ```
+
 ### Master Script
 
 - **Run All** (`run-all.js`)
@@ -69,6 +88,7 @@ npm run get-yunohost-apps
 npm run get-yunohost-docs
 npm run get-yunohost-ui
 npm run get-shipping-areas
+npm run get-ccci-directory
 
 # Run tests
 npm test

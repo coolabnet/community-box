@@ -87,59 +87,19 @@ Use this when working several TODO items at once.
   `Done` entry here (step 9), then remove the worktree with
   `git worktree remove`.
 
+## In review (PRs)
+
+- `O1` — PR #70, gate SHIP, parked `needs-human-qa` (Q35).
+- `O2` — PR #72, gate SHIP, parked `needs-human-qa` (Q36).
+- `T1-3` — landing explainer, PR #74, gate SHIP, parked `needs-human-qa`
+  (Q38).
+- `T3-2`, `T3-12` — ButterBox and Proxmox VE OS entries, PR #76, gate SHIP,
+  parked `needs-human-qa` (Q41). `T3-23` BlankOn waits on Q39.
+
 ## TODO (doable now)
 
-Verify first:
-
-- `T1-4` / `M2` / `M5` — 404s: crawl the live site (menu links, Hardware
-  Questionnaire from the menu, `community.directory.json`) and fix any
-  broken route or asset. Issues #11, #52.
-- `T1-5` — Cache between searches: confirm "start again" clears state on
-  the live site; close as Solved if so.
-- `M1` — Menu on the landing page: confirm it opens (#17 closed); close
-  if so.
-
-Content and questionnaire:
-
-- `T1-3` — Briefing/FAQ on the landing page: draft short explainer with
-  expandable detail (decision Q02). Hero text waits on Q29. Issues #14,
-  #19.
-- `T2-1` — Electricity question: add contextual link to the solar
-  calculator (decision Q26). Issue #53.
-- `T2-3`, `T2-5`, `T2-7` — Wording fixes from the doc (growth "Not sure",
-  "set up a computer as a server", points sentence). Issue #54.
-- `T2-7` — Importance-points contrast to 4.5:1 in both themes (Q28).
-  Issue #55.
-- `T2-4` — Reusable computer: add minimum-requirements sentence and a
-  link to `guides/hardware-compatibility-check`. Issue #15.
-- `T2-8` — Main-use wording "Select all local services that are relevant
-  to your community". Category expansion follows `#57`. Issue #22.
-- `T2-9` — New access-devices question, suggestions only (Q25). Include
-  shared devices: telecentre, cybercafe. Issue #56.
-- `M3` — Research paper: fill Hardware Analysis and OpenWRT One gaps,
-  rewrite item 5 "Community AI Considerations" in plain words. Issue #30.
-- `O1` — Router Setup: align link text with the "Router Selection" page
-  and fix the missing PNGs. Issues #16, #66.
-- `O2` — Download images: add a context page; link upstream with
-  versions and checksums (Q07). Issue #25.
-
-Service catalog (start with the schema):
-
-- `#57` — Extend the catalog schema with links and requirements (Q11,
-  Q16). Do this before the entries below.
-- `T3-1` — DeltaChat and local messaging. The transport detail waits on
-  Q20. Issue #58.
-- `T3-2`, `T3-12`, `T3-23` — ButterBox, Proxmox, BlankOn. Issue #59.
-- `T3-13`, `T3-14` — 2FA and local games as guides, not catalog entries
-  (Q14, Q21). Issue #60.
-- `T3-7`, `T3-16`, `T3-17` — Ooni as a companion app (Q19), CoopCloud,
-  Starlink VPN note. Issue #64.
-- `T3-9` — Local-language Wikipedia packs via Kiwix (Q24). Issue #65.
-- `T3-6` — Whisper feasibility note (hardware tiers). Scope waits on Q17.
-  Issue #63.
-- `T3-15`, `T3-18` — SDR, CCTV and local radio use-case research notes.
-  Issue #58.
-- `T3-8` — Sosuite research note, labelled beta (Q13). Issue #59.
+None. Every remaining item waits on a decision in `gg2026-decisions.html`
+or on human QA of a parked PR.
 
 ## Blocked (see `gg2026-decisions.html`)
 
@@ -147,10 +107,46 @@ Service catalog (start with the schema):
 (Q09 partner), `T1-10` (Q10), `T1-12` (Q08), `T1-14` (Q06), `T1-15` (Q30),
 `T2-2` (Q31), `T3-3`, `T3-5`, `T3-11`, `T3-19`, `T3-20`, `T3-22` (Q15 tool
 names; `T3-5` also Q22), `T3-4` (Q18), `T3-10` (Q23), `T3-21` (Q33),
-`M6` (Q32). `M4` is Phase 2 (#26).
+`T3-1` transport detail and catalog entry (Q20, #57
+taxonomy), `#57` taxonomy and PDF sections. `M4` is Phase 2 (#26).
 
 ## Done
 
+- `T2-9` — access-devices question plus technical-support question
+  (owner-approved), tips only, live 2026-10-31 (PR #77, `c8223f7`), remote QA
+  passed (Q42). Single-choice answers now show a check mark and
+  `aria-pressed`. #56 closed; doc row Done.
+- `T2-1`, `T2-3`, `T2-4`, `T2-5`, `T2-7`, `T2-8` — guiding-question help
+  texts, wording and points contrast live 2026-10-31 (PR #68, `58d56e8`),
+  mobile QA passed (Q34). Services title padding fixed. #53 #54 #55 #15
+  closed; #22 stays open for categories (#57 taxonomy). Doc rows Done,
+  item 8 Partial.
+- CI: weekly Monday redeploy from the data-fetch workflow (PR #80), so the
+  directory retrieval date and other fetched data stay fresh on the site.
+- `M6` / #27 — Community Networks Map live 2026-10-31 at `/docs/directory`
+  (PR #79, `070ff3e`): CCCI directory merged with our list (443 networks),
+  zoomable world map with country filter, daily guarded refresh. Mobile QA
+  passed; all 9 review threads resolved. #27 closed. Colnodo / APC
+  authorized republishing the CCCI export 2026-10-31 (Q43 resolved).
+- `T1-4` / `M2` / `M5` — 404s verified gone live 2026-10-30 (33 menu
+  pages en/pt, deep links, directory JSON). Regression test PR #69
+  (`b53b06a`), #52 closed. Doc row set Done.
+- `T1-5` — Start Over clears answers, saved state and URL (verified live
+  2026-10-30). Doc row set Solved.
+- `M1` — Menu opens on the landing page (verified live 2026-10-30).
+- `#57` (schema part) — Optional catalog `links`/`requirements`, PR #67
+  (`25eb22b`). Taxonomy and PDF sections still open on #57.
+- `M3` — Research paper gaps filled, PR #71 (`1175959`), #30 closed. The
+  downloadable PDF updates on the next release (Q37). No doc table row.
+- `T3-7`, `T3-13`, `T3-14`, `T3-16`, `T3-17` — Guides (OONI, 2FA, local
+  games, Co-op Cloud, Starlink VPN), PR #73, #64 closed. Doc rows Done.
+
+- `T3-6`, `T3-8`, `T3-9`, `T3-15`, `T3-18` — Whisper feasibility, Sosuite
+  beta note, Kiwix language packs, radio/SDR/CCTV practices, PR #75
+  (`86fe31d`). #63 closed; #65 stays open for the chatbot item. Doc rows
+  Done.
+- `T3-1` (guide part) — Local messaging with Delta Chat, PR #78
+  (`3e9ae85`). Doc row set Partial; transport waits on Q20.
 - `T1-13` — Whole app and docs translated to pt/es. Commits `0282037`,
   `0c71969`. Google Doc already marked Done.
 - `T1-11` — PDF export fixed (renderer and paging). Commits `0282037`,

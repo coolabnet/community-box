@@ -13,6 +13,7 @@ const LandingPage = retryableLazy(() => import("./pages/LandingPage"), { name: '
 const Index = retryableLazy(() => import("./pages/Index"), { name: 'Index' });
 const DocsHome = retryableLazy(() => import("./pages/DocsHome"), { name: 'DocsHome' });
 const MarkdownPage = retryableLazy(() => import("./pages/MarkdownPage"), { name: 'MarkdownPage' });
+const CommunityDirectory = retryableLazy(() => import("./pages/CommunityDirectory"), { name: 'CommunityDirectory' });
 
 const queryClient = new QueryClient();
 
@@ -30,6 +31,7 @@ const AppRoutes = () => {
       <Route path="/questionnaire" element={<Index />} />
       <Route path="/docs" element={<DocsLayout />}>
         <Route index element={<DocsHome />} />
+        <Route path="directory" element={<CommunityDirectory />} />
         <Route path="*" element={<MarkdownPage key={location.pathname} />} />
       </Route>
       {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}

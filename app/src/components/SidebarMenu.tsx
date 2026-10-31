@@ -173,6 +173,7 @@ const createMenu = (pdfUrl: string, lang: DocLang): MenuItem[] => [
     titleKey: 'sidebar.community',
     icon: <Users size={16} />,
     children: [
+      { titleKey: 'sidebar.communityMap', to: 'directory' },
       { title: resolveTitle('results/global-community-networks-directory', lang), to: 'results/global-community-networks-directory' }
     ]
   },
