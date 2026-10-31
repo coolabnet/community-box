@@ -1,8 +1,14 @@
 import { useState } from 'react';
-import { useTranslation } from 'react-i18next';
+import { Trans, useTranslation } from 'react-i18next';
 import { motion } from 'framer-motion';
 import { Button } from '@/components/ui/button';
-import { useNavigate } from 'react-router-dom';
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from '@/components/ui/accordion';
+import { Link, useNavigate } from 'react-router-dom';
 import LanguageSwitcher from '@/components/LanguageSwitcher';
 import SidebarMenu from '@/components/SidebarMenu';
 import { Wifi, Menu as MenuIcon, X as CloseIcon } from 'lucide-react';
@@ -132,6 +138,75 @@ const LandingPage = () => {
               </Button>
             </motion.div>
           </motion.div>
+
+          {/* Explainer */}
+          <motion.section
+            aria-labelledby="landing-explainer-heading"
+            className="w-full max-w-2xl mt-12 text-left"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.6 }}
+          >
+            <h2
+              id="landing-explainer-heading"
+              className="text-2xl font-bold text-foreground mb-3"
+            >
+              {t('landing.explainer.heading')}
+            </h2>
+            <p className="text-base text-muted-foreground mb-6">
+              {t('landing.explainer.intro')}
+            </p>
+            <Accordion type="multiple" className="w-full border-t">
+              <AccordionItem value="what-is">
+                <AccordionTrigger className="text-left text-foreground rounded-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring">
+                  {t('landing.explainer.whatTitle')}
+                </AccordionTrigger>
+                <AccordionContent className="text-muted-foreground">
+                  {t('landing.explainer.whatBody')}
+                </AccordionContent>
+              </AccordionItem>
+              <AccordionItem value="what-tool-does">
+                <AccordionTrigger className="text-left text-foreground rounded-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring">
+                  {t('landing.explainer.toolTitle')}
+                </AccordionTrigger>
+                <AccordionContent className="text-muted-foreground">
+                  {t('landing.explainer.toolBody')}
+                </AccordionContent>
+              </AccordionItem>
+              <AccordionItem value="can-cannot">
+                <AccordionTrigger className="text-left text-foreground rounded-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring">
+                  {t('landing.explainer.canTitle')}
+                </AccordionTrigger>
+                <AccordionContent className="text-muted-foreground">
+                  {t('landing.explainer.canBody')}
+                </AccordionContent>
+              </AccordionItem>
+              <AccordionItem value="help">
+                <AccordionTrigger className="text-left text-foreground rounded-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring">
+                  {t('landing.explainer.helpTitle')}
+                </AccordionTrigger>
+                <AccordionContent className="text-muted-foreground">
+                  <Trans
+                    i18nKey="landing.explainer.helpBody"
+                    components={{
+                      guides: (
+                        <Link
+                          to="/docs"
+                          className="text-primary underline underline-offset-4 rounded-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
+                        />
+                      ),
+                      directory: (
+                        <Link
+                          to="/docs/results/global-community-networks-directory"
+                          className="text-primary underline underline-offset-4 rounded-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
+                        />
+                      ),
+                    }}
+                  />
+                </AccordionContent>
+              </AccordionItem>
+            </Accordion>
+          </motion.section>
         </motion.div>
       </div>
 
