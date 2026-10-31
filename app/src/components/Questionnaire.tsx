@@ -6,11 +6,12 @@ import ProgressBar from './ProgressBar';
 import QuestionCard from './QuestionCard';
 import PointsAllocation from './PointsAllocation';
 import UsageSelection from './UsageSelection';
+import AccessDevicesSelection from './AccessDevicesSelection';
 import RecommendationResults from './RecommendationResults';
 import ErrorBoundary from './ErrorBoundary';
 import { AnimatePresence } from 'framer-motion';
 import { Trans, useTranslation } from 'react-i18next';
-import type { PriorityAllocation, UsageSelectionValues, UserAnswers } from '@/types/questionnaire';
+import type { AccessDeviceValues, PriorityAllocation, UsageSelectionValues, UserAnswers } from '@/types/questionnaire';
 
 const Questionnaire = () => {
   const { t } = useTranslation();
@@ -46,6 +47,11 @@ const Questionnaire = () => {
         { label: t('questionnaire.questions.users.options.3-5'), value: '3-5' },
         { label: t('questionnaire.questions.users.options.6+'), value: '6+' },
       ],
+    },
+    {
+      id: 'accessDevices',
+      question: t('questionnaire.questions.accessDevices.question'),
+      type: 'custom',
     },
     {
       id: 'growth',
@@ -84,6 +90,17 @@ const Questionnaire = () => {
         { label: t('questionnaire.questions.format.options.yes'), value: 'yes' },
         { label: t('questionnaire.questions.format.options.maybe'), value: 'maybe' },
         { label: t('questionnaire.questions.format.options.no'), value: 'no' },
+      ],
+    },
+    {
+      id: 'techSupport',
+      question: t('questionnaire.questions.techSupport.question'),
+      help: <Trans i18nKey="questionnaire.questions.techSupport.help" />,
+      type: 'options',
+      options: [
+        { label: t('questionnaire.questions.techSupport.options.community'), value: 'community' },
+        { label: t('questionnaire.questions.techSupport.options.external'), value: 'external' },
+        { label: t('questionnaire.questions.techSupport.options.no'), value: 'no' },
       ],
     },
     {
@@ -154,6 +171,12 @@ const Questionnaire = () => {
     handleNext();
   };
 
+  // Handle access device selection
+  const handleAccessDevicesSelection = (values: AccessDeviceValues) => {
+    setAnswer('accessDevices', values);
+    handleNext();
+  };
+
   // Handle start over (reset questionnaire)
   const handleStartOver = () => {
     // Use the context's reset function
@@ -175,6 +198,14 @@ const Questionnaire = () => {
         <UsageSelection
           key="usage-selection"
           onNext={handleUsageSelection}
+          onBack={handleBack}
+        />
+      );
+    } else if (currentQuestion.id === 'accessDevices') {
+      return (
+        <AccessDevicesSelection
+          key="access-devices-selection"
+          onNext={handleAccessDevicesSelection}
           onBack={handleBack}
         />
       );

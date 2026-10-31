@@ -18,6 +18,18 @@
           "6+": "6+ users"
         }
       },
+      "accessDevices": {
+        "question": "How do people access the content on the local server?",
+        "description": "Select all that apply",
+        "help": "Your answer only adjusts the connection tips. It does not change the service list.",
+        "options": {
+          "smartphones": "Smartphones or cellphones",
+          "laptops": "Laptops",
+          "desktops": "Desktop computers",
+          "shared": "Shared devices (telecentre, cybercafe, school lab)"
+        },
+        "continue": "Continue"
+      },
       "growth": {
         "question": "Do you expect a growing usage of the shared computer in the next 2 years?",
         "help": "Growth means more people, devices or services using the shared computer over time, for example a school adding classes or more families joining the network. If you are not sure, choose “Not sure”: it is scored the same as moderate growth.",
@@ -42,6 +54,15 @@
           "yes": "Yes, confidently",
           "maybe": "With guidance",
           "no": "No"
+        }
+      },
+      "techSupport": {
+        "question": "Is there someone who can help you set up and maintain the server?",
+        "help": "For example, a community member, a local technician or a partner organization. Your answer only adjusts the setup tips. It does not change the recommendation.",
+        "options": {
+          "community": "Yes, someone in the community",
+          "external": "Yes, from outside the community",
+          "no": "No, not yet"
         }
       },
       "price": {
@@ -304,6 +325,23 @@
             "beginner": "Beginner",
             "intermediate": "Intermediate",
             "advanced": "Advanced"
+          }
+        },
+        "supportTips": {
+          "title": "Tips for setup and support",
+          "items": {
+            "community": "Involve them from the start, so they can install the system and teach others to keep it running.",
+            "external": "Plan the setup around their visit, and write down each step so people in the community can maintain it afterwards.",
+            "no": "Start with the most beginner-friendly options, and look for a nearby community network or partner organization that can help."
+          }
+        },
+        "accessTips": {
+          "title": "Tips for how people connect",
+          "items": {
+            "smartphones": "Choose services with mobile-friendly web pages, and test them on the phones people actually use.",
+            "laptops": "Laptops can use full web apps and sync clients, such as Nextcloud desktop.",
+            "desktops": "Desktop computers in a shared space work well for larger screens, like editing documents or browsing offline libraries.",
+            "shared": "On shared devices, use separate user accounts, log out after use, and avoid saving passwords in the browser."
           }
         }
       }

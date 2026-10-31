@@ -18,6 +18,18 @@
           "6+": "6+ usuários"
         }
       },
+      "accessDevices": {
+        "question": "Como as pessoas acessam o conteúdo no servidor local?",
+        "description": "Selecione todas as opções que se aplicam",
+        "help": "Sua resposta só ajusta as dicas de conexão. Ela não altera a lista de serviços.",
+        "options": {
+          "smartphones": "Smartphones ou celulares",
+          "laptops": "Notebooks",
+          "desktops": "Computadores de mesa",
+          "shared": "Dispositivos compartilhados (telecentro, lan house, laboratório escolar)"
+        },
+        "continue": "Continuar"
+      },
       "growth": {
         "question": "Você espera um aumento no uso do computador compartilhado nos próximos 2 anos?",
         "help": "Crescimento significa mais pessoas, dispositivos ou serviços usando o computador compartilhado ao longo do tempo, por exemplo uma escola com mais turmas ou mais famílias entrando na rede. Se não tiver certeza, escolha “Não sei”: ele é pontuado igual ao crescimento moderado.",
@@ -42,6 +54,15 @@
           "yes": "Sim, com confiança",
           "maybe": "Com orientação",
           "no": "Não"
+        }
+      },
+      "techSupport": {
+        "question": "Há alguém que possa ajudar a instalar e manter o servidor?",
+        "help": "Por exemplo, uma pessoa da comunidade, um técnico local ou uma organização parceira. Sua resposta só ajusta as dicas de instalação. Ela não altera a recomendação.",
+        "options": {
+          "community": "Sim, alguém da comunidade",
+          "external": "Sim, alguém de fora da comunidade",
+          "no": "Ainda não"
         }
       },
       "price": {
@@ -304,6 +325,23 @@
             "beginner": "Iniciante",
             "intermediate": "Intermediário",
             "advanced": "Avançado"
+          }
+        },
+        "supportTips": {
+          "title": "Dicas de instalação e suporte",
+          "items": {
+            "community": "Envolva essa pessoa desde o início, para que ela instale o sistema e ensine outras pessoas a mantê-lo funcionando.",
+            "external": "Planeje a instalação para a visita dessa pessoa e anote cada passo, para que a comunidade consiga manter o sistema depois.",
+            "no": "Comece pelas opções mais fáceis para iniciantes e procure uma rede comunitária próxima ou uma organização parceira que possa ajudar."
+          }
+        },
+        "accessTips": {
+          "title": "Dicas sobre como as pessoas se conectam",
+          "items": {
+            "smartphones": "Escolha serviços com páginas web adaptadas para celular e teste-os nos telefones que as pessoas realmente usam.",
+            "laptops": "Notebooks podem usar aplicativos web completos e clientes de sincronização, como o cliente de desktop do Nextcloud.",
+            "desktops": "Computadores de mesa em um espaço compartilhado funcionam bem para telas maiores, como editar documentos ou navegar em bibliotecas offline.",
+            "shared": "Em dispositivos compartilhados, use contas de usuário separadas, saia da conta após o uso e evite salvar senhas no navegador."
           }
         }
       }
