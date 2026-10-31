@@ -490,17 +490,17 @@
       "unknown": "Estado no informado"
     },
     "services": {
-      "internet": "Internet",
+      "internet": "Acceso a internet",
       "voice": "Voz",
-      "offline": "Contenido offline",
+      "offline": "Offline / red local",
       "localServices": "Servicios locales",
       "financial": "Servicios financieros",
-      "support": "Soporte técnico",
+      "support": "Soporte personal",
       "literacy": "Alfabetización digital",
-      "radio": "Radio comunitaria",
-      "schools": "Escuelas",
+      "radio": "Radio",
+      "schools": "Conectividad escolar",
       "cybercafe": "Cibercafé",
-      "environmental": "Monitoreo ambiental",
+      "environmental": "Ambiental",
       "charging": "Carga de dispositivos"
     }
   }

@@ -490,17 +490,17 @@
       "unknown": "Status not reported"
     },
     "services": {
-      "internet": "Internet",
+      "internet": "Internet access",
       "voice": "Voice",
-      "offline": "Offline content",
+      "offline": "Offline / local network",
       "localServices": "Local services",
       "financial": "Financial services",
-      "support": "Technical support",
+      "support": "Personal support",
       "literacy": "Digital literacy",
-      "radio": "Community radio",
-      "schools": "Schools",
+      "radio": "Radio",
+      "schools": "School connectivity",
       "cybercafe": "Cybercafé",
-      "environmental": "Environmental monitoring",
+      "environmental": "Environmental",
       "charging": "Device charging"
     }
   }

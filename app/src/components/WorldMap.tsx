@@ -107,6 +107,8 @@ export default function WorldMap({ counts, selected, onSelect }: WorldMapProps) 
           const text = `${name}: ${t('directory.networkCount', { count })}`;
           const fill = isSelected ? 'fill-amber-500' : TIER_FILL[tierFor(count)];
           const strokeWidth = isSelected || focused === code ? 2 : 0.5;
+          const point = countries[code];
+          const radius = count >= 100 ? 9 : 7;
           return (
             <g
               key={code}
@@ -114,7 +116,7 @@ export default function WorldMap({ counts, selected, onSelect }: WorldMapProps) 
               tabIndex={0}
               aria-pressed={isSelected}
               aria-label={text}
-              className="outline-none"
+              className="group outline-none cursor-pointer"
               onClick={() => toggle(code)}
               onKeyDown={(event) => handleKeyDown(event, code)}
               onMouseEnter={() => setHovered(code)}
@@ -125,25 +127,16 @@ export default function WorldMap({ counts, selected, onSelect }: WorldMapProps) 
               <title>{text}</title>
               <path
                 d={countries[code].d}
-                className={`${fill} stroke-background cursor-pointer transition-opacity hover:opacity-80`}
+                className={`${fill} stroke-background transition-opacity group-hover:opacity-80`}
                 strokeWidth={strokeWidth}
               />
-            </g>
-          );
-        })}
-
-        {coloredCodes.map((code) => {
-          const point = countries[code];
-          if (!point) return null;
-          const count = counts[code];
-          const radius = count >= 100 ? 9 : 7;
-          return (
-            <g key={`bubble-${code}`} aria-hidden="true" className="pointer-events-none">
+              {/* Invisible, larger hit area so tiny islands are easy to tap. */}
+              <circle cx={point.x} cy={point.y} r={12} fill="transparent" />
               <circle
                 cx={point.x}
                 cy={point.y}
                 r={radius}
-                className="fill-background stroke-emerald-700"
+                className="fill-background stroke-emerald-700 transition-opacity group-hover:opacity-80"
                 strokeWidth={1}
               />
               <text
@@ -151,7 +144,7 @@ export default function WorldMap({ counts, selected, onSelect }: WorldMapProps) 
                 y={point.y}
                 textAnchor="middle"
                 dominantBaseline="central"
-                className="fill-foreground text-[8px] font-semibold"
+                className="fill-foreground text-[8px] font-semibold pointer-events-none"
               >
                 {count}
               </text>
