@@ -64,7 +64,9 @@ const QuestionCard = ({
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8">
           {options.map((option) => (
             <button
+              type="button"
               key={option.value}
+              aria-pressed={selectedValue === option.value}
               onClick={() => onSelect?.(option.value)}
               className={cn(
                 'p-6 rounded-xl text-lg transition-all duration-200',
