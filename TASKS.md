@@ -99,6 +99,9 @@ Use this when working several TODO items at once.
   parked `needs-human-qa` (Q41). `T3-23` BlankOn waits on Q39.
 - `T2-9` — access-devices question, PR #77 (stacked on #68), gate SHIP,
   parked `needs-human-qa` (Q42).
+- `M6` / #27 — Community Networks Map (CCCI directory merged with our
+  list, zoomable world map), PR #79, gate SHIP, parked `needs-human-qa`
+  (Q43). Licence confirmation with Colnodo / APC still open.
 
 ## TODO (doable now)
 
@@ -111,7 +114,7 @@ or on human QA of a parked PR.
 (Q09 partner), `T1-10` (Q10), `T1-12` (Q08), `T1-14` (Q06), `T1-15` (Q30),
 `T2-2` (Q31), `T3-3`, `T3-5`, `T3-11`, `T3-19`, `T3-20`, `T3-22` (Q15 tool
 names; `T3-5` also Q22), `T3-4` (Q18), `T3-10` (Q23), `T3-21` (Q33),
-`M6` (Q32), `T3-1` transport detail and catalog entry (Q20, #57
+`T3-1` transport detail and catalog entry (Q20, #57
 taxonomy), `#57` taxonomy and PDF sections. `M4` is Phase 2 (#26).
 
 ## Done
