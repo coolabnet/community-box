@@ -8,11 +8,7 @@ title: LibreMesh
 
 LibreMesh is a modular framework for creating OpenWrt-based firmwares for wireless mesh nodes, designed specifically for community networks[1][10]. Several communities around the world use LibreMesh as the foundation of their local mesh firmwares, enabling decentralized, community-managed wireless networks.
 
-`[Mesh Network Topology Illustration](mesh-network-topology.png) — Diagram of mesh-connected routers in a typical deployment.`
-
 LibreMesh represents a fundamental shift from traditional centralized wireless networks to distributed, community-controlled infrastructure. Unlike conventional wireless setups that rely on a single access point or router, LibreMesh creates self-configuring mesh networks where each node can route traffic for other participants, eliminating single points of failure[10].
-
-`[LibreMesh Logo or Screenshot](libremesh-logo.png) — Identifying the project visually.`
 
 ## Core Features and Benefits
 

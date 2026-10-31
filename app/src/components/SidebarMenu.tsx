@@ -17,7 +17,7 @@ import {
 } from 'lucide-react';
 import { useIsMobile } from '@/hooks/use-mobile';
 import { getPdfDownloadUrl } from '@/lib/github';
-import { getMarkdownTitle, deslugify, normalizeDocLang, type DocLang } from '@/lib/markdown';
+import { resolveTitle, normalizeDocLang, type DocLang } from '@/lib/markdown';
 
 type MenuItem = {
   title?: string;       // For dynamic content (markdown titles)
@@ -27,12 +27,6 @@ type MenuItem = {
   icon?: React.ReactNode;
   children?: MenuItem[];
 };
-
-// Resolve title from path for the given language, falling back to the English frontmatter
-// title and then to a de-slugified filename
-function resolveTitle(path: string, lang: DocLang): string {
-  return getMarkdownTitle(path, lang) || deslugify(path);
-}
 
 // Helper function to get display title
 function getDisplayTitle(item: MenuItem, t: (key: string) => string): string {
@@ -57,32 +51,7 @@ const createMenu = (pdfUrl: string, lang: DocLang): MenuItem[] => [
   {
     titleKey: 'sidebar.downloadImages',
     icon: <Download size={16} />,
-    children: [
-      {
-        titleKey: 'sidebar.operatingSystemsX86',
-        children: [
-          // { title: 'YunoHost-x86_64-v11.2.iso', href: '#' },
-          // { title: 'Caprover-ubuntu-x86_64-v2.iso', href: '#' },
-          // { title: 'CasaOS-debian-x86_64-v0.4.8.img', href: '#' }
-          { titleKey: 'common.imagesNotBuiltYet', href: '#' }
-        ]
-      },
-      {
-        titleKey: 'sidebar.operatingSystemsARM64',
-        children: [
-          // { title: 'YunoHost-rpi-arm64-v11.2.img', href: '#' },
-          // { title: 'Caprover-ubuntu-arm64-v2.img', href: '#' },
-          // { title: 'CasaOS-rpi-arm64-v0.4.8.img', href: '#' }
-          { titleKey: 'common.imagesNotBuiltYet', href: '#' }
-        ]
-      },
-      {
-        titleKey: 'sidebar.networking',
-        children: [
-          { titleKey: 'sidebar.libreMeshImageFinder', href: 'https://firmware-selector.libremesh.org/' }
-        ]
-      }
-    ]
+    to: 'guides/download-images'
   },
   {
     titleKey: 'sidebar.quickstartGuides',
@@ -149,7 +118,8 @@ const createMenu = (pdfUrl: string, lang: DocLang): MenuItem[] => [
         titleKey: 'sidebar.networkConfiguration',
         children: [
           { title: resolveTitle('guides/router-selection-guide', lang), to: 'guides/router-selection-guide' },
-          { title: resolveTitle('guides/libremesh-installation', lang), to: 'guides/libremesh-installation' }
+          { title: resolveTitle('guides/libremesh-installation', lang), to: 'guides/libremesh-installation' },
+          { titleKey: 'sidebar.libreMeshImageFinder', href: 'https://firmware-selector.libremesh.org/' }
         ]
       },
       {
@@ -179,6 +149,7 @@ const createMenu = (pdfUrl: string, lang: DocLang): MenuItem[] => [
     titleKey: 'sidebar.community',
     icon: <Users size={16} />,
     children: [
+      { titleKey: 'sidebar.communityMap', to: 'directory' },
       { title: resolveTitle('results/global-community-networks-directory', lang), to: 'results/global-community-networks-directory' }
     ]
   },

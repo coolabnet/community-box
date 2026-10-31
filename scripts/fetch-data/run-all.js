@@ -10,6 +10,7 @@ const { getYunoHostApps } = require('./get-yunohost-apps');
 const { getYunoHostDocsTranslations } = require('./get-yunohost-docs-translations');
 const { getYunoHostUITranslations } = require('./get-yunohost-ui-translations');
 const { getShippingCountries } = require('./get-zimaboard-shipping-areas');
+const { fetchCcciDirectory } = require('./get-ccci-directory');
 
 /**
  * Configuration for all data scripts
@@ -55,6 +56,12 @@ const SCRIPTS = [
       return countries;
     },
     description: 'Scrape shipping countries/areas for Zimaboard from ZimaSpace website'
+  },
+  {
+    name: 'CCCI Directory',
+    function: fetchCcciDirectory,
+    liveTest: false, // Covered by offline fixtures in test/scripts.test.js
+    description: 'Merge CCCI (Colnodo / APC) community-network directory with the curated list'
   }
 ];
 

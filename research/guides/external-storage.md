@@ -58,8 +58,6 @@ Identify available connection ports:
 
 ### USB Drive Connection
 
-`[Mounting External Drive](mounting-external-drive.png)`
-
 1. **Locate appropriate USB port** (USB 3.0+ recommended for better performance)
 2. **Connect the drive** ensuring secure connection
 3. **For USB-SATA adapters**: Connect both USB and power cables if required
@@ -183,8 +181,6 @@ sudo fdisk /dev/sdb
 ```
 
 ### Format the Partition
-
-`[Filesystem Format Screenshot](format-drive-ui.png)`
 
 Choose the appropriate file system based on your needs:
 

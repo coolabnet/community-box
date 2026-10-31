@@ -229,6 +229,12 @@ export function getMarkdownTitle(path: string, lang: DocLang = 'en'): string | n
   return titleIndex[lang]?.[normalized] || markdownIndex[normalized]?.title || null;
 }
 
+// Display title for a doc path: translated or English frontmatter title, then a de-slugified filename.
+// Shared by the sidebar and DocsHome so both show the same label.
+export function resolveTitle(path: string, lang: DocLang): string {
+  return getMarkdownTitle(path, lang) || deslugify(path);
+}
+
 // Helper function to check if a markdown file exists
 export function markdownFileExists(path: string): boolean {
   return Boolean(markdownIndex[path]);

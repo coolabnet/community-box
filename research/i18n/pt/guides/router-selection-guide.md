@@ -1,7 +1,7 @@
 ---
 title: Seleção de Roteador
 sourcePath: guides/router-selection-guide.md
-sourceHash: 71ea6aa25cbec92a
+sourceHash: 561fe8f7603030d2
 translatedBy: glm-4.6
 ---
 
@@ -21,8 +21,6 @@ Antes de mergulhar nas especificações detalhadas, use esta matriz para determi
 | Portas Ethernet | 1 LAN | 4 LAN + 1 WAN | 5+ Gigabit |
 | Chipset | Qualquer suportado pelo OpenWrt | Atheros/MediaTek | Atheros ath9k/ath10k |
 
-*`[Router Hardware Lineup](router-lineup.png)` — Foto mostrando vários modelos de roteadores recomendados lado a lado, incluindo modelos TP-Link, GL.iNet e Asus.*
-
 ## Análise Profunda dos Requisitos de Hardware
 
 ### Especificações de Memória
@@ -36,8 +34,6 @@ Antes de mergulhar nas especificações detalhadas, use esta matriz para determi
 - **64 MB mínimo**: Operação básica de mesh com conexões simultâneas limitadas
 - **128 MB recomendado**: Desempenho estável com 20-50 dispositivos
 - **256+ MB ideal**: Nós de alta capacidade suportando 100+ dispositivos e recursos avançados
-
-*`[Specs Label Closeup](router-specs-label.png)` — Close-up do adesivo de um roteador mostrando especificações/rótulos relevantes, incluindo especificações de memória e informações do modelo.*
 
 > **💡 Dica**: Procure o rótulo de especificações na parte inferior ou traseira do roteador. As especificações de memória frequentemente são listadas como "Flash: XXX MB" e "RAM: XXX MB".
 

@@ -89,39 +89,15 @@ Use this when working several TODO items at once.
 
 ## In review (PRs)
 
-- `T2-1`, `T2-3`, `T2-4`, `T2-5`, `T2-7`, `T2-8` — PR #68, gate SHIP,
-  parked `needs-human-qa` (Q34).
-- `O1` — PR #70, gate SHIP, parked `needs-human-qa` (Q35).
-- `M3` — PR #71, gate loop.
-- `O2` — download-images page, in progress.
-- `T3-7`, `T3-13`, `T3-14`, `T3-16`, `T3-17` — network/security guides,
-  in progress.
+- `T1-3` — landing explainer, PR #74, gate SHIP, parked `needs-human-qa`
+  (Q38).
+- `T3-2`, `T3-12` — ButterBox and Proxmox VE OS entries, PR #76, gate SHIP,
+  parked `needs-human-qa` (Q41). `T3-23` BlankOn waits on Q39.
 
 ## TODO (doable now)
 
-Content and questionnaire:
-
-- `T1-3` — Briefing/FAQ on the landing page: draft short explainer with
-  expandable detail (decision Q02). Hero text waits on Q29. Issues #14,
-  #19.
-- `T2-9` — New access-devices question, suggestions only (Q25). Include
-  shared devices: telecentre, cybercafe. Issue #56.
-
-Service catalog (start with the schema):
-
-- `T3-1` — DeltaChat and local messaging. The transport detail waits on
-  Q20. Issue #58.
-- `T3-2`, `T3-12`, `T3-23` — ButterBox, Proxmox, BlankOn. Issue #59.
-- `T3-13`, `T3-14` — 2FA and local games as guides, not catalog entries
-  (Q14, Q21). Issue #60.
-- `T3-7`, `T3-16`, `T3-17` — Ooni as a companion app (Q19), CoopCloud,
-  Starlink VPN note. Issue #64.
-- `T3-9` — Local-language Wikipedia packs via Kiwix (Q24). Issue #65.
-- `T3-6` — Whisper feasibility note (hardware tiers). Scope waits on Q17.
-  Issue #63.
-- `T3-15`, `T3-18` — SDR, CCTV and local radio use-case research notes.
-  Issue #58.
-- `T3-8` — Sosuite research note, labelled beta (Q13). Issue #59.
+None. Every remaining item waits on a decision in `gg2026-decisions.html`
+or on human QA of a parked PR.
 
 ## Blocked (see `gg2026-decisions.html`)
 
@@ -129,10 +105,36 @@ Service catalog (start with the schema):
 (Q09 partner), `T1-10` (Q10), `T1-12` (Q08), `T1-14` (Q06), `T1-15` (Q30),
 `T2-2` (Q31), `T3-3`, `T3-5`, `T3-11`, `T3-19`, `T3-20`, `T3-22` (Q15 tool
 names; `T3-5` also Q22), `T3-4` (Q18), `T3-10` (Q23), `T3-21` (Q33),
-`M6` (Q32). `M4` is Phase 2 (#26).
+`T3-1` transport detail and catalog entry (Q20, #57
+taxonomy), `#57` taxonomy and PDF sections. `M4` is Phase 2 (#26).
 
 ## Done
 
+- `O2` — Download Images menu item now opens a guide (images vs scripts,
+  hardware fit, writing, checksums, official download links), live 2026-10-31
+  (PR #72, `70c2f18`). Gate SHIP after router-step fixes; junior browser QA
+  passed en/pt/es (Q36). #25 closed; doc note under Other aspects 2.
+  Follow-up: #81 (older LibreMesh install guide).
+- `O1` — router and networks-directory names unified on docs home and menu,
+  broken image placeholders removed from all guides, live 2026-10-31 (PR #70,
+  `f08d309`). Browser QA by junior passed en/pt/es (Q35). #16 #66 closed; doc
+  note added under Other aspects 1.
+- `T2-9` — access-devices question plus technical-support question
+  (owner-approved), tips only, live 2026-10-31 (PR #77, `c8223f7`), remote QA
+  passed (Q42). Single-choice answers now show a check mark and
+  `aria-pressed`. #56 closed; doc row Done.
+- `T2-1`, `T2-3`, `T2-4`, `T2-5`, `T2-7`, `T2-8` — guiding-question help
+  texts, wording and points contrast live 2026-10-31 (PR #68, `58d56e8`),
+  mobile QA passed (Q34). Services title padding fixed. #53 #54 #55 #15
+  closed; #22 stays open for categories (#57 taxonomy). Doc rows Done,
+  item 8 Partial.
+- CI: weekly Monday redeploy from the data-fetch workflow (PR #80), so the
+  directory retrieval date and other fetched data stay fresh on the site.
+- `M6` / #27 — Community Networks Map live 2026-10-31 at `/docs/directory`
+  (PR #79, `070ff3e`): CCCI directory merged with our list (443 networks),
+  zoomable world map with country filter, daily guarded refresh. Mobile QA
+  passed; all 9 review threads resolved. #27 closed. Colnodo / APC
+  authorized republishing the CCCI export 2026-10-31 (Q43 resolved).
 - `T1-4` / `M2` / `M5` — 404s verified gone live 2026-10-30 (33 menu
   pages en/pt, deep links, directory JSON). Regression test PR #69
   (`b53b06a`), #52 closed. Doc row set Done.
@@ -141,7 +143,17 @@ names; `T3-5` also Q22), `T3-4` (Q18), `T3-10` (Q23), `T3-21` (Q33),
 - `M1` — Menu opens on the landing page (verified live 2026-10-30).
 - `#57` (schema part) — Optional catalog `links`/`requirements`, PR #67
   (`25eb22b`). Taxonomy and PDF sections still open on #57.
+- `M3` — Research paper gaps filled, PR #71 (`1175959`), #30 closed. The
+  downloadable PDF updates on the next release (Q37). No doc table row.
+- `T3-7`, `T3-13`, `T3-14`, `T3-16`, `T3-17` — Guides (OONI, 2FA, local
+  games, Co-op Cloud, Starlink VPN), PR #73, #64 closed. Doc rows Done.
 
+- `T3-6`, `T3-8`, `T3-9`, `T3-15`, `T3-18` — Whisper feasibility, Sosuite
+  beta note, Kiwix language packs, radio/SDR/CCTV practices, PR #75
+  (`86fe31d`). #63 closed; #65 stays open for the chatbot item. Doc rows
+  Done.
+- `T3-1` (guide part) — Local messaging with Delta Chat, PR #78
+  (`3e9ae85`). Doc row set Partial; transport waits on Q20.
 - `T1-13` — Whole app and docs translated to pt/es. Commits `0282037`,
   `0c71969`. Google Doc already marked Done.
 - `T1-11` — PDF export fixed (renderer and paging). Commits `0282037`,

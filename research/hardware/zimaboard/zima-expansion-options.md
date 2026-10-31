@@ -45,9 +45,6 @@ ZimaBoard includes two SATA 6.0 Gb/s ports supporting both 2.5" and 3.5" drives:
 - **JBOD**: Individual drives for maximum capacity
 - **ZFS**: Software-defined storage with advanced features
 
-*[Image: SATA Y-Cable Installation - showing connection to ZimaBoard's power interface]*
-*[Note: Image not available - see official ZimaBoard documentation for installation photos]*
-
 #### Advanced SATA Expansion via PCIe
 
 **PCIe SATA Controllers:**
@@ -84,9 +81,6 @@ Multiple PCIe SATA expansion cards are available for ZimaBoard:
 - Add multiple NVMe SSDs via single PCIe slot
 - Useful for caching and tiered storage
 - Some cards include additional features (network ports, etc.)
-
-*[Image: PCIe Storage Expansion - showing M.2 cards installed in PCIe slot]*
-*[Note: Image not available - installation photos can be found in official ZimaBoard community forums]*
 
 ## PCIe Expansion Capabilities
 
@@ -137,9 +131,6 @@ Multiple PCIe SATA expansion cards are available for ZimaBoard:
 - Consider power requirements and thermal management
 - Test performance under expected workloads
 
-*[Image: Network Expansion - showing PCIe network cards installed]*
-*[Note: Image not available - refer to hardware compatibility lists for supported cards]*
-
 ### USB Expansion
 
 #### PCIe USB Controllers
@@ -182,9 +173,6 @@ Multiple PCIe SATA expansion cards are available for ZimaBoard:
 - Custom 3D-printed brackets and stands
 - Standard PC drive cages modified for ZimaBoard
 - NAS-style stacking solutions
-
-*[Image: Drive Mounting Solutions - showing various mounting options]*
-*[Note: Image not available - 3D printing designs available on Thingiverse]*
 
 ### Cooling and Thermal Management
 

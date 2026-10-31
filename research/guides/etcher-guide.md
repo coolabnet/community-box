@@ -80,8 +80,6 @@ Before flashing, ensure your OS image is ready:
 
 When you open Etcher, you'll see a clean, three-step interface:
 
-`[Etcher Main Screen](etcher-main-screen.png)`
-
 The interface consists of three main sections:
 1. **Flash from file** - Select your OS image
 2. **Select target** - Choose your SD card or USB drive  
@@ -95,8 +93,6 @@ The interface consists of three main sections:
 2. Navigate to your downloaded OS image file
 3. Select the image file (.iso, .img, etc.)
 4. Etcher will display the selected file name and size
-
-`[Selecting Image and Target](etcher-select-image.png)`
 
 #### Step 3.2: Select Target Drive
 

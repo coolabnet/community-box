@@ -1,7 +1,7 @@
 ---
 title: Solución de problemas del router
 sourcePath: guides/router-troubleshooting.md
-sourceHash: cce5d4c4d3a82707
+sourceHash: 1051e6af1d28ccd4
 translatedBy: glm-4.6
 ---
 
@@ -26,8 +26,6 @@ Esta guía proporciona procedimientos sistemáticos de solución de problemas pa
 ## Procedimientos de Reinicio por Hardware
 
 ### Método Universal del Botón de Reinicio
-
-*`[Reset Button Location](router-reset-button.png)` — Fotografía destacada de un botón de reinicio por hardware típico en un router, mostrando la ubicación del botón y los indicadores circundantes.*
 
 **Procedimiento Básico de Reinicio**:
 1. **Localiza el botón de reinicio**: Generalmente es un orificio hundido etiquetado "RESET"
@@ -183,8 +181,6 @@ Indicador: un LED de encendido ámbar indica que el modo TFTP está activo
 
 ### Configuración del Hardware de la Consola Serie
 
-*`[Serial Console Hookup](router-serial-console.png)` — Fotografía o diagrama de la conexión de cables serie para una recuperación avanzada, mostrando los puntos de conexión y el enrutamiento de los cables.*
-
 **Equipo Necesario**:
 - **Adaptador USB a TTL**: Niveles lógicos de 3.3V (NO RS232)
 - **Cables jumper**: Hembra a macho o conectores apropiados
@@ -254,8 +250,6 @@ reset
 ## Procedimientos de Restauración de Firmware
 
 ### Restaurar el Firmware Original
-
-*`[Restoring Firmware Process](restoring-firmware.png)` — Serie o diagrama que muestra los pasos para recuperarse de una instalación fallida, incluyendo las conexiones de cables y capturas de la interfaz.*
 
 **Cuándo Restaurar el Firmware Original**:
 - La instalación de LibreMesh falló

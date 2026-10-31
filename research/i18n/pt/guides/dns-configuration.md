@@ -1,7 +1,7 @@
 ---
 title: Configuração de DNS
 sourcePath: guides/dns-configuration.md
-sourceHash: 21ab7f5dec9d1b26
+sourceHash: ed32e7ec02534683
 translatedBy: glm-4.6
 ---
 
@@ -19,8 +19,6 @@ O Sistema de Nomes de Domínio (DNS) é um componente crítico de qualquer rede,
 - **Restrições de Recursos**: Hardware limitado exige soluções de DNS eficientes
 
 O LibreMesh usa o dnsmasq como seu serviço DNS principal, fornecendo uma solução leve e poderosa para redes mesh[36][37].
-
-`[Network Diagram with Local DNS](local-dns-diagram.png) — Schematic showing flow of local DNS queries.]`
 
 ## Arquitetura DNS no LibreMesh
 
@@ -61,8 +59,6 @@ Os principais arquivos de configuração para DNS no LibreMesh são[37][38]:
 - **/etc/config/lime**: Configuração principal do LibreMesh que afeta o comportamento do DNS
 - **/etc/hosts**: Definições locais de nomes de host
 - **/etc/dnsmasq.d/**: Fragmentos adicionais de configuração
-
-`[LibreMesh DNS Config Screenshot](libremesh-dns-config.png) — Web UI or config file with DNS settings highlighted.]`
 
 ## Configurando Resolução DNS Local
 

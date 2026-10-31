@@ -197,7 +197,7 @@ const LandingPage = () => {
                       ),
                       directory: (
                         <Link
-                          to="/docs/results/global-community-networks-directory"
+                          to="/docs/directory"
                           className="text-primary underline underline-offset-4 rounded-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
                         />
                       ),

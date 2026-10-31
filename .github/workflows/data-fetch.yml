@@ -2,12 +2,15 @@ name: Fetch Latest Data
 
 on:
   schedule:
-    # Run daily at 6 AM UTC to keep data fresh
-    - cron: '0 6 * * *'
+    # Run daily at 6 AM UTC to keep data fresh. Monday has its own entry so the
+    # weekly redeploy keys on the schedule, not on the day a delayed run starts.
+    - cron: '0 6 * * 1'
+    - cron: '0 6 * * 0,2-6'
   workflow_dispatch:  # Allow manual triggering
 
 permissions:
   contents: write
+  actions: write  # Needed to dispatch deploy-page.yml (GITHUB_TOKEN pushes do not trigger it)
 
 jobs:
   fetch-data:
@@ -38,16 +41,28 @@ jobs:
         working-directory: ./scripts/fetch-data
 
       - name: Commit and push changes
+        id: commit
         run: |
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
           git add research/fetched-data/
+          # Writes ccci_changed to $GITHUB_OUTPUT: parsed JSON vs HEAD, ignoring timestamp/retrievedAt.
+          node scripts/fetch-data/ccci-changed.js
           if git diff --staged --quiet; then
             echo "No data changes to commit"
           else
             git commit -m "chore: update fetched data [skip ci]"
             git push
           fi
+
+      - name: Deploy page after CCCI directory refresh or weekly
+        # Pushes made with GITHUB_TOKEN do not trigger deploy-page.yml, so dispatch it explicitly.
+        # The Monday schedule redeploys even without a CCCI change, so the retrieval date
+        # and other fetched data on the site are normally refreshed weekly.
+        if: steps.commit.outputs.ccci_changed == 'true' || github.event.schedule == '0 6 * * 1'
+        run: gh workflow run deploy-page.yml --ref main
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Create summary comment (on manual trigger)
         if: github.event_name == 'workflow_dispatch'

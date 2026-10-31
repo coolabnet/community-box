@@ -20,8 +20,6 @@ Disk partitioning divides a storage device into separate, independent sections c
 
 ## Recommended Partition Layout for Community Servers
 
-`[Partition Layout Example](partition-layout.png)`
-
 ### Standard Partition Scheme
 
 For most community server deployments, consider this layout:
@@ -69,8 +67,6 @@ sudo yum install gparted  # CentOS/RHEL
    ```
 2. Enter your admin password when prompted
 3. GParted will scan all available storage devices
-
-`[GParted In Use](gparted-screenshot.png)`
 
 #### Step 2: Select Target Drive
 

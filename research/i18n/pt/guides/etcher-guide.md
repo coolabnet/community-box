@@ -1,7 +1,7 @@
 ---
 title: Etcher
 sourcePath: guides/etcher-guide.md
-sourceHash: 8fd947e2e77f8345
+sourceHash: 00e99adb07d1374c
 translatedBy: glm-4.6
 ---
 
@@ -83,8 +83,6 @@ Antes de gravar, certifique-se de que sua imagem do sistema operacional está pr
 
 Quando você abrir o Etcher, verá uma interface limpa, de três etapas:
 
-`[Etcher Main Screen](etcher-main-screen.png)`
-
 A interface consiste em três seções principais:
 1. **Flash from file** - Selecione sua imagem do sistema operacional
 2. **Select target** - Escolha seu cartão SD ou unidade USB  
@@ -98,8 +96,6 @@ A interface consiste em três seções principais:
 2. Navegue até o arquivo de imagem do sistema operacional baixado
 3. Selecione o arquivo de imagem (.iso, .img, etc.)
 4. O Etcher exibirá o nome e o tamanho do arquivo selecionado
-
-`[Selecting Image and Target](etcher-select-image.png)`
 
 #### Etapa 3.2: Selecione a Unidade de Destino
 
