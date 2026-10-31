@@ -116,6 +116,8 @@ taxonomy), `#57` taxonomy and PDF sections. `M4` is Phase 2 (#26).
 
 ## Done
 
+- CI: weekly Monday redeploy from the data-fetch workflow (PR #80), so the
+  directory retrieval date and other fetched data stay fresh on the site.
 - `M6` / #27 — Community Networks Map live 2026-10-31 at `/docs/directory`
   (PR #79, `070ff3e`): CCCI directory merged with our list (443 networks),
   zoomable world map with country filter, daily guarded refresh. Mobile QA
