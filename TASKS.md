@@ -93,31 +93,17 @@ Use this when working several TODO items at once.
   parked `needs-human-qa` (Q34).
 - `O1` — PR #70, gate SHIP, parked `needs-human-qa` (Q35).
 - `O2` — PR #72, gate SHIP, parked `needs-human-qa` (Q36).
-- `T3-6`, `T3-8`, `T3-9`, `T3-15`, `T3-18` — research notes, in progress.
-- `T3-2`, `T3-12`, `T3-23` — OS/platform catalog entries, in progress.
-- `T1-3` — landing explainer, in progress.
+- `T1-3` — landing explainer, PR #74, gate SHIP, parked `needs-human-qa`
+  (Q38).
+- `T3-2`, `T3-12` — ButterBox and Proxmox VE OS entries, PR #76, gate SHIP,
+  parked `needs-human-qa` (Q41). `T3-23` BlankOn waits on Q39.
+- `T2-9` — access-devices question, PR #77 (stacked on #68), gate SHIP,
+  parked `needs-human-qa` (Q42).
 
 ## TODO (doable now)
 
-Content and questionnaire:
-
-- `T1-3` — Briefing/FAQ on the landing page: draft short explainer with
-  expandable detail (decision Q02). Hero text waits on Q29. Issues #14,
-  #19.
-- `T2-9` — New access-devices question, suggestions only (Q25). Include
-  shared devices: telecentre, cybercafe. Issue #56.
-
-Service catalog (start with the schema):
-
-- `T3-1` — DeltaChat and local messaging. The transport detail waits on
-  Q20. Issue #58.
-- `T3-2`, `T3-12`, `T3-23` — ButterBox, Proxmox, BlankOn. Issue #59.
-- `T3-9` — Local-language Wikipedia packs via Kiwix (Q24). Issue #65.
-- `T3-6` — Whisper feasibility note (hardware tiers). Scope waits on Q17.
-  Issue #63.
-- `T3-15`, `T3-18` — SDR, CCTV and local radio use-case research notes.
-  Issue #58.
-- `T3-8` — Sosuite research note, labelled beta (Q13). Issue #59.
+None. Every remaining item waits on a decision in `gg2026-decisions.html`
+or on human QA of a parked PR.
 
 ## Blocked (see `gg2026-decisions.html`)
 
@@ -125,7 +111,8 @@ Service catalog (start with the schema):
 (Q09 partner), `T1-10` (Q10), `T1-12` (Q08), `T1-14` (Q06), `T1-15` (Q30),
 `T2-2` (Q31), `T3-3`, `T3-5`, `T3-11`, `T3-19`, `T3-20`, `T3-22` (Q15 tool
 names; `T3-5` also Q22), `T3-4` (Q18), `T3-10` (Q23), `T3-21` (Q33),
-`M6` (Q32). `M4` is Phase 2 (#26).
+`M6` (Q32), `T3-1` transport detail and catalog entry (Q20, #57
+taxonomy), `#57` taxonomy and PDF sections. `M4` is Phase 2 (#26).
 
 ## Done
 
@@ -142,6 +129,12 @@ names; `T3-5` also Q22), `T3-4` (Q18), `T3-10` (Q23), `T3-21` (Q33),
 - `T3-7`, `T3-13`, `T3-14`, `T3-16`, `T3-17` — Guides (OONI, 2FA, local
   games, Co-op Cloud, Starlink VPN), PR #73, #64 closed. Doc rows Done.
 
+- `T3-6`, `T3-8`, `T3-9`, `T3-15`, `T3-18` — Whisper feasibility, Sosuite
+  beta note, Kiwix language packs, radio/SDR/CCTV practices, PR #75
+  (`86fe31d`). #63 closed; #65 stays open for the chatbot item. Doc rows
+  Done.
+- `T3-1` (guide part) — Local messaging with Delta Chat, PR #78
+  (`3e9ae85`). Doc row set Partial; transport waits on Q20.
 - `T1-13` — Whole app and docs translated to pt/es. Commits `0282037`,
   `0c71969`. Google Doc already marked Done.
 - `T1-11` — PDF export fixed (renderer and paging). Commits `0282037`,
