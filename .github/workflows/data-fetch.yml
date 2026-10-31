@@ -2,8 +2,10 @@ name: Fetch Latest Data
 
 on:
   schedule:
-    # Run daily at 6 AM UTC to keep data fresh
-    - cron: '0 6 * * *'
+    # Run daily at 6 AM UTC to keep data fresh. Monday has its own entry so the
+    # weekly redeploy keys on the schedule, not on the day a delayed run starts.
+    - cron: '0 6 * * 1'
+    - cron: '0 6 * * 0,2-6'
   workflow_dispatch:  # Allow manual triggering
 
 permissions:
@@ -53,9 +55,11 @@ jobs:
             git push
           fi
 
-      - name: Deploy page after CCCI directory refresh
+      - name: Deploy page after CCCI directory refresh or weekly
         # Pushes made with GITHUB_TOKEN do not trigger deploy-page.yml, so dispatch it explicitly.
-        if: steps.commit.outputs.ccci_changed == 'true'
+        # The Monday schedule redeploys even without a CCCI change, so the retrieval date
+        # and other fetched data on the site are normally refreshed weekly.
+        if: steps.commit.outputs.ccci_changed == 'true' || github.event.schedule == '0 6 * * 1'
         run: gh workflow run deploy-page.yml --ref main
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
