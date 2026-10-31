@@ -27,19 +27,16 @@ Personal cloud storage, home automation, DNS and DHCP, and monitoring dashboards
 
 ## Power draw
 
-The Pi 5 uses 3.3 W at idle and 8.0 W under full load ([models comparison](https://github.com/coolabnet/community-box/blob/main/research/hardware/raspberry_pi_5/rpi-models-comparison.md)). Add 1.5-4 W for an NVMe or USB SSD ([cooling and power](https://github.com/coolabnet/community-box/blob/main/research/hardware/raspberry_pi_5/rpi-cooling-power.md)). The official power supply is 5 V, 5 A USB-C ([models comparison](https://github.com/coolabnet/community-box/blob/main/research/hardware/raspberry_pi_5/rpi-models-comparison.md)).
+The repo's test data gives 3.3 W at idle and 8.0 W under full load ([models comparison](https://github.com/coolabnet/community-box/blob/main/research/hardware/raspberry_pi_5/rpi-models-comparison.md)). Peak draw is higher. Raspberry Pi's launch article says peak power "increases to around 12W" for the most demanding workloads, including power-virus tests ([Raspberry Pi 5 launch](https://www.raspberrypi.com/news/introducing-raspberry-pi-5/), fetched 2026-10-30). Size the supply for about 12 W, not 8 W. Add 1.5-4 W for an NVMe or USB SSD ([cooling and power](https://github.com/coolabnet/community-box/blob/main/research/hardware/raspberry_pi_5/rpi-cooling-power.md)). The official power supply is 5 V, 5 A USB-C ([models comparison](https://github.com/coolabnet/community-box/blob/main/research/hardware/raspberry_pi_5/rpi-models-comparison.md)).
 
 ## Price
 
-Board prices from the 1 December 2025 price change ([Raspberry Pi news](https://www.raspberrypi.com/news/1gb-raspberry-pi-5-now-available-at-45-and-memory-driven-price-rises/)):
+Current list prices, as fetched on 2026-10-30:
 
-- 1 GB: $45
-- 2 GB: $55
-- 4 GB: $70
-- 8 GB: $95
-- 16 GB: $145
+- 2 GB: $77.50, effective 1 October 2026 ([Raspberry Pi news, 1 October 2026](https://www.raspberrypi.com/news/price-increases-for-2gb-raspberry-pi-4-and-raspberry-pi-5/)).
+- 16 GB: $305, per the [product page](https://www.raspberrypi.com/products/raspberry-pi-5/). The page shows no date.
 
-The same announcement blames rising LPDDR4 memory costs. The product page fetched on 2026-10-30 also showed "Raspberry Pi 5 16GB is available now for $305". That figure does not match the announcement and its context is unclear, so check the current store price before buying. The repo's earlier figure of $60-80 for the board is out of date.
+The product page lists 1, 4, and 8 GB without prices. The last dated prices I found for those are from 1 December 2025: 1 GB $45, 4 GB $70, 8 GB $95 ([Raspberry Pi news, 1 December 2025](https://www.raspberrypi.com/news/1gb-raspberry-pi-5-now-available-at-45-and-memory-driven-price-rises/)). That announcement listed 16 GB at $145. The product page's $305 is about twice that. The 1 October 2026 article covers only the 2 GB model. Check the store price before buying the 1, 4, 8, or 16 GB models. The repo's earlier $60-80 board range is out of date.
 
 The repo's two-year total for a Pi 5 4 GB, including power supply, NVMe storage, cooling, case, and electricity, was $240 at the time of the research ([models comparison](https://github.com/coolabnet/community-box/blob/main/research/hardware/raspberry_pi_5/rpi-models-comparison.md)). It predates the December 2025 price change.
 

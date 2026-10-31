@@ -15,10 +15,12 @@ Specs below come from the OpenWrt wiki device page ([OpenWrt wiki](https://openw
 - Ethernet: one 2.5 Gbit WAN port that also accepts PoE, and one 1 Gbit LAN port ([OpenWrt wiki](https://openwrt.org/toh/openwrt/one)).
 - USB: one USB 2.0 Type-A host port. A USB-C port on the front is the serial console ([OpenWrt wiki](https://openwrt.org/toh/openwrt/one)).
 - M.2: a 2242/2230 slot for an NVMe SSD, PCIe gen 2 x1 ([OpenWrt wiki](https://openwrt.org/toh/openwrt/one)).
-- Power: the wiki says PoE (802.3af/at) runs through the 2.5G WAN port, and the SFC page describes PoE or USB-C power with 12 V USB-PD ([OpenWrt wiki](https://openwrt.org/toh/openwrt/one); [SFC](https://sfconservancy.org/activities/openwrt-one.html)). The Banana Pi docs page returned only its title when fetched on 2026-10-30, so I could not confirm whether PoE is an optional module on some configurations. Check the product listing for PoE before you plan on it.
+- Power: the wiki says PoE (802.3af/at) runs through the 2.5G WAN port ([OpenWrt wiki](https://openwrt.org/toh/openwrt/one)). The SFC page describes USB-C power with 12 V USB-PD, or PoE ([SFC](https://sfconservancy.org/activities/openwrt-one.html)).
+- USB-C voltage conflicts. SFC says 12 V USB-PD. A March 2025 OpenWrt mailing-list message says the board should be given 15 V, citing a "PD15V" label on the board, and that "any standards-compliant 15V power supply will provide enough amperage" ([OpenWrt mailing list](https://lists.openwrt.org/pipermail/openwrt-adm/2025-March/002664.html), fetched 2026-10-30). The Banana Pi docs page, which should give the official figure, returned only its title when fetched on 2026-10-30. Use the official adapter that came with your unit or the one the seller names. Do not assume a generic 12 V supply.
+- PoE: the Banana Pi docs page could not be read, so I could not confirm whether PoE is an optional module on some configurations. Check the product listing for PoE before you plan on it.
 - Size: 148 x 100.5 mm ([OpenWrt wiki](https://openwrt.org/toh/openwrt/one)).
 
-The wiki does not give the CPU clock, the power input voltage, or the wattage.
+The wiki does not give the CPU clock, the USB-C voltage, or the wattage. See the Power bullet for the voltage conflict.
 
 ## Why it matters for community networks
 
@@ -45,3 +47,4 @@ It is a router, not a server. With 1 GB RAM and small flash, it is too small for
 - https://sfconservancy.org/ (SFC home page, navigation text, fetched 2026-10-30)
 - https://downloads.openwrt.org/releases/24.10.0/targets/mediatek/filogic/ (OpenWrt 24.10.0 image directory, fetched 2026-10-30)
 - https://docs.banana-pi.org/en/OpenWRT-One/BananaPi_OpenWRT-One (fetched 2026-10-30; returned only the page title, so unused for specs)
+- https://lists.openwrt.org/pipermail/openwrt-adm/2025-March/002664.html (OpenWrt mailing list, March 2025, fetched 2026-10-30; 15 V discussion)
