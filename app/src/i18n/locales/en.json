@@ -449,6 +449,14 @@
     "curatedNote": "Community Box also keeps a curated list of networks from its own research.",
     "loading": "Loading community networks…",
     "error": "Could not load the community networks map. Please try again later.",
+    "stats": {
+      "networks_one": "Network listed",
+      "networks_other": "Networks listed",
+      "countries_one": "Country",
+      "countries_other": "Countries",
+      "active_one": "Active network",
+      "active_other": "Active networks"
+    },
     "map": {
       "label": "World map of community networks",
       "legendTitle": "Networks per country",
@@ -456,7 +464,12 @@
       "tier2": "2–5",
       "tier3": "6–20",
       "tier4": "21+",
-      "smallIslandsNote": "Small islands are marked by their count bubble. Hover or select a country to see its name."
+      "smallIslandsNote": "Small islands are marked by their count bubble. Hover or select a country to see its name.",
+      "zoomIn": "Zoom in",
+      "zoomOut": "Zoom out",
+      "reset": "Show the whole world",
+      "hint": "Scroll or pinch to zoom, drag to move, click a country to see its networks",
+      "bubbleLegend": "Circle = number of networks"
     },
     "networkCount_one": "{{count}} network",
     "networkCount_other": "{{count}} networks",
@@ -469,11 +482,15 @@
       "allStatuses": "All statuses",
       "search": "Search by name",
       "searchPlaceholder": "Type a network name…",
-      "clear": "Clear filters"
+      "clear": "Clear filters",
+      "clearCountry": "Remove the country filter: {{country}}"
     },
     "showMore": "Show more",
     "empty": "No networks match these filters.",
+    "emptyHint": "Try another country, status or name.",
     "website": "Website",
+    "websiteLabel": "Website of {{name}} (opens in a new tab)",
+    "showOnMap": "Show {{country}} on the map",
     "backgroundLink": "Read the background on community networks",
     "sources": {
       "ccci": "CCCI directory",

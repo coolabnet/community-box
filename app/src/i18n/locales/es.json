@@ -449,6 +449,14 @@
     "curatedNote": "Community Box también mantiene una lista curada de redes, a partir de su propia investigación.",
     "loading": "Cargando redes comunitarias…",
     "error": "No se pudo cargar el mapa de redes comunitarias. Inténtalo de nuevo más tarde.",
+    "stats": {
+      "networks_one": "Red registrada",
+      "networks_other": "Redes registradas",
+      "countries_one": "País",
+      "countries_other": "Países",
+      "active_one": "Red activa",
+      "active_other": "Redes activas"
+    },
     "map": {
       "label": "Mapa mundial de redes comunitarias",
       "legendTitle": "Redes por país",
@@ -456,7 +464,12 @@
       "tier2": "2–5",
       "tier3": "6–20",
       "tier4": "21+",
-      "smallIslandsNote": "Las islas pequeñas se marcan con una burbuja con el número de redes. Pasa el cursor o selecciona un país para ver su nombre."
+      "smallIslandsNote": "Las islas pequeñas se marcan con una burbuja con el número de redes. Pasa el cursor o selecciona un país para ver su nombre.",
+      "zoomIn": "Acercar",
+      "zoomOut": "Alejar",
+      "reset": "Mostrar el mundo entero",
+      "hint": "Desplaza o pellizca para hacer zoom, arrastra para moverte, haz clic en un país para ver sus redes",
+      "bubbleLegend": "Círculo = número de redes"
     },
     "networkCount_one": "{{count}} red",
     "networkCount_other": "{{count}} redes",
@@ -469,11 +482,15 @@
       "allStatuses": "Todos los estados",
       "search": "Buscar por nombre",
       "searchPlaceholder": "Escribe el nombre de una red…",
-      "clear": "Limpiar filtros"
+      "clear": "Limpiar filtros",
+      "clearCountry": "Quitar el filtro de país: {{country}}"
     },
     "showMore": "Mostrar más",
     "empty": "Ninguna red coincide con estos filtros.",
+    "emptyHint": "Prueba con otro país, estado o nombre.",
     "website": "Sitio web",
+    "websiteLabel": "Sitio web de {{name}} (se abre en una pestaña nueva)",
+    "showOnMap": "Mostrar {{country}} en el mapa",
     "backgroundLink": "Lee el contexto sobre redes comunitarias",
     "sources": {
       "ccci": "Directorio CCCI",

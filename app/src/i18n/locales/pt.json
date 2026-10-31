@@ -449,6 +449,14 @@
     "curatedNote": "O Community Box também mantém uma lista curada de redes, a partir de sua própria pesquisa.",
     "loading": "Carregando redes comunitárias…",
     "error": "Não foi possível carregar o mapa das redes comunitárias. Tente novamente mais tarde.",
+    "stats": {
+      "networks_one": "Rede listada",
+      "networks_other": "Redes listadas",
+      "countries_one": "País",
+      "countries_other": "Países",
+      "active_one": "Rede ativa",
+      "active_other": "Redes ativas"
+    },
     "map": {
       "label": "Mapa-múndi das redes comunitárias",
       "legendTitle": "Redes por país",
@@ -456,7 +464,12 @@
       "tier2": "2–5",
       "tier3": "6–20",
       "tier4": "21+",
-      "smallIslandsNote": "Ilhas pequenas são marcadas pela bolha com o número de redes. Passe o cursor ou selecione um país para ver o nome."
+      "smallIslandsNote": "Ilhas pequenas são marcadas pela bolha com o número de redes. Passe o cursor ou selecione um país para ver o nome.",
+      "zoomIn": "Aproximar",
+      "zoomOut": "Afastar",
+      "reset": "Mostrar o mundo inteiro",
+      "hint": "Role ou faça pinça para dar zoom, arraste para mover, clique em um país para ver suas redes",
+      "bubbleLegend": "Círculo = número de redes"
     },
     "networkCount_one": "{{count}} rede",
     "networkCount_other": "{{count}} redes",
@@ -469,11 +482,15 @@
       "allStatuses": "Todas as situações",
       "search": "Buscar por nome",
       "searchPlaceholder": "Digite o nome de uma rede…",
-      "clear": "Limpar filtros"
+      "clear": "Limpar filtros",
+      "clearCountry": "Remover o filtro de país: {{country}}"
     },
     "showMore": "Mostrar mais",
     "empty": "Nenhuma rede corresponde a esses filtros.",
+    "emptyHint": "Tente outro país, status ou nome.",
     "website": "Site",
+    "websiteLabel": "Site de {{name}} (abre em uma nova aba)",
+    "showOnMap": "Mostrar {{country}} no mapa",
     "backgroundLink": "Leia o contexto sobre redes comunitárias",
     "sources": {
       "ccci": "Diretório CCCI",
