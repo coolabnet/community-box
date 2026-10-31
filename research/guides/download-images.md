@@ -22,22 +22,24 @@ Some projects do not provide an image at all. Instead they provide an **install 
 | Your hardware | What to use |
 |---|---|
 | x86 PC, Intel NUC, ZimaBoard, reused desktop or laptop | An x86 (amd64) ISO or install script |
-| Raspberry Pi 3, 4, or 5 | The 64-bit (arm64) Raspberry Pi OS image |
-| Original Raspberry Pi, Raspberry Pi 2, or Raspberry Pi Zero | The 32-bit (armhf) Raspberry Pi OS image; the official page lists these models for 32-bit |
-| Raspberry Pi Zero 2 W | Not named on the official page; check the model page before choosing (64-bit is expected for this processor) |
-| Router running LibreMesh | A firmware image for your exact router model, chosen in the LibreMesh firmware selector |
+| Raspberry Pi 3, 4, or 5 | 64-bit (arm64) Raspberry Pi OS image |
+| Original Raspberry Pi, Pi 2, or Pi Zero | 32-bit (armhf) Raspberry Pi OS image (2) |
+| Raspberry Pi Zero 2 W | Check the model page first (2) |
+| Router running LibreMesh | Router firmware for your exact model (6) |
 
 If you are not sure of your processor type, check the hardware guide for your device before you download anything. A file built for the wrong architecture will not start.
 
 ## How to write an image
 
-Use Balena Etcher or another image writer. Follow the step-by-step instructions in [etcher-guide.md](etcher-guide.md).
+Use Balena Etcher for computers, SD cards, and USB drives. Follow the step-by-step instructions in [etcher-guide.md](etcher-guide.md).
 
-Writing erases everything on the target drive. Check the drive letter or size before you start.
+Router firmware is not written this way. A LibreMesh router image is installed through the router's own web interface or recovery mode, in one of two ways: a factory image for the first install on stock firmware, or a sysupgrade image when the router already runs OpenWrt. Follow [libremesh-installation.md](libremesh-installation.md) and the [LibreMesh getting started page](https://libremesh.org/getting-started.html).
+
+Writing a disk erases everything on the target drive. Check the drive letter or size before you start.
 
 ## How to check a checksum
 
-A checksum is a fingerprint of a file. Most official download pages publish the expected fingerprint next to the file; the table below notes the exceptions. If your file produces a different fingerprint, the download is incomplete or altered. Download it again.
+A checksum is a fingerprint of a file. Most official download pages publish the expected fingerprint next to the file; the table below notes the exceptions.
 
 Compute the SHA-256 fingerprint of the file:
 
@@ -45,24 +47,35 @@ Compute the SHA-256 fingerprint of the file:
 - **macOS:** `shasum -a 256 file.iso`
 - **Windows (Command Prompt or PowerShell):** `certutil -hashfile file.iso SHA256`
 
-Compare the long hexadecimal string with the value published by the project. Both must match exactly.
+Compare the long hexadecimal string with the value published by the project. Both must match exactly. If it does not, the download is incomplete or altered; download it again.
 
 ## Official downloads
 
-Each row links to the project's own download page. A row with no checksum means the project publishes no fingerprint on the page it links to. For an install script or container there is no file to check, so review the script before you run it. For an image, look for a checksum in the project's documentation before you write it.
+Each row links to the project's own download page. A row with no checksum means the project publishes no fingerprint on the page it links to. The notes below the table explain the exceptions.
 
-| Platform | What you get | Architectures | Official download | Checksums |
+| Platform | Type | Architectures | Download | Checksums |
 |---|---|---|---|---|
-| Debian | Installer ISO (netinst) | amd64, arm64 | [debian.org/distrib/netinst](https://www.debian.org/distrib/netinst) | [amd64 SHA256SUMS](https://cdimage.debian.org/debian-cd/current/amd64/iso-cd/SHA256SUMS), [arm64 SHA256SUMS](https://cdimage.debian.org/debian-cd/current/arm64/iso-cd/SHA256SUMS) |
-| Ubuntu Server | Live server ISO (LTS release; installs from the live system) | amd64, arm64 | [ubuntu.com/download/server](https://ubuntu.com/download/server) | amd64: SHA256SUMS in each release folder at [releases.ubuntu.com](https://releases.ubuntu.com/). arm64: [cdimage.ubuntu.com 26.04 SHA256SUMS](https://cdimage.ubuntu.com/ubuntu/releases/26.04/release/SHA256SUMS) |
-| Raspberry Pi OS | Image (`.img.xz`) for Raspberry Pi; live Desktop ISO for PC | arm64 (64-bit) and armhf (32-bit) for Pi; amd64 for the Desktop ISO | [raspberrypi.com/software/operating-systems](https://www.raspberrypi.com/software/operating-systems/) | Shown on the download page under each image, in the SHA256 file integrity hash section |
-| YunoHost | Install script on a fresh Debian 12 (Bookworm) system; the image download is marked broken in the upstream docs | Follows the Debian 12 base (x86 and ARM) | Base: [Debian 12 archive](https://cdimage.debian.org/cdimage/archive/) and [YunoHost on top of Debian](https://doc.yunohost.org/admin/get_started/install_on/on_top_of_debian); script: [install.yunohost.org](https://install.yunohost.org) | No checksum published for the script. Image signing key: [yunohost_bookworm.asc](https://forge.yunohost.org/keys/yunohost_bookworm.asc) |
-| CasaOS | Install script on Ubuntu, Debian, Raspberry Pi OS, or CentOS: `curl -fsSL https://get.casaos.io \| sudo bash` | amd64, armv7, arm64 | [casaos.zimaspace.com](https://casaos.zimaspace.com/); script at [get.casaos.io](https://get.casaos.io) | No checksum published (install script) |
-| CapRover | Docker container, run on a host with Docker installed | amd64, arm64, arm/v7 (listed for the latest tag on Docker Hub) | [caprover.com/docs/get-started](https://caprover.com/docs/get-started.html); tags: [Docker Hub](https://hub.docker.com/r/caprover/caprover/tags) | No checksum published (container image) |
-| balenaOS | Host OS image for supported devices; written with balenaEtcher | Depends on device (about 20 device types on the page) | [balena.io/os](https://www.balena.io/os) (choose your device in the Download section); writer: [etcher.balena.io](https://etcher.balena.io/) | No checksum shown on the balena.io page; check the balena documentation for a published checksum before you write the image |
-| OpenMediaVault | ISO installer for a Debian-based NAS | amd64 only | [openmediavault.org/download](https://www.openmediavault.org/download.html) | SHA256 printed under each ISO on the download page |
-| TrueNAS | Community Edition ISO (SCALE); the download asks for a newsletter sign-up | x86_64 | [truenas.com/download-truenas-scale](https://www.truenas.com/download-truenas-scale/) | SHA256 value, `.sha256` and `.gpg` files next to each ISO |
-| LibreMesh | Custom firmware image built by the selector for your router model; the selector requests the build from an ASU (online ImageBuilder) instance | Depends on router model | Selector: [firmware-selector.libremesh.org](https://firmware-selector.libremesh.org/); build details: [libremesh.org/build](https://libremesh.org/build/) | Use the checksum for the exact image the selector produced. We did not confirm where the selector publishes it, so do not substitute stock OpenWrt sums, which cover different images |
+| Debian 13 | Installer ISO | amd64, arm64 | [debian.org](https://www.debian.org/distrib/netinst) | [amd64](https://cdimage.debian.org/debian-cd/current/amd64/iso-cd/SHA256SUMS), [arm64](https://cdimage.debian.org/debian-cd/current/arm64/iso-cd/SHA256SUMS) |
+| Debian 12 (for YunoHost) | Installer ISO | amd64, arm64 | [Debian 12 archive](https://cdimage.debian.org/cdimage/archive/12.15.0/amd64/iso-cd/) (3) | [amd64](https://cdimage.debian.org/cdimage/archive/12.15.0/amd64/iso-cd/SHA256SUMS), [arm64](https://cdimage.debian.org/cdimage/archive/12.15.0/arm64/iso-cd/SHA256SUMS) |
+| Ubuntu Server | Live server ISO | amd64, arm64 | [ubuntu.com](https://ubuntu.com/download/server) | amd64 [releases](https://releases.ubuntu.com/26.04/SHA256SUMS), arm64 [cdimage](https://cdimage.ubuntu.com/ubuntu/releases/26.04/release/SHA256SUMS) |
+| Raspberry Pi OS | Image or live ISO | arm64, armhf; amd64 for Desktop | [raspberrypi.com](https://www.raspberrypi.com/software/operating-systems/) | On download page (2) |
+| YunoHost | Install script on Debian 12 | Follows Debian 12 (x86, ARM) | [install.yunohost.org](https://install.yunohost.org) (1) | None for script (4) |
+| CasaOS | Install script | amd64, armv7, arm64 | [casaos.zimaspace.com](https://casaos.zimaspace.com/) | None for script (4) |
+| CapRover | Docker container | amd64, arm64, arm/v7 | [caprover.com](https://caprover.com/docs/get-started.html) | None for container (4) |
+| balenaOS | Device image | Per device (about 20 types) | [balena.io/os](https://www.balena.io/os) | Not shown on page (5) |
+| OpenMediaVault | Installer ISO | amd64 | [openmediavault.org](https://www.openmediavault.org/download.html) | On download page |
+| TrueNAS | Installer ISO | x86_64 | [truenas.com](https://www.truenas.com/download-truenas-scale/) (7) | On download page |
+| LibreMesh | Custom router image | Per router model | [firmware selector](https://firmware-selector.libremesh.org/) | Only if the build shows one (6) |
+
+### Notes
+
+1. YunoHost needs Debian 12 (Bookworm) as its base, not Debian 13. The [YunoHost on top of Debian guide](https://doc.yunohost.org/admin/get_started/install_on/on_top_of_debian) says to download Bookworm (Debian 12). The image download is marked broken in the upstream docs, so use the install script.
+2. Raspberry Pi: 64-bit for Pi 3, 4, and 5; 32-bit for the original Pi, Pi 2, and Pi Zero. The official page does not name Zero 2 W, so check the model page. The Desktop ISO is a live image that runs from a USB stick without installing.
+3. Debian archive: the SHA256SUMS file sits beside each ISO in its own directory. Check the matching line with the commands above. The 12.15.0 directory is the last Debian 12 point release listed in the archive; use the newest 12.x directory if it changes. Debian also documents this at [Debian CD verification](https://www.debian.org/CD/verify.html).
+4. An install script or container has no file to check. Review the script before you run it.
+5. The balena.io page shows no checksum. Check the balena documentation for a published checksum before you write the image.
+6. The selector builds a custom image for your router. When the build provides a checksum, the selector shows it as sha256sum beside the image. The selector source shows this behavior; we did not confirm it on a live build. If no checksum is shown, keep the file the selector gives you. Do not substitute stock OpenWrt checksums; they cover different images.
+7. The TrueNAS download asks for a newsletter sign-up. Its SHA256 value, `.sha256`, and `.gpg` files are next to each ISO.
 
 ## Sources
 
@@ -71,30 +84,29 @@ Fetched 2026-10-30.
 - https://www.debian.org/distrib/netinst
 - https://cdimage.debian.org/debian-cd/current/amd64/iso-cd/SHA256SUMS
 - https://cdimage.debian.org/debian-cd/current/arm64/iso-cd/SHA256SUMS
+- https://cdimage.debian.org/cdimage/archive/
+- https://cdimage.debian.org/cdimage/archive/12.15.0/amd64/iso-cd/
+- https://cdimage.debian.org/cdimage/archive/12.15.0/amd64/iso-cd/SHA256SUMS
+- https://cdimage.debian.org/cdimage/archive/12.15.0/arm64/iso-cd/SHA256SUMS
+- https://www.debian.org/CD/verify.html
 - https://ubuntu.com/download/server
-- https://releases.ubuntu.com/
+- https://releases.ubuntu.com/26.04/SHA256SUMS
+- https://cdimage.ubuntu.com/ubuntu/releases/26.04/release/SHA256SUMS
 - https://www.raspberrypi.com/software/operating-systems/
-- https://doc.yunohost.org/admin/get_started/install_on
-- https://doc.yunohost.org/admin/get_started/install_on/regular_computer
-- https://doc.yunohost.org/admin/get_started/install_on/raspberry_pi
+- https://www.raspberrypi.com/documentation/computers/os.html
+- https://www.raspberrypi.com/news/raspberry-pi-desktop-now-available-for-pc-and-mac/
+- https://doc.yunohost.org/admin/get_started/install_on/on_top_of_debian
 - https://install.yunohost.org
-- https://forge.yunohost.org/keys/yunohost_bookworm.asc
 - https://casaos.zimaspace.com/
-- https://get.casaos.io
 - https://caprover.com/docs/get-started.html
+- https://hub.docker.com/r/caprover/caprover/tags
+- https://hub.docker.com/v2/repositories/caprover/caprover/tags/latest
 - https://www.balena.io/os
 - https://etcher.balena.io/
 - https://www.openmediavault.org/download.html
 - https://www.truenas.com/download-truenas-scale/
 - https://firmware-selector.libremesh.org/
-- https://downloads.openwrt.org/
-- https://downloads.openwrt.org/releases/25.12.6/targets/x86/64/sha256sums
-- https://doc.yunohost.org/admin/get_started/install_on/on_top_of_debian
-- https://cdimage.debian.org/cdimage/archive/
 - https://libremesh.org/build/
-- https://www.raspberrypi.com/documentation/computers/os.html
-- https://www.raspberrypi.com/news/raspberry-pi-desktop-now-available-for-pc-and-mac/
-- https://cdimage.ubuntu.com/ubuntu/releases/26.04/release/SHA256SUMS
-- https://releases.ubuntu.com/26.04/SHA256SUMS
-- https://hub.docker.com/r/caprover/caprover/tags
-- https://hub.docker.com/v2/repositories/caprover/caprover/tags/latest
+- https://libremesh.org/getting-started.html
+- https://raw.githubusercontent.com/libremesh/firmware-selector-openwrt-org/main/www/js/images.js
+- https://downloads.openwrt.org/
