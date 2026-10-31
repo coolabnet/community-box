@@ -89,8 +89,6 @@ Use this when working several TODO items at once.
 
 ## In review (PRs)
 
-- `T1-3` — landing explainer, PR #74, gate SHIP, parked `needs-human-qa`
-  (Q38).
 - `T3-2`, `T3-12` — ButterBox and Proxmox VE OS entries, PR #76, gate SHIP,
   parked `needs-human-qa` (Q41). `T3-23` BlankOn waits on Q39.
 
@@ -110,6 +108,10 @@ taxonomy), `#57` taxonomy and PDF sections. `M4` is Phase 2 (#26).
 
 ## Done
 
+- `T1-3` — landing page "About this tool" section with 4 expandable FAQ
+  items (en/pt/es), live 2026-10-31 (PR #74, `7f66749`). Gate SHIP; junior
+  browser QA passed en/pt/es (Q38). Help link points to the networks map.
+  #14 #19 closed; doc row Done. Personas and resource costs not covered.
 - `O2` — Download Images menu item now opens a guide (images vs scripts,
   hardware fit, writing, checksums, official download links), live 2026-10-31
   (PR #72, `70c2f18`). Gate SHIP after router-step fixes; junior browser QA
