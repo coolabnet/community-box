@@ -10,6 +10,7 @@ import {
   DropdownMenuTrigger,
 } from '@/components/ui/dropdown-menu';
 import { tArray } from '@/lib/i18n-helpers';
+import { CatalogMeta } from './CatalogMeta';
 import { cn } from '@/lib/utils';
 import {
   Cpu,
@@ -603,6 +604,7 @@ const RecommendationResults = ({
                               <div className="flex-1 min-w-0">
                                 <h4 className="font-medium text-sm">{t(`questionnaire.questions.results.services.items.${service.key}.name`)}</h4>
                                 <p className="text-xs text-muted-foreground">{t(`questionnaire.questions.results.services.items.${service.key}.description`)}</p>
+                                <CatalogMeta links={service.links} requirements={service.requirements} />
                               </div>
                               <a
                                 href={`https://duckduckgo.com/?q=${encodeURIComponent(t(`questionnaire.questions.results.services.items.${service.key}.name`) + ' self-hosted')}`}
@@ -664,6 +666,7 @@ const RecommendationResults = ({
                                   </span>
                                 </div>
                                 <p className="text-xs text-muted-foreground">{t(`questionnaire.questions.results.operatingSystems.items.${os.key}.description`)}</p>
+                                <CatalogMeta links={os.links} requirements={os.requirements} />
                               </div>
                               <a
                                 href={`https://duckduckgo.com/?q=${encodeURIComponent(t(`questionnaire.questions.results.operatingSystems.items.${os.key}.name`) + ' download')}`}

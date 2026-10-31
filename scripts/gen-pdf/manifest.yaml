@@ -33,6 +33,10 @@ structure:
         file: "hardware/raspberry_pi_5/README.md"
       - title: "3.3 ZimaBoard"
         file: "hardware/zimaboard/README.md"
+      - title: "3.4 Reused / Recycled PCs"
+        file: "hardware/recycled_pc/README.md"
+      - title: "3.5 OpenWrt One"
+        file: "hardware/openwrt_one/README.md"
 
   - title: "4. Software Platform Analysis"
     sections:
@@ -47,11 +51,13 @@ structure:
 
   - title: "5. Community AI Considerations"
     sections:
-      - title: "5.1 Accessibility Benefits"
+      - title: "5.1 What we mean by AI"
+        file: "presentation/ai-introduction.md"
+      - title: "5.2 Accessibility Benefits"
         file: "presentation/ai-accessibility-benefits.md"
-      - title: "5.2 Use Cases"
+      - title: "5.3 Use Cases"
         file: "presentation/ai-use-cases.md"
-      - title: "5.3 Concerns"
+      - title: "5.4 Concerns"
         file: "presentation/ai-concerns.md"
 
   - title: "6. Conclusion: Community Box"
