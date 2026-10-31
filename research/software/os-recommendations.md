@@ -30,7 +30,7 @@ The recommendation tool suggests up to 4 operating systems. It uses three answer
 
 - **Business, Intel NUC or reused PC, can format:** Proxmox VE, Ubuntu Server, Debian, TrueNAS. OpenMediaVault drops out because of the limit of 4.
 - **Business, Intel NUC or reused PC, not sure about formatting:** Ubuntu Server, Debian, TrueNAS, OpenMediaVault.
-- **Business, cannot format:** Ubuntu Server, OpenMediaVault.
+- **Business, Intel NUC or reused PC, cannot format:** Ubuntu Server, OpenMediaVault.
 - **Education, Raspberry Pi:** Raspberry Pi OS, OpenMediaVault, ButterBox.
 - **Personal, Raspberry Pi, cannot format:** Raspberry Pi OS, ButterBox.
 
