@@ -6,6 +6,7 @@
     "guides/deployment-best-practices",
     "guides/disk-partitioning",
     "guides/dns-configuration",
+    "guides/download-images",
     "guides/etcher-guide",
     "guides/external-storage",
     "guides/hardware-clustering-analysis",
