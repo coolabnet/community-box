@@ -8,6 +8,7 @@ on:
 
 permissions:
   contents: write
+  actions: write  # Needed to dispatch deploy-page.yml (GITHUB_TOKEN pushes do not trigger it)
 
 jobs:
   fetch-data:
@@ -38,16 +39,32 @@ jobs:
         working-directory: ./scripts/fetch-data
 
       - name: Commit and push changes
+        id: commit
         run: |
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
           git add research/fetched-data/
           if git diff --staged --quiet; then
             echo "No data changes to commit"
+            echo "ccci_changed=false" >> "$GITHUB_OUTPUT"
           else
+            # CCCI directory changed beyond its timestamp/retrievedAt lines?
+            CCCI_CHANGES=$(git diff --staged -U0 -- research/fetched-data/ccci-directory.json | grep '^[+-] ' | grep -v -E 'timestamp|retrievedAt' || true)
+            if [ -n "$CCCI_CHANGES" ]; then
+              echo "ccci_changed=true" >> "$GITHUB_OUTPUT"
+            else
+              echo "ccci_changed=false" >> "$GITHUB_OUTPUT"
+            fi
             git commit -m "chore: update fetched data [skip ci]"
             git push
           fi
+
+      - name: Deploy page after CCCI directory refresh
+        # Pushes made with GITHUB_TOKEN do not trigger deploy-page.yml, so dispatch it explicitly.
+        if: steps.commit.outputs.ccci_changed == 'true'
+        run: gh workflow run deploy-page.yml --ref main
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Create summary comment (on manual trigger)
         if: github.event_name == 'workflow_dispatch'

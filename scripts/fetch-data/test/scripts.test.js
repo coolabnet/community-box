@@ -3,7 +3,7 @@
 const fs = require('fs');
 const path = require('path');
 const { SCRIPTS } = require('../run-all');
-const { parseCsv, normalizeRows, mergeCurated, getCcciDirectory } = require('../get-ccci-directory');
+const { parseCsv, normalizeRows, mergeCurated, getCcciDirectory, fetchCcciDirectory } = require('../get-ccci-directory');
 
 /**
  * Simple test framework for data fetching scripts
@@ -138,7 +138,8 @@ runner.test('Output directory exists', async () => {
 });
 
 // Test 2: Individual script functions work
-SCRIPTS.forEach(script => {
+// Scripts with liveTest: false are covered by offline fixtures below instead.
+SCRIPTS.filter(script => script.liveTest !== false).forEach(script => {
   runner.test(`${script.name} function executes`, async () => {
     // Set test environment
     process.env.NODE_ENV = 'test';
@@ -346,12 +347,49 @@ runner.test('CCCI merge dedupes accent/punctuation-insensitive and adds website 
   assert(bad.website === undefined, 'non-http website kept');
 });
 
+// CSV fixture builder: every row gets exactly one value per header column.
+function csvQuote(value) {
+  const s = String(value);
+  return /[",\r\n]/.test(s) ? `"${s.replace(/"/g, '""')}"` : s;
+}
+
+function ccciCsv(records, header = CCCI_HEADER) {
+  const columns = header.split(',');
+  const lines = [header];
+  records.forEach(record => {
+    lines.push(columns.map(column => csvQuote(record[column] ?? '')).join(','));
+  });
+  return lines.join('\n');
+}
+
+function validCcciRecords(count) {
+  return Array.from({ length: count }, (_, i) => ccciRecord({
+    ID: `CCCI-${String(i + 1).padStart(4, '0')}`,
+    Name: `Fixture Network ${i + 1}`,
+    Country: 'Kenya',
+    'Internet access': 'Yes'
+  }));
+}
+
+// Runs fetchCcciDirectory with an injected fetch and save; returns the save calls.
+async function runCcciWithCsv(csvText) {
+  const saved = [];
+  let error = null;
+  try {
+    await fetchCcciDirectory({
+      fetchText: async () => csvText,
+      save: (filename, data, metadata) => saved.push({ filename, data, metadata })
+    });
+  } catch (e) {
+    error = e;
+  }
+  return { saved, error };
+}
+
 runner.test('CCCI getCcciDirectory rejects export with fewer than 50 rows', async () => {
-  const lines = [CCCI_HEADER];
-  for (let i = 1; i <= 10; i++) lines.push(`CCCI-${String(i).padStart(4, '0')},Net ${i},Kenya,Africa,Active,,,,,,Yes,,,,,,,,,,,`);
   let message = null;
   try {
-    await getCcciDirectory({ csvText: lines.join('\n') });
+    await getCcciDirectory({ csvText: ccciCsv(validCcciRecords(10)) });
   } catch (e) {
     message = e.message;
   }
@@ -366,6 +404,54 @@ runner.test('CCCI getCcciDirectory rejects header without ID, Name and Country',
     message = e.message;
   }
   assert(message && /missing required column/.test(message), `expected header error, got: ${message}`);
+});
+
+runner.test('CCCI save boundary: valid fixture is saved once', async () => {
+  const { saved, error } = await runCcciWithCsv(ccciCsv(validCcciRecords(60)));
+  assert(!error, `unexpected error: ${error && error.message}`);
+  assert(saved.length === 1, `expected one save, got ${saved.length}`);
+  assert(saved[0].filename === 'ccci-directory.json', `wrong filename ${saved[0].filename}`);
+  assert(saved[0].data.count === saved[0].data.networks.length, 'count does not match networks');
+  assert(saved[0].data.source.rows === 60, `rows ${saved[0].data.source.rows}`);
+});
+
+runner.test('CCCI save boundary: row with a missing field is not saved', async () => {
+  const lines = ccciCsv(validCcciRecords(60)).split('\n');
+  lines[5] = lines[5].slice(0, lines[5].lastIndexOf(',')); // drop last field of one row
+  const { saved, error } = await runCcciWithCsv(lines.join('\n'));
+  assert(error && /has 22 fields, header has 23/.test(error.message), `expected field-count error, got: ${error && error.message}`);
+  assert(saved.length === 0, 'save called for malformed row');
+});
+
+runner.test('CCCI save boundary: export missing status and service columns is not saved', async () => {
+  const dropped = ['Project status', 'Internet access', 'Voice', 'Offline / local network', 'Local services',
+    'Financial services', 'Personal support', 'Digital literacy', 'Radio', 'School connectivity',
+    'Cybercafé', 'Environmental', 'Device charging'];
+  const header = CCCI_HEADER.split(',').filter(c => !dropped.includes(c)).join(',');
+  const { saved, error } = await runCcciWithCsv(ccciCsv(validCcciRecords(60), header));
+  assert(error && /missing required column/.test(error.message) && /Project status/.test(error.message),
+    `expected missing-column error, got: ${error && error.message}`);
+  assert(saved.length === 0, 'save called for export missing columns');
+});
+
+runner.test('CCCI save boundary: unterminated quote is not saved', async () => {
+  const lines = ccciCsv(validCcciRecords(60)).split('\n');
+  lines[3] = lines[3].replace('Fixture Network 3', '"Fixture Network 3');
+  const { saved, error } = await runCcciWithCsv(lines.join('\n'));
+  assert(error && /unterminated/.test(error.message), `expected unterminated error, got: ${error && error.message}`);
+  assert(saved.length === 0, 'save called for unterminated quote');
+});
+
+runner.test('CCCI save boundary: more than 5% unmapped countries is not saved', async () => {
+  const records = validCcciRecords(60);
+  for (let i = 0; i < 4; i++) records[i].Country = 'Atlantis'; // 4/60 = 6.7%
+  const rejected = await runCcciWithCsv(ccciCsv(records));
+  assert(rejected.error && /no ISO code/.test(rejected.error.message), 'expected unmapped-ratio error');
+  assert(rejected.saved.length === 0, 'save called above unmapped limit');
+
+  records[3].Country = 'Kenya'; // 3/60 = 5% is allowed
+  const accepted = await runCcciWithCsv(ccciCsv(records));
+  assert(!accepted.error && accepted.saved.length === 1, 'exactly 5% unmapped should be saved');
 });
 
 // Run tests

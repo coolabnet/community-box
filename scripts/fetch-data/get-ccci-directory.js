@@ -18,7 +18,7 @@ const OUTPUT_FILE = 'ccci-directory.json';
 
 // Refuse to publish a suspiciously small or malformed export.
 const MIN_VALID_ROWS = 50;
-const REQUIRED_COLUMNS = ['id', 'name', 'country'];
+const MAX_UNMAPPED_COUNTRY_RATIO = 0.05;
 
 // Fixed output order; each key maps to a CSV column that must read "Yes".
 const SERVICE_COLUMNS = [
@@ -34,6 +34,12 @@ const SERVICE_COLUMNS = [
   ['cybercafe', 'Cybercafé'],
   ['environmental', 'Environmental'],
   ['charging', 'Device charging']
+];
+
+// Every column the script consumes; the export is rejected if any is missing.
+const REQUIRED_COLUMNS = [
+  'ID', 'Name', 'Country', 'Project status',
+  ...SERVICE_COLUMNS.map(([, column]) => column)
 ];
 
 const STATUS_MAP = {
@@ -256,11 +262,12 @@ function normalizeWebsite(value) {
  * Turn CSV records (objects keyed by header) into normalized networks.
  * Rows without ID or Name are skipped.
  * @param {Object[]} rows
- * @returns {{networks: Object[], unmatchedCountries: string[]}}
+ * @returns {{networks: Object[], unmatchedCountries: string[], unmappedRows: number}}
  */
 function normalizeRows(rows) {
   const networks = [];
   const unmatched = new Set();
+  let unmappedRows = 0;
 
   for (const record of rows) {
     const r = {};
@@ -273,7 +280,10 @@ function normalizeRows(rows) {
     if (!id || !name) continue;
 
     const country = mapCountry(r.country);
-    if (!country.known) unmatched.add(r.country);
+    if (!country.known) {
+      unmatched.add(r.country);
+      unmappedRows += 1;
+    }
 
     const services = SERVICE_COLUMNS
       .filter(([, column]) => (r[headerKey(column)] || '').toLowerCase() === 'yes')
@@ -301,7 +311,7 @@ function normalizeRows(rows) {
     console.warn(`CCCI country not mapped to ISO code: "${name}" (country set to null)`);
   }
 
-  return { networks, unmatchedCountries };
+  return { networks, unmatchedCountries, unmappedRows };
 }
 
 /**
@@ -374,14 +384,20 @@ function mergeCurated(networks, curated) {
  * never overwrite the existing output.
  * @param {Object} [options]
  * @param {string} [options.csvText] - CSV text to use instead of downloading (tests)
+ * @param {() => Promise<string>} [options.fetchText] - Replaces the HTTP download (tests)
  * @returns {Promise<Object>} The `data` object for ccci-directory.json
  */
 async function getCcciDirectory(options = {}) {
   const retrievedAt = new Date().toISOString();
 
-  const text = options.csvText !== undefined
-    ? options.csvText
-    : await fetchWithRetry(EXPORT_URL, { headers: { Accept: 'text/csv' } });
+  let text;
+  if (options.csvText !== undefined) {
+    text = options.csvText;
+  } else if (options.fetchText) {
+    text = await options.fetchText();
+  } else {
+    text = await fetchWithRetry(EXPORT_URL, { headers: { Accept: 'text/csv' } });
+  }
 
   if (typeof text !== 'string') {
     throw new Error('CCCI export did not return CSV text');
@@ -394,16 +410,36 @@ async function getCcciDirectory(options = {}) {
 
   const header = table[0].map(h => h.trim());
   const keys = header.map(headerKey);
-  const missing = REQUIRED_COLUMNS.filter(c => !keys.includes(c));
+  const missing = REQUIRED_COLUMNS.filter(c => !keys.includes(headerKey(c)));
   if (missing.length > 0) {
     throw new Error(`CCCI export header missing required column(s): ${missing.join(', ')}`);
   }
 
-  const records = table.slice(1).map(row =>
+  // Ignore fully empty trailing lines, then require every row to match the header width.
+  const body = table.slice(1);
+  while (body.length > 0 && body[body.length - 1].every(f => f.trim() === '')) {
+    body.pop();
+  }
+  body.forEach((row, i) => {
+    if (row.length !== header.length) {
+      throw new Error(
+        `CCCI export row ${i + 2} has ${row.length} fields, header has ${header.length}; export rejected`
+      );
+    }
+  });
+
+  const records = body.map(row =>
     Object.fromEntries(header.map((h, i) => [h, row[i] ?? '']))
   );
 
-  const { networks: ccciNetworks, unmatchedCountries } = normalizeRows(records);
+  const { networks: ccciNetworks, unmatchedCountries, unmappedRows } = normalizeRows(records);
+
+  if (records.length > 0 && unmappedRows / records.length > MAX_UNMAPPED_COUNTRY_RATIO) {
+    throw new Error(
+      `CCCI export: ${unmappedRows} of ${records.length} rows have a country with no ISO code ` +
+      `(limit ${MAX_UNMAPPED_COUNTRY_RATIO * 100}%); export rejected`
+    );
+  }
 
   if (ccciNetworks.length < MIN_VALID_ROWS) {
     throw new Error(
@@ -439,11 +475,15 @@ async function getCcciDirectory(options = {}) {
 
 /**
  * Fetch, normalize and save ccci-directory.json.
+ * Nothing is saved unless getCcciDirectory succeeds.
+ * @param {Object} [options] - Same as getCcciDirectory, plus options.save(filename, data, metadata)
  * @returns {Promise<Object>} Small summary (full data is in the output file)
  */
-async function fetchCcciDirectory() {
-  const data = await getCcciDirectory();
-  saveToJson(OUTPUT_FILE, data, {});
+async function fetchCcciDirectory(options = {}) {
+  const data = await getCcciDirectory(options);
+  const save = options.save || saveToJson;
+  // Fixed script name keeps the wrapper stable whichever entry point ran.
+  save(OUTPUT_FILE, data, { script: 'get-ccci-directory.js' });
 
   return {
     rows: data.source.rows,

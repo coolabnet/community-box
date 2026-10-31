@@ -60,6 +60,7 @@ const SCRIPTS = [
   {
     name: 'CCCI Directory',
     function: fetchCcciDirectory,
+    liveTest: false, // Covered by offline fixtures in test/scripts.test.js
     description: 'Merge CCCI (Colnodo / APC) community-network directory with the curated list'
   }
 ];
