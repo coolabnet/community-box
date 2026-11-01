@@ -89,8 +89,7 @@ Use this when working several TODO items at once.
 
 ## In review (PRs)
 
-- `T3-2`, `T3-12` — ButterBox and Proxmox VE OS entries, PR #76, gate SHIP,
-  parked `needs-human-qa` (Q41). `T3-23` BlankOn waits on Q39.
+None. `T3-23` BlankOn waits on Q39.
 
 ## TODO (doable now)
 
@@ -108,6 +107,13 @@ taxonomy), `#57` taxonomy and PDF sections. `M4` is Phase 2 (#26).
 
 ## Done
 
+- `T3-2`, `T3-12` — ButterBox (Raspberry Pi Zero 2 W / Pi 4) and Proxmox VE
+  (Advanced; business on PC, NUC or ZimaBoard; only for confident setup)
+  in the OS recommendations, live 2026-10-31 (PR #76, `79fa3ea`). Owner QA
+  (Q41) moved the Proxmox gate from formatting to setup skill and added
+  ZimaBoard. New doc `/docs/software/os-recommendations`; both OSes added
+  to Download Images. Gate SHIP (Opus, Codex quota out); junior QA passed
+  en/pt/es. Doc rows Done; #59 stays open for BlankOn (Q39).
 - `T1-3` — landing page "About this tool" section with 4 expandable FAQ
   items (en/pt/es), live 2026-10-31 (PR #74, `7f66749`). Gate SHIP; junior
   browser QA passed en/pt/es (Q38). Help link points to the networks map.
