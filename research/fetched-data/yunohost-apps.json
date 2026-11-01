@@ -1,11 +1,11 @@
 {
-  "timestamp": "2026-10-31T20:31:14.620Z",
+  "timestamp": "2026-11-01T01:39:49.373Z",
   "script": "run-all.js",
   "source": "YunoHost-Apps GitHub Organization",
   "url": "https://github.com/YunoHost-Apps",
   "api_url": "https://api.github.com/orgs/YunoHost-Apps/repos",
-  "total_apps": 1029,
-  "total_repos_checked": 1050,
+  "total_apps": 1030,
+  "total_repos_checked": 1051,
   "languages": [
     "CSS",
     "HTML",
@@ -6860,6 +6860,17 @@
       "stars": 0,
       "forks": 1,
       "updated_at": "2026-10-25T22:48:01Z",
+      "language": "Shell",
+      "archived": false
+    },
+    {
+      "id": "opengym_ynh",
+      "name": "opengym",
+      "description": "openGym package for YunoHost",
+      "url": "https://github.com/YunoHost-Apps/opengym_ynh",
+      "stars": 1,
+      "forks": 0,
+      "updated_at": "2026-10-31T23:23:35Z",
       "language": "Shell",
       "archived": false
     },
