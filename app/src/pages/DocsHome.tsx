@@ -136,7 +136,7 @@ export default function DocsHome() {
               {t('docsHome.cards.paper.description')}
             </p>
             <a
-              href="https://github.com/coolabnet/community-box/releases/latest/download/CCCI_Comparative_Study_2024.pdf"
+              href="https://github.com/coolabnet/community-box/releases/latest/download/CCCI_Research_Report_2025.pdf"
               target="_blank"
               rel="noopener noreferrer"
               className="text-blue-600 hover:text-blue-800 text-sm hover:underline"
