@@ -1,6 +1,6 @@
 {
-  "timestamp": "2026-11-01T01:50:58.252Z",
-  "script": "run-all.js",
+  "timestamp": "2026-11-01T13:05:36.785Z",
+  "script": "scripts.test.js",
   "source": "YunoHost-Apps GitHub Organization",
   "url": "https://github.com/YunoHost-Apps",
   "api_url": "https://api.github.com/orgs/YunoHost-Apps/repos",
@@ -2778,7 +2778,7 @@
       "url": "https://github.com/YunoHost-Apps/fittrackee_ynh",
       "stars": 7,
       "forks": 2,
-      "updated_at": "2026-10-12T06:21:52Z",
+      "updated_at": "2026-11-01T07:05:50Z",
       "language": "Shell",
       "archived": false
     },
@@ -4890,7 +4890,7 @@
       "url": "https://github.com/YunoHost-Apps/leantime_ynh",
       "stars": 3,
       "forks": 5,
-      "updated_at": "2026-10-31T15:24:22Z",
+      "updated_at": "2026-11-01T13:03:21Z",
       "language": "Shell",
       "archived": false
     },
@@ -7167,7 +7167,7 @@
       "url": "https://github.com/YunoHost-Apps/paperless-ngx_ynh",
       "stars": 14,
       "forks": 14,
-      "updated_at": "2026-10-31T15:56:07Z",
+      "updated_at": "2026-11-01T13:03:03Z",
       "language": "Shell",
       "archived": false
     },
@@ -10280,7 +10280,7 @@
       "url": "https://github.com/YunoHost-Apps/uptime-kuma_ynh",
       "stars": 13,
       "forks": 5,
-      "updated_at": "2026-10-28T10:46:02Z",
+      "updated_at": "2026-11-01T13:01:30Z",
       "language": "Shell",
       "archived": false
     },
@@ -10456,7 +10456,7 @@
       "url": "https://github.com/YunoHost-Apps/wallos_ynh",
       "stars": 2,
       "forks": 1,
-      "updated_at": "2026-10-26T13:25:33Z",
+      "updated_at": "2026-11-01T13:02:46Z",
       "language": "Shell",
       "archived": false
     },
