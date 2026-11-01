@@ -480,7 +480,7 @@
   },
   "landing": {
     "title": "Caja Comunitaria",
-    "description": "Descubre la mejor configuración tecnológica para las necesidades de tu comunidad. Responde unas preguntas simples y obtiene una guía personalizada.",
+    "description": "Planifica una Caja Comunitaria: un servidor local que aloja servicios offline-first para tu comunidad. Responde unas preguntas orientadoras y recibe recomendaciones personalizadas de hardware, software y servicios que tu comunidad puede instalar y gestionar en conjunto.",
     "startButton": "Comenzar",
     "browseGuides": "Ver Guías",
     "altHeroImage": "Colaboración comunitaria",
