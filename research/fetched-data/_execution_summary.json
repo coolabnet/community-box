@@ -1,19 +1,19 @@
 {
-  "timestamp": "2026-11-01T17:40:16.605Z",
+  "timestamp": "2026-11-01T21:15:30.349Z",
   "script": "run-all.js",
   "note": "Summary of all data fetching script executions",
   "data": {
-    "execution_time": "2026-11-01T17:40:16.605Z",
+    "execution_time": "2026-11-01T21:15:30.349Z",
     "total_scripts": 7,
     "successful": 7,
     "failed": 0,
-    "total_duration_ms": 14600,
+    "total_duration_ms": 15346,
     "continue_on_error": true,
     "results": [
       {
         "name": "CapRover UI Translations",
         "success": true,
-        "duration": 238,
+        "duration": 301,
         "result": [
           "ar-EG",
           "de-DE",
@@ -36,7 +36,7 @@
       {
         "name": "CasaOS UI Translations",
         "success": true,
-        "duration": 132,
+        "duration": 147,
         "result": [
           "ca_ES",
           "cs_CZ",
@@ -71,7 +71,7 @@
       {
         "name": "YunoHost Apps",
         "success": true,
-        "duration": 11543,
+        "duration": 11981,
         "result": {
           "count": 1030,
           "apps": [
@@ -676,7 +676,7 @@
               "url": "https://github.com/YunoHost-Apps/bentopdf_ynh",
               "stars": 3,
               "forks": 0,
-              "updated_at": "2026-11-01T13:18:06Z",
+              "updated_at": "2026-11-01T19:10:03Z",
               "language": "Shell",
               "archived": false
             },
@@ -4470,7 +4470,7 @@
               "description": "Jellyfin package for YunoHost",
               "url": "https://github.com/YunoHost-Apps/jellyfin_ynh",
               "stars": 32,
-              "forks": 23,
+              "forks": 24,
               "updated_at": "2026-10-27T21:29:48Z",
               "language": "Shell",
               "archived": false
@@ -5626,7 +5626,7 @@
               "url": "https://github.com/YunoHost-Apps/mautic_ynh",
               "stars": 0,
               "forks": 3,
-              "updated_at": "2026-10-06T12:15:58Z",
+              "updated_at": "2026-11-01T20:20:31Z",
               "language": "Shell",
               "archived": false
             },
@@ -11027,7 +11027,7 @@
               "url": "https://github.com/YunoHost-Apps/yeswiki_ynh",
               "stars": 7,
               "forks": 7,
-              "updated_at": "2026-10-23T13:35:41Z",
+              "updated_at": "2026-11-01T18:01:31Z",
               "language": "Shell",
               "archived": false
             },
@@ -11442,7 +11442,7 @@
       {
         "name": "YunoHost UI Translations",
         "success": true,
-        "duration": 1381,
+        "duration": 1596,
         "result": [
           {
             "language": "French",
@@ -11849,7 +11849,7 @@
       {
         "name": "Zimaboard Shipping Areas",
         "success": true,
-        "duration": 307,
+        "duration": 376,
         "result": [
           "Argentina",
           "Australia",
@@ -11949,7 +11949,7 @@
       {
         "name": "CCCI Directory",
         "success": true,
-        "duration": 882,
+        "duration": 828,
         "result": {
           "rows": 428,
           "count": 443,

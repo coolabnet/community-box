@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-11-01T17:40:13.915Z",
+  "timestamp": "2026-11-01T21:15:27.429Z",
   "script": "run-all.js",
   "source": "YunoHost-Apps GitHub Organization",
   "url": "https://github.com/YunoHost-Apps",
@@ -622,7 +622,7 @@
       "url": "https://github.com/YunoHost-Apps/bentopdf_ynh",
       "stars": 3,
       "forks": 0,
-      "updated_at": "2026-11-01T13:18:06Z",
+      "updated_at": "2026-11-01T19:10:03Z",
       "language": "Shell",
       "archived": false
     },
@@ -4416,7 +4416,7 @@
       "description": "Jellyfin package for YunoHost",
       "url": "https://github.com/YunoHost-Apps/jellyfin_ynh",
       "stars": 32,
-      "forks": 23,
+      "forks": 24,
       "updated_at": "2026-10-27T21:29:48Z",
       "language": "Shell",
       "archived": false
@@ -5572,7 +5572,7 @@
       "url": "https://github.com/YunoHost-Apps/mautic_ynh",
       "stars": 0,
       "forks": 3,
-      "updated_at": "2026-10-06T12:15:58Z",
+      "updated_at": "2026-11-01T20:20:31Z",
       "language": "Shell",
       "archived": false
     },
@@ -10973,7 +10973,7 @@
       "url": "https://github.com/YunoHost-Apps/yeswiki_ynh",
       "stars": 7,
       "forks": 7,
-      "updated_at": "2026-10-23T13:35:41Z",
+      "updated_at": "2026-11-01T18:01:31Z",
       "language": "Shell",
       "archived": false
     },
