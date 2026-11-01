@@ -11,11 +11,11 @@
         "help": "Planning solar or battery power? Use the <a>Coolab solar calculator</a> to estimate what you need. It opens in a new tab and needs internet."
       },
       "users": {
-        "question": "How many users will share this computer?",
+        "question": "How many people will access the content and apps on the shared computer?",
         "options": {
-          "1-2": "1-2 users",
-          "3-5": "3-5 users",
-          "6+": "6+ users"
+          "1-2": "Up to 25 people",
+          "3-5": "25–100 people",
+          "6+": "More than 100 people"
         }
       },
       "accessDevices": {
