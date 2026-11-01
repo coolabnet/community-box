@@ -480,7 +480,7 @@
   },
   "landing": {
     "title": "Caixa Comunitária",
-    "description": "Descubra a melhor configuração de tecnologia para as necessidades da sua comunidade. Responda a algumas perguntas simples e obtenha um guia personalizado.",
+    "description": "Planeje uma Caixa Comunitária: um servidor local que hospeda serviços offline-first para a sua comunidade. Responda a algumas perguntas orientadoras e receba recomendações personalizadas de hardware, software e serviços que a sua comunidade pode instalar e gerenciar em conjunto.",
     "startButton": "Começar",
     "browseGuides": "Ver Guias",
     "altHeroImage": "Colaboração comunitária",

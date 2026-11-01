@@ -480,7 +480,7 @@
   },
   "landing": {
     "title": "Community Box",
-    "description": "Discover the best technology setup for your community's needs. Answer a few simple questions and get a personalized guide.",
+    "description": "Plan a Community Box: a local server that hosts offline-first services for your community. Answer a few guiding questions and get personalized recommendations for hardware, software and services that your community can set up and manage together.",
     "startButton": "Start",
     "browseGuides": "Browse Guides",
     "altHeroImage": "Community collaboration",
