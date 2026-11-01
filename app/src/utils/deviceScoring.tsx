@@ -83,10 +83,11 @@ export const normalizeUserAnswers = (answers: UserAnswers): Record<AttributeKey,
   };
 
   // Map users answer to concurrency score (1-5)
+  // The keys predate the community-size bands; they stay so saved answers keep working.
   const concurrencyMap: Record<string, number> = {
-    '1-2': 1, // Few users -> low concurrency needs
-    '3-5': 3, // Medium users -> moderate concurrency needs
-    '6+': 5 // Many users -> high concurrency needs
+    '1-2': 1, // Up to 25 people -> low concurrency needs
+    '3-5': 3, // 25–100 people -> moderate concurrency needs
+    '6+': 5 // More than 100 people -> high concurrency needs
   };
 
   // Map growth answer to growth score (1-5)

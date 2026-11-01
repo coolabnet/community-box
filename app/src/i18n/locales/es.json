@@ -11,11 +11,11 @@
         "help": "¿Planea energía solar o de batería? Use la <a>calculadora solar de Coolab</a> para estimar lo que necesita. Se abre en una pestaña nueva y necesita internet."
       },
       "users": {
-        "question": "¿Cuántos usuarios compartirán esta computadora?",
+        "question": "¿Cuántas personas accederán a los contenidos y aplicaciones de la computadora compartida?",
         "options": {
-          "1-2": "1-2 usuarios",
-          "3-5": "3-5 usuarios",
-          "6+": "6+ usuarios"
+          "1-2": "Hasta 25 personas",
+          "3-5": "25–100 personas",
+          "6+": "Más de 100 personas"
         }
       },
       "accessDevices": {
