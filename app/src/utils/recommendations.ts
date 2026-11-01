@@ -98,6 +98,35 @@ export const operatingSystems: Record<OSKey, OSSuggestion> = {
     difficulty: 'beginner',
     supportedHardware: ['intelNUC', 'zimaBoard', 'reusedPC', 'raspberryPi'],
   },
+  butterbox: {
+    key: 'butterbox',
+    name: 'os.butterbox.name',
+    description: 'os.butterbox.description',
+    recommendedFor: ['education', 'personal'],
+    difficulty: 'beginner',
+    supportedHardware: ['raspberryPi'],
+    links: [
+      { kind: 'website', url: 'https://likebutter.app' },
+      { kind: 'docs', url: 'https://likebutter.app/docs/' },
+      { kind: 'source', url: 'https://guardianproject.dev/butter' },
+    ],
+  },
+  proxmox: {
+    key: 'proxmox',
+    name: 'os.proxmox.name',
+    description: 'os.proxmox.description',
+    recommendedFor: ['business'],
+    difficulty: 'advanced',
+    supportedHardware: ['intelNUC', 'zimaBoard', 'reusedPC'],
+    links: [
+      { kind: 'docs', url: 'https://pve.proxmox.com/pve-docs/' },
+      { kind: 'download', url: 'https://www.proxmox.com/en/downloads' },
+    ],
+    requirements: {
+      minRamGb: 2,
+      architectures: ['amd64'],
+    },
+  },
 };
 
 /**
@@ -166,7 +195,12 @@ export const getOSSuggestions = (
     osList = osList.filter(os => os.difficulty === 'beginner');
   }
 
-  return osList.slice(0, 4);
+  // Advanced OSes are only for users who set up servers confidently. They go last
+  // but keep a place under the 4-item cap.
+  const advanced = format === 'yes' ? osList.filter(os => os.difficulty === 'advanced') : [];
+  const others = osList.filter(os => os.difficulty !== 'advanced');
+
+  return [...others.slice(0, 4 - advanced.length), ...advanced].slice(0, 4);
 };
 
 /**

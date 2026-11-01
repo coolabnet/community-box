@@ -53,6 +53,7 @@
     "software/balena/README",
     "software/caprover/README",
     "software/casaos/README",
+    "software/os-recommendations",
     "software/yunohost/README"
   ]
 }

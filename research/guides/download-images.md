@@ -74,6 +74,8 @@ Each row links to the project's own download page. A row with no checksum means 
 | balenaOS | Device image | Per device (about 20 types) | [balena.io/os](https://www.balena.io/os) | Not shown on page (5) |
 | OpenMediaVault | Installer ISO | amd64 | [openmediavault.org](https://www.openmediavault.org/download.html) | On download page |
 | TrueNAS | Installer ISO | x86_64 | [truenas.com](https://www.truenas.com/download-truenas-scale/) (7) | On download page |
+| Proxmox VE | Installer ISO | amd64; arm64 for some servers (9) | [proxmox.com](https://www.proxmox.com/en/downloads/proxmox-virtual-environment/iso) | On download page |
+| ButterBox | Raspberry Pi image | Pi Zero 2 W, Pi 4 | [likebutter.app](https://likebutter.app/docs/build-a-box/raspberry-pi/install-butter/) (10) | None published (10) |
 | LibreMesh | Custom router image | Per router model | [firmware selector](https://firmware-selector.libremesh.org/) | Only if the build shows one (6) |
 
 ### Notes
@@ -86,10 +88,12 @@ Each row links to the project's own download page. A row with no checksum means 
 6. The selector builds a custom image for your router. When the build provides a checksum, the selector shows it as sha256sum beside the image. The selector source shows this behavior; we did not confirm it on a live build. If no checksum is shown, keep the file the selector gives you. Do not substitute stock OpenWrt checksums; they cover different images.
 7. The TrueNAS download asks for a newsletter sign-up. Its SHA256 value, `.sha256`, and `.gpg` files are next to each ISO.
 8. Ubuntu publishes a long-term support (LTS) release, such as 26.04, and a shorter interim release, such as 26.10. Use the LTS release for a community server. Open the folder for the release you downloaded; its SHA256SUMS file is inside (for arm64, in the `release` subfolder).
+9. Proxmox VE: on a PC, Intel NUC or ZimaBoard, use the standard (amd64) ISO; the processor needs Intel VT or AMD-V turned on. The arm64 ISO is for some ARM servers only; Proxmox does not support Raspberry Pi. The SHA256 value is listed beside each ISO.
+10. ButterBox runs on Raspberry Pi Zero 2 W and Pi 4. Its install page links the image download; pick the latest version and unzip it before you write it with Raspberry Pi Imager. The project publishes no checksum, so check that the file size matches the size shown on the Dropbox download page. A PC version is listed as coming soon.
 
 ## Sources
 
-Fetched 2026-10-30; LibreMesh, OpenWrt, Ubuntu and Raspberry Pi rows rechecked 2026-10-31.
+Fetched 2026-10-30; LibreMesh, OpenWrt, Ubuntu and Raspberry Pi rows rechecked 2026-10-31. Proxmox VE and ButterBox rows added 2026-10-31.
 
 - https://www.debian.org/distrib/netinst
 - https://cdimage.debian.org/debian-cd/current/amd64/iso-cd/SHA256SUMS
@@ -117,6 +121,10 @@ Fetched 2026-10-30; LibreMesh, OpenWrt, Ubuntu and Raspberry Pi rows rechecked 2
 - https://etcher.balena.io/
 - https://www.openmediavault.org/download.html
 - https://www.truenas.com/download-truenas-scale/
+- https://www.proxmox.com/en/downloads/proxmox-virtual-environment/iso
+- https://pve.proxmox.com/wiki/System_Requirements
+- https://likebutter.app/docs/build-a-box
+- https://likebutter.app/docs/build-a-box/raspberry-pi/install-butter/
 - https://firmware-selector.libremesh.org/
 - https://libremesh.org/build/
 - https://libremesh.org/getting-started.html

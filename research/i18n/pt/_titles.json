@@ -52,5 +52,6 @@
   "software/balena/README": "Balena",
   "software/caprover/README": "CapRover",
   "software/casaos/README": "CasaOS",
+  "software/os-recommendations": "Como a ferramenta escolhe um sistema operacional",
   "software/yunohost/README": "YunoHost"
 }

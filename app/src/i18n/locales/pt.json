@@ -319,6 +319,14 @@
             "openmediavault": {
               "name": "OpenMediaVault",
               "description": "Solução de armazenamento conectado à rede com gerenciamento baseado na web"
+            },
+            "butterbox": {
+              "name": "ButterBox",
+              "description": "Caixa de compartilhamento offline para Raspberry Pi Zero 2 W ou Pi 4 que cria a própria rede Wi-Fi e funciona sem acesso à internet"
+            },
+            "proxmox": {
+              "name": "Proxmox VE",
+              "description": "Plataforma de virtualização de código aberto para executar máquinas virtuais e contêineres em um servidor; requer CPU de 64 bits com Intel VT-x ou AMD-V; os 2 GB de RAM são só para o host, as máquinas virtuais precisam de memória própria; no ZimaBoard, use o modelo de 8 GB e instale em um SSD SATA ou NVMe, não no eMMC interno"
             }
           },
           "difficulty": {
