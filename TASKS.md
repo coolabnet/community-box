@@ -151,8 +151,10 @@ taxonomy), `#57` taxonomy and PDF sections. `M4` is Phase 2 (#26).
 - `M1` — Menu opens on the landing page (verified live 2026-10-30).
 - `#57` (schema part) — Optional catalog `links`/`requirements`, PR #67
   (`25eb22b`). Taxonomy and PDF sections still open on #57.
-- `M3` — Research paper gaps filled, PR #71 (`1175959`), #30 closed. The
-  downloadable PDF updates on the next release (Q37). No doc table row.
+- `M3` — Research paper gaps filled, PR #71 (`1175959`), #30 closed. No doc
+  table row. Release `v1.0.0` published 2026-11-01 (Q37); the workflow
+  attached the 46-page PDF. Docs-home PDF link file name fixed (PR #82,
+  `a54c507`), so the site no longer logs the release 404.
 - `T3-7`, `T3-13`, `T3-14`, `T3-16`, `T3-17` — Guides (OONI, 2FA, local
   games, Co-op Cloud, Starlink VPN), PR #73, #64 closed. Doc rows Done.
 
