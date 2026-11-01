@@ -98,7 +98,7 @@ or on human QA of a parked PR.
 
 ## Blocked (see `gg2026-decisions.html`)
 
-`T1-2` (Q29), `T1-7` (resolved Q03, then scope), `T1-8` (Q05), `T1-9`
+`T1-7` (resolved Q03, then scope), `T1-8` (Q05), `T1-9`
 (Q09 partner), `T1-10` (Q10), `T1-12` (Q08), `T1-14` (Q06), `T1-15` (Q30),
 `T2-2` (Q31), `T3-3`, `T3-5`, `T3-11`, `T3-19`, `T3-20`, `T3-22` (Q15 tool
 names; `T3-5` also Q22), `T3-4` (Q18), `T3-10` (Q23), `T3-21` (Q33),
@@ -107,6 +107,10 @@ taxonomy), `#57` taxonomy and PDF sections. `M4` is Phase 2 (#26).
 
 ## Done
 
+- `T1-2` — Landing-page description replaced with the owner-picked
+  variant (Q29, doc Option 2 direction, Q01 naming) in en/pt/es, plus the
+  meta descriptions, live 2026-11-01 (PR #83, `dc29b4f`). Gate SHIP (Opus,
+  Codex quota out). Doc row Done.
 - `T3-2`, `T3-12` — ButterBox (Raspberry Pi Zero 2 W / Pi 4) and Proxmox VE
   (Advanced; business on PC, NUC or ZimaBoard; only for confident setup)
   in the OS recommendations, live 2026-10-31 (PR #76, `79fa3ea`). Owner QA
