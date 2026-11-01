@@ -1,6 +1,6 @@
 {
-  "timestamp": "2026-11-01T13:05:36.785Z",
-  "script": "scripts.test.js",
+  "timestamp": "2026-11-01T17:40:13.915Z",
+  "script": "run-all.js",
   "source": "YunoHost-Apps GitHub Organization",
   "url": "https://github.com/YunoHost-Apps",
   "api_url": "https://api.github.com/orgs/YunoHost-Apps/repos",
@@ -19,7 +19,7 @@
     "Shell",
     "TSQL"
   ],
-  "archived_count": 209,
+  "archived_count": 210,
   "data": [
     {
       "id": "13ft_ynh",
@@ -160,9 +160,9 @@
       "url": "https://github.com/YunoHost-Apps/adminerevo_ynh",
       "stars": 1,
       "forks": 1,
-      "updated_at": "2026-02-12T16:35:51Z",
+      "updated_at": "2026-11-01T13:05:34Z",
       "language": "Shell",
-      "archived": false
+      "archived": true
     },
     {
       "id": "adventurelog_ynh",
@@ -622,7 +622,7 @@
       "url": "https://github.com/YunoHost-Apps/bentopdf_ynh",
       "stars": 3,
       "forks": 0,
-      "updated_at": "2026-10-20T00:06:28Z",
+      "updated_at": "2026-11-01T13:18:06Z",
       "language": "Shell",
       "archived": false
     },
@@ -1897,8 +1897,8 @@
       "description": "YunoHost package for DmarcGuard, a Self-hosted DMARC report parser with dashboard and IMAP ingestion.",
       "url": "https://github.com/YunoHost-Apps/dmarcguard_ynh",
       "stars": 1,
-      "forks": 0,
-      "updated_at": "2026-10-02T15:47:00Z",
+      "forks": 1,
+      "updated_at": "2026-11-01T17:35:17Z",
       "language": "Shell",
       "archived": false
     },
@@ -4989,7 +4989,7 @@
       "url": "https://github.com/YunoHost-Apps/libredb_studio_ynh",
       "stars": 0,
       "forks": 2,
-      "updated_at": "2026-10-20T06:15:10Z",
+      "updated_at": "2026-11-01T16:33:43Z",
       "language": "Shell",
       "archived": false
     },
@@ -6870,7 +6870,7 @@
       "url": "https://github.com/YunoHost-Apps/opengym_ynh",
       "stars": 1,
       "forks": 0,
-      "updated_at": "2026-10-31T23:23:35Z",
+      "updated_at": "2026-11-01T16:46:15Z",
       "language": "Shell",
       "archived": false
     },

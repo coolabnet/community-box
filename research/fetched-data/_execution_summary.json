@@ -1,19 +1,19 @@
 {
-  "timestamp": "2026-11-01T13:05:36.346Z",
+  "timestamp": "2026-11-01T17:40:16.605Z",
   "script": "run-all.js",
   "note": "Summary of all data fetching script executions",
   "data": {
-    "execution_time": "2026-11-01T13:05:36.346Z",
+    "execution_time": "2026-11-01T17:40:16.605Z",
     "total_scripts": 7,
     "successful": 7,
     "failed": 0,
-    "total_duration_ms": 14950,
+    "total_duration_ms": 14600,
     "continue_on_error": true,
     "results": [
       {
         "name": "CapRover UI Translations",
         "success": true,
-        "duration": 181,
+        "duration": 238,
         "result": [
           "ar-EG",
           "de-DE",
@@ -36,7 +36,7 @@
       {
         "name": "CasaOS UI Translations",
         "success": true,
-        "duration": 131,
+        "duration": 132,
         "result": [
           "ca_ES",
           "cs_CZ",
@@ -71,7 +71,7 @@
       {
         "name": "YunoHost Apps",
         "success": true,
-        "duration": 12114,
+        "duration": 11543,
         "result": {
           "count": 1030,
           "apps": [
@@ -214,9 +214,9 @@
               "url": "https://github.com/YunoHost-Apps/adminerevo_ynh",
               "stars": 1,
               "forks": 1,
-              "updated_at": "2026-02-12T16:35:51Z",
+              "updated_at": "2026-11-01T13:05:34Z",
               "language": "Shell",
-              "archived": false
+              "archived": true
             },
             {
               "id": "adventurelog_ynh",
@@ -676,7 +676,7 @@
               "url": "https://github.com/YunoHost-Apps/bentopdf_ynh",
               "stars": 3,
               "forks": 0,
-              "updated_at": "2026-10-20T00:06:28Z",
+              "updated_at": "2026-11-01T13:18:06Z",
               "language": "Shell",
               "archived": false
             },
@@ -1951,8 +1951,8 @@
               "description": "YunoHost package for DmarcGuard, a Self-hosted DMARC report parser with dashboard and IMAP ingestion.",
               "url": "https://github.com/YunoHost-Apps/dmarcguard_ynh",
               "stars": 1,
-              "forks": 0,
-              "updated_at": "2026-10-02T15:47:00Z",
+              "forks": 1,
+              "updated_at": "2026-11-01T17:35:17Z",
               "language": "Shell",
               "archived": false
             },
@@ -5043,7 +5043,7 @@
               "url": "https://github.com/YunoHost-Apps/libredb_studio_ynh",
               "stars": 0,
               "forks": 2,
-              "updated_at": "2026-10-20T06:15:10Z",
+              "updated_at": "2026-11-01T16:33:43Z",
               "language": "Shell",
               "archived": false
             },
@@ -6924,7 +6924,7 @@
               "url": "https://github.com/YunoHost-Apps/opengym_ynh",
               "stars": 1,
               "forks": 0,
-              "updated_at": "2026-10-31T23:23:35Z",
+              "updated_at": "2026-11-01T16:46:15Z",
               "language": "Shell",
               "archived": false
             },
@@ -11419,13 +11419,13 @@
             "Shell",
             "TSQL"
           ],
-          "archived_count": 209
+          "archived_count": 210
         }
       },
       {
         "name": "YunoHost Docs Translations",
         "success": true,
-        "duration": 94,
+        "duration": 117,
         "result": [
           "de",
           "docs",
@@ -11442,7 +11442,7 @@
       {
         "name": "YunoHost UI Translations",
         "success": true,
-        "duration": 1413,
+        "duration": 1381,
         "result": [
           {
             "language": "French",
@@ -11849,7 +11849,7 @@
       {
         "name": "Zimaboard Shipping Areas",
         "success": true,
-        "duration": 287,
+        "duration": 307,
         "result": [
           "Argentina",
           "Australia",
@@ -11949,7 +11949,7 @@
       {
         "name": "CCCI Directory",
         "success": true,
-        "duration": 730,
+        "duration": 882,
         "result": {
           "rows": 428,
           "count": 443,
