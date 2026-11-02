@@ -13,7 +13,8 @@ import {
   BookOpen,
   Sun,
   Users,
-  Info
+  Info,
+  Bot
 } from 'lucide-react';
 import { useIsMobile } from '@/hooks/use-mobile';
 import { getPdfDownloadUrl } from '@/lib/github';
@@ -144,6 +145,11 @@ const createMenu = (pdfUrl: string, lang: DocLang): MenuItem[] => [
     titleKey: 'sidebar.solarCalculator',
     icon: <Sun size={16} />,
     href: 'https://solar.coolab.org/'
+  },
+  {
+    titleKey: 'sidebar.aiAssistant',
+    icon: <Bot size={16} />,
+    href: 'https://t.me/Comm_box_demo_bot'
   },
   {
     titleKey: 'sidebar.community',
