@@ -237,7 +237,7 @@ Every PR runs these validation commands from `app/`: `npm run lint`, `npx vitest
 - **H1 (LocNet).** The canonical category list (#57, #22, hackmd 11). Until it is agreed, the categories ship labelled DRAFT. Also needed: whether `healthWellbeing` and `localEconomy` show with an empty-state message or are hidden.
 - **H2 (team).** Goals as step 0 (recommended, matches the June 11 meeting), or goals replacing `usage` in place at step 9 (no step shift, weaker on AC1 intent). Also decide whether `mainUse` (step 10) stays, since it overlaps with goals.
 - **H3 (team).** Whether users may add or remove apps (the `ApplicationsReview` step), or only see proposals. This plan assumes review with defaults preselected.
-- **H4 (team, evidence).** The capacity heuristic constants: OS base 1 GB, ×1.5 headroom, per-25-user scaling, and the reusedPC assumption of [4,8] GB. PR1 caps reusedPC at 8 GB, but its README says 16 GB is optimal and RAM is upgradable; revisit before PR5. These need sign-off and field-report evidence where possible.
+- **H4 (team, evidence).** The capacity heuristic constants: OS base 1 GB, ×1.5 headroom, per-25-user scaling, and the reusedPC assumption of [4,8] GB. PR1 caps reusedPC at 8 GB, but its README says 16 GB is optimal and RAM is upgradable; revisit before PR5. PR2 also sets the per-25-user multipliers (1/4/8 blocks for Up to 25 / 25–100 / More than 100, the last assumed about 200 people) and defaults a missing users answer to 25–100. These need sign-off and field-report evidence where possible.
 - **H5 (#57).** The entry-type model. This plan covers **software apps only**. Content packs (Kiwix ZIMs), OS bundles (ButterBox) and practices (SDR, Hetzner) stay where they are now.
 
 ## 9. Risks and open questions
