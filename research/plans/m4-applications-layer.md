@@ -1,7 +1,9 @@
 # Plan: goal-driven applications layer (M4, #26)
 
-Senior plan, drafted 2026-11-02 for owner review. Not yet approved; no code
-written. Line references are from `main` at `a33d15e`.
+Senior plan, drafted 2026-11-02. Owner decisions 2026-11-02: H2 goals as
+step 0; H3 review with defaults preselected; start PR1 and PR2, with the H4
+capacity constants shipped as labelled estimates. H1 and H5 stay open.
+Line references are from `main` at `a33d15e`.
 
 Sources: issues #26, #22, #57, #40 and #28, plus `TASKS.md`, `AGENTS.md` and the current code.
 
