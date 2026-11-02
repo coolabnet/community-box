@@ -36,7 +36,7 @@ The image is `gtstef/filebrowser`. The compose file uses the `stable` tag, which
 
 5. Open http://localhost:8080 (or `http://<box-address>:8080`). Sign in as `admin`. FileBrowser asks you to choose a new password on the first sign-in.
 
-With rootless Docker, the container user 1000 is not your host user. In that case, change `user:` in the `filebrowser` service to `"0:0"`, and skip the `sudo chown` in step 1. Rootless Docker maps the container root user to your host user.
+With rootless Docker, the container user 1000 is not your host user. In that case, change `user:` in the `filebrowser` service to `"0:0"`, and skip the `sudo chown` in step 1. For Syncthing, add `PUID=0` and `PGID=0` to its `environment`. Rootless Docker maps the container root user to your host user.
 
 ### Syncthing (Optional)
 
@@ -46,8 +46,12 @@ Syncthing is an open-source continuous file synchronization program that synchro
 
 Syncthing is included in the docker-compose file as an optional service. It shares the same `./data` directory as FileBrowser Quantum.
 
-1. Access the Syncthing interface at http://localhost:8384
-2. Follow the setup wizard to configure devices and folders for synchronization
+1. Start Syncthing (the FileBrowser command above starts only FileBrowser):
+   ```bash
+   docker compose -f filebrowser-docker-compose.yml up -d syncthing
+   ```
+2. Access the Syncthing interface at http://localhost:8384
+3. Follow the setup wizard to configure devices and folders for synchronization. The shared files are at `/var/syncthing/data` inside the container.
 
 ## Features
 
