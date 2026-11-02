@@ -9,52 +9,29 @@ import type {
   FormatAnswer,
   DeviceKey,
 } from '@/types/questionnaire';
+import applicationsData from '@/data/applications/applications.json';
+import type { ApplicationEntry } from '@/data/applications/schema';
 
-// Service definitions — names and descriptions use i18n keys
-export const services: Record<ServiceKey, ServiceSuggestion> = {
-  nextcloud: {
-    key: 'nextcloud',
-    name: 'services.nextcloud.name',
-    description: 'services.nextcloud.description',
-    category: ['files', 'news', 'education'],
-    icon: '☁️',
-  },
-  jellyfin: {
-    key: 'jellyfin',
-    name: 'services.jellyfin.name',
-    description: 'services.jellyfin.description',
-    category: ['media'],
-    icon: '🎬',
-  },
-  moodle: {
-    key: 'moodle',
-    name: 'services.moodle.name',
-    description: 'services.moodle.description',
-    category: ['education'],
-    icon: '📚',
-  },
-  wordpress: {
-    key: 'wordpress',
-    name: 'services.wordpress.name',
-    description: 'services.wordpress.description',
-    category: ['news', 'education'],
-    icon: '📝',
-  },
-  kiwix: {
-    key: 'kiwix',
-    name: 'services.kiwix.name',
-    description: 'services.kiwix.description',
-    category: ['education', 'news'],
-    icon: '📖',
-  },
-  ubuntumm: {
-    key: 'ubuntumm',
-    name: 'services.ubuntumm.name',
-    description: 'services.ubuntumm.description',
-    category: ['files', 'education', 'news'],
-    icon: '🌐',
-  },
-};
+// Service definitions are a projection of data/applications/applications.json.
+// Names and descriptions use i18n keys.
+const toServiceSuggestion = (app: ApplicationEntry): ServiceSuggestion => ({
+  key: app.id as ServiceKey,
+  name: `services.${app.id}.name`,
+  description: `services.${app.id}.description`,
+  category: app.legacyCategories,
+  icon: app.icon,
+  ...(app.links ? { links: app.links } : {}),
+});
+
+// Only the original service ids feed the legacy results list; new catalog
+// entries reach users through the applications layer instead.
+const LEGACY_SERVICE_IDS: readonly string[] = ['nextcloud', 'jellyfin', 'moodle', 'wordpress', 'kiwix', 'ubuntumm'] satisfies readonly ServiceKey[];
+
+export const services = Object.fromEntries(
+  (applicationsData as ApplicationEntry[])
+    .filter(app => LEGACY_SERVICE_IDS.includes(app.id))
+    .map(app => [app.id, toServiceSuggestion(app)])
+) as Record<ServiceKey, ServiceSuggestion>;
 
 // OS definitions — names and descriptions use i18n keys
 export const operatingSystems: Record<OSKey, OSSuggestion> = {
