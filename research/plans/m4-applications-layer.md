@@ -119,7 +119,7 @@ New pure module `utils/applications.ts`. It has no React and is fully unit-teste
 
 - `getCandidateApps(goals) => AppEntry[]`: the union of category matches, ranked by `status`, then the number of goals matched, then `maintenance` ascending. Capped per goal (for example 3).
 - `checkCompatibility(app, device, os?) => { ok: boolean; reasons: ReasonKey[] }`:
-  - Architecture: `app.architectures` must include `deviceCapacity[device].architecture`.
+  - Architecture: `app.architectures` must include `deviceCapacity[device].architecture`. An empty list means unknown: warn, do not exclude (PR1 gate).
   - Platform: the OS must support one of `app.platforms`. Add `platforms` to `OSSuggestion`; for example, debian/ubuntu/raspbian run `docker`/`native`/`yunohost`, and butterbox runs `bundled` only.
   - Network: `needsInternet` combined with "no reliable Internet" gives a warning, not exclusion. The Internet answer is a #28 dependency; for now, warn only when `app.network === 'needsInternet'`.
 - `computeCapacity(apps, usersBand) => { minRamGb, recommendedRamGb, minStorageGb, architectures, confidence }`:
@@ -194,6 +194,7 @@ Every PR runs these validation commands from `app/`: `npm run lint`, `npx vitest
   - Catalog test passes.
   - Existing `recommendationScoring`/`osSuggestions` tests pass unchanged.
   - The `getRecommendations` output is deep-equal to before for the existing fixtures.
+- Only the six legacy ids feed the old `services` table; new catalog entries do not change the legacy results list.
 - Can auto-merge (no copy or visual change).
 
 **PR2, `feat(recommendations): compatibility and capacity logic`** (pure functions)
@@ -236,7 +237,7 @@ Every PR runs these validation commands from `app/`: `npm run lint`, `npx vitest
 - **H1 (LocNet).** The canonical category list (#57, #22, hackmd 11). Until it is agreed, the categories ship labelled DRAFT. Also needed: whether `healthWellbeing` and `localEconomy` show with an empty-state message or are hidden.
 - **H2 (team).** Goals as step 0 (recommended, matches the June 11 meeting), or goals replacing `usage` in place at step 9 (no step shift, weaker on AC1 intent). Also decide whether `mainUse` (step 10) stays, since it overlaps with goals.
 - **H3 (team).** Whether users may add or remove apps (the `ApplicationsReview` step), or only see proposals. This plan assumes review with defaults preselected.
-- **H4 (team, evidence).** The capacity heuristic constants: OS base 1 GB, ×1.5 headroom, per-25-user scaling, and the reusedPC assumption of [4,8] GB. These need sign-off and field-report evidence where possible.
+- **H4 (team, evidence).** The capacity heuristic constants: OS base 1 GB, ×1.5 headroom, per-25-user scaling, and the reusedPC assumption of [4,8] GB. PR1 caps reusedPC at 8 GB, but its README says 16 GB is optimal and RAM is upgradable; revisit before PR5. These need sign-off and field-report evidence where possible.
 - **H5 (#57).** The entry-type model. This plan covers **software apps only**. Content packs (Kiwix ZIMs), OS bundles (ButterBox) and practices (SDR, Hetzner) stay where they are now.
 
 ## 9. Risks and open questions

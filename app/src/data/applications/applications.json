@@ -1,0 +1,297 @@
+[
+  {
+    "id": "nextcloud",
+    "i18nKey": "questionnaire.questions.results.services.items.nextcloud",
+    "icon": "☁️",
+    "categories": [
+      "mediaStorage",
+      "officeCollab"
+    ],
+    "legacyCategories": [
+      "files",
+      "news",
+      "education"
+    ],
+    "platforms": [
+      "docker",
+      "yunohost"
+    ],
+    "architectures": [
+      "amd64",
+      "arm64"
+    ],
+    "resources": {
+      "confidence": "estimated",
+      "ramMb": 512
+    },
+    "offline": "unknown",
+    "network": "unknown",
+    "uiLanguages": [],
+    "maintenance": "unknown",
+    "license": "AGPL-3.0",
+    "source": "https://github.com/nextcloud/server",
+    "evidence": [
+      {
+        "url": "https://docs.nextcloud.com/server/latest/admin_manual/installation/system_requirements.html",
+        "kind": "officialDocs",
+        "checked": "2026-11-02"
+      },
+      {
+        "url": "https://github.com/YunoHost-Apps/nextcloud_ynh",
+        "kind": "catalog",
+        "checked": "2026-11-02"
+      },
+      {
+        "url": "https://github.com/nextcloud/server/blob/master/COPYING",
+        "kind": "sourceRepo",
+        "checked": "2026-11-02"
+      },
+      {
+        "url": "https://github.com/docker-library/official-images/blob/master/library/nextcloud",
+        "kind": "officialDocs",
+        "checked": "2026-11-02"
+      }
+    ],
+    "status": "recommended"
+  },
+  {
+    "id": "jellyfin",
+    "i18nKey": "questionnaire.questions.results.services.items.jellyfin",
+    "icon": "🎬",
+    "categories": [
+      "mediaStorage"
+    ],
+    "legacyCategories": [
+      "media"
+    ],
+    "platforms": [
+      "docker",
+      "yunohost"
+    ],
+    "architectures": [
+      "amd64",
+      "arm64"
+    ],
+    "resources": {
+      "confidence": "unknown"
+    },
+    "offline": "unknown",
+    "network": "unknown",
+    "uiLanguages": [],
+    "maintenance": "unknown",
+    "license": "GPL-2.0",
+    "source": "https://github.com/jellyfin/jellyfin",
+    "evidence": [
+      {
+        "url": "https://jellyfin.org/docs/general/installation/",
+        "kind": "officialDocs",
+        "checked": "2026-11-02"
+      },
+      {
+        "url": "https://github.com/coolabnet/community-box/blob/main/services/movies/jellyfin-docker-compose.yml",
+        "kind": "repoResearch",
+        "checked": "2026-11-02"
+      },
+      {
+        "url": "https://github.com/YunoHost-Apps/jellyfin_ynh",
+        "kind": "catalog",
+        "checked": "2026-11-02"
+      },
+      {
+        "url": "https://github.com/jellyfin/jellyfin/blob/master/LICENSE",
+        "kind": "sourceRepo",
+        "checked": "2026-11-02"
+      },
+      {
+        "url": "https://hub.docker.com/r/jellyfin/jellyfin",
+        "kind": "officialDocs",
+        "checked": "2026-11-02"
+      }
+    ],
+    "status": "recommended"
+  },
+  {
+    "id": "moodle",
+    "i18nKey": "questionnaire.questions.results.services.items.moodle",
+    "icon": "📚",
+    "categories": [
+      "education"
+    ],
+    "legacyCategories": [
+      "education"
+    ],
+    "platforms": [
+      "yunohost"
+    ],
+    "architectures": [],
+    "resources": {
+      "confidence": "unknown"
+    },
+    "offline": "unknown",
+    "network": "unknown",
+    "uiLanguages": [],
+    "maintenance": "unknown",
+    "license": "GPL-3.0",
+    "source": "https://github.com/moodle/moodle",
+    "evidence": [
+      {
+        "url": "https://github.com/moodle/moodle",
+        "kind": "sourceRepo",
+        "checked": "2026-11-02"
+      },
+      {
+        "url": "https://github.com/YunoHost-Apps/moodle_ynh",
+        "kind": "catalog",
+        "checked": "2026-11-02"
+      },
+      {
+        "url": "https://github.com/moodle/moodle/blob/main/COPYING.txt",
+        "kind": "sourceRepo",
+        "checked": "2026-11-02"
+      }
+    ],
+    "status": "recommended"
+  },
+  {
+    "id": "wordpress",
+    "i18nKey": "questionnaire.questions.results.services.items.wordpress",
+    "icon": "📝",
+    "categories": [
+      "localMedia"
+    ],
+    "legacyCategories": [
+      "news",
+      "education"
+    ],
+    "platforms": [
+      "docker",
+      "yunohost"
+    ],
+    "architectures": [
+      "amd64",
+      "arm64"
+    ],
+    "resources": {
+      "confidence": "unknown"
+    },
+    "offline": "unknown",
+    "network": "unknown",
+    "uiLanguages": [],
+    "maintenance": "unknown",
+    "license": "GPL-2.0-or-later",
+    "source": "https://github.com/WordPress/WordPress",
+    "evidence": [
+      {
+        "url": "https://wordpress.org/about/requirements/",
+        "kind": "officialDocs",
+        "checked": "2026-11-02"
+      },
+      {
+        "url": "https://github.com/coolabnet/community-box/blob/main/services/portal/wordpress-docker-compose.yml",
+        "kind": "repoResearch",
+        "checked": "2026-11-02"
+      },
+      {
+        "url": "https://github.com/YunoHost-Apps/wordpress_ynh",
+        "kind": "catalog",
+        "checked": "2026-11-02"
+      },
+      {
+        "url": "https://github.com/WordPress/WordPress/blob/master/license.txt",
+        "kind": "sourceRepo",
+        "checked": "2026-11-02"
+      },
+      {
+        "url": "https://github.com/docker-library/official-images/blob/master/library/wordpress",
+        "kind": "officialDocs",
+        "checked": "2026-11-02"
+      }
+    ],
+    "status": "recommended"
+  },
+  {
+    "id": "kiwix",
+    "i18nKey": "questionnaire.questions.results.services.items.kiwix",
+    "icon": "📖",
+    "categories": [
+      "education",
+      "languageCulture"
+    ],
+    "legacyCategories": [
+      "education",
+      "news"
+    ],
+    "platforms": [
+      "docker",
+      "yunohost"
+    ],
+    "architectures": [
+      "amd64",
+      "arm64"
+    ],
+    "resources": {
+      "confidence": "unknown"
+    },
+    "offline": "full",
+    "network": "unknown",
+    "uiLanguages": [],
+    "maintenance": "unknown",
+    "license": "GPL-3.0",
+    "source": "https://github.com/kiwix/kiwix-tools",
+    "evidence": [
+      {
+        "url": "https://kiwix.org",
+        "kind": "officialDocs",
+        "checked": "2026-11-02"
+      },
+      {
+        "url": "https://github.com/YunoHost-Apps/kiwix_ynh",
+        "kind": "catalog",
+        "checked": "2026-11-02"
+      },
+      {
+        "url": "https://github.com/kiwix/kiwix-tools/blob/main/COPYING",
+        "kind": "sourceRepo",
+        "checked": "2026-11-02"
+      },
+      {
+        "url": "https://github.com/kiwix/kiwix-tools/pkgs/container/kiwix-serve",
+        "kind": "officialDocs",
+        "checked": "2026-11-02"
+      }
+    ],
+    "status": "recommended"
+  },
+  {
+    "id": "ubuntumm",
+    "i18nKey": "questionnaire.questions.results.services.items.ubuntumm",
+    "icon": "🌐",
+    "categories": [
+      "networkManagement"
+    ],
+    "legacyCategories": [
+      "files",
+      "education",
+      "news"
+    ],
+    "platforms": [],
+    "architectures": [],
+    "resources": {
+      "confidence": "unknown"
+    },
+    "offline": "unknown",
+    "network": "unknown",
+    "uiLanguages": [],
+    "maintenance": "unknown",
+    "license": "unknown",
+    "source": "https://github.com/coolabnet/community-box/blob/main/app/src/utils/recommendations.ts",
+    "evidence": [
+      {
+        "url": "https://github.com/coolabnet/community-box/blob/main/app/src/utils/recommendations.ts",
+        "kind": "catalog",
+        "checked": "2026-11-02"
+      }
+    ],
+    "status": "candidate"
+  }
+]
