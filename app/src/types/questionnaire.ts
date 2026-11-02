@@ -27,7 +27,15 @@ export interface DeviceScore {
   score: number;
   matchPercentage: number;
   strengths: AttributeKey[];
+  // Set by applyCapacity (utils/applications.ts); absent until capacity is applied.
+  fit?: DeviceFit;
+  fitReasons?: DeviceFitReason[];
+  // RAM size to pick when fit is 'chooseVariant'.
+  suggestedRamGb?: number;
 }
+
+export type DeviceFit = 'ok' | 'chooseVariant' | 'insufficient';
+export type DeviceFitReason = 'insufficientRam' | 'architectureMismatch' | 'chooseRamVariant' | 'belowRecommendedRam';
 
 export type ElectricityAnswer = 'yes' | 'sometimes' | 'no';
 export type UsersAnswer = '1-2' | '3-5' | '6+';
@@ -81,9 +89,13 @@ export interface OSSuggestion {
   recommendedFor: string[];
   difficulty: 'beginner' | 'intermediate' | 'advanced';
   supportedHardware?: DeviceKey[];
+  // Application platforms this OS can host. Omitted = unknown (compatibility warns, never excludes).
+  platforms?: AppPlatform[];
   links?: ResourceLink[];
   requirements?: Requirements;
 }
+
+export type AppPlatform = 'docker' | 'yunohost' | 'casaos' | 'caprover' | 'native' | 'bundled';
 
 export interface Recommendations {
   deviceScores: DeviceScore[];
