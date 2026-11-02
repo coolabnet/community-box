@@ -1,19 +1,19 @@
 {
-  "timestamp": "2026-11-02T17:32:07.496Z",
+  "timestamp": "2026-11-02T17:36:41.293Z",
   "script": "run-all.js",
   "note": "Summary of all data fetching script executions",
   "data": {
-    "execution_time": "2026-11-02T17:32:07.496Z",
+    "execution_time": "2026-11-02T17:36:41.293Z",
     "total_scripts": 7,
     "successful": 7,
     "failed": 0,
-    "total_duration_ms": 21372,
+    "total_duration_ms": 19524,
     "continue_on_error": true,
     "results": [
       {
         "name": "CapRover UI Translations",
         "success": true,
-        "duration": 235,
+        "duration": 144,
         "result": [
           "ar-EG",
           "de-DE",
@@ -36,7 +36,7 @@
       {
         "name": "CasaOS UI Translations",
         "success": true,
-        "duration": 130,
+        "duration": 103,
         "result": [
           "ca_ES",
           "cs_CZ",
@@ -71,7 +71,7 @@
       {
         "name": "YunoHost Apps",
         "success": true,
-        "duration": 17504,
+        "duration": 16974,
         "result": {
           "count": 1030,
           "apps": [
@@ -11425,7 +11425,7 @@
       {
         "name": "YunoHost Docs Translations",
         "success": true,
-        "duration": 145,
+        "duration": 107,
         "result": [
           "de",
           "docs",
@@ -11442,7 +11442,7 @@
       {
         "name": "YunoHost UI Translations",
         "success": true,
-        "duration": 2075,
+        "duration": 1151,
         "result": [
           {
             "language": "French",
@@ -11849,7 +11849,7 @@
       {
         "name": "Zimaboard Shipping Areas",
         "success": true,
-        "duration": 488,
+        "duration": 321,
         "result": [
           "Argentina",
           "Australia",
@@ -11949,7 +11949,7 @@
       {
         "name": "CCCI Directory",
         "success": true,
-        "duration": 795,
+        "duration": 724,
         "result": {
           "rows": 428,
           "count": 443,
