@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-11-02T14:41:23.887Z",
+  "timestamp": "2026-11-02T17:32:03.991Z",
   "script": "run-all.js",
   "source": "YunoHost-Apps GitHub Organization",
   "url": "https://github.com/YunoHost-Apps",
@@ -1874,9 +1874,9 @@
       "name": "django-for-runners",
       "description": "YunoHost app package for https://github.com/jedie/django-for-runners",
       "url": "https://github.com/YunoHost-Apps/django-for-runners_ynh",
-      "stars": 3,
+      "stars": 4,
       "forks": 1,
-      "updated_at": "2026-08-25T17:30:51Z",
+      "updated_at": "2026-11-02T14:56:08Z",
       "language": "Python",
       "archived": false
     },
@@ -1885,9 +1885,9 @@
       "name": "django-fritzconnection",
       "description": "Web based FritzBox management using Python/Django.",
       "url": "https://github.com/YunoHost-Apps/django-fritzconnection_ynh",
-      "stars": 3,
+      "stars": 4,
       "forks": 1,
-      "updated_at": "2026-08-25T17:30:54Z",
+      "updated_at": "2026-11-02T14:55:56Z",
       "language": "Python",
       "archived": false
     },
@@ -5561,7 +5561,7 @@
       "url": "https://github.com/YunoHost-Apps/mattermost_ynh",
       "stars": 36,
       "forks": 18,
-      "updated_at": "2026-10-06T16:04:58Z",
+      "updated_at": "2026-11-02T17:20:52Z",
       "language": "Shell",
       "archived": false
     },
@@ -7387,7 +7387,7 @@
       "url": "https://github.com/YunoHost-Apps/phanpy_ynh",
       "stars": 2,
       "forks": 3,
-      "updated_at": "2026-10-25T22:48:30Z",
+      "updated_at": "2026-11-02T14:52:12Z",
       "language": "Shell",
       "archived": false
     },
@@ -8100,9 +8100,9 @@
       "name": "pyinventory",
       "description": "YunoHost app package for: https://github.com/jedie/PyInventory",
       "url": "https://github.com/YunoHost-Apps/pyinventory_ynh",
-      "stars": 5,
+      "stars": 6,
       "forks": 1,
-      "updated_at": "2026-08-25T17:30:51Z",
+      "updated_at": "2026-11-02T14:56:06Z",
       "language": "Python",
       "archived": false
     },
