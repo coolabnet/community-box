@@ -60,8 +60,6 @@ export const GOAL_ID_ALIASES: Record<string, GoalKey> = {};
 
 // Categories without an application entry yet. Explicit so gaps stay visible.
 export const EMPTY_CATEGORIES_PENDING_RESEARCH: readonly CategoryId[] = [
-  'communication',
-  'territoryMapping',
   'healthWellbeing',
   'localEconomy',
 ];

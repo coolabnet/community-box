@@ -576,5 +576,49 @@
       "environmental": "Ambiental",
       "charging": "Carregamento de dispositivos"
     }
+  },
+  "applicationsCatalog": {
+    "items": {
+      "kolibri": {
+        "name": "Kolibri",
+        "description": "Plataforma de aprendizado offline com aulas, exercícios e acompanhamento do progresso."
+      },
+      "syncthing": {
+        "name": "Syncthing",
+        "description": "Mantém pastas sincronizadas entre dispositivos, sem servidor central."
+      },
+      "filebrowser-quantum": {
+        "name": "FileBrowser Quantum",
+        "description": "Compartilha e gerencia arquivos da caixa em qualquer navegador."
+      },
+      "azuracast": {
+        "name": "AzuraCast",
+        "description": "Gerencia uma rádio web: listas de reprodução, DJs ao vivo e estatísticas."
+      },
+      "pihole": {
+        "name": "Pi-hole",
+        "description": "Bloqueia anúncios e rastreadores de toda a rede por meio do DNS."
+      },
+      "adguardhome": {
+        "name": "AdGuard Home",
+        "description": "Bloqueia anúncios e rastreadores na rede toda, com regras por dispositivo."
+      },
+      "speedtest-tracker": {
+        "name": "Speedtest Tracker",
+        "description": "Faz testes de velocidade regulares e guarda o histórico da velocidade da sua Internet."
+      },
+      "chatmail-relay": {
+        "name": "Chatmail relay",
+        "description": "Servidor próprio para mensagens do Delta Chat, mantido pela comunidade."
+      },
+      "whisper-cpp": {
+        "name": "whisper.cpp",
+        "description": "Transforma fala gravada em texto no seu próprio servidor."
+      },
+      "comapeo-local-server": {
+        "name": "CoMapeo Servidor Local",
+        "description": "Caixa sempre ligada que sincroniza dados do CoMapeo com celulares na rede local."
+      }
+    }
   }
 }

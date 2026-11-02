@@ -1,0 +1,66 @@
+---
+title: Evidencia del catálogo de aplicaciones
+sourcePath: software/applications-catalog.md
+sourceHash: 6dda0e5b1081e82c
+translatedBy: glm-4.6
+---
+
+# Evidencia del catálogo de aplicaciones
+
+Esta página lista el software en `app/src/data/applications/applications.json` y las fuentes detrás de cada entrada. Las categorías están en BORRADOR. Esperan el acuerdo de LocNet ([issue #57](https://github.com/coolabnet/community-box/issues/57)).
+
+- **recommended (recomendado):** el repositorio tiene una guía de despliegue en `services/` para esta app, y la app está mantenida.
+- **candidate (candidata):** la app tiene menos evidencia. Se muestra con una etiqueta de "menos evidencia".
+
+Un número aparece solo cuando un documento oficial lo indica. "documented" (documentado) significa que la fuente indica el número. "estimated" (estimado) significa que lo razonamos a partir de una fuente. "unknown" (desconocido) significa que no hay fuente, por lo que no se da ningún número. Una lista de arquitecturas vacía significa desconocido.
+
+## Entradas
+
+| id | categorías | estado | RAM | arch | plataformas | licencia | evidencia |
+|---|---|---|---|---|---|---|---|
+| nextcloud | mediaStorage, officeCollab | recommended | 512 MB (estimated) | amd64, arm64 | docker, yunohost | AGPL-3.0 | [requisitos](https://docs.nextcloud.com/server/latest/admin_manual/installation/system_requirements.html), [YunoHost](https://github.com/YunoHost-Apps/nextcloud_ynh), [licencia](https://github.com/nextcloud/server/blob/master/COPYING), [imagen](https://github.com/docker-library/official-images/blob/master/library/nextcloud) |
+| jellyfin | mediaStorage | recommended | unknown | amd64, arm64 | docker, yunohost | GPL-2.0 | [docs de instalación](https://jellyfin.org/docs/general/installation/), [YunoHost](https://github.com/YunoHost-Apps/jellyfin_ynh), [licencia](https://github.com/jellyfin/jellyfin/blob/master/LICENSE), [imagen](https://hub.docker.com/r/jellyfin/jellyfin) |
+| moodle | education | recommended | unknown | unknown | yunohost | GPL-3.0 | [repo](https://github.com/moodle/moodle), [YunoHost](https://github.com/YunoHost-Apps/moodle_ynh), [licencia](https://github.com/moodle/moodle/blob/main/COPYING.txt) |
+| wordpress | localMedia | recommended | unknown | amd64, arm64 | docker, yunohost | GPL-2.0-or-later | [requisitos](https://wordpress.org/about/requirements/), [YunoHost](https://github.com/YunoHost-Apps/wordpress_ynh), [licencia](https://github.com/WordPress/WordPress/blob/master/license.txt), [imagen](https://github.com/docker-library/official-images/blob/master/library/wordpress) |
+| kiwix | education, languageCulture | recommended | unknown | amd64, arm64 | docker, yunohost | GPL-3.0 | [sitio](https://kiwix.org), [YunoHost](https://github.com/YunoHost-Apps/kiwix_ynh), [licencia](https://github.com/kiwix/kiwix-tools/blob/main/COPYING), [imagen](https://github.com/kiwix/kiwix-tools/pkgs/container/kiwix-serve) |
+| ubuntumm | networkManagement | candidate | unknown | unknown | none listed | unknown | [fuente del catálogo](https://github.com/coolabnet/community-box/blob/main/app/src/utils/recommendations.ts) |
+| kolibri | education | recommended | unknown | amd64, arm64 | docker, native | MIT | [repo](https://github.com/learningequality/kolibri), [licencia](https://github.com/learningequality/kolibri/blob/develop/LICENSE), [imagen](https://hub.docker.com/r/learningequality/kolibri), [guía](https://github.com/coolabnet/community-box/blob/main/services/education/README.md) |
+| syncthing | mediaStorage | recommended | unknown | amd64, arm64 | docker, yunohost | MPL-2.0 | [licencia](https://github.com/syncthing/syncthing/blob/main/LICENSE), [lanzamientos](https://github.com/syncthing/syncthing/releases/latest), [imagen](https://hub.docker.com/r/syncthing/syncthing), [YunoHost](https://github.com/YunoHost-Apps/syncthing_ynh), [guía](https://github.com/coolabnet/community-box/blob/main/services/files/README.md) |
+| filebrowser-quantum | mediaStorage | candidate | 512 MB (documented) | amd64, arm64 | docker, native | Apache-2.0 | [README](https://github.com/gtsteffaniak/filebrowser/blob/main/README.md), [release v2.0.2-stable](https://github.com/gtsteffaniak/filebrowser/releases/tag/v2.0.2-stable), [licencia](https://github.com/gtsteffaniak/filebrowser/blob/main/LICENSE), [imagen](https://hub.docker.com/r/gtstef/filebrowser), [guía](https://github.com/coolabnet/community-box/blob/main/services/files/README.md) |
+| azuracast | localMedia | recommended | 2048 MB RAM, 20 GB disco (documented) | amd64, arm64 | docker, yunohost | AGPL-3.0 | [requisitos](https://www.azuracast.com/docs/getting-started/requirements/), [licencia](https://github.com/AzuraCast/AzuraCast/blob/main/LICENSE.md), [YunoHost](https://github.com/YunoHost-Apps/azuracast_ynh), [guía](https://github.com/coolabnet/community-box/blob/main/services/radio/README.md) |
+| pihole | networkManagement | recommended | 512 MB RAM, 2 GB disco (documented) | amd64, arm64 | docker, yunohost, native | EUPL-1.2 | [prerrequisitos](https://docs.pi-hole.net/main/prerequisites/), [licencia](https://github.com/pi-hole/pi-hole/blob/master/LICENSE), [imagen](https://hub.docker.com/r/pihole/pihole), [YunoHost](https://github.com/YunoHost-Apps/pihole_ynh), [guía](https://github.com/coolabnet/community-box/blob/main/services/filtering/README.md) |
+| adguardhome | networkManagement | recommended | unknown | amd64, arm64 | docker, yunohost, native | GPL-3.0 | [licencia](https://github.com/AdguardTeam/AdGuardHome/blob/master/LICENSE.txt), [imagen](https://hub.docker.com/r/adguard/adguardhome), [primeros pasos](https://github.com/AdguardTeam/AdGuardHome/wiki/Getting-Started), [YunoHost](https://github.com/YunoHost-Apps/adguardhome_ynh), [guía](https://github.com/coolabnet/community-box/blob/main/services/filtering/README.md) |
+| speedtest-tracker | networkManagement | candidate | unknown | amd64, arm64 | docker | MIT | [README](https://github.com/alexjustesen/speedtest-tracker/blob/1.x/README.md), [licencia](https://github.com/alexjustesen/speedtest-tracker/blob/1.x/LICENSE.md), [imagen](https://hub.docker.com/r/linuxserver/speedtest-tracker), [guía](https://github.com/coolabnet/community-box/blob/main/services/monitoring/README.md) |
+| chatmail-relay | communication | candidate | 1024 MB RAM, 10 GB disco (documented) | unknown | native | MIT | [guía de configuración](https://chatmail.at/doc/relay/getting_started.html), [licencia](https://github.com/chatmail/relay/blob/main/LICENSE), [investigación](https://github.com/coolabnet/community-box/blob/main/research/guides/local-messaging-deltachat.md) |
+| whisper-cpp | languageCulture | candidate | 852 MB RAM (documented, modelo pequeño) | amd64, arm64 | docker, native | MIT | [README](https://github.com/ggml-org/whisper.cpp/blob/master/README.md), [licencia](https://github.com/ggml-org/whisper.cpp/blob/master/LICENSE), [ejemplo de servidor](https://github.com/ggml-org/whisper.cpp/tree/master/examples/server), [investigación](https://github.com/coolabnet/community-box/blob/main/research/guides/offline-transcription-whisper.md) |
+| comapeo-local-server | territoryMapping | candidate | unknown | unknown | native | AGPL-3.0 | [README](https://github.com/digidem/comapeo-local-server/blob/main/README.md), [repo](https://github.com/digidem/comapeo-local-server) |
+
+Verificado el 2026-11-02.
+## Notas sobre números específicos
+
+- **nextcloud, 512 MB (estimado).** La [página de requisitos](https://docs.nextcloud.com/server/latest/admin_manual/installation/system_requirements.html) dice que Nextcloud necesita al menos 128 MB de RAM por proceso y recomienda al menos 512 MB por proceso. Usamos la cifra recomendada para un proceso. La página no da un total para un servidor completo.
+- **whisper-cpp, 852 MB.** El [README](https://github.com/ggml-org/whisper.cpp/blob/master/README.md) lista alrededor de 852 MB de memoria para el modelo `small`. El modelo `tiny` necesita alrededor de 273 MB. Los modelos más grandes necesitan más. La cifra depende del modelo que elijas.
+- **chatmail-relay, 1 GB de RAM y 10 GB de disco.** La [guía de configuración](https://chatmail.at/doc/relay/getting_started.html) dice "1GB RAM, one CPU, and perhaps 10GB storage for a few thousand active" de direcciones. La guía matiza la cifra de almacenamiento con "perhaps".
+- **filebrowser-quantum, 512 MB.** El cuadro comparativo en el [README](https://github.com/gtsteffaniak/filebrowser/blob/main/README.md) lista "Min. Memory Requirements" de 512 MB para Quantum.
+- **azuracast y pihole.** Estas son las cifras mínimas en los requisitos oficiales. AzuraCast también da cifras recomendadas de 4 GB de RAM, 4 núcleos de CPU y 40 GB de disco para algunas estaciones.
+
+## Decisiones que vale la pena conocer
+
+- **FileBrowser Quantum reemplaza a FileBrowser.** El proyecto original archivó el FileBrowser original el 2026-09-01. Su [README](https://github.com/filebrowser/filebrowser/blob/master/README.md) dice que no habrá más versiones ni correcciones de seguridad. En su lugar, listamos el fork mantenido [FileBrowser Quantum](https://github.com/gtsteffaniak/filebrowser). Es un candidato porque `services/files/` todavía despliega la imagen original.
+- **OONI Probe no está en el catálogo.** La [guía del repositorio](https://github.com/coolabnet/community-box/blob/main/research/guides/ooni-network-testing.md) dice que se ejecuta en los dispositivos propios de los miembros y no es un servicio de servidor.
+- **Grafana no está en el catálogo.** `services/monitoring/` lo menciona solo como un complemento opcional de Speedtest Tracker.
+- **Speedtest Tracker es un candidato.** El archivo compose del repositorio usa la imagen `henrywhitaker3/speedtest-tracker`. Docker Hub muestra que su etiqueta más reciente se publicó en 2021. El README del proyecto dice que la imagen ahora es compilada por LinuxServer.io (`linuxserver/speedtest-tracker`).
+- **CoMapeo Local Server, no CoMapeo Cloud.** [CoMapeo Cloud](https://github.com/digidem/comapeo-cloud) está pensado para un host HTTPS público: su README lo despliega en fly.io y lo alcanza en `https://<your-app-name>.fly.dev`. El equipo de CoMapeo dice que necesita HTTPS, por lo que no encaja en un equipo sin conexión. [CoMapeo Local Server](https://github.com/digidem/comapeo-local-server) es un daemon que encuentra teléfonos CoMapeo en la LAN a través de mDNS y se sincroniza con ellos. Su README pide Linux, Node.js 24 o posterior y una LAN, y dice ejecutarlo en el host con `systemd`, no en Docker. El README indica AGPL-3.0, pero el repositorio no tiene archivo LICENSE.
+
+## Preguntas abiertas
+
+- El comportamiento sin conexión y en LAN es desconocido para la mayoría de las entradas nuevas. Solo Kolibri tiene una fuente ([README upstream](https://github.com/learningequality/kolibri/blob/develop/README.md): offline-first). Syncthing se anuncia en la red local ([especificación de descubrimiento](https://docs.syncthing.net/specs/localdisco-v4.html)), por lo que la sincronización en LAN probablemente funciona sin Internet (inferido).
+- Los idiomas de la interfaz están vacíos para todas las entradas nuevas. Ninguna fuente da una lista de idiomas verificada.
+- El nivel de mantenimiento es "unknown" para todas las entradas nuevas. No lo calificamos a partir de la actividad de commits.
+- Faltan los números de recursos para Kolibri, Syncthing, AdGuard Home, Speedtest Tracker y CoMapeo Local Server. No encontramos ninguna cifra oficial.
+- La arquitectura del relay de chatmail es desconocida. La guía de configuración nombra Debian 12 y no nombra una arquitectura de CPU. También es desconocido si un relay funciona sin Internet, como señala la [guía de Delta Chat](https://github.com/coolabnet/community-box/blob/main/research/guides/local-messaging-deltachat.md).
+- El archivo `LICENSE` de Pi-hole aplica EUPL-1.2 a todo el proyecto con excepciones listadas (se infiere que son partes de terceros incluidas). No leímos la lista de excepciones.
+- Si CoMapeo Local Server se sincroniza sin Internet no se indica en su README (inferido de su diseño mDNS solo para LAN). Su compatibilidad con arquitecturas de CPU tampoco se indica.
+- `services/files/` debería pasar de la imagen archivada de FileBrowser a FileBrowser Quantum (`gtstef/filebrowser`). Sin probar todavía.
+- Las entradas de plataforma distintas de YunoHost y Docker (`native`) se basan en los documentos de instalación del proyecto y no fueron probadas.
+- Cuáles de estas aplicaciones ejecutan realmente las comunidades de CoMapeo, Kolibri o Delta Chat en el campo aún no se sabe. No se citan informes de campo.
