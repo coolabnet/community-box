@@ -89,7 +89,7 @@ Use this when working several TODO items at once.
 
 ## In review (PRs)
 
-None. `T3-23` BlankOn waits on Q39.
+None. `T3-23` BlankOn waits on Q39 (partner question).
 
 ## TODO (doable now)
 
@@ -104,7 +104,8 @@ or on human QA of a parked PR.
 names, researched in `research/gg2026-tool-names.md`, need discussion
 with the row authors; `T3-5` also Q22), `T3-4` (Q18), `T3-10` (Q23), `T3-21` (Q33),
 `T3-1` transport detail and catalog entry (Q20, #57
-taxonomy), `#57` taxonomy and PDF sections. `M4` is Phase 2 (#26).
+taxonomy). Q10, Q18, Q20 and Q39 researched in
+`research/gg2026-partner-questions.md`; each waits on a partner answer, `#57` taxonomy and PDF sections. `M4` is Phase 2 (#26).
 
 ## Done
 
