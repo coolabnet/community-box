@@ -110,6 +110,9 @@ taxonomy). Q10, Q18, Q20 and Q39 researched in
 
 ## Done
 
+- `M4` PR1 — application data model, schema and hardware capacity data
+  (no UI change), live 2026-11-02 (PR #85, `c14798c`). Gate SHIP (Opus).
+  #26 stays open; PR2 (compatibility and capacity logic) next.
 - `T2-2` — People question uses the doc wording with community-size
   options Up to 25 / 25–100 / More than 100 (owner pick Q31, from hardware
   capacity), en/pt/es, live 2026-11-01 (PR #84, `cc55716`). Scoring keys
