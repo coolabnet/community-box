@@ -35,7 +35,7 @@ This methodology describes how we systematically evaluate, compare, and document
 - Traffic monitoring (Speedtest)
 - Internet filtering (PiHole/AdGuard)
 - Educational resources (Kolibri)
-- File storage (FileBrowser)
+- File storage (FileBrowser Quantum)
 
 ---
 
