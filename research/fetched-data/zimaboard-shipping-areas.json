@@ -1,6 +1,6 @@
 {
-  "timestamp": "2026-11-02T03:56:36.454Z",
-  "script": "run-all.js",
+  "timestamp": "2026-11-02T14:39:50.954Z",
+  "script": "scripts.test.js",
   "source": "ZimaSpace Shipping Policy",
   "url": "https://www.zimaspace.com/support/shipping-policy",
   "method": "web_scraping",
