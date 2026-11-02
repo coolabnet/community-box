@@ -99,13 +99,14 @@ or on human QA of a parked PR.
 ## Blocked (see `gg2026-decisions.html`)
 
 `T1-7` (resolved Q03, then scope), `T1-8` (Q05), `T1-9`
-(Q09 partner), `T1-10` (Q10), `T1-12` (Q08), `T1-14` (Q06), `T1-15` (Q30),
+(Q09 partner), `T1-10` (Q10), `T1-12` (Q08), `T1-14` (Q06), `T1-15` (Q30: folded into Phase 2 #41),
 `T3-3`, `T3-5`, `T3-11`, `T3-19`, `T3-20`, `T3-22` (Q15 tool
 names, researched in `research/gg2026-tool-names.md`, need discussion
 with the row authors; `T3-5` also Q22), `T3-4` (Q18), `T3-10` (Q23), `T3-21` (Q33),
 `T3-1` transport detail and catalog entry (Q20, #57
 taxonomy). Q10, Q18, Q20 and Q39 researched in
-`research/gg2026-partner-questions.md`; each waits on a partner answer, `#57` taxonomy and PDF sections. `M4` is Phase 2 (#26).
+`research/gg2026-partner-questions.md`; each waits on a partner answer, `#57` taxonomy and PDF sections. `M4` is Phase 2 (#26); plan in
+`research/plans/m4-applications-layer.md` awaits owner review (H1–H5).
 
 ## Done
 
