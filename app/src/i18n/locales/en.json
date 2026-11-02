@@ -576,5 +576,45 @@
       "environmental": "Environmental",
       "charging": "Device charging"
     }
+  },
+  "applicationsCatalog": {
+    "items": {
+      "kolibri": {
+        "name": "Kolibri",
+        "description": "Offline learning platform with lessons, quizzes and progress tracking."
+      },
+      "syncthing": {
+        "name": "Syncthing",
+        "description": "Keeps folders in sync between devices, with no central server."
+      },
+      "azuracast": {
+        "name": "AzuraCast",
+        "description": "Run a web radio station: playlists, live DJs and stats."
+      },
+      "pihole": {
+        "name": "Pi-hole",
+        "description": "Blocks ads and trackers for the whole network through DNS."
+      },
+      "adguardhome": {
+        "name": "AdGuard Home",
+        "description": "Blocks ads and trackers network-wide, with per-device rules."
+      },
+      "speedtest-tracker": {
+        "name": "Speedtest Tracker",
+        "description": "Runs regular speed tests and keeps a history of your Internet speed."
+      },
+      "chatmail-relay": {
+        "name": "Chatmail relay",
+        "description": "Your own server for Delta Chat messages, run by the community."
+      },
+      "whisper-cpp": {
+        "name": "whisper.cpp",
+        "description": "Turns recorded speech into text on your own server."
+      },
+      "comapeo-cloud": {
+        "name": "CoMapeo Cloud",
+        "description": "Self-hosted server to back up and sync CoMapeo map data."
+      }
+    }
   }
 }

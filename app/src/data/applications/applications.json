@@ -293,5 +293,458 @@
       }
     ],
     "status": "candidate"
+  },
+  {
+    "id": "kolibri",
+    "i18nKey": "applicationsCatalog.items.kolibri",
+    "icon": "🎓",
+    "categories": [
+      "education"
+    ],
+    "legacyCategories": [],
+    "platforms": [
+      "docker",
+      "native"
+    ],
+    "architectures": [
+      "amd64",
+      "arm64"
+    ],
+    "resources": {
+      "confidence": "unknown"
+    },
+    "offline": "full",
+    "network": "syncsInternet",
+    "uiLanguages": [],
+    "maintenance": "unknown",
+    "license": "MIT",
+    "source": "https://github.com/learningequality/kolibri",
+    "evidence": [
+      {
+        "url": "https://github.com/learningequality/kolibri",
+        "kind": "sourceRepo",
+        "checked": "2026-11-02"
+      },
+      {
+        "url": "https://github.com/learningequality/kolibri/blob/develop/README.md",
+        "kind": "officialDocs",
+        "checked": "2026-11-02"
+      },
+      {
+        "url": "https://github.com/learningequality/kolibri/blob/develop/LICENSE",
+        "kind": "sourceRepo",
+        "checked": "2026-11-02"
+      },
+      {
+        "url": "https://hub.docker.com/r/learningequality/kolibri",
+        "kind": "officialDocs",
+        "checked": "2026-11-02"
+      },
+      {
+        "url": "https://github.com/coolabnet/community-box/blob/main/services/education/README.md",
+        "kind": "repoResearch",
+        "checked": "2026-11-02"
+      }
+    ],
+    "status": "recommended"
+  },
+  {
+    "id": "syncthing",
+    "i18nKey": "applicationsCatalog.items.syncthing",
+    "icon": "🔄",
+    "categories": [
+      "mediaStorage"
+    ],
+    "legacyCategories": [],
+    "platforms": [
+      "docker",
+      "yunohost"
+    ],
+    "architectures": [
+      "amd64",
+      "arm64"
+    ],
+    "resources": {
+      "confidence": "unknown"
+    },
+    "offline": "unknown",
+    "network": "unknown",
+    "uiLanguages": [],
+    "maintenance": "unknown",
+    "license": "MPL-2.0",
+    "source": "https://github.com/syncthing/syncthing",
+    "evidence": [
+      {
+        "url": "https://github.com/syncthing/syncthing/blob/main/LICENSE",
+        "kind": "sourceRepo",
+        "checked": "2026-11-02"
+      },
+      {
+        "url": "https://github.com/syncthing/syncthing/releases/latest",
+        "kind": "officialDocs",
+        "checked": "2026-11-02"
+      },
+      {
+        "url": "https://hub.docker.com/r/syncthing/syncthing",
+        "kind": "officialDocs",
+        "checked": "2026-11-02"
+      },
+      {
+        "url": "https://github.com/YunoHost-Apps/syncthing_ynh",
+        "kind": "catalog",
+        "checked": "2026-11-02"
+      },
+      {
+        "url": "https://github.com/coolabnet/community-box/blob/main/services/files/README.md",
+        "kind": "repoResearch",
+        "checked": "2026-11-02"
+      }
+    ],
+    "status": "recommended"
+  },
+  {
+    "id": "azuracast",
+    "i18nKey": "applicationsCatalog.items.azuracast",
+    "icon": "📻",
+    "categories": [
+      "localMedia"
+    ],
+    "legacyCategories": [],
+    "platforms": [
+      "docker",
+      "yunohost"
+    ],
+    "architectures": [
+      "amd64",
+      "arm64"
+    ],
+    "resources": {
+      "confidence": "documented",
+      "ramMb": 2048,
+      "storageGb": 20
+    },
+    "offline": "unknown",
+    "network": "unknown",
+    "uiLanguages": [],
+    "maintenance": "unknown",
+    "license": "AGPL-3.0",
+    "source": "https://github.com/AzuraCast/AzuraCast",
+    "evidence": [
+      {
+        "url": "https://www.azuracast.com/docs/getting-started/requirements/",
+        "kind": "officialDocs",
+        "checked": "2026-11-02"
+      },
+      {
+        "url": "https://github.com/AzuraCast/AzuraCast/blob/main/LICENSE.md",
+        "kind": "sourceRepo",
+        "checked": "2026-11-02"
+      },
+      {
+        "url": "https://github.com/YunoHost-Apps/azuracast_ynh",
+        "kind": "catalog",
+        "checked": "2026-11-02"
+      },
+      {
+        "url": "https://github.com/coolabnet/community-box/blob/main/services/radio/README.md",
+        "kind": "repoResearch",
+        "checked": "2026-11-02"
+      }
+    ],
+    "status": "recommended"
+  },
+  {
+    "id": "pihole",
+    "i18nKey": "applicationsCatalog.items.pihole",
+    "icon": "🛡️",
+    "categories": [
+      "networkManagement"
+    ],
+    "legacyCategories": [],
+    "platforms": [
+      "docker",
+      "yunohost",
+      "native"
+    ],
+    "architectures": [
+      "amd64",
+      "arm64"
+    ],
+    "resources": {
+      "confidence": "documented",
+      "ramMb": 512,
+      "storageGb": 2
+    },
+    "offline": "unknown",
+    "network": "unknown",
+    "uiLanguages": [],
+    "maintenance": "unknown",
+    "license": "EUPL-1.2",
+    "source": "https://github.com/pi-hole/pi-hole",
+    "evidence": [
+      {
+        "url": "https://docs.pi-hole.net/main/prerequisites/",
+        "kind": "officialDocs",
+        "checked": "2026-11-02"
+      },
+      {
+        "url": "https://github.com/pi-hole/pi-hole/blob/master/LICENSE",
+        "kind": "sourceRepo",
+        "checked": "2026-11-02"
+      },
+      {
+        "url": "https://hub.docker.com/r/pihole/pihole",
+        "kind": "officialDocs",
+        "checked": "2026-11-02"
+      },
+      {
+        "url": "https://github.com/YunoHost-Apps/pihole_ynh",
+        "kind": "catalog",
+        "checked": "2026-11-02"
+      },
+      {
+        "url": "https://github.com/coolabnet/community-box/blob/main/services/filtering/README.md",
+        "kind": "repoResearch",
+        "checked": "2026-11-02"
+      }
+    ],
+    "status": "recommended"
+  },
+  {
+    "id": "adguardhome",
+    "i18nKey": "applicationsCatalog.items.adguardhome",
+    "icon": "🚫",
+    "categories": [
+      "networkManagement"
+    ],
+    "legacyCategories": [],
+    "platforms": [
+      "docker",
+      "yunohost",
+      "native"
+    ],
+    "architectures": [
+      "amd64",
+      "arm64"
+    ],
+    "resources": {
+      "confidence": "unknown"
+    },
+    "offline": "unknown",
+    "network": "unknown",
+    "uiLanguages": [],
+    "maintenance": "unknown",
+    "license": "GPL-3.0",
+    "source": "https://github.com/AdguardTeam/AdGuardHome",
+    "evidence": [
+      {
+        "url": "https://github.com/AdguardTeam/AdGuardHome/blob/master/LICENSE.txt",
+        "kind": "sourceRepo",
+        "checked": "2026-11-02"
+      },
+      {
+        "url": "https://hub.docker.com/r/adguard/adguardhome",
+        "kind": "officialDocs",
+        "checked": "2026-11-02"
+      },
+      {
+        "url": "https://github.com/AdguardTeam/AdGuardHome/wiki/Getting-Started",
+        "kind": "officialDocs",
+        "checked": "2026-11-02"
+      },
+      {
+        "url": "https://github.com/YunoHost-Apps/adguardhome_ynh",
+        "kind": "catalog",
+        "checked": "2026-11-02"
+      },
+      {
+        "url": "https://github.com/coolabnet/community-box/blob/main/services/filtering/README.md",
+        "kind": "repoResearch",
+        "checked": "2026-11-02"
+      }
+    ],
+    "status": "recommended"
+  },
+  {
+    "id": "speedtest-tracker",
+    "i18nKey": "applicationsCatalog.items.speedtest-tracker",
+    "icon": "📈",
+    "categories": [
+      "networkManagement"
+    ],
+    "legacyCategories": [],
+    "platforms": [
+      "docker"
+    ],
+    "architectures": [
+      "amd64",
+      "arm64"
+    ],
+    "resources": {
+      "confidence": "unknown"
+    },
+    "offline": "none",
+    "network": "needsInternet",
+    "uiLanguages": [],
+    "maintenance": "unknown",
+    "license": "MIT",
+    "source": "https://github.com/alexjustesen/speedtest-tracker",
+    "evidence": [
+      {
+        "url": "https://github.com/alexjustesen/speedtest-tracker/blob/1.x/README.md",
+        "kind": "sourceRepo",
+        "checked": "2026-11-02"
+      },
+      {
+        "url": "https://github.com/alexjustesen/speedtest-tracker/blob/1.x/LICENSE.md",
+        "kind": "sourceRepo",
+        "checked": "2026-11-02"
+      },
+      {
+        "url": "https://hub.docker.com/r/linuxserver/speedtest-tracker",
+        "kind": "officialDocs",
+        "checked": "2026-11-02"
+      },
+      {
+        "url": "https://github.com/coolabnet/community-box/blob/main/services/monitoring/README.md",
+        "kind": "repoResearch",
+        "checked": "2026-11-02"
+      }
+    ],
+    "status": "candidate"
+  },
+  {
+    "id": "chatmail-relay",
+    "i18nKey": "applicationsCatalog.items.chatmail-relay",
+    "icon": "💬",
+    "categories": [
+      "communication"
+    ],
+    "legacyCategories": [],
+    "platforms": [
+      "native"
+    ],
+    "architectures": [],
+    "resources": {
+      "confidence": "documented",
+      "ramMb": 1024,
+      "storageGb": 10
+    },
+    "offline": "unknown",
+    "network": "unknown",
+    "uiLanguages": [],
+    "maintenance": "unknown",
+    "license": "MIT",
+    "source": "https://github.com/chatmail/relay",
+    "evidence": [
+      {
+        "url": "https://chatmail.at/doc/relay/getting_started.html",
+        "kind": "officialDocs",
+        "checked": "2026-11-02"
+      },
+      {
+        "url": "https://github.com/chatmail/relay/blob/main/LICENSE",
+        "kind": "sourceRepo",
+        "checked": "2026-11-02"
+      },
+      {
+        "url": "https://github.com/coolabnet/community-box/blob/main/research/guides/local-messaging-deltachat.md",
+        "kind": "repoResearch",
+        "checked": "2026-11-02"
+      }
+    ],
+    "status": "candidate"
+  },
+  {
+    "id": "whisper-cpp",
+    "i18nKey": "applicationsCatalog.items.whisper-cpp",
+    "icon": "🎙️",
+    "categories": [
+      "languageCulture"
+    ],
+    "legacyCategories": [],
+    "platforms": [
+      "docker",
+      "native"
+    ],
+    "architectures": [
+      "amd64",
+      "arm64"
+    ],
+    "resources": {
+      "confidence": "documented",
+      "ramMb": 852
+    },
+    "offline": "unknown",
+    "network": "unknown",
+    "uiLanguages": [],
+    "maintenance": "unknown",
+    "license": "MIT",
+    "source": "https://github.com/ggml-org/whisper.cpp",
+    "evidence": [
+      {
+        "url": "https://github.com/ggml-org/whisper.cpp/blob/master/README.md",
+        "kind": "officialDocs",
+        "checked": "2026-11-02"
+      },
+      {
+        "url": "https://github.com/ggml-org/whisper.cpp/blob/master/LICENSE",
+        "kind": "sourceRepo",
+        "checked": "2026-11-02"
+      },
+      {
+        "url": "https://github.com/ggml-org/whisper.cpp/tree/master/examples/server",
+        "kind": "sourceRepo",
+        "checked": "2026-11-02"
+      },
+      {
+        "url": "https://github.com/coolabnet/community-box/blob/main/research/guides/offline-transcription-whisper.md",
+        "kind": "repoResearch",
+        "checked": "2026-11-02"
+      }
+    ],
+    "status": "candidate"
+  },
+  {
+    "id": "comapeo-cloud",
+    "i18nKey": "applicationsCatalog.items.comapeo-cloud",
+    "icon": "🗺️",
+    "categories": [
+      "territoryMapping"
+    ],
+    "legacyCategories": [],
+    "platforms": [
+      "docker"
+    ],
+    "architectures": [
+      "amd64"
+    ],
+    "resources": {
+      "confidence": "unknown"
+    },
+    "offline": "unknown",
+    "network": "syncsInternet",
+    "uiLanguages": [],
+    "maintenance": "unknown",
+    "license": "MIT",
+    "source": "https://github.com/digidem/comapeo-cloud",
+    "evidence": [
+      {
+        "url": "https://github.com/digidem/comapeo-cloud/blob/main/README.md",
+        "kind": "officialDocs",
+        "checked": "2026-11-02"
+      },
+      {
+        "url": "https://github.com/digidem/comapeo-cloud/blob/main/package.json",
+        "kind": "sourceRepo",
+        "checked": "2026-11-02"
+      },
+      {
+        "url": "https://hub.docker.com/r/communityfirst/comapeo-cloud",
+        "kind": "officialDocs",
+        "checked": "2026-11-02"
+      }
+    ],
+    "status": "candidate"
   }
 ]
