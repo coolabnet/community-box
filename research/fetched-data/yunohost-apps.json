@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-11-01T21:15:27.429Z",
+  "timestamp": "2026-11-02T03:41:45.727Z",
   "script": "run-all.js",
   "source": "YunoHost-Apps GitHub Organization",
   "url": "https://github.com/YunoHost-Apps",
@@ -4307,7 +4307,7 @@
       "url": "https://github.com/YunoHost-Apps/it-tools_ynh",
       "stars": 4,
       "forks": 1,
-      "updated_at": "2026-10-26T14:38:03Z",
+      "updated_at": "2026-11-01T23:56:45Z",
       "language": "Shell",
       "archived": false
     },
@@ -6870,7 +6870,7 @@
       "url": "https://github.com/YunoHost-Apps/opengym_ynh",
       "stars": 1,
       "forks": 0,
-      "updated_at": "2026-11-01T16:46:15Z",
+      "updated_at": "2026-11-01T22:04:58Z",
       "language": "Shell",
       "archived": false
     },
@@ -10379,7 +10379,7 @@
       "url": "https://github.com/YunoHost-Apps/virtualtabletop_ynh",
       "stars": 3,
       "forks": 0,
-      "updated_at": "2026-10-19T03:42:33Z",
+      "updated_at": "2026-11-02T03:35:57Z",
       "language": "Shell",
       "archived": false
     },

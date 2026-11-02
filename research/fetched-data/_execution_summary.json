@@ -1,19 +1,19 @@
 {
-  "timestamp": "2026-11-01T21:15:30.349Z",
+  "timestamp": "2026-11-02T03:41:51.788Z",
   "script": "run-all.js",
   "note": "Summary of all data fetching script executions",
   "data": {
-    "execution_time": "2026-11-01T21:15:30.349Z",
+    "execution_time": "2026-11-02T03:41:51.788Z",
     "total_scripts": 7,
     "successful": 7,
     "failed": 0,
-    "total_duration_ms": 15346,
+    "total_duration_ms": 18139,
     "continue_on_error": true,
     "results": [
       {
         "name": "CapRover UI Translations",
         "success": true,
-        "duration": 301,
+        "duration": 252,
         "result": [
           "ar-EG",
           "de-DE",
@@ -36,7 +36,7 @@
       {
         "name": "CasaOS UI Translations",
         "success": true,
-        "duration": 147,
+        "duration": 164,
         "result": [
           "ca_ES",
           "cs_CZ",
@@ -71,7 +71,7 @@
       {
         "name": "YunoHost Apps",
         "success": true,
-        "duration": 11981,
+        "duration": 11666,
         "result": {
           "count": 1030,
           "apps": [
@@ -4361,7 +4361,7 @@
               "url": "https://github.com/YunoHost-Apps/it-tools_ynh",
               "stars": 4,
               "forks": 1,
-              "updated_at": "2026-10-26T14:38:03Z",
+              "updated_at": "2026-11-01T23:56:45Z",
               "language": "Shell",
               "archived": false
             },
@@ -6924,7 +6924,7 @@
               "url": "https://github.com/YunoHost-Apps/opengym_ynh",
               "stars": 1,
               "forks": 0,
-              "updated_at": "2026-11-01T16:46:15Z",
+              "updated_at": "2026-11-01T22:04:58Z",
               "language": "Shell",
               "archived": false
             },
@@ -10433,7 +10433,7 @@
               "url": "https://github.com/YunoHost-Apps/virtualtabletop_ynh",
               "stars": 3,
               "forks": 0,
-              "updated_at": "2026-10-19T03:42:33Z",
+              "updated_at": "2026-11-02T03:35:57Z",
               "language": "Shell",
               "archived": false
             },
@@ -11425,7 +11425,7 @@
       {
         "name": "YunoHost Docs Translations",
         "success": true,
-        "duration": 117,
+        "duration": 131,
         "result": [
           "de",
           "docs",
@@ -11442,7 +11442,7 @@
       {
         "name": "YunoHost UI Translations",
         "success": true,
-        "duration": 1596,
+        "duration": 4687,
         "result": [
           {
             "language": "French",
@@ -11849,7 +11849,7 @@
       {
         "name": "Zimaboard Shipping Areas",
         "success": true,
-        "duration": 376,
+        "duration": 396,
         "result": [
           "Argentina",
           "Australia",
@@ -11949,7 +11949,7 @@
       {
         "name": "CCCI Directory",
         "success": true,
-        "duration": 828,
+        "duration": 843,
         "result": {
           "rows": 428,
           "count": 443,
