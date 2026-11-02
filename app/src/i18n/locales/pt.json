@@ -587,6 +587,10 @@
         "name": "Syncthing",
         "description": "Mantém pastas sincronizadas entre dispositivos, sem servidor central."
       },
+      "filebrowser-quantum": {
+        "name": "FileBrowser Quantum",
+        "description": "Compartilha e gerencia arquivos da caixa em qualquer navegador."
+      },
       "azuracast": {
         "name": "AzuraCast",
         "description": "Gerencia uma rádio web: listas de reprodução, DJs ao vivo e estatísticas."
@@ -611,9 +615,9 @@
         "name": "whisper.cpp",
         "description": "Transforma fala gravada em texto no seu próprio servidor."
       },
-      "comapeo-cloud": {
-        "name": "CoMapeo Cloud",
-        "description": "Servidor próprio para guardar e sincronizar dados de mapas do CoMapeo."
+      "comapeo-local-server": {
+        "name": "CoMapeo Servidor Local",
+        "description": "Caixa sempre ligada que sincroniza dados do CoMapeo com celulares na rede local."
       }
     }
   }

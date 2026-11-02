@@ -403,6 +403,61 @@
     "status": "recommended"
   },
   {
+    "id": "filebrowser-quantum",
+    "i18nKey": "applicationsCatalog.items.filebrowser-quantum",
+    "icon": "📂",
+    "categories": [
+      "mediaStorage"
+    ],
+    "legacyCategories": [],
+    "platforms": [
+      "docker",
+      "native"
+    ],
+    "architectures": [
+      "amd64",
+      "arm64"
+    ],
+    "resources": {
+      "ramMb": 512,
+      "confidence": "documented"
+    },
+    "offline": "unknown",
+    "network": "unknown",
+    "uiLanguages": [],
+    "maintenance": "unknown",
+    "license": "Apache-2.0",
+    "source": "https://github.com/gtsteffaniak/filebrowser",
+    "evidence": [
+      {
+        "url": "https://github.com/gtsteffaniak/filebrowser/blob/main/README.md",
+        "kind": "officialDocs",
+        "checked": "2026-11-02"
+      },
+      {
+        "url": "https://github.com/gtsteffaniak/filebrowser/releases/tag/v2.0.2-stable",
+        "kind": "sourceRepo",
+        "checked": "2026-11-02"
+      },
+      {
+        "url": "https://github.com/gtsteffaniak/filebrowser/blob/main/LICENSE",
+        "kind": "sourceRepo",
+        "checked": "2026-11-02"
+      },
+      {
+        "url": "https://hub.docker.com/r/gtstef/filebrowser",
+        "kind": "catalog",
+        "checked": "2026-11-02"
+      },
+      {
+        "url": "https://github.com/coolabnet/community-box/blob/main/services/files/README.md",
+        "kind": "repoResearch",
+        "checked": "2026-11-02"
+      }
+    ],
+    "status": "candidate"
+  },
+  {
     "id": "azuracast",
     "i18nKey": "applicationsCatalog.items.azuracast",
     "icon": "📻",
@@ -706,42 +761,35 @@
     "status": "candidate"
   },
   {
-    "id": "comapeo-cloud",
-    "i18nKey": "applicationsCatalog.items.comapeo-cloud",
+    "id": "comapeo-local-server",
+    "i18nKey": "applicationsCatalog.items.comapeo-local-server",
     "icon": "🗺️",
     "categories": [
       "territoryMapping"
     ],
     "legacyCategories": [],
     "platforms": [
-      "docker"
+      "native"
     ],
-    "architectures": [
-      "amd64"
-    ],
+    "architectures": [],
     "resources": {
       "confidence": "unknown"
     },
     "offline": "unknown",
-    "network": "syncsInternet",
+    "network": "lan",
     "uiLanguages": [],
     "maintenance": "unknown",
-    "license": "MIT",
-    "source": "https://github.com/digidem/comapeo-cloud",
+    "license": "AGPL-3.0",
+    "source": "https://github.com/digidem/comapeo-local-server",
     "evidence": [
       {
-        "url": "https://github.com/digidem/comapeo-cloud/blob/main/README.md",
+        "url": "https://github.com/digidem/comapeo-local-server/blob/main/README.md",
         "kind": "officialDocs",
         "checked": "2026-11-02"
       },
       {
-        "url": "https://github.com/digidem/comapeo-cloud/blob/main/package.json",
+        "url": "https://github.com/digidem/comapeo-local-server",
         "kind": "sourceRepo",
-        "checked": "2026-11-02"
-      },
-      {
-        "url": "https://hub.docker.com/r/communityfirst/comapeo-cloud",
-        "kind": "officialDocs",
         "checked": "2026-11-02"
       }
     ],
