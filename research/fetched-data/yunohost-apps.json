@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-11-02T17:36:38.987Z",
+  "timestamp": "2026-11-03T10:17:48.563Z",
   "script": "run-all.js",
   "source": "YunoHost-Apps GitHub Organization",
   "url": "https://github.com/YunoHost-Apps",
@@ -116,7 +116,7 @@
       "url": "https://github.com/YunoHost-Apps/actual_ynh",
       "stars": 7,
       "forks": 6,
-      "updated_at": "2026-10-25T22:25:53Z",
+      "updated_at": "2026-11-03T09:03:03Z",
       "language": "Shell",
       "archived": false
     },
@@ -2272,7 +2272,7 @@
       "url": "https://github.com/YunoHost-Apps/element_ynh",
       "stars": 24,
       "forks": 10,
-      "updated_at": "2026-10-17T09:43:14Z",
+      "updated_at": "2026-11-02T20:34:16Z",
       "language": "Shell",
       "archived": false
     },
@@ -2437,7 +2437,7 @@
       "url": "https://github.com/YunoHost-Apps/etherpad_ynh",
       "stars": 3,
       "forks": 4,
-      "updated_at": "2026-10-28T17:47:01Z",
+      "updated_at": "2026-11-02T22:17:31Z",
       "language": "Shell",
       "archived": false
     },
@@ -4174,7 +4174,7 @@
       "description": "Photo and video backup solution directly from your mobile phone.",
       "url": "https://github.com/YunoHost-Apps/immich_ynh",
       "stars": 30,
-      "forks": 16,
+      "forks": 15,
       "updated_at": "2026-10-26T17:19:16Z",
       "language": "Shell",
       "archived": false
@@ -5946,7 +5946,7 @@
       "url": "https://github.com/YunoHost-Apps/miniflux_ynh",
       "stars": 8,
       "forks": 2,
-      "updated_at": "2026-07-27T04:48:09Z",
+      "updated_at": "2026-11-03T07:28:01Z",
       "language": "Shell",
       "archived": false
     },
@@ -6814,7 +6814,7 @@
       "description": "User-friendly AI Interface (Supports Ollama, OpenAI API, ...)",
       "url": "https://github.com/YunoHost-Apps/open-webui_ynh",
       "stars": 5,
-      "forks": 4,
+      "forks": 5,
       "updated_at": "2026-09-04T15:18:30Z",
       "language": "Shell",
       "archived": false
@@ -7475,7 +7475,7 @@
       "url": "https://github.com/YunoHost-Apps/phpipam_ynh",
       "stars": 2,
       "forks": 3,
-      "updated_at": "2026-09-30T23:37:30Z",
+      "updated_at": "2026-11-02T22:17:47Z",
       "language": "PHP",
       "archived": false
     },
@@ -9598,7 +9598,7 @@
       "url": "https://github.com/YunoHost-Apps/synapse_ynh",
       "stars": 86,
       "forks": 48,
-      "updated_at": "2026-10-24T11:11:12Z",
+      "updated_at": "2026-11-02T20:34:23Z",
       "language": "Shell",
       "archived": false
     },
@@ -10478,7 +10478,7 @@
       "url": "https://github.com/YunoHost-Apps/warpgate_ynh",
       "stars": 1,
       "forks": 0,
-      "updated_at": "2026-10-26T19:35:17Z",
+      "updated_at": "2026-11-03T02:16:53Z",
       "language": "Shell",
       "archived": false
     },
