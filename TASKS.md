@@ -93,9 +93,6 @@ None. `T3-23` BlankOn waits on Q39 (partner question).
 
 ## TODO (doable now)
 
-- `services/files/` — replace the archived FileBrowser image with FileBrowser
-  Quantum (`gtstef/filebrowser`, owner pick 2026-11-02); then mark
-  `filebrowser-quantum` recommended in the catalog.
 - `M4` PR4 — goals-first step and state v3 (plan §7; `needs-human-qa`).
 
 Everything else waits on a decision in `gg2026-decisions.html` or on human
@@ -115,6 +112,11 @@ taxonomy). Q10, Q18, Q20 and Q39 researched in
 
 ## Done
 
+- `services/files/` — moved from the archived FileBrowser to FileBrowser
+  Quantum (`gtstef/filebrowser`), with Syncthing start step and rootless
+  notes; catalog `filebrowser-quantum` now recommended. Smoke-tested on
+  rootless Docker (amd64), live 2026-11-03 (PR #89, `20619df`). Not tested
+  on box hardware or arm64.
 - `T1-15` — hamburger menu links the Telegram AI assistant demo bot
   `@Comm_box_demo_bot` (owner-provided, Q30), en/pt/es, live 2026-11-02
   (PR #88, `036f7d9`). The full assistant stays in Phase 2 #41.
@@ -123,7 +125,7 @@ taxonomy). Q10, Q18, Q20 and Q39 researched in
   FileBrowser) and the evidence table
   `research/software/applications-catalog.md`, live 2026-11-02 (PR #87,
   `8c52021`). Gate SHIP (Opus). Not shown in the questionnaire until
-  PR4/PR5. Follow-up: move `services/files/` to FileBrowser Quantum.
+  PR4/PR5. Follow-up done: `services/files/` on FileBrowser Quantum (PR #89).
 - `M4` PR1 — application data model, schema and hardware capacity data
   (no UI change), live 2026-11-02 (PR #85, `c14798c`). Gate SHIP (Opus).
   #26 stays open.
