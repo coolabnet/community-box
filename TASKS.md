@@ -89,11 +89,16 @@ Use this when working several TODO items at once.
 
 ## In review (PRs)
 
-None. `T3-23` BlankOn waits on Q39 (partner question).
+- `M4` PR4 — goals-first step and state v3, PR #90 (`needs-human-qa`).
+  Gate SHIP (gpt-6.1-terra, 3 BLOCK rounds), browser QA 12/12. Human
+  checks: goal/review copy en/pt/es, the emergency-messaging goal with an
+  unverified offline app, showing goals that have no apps (H1).
+
+`T3-23` BlankOn waits on Q39 (partner question).
 
 ## TODO (doable now)
 
-- `M4` PR4 — goals-first step and state v3 (plan §7; `needs-human-qa`).
+None. Next after PR #90 merges: `M4` PR5 (capacity-aware results).
 
 Everything else waits on a decision in `gg2026-decisions.html` or on human
 QA of a parked PR.
