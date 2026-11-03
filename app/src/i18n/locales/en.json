@@ -294,7 +294,8 @@
               "name": "Ubuntu MM",
               "description": "Community management system for internet access and monitoring"
             }
-          }
+          },
+          "none": "No applications selected."
         },
         "operatingSystems": {
           "title": "Recommended Operating Systems",
@@ -352,6 +353,69 @@
             "shared": "On shared devices, use separate user accounts, log out after use, and avoid saving passwords in the browser."
           }
         }
+      },
+      "goals": {
+        "question": "What do you want your community to do with the box?",
+        "description": "Choose all that apply. Later, we suggest applications for these goals.",
+        "selectAtLeastOne": "Choose at least one option",
+        "continue": "Continue",
+        "education": {
+          "name": "Learning and schools",
+          "help": "Courses, lessons and school material for learners."
+        },
+        "mediaStorage": {
+          "name": "Store and share photos, video, audio and documents",
+          "help": "Keep files safe and share them with people nearby."
+        },
+        "officeCollab": {
+          "name": "Work together on documents",
+          "help": "Write, edit and plan together in the same files."
+        },
+        "localMedia": {
+          "name": "Local news, radio and portal",
+          "help": "Publish news, run a web radio or a local web page."
+        },
+        "communication": {
+          "name": "Message each other, also in emergencies",
+          "help": "Chat and share alerts with people nearby."
+        },
+        "networkManagement": {
+          "name": "Manage and protect the network",
+          "help": "Block unwanted content and check the network."
+        },
+        "languageCulture": {
+          "name": "Keep language, memory and archives",
+          "help": "Save stories, recordings and texts of your community."
+        },
+        "territoryMapping": {
+          "name": "Map and monitor territory",
+          "help": "Collect places and field data on a map."
+        },
+        "healthWellbeing": {
+          "name": "Health and well-being",
+          "help": "Health information and care for the community."
+        },
+        "localEconomy": {
+          "name": "Local and circular economy",
+          "help": "Tools for local trade, sharing and reuse."
+        },
+        "other": {
+          "name": "Something else",
+          "help": "Tell us what else you will use it for.",
+          "placeholder": "Please specify..."
+        }
+      },
+      "applications": {
+        "question": "Review the suggested applications",
+        "description": "We selected the best matches for each goal. Turn applications on or off.",
+        "continue": "Continue",
+        "badges": {
+          "lessEvidence": "Less evidence",
+          "worksOffline": "Works offline",
+          "needsInternet": "Needs Internet"
+        },
+        "empty": "No applications researched for this goal yet.",
+        "otherOnly": "We cannot suggest applications from free text. You can continue."
       }
     },
     "moreInformation": "More information",

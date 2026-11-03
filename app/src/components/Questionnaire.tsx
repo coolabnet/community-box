@@ -5,13 +5,15 @@ import { useQuestionnaire } from '@/context/QuestionnaireContext';
 import ProgressBar from './ProgressBar';
 import QuestionCard from './QuestionCard';
 import PointsAllocation from './PointsAllocation';
-import UsageSelection from './UsageSelection';
+import { needsGoalsFirst } from '@/utils/questionnaireFlow';
+import GoalSelection from './GoalSelection';
+import ApplicationsReview from './ApplicationsReview';
 import AccessDevicesSelection from './AccessDevicesSelection';
 import RecommendationResults from './RecommendationResults';
 import ErrorBoundary from './ErrorBoundary';
 import { AnimatePresence } from 'framer-motion';
 import { Trans, useTranslation } from 'react-i18next';
-import type { AccessDeviceValues, PriorityAllocation, UsageSelectionValues, UserAnswers } from '@/types/questionnaire';
+import type { AccessDeviceValues, AppSelectionValues, GoalSelectionValues, PriorityAllocation, UserAnswers } from '@/types/questionnaire';
 
 const Questionnaire = () => {
   const { t } = useTranslation();
@@ -19,7 +21,13 @@ const Questionnaire = () => {
 
   const helpLinkClass = 'font-medium underline underline-offset-4 hover:text-primary';
 
+  // Keep SURVEY_STEP_COUNT (utils/statePersistence.ts) equal to this list's length.
   const questions = [
+    {
+      id: 'goals',
+      question: t('questionnaire.questions.goals.question'),
+      type: 'custom',
+    },
     {
       id: 'electricity',
       question: t('questionnaire.questions.electricity.question'),
@@ -119,8 +127,8 @@ const Questionnaire = () => {
       type: 'custom',
     },
     {
-      id: 'usage',
-      question: t('questionnaire.questions.usage.question'),
+      id: 'applications',
+      question: t('questionnaire.questions.applications.question'),
       type: 'custom',
     },
     {
@@ -157,7 +165,7 @@ const Questionnaire = () => {
     }
   };
 
-  const currentQuestion = questions[currentStep];
+  const currentQuestion = questions[Math.min(Math.max(Math.floor(currentStep) || 0, 0), questions.length - 1)];
 
   // Handle points allocation
   const handlePointsAllocation = (values: PriorityAllocation) => {
@@ -165,9 +173,16 @@ const Questionnaire = () => {
     handleNext();
   };
 
-  // Handle usage selection
-  const handleUsageSelection = (values: UsageSelectionValues) => {
-    setAnswer('usage', values);
+  // Handle goals selection
+  const handleGoalsSelection = (values: GoalSelectionValues) => {
+    setAnswer('goals', values);
+    // Goals asked late (applications step) stay on this step so the review shows next
+    if (currentQuestion.id === 'goals') handleNext();
+  };
+
+  // Handle applications review
+  const handleApplicationsSelection = (values: AppSelectionValues) => {
+    setAnswer('apps', values);
     handleNext();
   };
 
@@ -193,11 +208,23 @@ const Questionnaire = () => {
           onBack={handleBack}
         />
       );
-    } else if (currentQuestion.id === 'usage') {
+    } else if (currentQuestion.id === 'goals' || needsGoalsFirst(currentQuestion.id, answers as UserAnswers)) {
       return (
-        <UsageSelection
-          key="usage-selection"
-          onNext={handleUsageSelection}
+        <GoalSelection
+          key="goal-selection"
+          initialValues={(answers as UserAnswers).goals}
+          onNext={handleGoalsSelection}
+          onBack={currentQuestion.id === 'goals' ? undefined : handleBack}
+        />
+      );
+    } else if (currentQuestion.id === 'applications') {
+      return (
+        <ApplicationsReview
+          key="applications-review"
+          goals={(answers as UserAnswers).goals ?? {}}
+          initialValues={(answers as UserAnswers).apps}
+          onNext={handleApplicationsSelection}
+          onChange={values => setAnswer('apps', values)}
           onBack={handleBack}
         />
       );
