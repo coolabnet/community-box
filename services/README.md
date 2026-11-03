@@ -25,7 +25,7 @@ This directory contains Docker Compose configurations for various services that 
    - Kolibri
 
 7. **[Files](./files/)** - File storage and sharing
-   - FileBrowser
+   - FileBrowser Quantum
    - Syncthing
 
 ## Usage

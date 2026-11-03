@@ -1,21 +1,19 @@
-version: '3'
-
 services:
   filebrowser:
-    image: filebrowser/filebrowser:latest
+    # FileBrowser Quantum, the maintained fork of FileBrowser.
+    # The original filebrowser/filebrowser image was archived on 2026-09-01.
+    # Pin a release such as 2.0.2-stable for reproducible installs.
+    image: gtstef/filebrowser:${FB_TAG:-stable}
     container_name: filebrowser
-    user: 1000:1000
+    user: "1000:1000"
     ports:
       - "8080:80"
     volumes:
-      - ./data:/srv # The directory you want to browse/manage
-      - filebrowser_config:/config
-      - filebrowser_database:/database
+      - ./data:/folder # The files people browse, upload and share
+      - ./filebrowser:/home/filebrowser/data # config.yaml, database, cache
     environment:
-      - FB_BASEURL=${FB_BASEURL:-/}
-      - FB_NOAUTH=${FB_NOAUTH:-false} # Set to true to disable authentication
-      - FB_USERNAME=${FB_USERNAME:-admin} # Default username
-      - FB_PASSWORD=${FB_PASSWORD:-admin} # Default password
+      # Leave empty to get a one-time random password in the logs.
+      - FILEBROWSER_ADMIN_PASSWORD=${FB_ADMIN_PASSWORD:-}
     restart: unless-stopped
     networks:
       - files_network
@@ -32,14 +30,12 @@ services:
       - "21027:21027/udp" # Discovery broadcast
     volumes:
       - syncthing_config:/var/syncthing/config
-      - ./data:/var/syncthing/data # Same directory as filebrowser
+      - ./data:/var/syncthing/data # Same directory as FileBrowser
     restart: unless-stopped
     networks:
       - files_network
 
 volumes:
-  filebrowser_config:
-  filebrowser_database:
   syncthing_config:
 
 networks:
