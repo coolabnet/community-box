@@ -1,19 +1,19 @@
 {
-  "timestamp": "2026-11-03T13:58:57.247Z",
+  "timestamp": "2026-11-04T14:14:39.048Z",
   "script": "run-all.js",
   "note": "Summary of all data fetching script executions",
   "data": {
-    "execution_time": "2026-11-03T13:58:57.247Z",
+    "execution_time": "2026-11-04T14:14:39.048Z",
     "total_scripts": 7,
     "successful": 7,
     "failed": 0,
-    "total_duration_ms": 19920,
+    "total_duration_ms": 20315,
     "continue_on_error": true,
     "results": [
       {
         "name": "CapRover UI Translations",
         "success": true,
-        "duration": 311,
+        "duration": 217,
         "result": [
           "ar-EG",
           "de-DE",
@@ -36,7 +36,7 @@
       {
         "name": "CasaOS UI Translations",
         "success": true,
-        "duration": 220,
+        "duration": 248,
         "result": [
           "ca_ES",
           "cs_CZ",
@@ -71,7 +71,7 @@
       {
         "name": "YunoHost Apps",
         "success": true,
-        "duration": 15612,
+        "duration": 15963,
         "result": {
           "count": 1030,
           "apps": [
@@ -676,7 +676,7 @@
               "url": "https://github.com/YunoHost-Apps/bentopdf_ynh",
               "stars": 3,
               "forks": 0,
-              "updated_at": "2026-11-01T19:10:03Z",
+              "updated_at": "2026-11-03T21:56:17Z",
               "language": "Shell",
               "archived": false
             },
@@ -1248,7 +1248,7 @@
               "url": "https://github.com/YunoHost-Apps/code-server_ynh",
               "stars": 9,
               "forks": 3,
-              "updated_at": "2026-10-26T21:35:39Z",
+              "updated_at": "2026-11-04T10:43:49Z",
               "language": "Shell",
               "archived": false
             },
@@ -1633,7 +1633,7 @@
               "url": "https://github.com/YunoHost-Apps/dagu_ynh",
               "stars": 3,
               "forks": 3,
-              "updated_at": "2026-10-28T13:17:12Z",
+              "updated_at": "2026-11-03T22:09:03Z",
               "language": "Shell",
               "archived": false
             },
@@ -2809,7 +2809,7 @@
               "description": " Firefly III package for YunoHost",
               "url": "https://github.com/YunoHost-Apps/firefly-iii_ynh",
               "stars": 27,
-              "forks": 12,
+              "forks": 11,
               "updated_at": "2026-10-23T09:45:41Z",
               "language": "Shell",
               "archived": false
@@ -2820,7 +2820,7 @@
               "description": "Firefly-III Data Importer packager for YunoHost",
               "url": "https://github.com/YunoHost-Apps/firefly-iii-di_ynh",
               "stars": 3,
-              "forks": 9,
+              "forks": 8,
               "updated_at": "2026-10-04T16:00:28Z",
               "language": "Shell",
               "archived": false
@@ -3217,7 +3217,7 @@
               "url": "https://github.com/YunoHost-Apps/galette_ynh",
               "stars": 7,
               "forks": 8,
-              "updated_at": "2026-10-18T18:12:38Z",
+              "updated_at": "2026-11-03T21:00:06Z",
               "language": "Shell",
               "archived": false
             },
@@ -3733,7 +3733,7 @@
               "description": "Grist package for YunoHost",
               "url": "https://github.com/YunoHost-Apps/grist_ynh",
               "stars": 14,
-              "forks": 7,
+              "forks": 6,
               "updated_at": "2026-10-30T06:04:21Z",
               "language": "Shell",
               "archived": false
@@ -4228,7 +4228,7 @@
               "description": "Photo and video backup solution directly from your mobile phone.",
               "url": "https://github.com/YunoHost-Apps/immich_ynh",
               "stars": 30,
-              "forks": 15,
+              "forks": 14,
               "updated_at": "2026-10-26T17:19:16Z",
               "language": "Shell",
               "archived": false
@@ -4889,7 +4889,7 @@
               "url": "https://github.com/YunoHost-Apps/lasuite-meet_ynh",
               "stars": 8,
               "forks": 2,
-              "updated_at": "2026-10-27T08:30:27Z",
+              "updated_at": "2026-11-03T21:12:38Z",
               "language": "Shell",
               "archived": false
             },
@@ -5032,7 +5032,7 @@
               "url": "https://github.com/YunoHost-Apps/librebooking_ynh",
               "stars": 0,
               "forks": 0,
-              "updated_at": "2026-10-27T15:09:53Z",
+              "updated_at": "2026-11-04T10:39:52Z",
               "language": "PHP",
               "archived": false
             },
@@ -6253,7 +6253,7 @@
               "url": "https://github.com/YunoHost-Apps/mstream_ynh",
               "stars": 1,
               "forks": 1,
-              "updated_at": "2026-10-25T22:47:54Z",
+              "updated_at": "2026-11-03T21:56:51Z",
               "language": "Shell",
               "archived": false
             },
@@ -6538,7 +6538,7 @@
               "description": "Standalone signaling server for Nextcloud Talk.",
               "url": "https://github.com/YunoHost-Apps/nextcloud-signaling_ynh",
               "stars": 4,
-              "forks": 3,
+              "forks": 2,
               "updated_at": "2026-10-12T12:17:22Z",
               "language": "Shell",
               "archived": false
@@ -6792,7 +6792,7 @@
               "url": "https://github.com/YunoHost-Apps/ollama_ynh",
               "stars": 5,
               "forks": 3,
-              "updated_at": "2026-10-30T07:46:13Z",
+              "updated_at": "2026-11-04T07:23:20Z",
               "language": "Shell",
               "archived": false
             },
@@ -6891,7 +6891,7 @@
               "url": "https://github.com/YunoHost-Apps/opencloud_ynh",
               "stars": 8,
               "forks": 3,
-              "updated_at": "2026-10-27T21:05:57Z",
+              "updated_at": "2026-11-03T22:07:58Z",
               "language": "Shell",
               "archived": false
             },
@@ -7749,7 +7749,7 @@
               "url": "https://github.com/YunoHost-Apps/pleroma_ynh",
               "stars": 31,
               "forks": 15,
-              "updated_at": "2026-06-02T07:29:58Z",
+              "updated_at": "2026-11-03T15:50:57Z",
               "language": "Shell",
               "archived": false
             },
@@ -8882,7 +8882,7 @@
               "url": "https://github.com/YunoHost-Apps/send_ynh",
               "stars": 10,
               "forks": 2,
-              "updated_at": "2026-10-26T15:53:40Z",
+              "updated_at": "2026-11-03T18:58:57Z",
               "language": "Shell",
               "archived": false
             },
@@ -10037,7 +10037,7 @@
               "url": "https://github.com/YunoHost-Apps/traccar_ynh",
               "stars": 1,
               "forks": 2,
-              "updated_at": "2026-09-28T14:25:07Z",
+              "updated_at": "2026-11-03T22:09:54Z",
               "language": "Shell",
               "archived": false
             },
@@ -10301,7 +10301,7 @@
               "url": "https://github.com/YunoHost-Apps/ums_ynh",
               "stars": 1,
               "forks": 3,
-              "updated_at": "2026-10-07T15:48:07Z",
+              "updated_at": "2026-11-04T06:28:59Z",
               "language": "Shell",
               "archived": false
             },
@@ -11425,7 +11425,7 @@
       {
         "name": "YunoHost Docs Translations",
         "success": true,
-        "duration": 121,
+        "duration": 133,
         "result": [
           "de",
           "docs",
@@ -11442,7 +11442,7 @@
       {
         "name": "YunoHost UI Translations",
         "success": true,
-        "duration": 2462,
+        "duration": 2259,
         "result": [
           {
             "language": "French",
@@ -11849,7 +11849,7 @@
       {
         "name": "Zimaboard Shipping Areas",
         "success": true,
-        "duration": 482,
+        "duration": 380,
         "result": [
           "Argentina",
           "Australia",
@@ -11949,7 +11949,7 @@
       {
         "name": "CCCI Directory",
         "success": true,
-        "duration": 712,
+        "duration": 1115,
         "result": {
           "rows": 428,
           "count": 443,
