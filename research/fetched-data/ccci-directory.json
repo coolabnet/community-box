@@ -1,12 +1,12 @@
 {
-  "timestamp": "2026-11-04T14:14:39.047Z",
+  "timestamp": "2026-11-05T12:41:07.777Z",
   "script": "get-ccci-directory.js",
   "data": {
     "source": {
       "name": "CCCI directory (Colnodo / APC)",
       "url": "https://app.agenteccci.colnodo.org/explore",
       "exportUrl": "https://app.agenteccci.colnodo.org/explore/export",
-      "retrievedAt": "2026-11-04T14:14:37.933Z",
+      "retrievedAt": "2026-11-05T12:41:06.047Z",
       "rows": 428
     },
     "curatedSource": "research/results/community-directory.curated.json",
