@@ -38,21 +38,11 @@ function getDisplayTitle(item: MenuItem, t: (key: string) => string): string {
 }
 
 // Create menu function that accepts dynamic PDF URL
-const createMenu = (pdfUrl: string, lang: DocLang): MenuItem[] => [
+export const createMenu = (pdfUrl: string, lang: DocLang): MenuItem[] => [
   {
     titleKey: 'sidebar.setupWizard',
     icon: <Compass size={16} />,
     to: '/questionnaire'
-  },
-  {
-    titleKey: 'sidebar.downloadResearchPaper',
-    icon: <FileText size={16} />,
-    href: pdfUrl
-  },
-  {
-    titleKey: 'sidebar.downloadImages',
-    icon: <Download size={16} />,
-    to: 'guides/download-images'
   },
   {
     titleKey: 'sidebar.quickstartGuides',
@@ -107,17 +97,12 @@ const createMenu = (pdfUrl: string, lang: DocLang): MenuItem[] => [
         ]
       },
       {
-        titleKey: 'sidebar.essentialServices',
+        titleKey: 'sidebar.essentialServicesNetwork',
         children: [
           { title: resolveTitle('guides/libremesh-overview', lang), to: 'guides/libremesh-overview' },
           { title: resolveTitle('guides/mesh-network-basics', lang), to: 'guides/mesh-network-basics' },
           { title: resolveTitle('guides/dns-configuration', lang), to: 'guides/dns-configuration' },
-          { title: resolveTitle('guides/deployment-best-practices', lang), to: 'guides/deployment-best-practices' }
-        ]
-      },
-      {
-        titleKey: 'sidebar.networkConfiguration',
-        children: [
+          { title: resolveTitle('guides/deployment-best-practices', lang), to: 'guides/deployment-best-practices' },
           { title: resolveTitle('guides/router-selection-guide', lang), to: 'guides/router-selection-guide' },
           { title: resolveTitle('guides/libremesh-installation', lang), to: 'guides/libremesh-installation' },
           { titleKey: 'sidebar.libreMeshImageFinder', href: 'https://firmware-selector.libremesh.org/' }
@@ -142,14 +127,30 @@ const createMenu = (pdfUrl: string, lang: DocLang): MenuItem[] => [
     ]
   },
   {
-    titleKey: 'sidebar.solarCalculator',
-    icon: <Sun size={16} />,
-    href: 'https://solar.coolab.org/'
-  },
-  {
     titleKey: 'sidebar.aiAssistant',
     icon: <Bot size={16} />,
     href: 'https://t.me/Comm_box_demo_bot'
+  },
+  {
+    titleKey: 'sidebar.downloads',
+    icon: <Download size={16} />,
+    children: [
+      {
+        titleKey: 'sidebar.downloadResearchPaper',
+        icon: <FileText size={16} />,
+        href: pdfUrl
+      },
+      {
+        titleKey: 'sidebar.downloadImages',
+        icon: <Download size={16} />,
+        to: 'guides/download-images'
+      }
+    ]
+  },
+  {
+    titleKey: 'sidebar.solarCalculator',
+    icon: <Sun size={16} />,
+    href: 'https://solar.coolab.org/'
   },
   {
     titleKey: 'sidebar.community',
@@ -319,7 +320,7 @@ export default function SidebarMenu({ isOpen = false, onToggle, showToggleButton
   );
 }
 
-function MenuItem({ item, level }: { item: MenuItem; level: number }) {
+export function MenuItem({ item, level }: { item: MenuItem; level: number }) {
   const { t } = useTranslation();
   const hasChildren = !!item.children?.length;
   const [expanded, setExpanded] = useState(false);
@@ -329,8 +330,10 @@ function MenuItem({ item, level }: { item: MenuItem; level: number }) {
   if (hasChildren) {
     return (
       <div className="mb-1">
-        <div
-          className="flex justify-between items-center cursor-pointer py-2 px-2 rounded hover:bg-secondary/50 transition-colors"
+        <button
+          type="button"
+          aria-expanded={expanded}
+          className="flex justify-between items-center cursor-pointer py-2 px-2 rounded hover:bg-secondary/50 transition-colors w-full text-left"
           style={{ paddingLeft }}
           onClick={() => setExpanded(!expanded)}
         >
@@ -342,7 +345,7 @@ function MenuItem({ item, level }: { item: MenuItem; level: number }) {
             size={16}
             className={`transition-transform duration-200 ${expanded ? 'rotate-180' : ''}`}
           />
-        </div>
+        </button>
         <AnimatePresence initial={false}>
           {expanded && (
             <motion.div
