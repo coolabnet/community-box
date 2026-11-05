@@ -42,6 +42,7 @@ import { downloadPDF, sharePDF } from '@/utils/pdfGenerator';
 import PDFTemplate from './PDFTemplate';
 import { copyUrlToClipboard, shareUrl } from '@/utils/statePersistence';
 import { getRecommendations } from '@/utils/recommendations';
+import { getResultApplications, type ResultApplication } from '@/utils/resultApplications';
 import { normalizeUserAnswers, calculateDeviceScores } from '@/utils/deviceScoring';
 import type {
   AccessDeviceKey,
@@ -50,7 +51,6 @@ import type {
   DeviceKey,
   DeviceScore,
   UserAnswers,
-  ServiceSuggestion,
   OSSuggestion,
 } from '@/types/questionnaire';
 
@@ -125,7 +125,7 @@ const RecommendationResults = ({
   const [isPdfGenerating, setIsPdfGenerating] = useState(false);
   const [showPdfPreview, setShowPdfPreview] = useState(false);
   const [shareSuccess, setShareSuccess] = useState<boolean | null>(null);
-  const [serviceSuggestions, setServiceSuggestions] = useState<ServiceSuggestion[]>([]);
+  const [serviceSuggestions, setServiceSuggestions] = useState<ResultApplication[]>([]);
   const [osSuggestions, setOSSuggestions] = useState<OSSuggestion[]>([]);
   const pdfTemplateRef = useRef<HTMLDivElement>(null);
 
@@ -144,7 +144,7 @@ const RecommendationResults = ({
         answers.format,
         scores[0]?.device?.key as DeviceKey | undefined
       );
-      setServiceSuggestions(recommendations.services);
+      setServiceSuggestions(getResultApplications(answers, scores[0]?.device?.key as DeviceKey | undefined));
       setOSSuggestions(recommendations.operatingSystems);
 
       setIsCalculating(false);
@@ -626,7 +626,7 @@ const RecommendationResults = ({
                   )}
 
                   {/* Services Section */}
-                  {serviceSuggestions.length > 0 && (
+                  {(
                     <div className="bg-card rounded-xl border border-border overflow-hidden">
                       <div className="bg-primary/10 p-4">
                         <div className="flex items-center gap-3">
@@ -644,10 +644,15 @@ const RecommendationResults = ({
                         </div>
                       </div>
                       <div className="p-4">
+                        {serviceSuggestions.length === 0 && (
+                          <p className="text-sm text-muted-foreground">
+                            {t('questionnaire.questions.results.services.none')}
+                          </p>
+                        )}
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
                           {serviceSuggestions.map((service, index) => (
                             <motion.div
-                              key={service.key}
+                              key={service.id}
                               initial={{ opacity: 0, x: -20 }}
                               animate={{ opacity: 1, x: 0 }}
                               transition={{ delay: 0.05 * index }}
@@ -655,16 +660,16 @@ const RecommendationResults = ({
                             >
                               <div className="text-2xl">{service.icon}</div>
                               <div className="flex-1 min-w-0">
-                                <h4 className="font-medium text-sm">{t(`questionnaire.questions.results.services.items.${service.key}.name`)}</h4>
-                                <p className="text-xs text-muted-foreground">{t(`questionnaire.questions.results.services.items.${service.key}.description`)}</p>
+                                <h4 className="font-medium text-sm">{t(`${service.i18nKey}.name`)}</h4>
+                                <p className="text-xs text-muted-foreground">{t(`${service.i18nKey}.description`)}</p>
                                 <CatalogMeta links={service.links} requirements={service.requirements} />
                               </div>
                               <a
-                                href={`https://duckduckgo.com/?q=${encodeURIComponent(t(`questionnaire.questions.results.services.items.${service.key}.name`) + ' self-hosted')}`}
+                                href={`https://duckduckgo.com/?q=${encodeURIComponent(t(`${service.i18nKey}.name`) + ' self-hosted')}`}
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 className="text-primary hover:text-primary/80 shrink-0"
-                                aria-label={t(`questionnaire.questions.results.services.items.${service.key}.name`)}
+                                aria-label={t(`${service.i18nKey}.name`)}
                               >
                                 <ExternalLink className="h-4 w-4" />
                               </a>

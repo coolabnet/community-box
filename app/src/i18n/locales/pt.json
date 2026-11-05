@@ -294,7 +294,8 @@
               "name": "Ubuntu MM",
               "description": "Sistema de gestão comunitária para acesso à internet e monitoramento"
             }
-          }
+          },
+          "none": "Nenhum aplicativo selecionado."
         },
         "operatingSystems": {
           "title": "Sistemas Operacionais Recomendados",
@@ -352,6 +353,69 @@
             "shared": "Em dispositivos compartilhados, use contas de usuário separadas, saia da conta após o uso e evite salvar senhas no navegador."
           }
         }
+      },
+      "goals": {
+        "question": "O que sua comunidade quer fazer com a caixa?",
+        "description": "Escolha todas as opções que quiser. Sugerimos aplicativos quando tivermos opções.",
+        "selectAtLeastOne": "Escolha um objetivo ou selecione ‘Outra coisa’ e escreva o que precisa.",
+        "continue": "Continuar",
+        "education": {
+          "name": "Aprendizagem e escolas",
+          "help": "Cursos, aulas e material escolar para quem aprende."
+        },
+        "mediaStorage": {
+          "name": "Guardar e compartilhar arquivos",
+          "help": "Guarde e compartilhe fotos, vídeos, áudios e documentos."
+        },
+        "officeCollab": {
+          "name": "Trabalhar juntos em documentos",
+          "help": "Escrever, editar e planejar juntos nos mesmos arquivos."
+        },
+        "localMedia": {
+          "name": "Notícias, rádio e sites locais",
+          "help": "Publicar notícias, ter uma rádio web ou uma página local."
+        },
+        "communication": {
+          "name": "Trocar mensagens",
+          "help": "Um aplicativo pode ajudar a trocar mensagens. Ainda não sabemos se funciona sem internet."
+        },
+        "networkManagement": {
+          "name": "Gerenciar e proteger a rede",
+          "help": "Bloqueie alguns anúncios e confira a velocidade da internet."
+        },
+        "languageCulture": {
+          "name": "Preservar língua, memória e arquivos",
+          "help": "Guardar histórias, gravações e textos da sua comunidade."
+        },
+        "territoryMapping": {
+          "name": "Mapear e monitorar o território",
+          "help": "Reunir lugares e dados de campo em um mapa."
+        },
+        "healthWellbeing": {
+          "name": "Saúde e bem-estar",
+          "help": "Informação de saúde e cuidado para a comunidade."
+        },
+        "localEconomy": {
+          "name": "Comércio e trocas na comunidade",
+          "help": "Ferramentas para comércio local, compartilhamento e reuso."
+        },
+        "other": {
+          "name": "Outra coisa",
+          "help": "Escreva seu objetivo. Não podemos usá-lo para sugerir aplicativos.",
+          "placeholder": "Por favor, especifique..."
+        }
+      },
+      "applications": {
+        "question": "Revise os aplicativos sugeridos",
+        "description": "Escolha os aplicativos que quer. Alguns podem já estar selecionados.",
+        "continue": "Continuar",
+        "badges": {
+          "lessEvidence": "Precisa de mais pesquisa",
+          "worksOffline": "Funciona sem internet depois de configurado",
+          "needsInternet": "Precisa de internet"
+        },
+        "empty": "Ainda não temos sugestões de aplicativos para este objetivo.",
+        "otherOnly": "Não podemos usar o que você escreveu para sugerir aplicativos. Você pode continuar."
       }
     },
     "moreInformation": "Mais informações",

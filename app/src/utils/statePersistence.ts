@@ -2,20 +2,39 @@
  * Utilities for persisting and restoring survey state
  */
 
+import {
+  GOALS,
+  GOAL_ID_ALIASES,
+  LEGACY_USAGE_TO_GOALS,
+  type GoalKey,
+} from '@/data/applications/categories';
+import type { GoalSelectionValues, AppSelectionValues } from '@/types/questionnaire';
+
 // Constants
 const STORAGE_KEY = 'community-box-survey-state';
 
 /**
- * Version 2 inserted the accessDevices and techSupport questions before the
- * version 1 steps listed in LEGACY_INSERT_STEPS. State without a version was
- * saved by version 1, so each of its steps shifts by one per insert at or
- * before it.
+ * State versions:
+ * - 1 (no version saved): original flow.
+ * - 2: inserted accessDevices (before v1 step 2) and techSupport (before v1 step 5).
+ * - 3: inserted goals as step 0 and replaced usage with applications.
  */
-export const SURVEY_STATE_VERSION = 2;
-export const ACCESS_DEVICES_STEP = 2;
-// Version 1 indices: accessDevices before growth (2), techSupport before price (5)
-const LEGACY_INSERT_STEPS = [ACCESS_DEVICES_STEP, 5];
+export const SURVEY_STATE_VERSION = 3;
+// Must match the length of `questions` in Questionnaire.tsx.
+export const SURVEY_STEP_COUNT = 13;
 const URL_VERSION_PARAM = 'v';
+
+/**
+ * Step indices (as numbered by that version) before which the NEXT version
+ * inserted a step. A saved step shifts by one per insert at or before it.
+ */
+const INSERTS_BY_VERSION: Record<number, number[]> = {
+  // v1 indices: accessDevices before growth (2), techSupport before price (5)
+  1: [2, 5],
+  // v2 index: goals inserted at the start
+  2: [0],
+};
+const LAST_MIGRATED_VERSION = 2;
 
 // Types
 export interface SurveyState {
@@ -24,13 +43,103 @@ export interface SurveyState {
   version?: number;
 }
 
+const isPlainObject = (value: unknown): value is Record<string, unknown> =>
+  typeof value === 'object' && value !== null && !Array.isArray(value);
+
 /**
  * Map a step saved by an older state version to the current step index
  */
-const migrateStep = (step: number, version: number | undefined): number =>
-  version === undefined
-    ? step + LEGACY_INSERT_STEPS.filter(insertStep => step >= insertStep).length
-    : step;
+const migrateStep = (step: number, version: number | undefined): number => {
+  if (!Number.isFinite(step)) return 0;
+  let migrated = step;
+  for (let v = Math.max(version ?? 1, 1); v <= LAST_MIGRATED_VERSION; v++) {
+    const before = migrated;
+    migrated += (INSERTS_BY_VERSION[v] ?? []).filter(i => before >= i).length;
+  }
+  return Math.min(Math.max(Math.floor(migrated), 0), SURVEY_STEP_COUNT - 1);
+};
+
+/**
+ * Derive goals from a legacy `usage` answer. Strict: only exact `true` values
+ * and non-empty `other` text count. Leaves `usage` untouched.
+ */
+export const migrateAnswers = (
+  answers: Record<string, unknown>,
+  fromVersion: number | undefined
+): Record<string, unknown> => {
+  if ((fromVersion ?? 1) >= 3 || answers.goals !== undefined) return answers;
+  const usage = answers.usage;
+  if (!isPlainObject(usage)) return answers;
+
+  const goals: GoalSelectionValues = {};
+  let counted = false;
+  for (const key of ['news', 'files', 'education', 'media'] as const) {
+    if (usage[key] === true) {
+      for (const goal of LEGACY_USAGE_TO_GOALS[key]) {
+        goals[goal] = true;
+        counted = true;
+      }
+    }
+  }
+  if (typeof usage.other === 'string' && usage.other.trim() !== '') {
+    goals.other = usage.other.trim();
+    counted = true;
+  }
+  return counted ? { ...answers, goals } : answers;
+};
+
+/**
+ * Keep only valid goal selections. Returns undefined when nothing valid remains.
+ */
+export const sanitizeGoals = (
+  value: unknown,
+  aliases: Record<string, GoalKey> = GOAL_ID_ALIASES
+): GoalSelectionValues | undefined => {
+  if (!isPlainObject(value)) return undefined;
+  const result: GoalSelectionValues = {};
+  for (const [rawId, entry] of Object.entries(value)) {
+    if (rawId === 'other') {
+      if (typeof entry === 'string' && entry.trim() !== '') result.other = entry.trim();
+      continue;
+    }
+    const id = Object.prototype.hasOwnProperty.call(aliases, rawId) ? aliases[rawId] : rawId;
+    if (Object.prototype.hasOwnProperty.call(GOALS, id) && entry === true) {
+      result[id as GoalKey] = true;
+    }
+  }
+  return Object.keys(result).length > 0 ? result : undefined;
+};
+
+const sanitizeApps = (value: unknown): AppSelectionValues | undefined => {
+  if (!isPlainObject(value) || !Array.isArray(value.selected) || !Array.isArray(value.dismissed)) {
+    return undefined;
+  }
+  const clean = (list: unknown[]): string[] => [
+    ...new Set(list.filter((x): x is string => typeof x === 'string')),
+  ];
+  const selected = clean(value.selected);
+  // An id in both lists is ambiguous: keep the explicit selection
+  const dismissed = clean(value.dismissed).filter(id => !selected.includes(id));
+  return { selected, dismissed };
+};
+
+const normalizeAnswers = (
+  rawAnswers: Record<string, unknown>,
+  version: number | undefined
+): Record<string, unknown> => {
+  const answers = { ...migrateAnswers(rawAnswers, version) };
+  if ('goals' in answers) {
+    const goals = sanitizeGoals(answers.goals);
+    if (goals) answers.goals = goals;
+    else delete answers.goals;
+  }
+  if ('apps' in answers) {
+    const apps = sanitizeApps(answers.apps);
+    if (apps) answers.apps = apps;
+    else delete answers.apps;
+  }
+  return answers;
+};
 
 /**
  * Encode survey state to URL query parameters
@@ -98,7 +207,11 @@ export const decodeStateFromUrl = (): SurveyState | null => {
       }
     });
 
-    return { currentStep, answers, version: SURVEY_STATE_VERSION };
+    return {
+      currentStep,
+      answers: normalizeAnswers(answers, version),
+      version: SURVEY_STATE_VERSION,
+    };
   } catch (error) {
     console.error('Error decoding state from URL:', error);
     return null;
@@ -132,7 +245,7 @@ export const loadStateFromStorage = (): SurveyState | null => {
 
     return {
       currentStep: migrateStep(parsed.currentStep, version),
-      answers: parsed.answers,
+      answers: isPlainObject(parsed.answers) ? normalizeAnswers(parsed.answers, version) : parsed.answers,
       version: SURVEY_STATE_VERSION,
     };
   } catch (error) {

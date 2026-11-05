@@ -4,7 +4,7 @@ import applicationsData from '@/data/applications/applications.json';
 import type { ApplicationEntry } from '@/data/applications/schema';
 import { GOALS, type GoalKey } from '@/data/applications/categories';
 import { hardwareCapacity } from '@/data/hardwareCapacity';
-import type { DeviceFit, DeviceKey, DeviceScore, OSSuggestion, UsersAnswer } from '@/types/questionnaire';
+import type { AppSelectionValues, DeviceFit, DeviceKey, DeviceScore, GoalSelectionValues, OSSuggestion, UsersAnswer } from '@/types/questionnaire';
 
 export type Architecture = ApplicationEntry['architectures'][number];
 export type Confidence = ApplicationEntry['resources']['confidence'];
@@ -70,6 +70,84 @@ export const getCandidateApps = (
       .forEach(c => kept.add(c.app.id));
   }
   return all.filter(c => kept.has(c.app.id)).sort(compareCandidates);
+};
+
+// ---------- goal-driven selection ----------
+
+export const getGoalKeys = (goals?: GoalSelectionValues): GoalKey[] =>
+  (Object.keys(GOALS) as GoalKey[]).filter(g => goals?.[g] === true);
+
+export interface AppOption {
+  app: ApplicationEntry;
+  isDefault: boolean;
+}
+
+// All catalog apps per selected goal (in GOALS order), flagged when they are
+// among the default top picks. An app can appear under several goals.
+export const getAppOptionsByGoal = (
+  goals?: GoalSelectionValues,
+  apps: readonly ApplicationEntry[] = catalog
+): { goal: GoalKey; options: AppOption[] }[] => {
+  const selectedGoals = getGoalKeys(goals);
+  const defaultIds = new Set(getCandidateApps(selectedGoals, apps).map(c => c.app.id));
+  return selectedGoals.map(goal => ({
+    goal,
+    options: apps
+      .map(app => ({
+        app,
+        matchedGoals: selectedGoals.filter(g => GOALS[g].some(c => (app.categories as string[]).includes(c))),
+      }))
+      .filter(c => c.matchedGoals.includes(goal))
+      .sort(compareCandidates)
+      .map(c => ({ app: c.app, isDefault: defaultIds.has(c.app.id) })),
+  }));
+};
+
+// (defaults - dismissed) + selected, limited to apps offered under a chosen goal.
+export const resolveSelectedApps = (
+  goals?: GoalSelectionValues,
+  selection?: AppSelectionValues,
+  apps: readonly ApplicationEntry[] = catalog
+): ApplicationEntry[] => {
+  const selectedGoals = getGoalKeys(goals);
+  if (selectedGoals.length === 0) return [];
+  const offered = new Set(
+    getAppOptionsByGoal(goals, apps).flatMap(g => g.options.map(o => o.app.id))
+  );
+  const enabled = new Set(getCandidateApps(selectedGoals, apps).map(c => c.app.id));
+  (selection?.dismissed ?? []).forEach(id => enabled.delete(id));
+  (selection?.selected ?? []).forEach(id => enabled.add(id));
+
+  const candidates: CandidateApp[] = apps
+    .filter(app => enabled.has(app.id) && offered.has(app.id))
+    .map(app => ({
+      app,
+      matchedGoals: selectedGoals.filter(g => GOALS[g].some(c => (app.categories as string[]).includes(c))),
+    }));
+  return candidates.sort(compareCandidates).map(c => c.app);
+};
+
+// Flip one app and return deviations from the defaults only.
+export const toggleAppSelection = (
+  current: AppSelectionValues,
+  appId: string,
+  defaultIds: readonly string[]
+): AppSelectionValues => {
+  const defaults = new Set(defaultIds);
+  const enabled = new Set(defaultIds);
+  current.dismissed.forEach(id => enabled.delete(id));
+  current.selected.forEach(id => enabled.add(id));
+  if (enabled.has(appId)) enabled.delete(appId);
+  else enabled.add(appId);
+
+  const known = new Set([...defaults, ...current.selected, ...current.dismissed, appId]);
+  const selected: string[] = [];
+  const dismissed: string[] = [];
+  for (const id of known) {
+    if (defaults.has(id) && !enabled.has(id)) dismissed.push(id);
+    else if (!defaults.has(id) && enabled.has(id)) selected.push(id);
+  }
+  return { selected, dismissed };
 };
 
 // ---------- compatibility ----------

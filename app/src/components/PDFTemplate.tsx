@@ -85,6 +85,9 @@ const PDFTemplate = ({ recommendation, alternatives, answers }: PDFTemplateProps
 
   // Get the top recommendation
   const topRecommendation = recommendation;
+  // Goals inferred from a legacy usage answer were never reviewed: print the
+  // original usage answer instead (same rule as utils/resultApplications.ts).
+  const showGoals = !!answers.goals && (!!answers.apps || !answers.usage);
 
   return (
     <div
@@ -254,7 +257,7 @@ const PDFTemplate = ({ recommendation, alternatives, answers }: PDFTemplateProps
           {/* Basic questions */}
           <div className="grid grid-cols-2 gap-4">
             {Object.entries(answers)
-              .filter(([key]) => !['points', 'usage', 'accessDevices'].includes(key))
+              .filter(([key]) => !['points', 'usage', 'accessDevices', 'goals', 'apps'].includes(key))
               .map(([key, value]) => (
                 <div key={key} data-pdf-block className="p-3 bg-gray-50 rounded-lg border border-gray-200">
                   <div className="font-medium text-gray-800 mb-1">
@@ -292,8 +295,27 @@ const PDFTemplate = ({ recommendation, alternatives, answers }: PDFTemplateProps
             </div>
           )}
 
-          {/* Usage selection */}
-          {answers.usage && (
+          {/* Goals selection */}
+          {showGoals && answers.goals && (
+            <div data-pdf-block className="p-4 bg-gray-50 rounded-lg border border-gray-200">
+              <h4 className="font-medium text-gray-800 mb-2">
+                {t('questionnaire.questions.goals.question')}
+              </h4>
+
+              <ul className="grid grid-cols-2 gap-3">
+                {Object.entries(answers.goals).map(([key, value]) => (
+                  <li key={key} className="text-gray-800">
+                    {key === 'other' && typeof value === 'string'
+                      ? `${t('questionnaire.questions.goals.other.name')}: ${value}`
+                      : t(`questionnaire.questions.goals.${key}.name`)}
+                  </li>
+                ))}
+              </ul>
+            </div>
+          )}
+
+          {/* Usage selection (answers saved before goals existed) */}
+          {!showGoals && answers.usage && (
             <div data-pdf-block className="p-4 bg-gray-50 rounded-lg border border-gray-200">
               <h4 className="font-medium text-gray-800 mb-2">
                 {t('questionnaire.questions.usage.question')}

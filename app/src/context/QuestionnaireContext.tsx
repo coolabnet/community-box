@@ -8,7 +8,8 @@ import {
   loadStateFromStorage,
   saveStateToStorage,
   updateUrlWithState,
-  clearStoredState
+  clearStoredState,
+  SURVEY_STEP_COUNT
 } from '@/utils/statePersistence';
 
 const getInitialSurveyState = (): SurveyState => {
@@ -46,7 +47,7 @@ export function QuestionnaireProvider({ children }: { children: React.ReactNode 
   const [currentStep, setCurrentStep] = useState(initialState.currentStep);
   const [answers, setAnswers] = useState<Record<string, unknown>>(initialState.answers);
 
-  const [totalSteps, setTotalSteps] = useState(10);
+  const [totalSteps, setTotalSteps] = useState(SURVEY_STEP_COUNT);
 
   const skipUrlUpdateRef = useRef(false);
 
