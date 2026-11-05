@@ -99,13 +99,13 @@ describe('ApplicationsReview', () => {
   it('shows an empty state for a goal without apps', () => {
     const html = wrap(<ApplicationsReview goals={{ healthWellbeing: true }} onNext={() => {}} />);
 
-    expect(html).toContain('No applications researched for this goal yet.');
+    expect(html).toContain('We have no application suggestions for this goal yet.');
   });
 
   it('explains that free text yields no apps', () => {
     const html = wrap(<ApplicationsReview goals={{ other: 'radio' }} onNext={() => {}} />);
 
-    expect(html).toContain('We cannot suggest applications from free text.');
+    expect(html).toContain('We cannot use what you wrote to suggest applications.');
   });
 });
 
