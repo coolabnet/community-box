@@ -94,6 +94,10 @@ None. `T3-23` BlankOn waits on Q39 (partner question).
 ## TODO (doable now)
 
 - `M4` PR5 — capacity-aware results (plan §7; `needs-human-qa`).
+- `T1-17` — hamburger menu adjustments: Setup Wizard, Quickstart Guides, AI
+  Assistant and Downloads higher; merge Essential services and Network
+  Configuration; move research document and download images down
+  (`needs-human-qa`).
 
 Everything else waits on a decision in `gg2026-decisions.html` or on human
 QA of a parked PR.
@@ -101,12 +105,17 @@ QA of a parked PR.
 ## Blocked (see `gg2026-decisions.html`)
 
 `T1-7` (resolved Q03, then scope), `T1-8` (Q05), `T1-9`
-(Q09 partner), `T1-10` (Q10), `T1-12` (Q08), `T1-14` (Q06),
+(Q09 partner), `T1-10` (Q10), `T1-12` (Q08), `T1-14` (Q06), `T1-16`
+(LocNet review of categories/services, hackmd `@brunz/H1-xmCjSxe`; also
+waits on #57 taxonomy), `T1-18` (LocNet to send site map and texts),
+`T1-19` (Nils and Bruna to send Who-are-we text and logos), `T1-20`
+(LocNet to make the new logo),
 `T3-3`, `T3-5`, `T3-11`, `T3-19`, `T3-20`, `T3-22` (Q15 tool
 names, researched in `research/gg2026-tool-names.md`, need discussion
 with the row authors; `T3-5` also Q22), `T3-4` (Q18), `T3-10` (Q23), `T3-21` (Q33),
 `T3-1` transport detail and catalog entry (Q20, #57
-taxonomy). Q10, Q18, Q20 and Q39 researched in
+taxonomy). Doc table 3 has an empty stub row 24 (Pending, no content) —
+nothing to act on until partners fill it. Q10, Q18, Q20 and Q39 researched in
 `research/gg2026-partner-questions.md`; each waits on a partner answer, `#57` taxonomy and PDF sections. `M4` is Phase 2 (#26); plan in
 `research/plans/m4-applications-layer.md` awaits owner review (H1–H5).
 
