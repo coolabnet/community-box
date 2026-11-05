@@ -37,6 +37,15 @@
 }
 
 @layer base {
+  /* Tailwind v4 preflight leaves buttons at browser default (cursor: default);
+     restore the pointer for interactive elements across the UI */
+  button:not(:disabled),
+  [role="button"]:not(:disabled),
+  label:has(input[type="checkbox"], input[type="radio"]),
+  summary {
+    cursor: pointer;
+  }
+
   :root {
     --background: 0 0% 100%;
     --foreground: 222.2 84% 4.9%;
