@@ -72,7 +72,7 @@ describe('sidebar menu structure', () => {
       expect(child.title).not.toBe(child.to);
     }
     // The merged subsection label itself exists in the English locale
-    expect(en.sidebar.essentialServicesNetwork).toBe('🔧 Essential Services and Network');
+    expect(en.sidebar.essentialServicesNetwork).toBe('🔧 Networks and Computers');
     expect(en.sidebar.downloads).toBe('Downloads');
   });
 });
