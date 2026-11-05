@@ -89,11 +89,14 @@ Use this when working several TODO items at once.
 
 ## In review (PRs)
 
-None. `T3-23` BlankOn waits on Q39 (partner question).
+- `M4` PR5 — #91 capacity-aware results, `needs-human-qa` (gate SHIP after
+  3 BLOCK rounds; junior browser QA clean). Waits on owner QA + H4
+  capacity-constant sign-off. Worktree `../cb-m4-pr5` kept for fixes.
+
+None else. `T3-23` BlankOn waits on Q39 (partner question).
 
 ## TODO (doable now)
 
-- `M4` PR5 — capacity-aware results (plan §7; `needs-human-qa`).
 - `T1-17` — hamburger menu adjustments: Setup Wizard, Quickstart Guides, AI
   Assistant and Downloads higher; merge Essential services and Network
   Configuration; move research document and download images down
