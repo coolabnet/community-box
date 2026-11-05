@@ -89,14 +89,14 @@ Use this when working several TODO items at once.
 
 ## In review (PRs)
 
-None. `T3-23` BlankOn waits on Q39 (partner question).
+- `M4` PR6 — #93 PDF applications, evidence and capacity sections. Gate
+  SHIP (Opus; terra quota hit after 2 BLOCK rounds). `needs-human-qa`
+  (manual PDF export en/pt/es). Copy gate (WORDSHIP) pending terra quota
+  reset. `T3-23` BlankOn waits on Q39 (partner question).
 
 ## TODO (doable now)
 
-- `M4` PR6 — PDF applications, evidence and capacity sections (plan §7;
-  `needs-human-qa`; unblocked by #91 merging).
-
-Everything else waits on a decision in `gg2026-decisions.html`, on a
+Everything waits on a decision in `gg2026-decisions.html`, on a
 partner, or on human QA.
 
 ## Blocked (see `gg2026-decisions.html`)
