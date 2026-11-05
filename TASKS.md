@@ -89,16 +89,11 @@ Use this when working several TODO items at once.
 
 ## In review (PRs)
 
-- `M4` PR4 — goals-first step and state v3, PR #90 (`needs-human-qa`).
-  Gate SHIP (gpt-6.1-terra, 3 BLOCK rounds), browser QA 12/12. Human
-  checks: goal/review copy en/pt/es, the emergency-messaging goal with an
-  unverified offline app, showing goals that have no apps (H1).
-
-`T3-23` BlankOn waits on Q39 (partner question).
+None. `T3-23` BlankOn waits on Q39 (partner question).
 
 ## TODO (doable now)
 
-None. Next after PR #90 merges: `M4` PR5 (capacity-aware results).
+- `M4` PR5 — capacity-aware results (plan §7; `needs-human-qa`).
 
 Everything else waits on a decision in `gg2026-decisions.html` or on human
 QA of a parked PR.
@@ -117,6 +112,14 @@ taxonomy). Q10, Q18, Q20 and Q39 researched in
 
 ## Done
 
+- `M4` PR4 — goals-first step and state v3: new step 0 goal selection
+  (10 DRAFT goals + free text), applications review step (top-3
+  preselected, add/remove), v1/v2 link migration, results list the
+  reviewed apps, PDF goals block. Copy signed off by gpt-6.1-terra
+  (WORDSHIP; communication goal renamed to "Send messages", empty goals
+  stay visible). Gate SHIP after 3 BLOCK rounds; browser QA 12/12.
+  Live 2026-11-05 (PR #90, `765a433`). Owner approved merge after the
+  codex wording sign-off.
 - `services/files/` — moved from the archived FileBrowser to FileBrowser
   Quantum (`gtstef/filebrowser`), with Syncthing start step and rootless
   notes; catalog `filebrowser-quantum` now recommended. Smoke-tested on
