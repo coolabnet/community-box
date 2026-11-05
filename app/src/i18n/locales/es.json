@@ -412,7 +412,7 @@
         "badges": {
           "lessEvidence": "Falta investigar más",
           "worksOffline": "Funciona sin internet después de configurarla",
-          "needsInternet": "Necesita Internet"
+          "needsInternet": "Necesita internet"
         },
         "empty": "Aún no tenemos sugerencias de aplicaciones para este objetivo.",
         "otherOnly": "No podemos usar lo que escribió para sugerir aplicaciones. Puede continuar."
