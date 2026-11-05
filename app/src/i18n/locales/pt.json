@@ -298,34 +298,34 @@
           "none": "Nenhum aplicativo selecionado."
         },
         "capacity": {
-          "summary": "Seus aplicativos selecionados precisam de cerca de {{minRamGb}} GB de RAM (recomendamos {{recommendedRamGb}} GB).",
-          "summaryUnknown": "Ainda não sabemos quanta RAM os seus aplicativos selecionados precisam. Comece com pelo menos {{minRamGb}} GB de RAM e planeje espaço para crescer.",
-          "storage": "Os aplicativos com necessidades conhecidas usam cerca de {{minStorageGb}} GB de armazenamento. Outros podem precisar de mais.",
+          "summary": "Estimamos {{minRamGb}} GB de RAM para os aplicativos selecionados e o sistema. Recomendamos {{recommendedRamGb}} GB.",
+          "summaryUnknown": "Ainda não sabemos todas as necessidades de RAM. Comece com pelo menos {{minRamGb}} GB de RAM e tenha um plano caso precise de mais.",
+          "storage": "Pelas informações de armazenamento que temos dos aplicativos, estimamos {{minStorageGb}} GB. Você pode precisar de mais.",
           "confidence": {
-            "documented": "Com base em requisitos documentados.",
+            "documented": "Os valores de RAM dos aplicativos estão documentados.",
             "estimated": "Com base em estimativas.",
-            "unknown": "Requisitos ainda não conhecidos."
+            "unknown": "As informações de RAM estão incompletas."
           },
-          "heuristicNote": "Somamos cerca de 1 GB estimado para o sistema e uma margem para crescer."
+          "heuristicNote": "Somamos uma estimativa de 1 GB de RAM para o sistema. A RAM recomendada inclui espaço para crescer."
         },
         "unverified": {
-          "label": "Ainda não verificamos neste tipo de computador:",
-          "platforms": "Ainda não verificamos todos os aplicativos em todos os sistemas recomendados."
+          "label": "Ainda não sabemos se estes aplicativos funcionam nesta configuração:",
+          "platforms": "Ainda não temos informações suficientes para verificar os aplicativos em todos os sistemas recomendados."
         },
         "fit": {
-          "chooseRamVariant": "Escolha o modelo de {{ram}} GB.",
-          "chooseRamVariantEstimated": "Um modelo de {{ram}} GB é uma escolha mais segura.",
-          "insufficientRam": "RAM insuficiente para os seus aplicativos selecionados.",
-          "architectureMismatch": "Este computador não consegue executar todos os seus aplicativos selecionados.",
-          "allInsufficient": "Nenhum computador da nossa lista consegue executar todos os seus aplicativos selecionados. Remova alguns aplicativos ou planeje um computador mais potente.",
-          "belowRecommendedRam": "Funciona, mas com menos memória do que recomendamos."
+          "chooseRamVariant": "Escolha {{ram}} GB de RAM para este computador.",
+          "chooseRamVariantEstimated": "Considere {{ram}} GB de RAM para este computador. Você pode precisar de mais.",
+          "insufficientRam": "Este computador pode não ter RAM suficiente para os aplicativos selecionados e o sistema.",
+          "architectureMismatch": "Nem todos os aplicativos selecionados funcionam neste computador.",
+          "allInsufficient": "Pelo que sabemos, nenhum computador da lista consegue usar todos os aplicativos selecionados. Tente usar menos aplicativos ou outro computador, talvez mais potente.",
+          "belowRecommendedRam": "Menos RAM do que recomendamos."
         },
         "incompatible": {
-          "title": "Não compatível com esta configuração",
+          "title": "Aplicativos que não funcionam nesta configuração",
           "description": "Estes aplicativos precisam de um computador ou de um sistema diferente.",
           "reasons": {
             "architectureUnsupported": "Não funciona neste tipo de computador.",
-            "platformUnsupported": "Nenhum sistema recomendado consegue executá-lo."
+            "platformUnsupported": "Não funciona em nenhum sistema recomendado."
           }
         },
         "operatingSystems": {
