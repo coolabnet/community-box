@@ -297,6 +297,37 @@
           },
           "none": "No applications selected."
         },
+        "capacity": {
+          "summary": "Your selected applications need about {{minRamGb}} GB of RAM (we recommend {{recommendedRamGb}} GB).",
+          "summaryUnknown": "We do not yet know how much RAM your selected applications need. Start with at least {{minRamGb}} GB of RAM and plan room to grow.",
+          "storage": "The applications with known needs use about {{minStorageGb}} GB of storage. Others may need more.",
+          "confidence": {
+            "documented": "Based on documented requirements.",
+            "estimated": "Based on estimates.",
+            "unknown": "Requirements not known yet."
+          },
+          "heuristicNote": "We add an estimated 1 GB for the system and extra room to grow."
+        },
+        "unverified": {
+          "label": "Not yet checked on this computer type:",
+          "platforms": "We have not yet checked every application against every recommended system."
+        },
+        "fit": {
+          "chooseRamVariant": "Choose the {{ram}} GB model.",
+          "chooseRamVariantEstimated": "A {{ram}} GB model is a safer choice.",
+          "insufficientRam": "Not enough RAM for your selected applications.",
+          "architectureMismatch": "This computer cannot run all your selected applications.",
+          "allInsufficient": "No computer on our list can run all your selected applications. Remove some applications, or plan for a stronger computer.",
+          "belowRecommendedRam": "Works, but with less memory than we recommend."
+        },
+        "incompatible": {
+          "title": "Not compatible with this setup",
+          "description": "These applications need a different computer or system.",
+          "reasons": {
+            "architectureUnsupported": "Does not run on this computer type.",
+            "platformUnsupported": "No recommended system can run it."
+          }
+        },
         "operatingSystems": {
           "title": "Recommended Operating Systems",
           "description": "OS options to run on your hardware",

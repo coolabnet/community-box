@@ -297,6 +297,37 @@
           },
           "none": "Nenhum aplicativo selecionado."
         },
+        "capacity": {
+          "summary": "Seus aplicativos selecionados precisam de cerca de {{minRamGb}} GB de RAM (recomendamos {{recommendedRamGb}} GB).",
+          "summaryUnknown": "Ainda não sabemos quanta RAM os seus aplicativos selecionados precisam. Comece com pelo menos {{minRamGb}} GB de RAM e planeje espaço para crescer.",
+          "storage": "Os aplicativos com necessidades conhecidas usam cerca de {{minStorageGb}} GB de armazenamento. Outros podem precisar de mais.",
+          "confidence": {
+            "documented": "Com base em requisitos documentados.",
+            "estimated": "Com base em estimativas.",
+            "unknown": "Requisitos ainda não conhecidos."
+          },
+          "heuristicNote": "Somamos cerca de 1 GB estimado para o sistema e uma margem para crescer."
+        },
+        "unverified": {
+          "label": "Ainda não verificamos neste tipo de computador:",
+          "platforms": "Ainda não verificamos todos os aplicativos em todos os sistemas recomendados."
+        },
+        "fit": {
+          "chooseRamVariant": "Escolha o modelo de {{ram}} GB.",
+          "chooseRamVariantEstimated": "Um modelo de {{ram}} GB é uma escolha mais segura.",
+          "insufficientRam": "RAM insuficiente para os seus aplicativos selecionados.",
+          "architectureMismatch": "Este computador não consegue executar todos os seus aplicativos selecionados.",
+          "allInsufficient": "Nenhum computador da nossa lista consegue executar todos os seus aplicativos selecionados. Remova alguns aplicativos ou planeje um computador mais potente.",
+          "belowRecommendedRam": "Funciona, mas com menos memória do que recomendamos."
+        },
+        "incompatible": {
+          "title": "Não compatível com esta configuração",
+          "description": "Estes aplicativos precisam de um computador ou de um sistema diferente.",
+          "reasons": {
+            "architectureUnsupported": "Não funciona neste tipo de computador.",
+            "platformUnsupported": "Nenhum sistema recomendado consegue executá-lo."
+          }
+        },
         "operatingSystems": {
           "title": "Sistemas Operacionais Recomendados",
           "description": "Opções de SO para executar no seu hardware",
