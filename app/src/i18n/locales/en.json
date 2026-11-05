@@ -297,6 +297,37 @@
           },
           "none": "No applications selected."
         },
+        "capacity": {
+          "summary": "We estimate {{minRamGb}} GB of RAM for your selected applications and the system. We recommend {{recommendedRamGb}} GB.",
+          "summaryUnknown": "We do not know the full RAM needs yet. Start with at least {{minRamGb}} GB of RAM and plan for more.",
+          "storage": "Based on the storage information we have for the applications, we estimate {{minStorageGb}} GB. You may need more.",
+          "confidence": {
+            "documented": "The RAM values for the applications are documented.",
+            "estimated": "Based on estimates.",
+            "unknown": "RAM information is incomplete."
+          },
+          "heuristicNote": "We add an estimated 1 GB of RAM for the system. The recommended RAM includes room to grow."
+        },
+        "unverified": {
+          "label": "We do not yet know if these applications work with this setup:",
+          "platforms": "We do not have enough information to check applications with every recommended system."
+        },
+        "fit": {
+          "chooseRamVariant": "Choose {{ram}} GB of RAM for this computer.",
+          "chooseRamVariantEstimated": "Consider {{ram}} GB of RAM for this computer. You may need more.",
+          "insufficientRam": "This computer may not have enough RAM for the selected applications and the system.",
+          "architectureMismatch": "This computer cannot run all your selected applications.",
+          "allInsufficient": "Based on what we know, no computer on our list can run all your selected applications. Try fewer applications or a different or more powerful computer.",
+          "belowRecommendedRam": "Less RAM than we recommend."
+        },
+        "incompatible": {
+          "title": "Applications that do not work with this setup",
+          "description": "These applications need a different computer or system.",
+          "reasons": {
+            "architectureUnsupported": "Does not run on this computer type.",
+            "platformUnsupported": "No recommended system can run it."
+          }
+        },
         "operatingSystems": {
           "title": "Recommended Operating Systems",
           "description": "OS options to run on your hardware",

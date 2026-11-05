@@ -41,9 +41,14 @@ import {
 import { downloadPDF, sharePDF } from '@/utils/pdfGenerator';
 import PDFTemplate from './PDFTemplate';
 import { copyUrlToClipboard, shareUrl } from '@/utils/statePersistence';
-import { getRecommendations } from '@/utils/recommendations';
-import { getResultApplications, type ResultApplication } from '@/utils/resultApplications';
-import { normalizeUserAnswers, calculateDeviceScores } from '@/utils/deviceScoring';
+import {
+  buildRecommendation,
+  visibleFitReasons,
+  type IncompatibleApplication,
+} from '@/utils/recommendationPipeline';
+import type { ResultApplication } from '@/utils/resultApplications';
+import type { Capacity } from '@/utils/applications';
+import { Badge } from '@/components/ui/badge';
 import type {
   AccessDeviceKey,
   TechSupportAnswer,
@@ -127,25 +132,24 @@ const RecommendationResults = ({
   const [shareSuccess, setShareSuccess] = useState<boolean | null>(null);
   const [serviceSuggestions, setServiceSuggestions] = useState<ResultApplication[]>([]);
   const [osSuggestions, setOSSuggestions] = useState<OSSuggestion[]>([]);
+  const [capacity, setCapacity] = useState<Capacity | undefined>(undefined);
+  const [incompatibleApps, setIncompatibleApps] = useState<IncompatibleApplication[]>([]);
+  const [unverifiedApps, setUnverifiedApps] = useState<ResultApplication[]>([]);
+  const [osPlatformsIncomplete, setOsPlatformsIncomplete] = useState(false);
   const pdfTemplateRef = useRef<HTMLDivElement>(null);
 
   // Calculate device scores and recommendations on component mount
   useEffect(() => {
     // Simulate calculation time for better UX
     const timer = setTimeout(() => {
-      const normalizedAnswers = normalizeUserAnswers(answers);
-      const scores = calculateDeviceScores(answers, normalizedAnswers);
-      setDeviceScores(scores);
-
-      // Get service and OS recommendations
-      const recommendations = getRecommendations(
-        answers.usage,
-        answers.mainUse,
-        answers.format,
-        scores[0]?.device?.key as DeviceKey | undefined
-      );
-      setServiceSuggestions(getResultApplications(answers, scores[0]?.device?.key as DeviceKey | undefined));
-      setOSSuggestions(recommendations.operatingSystems);
+      const result = buildRecommendation(answers);
+      setDeviceScores(result.deviceScores);
+      setServiceSuggestions(result.applications);
+      setOSSuggestions(result.operatingSystems);
+      setCapacity(result.capacity);
+      setIncompatibleApps(result.incompatible);
+      setUnverifiedApps(result.unverified);
+      setOsPlatformsIncomplete(result.osPlatformsIncomplete);
 
       setIsCalculating(false);
     }, 1500);
@@ -164,6 +168,48 @@ const RecommendationResults = ({
 
   // Get alternatives (exclude top recommendation)
   const alternatives = deviceScores.slice(1);
+
+  // Capacity is computed only in the goals flow (goals + apps answered)
+  const isGoalsFlow = capacity !== undefined;
+
+  // Capacity-fit lines for a device card: plain text spans, not alerts.
+  // `belowRecommendedRam` stays hidden under unknown confidence; the variant
+  // hint stays but its copy is hedged (visibleFitReasons + estimated key).
+  // `onTint` raises contrast on the tinted top card (muted there fails contrast).
+  const renderFitLines = (score: DeviceScore, className = '', onTint = false) => {
+    const lines = visibleFitReasons(score, capacity).map(reason => ({
+      reason,
+      text:
+        reason === 'chooseRamVariant'
+          ? t(
+              capacity?.confidence === 'unknown'
+                ? 'questionnaire.questions.results.fit.chooseRamVariantEstimated'
+                : 'questionnaire.questions.results.fit.chooseRamVariant',
+              { ram: score.suggestedRamGb ?? '' }
+            )
+          : t(`questionnaire.questions.results.fit.${reason}`),
+    }));
+    if (lines.length === 0) return null;
+    return (
+      <div className={cn('mt-1 space-y-0.5 text-xs', className)}>
+        {lines.map(({ reason, text }) => (
+          <span
+            key={reason}
+            className={cn(
+              'block',
+              score.fit === 'insufficient'
+                ? 'text-red-700 dark:text-red-400'
+                : onTint
+                  ? 'text-foreground/80'
+                  : 'text-muted-foreground'
+            )}
+          >
+            {text}
+          </span>
+        ))}
+      </div>
+    );
+  };
 
   // Function to handle PDF generation and download
   const handleExportPDF = async () => {
@@ -362,6 +408,16 @@ const RecommendationResults = ({
               animate={{ opacity: 1, scale: 1 }}
               transition={{ delay: 0.3 }}
             >
+              {/* All devices insufficient (goals flow): keep the device list visible */}
+              {capacity && deviceScores.every(s => s.fit === 'insufficient') && (
+                <div
+                  role="status"
+                  className="mb-8 p-4 rounded-lg bg-amber-100 text-amber-800 dark:bg-amber-900/30 dark:text-amber-400 text-sm font-medium"
+                >
+                  {t('questionnaire.questions.results.fit.allInsufficient')}
+                </div>
+              )}
+
               {/* Top recommendation */}
               {topRecommendation && (
                 <motion.div
@@ -392,6 +448,36 @@ const RecommendationResults = ({
                         <div className="text-sm font-medium">
                           {getMatchRating(topRecommendation.matchPercentage, t)}
                         </div>
+                        {capacity && (
+                          <div className="text-xs text-foreground/80 text-center mt-2 max-w-xs">
+                            <p>
+                              {capacity.confidence === 'unknown'
+                                ? t('questionnaire.questions.results.capacity.summaryUnknown', {
+                                    minRamGb: capacity.minRamGb,
+                                  })
+                                : t('questionnaire.questions.results.capacity.summary', {
+                                    minRamGb: capacity.minRamGb,
+                                    recommendedRamGb: capacity.recommendedRamGb,
+                                  })}
+                            </p>
+                            {capacity.minStorageGb > 0 && (
+                              <p>
+                                {t('questionnaire.questions.results.capacity.storage', {
+                                  minStorageGb: capacity.minStorageGb,
+                                })}
+                              </p>
+                            )}
+                            <p>
+                              {t(
+                                `questionnaire.questions.results.capacity.confidence.${capacity.confidence}`
+                              )}
+                            </p>
+                            <p>
+                              {t('questionnaire.questions.results.capacity.heuristicNote')}
+                            </p>
+                          </div>
+                        )}
+                        {renderFitLines(topRecommendation, '', true)}
                       </div>
                     </div>
                   </div>
@@ -514,6 +600,7 @@ const RecommendationResults = ({
                                 <p className="text-sm text-muted-foreground md:pl-12">
                                   {getMatchRating(alternative.matchPercentage, t)} ({alternative.matchPercentage}%)
                                 </p>
+                                {renderFitLines(alternative, 'md:pl-12')}
                               </div>
                             </div>
 
@@ -662,22 +749,77 @@ const RecommendationResults = ({
                               <div className="flex-1 min-w-0">
                                 <h4 className="font-medium text-sm">{t(`${service.i18nKey}.name`)}</h4>
                                 <p className="text-xs text-muted-foreground">{t(`${service.i18nKey}.description`)}</p>
+                                {(service.status === 'candidate' || service.offline === 'full' || service.network === 'needsInternet') && (
+                                  <div className="flex flex-wrap gap-1.5 mt-1">
+                                    {service.status === 'candidate' && (
+                                      <Badge variant="outline">{t('questionnaire.questions.applications.badges.lessEvidence')}</Badge>
+                                    )}
+                                    {service.offline === 'full' && (
+                                      <Badge variant="secondary">{t('questionnaire.questions.applications.badges.worksOffline')}</Badge>
+                                    )}
+                                    {service.network === 'needsInternet' && (
+                                      <Badge variant="outline">{t('questionnaire.questions.applications.badges.needsInternet')}</Badge>
+                                    )}
+                                  </div>
+                                )}
                                 <CatalogMeta links={service.links} requirements={service.requirements} />
                               </div>
-                              <a
-                                href={`https://duckduckgo.com/?q=${encodeURIComponent(t(`${service.i18nKey}.name`) + ' self-hosted')}`}
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className="text-primary hover:text-primary/80 shrink-0"
-                                aria-label={t(`${service.i18nKey}.name`)}
-                              >
-                                <ExternalLink className="h-4 w-4" />
-                              </a>
+                              {(!isGoalsFlow || !service.links?.length) && (
+                                <a
+                                  href={`https://duckduckgo.com/?q=${encodeURIComponent(t(`${service.i18nKey}.name`) + ' self-hosted')}`}
+                                  target="_blank"
+                                  rel="noopener noreferrer"
+                                  className="text-primary hover:text-primary/80 shrink-0"
+                                  aria-label={t(`${service.i18nKey}.name`)}
+                                >
+                                  <ExternalLink className="h-4 w-4" />
+                                </a>
+                              )}
                             </motion.div>
                           ))}
                         </div>
                       </div>
                     </div>
+                  )}
+
+                  {/* Compatible apps we could not fully check (goals flow) */}
+                  {isGoalsFlow && unverifiedApps.length > 0 && (
+                    <p className="text-sm text-muted-foreground">
+                      {t('questionnaire.questions.results.unverified.label')}{' '}
+                      {unverifiedApps.map(u => t(`${u.i18nKey}.name`)).join(', ')}
+                    </p>
+                  )}
+                  {isGoalsFlow && osPlatformsIncomplete && (
+                    <p className="text-sm text-muted-foreground">
+                      {t('questionnaire.questions.results.unverified.platforms')}
+                    </p>
+                  )}
+
+                  {/* Applications not compatible with this setup (goals flow) */}
+                  {incompatibleApps.length > 0 && (
+                    <details className="bg-card rounded-xl border border-border overflow-hidden">
+                      <summary className="p-4 cursor-pointer text-sm font-medium select-none">
+                        {t('questionnaire.questions.results.incompatible.title')}
+                      </summary>
+                      <div className="px-4 pb-4 text-sm text-muted-foreground">
+                        <p className="mb-2">
+                          {t('questionnaire.questions.results.incompatible.description')}
+                        </p>
+                        <ul className="space-y-1">
+                          {incompatibleApps.map(({ application, reasons }) => (
+                            <li key={application.id}>
+                              {t(`${application.i18nKey}.name`)}
+                              {': '}
+                              {reasons
+                                .map(reason =>
+                                  t(`questionnaire.questions.results.incompatible.reasons.${reason}`)
+                                )
+                                .join(' ')}
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+                    </details>
                   )}
 
                   {/* Operating Systems Section */}
