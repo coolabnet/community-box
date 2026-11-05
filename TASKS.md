@@ -89,21 +89,15 @@ Use this when working several TODO items at once.
 
 ## In review (PRs)
 
-- `M4` PR5 — #91 capacity-aware results, `needs-human-qa` (gate SHIP after
-  3 BLOCK rounds; junior browser QA clean). Waits on owner QA + H4
-  capacity-constant sign-off. Worktree `../cb-m4-pr5` kept for fixes.
-- `T1-17` — #92 hamburger menu adjustments, `needs-human-qa` (gate SHIP
-  after 1 BLOCK round: group toggles are now real buttons; junior browser
-  QA 7/7, keyboard verified). Waits on owner QA. Worktree `../cb-t1-17`
-  kept for fixes.
-
-None else. `T3-23` BlankOn waits on Q39 (partner question).
+None. `T3-23` BlankOn waits on Q39 (partner question).
 
 ## TODO (doable now)
 
-`M4` PR6 (PDF sections) waits on #91 merging (shared files). Everything
-else waits on a decision in `gg2026-decisions.html`, on a partner, or on
-human QA of a parked PR.
+- `M4` PR6 — PDF applications, evidence and capacity sections (plan §7;
+  `needs-human-qa`; unblocked by #91 merging).
+
+Everything else waits on a decision in `gg2026-decisions.html`, on a
+partner, or on human QA.
 
 ## Blocked (see `gg2026-decisions.html`)
 
@@ -124,6 +118,20 @@ nothing to act on until partners fill it. Q10, Q18, Q20 and Q39 researched in
 
 ## Done
 
+- `T1-17` — hamburger menu adjustments: top order Setup Wizard, Quickstart
+  Guides, AI Assistant, Downloads (research paper + images grouped there),
+  Solar Calculator, Community, About; Essential Services + Network
+  Configuration merged as "Networks and Computers"; menu groups open with
+  the keyboard (real buttons + aria-expanded). Copy renamed by wording
+  gate (WORDBLOCK → WORDSHIP). Gate SHIP after 1 BLOCK round; junior
+  browser QA 7/7. Live 2026-11-05 (PR #92, `7dc47a0`). Doc row 17 Done.
+- `M4` PR5 — capacity-aware results: pure pipeline (buildRecommendation)
+  annotates devices with RAM/storage fit, sorts insufficient last, splits
+  incompatible apps into a collapsed list, badges + unverified notices;
+  estimate labels per H4; legacy results unchanged. Copy signed off
+  (WORDSHIP after 16 replacement groups, es to formal usted). Gate SHIP
+  after 3 BLOCK rounds; browser QA clean. Live 2026-11-05 (PR #91,
+  `b6daf30`). H4 constants still estimates pending team sign-off.
 - `M4` PR4 — goals-first step and state v3: new step 0 goal selection
   (10 DRAFT goals + free text), applications review step (top-3
   preselected, add/remove), v1/v2 link migration, results list the
