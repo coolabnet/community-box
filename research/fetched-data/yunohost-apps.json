@@ -1,6 +1,6 @@
 {
-  "timestamp": "2026-11-05T13:23:29.437Z",
-  "script": "run-all.js",
+  "timestamp": "2026-11-05T14:28:51.325Z",
+  "script": "scripts.test.js",
   "source": "YunoHost-Apps GitHub Organization",
   "url": "https://github.com/YunoHost-Apps",
   "api_url": "https://api.github.com/orgs/YunoHost-Apps/repos",
@@ -149,7 +149,7 @@
       "url": "https://github.com/YunoHost-Apps/adminer_ynh",
       "stars": 4,
       "forks": 4,
-      "updated_at": "2026-10-28T12:01:07Z",
+      "updated_at": "2026-11-05T14:07:40Z",
       "language": "Shell",
       "archived": false
     },
@@ -5385,7 +5385,7 @@
       "url": "https://github.com/YunoHost-Apps/lychee_ynh",
       "stars": 11,
       "forks": 6,
-      "updated_at": "2026-10-29T22:15:18Z",
+      "updated_at": "2026-11-05T14:27:37Z",
       "language": "Shell",
       "archived": false
     },
@@ -7167,7 +7167,7 @@
       "url": "https://github.com/YunoHost-Apps/paperless-ngx_ynh",
       "stars": 14,
       "forks": 14,
-      "updated_at": "2026-11-01T13:03:03Z",
+      "updated_at": "2026-11-05T13:56:17Z",
       "language": "Shell",
       "archived": false
     },
