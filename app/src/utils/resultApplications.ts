@@ -15,6 +15,8 @@ export interface ResultApplication {
   offline?: ApplicationEntry['offline'];
   network?: ApplicationEntry['network'];
   status?: ApplicationEntry['status'];
+  // Catalog evidence URLs with their checked dates (goals flow only).
+  evidence?: ApplicationEntry['evidence'];
 }
 
 const LEGACY_ITEM_KEY_PREFIX = 'questionnaire.questions.results.services.items';
@@ -25,6 +27,7 @@ export const toResultApplication = (app: ApplicationEntry): ResultApplication =>
   i18nKey: app.i18nKey,
   icon: app.icon,
   ...(app.links ? { links: app.links } : {}),
+  ...(app.evidence?.length ? { evidence: app.evidence } : {}),
   offline: app.offline,
   network: app.network,
   status: app.status,

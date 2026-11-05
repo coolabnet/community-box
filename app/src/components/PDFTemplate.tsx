@@ -1,4 +1,4 @@
-import { useRef, type ReactNode } from 'react';
+import { Fragment, useRef, type ReactNode } from 'react';
 import { useTranslation } from 'react-i18next';
 import type { TFunction } from 'i18next';
 import { tArray } from '@/lib/i18n-helpers';
@@ -28,11 +28,18 @@ import type {
   UsageKey,
   UserAnswers,
 } from '@/types/questionnaire';
+import type { Capacity } from '@/utils/applications';
+import type { ResultApplication } from '@/utils/resultApplications';
+import { visibleFitReasons } from '@/utils/recommendationPipeline';
 
 interface PDFTemplateProps {
   recommendation: DeviceScore;
   alternatives: DeviceScore[];
   answers: UserAnswers;
+  applications?: ResultApplication[];
+  capacity?: Capacity;
+  unverifiedApps?: ResultApplication[];
+  osPlatformsIncomplete?: boolean;
 }
 
 // Map attribute keys to icons
@@ -79,7 +86,15 @@ const getAnswerText = (questionId: string, value: unknown, t: TFunction): string
   return String(value);
 };
 
-const PDFTemplate = ({ recommendation, alternatives, answers }: PDFTemplateProps) => {
+const PDFTemplate = ({
+  recommendation,
+  alternatives,
+  answers,
+  applications,
+  capacity,
+  unverifiedApps,
+  osPlatformsIncomplete,
+}: PDFTemplateProps) => {
   const { t } = useTranslation();
   const pdfRef = useRef<HTMLDivElement>(null);
 
@@ -88,6 +103,69 @@ const PDFTemplate = ({ recommendation, alternatives, answers }: PDFTemplateProps
   // Goals inferred from a legacy usage answer were never reviewed: print the
   // original usage answer instead (same rule as utils/resultApplications.ts).
   const showGoals = !!answers.goals && (!!answers.apps || !answers.usage);
+
+  // Capacity-fit lines for a device card, plain text (same rules as the
+  // on-screen cards: visibleFitReasons drops belowRecommendedRam under unknown
+  // confidence and the variant hint copy is hedged then).
+  const renderPdfFitLines = (score: DeviceScore) => {
+    const lines = visibleFitReasons(score, capacity).map(reason =>
+      reason === 'chooseRamVariant'
+        ? t(capacity?.confidence === 'unknown'
+            ? 'questionnaire.questions.results.fit.chooseRamVariantEstimated'
+            : 'questionnaire.questions.results.fit.chooseRamVariant',
+            { ram: score.suggestedRamGb ?? '' })
+        : t(`questionnaire.questions.results.fit.${reason}`)
+    );
+    if (lines.length === 0) return null;
+    return (
+      <div className="mt-2 space-y-1">
+        {lines.map(text => <p key={text} className="text-sm text-gray-700">{text}</p>)}
+      </div>
+    );
+  };
+
+  // One application card: evidence URLs as plain text (canvas-rendered PDF,
+  // links are not clickable), links only as a fallback when evidence is absent.
+  // The first card omits its own data-pdf-block: the heading+card wrapper is
+  // its paging block, so the pair stays atomic in the page slicer.
+  const renderAppCard = (app: ResultApplication, withPagingBlock = true) => {
+    const evidenceSources: { url: string; note?: string }[] = app.evidence?.length
+      ? app.evidence.map(ev => ({
+          url: ev.url,
+          note: t('questionnaire.questions.results.pdf.checkedOn', { date: ev.checked }),
+        }))
+      : (app.links ?? []).map(l => ({ url: l.url }));
+    return (
+      <div data-pdf-block={withPagingBlock ? true : undefined} className="p-4 bg-gray-50 rounded-lg border border-gray-200">
+        <div className="flex items-start gap-3">
+          <div className="text-2xl">{app.icon}</div>
+          <div className="flex-1 min-w-0">
+            <h4 className="font-medium text-gray-800">{t(`${app.i18nKey}.name`)}</h4>
+            <p className="text-sm text-gray-600 mb-1">{t(`${app.i18nKey}.description`)}</p>
+            {(app.status === 'candidate' || app.offline === 'full' || app.network === 'needsInternet') && (
+              <p className="text-sm text-gray-700 mb-1">
+                {[
+                  app.status === 'candidate' && t('questionnaire.questions.applications.badges.lessEvidence'),
+                  app.offline === 'full' && t('questionnaire.questions.applications.badges.worksOffline'),
+                  app.network === 'needsInternet' && t('questionnaire.questions.applications.badges.needsInternet'),
+                ].filter(Boolean).join(' · ')}
+              </p>
+            )}
+            {evidenceSources.length > 0 && (
+              <div className="text-xs text-gray-600">
+                <span className="font-medium">{t('questionnaire.questions.results.pdf.evidenceLabel')}: </span>
+                {evidenceSources.map(src => (
+                  <p key={src.url} className="break-all">
+                    {src.url}{src.note ? ` (${src.note})` : ''}
+                  </p>
+                ))}
+              </div>
+            )}
+          </div>
+        </div>
+      </div>
+    );
+  };
 
   return (
     <div
@@ -206,7 +284,32 @@ const PDFTemplate = ({ recommendation, alternatives, answers }: PDFTemplateProps
           <h4 className="font-medium mb-2 text-gray-800">{t('common.idealFor')}</h4>
           <p className="text-gray-700">{t(`questionnaire.questions.results.devices.${topRecommendation.device.key}.idealFor`)}</p>
         </div>
+
+        {renderPdfFitLines(topRecommendation)}
       </div>
+
+      {/* Capacity summary (goals flow only; same copy as the on-screen block) */}
+      {capacity && (
+        <div data-pdf-block className="pdf-capacity mb-8 p-4 bg-gray-50 rounded-lg border border-gray-200">
+          <h3 className="text-xl font-bold mb-3 text-gray-800">
+            {t('questionnaire.questions.results.capacity.title')}
+          </h3>
+          <p className="text-gray-700 mb-2">
+            {capacity.confidence === 'unknown'
+              ? t('questionnaire.questions.results.capacity.summaryUnknown', { minRamGb: capacity.minRamGb })
+              : t('questionnaire.questions.results.capacity.summary', { minRamGb: capacity.minRamGb, recommendedRamGb: capacity.recommendedRamGb })}
+          </p>
+          {capacity.minStorageGb > 0 && (
+            <p className="text-gray-700 mb-2">
+              {t('questionnaire.questions.results.capacity.storage', { minStorageGb: capacity.minStorageGb })}
+            </p>
+          )}
+          <p className="text-gray-700 mb-2">
+            {t(`questionnaire.questions.results.capacity.confidence.${capacity.confidence}`)}
+          </p>
+          <p className="text-sm text-gray-600">{t('questionnaire.questions.results.capacity.heuristicNote')}</p>
+        </div>
+      )}
 
       {/* Alternative recommendations */}
       {alternatives.length > 0 && (
@@ -241,9 +344,43 @@ const PDFTemplate = ({ recommendation, alternatives, answers }: PDFTemplateProps
                 <p className="text-gray-700 mb-3">
                   {t(`questionnaire.questions.results.devices.${alternative.device.key}.description`)}
                 </p>
+
+                {renderPdfFitLines(alternative)}
               </div>
             ))}
           </div>
+        </div>
+      )}
+
+      {/* Applications (goals flow only): evidence URLs as plain text, never anchors.
+          The heading and the first card share one data-pdf-block so the page
+          slicer cannot orphan the heading above the first card. */}
+      {capacity && applications && applications.length > 0 && (
+        <div className="pdf-applications mb-8">
+          <div data-pdf-block>
+            <h3 className="text-xl font-bold mb-4 text-gray-800">
+              {t('questionnaire.questions.results.services.title')}
+            </h3>
+            <div className="space-y-4">{renderAppCard(applications[0], false)}</div>
+          </div>
+          {applications.length > 1 && (
+            <div className="space-y-4 mt-4">
+              {applications.slice(1).map(app => (
+                <Fragment key={app.id}>{renderAppCard(app)}</Fragment>
+              ))}
+            </div>
+          )}
+          {unverifiedApps && unverifiedApps.length > 0 && (
+            <p data-pdf-block className="text-sm text-gray-600 mb-2">
+              {t('questionnaire.questions.results.unverified.label')}{' '}
+              {unverifiedApps.map(u => t(`${u.i18nKey}.name`)).join(', ')}
+            </p>
+          )}
+          {osPlatformsIncomplete && (
+            <p data-pdf-block className="text-sm text-gray-600 mb-2">
+              {t('questionnaire.questions.results.unverified.platforms')}
+            </p>
+          )}
         </div>
       )}
 
