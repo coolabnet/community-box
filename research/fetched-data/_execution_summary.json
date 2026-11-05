@@ -1,19 +1,19 @@
 {
-  "timestamp": "2026-11-05T14:28:35.402Z",
+  "timestamp": "2026-11-05T18:32:50.846Z",
   "script": "run-all.js",
   "note": "Summary of all data fetching script executions",
   "data": {
-    "execution_time": "2026-11-05T14:28:35.402Z",
+    "execution_time": "2026-11-05T18:32:50.845Z",
     "total_scripts": 7,
     "successful": 7,
     "failed": 0,
-    "total_duration_ms": 22910,
+    "total_duration_ms": 23510,
     "continue_on_error": true,
     "results": [
       {
         "name": "CapRover UI Translations",
         "success": true,
-        "duration": 268,
+        "duration": 317,
         "result": [
           "ar-EG",
           "de-DE",
@@ -36,7 +36,7 @@
       {
         "name": "CasaOS UI Translations",
         "success": true,
-        "duration": 173,
+        "duration": 140,
         "result": [
           "ca_ES",
           "cs_CZ",
@@ -71,7 +71,7 @@
       {
         "name": "YunoHost Apps",
         "success": true,
-        "duration": 14660,
+        "duration": 15552,
         "result": {
           "count": 1030,
           "apps": [
@@ -4262,7 +4262,7 @@
               "url": "https://github.com/YunoHost-Apps/indico_ynh",
               "stars": 2,
               "forks": 1,
-              "updated_at": "2026-10-26T21:32:40Z",
+              "updated_at": "2026-11-05T14:28:48Z",
               "language": "Shell",
               "archived": false
             },
@@ -7683,7 +7683,7 @@
               "url": "https://github.com/YunoHost-Apps/pixelfed_ynh",
               "stars": 51,
               "forks": 19,
-              "updated_at": "2026-10-22T07:13:45Z",
+              "updated_at": "2026-11-05T16:21:22Z",
               "language": "Shell",
               "archived": false
             },
@@ -11425,7 +11425,7 @@
       {
         "name": "YunoHost Docs Translations",
         "success": true,
-        "duration": 151,
+        "duration": 126,
         "result": [
           "de",
           "docs",
@@ -11442,7 +11442,7 @@
       {
         "name": "YunoHost UI Translations",
         "success": true,
-        "duration": 6333,
+        "duration": 6332,
         "result": [
           {
             "language": "French",
@@ -11849,7 +11849,7 @@
       {
         "name": "Zimaboard Shipping Areas",
         "success": true,
-        "duration": 399,
+        "duration": 353,
         "result": [
           "Argentina",
           "Australia",
@@ -11949,7 +11949,7 @@
       {
         "name": "CCCI Directory",
         "success": true,
-        "duration": 926,
+        "duration": 690,
         "result": {
           "rows": 428,
           "count": 443,

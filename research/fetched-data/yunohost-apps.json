@@ -1,6 +1,6 @@
 {
-  "timestamp": "2026-11-05T14:28:51.325Z",
-  "script": "scripts.test.js",
+  "timestamp": "2026-11-05T18:32:43.340Z",
+  "script": "run-all.js",
   "source": "YunoHost-Apps GitHub Organization",
   "url": "https://github.com/YunoHost-Apps",
   "api_url": "https://api.github.com/orgs/YunoHost-Apps/repos",
@@ -4208,7 +4208,7 @@
       "url": "https://github.com/YunoHost-Apps/indico_ynh",
       "stars": 2,
       "forks": 1,
-      "updated_at": "2026-10-26T21:32:40Z",
+      "updated_at": "2026-11-05T14:28:48Z",
       "language": "Shell",
       "archived": false
     },
@@ -7629,7 +7629,7 @@
       "url": "https://github.com/YunoHost-Apps/pixelfed_ynh",
       "stars": 51,
       "forks": 19,
-      "updated_at": "2026-10-22T07:13:45Z",
+      "updated_at": "2026-11-05T16:21:22Z",
       "language": "Shell",
       "archived": false
     },
