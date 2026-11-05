@@ -92,18 +92,18 @@ Use this when working several TODO items at once.
 - `M4` PR5 — #91 capacity-aware results, `needs-human-qa` (gate SHIP after
   3 BLOCK rounds; junior browser QA clean). Waits on owner QA + H4
   capacity-constant sign-off. Worktree `../cb-m4-pr5` kept for fixes.
+- `T1-17` — #92 hamburger menu adjustments, `needs-human-qa` (gate SHIP
+  after 1 BLOCK round: group toggles are now real buttons; junior browser
+  QA 7/7, keyboard verified). Waits on owner QA. Worktree `../cb-t1-17`
+  kept for fixes.
 
 None else. `T3-23` BlankOn waits on Q39 (partner question).
 
 ## TODO (doable now)
 
-- `T1-17` — hamburger menu adjustments: Setup Wizard, Quickstart Guides, AI
-  Assistant and Downloads higher; merge Essential services and Network
-  Configuration; move research document and download images down
-  (`needs-human-qa`).
-
-Everything else waits on a decision in `gg2026-decisions.html` or on human
-QA of a parked PR.
+`M4` PR6 (PDF sections) waits on #91 merging (shared files). Everything
+else waits on a decision in `gg2026-decisions.html`, on a partner, or on
+human QA of a parked PR.
 
 ## Blocked (see `gg2026-decisions.html`)
 
