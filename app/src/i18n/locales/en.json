@@ -458,11 +458,11 @@
     "recycledLaptopAlt": "Recycled laptop"
   },
   "sidebar": {
-    "setupWizard": "🧭 Setup Wizard",
-    "downloadResearchPaper": "📄 Download Research Paper",
-    "downloadImages": "💿 Download Images",
+    "setupWizard": "Setup Wizard",
+    "downloadResearchPaper": "Download Research Paper",
+    "downloadImages": "Download Images",
     "libreMeshImageFinder": "LibreMesh Image Finder",
-    "quickstartGuides": "📚 Quickstart Guides",
+    "quickstartGuides": "Quickstart Guides",
     "hardwareGuides": "🖥️ Hardware Guides",
     "intelNUC": "Intel NUC",
     "raspberryPi": "Raspberry Pi",
@@ -473,10 +473,10 @@
     "networkConfiguration": "🌐 Network Configuration",
     "systemManagement": "🛠️ System Management",
     "caseStudies": "📖 Case Studies",
-    "solarCalculator": "☀️ Solar Calculator",
-    "aiAssistant": "🤖 AI Assistant (Telegram, demo)",
-    "community": "🌍 Community",
-    "about": "ℹ️ About",
+    "solarCalculator": "Solar Calculator",
+    "aiAssistant": "AI Assistant",
+    "community": "Community",
+    "about": "About",
     "communityMap": "Community Networks Map"
   },
   "landing": {

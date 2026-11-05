@@ -458,11 +458,11 @@
     "recycledLaptopAlt": "Notebook reciclado"
   },
   "sidebar": {
-    "setupWizard": "🧭 Assistente de Configuração",
-    "downloadResearchPaper": "📄 Baixar Documento de Pesquisa",
-    "downloadImages": "💿 Baixar Imagens",
+    "setupWizard": "Assistente de Configuração",
+    "downloadResearchPaper": "Baixar Documento de Pesquisa",
+    "downloadImages": "Baixar Imagens",
     "libreMeshImageFinder": "Localizador de Imagens LibreMesh",
-    "quickstartGuides": "📚 Guias de Início Rápido",
+    "quickstartGuides": "Guias de Início Rápido",
     "hardwareGuides": "🖥️ Guias de Hardware",
     "intelNUC": "Intel NUC",
     "raspberryPi": "Raspberry Pi",
@@ -473,10 +473,10 @@
     "networkConfiguration": "🌐 Configuração de Rede",
     "systemManagement": "🛠️ Gerenciamento do Sistema",
     "caseStudies": "📖 Estudos de Caso",
-    "solarCalculator": "☀️ Calculadora Solar",
-    "aiAssistant": "🤖 Assistente de IA (Telegram, demo)",
-    "community": "🌍 Comunidade",
-    "about": "ℹ️ Sobre",
+    "solarCalculator": "Calculadora Solar",
+    "aiAssistant": "Assistente de IA",
+    "community": "Comunidade",
+    "about": "Sobre",
     "communityMap": "Mapa das Redes Comunitárias"
   },
   "landing": {
