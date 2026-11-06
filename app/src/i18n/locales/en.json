@@ -298,6 +298,7 @@
           "none": "No applications selected."
         },
         "capacity": {
+          "title": "How much RAM and storage you need",
           "summary": "We estimate {{minRamGb}} GB of RAM for your selected applications and the system. We recommend {{recommendedRamGb}} GB.",
           "summaryUnknown": "We do not know the full RAM needs yet. Start with at least {{minRamGb}} GB of RAM and plan for more.",
           "storage": "Based on the storage information we have for the applications, we estimate {{minStorageGb}} GB. You may need more.",
@@ -319,6 +320,10 @@
           "architectureMismatch": "This computer cannot run all your selected applications.",
           "allInsufficient": "Based on what we know, no computer on our list can run all your selected applications. Try fewer applications or a different or more powerful computer.",
           "belowRecommendedRam": "Less RAM than we recommend."
+        },
+        "pdf": {
+          "evidenceLabel": "Evidence",
+          "checkedOn": "checked on {{date}}"
         },
         "incompatible": {
           "title": "Applications that do not work with this setup",
