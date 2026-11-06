@@ -91,9 +91,10 @@ Use this when working several TODO items at once.
 ## In review (PRs)
 
 - `M4` PR6 — #93 PDF applications, evidence and capacity sections. Gate
-  SHIP (Opus; terra quota hit after 2 BLOCK rounds). `needs-human-qa`
-  (manual PDF export en/pt/es). Copy gate (WORDSHIP) pending terra quota
-  reset. `T3-23` BlankOn waits on Q39 (partner question).
+  SHIP (Opus; terra quota hit after 2 BLOCK rounds). Copy gate WORDSHIP
+  (3 pt/es replacements applied, `e1da691`). CI pass, browser QA 8/8.
+  `needs-human-qa`: owner manual PDF export en/pt/es, then merge.
+  `T3-23` BlankOn waits on Q39 (partner question).
 
 ## TODO (doable now)
 
