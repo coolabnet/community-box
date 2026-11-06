@@ -1,6 +1,6 @@
 {
-  "timestamp": "2026-11-05T18:32:27.650Z",
-  "script": "run-all.js",
+  "timestamp": "2026-11-06T14:05:27.011Z",
+  "script": "scripts.test.js",
   "source": "CapRover Frontend Repository",
   "url": "https://github.com/caprover/caprover-frontend",
   "locales_path": "src/locales",
