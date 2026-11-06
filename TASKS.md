@@ -58,7 +58,8 @@ Run every item through this loop. Do not skip steps for "small" items.
    - Here: move the item to `Done` with the commit hash.
 
 Pitfalls seen so far: memory is tight (about 3 GB free), so do not run
-heavy jobs in parallel; ask before restarting a job the system killed. Never
+heavy jobs in parallel; if the system kills a background job under memory
+pressure, restart it automatically. Never
 print API keys. Do not `rm` files to fix problems.
 
 ## Parallel PR cycle
