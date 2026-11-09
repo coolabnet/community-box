@@ -1,19 +1,19 @@
 {
-  "timestamp": "2026-11-09T15:03:40.327Z",
+  "timestamp": "2026-11-09T21:54:41.879Z",
   "script": "run-all.js",
   "note": "Summary of all data fetching script executions",
   "data": {
-    "execution_time": "2026-11-09T15:03:40.327Z",
+    "execution_time": "2026-11-09T21:54:41.879Z",
     "total_scripts": 7,
     "successful": 7,
     "failed": 0,
-    "total_duration_ms": 22615,
+    "total_duration_ms": 27557,
     "continue_on_error": true,
     "results": [
       {
         "name": "CapRover UI Translations",
         "success": true,
-        "duration": 196,
+        "duration": 295,
         "result": [
           "ar-EG",
           "de-DE",
@@ -36,7 +36,7 @@
       {
         "name": "CasaOS UI Translations",
         "success": true,
-        "duration": 87,
+        "duration": 163,
         "result": [
           "ca_ES",
           "cs_CZ",
@@ -71,7 +71,7 @@
       {
         "name": "YunoHost Apps",
         "success": true,
-        "duration": 13977,
+        "duration": 24146,
         "result": {
           "count": 1033,
           "apps": [
@@ -3216,7 +3216,7 @@
               "description": "A modern, convivial and free music server on YunoHost",
               "url": "https://github.com/YunoHost-Apps/funkwhale_ynh",
               "stars": 81,
-              "forks": 24,
+              "forks": 25,
               "updated_at": "2026-11-07T21:06:57Z",
               "language": "Shell",
               "archived": false
@@ -8871,7 +8871,7 @@
               "url": "https://github.com/YunoHost-Apps/seaweedfs_ynh",
               "stars": 0,
               "forks": 1,
-              "updated_at": "2026-10-27T00:42:34Z",
+              "updated_at": "2026-11-09T19:51:35Z",
               "language": "Shell",
               "archived": false
             },
@@ -11458,7 +11458,7 @@
       {
         "name": "YunoHost Docs Translations",
         "success": true,
-        "duration": 90,
+        "duration": 167,
         "result": [
           "de",
           "docs",
@@ -11475,7 +11475,7 @@
       {
         "name": "YunoHost UI Translations",
         "success": true,
-        "duration": 6817,
+        "duration": 1361,
         "result": [
           {
             "language": "French",
@@ -11882,7 +11882,7 @@
       {
         "name": "Zimaboard Shipping Areas",
         "success": true,
-        "duration": 571,
+        "duration": 491,
         "result": [
           "Argentina",
           "Australia",
@@ -11982,7 +11982,7 @@
       {
         "name": "CCCI Directory",
         "success": true,
-        "duration": 877,
+        "duration": 934,
         "result": {
           "rows": 428,
           "count": 443,

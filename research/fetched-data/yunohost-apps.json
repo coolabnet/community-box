@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-11-09T15:03:31.970Z",
+  "timestamp": "2026-11-09T21:54:38.866Z",
   "script": "run-all.js",
   "source": "YunoHost-Apps GitHub Organization",
   "url": "https://github.com/YunoHost-Apps",
@@ -3162,7 +3162,7 @@
       "description": "A modern, convivial and free music server on YunoHost",
       "url": "https://github.com/YunoHost-Apps/funkwhale_ynh",
       "stars": 81,
-      "forks": 24,
+      "forks": 25,
       "updated_at": "2026-11-07T21:06:57Z",
       "language": "Shell",
       "archived": false
@@ -8817,7 +8817,7 @@
       "url": "https://github.com/YunoHost-Apps/seaweedfs_ynh",
       "stars": 0,
       "forks": 1,
-      "updated_at": "2026-10-27T00:42:34Z",
+      "updated_at": "2026-11-09T19:51:35Z",
       "language": "Shell",
       "archived": false
     },
