@@ -1,6 +1,6 @@
 {
-  "timestamp": "2026-11-09T15:01:59.780Z",
-  "script": "scripts.test.js",
+  "timestamp": "2026-11-09T15:03:31.970Z",
+  "script": "run-all.js",
   "source": "YunoHost-Apps GitHub Organization",
   "url": "https://github.com/YunoHost-Apps",
   "api_url": "https://api.github.com/orgs/YunoHost-Apps/repos",
