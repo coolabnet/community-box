@@ -298,6 +298,7 @@
           "none": "Nenhum aplicativo selecionado."
         },
         "capacity": {
+          "title": "De quanta memória RAM e armazenamento você precisa",
           "summary": "Estimamos {{minRamGb}} GB de RAM para os aplicativos selecionados e o sistema. Recomendamos {{recommendedRamGb}} GB.",
           "summaryUnknown": "Ainda não sabemos todas as necessidades de RAM. Comece com pelo menos {{minRamGb}} GB de RAM e tenha um plano caso precise de mais.",
           "storage": "Pelas informações de armazenamento que temos dos aplicativos, estimamos {{minStorageGb}} GB. Você pode precisar de mais.",
@@ -319,6 +320,10 @@
           "architectureMismatch": "Nem todos os aplicativos selecionados funcionam neste computador.",
           "allInsufficient": "Pelo que sabemos, nenhum computador da lista consegue usar todos os aplicativos selecionados. Tente usar menos aplicativos ou outro computador, talvez mais potente.",
           "belowRecommendedRam": "Menos RAM do que recomendamos."
+        },
+        "pdf": {
+          "evidenceLabel": "Evidências",
+          "checkedOn": "data de verificação: {{date}}"
         },
         "incompatible": {
           "title": "Aplicativos que não funcionam nesta configuração",

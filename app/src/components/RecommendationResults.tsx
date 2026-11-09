@@ -999,6 +999,10 @@ const RecommendationResults = ({
               recommendation={topRecommendation}
               alternatives={alternatives.slice(0, 2)}
               answers={answers}
+              applications={capacity ? serviceSuggestions : undefined}
+              capacity={capacity}
+              unverifiedApps={unverifiedApps}
+              osPlatformsIncomplete={osPlatformsIncomplete}
             />
           </div>
         </div>

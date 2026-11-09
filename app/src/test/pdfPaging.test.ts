@@ -119,6 +119,20 @@ describe('computePdfPageSlices', () => {
     expect(bounds(slice(1100, blocks))).toEqual([[0, 300], [300, 1100]]);
   });
 
+  it('keeps the applications heading with the first card despite the margin gap', () => {
+    // Wrapper keeps heading with first card despite the margin gap: the heading
+    // ends at 880, the card starts at 896, and both sit inside the wrapper block
+    // 820-1150, so 896 is not a safe break and page 1 ends at 820 instead.
+    const blocks: PdfBlockBox[] = [
+      { top: 820, bottom: 1150 },
+      { top: 850, bottom: 880, breakable: false },
+      { top: 896, bottom: 1150 },
+    ];
+    const slices = slice(2000, blocks);
+    expect(bounds(slices)[0]).toEqual([0, 820]);
+    assertWellFormed(slices, 2000);
+  });
+
   it('breaks inside an oversized parent between its children', () => {
     // The parent is taller than a page, so it must not forbid breaks between its children
     const blocks: PdfBlockBox[] = [
