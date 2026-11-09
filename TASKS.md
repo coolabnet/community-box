@@ -90,11 +90,7 @@ Use this when working several TODO items at once.
 
 ## In review (PRs)
 
-- `M4` PR6 — #93 PDF applications, evidence and capacity sections. Gate
-  SHIP (Opus; terra quota hit after 2 BLOCK rounds). Copy gate WORDSHIP
-  (3 pt/es replacements applied, `e1da691`). CI pass, browser QA 8/8.
-  `needs-human-qa`: owner manual PDF export en/pt/es, then merge.
-  `T3-23` BlankOn waits on Q39 (partner question).
+None. `T3-23` BlankOn waits on Q39 (partner question).
 
 ## TODO (doable now)
 
@@ -120,6 +116,18 @@ nothing to act on until partners fill it. Q10, Q18, Q20 and Q39 researched in
 
 ## Done
 
+- `M4` PR6 — PDF applications, evidence and capacity sections (#93,
+  `5d3c0f2`, 2026-11-09): goals-flow PDF export gains an Applications
+  section (evidence URLs as text with checked dates, links fallback,
+  badges), capacity block, hedged fit lines, unverified caveats; heading
+  + first card atomic in the page slicer; legacy PDF unchanged by
+  construction. Gate SHIP (Opus after 2 terra BLOCK rounds + quota
+  fallback); copy WORDSHIP (pt "De quanta…", pt/es date labels
+  "data de verificação:" / "fecha de verificación:"); browser QA 8/8;
+  owner manual PDF QA en/pt/es. M4 plan §7 complete through PR6; PR7
+  still blocked on H1. Pre-existing anomalies logged on #93: string-form
+  `usage` share links drop answers; points step allows negative
+  remaining.
 - `T1-17` — hamburger menu adjustments: top order Setup Wizard, Quickstart
   Guides, AI Assistant, Downloads (research paper + images grouped there),
   Solar Calculator, Community, About; Essential Services + Network
