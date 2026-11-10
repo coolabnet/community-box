@@ -1,6 +1,6 @@
 {
-  "timestamp": "2026-11-09T21:54:38.866Z",
-  "script": "run-all.js",
+  "timestamp": "2026-11-10T14:43:49.898Z",
+  "script": "scripts.test.js",
   "source": "YunoHost-Apps GitHub Organization",
   "url": "https://github.com/YunoHost-Apps",
   "api_url": "https://api.github.com/orgs/YunoHost-Apps/repos",
@@ -314,7 +314,7 @@
       "url": "https://github.com/YunoHost-Apps/anarcosyndicalismebook_ynh",
       "stars": 0,
       "forks": 0,
-      "updated_at": "2026-11-09T14:58:26Z",
+      "updated_at": "2026-11-10T10:55:09Z",
       "language": "Shell",
       "archived": false
     },
@@ -2690,7 +2690,7 @@
       "url": "https://github.com/YunoHost-Apps/filebrowser-quantum_ynh",
       "stars": 0,
       "forks": 3,
-      "updated_at": "2026-10-06T07:02:47Z",
+      "updated_at": "2026-11-10T13:34:43Z",
       "language": "Shell",
       "archived": false
     },
@@ -7343,7 +7343,7 @@
       "url": "https://github.com/YunoHost-Apps/penpot_ynh",
       "stars": 9,
       "forks": 5,
-      "updated_at": "2026-11-06T07:51:27Z",
+      "updated_at": "2026-11-10T14:23:38Z",
       "language": "Shell",
       "archived": false
     },
@@ -10896,7 +10896,7 @@
       "url": "https://github.com/YunoHost-Apps/writefreely_ynh",
       "stars": 18,
       "forks": 2,
-      "updated_at": "2026-08-11T01:06:39Z",
+      "updated_at": "2026-11-10T02:14:11Z",
       "language": "Shell",
       "archived": false
     },
