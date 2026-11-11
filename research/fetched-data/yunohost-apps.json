@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-11-10T14:43:49.898Z",
+  "timestamp": "2026-11-11T13:58:43.688Z",
   "script": "scripts.test.js",
   "source": "YunoHost-Apps GitHub Organization",
   "url": "https://github.com/YunoHost-Apps",
@@ -468,7 +468,7 @@
       "url": "https://github.com/YunoHost-Apps/atuin_ynh",
       "stars": 0,
       "forks": 2,
-      "updated_at": "2026-11-02T12:42:30Z",
+      "updated_at": "2026-11-10T16:05:09Z",
       "language": "Shell",
       "archived": false
     },
@@ -765,7 +765,7 @@
       "url": "https://github.com/YunoHost-Apps/bookstack_ynh",
       "stars": 12,
       "forks": 5,
-      "updated_at": "2026-10-20T15:53:04Z",
+      "updated_at": "2026-11-11T13:25:29Z",
       "language": "Shell",
       "archived": false
     },
@@ -1172,7 +1172,7 @@
       "url": "https://github.com/YunoHost-Apps/cloudlog_ynh",
       "stars": 1,
       "forks": 1,
-      "updated_at": "2026-10-22T21:20:36Z",
+      "updated_at": "2026-11-10T14:49:22Z",
       "language": "Shell",
       "archived": false
     },
@@ -2503,7 +2503,7 @@
       "url": "https://github.com/YunoHost-Apps/fab-manager_ynh",
       "stars": 4,
       "forks": 6,
-      "updated_at": "2026-10-28T13:08:02Z",
+      "updated_at": "2026-11-10T15:40:58Z",
       "language": "Shell",
       "archived": false
     },
@@ -4307,7 +4307,7 @@
       "url": "https://github.com/YunoHost-Apps/invoiceshelf_ynh",
       "stars": 0,
       "forks": 2,
-      "updated_at": "2026-06-17T16:59:17Z",
+      "updated_at": "2026-11-10T16:45:26Z",
       "language": "Shell",
       "archived": false
     },
@@ -4571,7 +4571,7 @@
       "url": "https://github.com/YunoHost-Apps/kanboard_ynh",
       "stars": 17,
       "forks": 18,
-      "updated_at": "2026-11-02T08:40:11Z",
+      "updated_at": "2026-11-11T03:25:33Z",
       "language": "PHP",
       "archived": false
     },
@@ -9642,7 +9642,7 @@
       "url": "https://github.com/YunoHost-Apps/sync-in_ynh",
       "stars": 0,
       "forks": 2,
-      "updated_at": "2026-10-26T21:26:40Z",
+      "updated_at": "2026-11-10T15:39:44Z",
       "language": "Shell",
       "archived": false
     },
