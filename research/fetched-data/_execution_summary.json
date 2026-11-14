@@ -1,19 +1,19 @@
 {
-  "timestamp": "2026-11-13T14:25:42.357Z",
+  "timestamp": "2026-11-14T13:21:46.788Z",
   "script": "run-all.js",
   "note": "Summary of all data fetching script executions",
   "data": {
-    "execution_time": "2026-11-13T14:25:42.357Z",
+    "execution_time": "2026-11-14T13:21:46.788Z",
     "total_scripts": 7,
     "successful": 7,
     "failed": 0,
-    "total_duration_ms": 35602,
+    "total_duration_ms": 26460,
     "continue_on_error": true,
     "results": [
       {
         "name": "CapRover UI Translations",
         "success": true,
-        "duration": 295,
+        "duration": 159,
         "result": [
           "ar-EG",
           "de-DE",
@@ -36,7 +36,7 @@
       {
         "name": "CasaOS UI Translations",
         "success": true,
-        "duration": 177,
+        "duration": 150,
         "result": [
           "ca_ES",
           "cs_CZ",
@@ -71,7 +71,7 @@
       {
         "name": "YunoHost Apps",
         "success": true,
-        "duration": 26211,
+        "duration": 18023,
         "result": {
           "count": 1035,
           "apps": [
@@ -3580,7 +3580,7 @@
               "url": "https://github.com/YunoHost-Apps/gogs_ynh",
               "stars": 19,
               "forks": 8,
-              "updated_at": "2026-07-01T13:02:09Z",
+              "updated_at": "2026-11-14T08:11:53Z",
               "language": "Shell",
               "archived": false
             },
@@ -11480,7 +11480,7 @@
       {
         "name": "YunoHost Docs Translations",
         "success": true,
-        "duration": 163,
+        "duration": 110,
         "result": [
           "de",
           "docs",
@@ -11497,7 +11497,7 @@
       {
         "name": "YunoHost UI Translations",
         "success": true,
-        "duration": 7420,
+        "duration": 6912,
         "result": [
           {
             "language": "French",
@@ -11904,7 +11904,7 @@
       {
         "name": "Zimaboard Shipping Areas",
         "success": true,
-        "duration": 345,
+        "duration": 289,
         "result": [
           "Argentina",
           "Australia",
@@ -12004,7 +12004,7 @@
       {
         "name": "CCCI Directory",
         "success": true,
-        "duration": 991,
+        "duration": 817,
         "result": {
           "rows": 428,
           "count": 443,

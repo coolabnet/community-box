@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-11-13T14:25:43.260Z",
+  "timestamp": "2026-11-14T13:21:47.390Z",
   "script": "scripts.test.js",
   "source": "YunoHost-Apps GitHub Organization",
   "url": "https://github.com/YunoHost-Apps",
@@ -3526,7 +3526,7 @@
       "url": "https://github.com/YunoHost-Apps/gogs_ynh",
       "stars": 19,
       "forks": 8,
-      "updated_at": "2026-07-01T13:02:09Z",
+      "updated_at": "2026-11-14T08:11:53Z",
       "language": "Shell",
       "archived": false
     },
