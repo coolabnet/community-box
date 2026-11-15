@@ -1,19 +1,19 @@
 {
-  "timestamp": "2026-11-14T13:21:46.788Z",
+  "timestamp": "2026-11-15T13:49:07.018Z",
   "script": "run-all.js",
   "note": "Summary of all data fetching script executions",
   "data": {
-    "execution_time": "2026-11-14T13:21:46.788Z",
+    "execution_time": "2026-11-15T13:49:07.018Z",
     "total_scripts": 7,
     "successful": 7,
     "failed": 0,
-    "total_duration_ms": 26460,
+    "total_duration_ms": 25524,
     "continue_on_error": true,
     "results": [
       {
         "name": "CapRover UI Translations",
         "success": true,
-        "duration": 159,
+        "duration": 380,
         "result": [
           "ar-EG",
           "de-DE",
@@ -36,7 +36,7 @@
       {
         "name": "CasaOS UI Translations",
         "success": true,
-        "duration": 150,
+        "duration": 207,
         "result": [
           "ca_ES",
           "cs_CZ",
@@ -71,7 +71,7 @@
       {
         "name": "YunoHost Apps",
         "success": true,
-        "duration": 18023,
+        "duration": 21001,
         "result": {
           "count": 1035,
           "apps": [
@@ -2996,8 +2996,8 @@
               "description": "Forgejo package for YunoHost",
               "url": "https://github.com/YunoHost-Apps/forgejo_ynh",
               "stars": 25,
-              "forks": 9,
-              "updated_at": "2026-11-02T11:20:38Z",
+              "forks": 10,
+              "updated_at": "2026-11-15T08:49:29Z",
               "language": "Shell",
               "archived": false
             },
@@ -3391,9 +3391,9 @@
               "name": "ghost",
               "description": "Ghost package for YunoHost",
               "url": "https://github.com/YunoHost-Apps/ghost_ynh",
-              "stars": 22,
+              "stars": 23,
               "forks": 31,
-              "updated_at": "2026-10-22T21:06:47Z",
+              "updated_at": "2026-11-14T20:03:18Z",
               "language": "Shell",
               "archived": false
             },
@@ -4535,9 +4535,9 @@
               "name": "jirafeau",
               "description": "Jirafeau package for YunoHost",
               "url": "https://github.com/YunoHost-Apps/jirafeau_ynh",
-              "stars": 14,
+              "stars": 13,
               "forks": 14,
-              "updated_at": "2026-10-07T19:01:39Z",
+              "updated_at": "2026-11-14T16:27:13Z",
               "language": "Shell",
               "archived": false
             },
@@ -8419,7 +8419,7 @@
               "description": "Redirection app for YunoHost",
               "url": "https://github.com/YunoHost-Apps/redirect_ynh",
               "stars": 54,
-              "forks": 29,
+              "forks": 28,
               "updated_at": "2026-07-31T12:21:54Z",
               "language": "Shell",
               "archived": false
@@ -11480,7 +11480,7 @@
       {
         "name": "YunoHost Docs Translations",
         "success": true,
-        "duration": 110,
+        "duration": 204,
         "result": [
           "de",
           "docs",
@@ -11497,16 +11497,8 @@
       {
         "name": "YunoHost UI Translations",
         "success": true,
-        "duration": 6912,
+        "duration": 2437,
         "result": [
-          {
-            "language": "French",
-            "language_code": "fr",
-            "translated_percent": 100,
-            "translated_words": 11608,
-            "total_words": 11608,
-            "last_change": "2026-10-30T19:32:45.744418Z"
-          },
           {
             "language": "Arabic",
             "language_code": "ar",
@@ -11634,6 +11626,14 @@
             "translated_words": 139,
             "total_words": 139,
             "last_change": "2026-08-30T14:56:02.755507Z"
+          },
+          {
+            "language": "French",
+            "language_code": "fr",
+            "translated_percent": 98.9,
+            "translated_words": 11608,
+            "total_words": 11788,
+            "last_change": "2026-11-15T11:04:16.221049Z"
           },
           {
             "language": "Russian",
@@ -11904,7 +11904,7 @@
       {
         "name": "Zimaboard Shipping Areas",
         "success": true,
-        "duration": 289,
+        "duration": 411,
         "result": [
           "Argentina",
           "Australia",
@@ -12004,7 +12004,7 @@
       {
         "name": "CCCI Directory",
         "success": true,
-        "duration": 817,
+        "duration": 884,
         "result": {
           "rows": 428,
           "count": 443,

@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-11-14T13:21:47.390Z",
+  "timestamp": "2026-11-15T13:49:08.342Z",
   "script": "scripts.test.js",
   "source": "YunoHost-Apps GitHub Organization",
   "url": "https://github.com/YunoHost-Apps",
@@ -2942,8 +2942,8 @@
       "description": "Forgejo package for YunoHost",
       "url": "https://github.com/YunoHost-Apps/forgejo_ynh",
       "stars": 25,
-      "forks": 9,
-      "updated_at": "2026-11-02T11:20:38Z",
+      "forks": 10,
+      "updated_at": "2026-11-15T08:49:29Z",
       "language": "Shell",
       "archived": false
     },
@@ -3337,9 +3337,9 @@
       "name": "ghost",
       "description": "Ghost package for YunoHost",
       "url": "https://github.com/YunoHost-Apps/ghost_ynh",
-      "stars": 22,
+      "stars": 23,
       "forks": 31,
-      "updated_at": "2026-10-22T21:06:47Z",
+      "updated_at": "2026-11-14T20:03:18Z",
       "language": "Shell",
       "archived": false
     },
@@ -4481,9 +4481,9 @@
       "name": "jirafeau",
       "description": "Jirafeau package for YunoHost",
       "url": "https://github.com/YunoHost-Apps/jirafeau_ynh",
-      "stars": 14,
+      "stars": 13,
       "forks": 14,
-      "updated_at": "2026-10-07T19:01:39Z",
+      "updated_at": "2026-11-14T16:27:13Z",
       "language": "Shell",
       "archived": false
     },
@@ -8365,7 +8365,7 @@
       "description": "Redirection app for YunoHost",
       "url": "https://github.com/YunoHost-Apps/redirect_ynh",
       "stars": 54,
-      "forks": 29,
+      "forks": 28,
       "updated_at": "2026-07-31T12:21:54Z",
       "language": "Shell",
       "archived": false

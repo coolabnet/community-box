@@ -1,22 +1,14 @@
 {
-  "timestamp": "2026-11-14T13:21:52.683Z",
+  "timestamp": "2026-11-15T13:49:11.523Z",
   "script": "scripts.test.js",
   "source": "YunoHost Translation Platform",
   "url": "https://translate.yunohost.org/",
   "api_url": "https://translate.yunohost.org/api/translations/?format=json",
   "total_languages": 50,
-  "fully_translated": 17,
-  "partially_translated": 31,
+  "fully_translated": 16,
+  "partially_translated": 32,
   "not_started": 2,
   "data": [
-    {
-      "language": "French",
-      "language_code": "fr",
-      "translated_percent": 100,
-      "translated_words": 11608,
-      "total_words": 11608,
-      "last_change": "2026-10-30T19:32:45.744418Z"
-    },
     {
       "language": "Arabic",
       "language_code": "ar",
@@ -144,6 +136,14 @@
       "translated_words": 139,
       "total_words": 139,
       "last_change": "2026-08-30T14:56:02.755507Z"
+    },
+    {
+      "language": "French",
+      "language_code": "fr",
+      "translated_percent": 98.9,
+      "translated_words": 11608,
+      "total_words": 11788,
+      "last_change": "2026-11-15T11:04:16.221049Z"
     },
     {
       "language": "Russian",
