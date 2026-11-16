@@ -1,19 +1,19 @@
 {
-  "timestamp": "2026-11-15T13:49:07.018Z",
+  "timestamp": "2026-11-16T14:39:17.153Z",
   "script": "run-all.js",
   "note": "Summary of all data fetching script executions",
   "data": {
-    "execution_time": "2026-11-15T13:49:07.018Z",
+    "execution_time": "2026-11-16T14:39:17.153Z",
     "total_scripts": 7,
     "successful": 7,
     "failed": 0,
-    "total_duration_ms": 25524,
+    "total_duration_ms": 36628,
     "continue_on_error": true,
     "results": [
       {
         "name": "CapRover UI Translations",
         "success": true,
-        "duration": 380,
+        "duration": 230,
         "result": [
           "ar-EG",
           "de-DE",
@@ -36,7 +36,7 @@
       {
         "name": "CasaOS UI Translations",
         "success": true,
-        "duration": 207,
+        "duration": 126,
         "result": [
           "ca_ES",
           "cs_CZ",
@@ -71,7 +71,7 @@
       {
         "name": "YunoHost Apps",
         "success": true,
-        "duration": 21001,
+        "duration": 27733,
         "result": {
           "count": 1035,
           "apps": [
@@ -1489,7 +1489,7 @@
               "description": "CouchPotato package for YunoHost (install from fork)",
               "url": "https://github.com/YunoHost-Apps/couchpotato_ynh",
               "stars": 3,
-              "forks": 2,
+              "forks": 1,
               "updated_at": "2024-07-26T20:16:02Z",
               "language": "Shell",
               "archived": true
@@ -4625,8 +4625,8 @@
               "url": "https://github.com/YunoHost-Apps/kanboard_ynh",
               "stars": 17,
               "forks": 18,
-              "updated_at": "2026-11-11T03:25:33Z",
-              "language": "PHP",
+              "updated_at": "2026-11-16T11:26:28Z",
+              "language": "Shell",
               "archived": false
             },
             {
@@ -6526,9 +6526,9 @@
               "name": "n8n",
               "description": "n8n package for YunoHost",
               "url": "https://github.com/YunoHost-Apps/n8n_ynh",
-              "stars": 21,
+              "stars": 22,
               "forks": 21,
-              "updated_at": "2026-11-12T16:21:03Z",
+              "updated_at": "2026-11-15T14:28:56Z",
               "language": "Shell",
               "archived": false
             },
@@ -6834,9 +6834,9 @@
               "name": "ollama",
               "description": "",
               "url": "https://github.com/YunoHost-Apps/ollama_ynh",
-              "stars": 5,
+              "stars": 6,
               "forks": 3,
-              "updated_at": "2026-11-11T18:31:54Z",
+              "updated_at": "2026-11-15T14:28:16Z",
               "language": "Shell",
               "archived": false
             },
@@ -11480,7 +11480,7 @@
       {
         "name": "YunoHost Docs Translations",
         "success": true,
-        "duration": 204,
+        "duration": 126,
         "result": [
           "de",
           "docs",
@@ -11497,7 +11497,7 @@
       {
         "name": "YunoHost UI Translations",
         "success": true,
-        "duration": 2437,
+        "duration": 7233,
         "result": [
           {
             "language": "Arabic",
@@ -11904,7 +11904,7 @@
       {
         "name": "Zimaboard Shipping Areas",
         "success": true,
-        "duration": 411,
+        "duration": 389,
         "result": [
           "Argentina",
           "Australia",
@@ -12004,7 +12004,7 @@
       {
         "name": "CCCI Directory",
         "success": true,
-        "duration": 884,
+        "duration": 791,
         "result": {
           "rows": 428,
           "count": 443,

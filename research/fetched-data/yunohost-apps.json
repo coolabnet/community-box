@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-11-15T13:49:08.342Z",
+  "timestamp": "2026-11-16T14:39:35.692Z",
   "script": "scripts.test.js",
   "source": "YunoHost-Apps GitHub Organization",
   "url": "https://github.com/YunoHost-Apps",
@@ -1435,7 +1435,7 @@
       "description": "CouchPotato package for YunoHost (install from fork)",
       "url": "https://github.com/YunoHost-Apps/couchpotato_ynh",
       "stars": 3,
-      "forks": 2,
+      "forks": 1,
       "updated_at": "2024-07-26T20:16:02Z",
       "language": "Shell",
       "archived": true
@@ -4571,8 +4571,8 @@
       "url": "https://github.com/YunoHost-Apps/kanboard_ynh",
       "stars": 17,
       "forks": 18,
-      "updated_at": "2026-11-11T03:25:33Z",
-      "language": "PHP",
+      "updated_at": "2026-11-16T11:26:28Z",
+      "language": "Shell",
       "archived": false
     },
     {
@@ -6472,9 +6472,9 @@
       "name": "n8n",
       "description": "n8n package for YunoHost",
       "url": "https://github.com/YunoHost-Apps/n8n_ynh",
-      "stars": 21,
+      "stars": 22,
       "forks": 21,
-      "updated_at": "2026-11-12T16:21:03Z",
+      "updated_at": "2026-11-15T14:28:56Z",
       "language": "Shell",
       "archived": false
     },
@@ -6780,9 +6780,9 @@
       "name": "ollama",
       "description": "",
       "url": "https://github.com/YunoHost-Apps/ollama_ynh",
-      "stars": 5,
+      "stars": 6,
       "forks": 3,
-      "updated_at": "2026-11-11T18:31:54Z",
+      "updated_at": "2026-11-15T14:28:16Z",
       "language": "Shell",
       "archived": false
     },
