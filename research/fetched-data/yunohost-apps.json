@@ -1,6 +1,6 @@
 {
-  "timestamp": "2026-11-16T14:41:18.913Z",
-  "script": "run-all.js",
+  "timestamp": "2026-11-17T15:50:37.987Z",
+  "script": "scripts.test.js",
   "source": "YunoHost-Apps GitHub Organization",
   "url": "https://github.com/YunoHost-Apps",
   "api_url": "https://api.github.com/orgs/YunoHost-Apps/repos",
@@ -126,7 +126,7 @@
       "description": "AdGuard Home package for YunoHost: Network-wide ads & trackers blocking DNS server",
       "url": "https://github.com/YunoHost-Apps/adguardhome_ynh",
       "stars": 20,
-      "forks": 17,
+      "forks": 18,
       "updated_at": "2026-11-07T12:58:09Z",
       "language": "Shell",
       "archived": false
@@ -6373,9 +6373,9 @@
       "name": "my_webdav",
       "description": "Webdav configuration for YunoHost",
       "url": "https://github.com/YunoHost-Apps/my_webdav_ynh",
-      "stars": 2,
+      "stars": 3,
       "forks": 3,
-      "updated_at": "2026-01-06T09:27:46Z",
+      "updated_at": "2026-11-17T08:16:04Z",
       "language": "Shell",
       "archived": false
     },
@@ -7759,9 +7759,9 @@
       "name": "plik",
       "description": "Plik is a temporary file upload system (Wetransfer like) in Go.",
       "url": "https://github.com/YunoHost-Apps/plik_ynh",
-      "stars": 0,
+      "stars": 1,
       "forks": 1,
-      "updated_at": "2026-10-25T23:14:03Z",
+      "updated_at": "2026-11-16T18:13:52Z",
       "language": "Shell",
       "archived": false
     },
