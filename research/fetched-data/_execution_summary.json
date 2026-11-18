@@ -1,19 +1,19 @@
 {
-  "timestamp": "2026-11-17T15:50:36.683Z",
+  "timestamp": "2026-11-18T15:29:36.834Z",
   "script": "run-all.js",
   "note": "Summary of all data fetching script executions",
   "data": {
-    "execution_time": "2026-11-17T15:50:36.683Z",
+    "execution_time": "2026-11-18T15:29:36.834Z",
     "total_scripts": 7,
     "successful": 7,
     "failed": 0,
-    "total_duration_ms": 29248,
+    "total_duration_ms": 31407,
     "continue_on_error": true,
     "results": [
       {
         "name": "CapRover UI Translations",
         "success": true,
-        "duration": 878,
+        "duration": 257,
         "result": [
           "ar-EG",
           "de-DE",
@@ -36,7 +36,7 @@
       {
         "name": "CasaOS UI Translations",
         "success": true,
-        "duration": 792,
+        "duration": 129,
         "result": [
           "ca_ES",
           "cs_CZ",
@@ -71,9 +71,9 @@
       {
         "name": "YunoHost Apps",
         "success": true,
-        "duration": 19317,
+        "duration": 24688,
         "result": {
-          "count": 1035,
+          "count": 1036,
           "apps": [
             {
               "id": "13ft_ynh",
@@ -6229,9 +6229,9 @@
               "name": "mosquitto",
               "description": "Mosquitto package for YunoHost ",
               "url": "https://github.com/YunoHost-Apps/mosquitto_ynh",
-              "stars": 5,
+              "stars": 6,
               "forks": 5,
-              "updated_at": "2026-02-10T06:52:04Z",
+              "updated_at": "2026-11-18T05:54:33Z",
               "language": "Shell",
               "archived": false
             },
@@ -6958,6 +6958,17 @@
               "stars": 0,
               "forks": 1,
               "updated_at": "2026-10-25T22:48:01Z",
+              "language": "Shell",
+              "archived": false
+            },
+            {
+              "id": "openfire_ynh",
+              "name": "openfire",
+              "description": "XMPP server",
+              "url": "https://github.com/YunoHost-Apps/openfire_ynh",
+              "stars": 0,
+              "forks": 0,
+              "updated_at": "2026-11-17T21:18:58Z",
               "language": "Shell",
               "archived": false
             },
@@ -9177,9 +9188,9 @@
               "name": "simplex",
               "description": "SimpleX Chat package for YunoHost",
               "url": "https://github.com/YunoHost-Apps/simplex_ynh",
-              "stars": 3,
+              "stars": 4,
               "forks": 8,
-              "updated_at": "2025-12-25T17:59:36Z",
+              "updated_at": "2026-11-17T16:31:11Z",
               "language": "Shell",
               "archived": false
             },
@@ -11480,7 +11491,7 @@
       {
         "name": "YunoHost Docs Translations",
         "success": true,
-        "duration": 270,
+        "duration": 171,
         "result": [
           "de",
           "docs",
@@ -11497,8 +11508,16 @@
       {
         "name": "YunoHost UI Translations",
         "success": true,
-        "duration": 6389,
+        "duration": 4913,
         "result": [
+          {
+            "language": "French",
+            "language_code": "fr",
+            "translated_percent": 100,
+            "translated_words": 11788,
+            "total_words": 11788,
+            "last_change": "2026-11-18T11:22:01.604219Z"
+          },
           {
             "language": "Arabic",
             "language_code": "ar",
@@ -11626,14 +11645,6 @@
             "translated_words": 139,
             "total_words": 139,
             "last_change": "2026-08-30T14:56:02.755507Z"
-          },
-          {
-            "language": "French",
-            "language_code": "fr",
-            "translated_percent": 98.9,
-            "translated_words": 11608,
-            "total_words": 11788,
-            "last_change": "2026-11-15T11:04:16.221049Z"
           },
           {
             "language": "Russian",
@@ -11904,7 +11915,7 @@
       {
         "name": "Zimaboard Shipping Areas",
         "success": true,
-        "duration": 599,
+        "duration": 352,
         "result": [
           "Argentina",
           "Australia",
@@ -12004,10 +12015,10 @@
       {
         "name": "CCCI Directory",
         "success": true,
-        "duration": 1003,
+        "duration": 897,
         "result": {
-          "rows": 428,
-          "count": 443,
+          "rows": 429,
+          "count": 444,
           "unmatchedCountries": 0
         }
       }

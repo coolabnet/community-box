@@ -1,11 +1,11 @@
 {
-  "timestamp": "2026-11-17T15:50:37.987Z",
+  "timestamp": "2026-11-18T15:29:37.571Z",
   "script": "scripts.test.js",
   "source": "YunoHost-Apps GitHub Organization",
   "url": "https://github.com/YunoHost-Apps",
   "api_url": "https://api.github.com/orgs/YunoHost-Apps/repos",
-  "total_apps": 1035,
-  "total_repos_checked": 1057,
+  "total_apps": 1036,
+  "total_repos_checked": 1058,
   "languages": [
     "CSS",
     "HTML",
@@ -6175,9 +6175,9 @@
       "name": "mosquitto",
       "description": "Mosquitto package for YunoHost ",
       "url": "https://github.com/YunoHost-Apps/mosquitto_ynh",
-      "stars": 5,
+      "stars": 6,
       "forks": 5,
-      "updated_at": "2026-02-10T06:52:04Z",
+      "updated_at": "2026-11-18T05:54:33Z",
       "language": "Shell",
       "archived": false
     },
@@ -6904,6 +6904,17 @@
       "stars": 0,
       "forks": 1,
       "updated_at": "2026-10-25T22:48:01Z",
+      "language": "Shell",
+      "archived": false
+    },
+    {
+      "id": "openfire_ynh",
+      "name": "openfire",
+      "description": "XMPP server",
+      "url": "https://github.com/YunoHost-Apps/openfire_ynh",
+      "stars": 0,
+      "forks": 0,
+      "updated_at": "2026-11-17T21:18:58Z",
       "language": "Shell",
       "archived": false
     },
@@ -9123,9 +9134,9 @@
       "name": "simplex",
       "description": "SimpleX Chat package for YunoHost",
       "url": "https://github.com/YunoHost-Apps/simplex_ynh",
-      "stars": 3,
+      "stars": 4,
       "forks": 8,
-      "updated_at": "2025-12-25T17:59:36Z",
+      "updated_at": "2026-11-17T16:31:11Z",
       "language": "Shell",
       "archived": false
     },

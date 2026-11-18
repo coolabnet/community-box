@@ -1,16 +1,16 @@
 {
-  "timestamp": "2026-11-17T15:50:36.682Z",
+  "timestamp": "2026-11-18T15:29:36.832Z",
   "script": "get-ccci-directory.js",
   "data": {
     "source": {
       "name": "CCCI directory (Colnodo / APC)",
       "url": "https://app.agenteccci.colnodo.org/explore",
       "exportUrl": "https://app.agenteccci.colnodo.org/explore/export",
-      "retrievedAt": "2026-11-17T15:50:35.680Z",
-      "rows": 428
+      "retrievedAt": "2026-11-18T15:29:35.938Z",
+      "rows": 429
     },
     "curatedSource": "research/results/community-directory.curated.json",
-    "count": 443,
+    "count": 444,
     "unmatchedCountries": [],
     "networks": [
       {
@@ -1422,6 +1422,16 @@
         ]
       },
       {
+        "id": "CCCI-0440",
+        "name": "Guarani Community Network",
+        "country": "BR",
+        "status": "active",
+        "services": [],
+        "sources": [
+          "ccci"
+        ]
+      },
+      {
         "id": "CCCI-0106",
         "name": "Guifi",
         "country": "ES",
@@ -2263,6 +2273,23 @@
         ]
       },
       {
+        "id": "CCCI-0124",
+        "name": "Internet Roshni",
+        "country": "IN",
+        "status": "active",
+        "services": [
+          "internet",
+          "localServices",
+          "financial",
+          "support",
+          "literacy",
+          "cybercafe"
+        ],
+        "sources": [
+          "ccci"
+        ]
+      },
+      {
         "id": "CCCI-0125",
         "name": "Internet Roshni",
         "country": "IN",
@@ -2790,23 +2817,6 @@
         ]
       },
       {
-        "id": "CCCI-0124",
-        "name": "Internet Roshni",
-        "country": "IN",
-        "status": "active",
-        "services": [
-          "internet",
-          "localServices",
-          "financial",
-          "support",
-          "literacy",
-          "cybercafe"
-        ],
-        "sources": [
-          "ccci"
-        ]
-      },
-      {
         "id": "CCCI-0123",
         "name": "Internet Roshni",
         "country": "IN",
@@ -3095,209 +3105,7 @@
         ]
       },
       {
-        "id": "CCCI-0219",
-        "name": "ISOC",
-        "country": "IN",
-        "status": "inactive",
-        "services": [
-          "internet",
-          "localServices",
-          "financial",
-          "support",
-          "literacy",
-          "cybercafe"
-        ],
-        "sources": [
-          "ccci"
-        ]
-      },
-      {
-        "id": "CCCI-0220",
-        "name": "ISOC",
-        "country": "IN",
-        "status": "inProgress",
-        "services": [
-          "internet",
-          "localServices",
-          "financial",
-          "support",
-          "literacy",
-          "cybercafe"
-        ],
-        "sources": [
-          "ccci"
-        ]
-      },
-      {
-        "id": "CCCI-0218",
-        "name": "ISOC",
-        "country": "IN",
-        "status": "inactive",
-        "services": [
-          "internet",
-          "localServices",
-          "financial",
-          "support",
-          "literacy",
-          "cybercafe"
-        ],
-        "sources": [
-          "ccci"
-        ]
-      },
-      {
         "id": "CCCI-0217",
-        "name": "ISOC",
-        "country": "IN",
-        "status": "inProgress",
-        "services": [
-          "internet",
-          "localServices",
-          "financial",
-          "support",
-          "literacy",
-          "cybercafe"
-        ],
-        "sources": [
-          "ccci"
-        ]
-      },
-      {
-        "id": "CCCI-0241",
-        "name": "ISOC",
-        "country": "IN",
-        "status": "active",
-        "services": [
-          "internet",
-          "localServices",
-          "financial",
-          "support",
-          "literacy",
-          "cybercafe"
-        ],
-        "sources": [
-          "ccci"
-        ]
-      },
-      {
-        "id": "CCCI-0240",
-        "name": "ISOC",
-        "country": "IN",
-        "status": "inactive",
-        "services": [
-          "internet",
-          "localServices",
-          "financial",
-          "support",
-          "literacy",
-          "cybercafe"
-        ],
-        "sources": [
-          "ccci"
-        ]
-      },
-      {
-        "id": "CCCI-0239",
-        "name": "ISOC",
-        "country": "IN",
-        "status": "inactive",
-        "services": [
-          "internet",
-          "voice",
-          "offline",
-          "localServices"
-        ],
-        "sources": [
-          "ccci"
-        ]
-      },
-      {
-        "id": "CCCI-0238",
-        "name": "ISOC",
-        "country": "IN",
-        "status": "inProgress",
-        "services": [
-          "internet",
-          "localServices",
-          "financial",
-          "support",
-          "literacy",
-          "cybercafe"
-        ],
-        "sources": [
-          "ccci"
-        ]
-      },
-      {
-        "id": "CCCI-0237",
-        "name": "ISOC",
-        "country": "IN",
-        "status": "active",
-        "services": [
-          "internet",
-          "localServices",
-          "financial",
-          "support",
-          "literacy",
-          "cybercafe"
-        ],
-        "sources": [
-          "ccci"
-        ]
-      },
-      {
-        "id": "CCCI-0236",
-        "name": "ISOC",
-        "country": "IN",
-        "status": "inProgress",
-        "services": [
-          "internet",
-          "localServices",
-          "financial",
-          "support",
-          "literacy",
-          "cybercafe"
-        ],
-        "sources": [
-          "ccci"
-        ]
-      },
-      {
-        "id": "CCCI-0234",
-        "name": "ISOC",
-        "country": "IN",
-        "status": "inactive",
-        "services": [
-          "internet",
-          "localServices",
-          "financial",
-          "support",
-          "literacy",
-          "cybercafe"
-        ],
-        "sources": [
-          "ccci"
-        ]
-      },
-      {
-        "id": "CCCI-0233",
-        "name": "ISOC",
-        "country": "IN",
-        "status": "inProgress",
-        "services": [
-          "internet",
-          "localServices",
-          "financial",
-          "support",
-          "literacy",
-          "cybercafe"
-        ],
-        "sources": [
-          "ccci"
-        ]
-      },
-      {
-        "id": "CCCI-0232",
         "name": "ISOC",
         "country": "IN",
         "status": "inProgress",
@@ -3502,6 +3310,208 @@
       },
       {
         "id": "CCCI-0221",
+        "name": "ISOC",
+        "country": "IN",
+        "status": "inProgress",
+        "services": [
+          "internet",
+          "localServices",
+          "financial",
+          "support",
+          "literacy",
+          "cybercafe"
+        ],
+        "sources": [
+          "ccci"
+        ]
+      },
+      {
+        "id": "CCCI-0220",
+        "name": "ISOC",
+        "country": "IN",
+        "status": "inProgress",
+        "services": [
+          "internet",
+          "localServices",
+          "financial",
+          "support",
+          "literacy",
+          "cybercafe"
+        ],
+        "sources": [
+          "ccci"
+        ]
+      },
+      {
+        "id": "CCCI-0219",
+        "name": "ISOC",
+        "country": "IN",
+        "status": "inactive",
+        "services": [
+          "internet",
+          "localServices",
+          "financial",
+          "support",
+          "literacy",
+          "cybercafe"
+        ],
+        "sources": [
+          "ccci"
+        ]
+      },
+      {
+        "id": "CCCI-0218",
+        "name": "ISOC",
+        "country": "IN",
+        "status": "inactive",
+        "services": [
+          "internet",
+          "localServices",
+          "financial",
+          "support",
+          "literacy",
+          "cybercafe"
+        ],
+        "sources": [
+          "ccci"
+        ]
+      },
+      {
+        "id": "CCCI-0241",
+        "name": "ISOC",
+        "country": "IN",
+        "status": "active",
+        "services": [
+          "internet",
+          "localServices",
+          "financial",
+          "support",
+          "literacy",
+          "cybercafe"
+        ],
+        "sources": [
+          "ccci"
+        ]
+      },
+      {
+        "id": "CCCI-0240",
+        "name": "ISOC",
+        "country": "IN",
+        "status": "inactive",
+        "services": [
+          "internet",
+          "localServices",
+          "financial",
+          "support",
+          "literacy",
+          "cybercafe"
+        ],
+        "sources": [
+          "ccci"
+        ]
+      },
+      {
+        "id": "CCCI-0239",
+        "name": "ISOC",
+        "country": "IN",
+        "status": "inactive",
+        "services": [
+          "internet",
+          "voice",
+          "offline",
+          "localServices"
+        ],
+        "sources": [
+          "ccci"
+        ]
+      },
+      {
+        "id": "CCCI-0238",
+        "name": "ISOC",
+        "country": "IN",
+        "status": "inProgress",
+        "services": [
+          "internet",
+          "localServices",
+          "financial",
+          "support",
+          "literacy",
+          "cybercafe"
+        ],
+        "sources": [
+          "ccci"
+        ]
+      },
+      {
+        "id": "CCCI-0237",
+        "name": "ISOC",
+        "country": "IN",
+        "status": "active",
+        "services": [
+          "internet",
+          "localServices",
+          "financial",
+          "support",
+          "literacy",
+          "cybercafe"
+        ],
+        "sources": [
+          "ccci"
+        ]
+      },
+      {
+        "id": "CCCI-0236",
+        "name": "ISOC",
+        "country": "IN",
+        "status": "inProgress",
+        "services": [
+          "internet",
+          "localServices",
+          "financial",
+          "support",
+          "literacy",
+          "cybercafe"
+        ],
+        "sources": [
+          "ccci"
+        ]
+      },
+      {
+        "id": "CCCI-0234",
+        "name": "ISOC",
+        "country": "IN",
+        "status": "inactive",
+        "services": [
+          "internet",
+          "localServices",
+          "financial",
+          "support",
+          "literacy",
+          "cybercafe"
+        ],
+        "sources": [
+          "ccci"
+        ]
+      },
+      {
+        "id": "CCCI-0233",
+        "name": "ISOC",
+        "country": "IN",
+        "status": "inProgress",
+        "services": [
+          "internet",
+          "localServices",
+          "financial",
+          "support",
+          "literacy",
+          "cybercafe"
+        ],
+        "sources": [
+          "ccci"
+        ]
+      },
+      {
+        "id": "CCCI-0232",
         "name": "ISOC",
         "country": "IN",
         "status": "inProgress",
@@ -5032,75 +5042,7 @@
         ]
       },
       {
-        "id": "CCCI-0364",
-        "name": "Smartpur",
-        "country": "IN",
-        "status": "active",
-        "services": [
-          "internet",
-          "localServices",
-          "financial",
-          "support",
-          "literacy",
-          "cybercafe"
-        ],
-        "sources": [
-          "ccci"
-        ]
-      },
-      {
-        "id": "CCCI-0367",
-        "name": "Smartpur",
-        "country": "IN",
-        "status": "active",
-        "services": [
-          "internet",
-          "localServices",
-          "financial",
-          "support",
-          "literacy",
-          "cybercafe"
-        ],
-        "sources": [
-          "ccci"
-        ]
-      },
-      {
-        "id": "CCCI-0350",
-        "name": "Smartpur",
-        "country": "IN",
-        "status": "active",
-        "services": [
-          "internet",
-          "localServices",
-          "financial",
-          "support",
-          "literacy",
-          "cybercafe"
-        ],
-        "sources": [
-          "ccci"
-        ]
-      },
-      {
-        "id": "CCCI-0357",
-        "name": "Smartpur",
-        "country": "IN",
-        "status": "active",
-        "services": [
-          "internet",
-          "localServices",
-          "financial",
-          "support",
-          "literacy",
-          "cybercafe"
-        ],
-        "sources": [
-          "ccci"
-        ]
-      },
-      {
-        "id": "CCCI-0366",
+        "id": "CCCI-0351",
         "name": "Smartpur",
         "country": "IN",
         "status": "active",
@@ -5134,7 +5076,92 @@
         ]
       },
       {
-        "id": "CCCI-0355",
+        "id": "CCCI-0357",
+        "name": "Smartpur",
+        "country": "IN",
+        "status": "active",
+        "services": [
+          "internet",
+          "localServices",
+          "financial",
+          "support",
+          "literacy",
+          "cybercafe"
+        ],
+        "sources": [
+          "ccci"
+        ]
+      },
+      {
+        "id": "CCCI-0350",
+        "name": "Smartpur",
+        "country": "IN",
+        "status": "active",
+        "services": [
+          "internet",
+          "localServices",
+          "financial",
+          "support",
+          "literacy",
+          "cybercafe"
+        ],
+        "sources": [
+          "ccci"
+        ]
+      },
+      {
+        "id": "CCCI-0361",
+        "name": "Smartpur",
+        "country": "IN",
+        "status": "active",
+        "services": [
+          "internet",
+          "localServices",
+          "financial",
+          "support",
+          "literacy",
+          "cybercafe"
+        ],
+        "sources": [
+          "ccci"
+        ]
+      },
+      {
+        "id": "CCCI-0362",
+        "name": "Smartpur",
+        "country": "IN",
+        "status": "active",
+        "services": [
+          "internet",
+          "localServices",
+          "financial",
+          "support",
+          "literacy",
+          "cybercafe"
+        ],
+        "sources": [
+          "ccci"
+        ]
+      },
+      {
+        "id": "CCCI-0363",
+        "name": "Smartpur",
+        "country": "IN",
+        "status": "active",
+        "services": [
+          "internet",
+          "localServices",
+          "financial",
+          "support",
+          "literacy",
+          "cybercafe"
+        ],
+        "sources": [
+          "ccci"
+        ]
+      },
+      {
+        "id": "CCCI-0364",
         "name": "Smartpur",
         "country": "IN",
         "status": "active",
@@ -5168,7 +5195,41 @@
         ]
       },
       {
-        "id": "CCCI-0351",
+        "id": "CCCI-0366",
+        "name": "Smartpur",
+        "country": "IN",
+        "status": "active",
+        "services": [
+          "internet",
+          "localServices",
+          "financial",
+          "support",
+          "literacy",
+          "cybercafe"
+        ],
+        "sources": [
+          "ccci"
+        ]
+      },
+      {
+        "id": "CCCI-0367",
+        "name": "Smartpur",
+        "country": "IN",
+        "status": "active",
+        "services": [
+          "internet",
+          "localServices",
+          "financial",
+          "support",
+          "literacy",
+          "cybercafe"
+        ],
+        "sources": [
+          "ccci"
+        ]
+      },
+      {
+        "id": "CCCI-0355",
         "name": "Smartpur",
         "country": "IN",
         "status": "active",
@@ -5271,57 +5332,6 @@
       },
       {
         "id": "CCCI-0360",
-        "name": "Smartpur",
-        "country": "IN",
-        "status": "active",
-        "services": [
-          "internet",
-          "localServices",
-          "financial",
-          "support",
-          "literacy",
-          "cybercafe"
-        ],
-        "sources": [
-          "ccci"
-        ]
-      },
-      {
-        "id": "CCCI-0361",
-        "name": "Smartpur",
-        "country": "IN",
-        "status": "active",
-        "services": [
-          "internet",
-          "localServices",
-          "financial",
-          "support",
-          "literacy",
-          "cybercafe"
-        ],
-        "sources": [
-          "ccci"
-        ]
-      },
-      {
-        "id": "CCCI-0362",
-        "name": "Smartpur",
-        "country": "IN",
-        "status": "active",
-        "services": [
-          "internet",
-          "localServices",
-          "financial",
-          "support",
-          "literacy",
-          "cybercafe"
-        ],
-        "sources": [
-          "ccci"
-        ]
-      },
-      {
-        "id": "CCCI-0363",
         "name": "Smartpur",
         "country": "IN",
         "status": "active",
@@ -5496,23 +5506,6 @@
         ]
       },
       {
-        "id": "CCCI-0386",
-        "name": "Tata Trust",
-        "country": "IN",
-        "status": "inactive",
-        "services": [
-          "internet",
-          "localServices",
-          "financial",
-          "support",
-          "literacy",
-          "cybercafe"
-        ],
-        "sources": [
-          "ccci"
-        ]
-      },
-      {
         "id": "CCCI-0385",
         "name": "Tata Trust",
         "country": "IN",
@@ -5530,7 +5523,7 @@
         ]
       },
       {
-        "id": "CCCI-0384",
+        "id": "CCCI-0380",
         "name": "Tata Trust",
         "country": "IN",
         "status": "inactive",
@@ -5564,24 +5557,7 @@
         ]
       },
       {
-        "id": "CCCI-0387",
-        "name": "Tata Trust",
-        "country": "IN",
-        "status": "inactive",
-        "services": [
-          "internet",
-          "localServices",
-          "financial",
-          "support",
-          "literacy",
-          "cybercafe"
-        ],
-        "sources": [
-          "ccci"
-        ]
-      },
-      {
-        "id": "CCCI-0380",
+        "id": "CCCI-0386",
         "name": "Tata Trust",
         "country": "IN",
         "status": "inactive",
@@ -5616,6 +5592,40 @@
       },
       {
         "id": "CCCI-0383",
+        "name": "Tata Trust",
+        "country": "IN",
+        "status": "inactive",
+        "services": [
+          "internet",
+          "localServices",
+          "financial",
+          "support",
+          "literacy",
+          "cybercafe"
+        ],
+        "sources": [
+          "ccci"
+        ]
+      },
+      {
+        "id": "CCCI-0384",
+        "name": "Tata Trust",
+        "country": "IN",
+        "status": "inactive",
+        "services": [
+          "internet",
+          "localServices",
+          "financial",
+          "support",
+          "literacy",
+          "cybercafe"
+        ],
+        "sources": [
+          "ccci"
+        ]
+      },
+      {
+        "id": "CCCI-0387",
         "name": "Tata Trust",
         "country": "IN",
         "status": "inactive",
@@ -5786,16 +5796,6 @@
         ]
       },
       {
-        "id": "CCCI-0400",
-        "name": "V-NET",
-        "country": "ZA",
-        "status": "unknown",
-        "services": [],
-        "sources": [
-          "ccci"
-        ]
-      },
-      {
         "id": "CCCI-0399",
         "name": "V-NET",
         "country": "ZA",
@@ -5805,6 +5805,16 @@
           "literacy",
           "cybercafe"
         ],
+        "sources": [
+          "ccci"
+        ]
+      },
+      {
+        "id": "CCCI-0400",
+        "name": "V-NET",
+        "country": "ZA",
+        "status": "unknown",
+        "services": [],
         "sources": [
           "ccci"
         ]
@@ -5866,7 +5876,7 @@
         ]
       },
       {
-        "id": "CCCI-0409",
+        "id": "CCCI-0421",
         "name": "W4C",
         "country": "IN",
         "status": "inactive",
@@ -5900,177 +5910,7 @@
         ]
       },
       {
-        "id": "CCCI-0419",
-        "name": "W4C",
-        "country": "IN",
-        "status": "inactive",
-        "services": [
-          "internet",
-          "localServices",
-          "financial",
-          "support",
-          "literacy",
-          "cybercafe"
-        ],
-        "sources": [
-          "ccci"
-        ]
-      },
-      {
-        "id": "CCCI-0418",
-        "name": "W4C",
-        "country": "IN",
-        "status": "inactive",
-        "services": [
-          "internet",
-          "localServices",
-          "financial",
-          "support",
-          "literacy",
-          "cybercafe"
-        ],
-        "sources": [
-          "ccci"
-        ]
-      },
-      {
-        "id": "CCCI-0417",
-        "name": "W4C",
-        "country": "IN",
-        "status": "inactive",
-        "services": [
-          "internet",
-          "localServices",
-          "financial",
-          "support",
-          "literacy",
-          "cybercafe"
-        ],
-        "sources": [
-          "ccci"
-        ]
-      },
-      {
-        "id": "CCCI-0416",
-        "name": "W4C",
-        "country": "IN",
-        "status": "inactive",
-        "services": [
-          "internet",
-          "localServices",
-          "financial",
-          "support",
-          "literacy",
-          "cybercafe"
-        ],
-        "sources": [
-          "ccci"
-        ]
-      },
-      {
-        "id": "CCCI-0415",
-        "name": "W4C",
-        "country": "IN",
-        "status": "inactive",
-        "services": [
-          "internet",
-          "localServices",
-          "financial",
-          "support",
-          "literacy",
-          "cybercafe"
-        ],
-        "sources": [
-          "ccci"
-        ]
-      },
-      {
-        "id": "CCCI-0414",
-        "name": "W4C",
-        "country": "IN",
-        "status": "inactive",
-        "services": [
-          "internet",
-          "localServices",
-          "financial",
-          "support",
-          "literacy",
-          "cybercafe"
-        ],
-        "sources": [
-          "ccci"
-        ]
-      },
-      {
-        "id": "CCCI-0413",
-        "name": "W4C",
-        "country": "IN",
-        "status": "inactive",
-        "services": [
-          "internet",
-          "localServices",
-          "financial",
-          "support",
-          "literacy",
-          "cybercafe"
-        ],
-        "sources": [
-          "ccci"
-        ]
-      },
-      {
-        "id": "CCCI-0412",
-        "name": "W4C",
-        "country": "IN",
-        "status": "inactive",
-        "services": [
-          "internet",
-          "localServices",
-          "financial",
-          "support",
-          "literacy",
-          "cybercafe"
-        ],
-        "sources": [
-          "ccci"
-        ]
-      },
-      {
-        "id": "CCCI-0411",
-        "name": "W4C",
-        "country": "IN",
-        "status": "inactive",
-        "services": [
-          "internet",
-          "localServices",
-          "financial",
-          "support",
-          "literacy",
-          "cybercafe"
-        ],
-        "sources": [
-          "ccci"
-        ]
-      },
-      {
-        "id": "CCCI-0410",
-        "name": "W4C",
-        "country": "IN",
-        "status": "inactive",
-        "services": [
-          "internet",
-          "localServices",
-          "financial",
-          "support",
-          "literacy",
-          "cybercafe"
-        ],
-        "sources": [
-          "ccci"
-        ]
-      },
-      {
-        "id": "CCCI-0408",
+        "id": "CCCI-0406",
         "name": "W4C",
         "country": "IN",
         "status": "inactive",
@@ -6104,7 +5944,7 @@
         ]
       },
       {
-        "id": "CCCI-0406",
+        "id": "CCCI-0408",
         "name": "W4C",
         "country": "IN",
         "status": "inactive",
@@ -6121,7 +5961,177 @@
         ]
       },
       {
-        "id": "CCCI-0421",
+        "id": "CCCI-0409",
+        "name": "W4C",
+        "country": "IN",
+        "status": "inactive",
+        "services": [
+          "internet",
+          "localServices",
+          "financial",
+          "support",
+          "literacy",
+          "cybercafe"
+        ],
+        "sources": [
+          "ccci"
+        ]
+      },
+      {
+        "id": "CCCI-0410",
+        "name": "W4C",
+        "country": "IN",
+        "status": "inactive",
+        "services": [
+          "internet",
+          "localServices",
+          "financial",
+          "support",
+          "literacy",
+          "cybercafe"
+        ],
+        "sources": [
+          "ccci"
+        ]
+      },
+      {
+        "id": "CCCI-0411",
+        "name": "W4C",
+        "country": "IN",
+        "status": "inactive",
+        "services": [
+          "internet",
+          "localServices",
+          "financial",
+          "support",
+          "literacy",
+          "cybercafe"
+        ],
+        "sources": [
+          "ccci"
+        ]
+      },
+      {
+        "id": "CCCI-0412",
+        "name": "W4C",
+        "country": "IN",
+        "status": "inactive",
+        "services": [
+          "internet",
+          "localServices",
+          "financial",
+          "support",
+          "literacy",
+          "cybercafe"
+        ],
+        "sources": [
+          "ccci"
+        ]
+      },
+      {
+        "id": "CCCI-0413",
+        "name": "W4C",
+        "country": "IN",
+        "status": "inactive",
+        "services": [
+          "internet",
+          "localServices",
+          "financial",
+          "support",
+          "literacy",
+          "cybercafe"
+        ],
+        "sources": [
+          "ccci"
+        ]
+      },
+      {
+        "id": "CCCI-0414",
+        "name": "W4C",
+        "country": "IN",
+        "status": "inactive",
+        "services": [
+          "internet",
+          "localServices",
+          "financial",
+          "support",
+          "literacy",
+          "cybercafe"
+        ],
+        "sources": [
+          "ccci"
+        ]
+      },
+      {
+        "id": "CCCI-0415",
+        "name": "W4C",
+        "country": "IN",
+        "status": "inactive",
+        "services": [
+          "internet",
+          "localServices",
+          "financial",
+          "support",
+          "literacy",
+          "cybercafe"
+        ],
+        "sources": [
+          "ccci"
+        ]
+      },
+      {
+        "id": "CCCI-0416",
+        "name": "W4C",
+        "country": "IN",
+        "status": "inactive",
+        "services": [
+          "internet",
+          "localServices",
+          "financial",
+          "support",
+          "literacy",
+          "cybercafe"
+        ],
+        "sources": [
+          "ccci"
+        ]
+      },
+      {
+        "id": "CCCI-0419",
+        "name": "W4C",
+        "country": "IN",
+        "status": "inactive",
+        "services": [
+          "internet",
+          "localServices",
+          "financial",
+          "support",
+          "literacy",
+          "cybercafe"
+        ],
+        "sources": [
+          "ccci"
+        ]
+      },
+      {
+        "id": "CCCI-0417",
+        "name": "W4C",
+        "country": "IN",
+        "status": "inactive",
+        "services": [
+          "internet",
+          "localServices",
+          "financial",
+          "support",
+          "literacy",
+          "cybercafe"
+        ],
+        "sources": [
+          "ccci"
+        ]
+      },
+      {
+        "id": "CCCI-0418",
         "name": "W4C",
         "country": "IN",
         "status": "inactive",
