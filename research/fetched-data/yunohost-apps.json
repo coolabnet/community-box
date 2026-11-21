@@ -1,11 +1,11 @@
 {
-  "timestamp": "2026-11-18T15:31:10.865Z",
-  "script": "run-all.js",
+  "timestamp": "2026-11-21T14:30:47.225Z",
+  "script": "scripts.test.js",
   "source": "YunoHost-Apps GitHub Organization",
   "url": "https://github.com/YunoHost-Apps",
   "api_url": "https://api.github.com/orgs/YunoHost-Apps/repos",
-  "total_apps": 1036,
-  "total_repos_checked": 1058,
+  "total_apps": 1037,
+  "total_repos_checked": 1059,
   "languages": [
     "CSS",
     "HTML",
@@ -71,7 +71,7 @@
       "description": "2FAuth package for YunoHost",
       "url": "https://github.com/YunoHost-Apps/2FAuth_ynh",
       "stars": 4,
-      "forks": 6,
+      "forks": 5,
       "updated_at": "2026-10-29T15:00:03Z",
       "language": "Shell",
       "archived": false
@@ -259,7 +259,7 @@
       "url": "https://github.com/YunoHost-Apps/akkoma_ynh",
       "stars": 15,
       "forks": 5,
-      "updated_at": "2025-10-06T09:17:05Z",
+      "updated_at": "2026-11-21T00:07:07Z",
       "language": "Shell",
       "archived": false
     },
@@ -929,7 +929,7 @@
       "description": "Calibre-Web Automated package for YunoHost",
       "url": "https://github.com/YunoHost-Apps/calibreweb-automated_ynh",
       "stars": 2,
-      "forks": 1,
+      "forks": 2,
       "updated_at": "2026-11-08T08:45:26Z",
       "language": "Shell",
       "archived": false
@@ -2415,7 +2415,7 @@
       "url": "https://github.com/YunoHost-Apps/esphome_ynh",
       "stars": 1,
       "forks": 2,
-      "updated_at": "2026-08-17T19:49:02Z",
+      "updated_at": "2026-11-20T13:40:48Z",
       "language": "Shell",
       "archived": false
     },
@@ -3920,9 +3920,9 @@
       "name": "hister",
       "description": "Hister package for YunoHost",
       "url": "https://github.com/YunoHost-Apps/hister_ynh",
-      "stars": 0,
+      "stars": 1,
       "forks": 2,
-      "updated_at": "2026-09-10T16:53:03Z",
+      "updated_at": "2026-11-20T07:18:59Z",
       "language": "Shell",
       "archived": false
     },
@@ -4559,7 +4559,7 @@
       "description": "JupyterLab package for YunoHost",
       "url": "https://github.com/YunoHost-Apps/jupyterlab_ynh",
       "stars": 16,
-      "forks": 6,
+      "forks": 5,
       "updated_at": "2026-10-25T22:46:56Z",
       "language": "Python",
       "archived": false
@@ -7161,6 +7161,17 @@
       "archived": false
     },
     {
+      "id": "oxicloud_ynh",
+      "name": "oxicloud",
+      "description": "OxiCloud package for YunoHost",
+      "url": "https://github.com/YunoHost-Apps/oxicloud_ynh",
+      "stars": 0,
+      "forks": 1,
+      "updated_at": "2026-11-18T17:18:55Z",
+      "language": "Shell",
+      "archived": false
+    },
+    {
       "id": "p5_ynh",
       "name": "p5",
       "description": "",
@@ -7320,7 +7331,7 @@
       "description": "Federated (ActivityPub) video streaming platform using P2P for YunoHost",
       "url": "https://github.com/YunoHost-Apps/peertube_ynh",
       "stars": 98,
-      "forks": 32,
+      "forks": 33,
       "updated_at": "2026-10-28T11:08:55Z",
       "language": "Shell",
       "archived": false
@@ -7705,7 +7716,7 @@
       "description": "Plainpad package for YunoHost",
       "url": "https://github.com/YunoHost-Apps/plainpad_ynh",
       "stars": 1,
-      "forks": 1,
+      "forks": 2,
       "updated_at": "2026-04-23T20:31:21Z",
       "language": "Shell",
       "archived": false
@@ -8563,7 +8574,7 @@
       "description": "Roundcube package for YunoHost",
       "url": "https://github.com/YunoHost-Apps/roundcube_ynh",
       "stars": 17,
-      "forks": 29,
+      "forks": 30,
       "updated_at": "2026-10-22T20:58:22Z",
       "language": "Shell",
       "archived": false
