@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-11-21T14:30:47.225Z",
+  "timestamp": "2026-11-22T14:26:25.099Z",
   "script": "scripts.test.js",
   "source": "YunoHost-Apps GitHub Organization",
   "url": "https://github.com/YunoHost-Apps",
@@ -1336,7 +1336,7 @@
       "description": "Conduit packaged for YunoHost",
       "url": "https://github.com/YunoHost-Apps/conduit_ynh",
       "stars": 3,
-      "forks": 7,
+      "forks": 8,
       "updated_at": "2026-10-04T09:24:08Z",
       "language": "Shell",
       "archived": false
@@ -5021,7 +5021,7 @@
       "description": "LibreDB Studio package for YunoHost",
       "url": "https://github.com/YunoHost-Apps/libredb_studio_ynh",
       "stars": 0,
-      "forks": 2,
+      "forks": 3,
       "updated_at": "2026-11-01T16:33:43Z",
       "language": "Shell",
       "archived": false

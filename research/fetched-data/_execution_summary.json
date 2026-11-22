@@ -1,19 +1,19 @@
 {
-  "timestamp": "2026-11-21T14:30:32.614Z",
+  "timestamp": "2026-11-22T14:26:11.889Z",
   "script": "run-all.js",
   "note": "Summary of all data fetching script executions",
   "data": {
-    "execution_time": "2026-11-21T14:30:32.614Z",
+    "execution_time": "2026-11-22T14:26:11.889Z",
     "total_scripts": 7,
     "successful": 7,
     "failed": 0,
-    "total_duration_ms": 25862,
+    "total_duration_ms": 19551,
     "continue_on_error": true,
     "results": [
       {
         "name": "CapRover UI Translations",
         "success": true,
-        "duration": 313,
+        "duration": 187,
         "result": [
           "ar-EG",
           "de-DE",
@@ -36,7 +36,7 @@
       {
         "name": "CasaOS UI Translations",
         "success": true,
-        "duration": 167,
+        "duration": 130,
         "result": [
           "ca_ES",
           "cs_CZ",
@@ -71,7 +71,7 @@
       {
         "name": "YunoHost Apps",
         "success": true,
-        "duration": 18399,
+        "duration": 13157,
         "result": {
           "count": 1037,
           "apps": [
@@ -1390,7 +1390,7 @@
               "description": "Conduit packaged for YunoHost",
               "url": "https://github.com/YunoHost-Apps/conduit_ynh",
               "stars": 3,
-              "forks": 7,
+              "forks": 8,
               "updated_at": "2026-10-04T09:24:08Z",
               "language": "Shell",
               "archived": false
@@ -5075,7 +5075,7 @@
               "description": "LibreDB Studio package for YunoHost",
               "url": "https://github.com/YunoHost-Apps/libredb_studio_ynh",
               "stars": 0,
-              "forks": 2,
+              "forks": 3,
               "updated_at": "2026-11-01T16:33:43Z",
               "language": "Shell",
               "archived": false
@@ -11502,7 +11502,7 @@
       {
         "name": "YunoHost Docs Translations",
         "success": true,
-        "duration": 174,
+        "duration": 92,
         "result": [
           "de",
           "docs",
@@ -11519,7 +11519,7 @@
       {
         "name": "YunoHost UI Translations",
         "success": true,
-        "duration": 5829,
+        "duration": 4827,
         "result": [
           {
             "language": "French",
@@ -11926,7 +11926,7 @@
       {
         "name": "Zimaboard Shipping Areas",
         "success": true,
-        "duration": 282,
+        "duration": 302,
         "result": [
           "Argentina",
           "Australia",
@@ -12026,7 +12026,7 @@
       {
         "name": "CCCI Directory",
         "success": true,
-        "duration": 698,
+        "duration": 856,
         "result": {
           "rows": 429,
           "count": 444,
