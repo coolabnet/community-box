@@ -1,19 +1,19 @@
 {
-  "timestamp": "2026-11-25T17:02:39.763Z",
+  "timestamp": "2026-11-25T17:04:43.299Z",
   "script": "run-all.js",
   "note": "Summary of all data fetching script executions",
   "data": {
-    "execution_time": "2026-11-25T17:02:39.763Z",
+    "execution_time": "2026-11-25T17:04:43.299Z",
     "total_scripts": 7,
-    "successful": 7,
-    "failed": 0,
-    "total_duration_ms": 35063,
+    "successful": 6,
+    "failed": 1,
+    "total_duration_ms": 18990,
     "continue_on_error": true,
     "results": [
       {
         "name": "CapRover UI Translations",
         "success": true,
-        "duration": 152,
+        "duration": 343,
         "result": [
           "ar-EG",
           "de-DE",
@@ -36,7 +36,7 @@
       {
         "name": "CasaOS UI Translations",
         "success": true,
-        "duration": 153,
+        "duration": 163,
         "result": [
           "ca_ES",
           "cs_CZ",
@@ -71,7 +71,7 @@
       {
         "name": "YunoHost Apps",
         "success": true,
-        "duration": 27232,
+        "duration": 16726,
         "result": {
           "count": 1038,
           "apps": [
@@ -11513,7 +11513,7 @@
       {
         "name": "YunoHost Docs Translations",
         "success": true,
-        "duration": 219,
+        "duration": 128,
         "result": [
           "de",
           "docs",
@@ -11529,415 +11529,13 @@
       },
       {
         "name": "YunoHost UI Translations",
-        "success": true,
-        "duration": 5879,
-        "result": [
-          {
-            "language": "French",
-            "language_code": "fr",
-            "translated_percent": 100,
-            "translated_words": 11344,
-            "total_words": 11344,
-            "last_change": "2026-11-20T18:56:03.420676Z"
-          },
-          {
-            "language": "Arabic",
-            "language_code": "ar",
-            "translated_percent": 100,
-            "translated_words": 139,
-            "total_words": 139,
-            "last_change": "2026-08-30T14:56:03.068287Z"
-          },
-          {
-            "language": "Catalan",
-            "language_code": "ca",
-            "translated_percent": 100,
-            "translated_words": 139,
-            "total_words": 139,
-            "last_change": "2026-08-30T14:56:03.296828Z"
-          },
-          {
-            "language": "Chinese (Simplified Han script)",
-            "language_code": "zh_Hans",
-            "translated_percent": 100,
-            "translated_words": 139,
-            "total_words": 139,
-            "last_change": "2026-08-30T14:56:03.432228Z"
-          },
-          {
-            "language": "German",
-            "language_code": "de",
-            "translated_percent": 100,
-            "translated_words": 139,
-            "total_words": 139,
-            "last_change": "2026-08-30T14:56:03.563283Z"
-          },
-          {
-            "language": "Spanish",
-            "language_code": "es",
-            "translated_percent": 100,
-            "translated_words": 139,
-            "total_words": 139,
-            "last_change": "2026-08-30T14:56:03.681878Z"
-          },
-          {
-            "language": "Basque",
-            "language_code": "eu",
-            "translated_percent": 100,
-            "translated_words": 139,
-            "total_words": 139,
-            "last_change": "2026-08-30T14:56:03.731125Z"
-          },
-          {
-            "language": "French",
-            "language_code": "fr",
-            "translated_percent": 100,
-            "translated_words": 139,
-            "total_words": 139,
-            "last_change": "2026-08-30T14:56:03.949080Z"
-          },
-          {
-            "language": "Italian",
-            "language_code": "it",
-            "translated_percent": 100,
-            "translated_words": 139,
-            "total_words": 139,
-            "last_change": "2026-08-30T14:56:04.425888Z"
-          },
-          {
-            "language": "Dutch",
-            "language_code": "nl",
-            "translated_percent": 100,
-            "translated_words": 139,
-            "total_words": 139,
-            "last_change": "2026-08-30T14:56:04.958835Z"
-          },
-          {
-            "language": "Occitan",
-            "language_code": "oc",
-            "translated_percent": 100,
-            "translated_words": 139,
-            "total_words": 139,
-            "last_change": "2026-08-30T14:56:05.071450Z"
-          },
-          {
-            "language": "Russian",
-            "language_code": "ru",
-            "translated_percent": 100,
-            "translated_words": 139,
-            "total_words": 139,
-            "last_change": "2026-08-30T14:56:05.544391Z"
-          },
-          {
-            "language": "Turkish",
-            "language_code": "tr",
-            "translated_percent": 100,
-            "translated_words": 139,
-            "total_words": 139,
-            "last_change": "2026-10-18T23:37:29.626529Z"
-          },
-          {
-            "language": "Polish",
-            "language_code": "pl",
-            "translated_percent": 100,
-            "translated_words": 139,
-            "total_words": 139,
-            "last_change": "2026-08-30T14:56:05.178947Z"
-          },
-          {
-            "language": "English",
-            "language_code": "en",
-            "translated_percent": 100,
-            "translated_words": 11344,
-            "total_words": 11344,
-            "last_change": "2026-11-19T13:50:41.074661Z"
-          },
-          {
-            "language": "English",
-            "language_code": "en",
-            "translated_percent": 100,
-            "translated_words": 3820,
-            "total_words": 3820,
-            "last_change": "2026-08-30T14:55:53.305632Z"
-          },
-          {
-            "language": "English",
-            "language_code": "en",
-            "translated_percent": 100,
-            "translated_words": 139,
-            "total_words": 139,
-            "last_change": "2026-08-30T14:56:02.755507Z"
-          },
-          {
-            "language": "Russian",
-            "language_code": "ru",
-            "translated_percent": 98,
-            "translated_words": 11011,
-            "total_words": 11344,
-            "last_change": "2026-11-19T13:51:03.761858Z"
-          },
-          {
-            "language": "German",
-            "language_code": "de",
-            "translated_percent": 96.6,
-            "translated_words": 10466,
-            "total_words": 11344,
-            "last_change": "2026-11-19T13:50:46.294746Z"
-          },
-          {
-            "language": "Chinese (Simplified Han script)",
-            "language_code": "zh_Hans",
-            "translated_percent": 96.5,
-            "translated_words": 10451,
-            "total_words": 11344,
-            "last_change": "2026-11-19T13:51:09.616758Z"
-          },
-          {
-            "language": "Basque",
-            "language_code": "eu",
-            "translated_percent": 96.2,
-            "translated_words": 10389,
-            "total_words": 11344,
-            "last_change": "2026-11-19T13:50:48.792165Z"
-          },
-          {
-            "language": "Catalan",
-            "language_code": "ca",
-            "translated_percent": 96.1,
-            "translated_words": 10379,
-            "total_words": 11344,
-            "last_change": "2026-11-19T13:50:43.777406Z"
-          },
-          {
-            "language": "Spanish",
-            "language_code": "es",
-            "translated_percent": 92.8,
-            "translated_words": 9773,
-            "total_words": 11344,
-            "last_change": "2026-11-19T13:50:48.136518Z"
-          },
-          {
-            "language": "Portuguese",
-            "language_code": "pt",
-            "translated_percent": 92.3,
-            "translated_words": 135,
-            "total_words": 139,
-            "last_change": "2026-08-30T14:56:05.296377Z"
-          },
-          {
-            "language": "Swedish",
-            "language_code": "sv",
-            "translated_percent": 92.3,
-            "translated_words": 131,
-            "total_words": 139,
-            "last_change": "2026-08-30T14:56:05.768037Z"
-          },
-          {
-            "language": "Esperanto",
-            "language_code": "eo",
-            "translated_percent": 88.4,
-            "translated_words": 129,
-            "total_words": 139,
-            "last_change": "2026-08-30T14:56:03.637033Z"
-          },
-          {
-            "language": "Turkish",
-            "language_code": "tr",
-            "translated_percent": 77.5,
-            "translated_words": 9246,
-            "total_words": 11344,
-            "last_change": "2026-11-19T13:51:07.817437Z"
-          },
-          {
-            "language": "Polish",
-            "language_code": "pl",
-            "translated_percent": 73.7,
-            "translated_words": 8216,
-            "total_words": 11344,
-            "last_change": "2026-11-19T13:51:01.600664Z"
-          },
-          {
-            "language": "Hungarian",
-            "language_code": "hu",
-            "translated_percent": 65.3,
-            "translated_words": 79,
-            "total_words": 139,
-            "last_change": "2026-09-30T13:23:17.507093Z"
-          },
-          {
-            "language": "Italian",
-            "language_code": "it",
-            "translated_percent": 63.6,
-            "translated_words": 6527,
-            "total_words": 11344,
-            "last_change": "2026-11-19T13:50:54.906961Z"
-          },
-          {
-            "language": "Hindi",
-            "language_code": "hi",
-            "translated_percent": 53.8,
-            "translated_words": 64,
-            "total_words": 139,
-            "last_change": "2026-08-30T14:56:04.159060Z"
-          },
-          {
-            "language": "Norwegian Bokmål",
-            "language_code": "nb_NO",
-            "translated_percent": 50,
-            "translated_words": 28,
-            "total_words": 139,
-            "last_change": "2026-08-30T14:56:04.875568Z"
-          },
-          {
-            "language": "Esperanto",
-            "language_code": "eo",
-            "translated_percent": 46.8,
-            "translated_words": 4266,
-            "total_words": 11344,
-            "last_change": "2026-11-19T13:50:47.502083Z"
-          },
-          {
-            "language": "Occitan",
-            "language_code": "oc",
-            "translated_percent": 32.6,
-            "translated_words": 2396,
-            "total_words": 11344,
-            "last_change": "2026-11-19T13:51:01.135742Z"
-          },
-          {
-            "language": "Czech",
-            "language_code": "cs",
-            "translated_percent": 22.5,
-            "translated_words": 1425,
-            "total_words": 11344,
-            "last_change": "2026-11-19T13:50:45.002149Z"
-          },
-          {
-            "language": "Arabic",
-            "language_code": "ar",
-            "translated_percent": 22.3,
-            "translated_words": 1110,
-            "total_words": 11344,
-            "last_change": "2026-11-19T13:50:41.978677Z"
-          },
-          {
-            "language": "Dutch",
-            "language_code": "nl",
-            "translated_percent": 20.9,
-            "translated_words": 1776,
-            "total_words": 11344,
-            "last_change": "2026-11-19T13:50:59.947870Z"
-          },
-          {
-            "language": "Nepali",
-            "language_code": "ne",
-            "translated_percent": 19.2,
-            "translated_words": 20,
-            "total_words": 139,
-            "last_change": "2026-08-30T14:56:04.909186Z"
-          },
-          {
-            "language": "Portuguese",
-            "language_code": "pt",
-            "translated_percent": 18,
-            "translated_words": 1369,
-            "total_words": 11344,
-            "last_change": "2026-11-19T13:51:02.325915Z"
-          },
-          {
-            "language": "Norwegian Bokmål",
-            "language_code": "nb_NO",
-            "translated_percent": 6.9,
-            "translated_words": 293,
-            "total_words": 11344,
-            "last_change": "2026-11-19T13:50:58.889219Z"
-          },
-          {
-            "language": "Greek",
-            "language_code": "el",
-            "translated_percent": 3.8,
-            "translated_words": 1,
-            "total_words": 139,
-            "last_change": "2026-08-30T14:56:03.602341Z"
-          },
-          {
-            "language": "Bengali (Bangladesh)",
-            "language_code": "bn_BD",
-            "translated_percent": 3.8,
-            "translated_words": 1,
-            "total_words": 139,
-            "last_change": "2026-08-30T14:56:03.139082Z"
-          },
-          {
-            "language": "Hungarian",
-            "language_code": "hu",
-            "translated_percent": 3.6,
-            "translated_words": 261,
-            "total_words": 11344,
-            "last_change": "2026-11-19T13:50:53.605754Z"
-          },
-          {
-            "language": "Swedish",
-            "language_code": "sv",
-            "translated_percent": 2.4,
-            "translated_words": 152,
-            "total_words": 11344,
-            "last_change": "2026-11-19T13:51:05.499941Z"
-          },
-          {
-            "language": "Hindi",
-            "language_code": "hi",
-            "translated_percent": 2,
-            "translated_words": 95,
-            "total_words": 11344,
-            "last_change": "2026-11-19T13:50:52.953731Z"
-          },
-          {
-            "language": "Greek",
-            "language_code": "el",
-            "translated_percent": 0.9,
-            "translated_words": 48,
-            "total_words": 11344,
-            "last_change": "2026-11-19T13:50:46.843676Z"
-          },
-          {
-            "language": "Bengali (Bangladesh)",
-            "language_code": "bn_BD",
-            "translated_percent": 0.1,
-            "translated_words": 10,
-            "total_words": 11344,
-            "last_change": "2026-11-19T13:50:42.671597Z"
-          },
-          {
-            "language": "Nepali",
-            "language_code": "ne",
-            "translated_percent": 0.1,
-            "translated_words": 10,
-            "total_words": 11344,
-            "last_change": "2026-11-19T13:50:59.552515Z"
-          },
-          {
-            "language": "Breton",
-            "language_code": "br",
-            "translated_percent": 0,
-            "translated_words": 0,
-            "total_words": 11344,
-            "last_change": "2026-11-19T13:50:43.144562Z"
-          },
-          {
-            "language": "Breton",
-            "language_code": "br",
-            "translated_percent": 0,
-            "translated_words": 0,
-            "total_words": 139,
-            "last_change": "2026-08-30T14:56:03.216398Z"
-          }
-        ]
+        "success": false,
+        "error": "Request failed with status code 503"
       },
       {
         "name": "Zimaboard Shipping Areas",
         "success": true,
-        "duration": 463,
+        "duration": 727,
         "result": [
           "Argentina",
           "Australia",
@@ -12037,12 +11635,19 @@
       {
         "name": "CCCI Directory",
         "success": true,
-        "duration": 965,
+        "duration": 903,
         "result": {
           "rows": 429,
           "count": 444,
           "unmatchedCountries": 0
         }
+      }
+    ],
+    "errors": [
+      {
+        "name": "YunoHost UI Translations",
+        "error": "Request failed with status code 503",
+        "stack": "AxiosError: Request failed with status code 503\n    at settle (/home/runner/work/community-box/community-box/scripts/fetch-data/node_modules/axios/dist/node/axios.cjs:2049:12)\n    at IncomingMessage.handleStreamEnd (/home/runner/work/community-box/community-box/scripts/fetch-data/node_modules/axios/dist/node/axios.cjs:3166:11)\n    at IncomingMessage.emit (node:events:536:35)\n    at endReadableNT (node:internal/streams/readable:1698:12)\n    at process.processTicksAndRejections (node:internal/process/task_queues:82:21)\n    at Axios.request (/home/runner/work/community-box/community-box/scripts/fetch-data/node_modules/axios/dist/node/axios.cjs:4276:41)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async fetchWithRetry (/home/runner/work/community-box/community-box/scripts/fetch-data/utils/common.js:52:24)\n    at async Object.getYunoHostUITranslations [as function] (/home/runner/work/community-box/community-box/scripts/fetch-data/get-yunohost-ui-translations.js:13:18)\n    at async runAllScripts (/home/runner/work/community-box/community-box/scripts/fetch-data/run-all.js:90:22)"
       }
     ]
   }
